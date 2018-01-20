@@ -1,0 +1,745 @@
+political_decisions = {
+	qingdao_treaty_port_ger = { 
+		picture = "qingdao_treaty_port_ger"
+		potential = {
+			OR = {
+				tag = GER
+				tag = GCF
+			}
+			is_greater_power = yes
+			1566 = { owner = { civilized = no } }
+			2531 = { owned_by = THIS} #NewGuinea
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			NOT = { has_country_flag = qingdao_treaty_port_ger }
+		}
+		
+		allow = {
+			steel_steamers = 1
+			1566 = { owner = { civilized = no } }
+		}
+		
+		effect = {
+			set_country_flag = qingdao_treaty_port_ger
+			1566 = { secede_province = THIS change_controller = THIS }
+			add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+			prestige = 10
+			
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kwangchowan_treaty_port_fra = {
+		picture = "kwangchowan_china"
+		potential = {
+			tag = FRA
+			is_greater_power = yes
+			1369 = { owned_by = FRA } #Saigon
+			1496 = { owned_by = ENG } #HongKong
+			2632 = { owner = { civilized = no } }
+			NOT = { has_country_flag = kwangchowan_treaty_port_fra }
+		}
+		
+		allow = {
+			year = 1890
+			steel_steamers = 1
+			2632 = { owner = { civilized = no } }
+		}
+		
+		effect = {
+			set_country_flag = kwangchowan_treaty_port_fra
+			2632 = { secede_province = THIS change_controller = THIS }
+			add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+			prestige = 10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	weihaiwei_treaty_port_eng = {
+		picture = "weihaiwei_china"
+		potential = {
+			tag = ENG
+			is_greater_power = yes
+			owns = 1251
+			owns = 1496
+			OR = {
+				1481 = { owned_by = RUS }
+				1481 = { owned_by = JAP }
+			}
+			1569 = { owner = { civilized = no } }
+			NOT = { has_country_flag = weihaiwei_treaty_port_eng }
+		}
+		
+		allow = {
+			steel_steamers = 1
+			1569 = { owner = { civilized = no } }
+		}
+		
+		effect = {
+			set_country_flag = weihaiwei_treaty_port_eng
+			1569 = { secede_province = THIS change_controller = THIS }
+			add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+			prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_ever_victorious_army = {
+		picture = ever_victorious
+		potential = {
+			tag = QNG
+			TPG = {
+				exists = yes
+			}
+			has_country_flag = the_xiang_army
+			has_country_flag = arrow_incident
+			NOT = { has_global_flag = ever_victorious_army }
+		}
+		
+		allow = {
+			TPG = {
+			   ai = yes
+			   exists = yes
+			   OR = {
+					military_score = 80
+					brigades_compare = 1
+			   }
+			}
+			truce_with = ENG
+		}
+		
+		effect = {
+			war_exhaustion = -10
+			add_country_modifier = {
+				name = ever_victorious_army 
+				duration = 1825
+			}
+			activate_technology = military_staff_system
+			set_global_flag = ever_victorious_army 		
+			random_owned = {
+				limit = {
+					province_id = 1616
+					owner = { ai = yes }
+				}
+				owner = {
+					any_pop = {	
+						militancy = -2
+						consciousness = -2
+					}	
+					grain = 500
+					war_exhaustion = -5
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	the_xiang_army = {
+		picture = xiang_army
+		potential = {
+			tag = QNG
+			TPG = {
+				exists = yes
+			}
+			NOT = { has_country_flag = the_xiang_army }
+		}
+		
+		allow = {
+			TPG = {
+			   ai = yes
+			   exists = yes
+			}
+			OR = {
+				war_exhaustion = 25
+				average_militancy = 5
+				AND = {
+					1082 = { owned_by = RUS }
+					war_exhaustion = 25
+				}
+				AND = {
+					1082 = { owned_by = QNG }
+					TPG = {
+						brigades_compare = 0.75
+					}
+				}
+			}
+		}
+		
+		effect = {
+			war_exhaustion = -10
+			activate_technology = army_command_principle
+			add_country_modifier = {
+				name = the_xiang_army 
+				duration = 3650
+			}
+			set_country_flag = the_xiang_army 	
+			random_owned = {
+				limit = {
+					province_id = 1616
+					owner = { ai = yes }
+				}
+				owner = {
+					any_pop = {	
+						militancy = -1
+						consciousness = -1
+					}	
+					grain = 500
+					war_exhaustion = -5
+				}
+			}			
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	taiping_intervention = {
+		picture = taiping_intervention
+		potential = {
+			tag = QNG
+			TPG = {
+				exists = yes
+				war = yes
+			}
+			OR = {
+				has_global_flag = ever_victorious_army
+				QNG = {
+					ai = yes
+				}
+			}
+			has_country_flag = arrow_incident
+			NOT = { has_global_flag = taiping_intervention }
+		}
+		
+		allow = {
+			OR = {
+				truce_with = ENG
+				has_country_flag = gave_up_2nd_opium
+			}
+			NOT = { war_with = ENG }
+			NOT = {
+				any_greater_power = {
+					war_with = ENG
+				}
+			}
+			OR = {
+				national_provinces_occupied = 0.30
+				TPG = {
+				   ai = yes
+				   exists = yes
+				   OR = {
+					military_score = 80
+					brigades_compare = 1
+				   }
+				}
+			}
+		}
+		
+		effect = {
+			war_exhaustion = -20
+			ENG = {
+				country_event = {
+					id = 99946
+					days = 1
+				}
+			}
+			
+			set_global_flag = taiping_intervention 
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	hundred_days_reform = {
+		picture = hundred_days_reform
+		potential = {
+			tag = QNG
+			civilized = no
+			OR = {
+				NOT = { owns = 1485 } #Taipei
+				NOT = { owns = 1538 } #Shanghai
+				NOT = { owns = 1481 } #Port Arthur
+				NOT = { owns = 1569 } #Weihaiwei
+				NOT = { owns = 1566	} #Qingdao
+				NOT = { owns = 1608 } #Ningbo
+				NOT = { owns = 1499 } #Ningbo
+				NOT = { owns = 2632 } #Ningbo
+			}
+			year = 1885
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = hundred_days_reform }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = hundred_days_reform 
+			add_country_modifier = {
+				name = hundred_days_reforms
+				duration = 1095
+			}
+			country_event = {
+				id = 99950
+				days = 100
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	imperial_decree_of_war = {
+		picture = imperial_decree_of_war
+		potential = {
+			tag = QNG
+			civilized = no
+			#NOT = { owns = 1485 }
+			has_country_flag = hundred_days_reform
+			has_country_flag = boxers_attacked_capital
+			NOT = { has_country_flag = imperial_decree_of_war }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = imperial_decree_of_war 
+			remove_country_modifier = boxer_attacked
+			any_greater_power = {
+				limit = { war_with = THIS }
+				set_country_flag = intervened_boxer_war
+				add_casus_belli = {
+					target = THIS 
+					type = cut_down_to_size_boxer
+					months = 12
+				}
+			}
+			any_greater_power = {
+				limit = {
+					NOT = { war_with = THIS }
+					any_owned_province = { port = yes }
+				}
+				country_event = 99011
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_beiyang_fleet = {
+		picture = beiyang_fleet
+		potential = {
+			tag = QNG
+			civilized = no
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = beiyang_fleet_established }
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				ENG = {
+					blue_and_brown_water_schools = 1
+					NOT = { war_with = THIS }
+				}
+				GER = {
+					blue_and_brown_water_schools = 1
+					NOT = { war_with = THIS }
+				}
+				GCF = {
+					blue_and_brown_water_schools = 1
+					NOT = { war_with = THIS }
+				}
+			}
+			money = 150000
+		}
+		
+		effect = {
+			1616 = { naval_base = 4}
+			1569 = { naval_base = 4}
+			set_country_flag = beiyang_fleet_established 
+			any_greater_power = {
+				limit = {
+					exists = yes
+					tag = ENG
+				}
+				country_event = 99951
+			}
+			any_greater_power = {
+				limit = {
+					exists = yes
+					tag = GER
+				}
+				country_event = 99951
+			}
+			any_greater_power = {
+				limit = {
+					exists = yes
+					tag = GCF
+				}
+				country_event = 99951
+			}
+			activate_technology = battleship_column_doctrine
+			activate_technology = steamers
+			activate_technology = alphabetic_flag_signaling
+			
+			CHI = {
+				activate_technology = battleship_column_doctrine
+				activate_technology = steamers
+				activate_technology = alphabetic_flag_signaling
+			}
+			
+			KMT = {
+				activate_technology = battleship_column_doctrine
+				activate_technology = steamers
+				activate_technology = alphabetic_flag_signaling
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_new_army = {
+		picture = the_new_army
+		potential = {
+			tag = QNG
+			civilized = no
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = the_new_army_established }
+		}
+		
+		allow = {
+			civilization_progress = 0.40
+			war = no
+			money = 100001
+		}
+		
+		effect = {
+			treasury = -100000
+			set_country_flag = the_new_army_established 
+			activate_technology = muzzle_loaded_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = iron_muzzle_loaded_artillery
+			activate_technology = military_plans
+			military_reform = yes_foreign_training
+			military_reform = yes_foreign_weapons
+			any_pop = {
+				limit = {
+					location = { is_core = CHI }
+				}
+				militancy = -2
+				consciousness = -2
+			}
+			CHI = {
+				activate_technology = muzzle_loaded_rifles
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_plans
+			}
+			KMT = {
+				activate_technology = muzzle_loaded_rifles
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_plans
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_fuzhou_aresenal = {
+		picture = fuzhou_aresenal
+		potential = {
+			tag = QNG
+			civilized = no
+			year = 1860
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = fuzhou_aresenal_established }
+		}
+		
+		allow = {
+			owns = 1482
+			war = no
+			money = 75001
+		}
+		
+		effect = {
+			1482 = { naval_base = 3}
+			treasury = -75000
+			set_country_flag = fuzhou_aresenal_established 
+			activate_technology = post_nelsonian_thought
+			activate_technology = clipper_design
+			CHI = {
+				activate_technology = post_nelsonian_thought
+				activate_technology = clipper_design
+			}
+			KMT = { 
+				activate_technology = post_nelsonian_thought
+				activate_technology = clipper_design
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_maritime_customs_service  = {
+		picture = maritime_customs_service
+		potential = {
+			capital = 1616
+			OR = { 
+				AND = { 
+					civilized = no
+					has_country_flag = self_strengthening_movement
+				}
+				civilized = yes
+			}
+			NOT = { has_country_modifier = maritime_customs_service }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 5
+			add_country_modifier = {
+				name = maritime_customs_service
+				duration = -1
+			}
+			activate_technology = no_standard
+			CHI = { activate_technology = no_standard }
+			KMT = { activate_technology = no_standard }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	abolish_the_eight_banners  = {
+		picture = the_eight_banners
+		potential = {
+			tag = QNG
+			has_country_flag = the_new_army_established
+			NOT = { has_country_flag = abolish_the_eight_banners }
+		}
+		
+		allow = {
+			war = no
+			has_country_modifier = the_eight_banners
+			OR = { 
+				foreign_training = yes_foreign_training
+				foreign_weapons = yes_foreign_weapons
+				foreign_artillery = yes_foreign_artillery
+				civilized = yes
+			}
+		}
+		
+		effect = {
+			set_country_flag = abolish_the_eight_banners
+			remove_country_modifier = the_eight_banners
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = manchu
+						type = soldiers
+						type = officers
+					}
+				}
+				militancy = 3
+				consciousness = 5
+			}
+			plurality = -1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_peking_field_force = {
+		picture = peking_field_force
+		potential = {
+			tag = QNG
+			civilized = no
+			ENG = { owns = 1538 }
+			year = 1862
+			NOT = { has_country_flag = establish_the_peking_field_force }
+		}
+		
+		allow = {
+			war = no
+			money = 50000
+		}
+		
+		effect = {
+			treasury = -50000
+			set_country_flag = establish_the_peking_field_force 
+			activate_technology = military_staff_system
+			activate_technology = flintlock_rifles
+			military_reform = yes_foreign_weapons
+			military_reform = yes_foreign_officers
+			CHI = {
+				activate_technology = military_staff_system
+				activate_technology = flintlock_rifles
+			}
+			KMT = {
+				activate_technology = military_staff_system
+				activate_technology = flintlock_rifles
+			}	
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	new_policies = {
+		picture = dowager_ciwi
+		potential = {
+			tag = QNG
+			OR = {
+				NOT = { owns = 1485 } #Taipei
+				NOT = { owns = 1538 } #Shanghai
+				NOT = { owns = 1481 } #Port Arthur
+				NOT = { owns = 1569 } #Weihaiwei
+				NOT = { owns = 1566	} #Qingdao
+				NOT = { owns = 1608 } #Ningbo
+				NOT = { owns = 1499 } #Ningbo
+				NOT = { owns = 2632 } #Ningbo
+			}
+			has_country_flag = imperial_decree_of_war
+			OR = {
+				exists = LEG
+				year = 1900
+			}
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = new_policies }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = new_policies 
+			add_country_modifier = {
+				name = the_new_policies
+				duration = 1825
+			}
+			economic_reform = yes_education_reform
+			activate_technology = private_banks
+			KMT = { activate_technology = private_banks }
+			CHI = { activate_technology = private_banks }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	appoint_lin_zexu = {
+		picture = lin_zexu
+		potential = {
+			tag = QNG
+			year = 1839
+			owns = 1493
+			owns = 1496
+			NOT = { has_country_flag = appoint_lin_zexu }
+		}
+		
+		allow = {
+			war = no
+			OR = { 
+				1493 = { has_province_modifier = canton_system }
+				1493 = {
+					owned_by = THIS
+					NOT = { has_province_modifier = local_opium_habit }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			set_country_flag = appoint_lin_zexu 	
+			add_country_modifier = {
+				name = lin_zexu 
+				duration = 4015
+			}	
+			1493 = { remove_province_modifier = local_opium_habit remove_province_modifier = foreign_smugglers }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	likin_taxation = {
+		picture = lijin
+		potential = {
+			owns = 1616
+			OR = {
+				tag = QNG
+				tag = CHI
+				tag = KMT
+			}
+			NOT = { government = proletarian_dictatorship }
+			NOT = { year = 1931 }
+			has_global_flag = taiping_has_happened
+			NOT = { has_country_modifier = likin_tax }
+		}
+		
+		allow = {
+			OR = {
+				has_global_flag = taiping_has_been_defeated
+				war_with = TPG
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = likin_tax
+				duration = 3650
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	hanyang_arsenal = {
+		picture = hanyang_arsenal
+		potential = {
+			tag = QNG
+			has_country_flag = self_strengthening_movement
+			year = 1885
+			capital = 1612
+			NOT = { has_global_flag = hanyang_arsenal }
+		}
+		
+		allow = {
+			war = no
+			money = 155000
+		}
+		
+		effect = {
+			treasury = -155000
+			set_global_flag = hanyang_arsenal 
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = { economic_reform = yes_firearms_production }
+			}	
+			activate_technology = breech_loaded_rifles
+			CHI = { activate_technology = breech_loaded_rifles }
+			KMT = { activate_technology = breech_loaded_rifles }
+			capital = 1516
+			build_factory_in_capital_state = small_arms_factory
+			capital = 1612
+			1516 = { trade_goods = coal }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,436 @@
+political_decisions = {
+	adopt_western_calendar = {
+		picture = "japanese_calendar"
+		potential = { 
+			tag = JAP
+			OR = {
+				is_greater_power = yes
+				civilized = yes
+			}
+			NOT = {
+				has_country_flag = western_calendar
+			}
+		}
+		allow = {
+			analytic_philosophy = 1
+			state_n_government = 1
+			war = no
+		}
+		effect = {
+			prestige = 10
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 0.3
+				}
+			}
+			set_country_flag = western_calendar
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	repeal_ban_on_christianity = {
+		picture = "repeal_ban_christianity"
+		potential = { 
+			tag = JAP
+			OR = {
+				is_greater_power = yes
+				civilized = yes
+			}
+			NOT = {
+				has_country_flag = christianity_ban_repealed
+			}
+		}
+		allow = {
+			analytic_philosophy = 1
+			state_n_government = 1
+			war = no
+		}
+		effect = {
+			any_greater_power = {
+				limit = {
+					NOT = {
+						tag = TUR
+					}
+				}
+				relation = {
+					who = THIS
+					value = 50
+				}
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 1
+				}
+			}
+			set_country_flag = christianity_ban_repealed
+		}
+		
+		ai_will_do = { factor = 1 }
+	}	
+	
+	technical_fine_arts_school = {
+		picture = "technical_fine_arts_school"
+		potential = { 
+			tag = JAP
+			OR = {
+				is_greater_power = yes
+				civilized = yes
+			}
+			NOT = {
+				has_country_flag = technical_fine_arts_school
+			}
+		}
+		allow = {
+			year = 1875
+			analytic_philosophy = 1
+			state_n_government = 1
+			war = no
+		}
+		effect = {
+			prestige = 5
+			years_of_research = 0.3
+			set_country_flag = technical_fine_arts_school
+		}
+		
+		ai_will_do = { factor = 1 }
+	}	
+
+	sino_japanese_war = {
+		picture = "sino_japanese_war"
+		
+		potential = {
+			tag = JAP
+			year = 1880
+			has_country_modifier = line_of_advantage
+			is_disarmed = no
+			war = no
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_global_flag = yes_railroad
+				}
+			}
+			2681 = {
+				is_colonial = no
+				owner = {
+					is_culture_group = east_asian
+					is_greater_power = no
+					part_of_sphere = no
+					is_vassal = no
+					civilized = no
+					NOT = { truce_with = THIS }
+					NOT = { alliance_with = THIS }
+				}
+			}
+			NOT = { has_country_flag = taiwan_line_of_advantage }
+		}
+		
+		
+		allow = {
+			war = no
+		}
+	
+		effect = {
+			set_country_flag = taiwan_line_of_advantage
+			random_country = {
+				limit = { owns = 2681 }
+				relation = { who = THIS value = -100 }
+				country_event = 97679
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	japan_fruits = {
+		picture = "japan_fruits"
+		potential = {
+			tag = JAP
+			civilized = yes
+			has_country_flag = enacted_meiji_constitution
+			NOT = { has_country_flag = japan_fruits }
+		}
+		
+		allow = {
+			war = no
+		}
+	
+		effect = {
+			set_country_flag = japan_fruits
+			1672 = { trade_goods = fruit }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	jap_ships = {
+		picture = "japanese_calendar"
+		potential = { 
+			tag = JAP
+			OR = {
+				is_greater_power = yes
+				civilized = yes
+			}
+			ai = yes
+			NOT = {
+				has_country_flag = ships_bby
+			}
+		}
+		allow = {
+			year = 1880
+		}
+		effect = {
+		1649 = {
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+				sub_unit = {
+					type = ironclad
+					value = current
+				}
+		}
+		set_country_flag = ships_bby
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+		
+	japanese_mck = {
+		picture = "puyi_mck"
+		potential = {
+			tag = JAP
+			is_greater_power = yes
+			NOT = { exists = QNG }
+			has_global_flag = warlord_era_has_begun
+			NOT = { has_country_flag = mck_organized }
+		}
+
+		allow = {
+			1479 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						war = no
+						is_greater_power = no
+					}
+				}
+			}
+			1552 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						OR = {
+							is_vassal = no
+							vassal_of = THIS
+						}
+						war = no
+						is_greater_power = no
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			random_owned = {
+				limit = {
+					province_id = 1479 #Mukden
+					owned_by = JAP
+					NOT = { exists = MCK }
+				}
+				owner = { release_vassal = MCK }
+			}
+			any_owned = {
+				limit = {
+					is_core = MCK
+					NOT = { province_id = 1481 } #Port Arthur
+				}
+				secede_province = MCK
+			}
+			MCK = {
+				government = hms_government
+				civilized = yes
+			}
+			set_country_flag = mck_organized
+		}
+
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+
+	japanese_img = {
+		picture = japanese_img
+		potential = {
+			tag = JAP
+			is_greater_power = yes
+			NOT = { exists = QNG }
+			has_country_flag = mck_organized
+			has_global_flag = warlord_era_has_begun
+			MCK = {
+				vassal_of = JAP
+				civilized = yes
+			}
+			NOT = { has_country_flag = img_organized }
+		}
+
+		allow = {
+			OR = {
+				AND = {
+					exists = IMG
+					vassal_of = JAP
+				}
+				AND = {
+					controls = 1535
+					controls = 1534
+					controls = 1532
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			1535 = {	secede_province = JAP	}
+			1534 = {	secede_province = JAP	}
+			1532 = {	secede_province = JAP	}
+			inherit = IMG
+			release_vassal = IMG
+			IMG = {
+				civilized = yes
+				government = colonial_company
+			}
+			set_country_flag = img_organized
+		}
+
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
+	reconquer_taiwan = {
+		picture = panthay
+		potential = {
+			tag = JAP
+			has_country_flag = taiwan_administration
+			exists = TAI
+			TAI = {
+				civilized = no
+				ai = yes
+			}
+			NOT = { has_country_flag = reconquer_taiwan }
+			NOT = { war_exhaustion = 10 }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			war = {
+				target = TAI
+				attacker_goal = { casus_belli = colonial_reconquest_cb }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+			set_country_flag = reconquer_taiwan 
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+}

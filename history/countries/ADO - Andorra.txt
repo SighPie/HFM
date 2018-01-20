@@ -1,0 +1,67 @@
+capital = 3252
+primary_culture = catalan
+culture = french
+religion = catholic
+government = hms_government
+plurality = 0.05
+nationalvalue = nv_order
+literacy = 0.15
+civilized = yes
+is_releasable_vassal = no
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = universal_weighted_voting
+public_meetings = yes_meeting
+press_rights = free_press
+trade_unions = all_trade_unions
+voting_system = proportional_representation
+political_parties = secret_ballots
+
+# Social Reforms
+wage_reform = low_minimum_wage
+work_hours = fourteen_hours
+safety_regulations = low_safety
+health_care = low_health_care
+unemployment_subsidies = low_subsidies
+pensions = no_pensions
+school_reforms = low_schools
+
+
+#New Reforms
+conscription = one_year_draft
+debt_law = debtors_prisons
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+border_policy = open_borders
+centralization = unitary
+colonial_policy = no_colonies 
+
+
+set_country_flag = catholic_country
+
+ruling_party = SPA_conservative
+upper_house = {
+	fascist = 0
+	liberal = 23
+	conservative = 58
+	reactionary = 19
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+
+set_country_flag = existing_country
+
+# Technologies
+introspectionism = 1
+basic_chemistry = 1
+
+#Inventions
+
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0

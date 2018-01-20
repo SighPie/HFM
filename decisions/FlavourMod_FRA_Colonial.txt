@@ -1,0 +1,1950 @@
+political_decisions = {
+	the_quebec_question = {
+		picture = quebec_question
+		potential = {
+			tag = FRA
+			NOT = { exists = CAN }
+			has_country_flag = french_america
+			NOT = { has_country_flag = demanded_quebec }
+		}
+		
+		allow = {
+			war = no
+			NOT = { truce_with = ENG }
+			money = 200000
+		}
+		
+		effect = {
+			set_country_flag = demanded_quebec
+			ENG = { country_event = 7790003 }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+
+	treaty_of_paris = {
+		picture = treaty_signing
+		potential = {
+			tag = FRA
+			ENG = { ai = yes }
+			ai = no
+			has_country_flag = french_america
+			has_country_flag = war_for_quebec
+			war_with = ENG
+			NOT = { has_country_flag = quebec_regained }
+		}
+
+		allow = {
+			money = 100000
+			QUE = {
+				any_core = {
+					OR = {
+						controlled_by = REB
+						controlled_by = FRA
+					}
+				}
+			}
+			ENG = { war_exhaustion = 10 }
+			NOT = { national_provinces_occupied = 0.05 }
+			NOT = { war_exhaustion = 35 }
+		}
+
+		effect = {
+			set_country_flag = quebec_regained
+			prestige = 10
+			badboy = 3
+			treasury = -100000
+			QUE = {
+				all_core = { add_core = FRA }
+			}
+			random_owned = {
+				limit = {
+					owner = { war_with = ENG }
+				}
+				owner = { end_war = ENG }
+				any_country = {
+					limit = {
+						war_with = THIS
+						alliance_with = ENG
+					}
+					end_war = THIS
+				}
+			}
+			77 = { add_core = QUE }
+			69 = { add_core = QUE 	remove_core = MRU }
+			CAN_60 = { add_core = QUE }
+			ENG = {
+				any_owned = {
+					limit = {
+						is_core = QUE				
+					}
+					secede_province = THIS
+				}
+			}
+			RPL = {
+				any_owned = {
+					limit = {
+						is_core = QUE				
+					}
+					secede_province = THIS
+				}
+			}
+			release = QUE
+			UTI = {
+				inherit = QUE
+			}
+			THIS = {
+				inherit = UTI
+			}
+			MRU = {
+				all_core = {
+					remove_core = ACA
+				}
+			}
+			QUE = { 
+				all_core = {
+					remove_core = CAN
+					remove_core = RPL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	treaty_of_paris2 = {
+		picture = establish_panfrenchism
+		potential = {
+			tag = FRA
+			has_country_flag = french_america
+			has_country_flag = war_for_quebec
+			NOT = { has_country_flag = quebec_regained }
+		}
+
+		allow = {
+			has_recently_lost_war = no
+			truce_with = ENG
+			money = 50000
+			is_greater_power = yes
+			ENG = {
+				NOT = { war_with = FRA }
+				is_disarmed = yes
+			}
+		}
+
+		effect = {
+			set_country_flag = french_total_victory
+			set_country_flag = quebec_regained
+			badboy = 5
+			QUE = {
+				all_core = { add_core = FRA }
+			}
+			treasury = -50000
+			prestige = 10
+			2625 = {	add_core = QUE	}
+			76 = {	add_core = QUE	}
+			ENG = {
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = CAN
+							is_core = MRU
+							is_core = NEW
+							is_core = QUE
+							is_core = COL
+							is_core = RPL
+						}
+					}
+					remove_core = ENG
+					secede_province = THIS
+				}
+			}
+			RPL = { annex_to = THIS }
+			release = QUE
+			release = MRU
+			release = NEW
+			release = RPL
+			release = COL
+			release = CAN
+			UTI = {
+				inherit = QUE
+				inherit = MRU
+				inherit = NEW
+				inherit = RPL
+				inherit = COL
+				inherit = CAN
+			}
+			THIS = {
+				inherit = UTI
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 74
+						province_id = 75
+					}
+				}
+				secede_province = ENG
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	french_louisiana = {
+		picture = new_france_louisiana
+		potential = {
+			tag = FRA
+			is_greater_power = yes
+			has_country_flag = french_total_victory
+			has_country_flag = french_america
+			has_country_flag = quebec_regained
+			NOT = { has_country_flag = war_for_louisiana }
+		}
+		allow = {
+			war = no
+			NOT = { truce_with = USA }
+			NOT = { war_policy = pacifism }
+		}
+		effect = {
+			badboy = 15
+			USA = {
+				add_casus_belli = {
+					target = FRA
+					type = cut_down_to_size
+					months = 60
+				}
+			}
+			set_country_flag = war_for_louisiana
+			relation = { who = USA value = -200 }
+			diplomatic_influence = { who = USA value = -200 }
+			leave_alliance = USA
+			random_country = {
+				limit = {
+					tag = USA
+					vassal_of = THIS
+				}
+				THIS = { release_vassal = USA }
+			}
+			random_country = {
+				limit = {
+					is_our_vassal = USA
+					NOT = { tag = THIS }
+				}
+				relation = { who = THIS value = -200 }
+				leave_alliance = THIS
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = { tag = THIS }
+				}
+				diplomatic_influence = { who = USA value = -100 }
+			}
+			any_pop = {
+				dominant_issue = {
+					factor = 0.05
+					value = jingoism
+				}
+				consciousness = 2
+			}
+			casus_belli = {
+				target = USA
+				type = cut_down_to_size
+				months = 12
+			}
+			war = {
+				target = USA
+				attacker_goal = {
+					casus_belli = cut_down_to_size
+				}
+				defender_goal = {
+					casus_belli = cut_down_to_size
+				}
+			}
+			any_pop = {
+				limit = { has_pop_culture = mexican }
+				militancy = 6
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = { truce_with = THIS }
+				}
+				casus_belli = {
+					target = FRA
+					type = cut_down_to_size
+					months = 60
+				}
+			}
+			
+		}
+	}
+	
+	treaty_of_new_york = {
+		picture = establish_panfrenchism
+		potential = {
+			tag = FRA
+			has_country_flag = war_for_louisiana
+			NOT = { has_global_flag = treaty_of_new_york }
+		}
+
+		allow = {
+			money = 150000
+			OR = {
+				AND = {
+					2146 = { controlled_by = FRA }
+					223 = { controlled_by = FRA }
+					232 = { controlled_by = FRA }
+					205 = { controlled_by = FRA }
+					243 = { controlled_by = FRA }
+					NOT = {
+						any_owned_province = { controlled_by = USA }
+						any_owned_province = {
+							controller = { alliance_with = USA }
+						}
+					}
+				}
+				USA = {
+					is_disarmed = yes
+					truce_with = FRA
+				}
+			}
+		}
+
+		effect = {
+			set_global_flag = treaty_of_new_york
+			badboy = 5
+			random_owned = {
+				limit = {
+					owner = { war_with = USA }
+				}
+				owner = { end_war = USA }
+				any_country = {
+					limit = {
+						war_with = THIS
+						alliance_with = USA
+					}
+					end_war = THIS
+				}
+			}
+			any_owned = {
+				limit = {
+					region = CAN_46
+				}
+				add_core = USA
+			}
+			51 = { remove_core = USA }
+			50 = { remove_core = USA }
+			USA_139 = { add_core = ULA } #Louisiana
+			USA_144 = { add_core = ULA } #Arkansas
+			USA_148 = { add_core = ULA } #Missouri
+			USA_118 = { add_core = ULA } #North Dakota
+			USA_121 = { add_core = ULA } #South Dakota
+			USA_124 = { add_core = ULA } #Nebraska
+			USA_151 = { add_core = ULA } #Idaho
+			USA_158 = { add_core = ULA } #Iowa
+			USA_116 = { add_core = ULA } #Montana
+			127 = { add_core = ULA } #Kansas
+			126 = { add_core = ULA } 
+			130 = { add_core = ULA } #Oklahoma
+			131 = { add_core = ULA }
+			106 = { add_core = ULA }
+			111 = { add_core = ULA } #Wyoming
+			112 = { add_core = ULA }
+			80 = { add_core = ULA } #Washington
+			93 = { add_core = ULA } #Idaho
+			92 = { add_core = ULA }
+			55 = { add_core = USA }
+			91 = { add_core = ULA }
+			80 = { add_core = ULA }
+			81 = { add_core = ULA }
+			82 = { add_core = ULA }
+			83 = { add_core = ULA }
+			78 = { add_core = ULA }
+			79 = { add_core = ULA }
+			80 = { secede_province = THIS }
+			81 = { secede_province = THIS }
+			82 = { secede_province = THIS }
+			83 = { secede_province = THIS }
+			91 = { secede_province = THIS }
+			249 = { secede_province = THIS }
+			USA = {
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = ULA
+							is_core = ACA
+						}
+					}
+					secede_province = FRA
+				}
+			}
+			release = ACA
+			release = ULA
+			UTI = { inherit = ULA }
+			UTI = { inherit = ACA }
+			FRA = { inherit = UTI }
+			CAN = { all_core = { add_core = USA } }
+			USA = { all_core = { remove_core = CAN } }
+			FRA = {
+				any_owned = {
+					limit = {
+						is_core = USA
+						NOT = { 
+							is_core = ACA
+							is_core = ULA
+						}
+					}
+					secede_province = USA
+				}
+			}
+			treasury = -150000
+			USA = {
+				treasury = 150000
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	become_the_fsa_french_lousiana = {
+		potential = {
+			tag = USA
+			ai = yes
+			NOT = { owns = 139 }
+			has_global_flag = treaty_of_new_york
+			exists = CSA
+			NOT = { has_country_modifier = no_more_war }
+			has_global_flag = american_civil_war_has_happened
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			release_vassal = CAL
+			release_vassal = DES
+			release_vassal = TEX
+			any_owned = {
+				limit = {
+					owned_by = USA
+					is_core = USA
+				}
+				add_core = FSA
+			}
+			change_tag = FSA
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_acadia = {
+		picture = "organize_acadia"
+		potential = {
+			tag = FRA
+			has_country_flag = quebec_regained
+			has_global_flag = treaty_of_new_york
+			ai = no
+			NOT = {
+				has_country_flag = acadia_organized
+			}
+		}
+		allow = {
+			money = 75000
+			war = no
+		}
+		effect = {
+			money = -75000
+			ACA = {
+				set_country_flag = post_colonial_country
+				all_core = {
+					remove_core = MRU
+				}
+			}
+			any_pop = { 
+				limit = { 
+					location = { is_core = ACA } 
+					culture = french_canadian 
+				} 
+				militancy = -10
+				consciousness = -10
+				reduce_pop = 2
+			}
+			any_pop = {
+				limit = {
+					location = {
+						is_core = ACA
+					}
+					culture = anglo_canadian
+					OR = {
+						type = soldiers
+						type = officers
+					}
+				}
+				move_pop = 57
+			}
+			any_pop = {
+				limit = {
+					location = {
+						is_core = ACA
+					}
+					culture = yankee
+					OR = {
+						type = soldiers
+						type = officers
+					}
+				}
+				move_pop = 243
+			}
+			random_pop = {
+				limit = {
+					culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 72
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 72
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 71
+			}
+			release = ACA
+			UTI = {
+				inherit = ACA
+			}
+			any_pop = {
+				limit = {
+					location = {
+						is_core = ACA
+					}
+					type = soldiers
+					has_pop_culture = anglo_canadian
+				}
+				move_pop = 57
+			}
+			any_pop = {
+				limit = {
+					location = {
+						is_core = ACA
+					}
+					type = soldiers
+					has_pop_culture = yankee
+				}
+				move_pop = 243
+			}
+			any_pop = { limit = { location = { is_core = ACA } culture = anglo_canadian } reduce_pop = 0.9 }
+			any_pop = { limit = { location = { is_core = ACA } culture = yankee } reduce_pop = 0.8 }
+			THIS = {
+				inherit = UTI
+			}
+			set_country_flag = acadia_organized
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_canada = {
+		picture = "organize_canada"
+		potential = {
+			tag = FRA
+			has_country_flag = quebec_regained
+			has_country_flag = acadia_organized
+			NOT = {
+				has_country_flag = canada_organized
+			}
+		}
+		allow = {
+			money = 175000
+			war = no
+		}
+		effect = {
+			money = -175000
+			any_pop = {
+				limit = {
+					location = {
+						is_core = QUE
+					}
+					culture = anglo_canadian
+					OR = {
+						type = soldiers
+						type = officers
+					}
+				}
+				move_pop = 57
+			}
+			CAN = {
+				set_country_flag = post_colonial_country
+				all_core = {
+					remove_core = CAN
+				}
+			}
+			RPL = {
+				all_core = {
+					add_core = FCA
+					remove_core = ENG
+					remove_core = RPL
+				}
+			}
+			58 = {
+				state_scope = {
+					change_region_name = "Southern Quebec"
+				}
+			}
+			QUE = {
+				all_core = {
+					add_core = FCA
+					remove_core = FRA
+					remove_core = NEW
+					remove_core = QUE
+				}
+			}
+			COL = {
+				all_core = {
+					remove_core = COL
+					remove_core = ENG
+					add_core = FCA
+				}
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = artisans
+					location = { continent = europe }
+				}
+				move_pop = 65
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = farmers
+					location = { continent = europe }
+				}
+				move_pop = 58
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = farmers
+					location = { continent = europe }
+				}
+				move_pop = 57
+			}
+			any_pop = { limit = { location = { province_id = 72 } culture = french_canadian } reduce_pop = 3 
+			militancy = -10
+			consciousness = -10}
+			any_pop = {
+				limit = { culture = anglo_canadian }
+				consciousness = 7
+				militancy = 7
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 62
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 429
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 61
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 430
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 51
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 431
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 50
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 432
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 52
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 433
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 51
+					}
+					has_pop_culture = native_american_minor
+				}
+				move_pop = 434
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 50
+					}
+					has_pop_culture = native_american_minor
+				}
+				move_pop = 435
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 50 #Thunder Bay
+						province_id = 51 #Sault Ste Marie
+						province_id = 74 #Labrador
+						province_id = 75 #Labrador
+						province_id = 77 #St Pierre
+						region = ENG_9 #Northwest Territories
+						region = CAN_13 #Colombia
+						region = ENG_22 #Alberta
+						region = ENG_30 #Saskatchewan
+						region = ENG_36 #Manitoba
+						region = CAN_50 #Northern Ontario
+						region = CAN_58 #Southern Quebec
+						region = CAN_60 #Northern Quebec
+						region = ENG_74 #Newfoundland
+					}
+				}
+				add_core = FCA
+			}
+			release = FCA
+			FCA = { 
+				set_country_flag = post_colonial_country
+			}
+			UTI = {
+				inherit = FCA
+			}
+			THIS = {
+				inherit = UTI
+			}
+			any_owned = {
+				limit = {
+					is_core = FCA
+				}
+				add_province_modifier = {
+					name = french_colonial_integration
+					duration = 720
+				}
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 430
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 61
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 431
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 51
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 432
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 50
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 433
+					}
+					has_pop_culture = cree
+				}
+				move_pop = 52
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 434
+					}
+					has_pop_culture = native_american_minor
+				}
+				move_pop = 51
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 435
+					}
+					has_pop_culture = native_american_minor
+				}
+				move_pop = 50
+			}
+			set_country_flag = canada_organized
+		}
+			
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_louisiana	= {
+		picture = "organize_louisiana"
+		potential = {
+			tag = FRA
+			has_country_flag = quebec_regained
+			has_global_flag = treaty_of_new_york
+			has_country_flag = acadia_organized
+			NOT = {
+				has_country_flag = louisiana_organized
+			}
+		}
+		allow = {
+			money = 250000
+			war = no
+		}
+		effect = {
+			money = -250000
+			add_accepted_culture = louisianan
+			ULA = {
+				set_country_flag = post_colonial_country
+				primary_culture = louisianan 
+				add_accepted_culture = cajun 
+			}
+			ULA = {
+				all_core = {
+					remove_core = COL
+					remove_core = FCA
+				}
+			}
+			78 = { add_core = ULA }
+			79 = { add_core = ULA }
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 142
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 141
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 140
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 146
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 143
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 144
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 142
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = artisans
+					location = { continent = europe }
+				}
+				move_pop = 145
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = artisans
+					location = { continent = europe }
+				}
+				move_pop = 149
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					type = soldiers
+					location = { continent = europe }
+				}
+				move_pop = 140
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 139
+			}
+			any_pop = {
+				limit = { culture = yankee }
+				consciousness = 7
+				militancy = 7
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 139
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 117
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 140
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 118
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 141
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 119
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 142
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 120
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 139
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1887
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 140
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1887
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 141
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1888
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 142
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1888
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 139
+					}
+					has_pop_culture = afro_antillean
+				}
+				move_pop = 121
+			}
+			
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 141
+					}
+					has_pop_culture = afro_antillean
+				}
+				move_pop = 122
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 146
+					}
+					has_pop_culture = yankee
+				}
+				move_pop = 167
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 146
+					}
+					is_state_religion = no
+				}
+				move_pop = 167
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 143
+					}
+					is_state_religion = no
+				}
+				move_pop = 193
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 143
+					}
+					is_state_religion = no
+				}
+				move_pop = 193
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 150
+					}
+					is_state_religion = no
+				}
+				move_pop = 177
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 149
+					}
+					has_pop_culture = yankee
+				}
+				move_pop = 197
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 140
+					}
+					is_state_religion = no
+				}
+				move_pop = 194
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 143
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1887
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 150
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1887
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 149
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1888
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 148
+					}
+					has_pop_culture = afro_american
+				}
+				move_pop = 1887
+			}
+			release = ULA
+			150 = { assimilate = yes }
+			146 = { assimilate = yes }
+			143 = { assimilate = yes }
+			UTI = {
+				inherit = ULA
+			}
+			THIS = {
+				inherit = UTI
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 143
+					}
+					type = soldiers
+				}
+				pop_type = farmers
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 142
+					}
+					type = soldiers
+				}
+				pop_type = farmers
+			}
+			any_owned = {
+				limit = {
+					is_core = ULA
+				}
+				add_province_modifier = {
+					name = french_colonial_integration
+					duration = 3650
+				}
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 117
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 139
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 118
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 140
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 119
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 141
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 120
+					}
+					has_pop_culture = cajun
+				}
+				move_pop = 142
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 121
+					}
+					has_pop_culture = afro_antillean
+				}
+				move_pop = 139
+			}
+			
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 122
+					}
+					has_pop_culture = afro_antillean
+				}
+				move_pop = 141
+			}
+			any_pop = { limit = { location = { province_id = 146 } } reduce_pop = 3 }
+			any_pop = { limit = { location = { province_id = 146 } type = soldiers } pop_type = artisans }
+			any_pop = { limit = { location = { is_core = ULA } culture = dixie } reduce_pop = 0.5 }
+			any_pop = { limit = { location = { is_core = ULA } culture = dixie } reduce_pop = 0.5 }
+			set_country_flag = louisiana_organized
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_new_zealand = {
+		picture = "organize_new_zealand"
+		potential = {
+			tag = FRA
+			OR = {
+				NZL = {
+					all_core = {
+						owned_by = THIS
+					}
+				}
+				NZF = {
+					all_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = french_nzl
+			}
+		}
+		allow = {
+			money = 50000
+			war = no
+		}
+		effect = {
+			money = -50000
+			add_accepted_culture = neo_zelandais
+			NZL = {
+				all_core = {
+					add_core = NZF
+				}
+			}
+			NZF = {
+				set_country_flag = post_colonial_country
+				all_core = {
+					remove_core = ENG
+					remove_core = NZL
+					remove_core = FRA
+				}
+			}
+
+			2510 = {
+				state_scope = {
+					change_region_name = "Ile du Nord"
+				}
+			}
+			2516 = {
+				state_scope = {
+					change_region_name = "Ile du Sud"
+				}
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2571
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2509
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2510
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2511
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2512
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2513
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2514
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2515
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					location = { continent = europe }
+				}
+				move_pop = 2516
+			}
+			2509 = { change_province_name = "Valenmans" }
+			2510 = { change_province_name = "New Bordeaux" }
+			2511 = { change_province_name = "Perouse" }
+			2512 = { change_province_name = "Napoleon" }
+			2513 = { change_province_name = "Michel" }
+			2515 = { change_province_name = "Jeanne" }
+			2516 = { change_province_name = "Akaroa" }
+			2571 = { change_province_name = "Jeanne" }
+			any_pop = { limit = { location = { is_core = NZF } culture = maori } reduce_pop = 0.8 }
+			any_pop = {
+				limit = { culture = maori }
+				consciousness = 7
+				militancy = 7
+				
+			}			
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2571
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 458
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2510
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 460
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2511
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 447
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2512
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 446
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2513
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 445
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2514
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 439
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2515
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 460
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2516
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 428
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2509
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 431
+			}
+			NZF = {
+				primary_culture = neo_zelandais
+			}
+			release = NZF
+			2510 = { assimilate = yes }
+			2511 = { assimilate = yes }
+			2512 = { assimilate = yes }
+			ENG_2513 = { assimilate = yes }
+			NZF = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = australian
+							has_pop_culture = british
+							has_pop_culture = french
+						}
+					}
+					consciousness = 2
+					militancy = -5
+				}
+			}
+			UTI = {
+				inherit = NZF
+			}
+			FRA = {
+				inherit = UTI
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 458
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2571
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 460
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2510
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 447
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2511
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 446
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2512
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 445
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2513
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 439
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2514
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 460
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2515
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 428
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2516
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 431
+					}
+					has_pop_culture = maori
+				}
+				move_pop = 2509
+			}
+			any_owned = {
+				limit = {
+					is_core = NZF
+				}
+				add_province_modifier = {
+					name = french_colonial_integration
+					duration = 3650
+				}
+			}
+			set_global_flag = french_nzl
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_australia = {
+		picture = "organize_australia"
+		potential = {
+			tag = FRA
+			owns = 2476
+			owns = 2469
+			owns = 2483
+			owns = 2505
+			owns = 2497
+			owns = 2494
+			ai = no
+			NOT = {
+				has_country_flag = australia_organized
+			}
+		}
+		allow = {
+			money = 300000
+			war = no
+		}
+		effect = {
+			money = -300000
+			add_accepted_culture = french_australian
+			AST = {
+				all_core = {
+					add_core = FAS
+				}
+			}
+			FAS = {
+				all_core = {
+					remove_core = AST
+				}
+			}
+			FAS = {
+				all_core = {
+					remove_core = THIS
+				}
+			}
+			random_empty_neighbor_province = { 
+				limit = {
+					is_core = FAS
+				}
+				secede_province = THIS
+			}
+			random_empty_neighbor_province = { 
+				limit = {
+					is_core = FAS
+				}
+				secede_province = THIS
+			}
+			random_empty_neighbor_province = { 
+				limit = {
+					is_core = FAS
+				}
+				secede_province = THIS
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = farmers
+					location = { continent = europe }
+				}
+				move_pop = 2468
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = farmers
+					location = { continent = europe }
+				}
+				move_pop = 2472
+			}
+			random_pop = {
+				limit = {
+					has_pop_culture = french
+					has_pop_type = farmers
+					location = { continent = europe }
+				}
+				move_pop = 2469
+			}
+			any_pop = { limit = { location = { is_core = FAS } culture = aborigine } reduce_pop = 0.8 }
+			any_pop = {
+				limit = { culture = aborigine }
+				consciousness = 7
+				militancy = 7
+			}			
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2468
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 428
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2469
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 431
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2470
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 410
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2471
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 411
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2472
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 434
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2473
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 435
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2474
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 436
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2475
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 437
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2483
+					}
+					has_pop_culture = australian
+				}
+				move_pop = 2475
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2479
+					}
+					has_pop_culture = australian
+				}
+				move_pop = 2473
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2482
+					}
+					has_pop_culture = australian
+				}
+				move_pop = 2471
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2476
+					}
+					has_pop_culture = australian
+				}
+				move_pop = 2474
+			}
+			release = FAS
+			ENG_2468 = { assimilate = yes }
+			UTI = {
+				inherit = FAS
+			}
+			THIS = {
+				inherit = UTI
+			}
+			any_owned = {
+				limit = {
+					is_core = FAS
+				}
+				add_province_modifier = {
+					name = french_colonial_integration
+					duration = 1825
+				}
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 428
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2468
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 431
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2469
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 410
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2470
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 411
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2471
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 434
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2472
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 435
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2473
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 436
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2474
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 437
+					}
+					has_pop_culture = aborigine
+				}
+				move_pop = 2475
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2475
+					}
+					has_pop_culture = french_australian
+				}
+				move_pop = 2483
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2473
+					}
+					has_pop_culture = french_australian
+				}
+				move_pop = 2482
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2471
+					}
+					has_pop_culture = french_australian
+				}
+				move_pop = 2482
+			}
+			any_pop = {
+				limit = {
+					location = {
+						province_id = 2474
+					}
+					has_pop_culture = french_australian
+				}
+				move_pop = 2476
+			}
+			set_country_flag = australia_organized
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_algeria_fra = {
+		picture = map_africa
+		potential = {
+			civilized = yes
+			primary_culture = french
+			NOT = {
+				exists = ALD
+				has_global_flag = algeria_organized
+				capital_scope = { continent = africa } 
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
+			}
+			owns = 1700
+			owns = 1721
+		}
+		
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+			owns = 1700
+			owns = 1721
+		}
+		
+		effect = {
+			set_global_flag = algeria_organized
+			prestige = 3
+			any_owned = {
+				limit = { is_core = ALD }
+				add_province_modifier = { name = colonial_exploitation duration = 1095 }
+			}
+			ALD = {
+				tech_school = unciv_tech_school
+				government = colonial_company
+				political_reform = landed_voting
+				capital = 1700
+				primary_culture = french
+				add_accepted_culture = maghrebi
+			}
+			1700 = { 
+				change_province_name = "Alger" 
+				state_scope = { 
+					change_region_name = "Alger"
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

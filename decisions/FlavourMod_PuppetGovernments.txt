@@ -1,0 +1,299 @@
+political_decisions = {
+	clean_up_unciv_monarchy = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				AND = {
+					civilized = no
+					is_vassal = yes
+				}
+				AND = {
+					tag = UBD
+					NOT = { vassal_of = RUS }
+					OR = {
+						in_sphere = GER
+						in_sphere = NGF
+						in_sphere = GCF
+						in_sphere = AUS
+						in_sphere = SGF
+						in_sphere = PRU
+					}
+				}
+			}
+			OR = {
+				government = democracy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			NOT = { tag = LAN }
+			NOT = { tag = PHL }
+			NOT = { tag = LEG }
+			NOT = { has_country_flag = clean_up_unciv_monarchy }
+			NOT = { has_country_flag = clean_up_colonial_government }
+			NOT = { year = 1920 }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = clean_up_unciv_monarchy
+			government = absolute_monarchy
+			
+			random_owned = {
+				limit = { owner = { primary_culture = volga_german } }
+				owner = { government = hms_government }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	clean_up_colonial_government = {
+		potential = {
+			ai = yes
+			is_vassal = yes
+			exists = yes
+			year = 1885
+			OR = {
+				government = democracy
+				government = prussian_constitutionalism
+				government = hms_government
+				government = absolute_monarchy
+				government = presidential_dictatorship
+				government = bourgeois_dictatorship
+				government = french_bourbon
+			}
+			OR = {
+				###British Puppets###
+				AND = { 
+					tag = NGR
+					vassal_of = ENG
+				}
+				AND = {
+					tag = LEG
+					vassal_of = ENG
+					has_country_flag = british_orient
+				}
+				AND = {
+					tag = CYP
+					vassal_of = ENG
+				}
+				AND = { 
+					tag = BLZ
+					vassal_of = ENG
+				}
+				AND = { 
+					tag = KNY
+					is_culture_group = british
+					vassal_of = ENG
+				}
+				AND = { 
+					tag = MLT
+					vassal_of = ENG
+				}
+				AND = { 
+					tag = SWK
+					vassal_of = ENG
+				}
+				###German Puppets###
+				AND = { 
+					tag = NMB
+					is_culture_group = germanic
+					OR = { 
+						vassal_of = GER
+						vassal_of = GCF
+					}
+				}
+				AND = { 
+					tag = TNZ
+					is_culture_group = germanic
+					OR = { 
+						vassal_of = GER
+						vassal_of = GCF
+					}
+				}
+				AND = {
+					tag = CMR
+					is_culture_group = germanic
+					OR = { 
+						vassal_of = GER
+						vassal_of = GCF
+					}
+				}
+				AND = {
+					tag = PPG
+					OR = { 
+						vassal_of = GER
+						vassal_of = GCF
+					}
+				}
+				AND = {
+					tag = BAN
+					OR = {
+						vassal_of = GER
+						vassal_of = GCF
+						vassal_of = NGF
+					}
+				}
+				AND = {
+					tag = SIE
+					is_culture_group = germanic
+					OR = {
+						vassal_of = GER
+						vassal_of = GCF
+						vassal_of = NGF
+						vassal_of = SGF
+					}
+				}
+				###French Puppets###
+				AND = {
+					tag = DAI
+					vassal_of = FRA
+				}
+				AND = { 
+					tag = MAD
+					vassal_of = FRA
+				}
+				AND = { 
+					tag = ALD
+					vassal_of = FRA
+				}
+				AND = {
+					tag = IVC
+					vassal_of = FRA
+				}
+				###Portuguese Puppets###
+				AND = { 
+					tag = MOZ
+					primary_culture = portuguese
+					OR = { 
+						vassal_of = POR
+						vassal_of = IBR
+					}
+				}
+				AND = { 
+					tag = ANG
+					primary_culture = portuguese
+					OR = { 
+						vassal_of = POR
+						vassal_of = IBR
+					}
+				}
+				###Russian Puppets###
+				AND = {
+					tag = LSK
+					vassal_of = RUS
+				}
+				AND = { 
+					tag = UBD
+					vassal_of = RUS
+				}
+				###Dutch Puppets###
+				AND = {
+					tag = INO
+					vassal_of = NET
+				}
+				AND = {
+					tag = VLK
+					vassal_of = NET
+				}
+				###Japanese Puppets###
+				AND = {
+					OR = { 
+						tag = MAD
+						tag = IMG
+						tag = MCK
+					}
+					vassal_of = JAP
+				}
+				AND = {
+					tag = KOR
+					has_global_flag = japanese_rename_korea
+					vassal_of = JAP
+				}
+				###Spain Puppets###
+				AND = {
+					tag = PHL
+					OR = { 
+						vassal_of = SPA
+						vassal_of = SPC
+						vassal_of = IBR
+					}
+				}
+				###Italian Puppets###
+				AND = {
+					tag = ETH
+					OR = {
+						vassal_of = ITA
+						vassal_of = SAR
+						vassal_of = PAP
+						vassal_of = SVY
+					}
+				}
+				AND = {
+					tag = LBY
+					OR = {
+						vassal_of = ITA
+						vassal_of = SAR
+						vassal_of = PAP
+						vassal_of = SVY
+					}
+				}
+			}
+			NOT = { has_country_flag = clean_up_colonial_government }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = clean_up_colonial_government
+			government = colonial_company
+			random_owned = {
+				limit = {
+					is_core = ALD
+				}
+				owner = { 
+					primary_culture = french
+					add_accepted_culture = maghrebi
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	clean_up_freed_colonial_govt = {
+		potential = {
+			is_vassal = no
+			government = colonial_company
+			NOT = { tag = EIC }
+		}
+		
+		allow = {
+			war = no
+			is_vassal = no
+		}
+		
+		effect = {
+			set_country_flag = clean_up_unciv_monarchy
+			government = democracy
+			random_owned = {
+				limit = {
+					is_core = ALD
+					owner = { primary_culture = french }					
+				}
+				owner = { 
+					primary_culture = maghrebi
+					remove_accepted_culture = maghrebi
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

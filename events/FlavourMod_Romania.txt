@@ -1,0 +1,161 @@
+####Made by Merwitz,if you found any errors please let me,or Sighpie,know####
+#Wallachia ,1848 revolution
+	country_event = {
+		id = 97530
+		picture = "wallachia1848"
+		title = "EVTNAME97530"
+		desc = "EVTDESC97530"
+			
+		trigger = {
+			year = 1848
+			tag = WAL
+			is_vassal = yes
+		}
+
+		mean_time_to_happen = {
+			days = 10
+		}
+		
+		fire_only_once = yes
+
+		
+		option = {
+			name = "EVTOPTA97530"
+			prestige = 10
+			ruling_party_ideology = liberal
+			relation = {
+				who = TUR
+				value = -200
+			}
+			TUR = { 
+				country_event = 97531
+				release_vassal = WAL
+				leave_alliance = WAL
+			}
+			upper_house = {
+				ideology = liberal
+				value = 0.4
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -4
+			}
+			add_country_modifier = {
+				name = wallachian_revolution
+				duration = 730
+			}
+			
+			ai_chance = { factor = 99 }
+		}
+		
+		option = {
+			name = "EVTOPTB97530"
+			prestige = -5
+			relation = {
+				who = TUR
+				value = 150
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			ai_chance = { factor = 1 }
+			
+		}
+	}
+#Turks,response to the previous event
+	country_event = {
+		id = 97531
+		picture = "wallachia1848"
+		title = "EVTNAME97531"
+		desc = "EVTDESC97531"
+		
+		is_triggered_only = yes
+	
+		option = {
+			name = "EVTOPTA97531"
+			war = {
+				target = WAL
+				attacker_goal = {
+					casus_belli = make_puppet
+				}
+				defender_goal = {
+					casus_belli = humiliate
+				}
+			}
+			TUR = {
+				diplomatic_influence = { who = WAL value = -300 }			
+			}
+			ai_chance = { factor = 100 }
+		}
+
+		option = {
+			name = "EVTOPTB97531"
+			prestige = -7
+		
+			ai_chance = { factor = 0 }
+		}
+	}
+#Moldavia,response to the WAL revolution
+	country_event = {
+		id = 97532
+		picture = "wallachia1848"
+		title = "EVTNAME97532"
+		desc = "EVTDESC97532"
+			
+		trigger = {
+			year = 1848
+			WAL = { war_with = TUR } 
+			exists = WAL
+			tag = MOL
+			MOL = {
+				is_vassal = yes
+			}
+		}
+
+		mean_time_to_happen = {
+			days = 10
+		}
+		
+		fire_only_once = yes
+
+		
+		option = {
+			name = "EVTOPTA97532"
+			scaled_militancy = {
+				ideology = liberal
+				factor = 5
+			}
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 5
+			}
+		}
+	}
+
+	country_event = {
+		id = 97537
+		title = "EVTNAME97537"
+		desc = "EVTDESC97537"
+		picture = "earthquake"
+		
+		fire_only_once = yes
+		
+		major = yes
+		
+		trigger = {
+			year = 1847
+			owns = 664
+		}
+		
+		mean_time_to_happen = {
+			months = 4
+		}
+		
+		option = {
+			name = "EVTOPTA21520"
+			random_owned = { limit = { province_id = 664 has_building = railroad } infrastructure = -6 }
+			664 = { any_pop = { reduce_pop = 0.98 } }
+			treasury = -5000
+		}
+	}

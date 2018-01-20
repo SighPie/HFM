@@ -1,0 +1,117 @@
+####Made by Merwitz/123e55,if you found any errors please let me,or Sighpie,know####
+
+#Wallachia
+#1848
+political_decisions = {
+	proclamation_of_islaz = {
+		picture = islaz
+		potential = {
+			tag = WAL
+			WAL = { war_with = TUR } 
+			NOT = {	has_country_flag = proclamation_of_islaz }
+		}
+		
+		allow = {
+			war = yes
+		}
+		
+		effect = {
+			prestige = 5
+			political_reform = wealth_weighted_voting
+			political_reform = free_press
+			political_reform = harassment
+			political_reform = freedom_of_womb
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+				}
+				militancy = -3
+			}
+			set_country_flag = proclamation_of_islaz
+		}
+	}
+
+#Cuza reforms
+	ioan_cuzas_westernization = {
+		picture = cuza
+		potential = {
+			OR = {
+				tag = WAL
+				tag = MOL 
+				tag = URP
+				tag = ROM
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			state_n_government = 1
+			NOT = { has_country_flag = ioan_cuzas_westernization }
+			year = 1860
+		}
+			
+		allow = {
+			money = 15001
+		}
+			
+		effect = {
+			treasury = -15000
+			school_reforms = low_schools
+			add_country_modifier = {
+				name = cuza_reforms
+				duration = 4500
+			}
+			set_country_flag = ioan_cuzas_westernization
+		
+		}
+	}
+
+	northern_bulgaria_rename_rom = {
+		picture = gtfo
+		potential = {
+			primary_culture = romanian
+			owns = 818
+			owns = 812
+			owns = 813
+			NOT = { has_global_flag = northern_bulgaria_rename_rom }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = northern_bulgaria_rename_rom
+			prestige = 2
+			812 = { change_province_name = "Plevna" }
+			813 = { change_province_name = "Targoviste" }
+			795 = { change_province_name = "Timoc" }
+			818 = { change_province_name = "Cadrilater" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	maramures_rename_mol = {
+		picture = gtfo
+		potential = {
+			tag = MOL
+			owns = 651
+			owns = 661
+			owns = 950
+			NOT = { has_global_flag = maramures_rename_mol }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = maramures_rename_mol
+			prestige = 2
+			950 = { change_province_name = "Transcarpatia" }
+			661 = { change_province_name = "Maramuresul de Sud" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
