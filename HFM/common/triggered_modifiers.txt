@@ -28,7 +28,7 @@ low_health_care_fully_funded = {
 			}
 		}
 	}
-	global_population_growth = 0.002
+	global_population_growth = 0.001
 	icon = 19
 }
 
@@ -47,7 +47,7 @@ acceptable_health_care_fully_funded = {
 			}
 		}
 	}
-	global_population_growth = 0.003
+	global_population_growth = 0.001
 	icon = 19
 }
 
@@ -66,7 +66,7 @@ good_health_care_fully_funded = {
 			}
 		}
 	}
-	global_population_growth = 0.003
+	global_population_growth = 0.002
 	icon = 19
 }
 
@@ -85,7 +85,7 @@ health_care_fully_funded = {
 			}
 		}
 	}
-	global_population_growth = 0.003
+	global_population_growth = 0.002
 	icon = 19
 }
 
@@ -820,4 +820,23 @@ colonial_administration = {
 	supply_consumption = 0.15
 	tax_efficiency = -0.05
 	administrative_efficiency_modifier = -0.2
+}
+
+pashtunwali = {
+	trigger = {
+		owns = 1209
+		primary_culture = pashtun
+		civilized = no
+		war = yes
+		any_greater_power = {
+			war_with = THIS
+		}
+	}
+	icon = 10
+	prestige = 0.1
+	supply_consumption = -0.5
+	land_organisation = 0.15
+	land_unit_start_experience = 10
+	org_regain = 0.15
+	war_exhaustion = -2.5
 }

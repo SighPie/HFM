@@ -173,7 +173,11 @@ promotion_chance = {
 	}
 	
 	modifier = {
-		factor = 0.1
+		factor = 0.2
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
 		location = {
 			is_colonial = yes
 			is_core = ALD
@@ -586,6 +590,28 @@ migration_chance = {
 			primary_culture = swiss_german
 		}
 	}
+	
+	modifier = {
+		factor = 10
+		THIS = { 
+			OR = {
+				has_pop_culture = french
+				has_pop_culture = swiss_french
+			}
+		}
+		location = { 
+			OR = {
+				state_id = 605
+				state_id = 2568
+			}
+			NOT = { province_id = 3250 }
+		}
+		country = { 
+			primary_culture = swiss_german
+		}
+
+	}
+	
 }
 
 #general colonial migration mtth, same for all pops
@@ -1082,14 +1108,12 @@ emigration_chance = {
 			is_culture_group = germanic 
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1890 }
+		NOT = { year = 1900 }
 		location = { 
 			controlled_by = owner
 			NOT = {
 				state_id = 701
-				#state_id = 682
 				state_id = 690
-				#state_id = 695
 				state_id = 354
 				state_id = 349
 				state_id = 706
@@ -1103,6 +1127,27 @@ emigration_chance = {
 				NOT = { primary_culture = south_german }
 				NOT = { war_exhaustion = 1 }
 				NOT = { average_consciousness = 7 }
+				#NOT = { has_country_flag = liberal_revolution_fired }
+				#NOT = { has_country_flag = liberal_revolution_in_progress }
+			}
+		}
+	}
+	
+	modifier = {
+		factor = 0.7
+		THIS = { 
+			primary_culture = south_german 
+		}
+		NOT = { unemployment = 0.1 }
+		NOT = { year = 1890 }
+		location = { 
+			controlled_by = owner
+		}
+		country = { 
+			AND = { 
+				is_greater_power = yes
+				NOT = { war_exhaustion = 1 }
+				NOT = { average_consciousness = 8 }
 				#NOT = { has_country_flag = liberal_revolution_fired }
 				#NOT = { has_country_flag = liberal_revolution_in_progress }
 			}
@@ -1155,7 +1200,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = 0.8
+		factor = 0.9
 		THIS = { 
 			has_pop_culture = french
 		}
@@ -1169,7 +1214,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = 0.2
+		factor = 0.5
 		THIS = { 
 			is_culture_group = italian
 		}
@@ -1177,6 +1222,8 @@ emigration_chance = {
 		NOT = { year = 1900 }
 		location = { controlled_by = owner }
 		country = { 
+			is_greater_power = yes
+			is_culture_group = italian
 			NOT = { war_exhaustion = 1 }
 			NOT = { average_consciousness = 5 }
 		}
@@ -1185,7 +1232,11 @@ emigration_chance = {
 	modifier = {
 		factor = 0.9
 		THIS = { 
-			has_pop_culture = british
+			OR = { 
+				has_pop_culture = british
+				has_pop_culture = scottish
+				has_pop_culture = welsh
+			}
 		}
 		NOT = { unemployment = 0.1 }
 		NOT = { year = 1900 }
@@ -1203,37 +1254,6 @@ emigration_chance = {
 			NOT = { war_exhaustion = 1 }
 		}
 	}
-		
-	modifier = {
-		factor = 0.75
-		THIS = { 
-			has_pop_culture = scottish
-		}
-		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
-		location = { 
-			NOT = { has_pop_culture = irish }
-			controlled_by = owner
-		}
-		country = { 
-			primary_culture = british
-			NOT = { war_exhaustion = 1 }
-		}
-	}
-	
-	modifier = {
-		factor = 0.75
-		THIS = { 
-			has_pop_culture = welsh
-		}
-		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
-		location = { controlled_by = owner }
-		country = { 
-			primary_culture = british
-			NOT = { war_exhaustion = 1 }
-		}
-	}
 	
 	modifier = {
 		factor = 0.1
@@ -1246,6 +1266,7 @@ emigration_chance = {
 		country = { 
 			primary_culture = british
 			NOT = { war_exhaustion = 1 }
+			NOT = { has_country_flag = great_irish_famine }
 		}
 	}
 	
@@ -1292,7 +1313,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = 0.2
+		factor = 0.3
 		THIS = { is_culture_group = germanic }
 		location = { controlled_by = owner }
 		NOT = { unemployment = 0.1 }

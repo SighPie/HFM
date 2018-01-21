@@ -3118,11 +3118,9 @@ great_game_cb = {
 			AND = {
 				tag = AFG
 				THIS = { tag = ENG }
-				PNJ = { OR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } KAS = { exists = yes vassal_of = ENG } } }
-				KAL = { OR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } vassal_of = THIS 1221 = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } } }
-				KAS = { OR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } vassal_of = THIS } }
-				SIN = { OR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } vassal_of = THIS } }
-				MAK = { OR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } } vassal_of = THIS } }
+				1221 = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } }
+				1222 = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } }
+				1288 = { OR = { owned_by = THIS owner = { vassal_of = THIS war = no } } }
 			}
 		}
 		THIS = {

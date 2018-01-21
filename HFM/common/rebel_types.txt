@@ -29,7 +29,7 @@ reactionary_rebels = {
 		hms_government = absolute_monarchy
 		french_bourbon = absolute_monarchy
 		democracy = presidential_dictatorship
-		theocracy = absolute_monarchy
+		theocracy = theocracy
 		colonial_company = absolute_monarchy
 	}
 	
@@ -1287,6 +1287,12 @@ nationalist_rebels = {
 			has_global_flag = taiping_has_happened
 			TPG = { exists = yes }
 		}
+		modifier = {
+			factor = 0
+			tag = QNG
+			civilized = no
+			ai = yes
+		}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -1469,6 +1475,13 @@ nationalist_rebels = {
 			factor = 0.4
 			country = {
 				has_country_modifier = springtime_of_nations
+			}
+		}
+		modifier = {
+			factor = 0
+			country = {
+				civilized = no
+				tag = QNG
 			}
 		}
 	}

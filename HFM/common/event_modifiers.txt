@@ -1149,8 +1149,8 @@ beer_hall_putsch = {
 ##### Civilization & Gunboats #####
 local_opium_habit = {
 	local_RGO_throughput = -0.2
-	land_organisation = -0.005
-	naval_organisation = -0.005
+	land_organisation = -0.01
+	naval_organisation = -0.01
 	pop_consciousness_modifier = -0.05
 	icon = 20
 }
@@ -1500,10 +1500,9 @@ ruhr_boom_city = {
 
 prussian_general_staff = {
 	org_regain = 0.25
-	land_organisation = 0.1
+	land_organisation = 0.15
 	mobilisation_economy_impact = -0.25
-	land_unit_start_experience = 5
-	land_attack_modifier = 0.05
+	land_unit_start_experience = 10
 	supply_consumption = -0.05
 	mobilisation_size = 0.02
 	icon = 15
@@ -1994,14 +1993,14 @@ self_strengthening_movement = {
 	org_regain = 0.2
 	global_pop_consciousness_modifier = 0.05
 	global_pop_militancy_modifier = 0.01
-	icon = 18
+	icon = 17
 }
 
 the_new_policies = {
 	research_points = 2.0
 	education_efficiency_modifier = 0.05
 	global_assimilation_rate = 0.001
-	icon = 18
+	icon = 17
 }
 
 drive_to_reunify = {
@@ -2236,7 +2235,7 @@ gateway_to_harbor = {
 
 gateway_to_america = {
 	immigrant_attract = 1.5
-	population_growth = 0.0125
+	population_growth = 0.01
 	assimilation_rate = 1.5
 	icon = 19
 }
@@ -2273,31 +2272,33 @@ religious_minority_oppression = {
 gateway_to_australia = {
 	assimilation_rate = 1
 	immigrant_attract = 3
-	population_growth = 0.02
+	population_growth = 0.01
 	icon = 9
 }
 
 australia_goldrush = {
 	assimilation_rate = 1
 	immigrant_attract = 5
-	population_growth = 0.05
+	population_growth = 0.03
 	icon = 9
 }
 
 australia_migrations = {
-	population_growth = 0.04
+	population_growth = 0.01
+	immigrant_attract = 3
 	assimilation_rate = 1
 	icon = 9
 }
 
 australia_migrations_vic = {
-	population_growth = 0.04
+	population_growth = 0.03
+	immigrant_attract = 3
 	assimilation_rate = 1
 	icon = 9
 }
 
 vancouver_boom = {
-	population_growth = 0.02
+	population_growth = 0.01
 	assimilation_rate = 1
 	icon = 17
 }
@@ -2310,7 +2311,7 @@ america_new_world = {
 
 california_gold_rush = {
 	immigrant_attract = 3		#300%
-	population_growth = 0.02
+	population_growth = 0.01
 	assimilation_rate = 1
 	icon = 19
 }
@@ -2329,7 +2330,6 @@ manufacturing_belt_city = {
 
 manufacturing_belt = {
 	factory_owner_cost = -0.05
-	global_population_growth = 0.001
 	icon = 11
 }
 
@@ -2616,6 +2616,7 @@ neutrality = {
 	leadership_modifier = -0.7
 	diplomatic_points_modifier = -0.3
 	prestige = -0.75
+	global_immigrant_attract = 0.2
 	icon = 7
 }
 
@@ -2863,7 +2864,7 @@ emergency_wartime_austria = {
 
 zollervein  = {
 	tax_efficiency = 0.03
-	influence_modifier = 0.075
+	influence_modifier = 0.2
 	import_cost = -0.05
 	icon = 9
 }
@@ -2894,7 +2895,7 @@ unciv_balance = {
 ###HFM China Modifiers
 
 unciv_balance_qng = {
-	research_points_modifier = -0.65
+	research_points_modifier = -0.8
 	icon = 10
 }
 
@@ -2985,15 +2986,24 @@ canton_system = {
 lin_zexu = {
 	prestige = 0.05
 	leadership_modifier = 0.2
+	global_pop_consciousness_modifier = -0.01
 	icon = 17
 }
 
 likin_tax = {
 	tax_efficiency = 0.075
-	administrative_efficiency_modifier = 0.025
-	global_pop_militancy_modifier = 0.025
+	administrative_efficiency_modifier = 0.05
+	global_pop_militancy_modifier = 0.01
 	min_tax = 0.1
 	icon = 9
+}
+
+yuan_shikai = {
+	prestige = 0.01
+	ruling_party_support = 0.15
+	supply_consumption = -0.1
+	land_organisation = 0.1
+	icon = 17
 }
 
 #HFM EIC Modifiers

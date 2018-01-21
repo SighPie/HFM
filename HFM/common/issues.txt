@@ -1398,8 +1398,8 @@ military_reforms = {
 		}
 		yes_foreign_weapons = {
 			land_defense_modifier = 0.1
-			technology_cost = 11000
-			civilization_progress_modifier = 0.1
+			technology_cost = 9000
+			civilization_progress_modifier = 0.05
 
 			on_execute = {
 				effect = {
@@ -1746,8 +1746,8 @@ military_reforms = {
 		no_foreign_artillery = {
 		}
 		yes_foreign_artillery = {
-			technology_cost = 11000
-			civilization_progress_modifier = 0.1
+			technology_cost = 9000
+			civilization_progress_modifier = 0.05
 			
 			on_execute = {
 				effect = {
