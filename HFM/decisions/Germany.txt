@@ -182,10 +182,13 @@ political_decisions = {
 			owns = 2561
 			owns = 576
 			owns = 575
-			575 = {
-				state_scope = {
-					has_building = steel_factory
+			OR = {
+				575 = {
+					state_scope = {
+						has_building = steel_factory
+					}
 				}
+				ai = yes
 			}
 		}
 		
@@ -536,7 +539,6 @@ political_decisions = {
 		}
 		
 		allow = {
-			ai = no
 			OR = {
 				AND = {
 					market_structure = 1
@@ -612,10 +614,10 @@ political_decisions = {
 					duration = 720
 				}
 			}
-			549 = {
+			capital_scope = {
 				add_province_modifier = {
 					name = baby_boom
-					duration = 720
+					duration = 365
 				}
 			}
 			set_global_flag = ruhr_boom_has_happened

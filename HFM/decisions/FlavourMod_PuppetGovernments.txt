@@ -170,8 +170,26 @@ political_decisions = {
 					tag = MOZ
 					primary_culture = portuguese
 					OR = { 
-						vassal_of = POR
-						vassal_of = IBR
+						AND = { 
+							vassal_of = POR
+							POR = {
+								OR = {
+									government = hms_government
+									government = prussian_constitutionalism
+									government = absolute_monarchy
+								}
+							}
+						}
+						AND = { 
+							vassal_of = IBR
+							IBR = {
+								OR = {
+									government = hms_government
+									government = prussian_constitutionalism
+									government = absolute_monarchy
+								}
+							}
+						}
 					}
 				}
 				AND = { 
@@ -206,6 +224,7 @@ political_decisions = {
 						tag = MAD
 						tag = IMG
 						tag = MCK
+						tag = TAI
 					}
 					vassal_of = JAP
 				}
@@ -260,6 +279,15 @@ political_decisions = {
 				owner = { 
 					primary_culture = french
 					add_accepted_culture = maghrebi
+				}
+			}
+			random_owned = {
+				limit = {
+					is_core = TAI
+				}
+				owner = { 
+					primary_culture = japanese
+					add_accepted_culture = min
 				}
 			}
 		}

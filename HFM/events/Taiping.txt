@@ -19,7 +19,7 @@ country_event = {
 
 
 	trigger = {
-		year = 1850
+		year = 1851
 		tag = QNG
 		NOT = { has_global_flag = taiping_has_happened }
 		has_global_flag = hong
@@ -78,9 +78,9 @@ country_event = {
 		QNG = {
 			add_country_modifier = {
 				name = no_more_war
-				duration = 90
+				duration = 120
 			}
-			country_event = { id=99931 days=90 }
+			country_event = { id=99931 days=120 }
 		}
 		
 		any_owned = {

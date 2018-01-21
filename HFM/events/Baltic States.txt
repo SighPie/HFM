@@ -11,7 +11,10 @@ country_event = {
 		is_vassal = no
 		war = no
 		primary_culture = volga_german
-		has_country_flag = ubd_substate
+		OR = { 
+			has_country_flag = ubd_substate
+			government = deomocracy
+		}
 	}
 
 	fire_only_once = yes
@@ -43,7 +46,7 @@ country_event = {
 		remove_accepted_culture = russian
 		any_pop = { limit = { OR = { has_pop_culture = estonian has_pop_culture = latvian has_pop_culture = russian } } militancy = 9 consciousness = 9 }
 		any_owned = { limit = { OR = { is_core = LAT is_core = EST } } add_core = UBD }
-		ai_chance = { factor = 05 }
+		ai_chance = { factor = 0.05 }
 	}
 	
 	option = {

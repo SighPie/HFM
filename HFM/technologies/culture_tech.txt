@@ -694,7 +694,7 @@ ideological_thought = {
 	max_national_focus = 1 
 		
 	ai_chance = {
-		factor = 11
+		factor = 15
 		modifier = {
 			factor = 6
 			is_greater_power = yes

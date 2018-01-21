@@ -1,11 +1,11 @@
 ;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_NAME_REPARATIONS_PEU_CHL;$ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
-AGRESSION_WAR_NAME_REPARATIONS_BOL_CHL;$ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
-AGRESSION_WAR_NAME_REPARATIONS_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
-NORMAL_WAR_NAME_REPARATIONS_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
-AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
-NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
-NORMAL_WAR_NAME_REPARATIONS;$ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_NAME_REPARATIONS_PEU_CHL;The $ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_NAME_REPARATIONS_BOL_CHL;The $ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_NAME_REPARATIONS_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_WAR_NAME_REPARATIONS_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_WAR_NAME_REPARATIONS;The $ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 AGRESSION_WAR_NAME_REPARATIONS;$ORDER$War of $FIRST$ Aggression;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 colonial_conquest;Colonial Conquest;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 colonial_conquest_desc;Acquire an enemy §Ystate§W where we have §Ycolonial claims§W, but this will gives us a random amount of §Rinfamy§W from §R0.5 to 2§W.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
@@ -34,25 +34,25 @@ NORMAL_WAR_LIBERATE_NAME_AUS_EGY;$ORDER$Austrian Intervention in Egypt;;;;;;;;;;
 NORMAL_WAR_LIBERATE_NAME_RUS_EGY;$ORDER$Russian Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_LIBERATE_NAME_PRU_EGY;$ORDER$Prussian Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_LIBERATE_NAME_ENG_EGY;$ORDER$British Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
-AGRESSION_WAR_NAME_TUR_ITA;$ORDER$Italo-Turkish War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_NAME_TUR_ITA;The $ORDER$Italo-Turkish War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PUPPET_NAME_QNG_PGG;The $ORDER$Panthay Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PUPPET_NAME_QNG_UYG;The $ORDER$Dungan Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_QNG_XBI;The $ORDER$Dungan Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_XBI;The Dungan Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_ANY_NAME_BHR_QAT;$ORDER$Qatari–Bahraini War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_BHR_QAT;$ORDER$Qatari–Bahraini War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_CONQUEST_ANY_NAME_RUS_CIR;$ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_CONQUEST_ANY_NAME_RUS_CIR;$ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_CONQUEST_ANY_NAME_RUS_DAG;$ORDER$Murid War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_CONQUEST_ANY_NAME_RUS_DAG;$ORDER$Murid War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_PNJ;$ORDER$Anglo–Sikh War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_CONQUEST_ANY_NAME_ENG_PNJ;$ORDER$Anglo–Sikh War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_CIVIL_WAR_NAME_ARC_ENT;$ORDER$Platine War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_CIVIL_WAR_NAME_ARC_ENT;$ORDER$Platine War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_RUS_CIR;The $ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_ANY_NAME_RUS_CIR;The $ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_RUS_DAG;The $ORDER$Murid War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_ANY_NAME_RUS_DAG;The $ORDER$Murid War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_PNJ;The $ORDER$Anglo–Sikh War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_ANY_NAME_ENG_PNJ;The $ORDER$Anglo–Sikh War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_CIVIL_WAR_NAME_ARC_ENT;The $ORDER$Platine War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_CIVIL_WAR_NAME_ARC_ENT;The $ORDER$Platine War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NO_ALLOWED_STATES;(There are no applicable states).;;;;;;;;;;;;;;;;;;;;;;;;;;x
 po_reduce_prestige;Prestige is reduced by §R-$VALUE$§W.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-NORMAL_PUNITIVE_EXPEDITION_WAR_NAME;$ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;x,,,
-AGRESSION_PUNITIVE_EXPEDITION_WAR_NAME;$ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;x,,,
+NORMAL_PUNITIVE_EXPEDITION_WAR_NAME;The $ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_PUNITIVE_EXPEDITION_WAR_NAME;The $ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;x,,,
 NORMAL_PUNITIVE_EXPEDITION_WAR_NAME_ENG_QNG;The $ORDER$Opium War;;;;;;;;;;;;;;;;;x,,,
 AGRESSION_PUNITIVE_EXPEDITION_WAR_NAME_ENG_QNG;The $ORDER$Opium War;;;;;;;;;;;;;;;;;x,,,
 treaty_port_casus_belli;Punitive Expedition;;;;;;;;;;;;;;;x;;;;
@@ -76,14 +76,14 @@ NORMAL_WAR_DISMANTLE_NAME;$ORDER$$FIRST$ War to Dismantle the $SECOND$ Empire;Gr
 AGRESSION_WAR_DISMANTLE_NAME;$ORDER$ War of $FIRST$ Aggression;$ORDER$ Offensive Militaire $FIRST$;$ORDER$ $FIRST$ Angriffskrieg;Wojna $ORDER$$FIRST$-$SECOND$;Guerra $ORDER$$FIRST$-$SECOND$;$ORDER$ Guerra $FIRST$-$SECOND$;$ORDER$$FIRST$-$SECOND$ hábor?$ORDER$$FIRST$-$SECOND$ válka;;;;;;;x;;;;;;;;;;;;;;,,,
 NORMAL_WAR_AUSTRIAN_EMPIRE_NAME;$ORDER$$FIRST$-$SECOND$ War of Imperial Restoration;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_AUSTRIAN_EMPIRE_NAME;$ORDER$$FIRST$-$SECOND$ War of Imperial Restoration;;;;;;;;;;;;;x,,,
-NORMAL_WAR_FREE_BALKANS_NAME;$ORDER$$FIRST$-$SECOND$ War of the Balkans;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_FREE_BALKANS_NAME;$ORDER$$FIRST$-$SECOND$ War of the Balkans;;;;;;;;;;;;;x,,,
-NORMAL_WAR_MONROE_DOCTRINE_NAME;$ORDER$$FIRST$-$SECOND$ War of Anti-Imperialism;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_MONROE_DOCTRINE_NAME;$ORDER$$FIRST$-$SECOND$ War of Anti-Imperialism;;;;;;;;;;;;;x,,,
-NORMAL_WAR_RESTORE_AMERICA_NAME;$ORDER$$FIRST$-$SECOND$ War of American Restoration;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_RESTORE_AMERICA_NAME;$ORDER$$FIRST$-$SECOND$ War of American Restoration;;;;;;;;;;;;;x,,,
-NORMAL_WAR_HOLY_LAND_NAME;$ORDER$$FIRST$-$SECOND$ Levantine War;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_HOLY_LAND_NAME;$ORDER$$FIRST$-$SECOND$ Levantine War;;;;;;;;;;;;;x,,,
+NORMAL_WAR_FREE_BALKANS_NAME;The $ORDER$$FIRST$-$SECOND$ War of the Balkans;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_FREE_BALKANS_NAME;The $ORDER$$FIRST$-$SECOND$ War of the Balkans;;;;;;;;;;;;;x,,,
+NORMAL_WAR_MONROE_DOCTRINE_NAME;The $ORDER$$FIRST$-$SECOND$ War of Anti-Imperialism;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_MONROE_DOCTRINE_NAME;The $ORDER$$FIRST$-$SECOND$ War of Anti-Imperialism;;;;;;;;;;;;;x,,,
+NORMAL_WAR_RESTORE_AMERICA_NAME;The $ORDER$$FIRST$-$SECOND$ War of American Restoration;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_RESTORE_AMERICA_NAME;The $ORDER$$FIRST$-$SECOND$ War of American Restoration;;;;;;;;;;;;;x,,,
+NORMAL_WAR_HOLY_LAND_NAME;The $ORDER$$FIRST$-$SECOND$ Levantine War;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_HOLY_LAND_NAME;The $ORDER$$FIRST$-$SECOND$ Levantine War;;;;;;;;;;;;;x,,,
 NORMAL_WAR_BRITISH_RAJ_NAME;$ORDER$$SECOND$ War of the British Raj;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_BRITISH_RAJ_NAME;$ORDER$$SECOND$ War of the British Raj;;;;;;;;;;;;;x,,,
 NORMAL_CIVIL_WAR_NAME_USA_FSA;The $ORDER$American Civil War;$ORDER$ guerre de rébellion;$ORDER$Rebellionskrieg;;;;;;;;;;;x,,,
@@ -319,7 +319,7 @@ acquire_all_cores;Acquire All Cores;;;;;;;;;;;;;x,,,
 acquire_all_cores_short;Acquire all cores from $RECIPIENT$;;;;;;;;;;;;;x,,,
 acquire_all_cores_setup;Acquire all core provinces from $RECIPIENT$;;;;;;;;;;;;;x,,,
 acquire_all_cores_desc;Acquire all enemy §Ystates§W where we have §Ycore provinces§W;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_ALL_CORES_NAME_USA_ENG;$ORDER$British-American War;;;;;;;;;;;;x,,,
-NORMAL_WAR_ALL_CORES_NAME_USA_ENG;$ORDER$British-American War;;;;;;;;;;;;x,,,
-AGRESSION_WAR_ALL_CORES_NAME_ENG_USA;$ORDER$British-American War;;;;;;;;;;;;x,,,
-NORMAL_WAR_ALL_CORES_NAME_ENG_USA;$ORDER$British-American War;;;;;;;;;;;;x,,,
+AGRESSION_WAR_ALL_CORES_NAME_USA_ENG;The $ORDER$Anglo-American War;;;;;;;;;;;;x,,,
+NORMAL_WAR_ALL_CORES_NAME_USA_ENG;$ORDER$Anglo-American War;;;;;;;;;;;;x,,,
+AGRESSION_WAR_ALL_CORES_NAME_ENG_USA;The $ORDER$Anglo-American War;;;;;;;;;;;;x,,,
+NORMAL_WAR_ALL_CORES_NAME_ENG_USA;The $ORDER$Anglo-American War;;;;;;;;;;;;x,,,

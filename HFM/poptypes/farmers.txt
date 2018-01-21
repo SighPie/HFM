@@ -1045,7 +1045,7 @@ promote_to = {
 		}
 				
 		modifier = {
-			factor = 8
+			factor = 24
 			THIS = { has_pop_culture = french }
 			location = {
 				is_colonial = yes
@@ -1056,7 +1056,7 @@ promote_to = {
 		
 		
 		modifier = {
-			factor = 12
+			factor = 16
 			colonial_policy = settlement
 			location = { 
 				is_colonial = yes 

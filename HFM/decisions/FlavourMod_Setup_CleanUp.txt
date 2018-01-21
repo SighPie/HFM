@@ -176,24 +176,6 @@ political_decisions = {
 		}
 	}
 	
-	test_dec_2 = {
-		potential = {
-			ai = no
-			has_country_flag = enable_debug_decision
-			has_country_flag = test_dec
-			NOT = { has_country_flag = test_dec_2 }
-			year = 1860
-		}
-		
-		allow = {
-		}
-		
-		effect = {
-			QNG = { change_tag = QNG }
-			set_country_flag = test_dec_2
-		}
-	}
-	
 	disable_microstates = {
 		potential = {
 			ai = no
@@ -635,7 +617,7 @@ political_decisions = {
 				}
 				AND = {
 					tag = USA
-					year = 1900
+					year = 1890
 				}
 			}
 			invention = steamer_transports
@@ -643,7 +625,7 @@ political_decisions = {
 			OR = {
 				#Before 1885
 				AND = { 
-					NOT = { year = 1885 }
+					NOT = { year = 1880 }
 					NOT = { total_amount_of_ships = 150 }
 					NOT = { tag = EIC }
 					NOT = { tag = ENG }
@@ -656,23 +638,25 @@ political_decisions = {
 				AND = { 
 					year = 1860
 					NOT = { year = 1885 }
-					NOT = { total_amount_of_ships = 300 }
+					NOT = { total_amount_of_ships = 250 }
 					tag = ENG
 				}
 				#After 1885
 				AND = {
-					year = 1885
-					NOT = { total_amount_of_ships = 75 }
+					year = 1880
+					NOT = { total_amount_of_ships = 50 }
 					NOT = { tag = EIC tag = ENG tag = GER tag = FRA }
 				}
 				AND = {
 					year = 1885
-					NOT = { total_amount_of_ships = 200 }
+					NOT = { year = 1905 }
+					NOT = { total_amount_of_ships = 100 }
 					tag = ENG
+					owns = 1251
 				}
 				AND = {
 					year = 1880
-					NOT = { total_amount_of_ships = 125 }
+					NOT = { total_amount_of_ships = 80 }
 					OR = { 
 						tag = GER
 						tag = FRA
@@ -681,6 +665,12 @@ political_decisions = {
 				AND = {
 					tag = EIC
 					NOT = { total_amount_of_ships = 50 }
+				}
+				AND = {
+					year = 1905
+					NOT = { total_amount_of_ships = 120 }
+					tag = ENG
+					owns = 1251
 				}
 			}
 			NOT = { has_country_modifier = ai_warships_cooldown }

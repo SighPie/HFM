@@ -528,6 +528,17 @@ political_decisions = {
 				add_province_modifier = { name = irish_oppression duration = -1 }
 				add_province_modifier = { name = enclosures duration = -1 }
 			}
+			any_owned = {
+				limit = {
+					is_core = ENG
+					is_overseas = no
+					NOT = { is_core = IRE }
+				}
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1825
+				}
+			}
 			2482 = { add_province_modifier = { name = penal_colony duration = -1 } }
 		}
 	}
@@ -1017,7 +1028,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			treasury = 10000
+			treasury = 25000
 			1008 = { set_province_flag = moscow_city }
 			1008 = { any_pop = { literacy = 0.1 } }
 			994 = { any_pop = { literacy = 0.1 } }
@@ -1119,9 +1130,9 @@ political_decisions = {
 						NOT = { terrain = marsh }
 					}
 				}
-				add_province_modifier = { name = small_baby_boom duration = 4745 }
+				add_province_modifier = { name = small_baby_boom duration = 7300 }
 			}
-			any_owned = { limit = { is_core = POL } add_province_modifier = { name = small_baby_boom duration = 1095 } }
+			any_owned = { limit = { is_core = POL } add_province_modifier = { name = small_baby_boom duration = 1825 } }
 			
 			any_owned = { limit = { is_core = UKR } add_province_modifier = { name = russoification duration = 25550 } }
 			

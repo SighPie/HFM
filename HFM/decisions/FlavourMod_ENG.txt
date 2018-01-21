@@ -765,9 +765,25 @@ political_decisions = {
 		
 		effect = {
 			treasury = -30000
-			capital = 284
-			build_factory_in_capital_state = barrel_factory
-			capital = 300
+			random_owned = {
+				limit = {
+					province_id = 284
+					state_scope = {
+						NOT = { has_building = barrel_factory }
+					}
+				}
+				
+				owner = { 
+					capital = 284
+					build_factory_in_capital_state = barrel_factory
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 300 #London
+				}
+				THIS = { capital = 300 }
+			}
 			set_global_flag = landship_committee
 		}
 		
@@ -794,9 +810,25 @@ political_decisions = {
 		effect = {
 			set_global_flag = royal_aircraft_factory
 			treasury = -30000
-			capital = 297
-			build_factory_in_capital_state = aeroplane_factory
-			capital = 300
+			random_owned = {
+				limit = {
+					province_id = 297
+					state_scope = {
+						NOT = { has_building = aeroplane_factory }
+					}
+				}
+				
+				owner = { 
+					capital = 297
+					build_factory_in_capital_state = aeroplane_factory
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 300 #London
+				}
+				THIS = { capital = 300 }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

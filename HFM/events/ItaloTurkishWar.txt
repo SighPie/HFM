@@ -9,7 +9,7 @@ country_event = {
 	
 	trigger = {
 		tag = ITA
-		bolt_action_rifles = 1
+		invention = the_dark_continent
 		is_vassal = no
 		owns = 749
 		OR = {
@@ -22,7 +22,10 @@ country_event = {
 			AND = {
 				is_greater_power = yes
 				war = no
-				has_global_flag = ottomans_supported
+				OR = { 
+					has_global_flag = ottomans_supported
+					TUR = { has_country_flag = lost_russo_turkish_war }
+				}
 			}
 			war = no
 			has_global_flag = balkans_supported

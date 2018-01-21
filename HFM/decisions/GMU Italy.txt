@@ -183,6 +183,7 @@ political_decisions = {
 	}
 
 	german_tyrol = {
+		picture = "german_tyrol"
 		potential = {
 			OR = {
 				primary_culture = north_german
@@ -220,20 +221,19 @@ political_decisions = {
 ##############################
 
 	galleria_ve = {
+		picture = "galleria_ve"
 		potential = {
 			tag = ITA
 			owns = 726
-			NOT = {
-				has_country_flag = shopping_in_milan
-			}
+			NOT = { has_country_flag = shopping_in_milan }
 		}
 		
 		allow = {
-			money = 30000
+			money = 45001
 		}
 		
 		effect = {
-			treasury = -30000
+			treasury = -45000
 			set_country_flag = shopping_in_milan
 			prestige = 5
 			726 = { life_rating = 5 }
@@ -282,6 +282,7 @@ political_decisions = {
 #####################
 
 	venetian_ambition = {
+		picture = "venetian_ambition"
 		potential = {
 			NOT = { has_country_flag = venetian_ambition }
 			tag = VEN
@@ -325,6 +326,7 @@ political_decisions = {
 #########################
 
 	codificazione_estense = {
+		picture = "codificazione_estense"
 		potential = {
 			tag = MOD
 			NOT = { has_country_flag = codificazione_estense_si }
@@ -353,6 +355,7 @@ political_decisions = {
 ##############################
 
 	roman_republic_joins = {
+		picture = "italia_irredenta"
 		potential = {
 			tag = PAP
 			ai = yes

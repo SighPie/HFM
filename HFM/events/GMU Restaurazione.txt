@@ -1497,14 +1497,26 @@ country_event = {
 	option = {
 		name = "France is the protector of Rome."
 		FRA = { country_event = 202018 }
-		PAP = { government = theocracy }
-		PAP = { political_reform = none_voting
-				political_reform = appointed
-				political_reform = state_press
-				political_reform = first_past_the_post
-				political_reform = no_trade_unions
-				political_reform = underground_parties
+		PAP = { 
+			government = theocracy
+			political_reform = none_voting
+			political_reform = appointed
+			political_reform = state_press
+			political_reform = first_past_the_post
+			political_reform = no_trade_unions
+			political_reform = underground_parties
 		}  
+		random_country = {
+			limit = {
+				tag = RMG
+				ai = yes
+				in_sphere = FRA
+			}
+			annex_to = PAP
+			any_owed = {
+				secede_province = PAP
+			}
+		}
 	}
 }
 
@@ -1516,7 +1528,7 @@ country_event = {
 	desc = "EVTDESC202017"
 	picture = "repubblica_romana_fine"
 
-        is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "We are pleased."
@@ -1531,6 +1543,7 @@ country_event = {
 				who = FROM
 				value = 200
 			}
+			create_alliance = FROM
 		}
 	}
 }
@@ -1587,7 +1600,7 @@ country_event = {
 		727 = { add_core = THIS }
 		728 = { add_core = THIS }
 		any_pop = {
-			limit = { is_primary_culture = yes }
+			limit = { is_culture_group = italian }
 			militancy = -5
 		}
 	}

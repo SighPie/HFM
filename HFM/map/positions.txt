@@ -16996,11 +16996,11 @@
 # Kiel
 369 = {
     text_position = {
-        x = 2962.000000
-        y = 1711.500000
+        x = 2966.500000
+        y = 1709.500000
     }
 
-    text_rotation = 6.2
+    text_rotation = 0.1
     text_scale = 3.8
     unit = {
         x = 2956.000000
@@ -72186,17 +72186,22 @@
 
 # Algiers
 1700 = {
-    unit = {
-        x = 2860.000000
-        y = 1371.000000
-    }
-
     text_position = {
         x = 2857.399902
         y = 1370.199951
     }
 
     text_scale = 2.600000
+    unit = {
+        x = 2860.000000
+        y = 1371.000000
+    }
+
+    factory = {
+        x = 2848.100098
+        y = 1370.599976
+    }
+
     building_construction = {
         x = 2854.000000
         y = 1372.000000
@@ -72205,11 +72210,6 @@
     military_construction = {
         x = 2866.000000
         y = 1371.000000
-    }
-
-    factory = {
-        x = 2848.100098
-        y = 1370.599976
     }
 
     building_position = {
@@ -72226,7 +72226,7 @@
     }
 
     building_rotation = {
-        naval_base = 2.094396
+        naval_base = 6.108651
     }
 
 }

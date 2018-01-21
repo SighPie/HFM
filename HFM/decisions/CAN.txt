@@ -575,7 +575,7 @@ political_decisions = {
 				life_rating = 5 
 				add_province_modifier = {
 					name = recently_built_city
-					duration = 1450
+					duration = 730
 				}
 			}
 		}

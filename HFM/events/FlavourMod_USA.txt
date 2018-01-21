@@ -369,7 +369,7 @@ country_event = {
 			life_rating = 12
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 2920
+				duration = 1825
 			}			
 		}
 		any_owned = {
@@ -383,7 +383,7 @@ country_event = {
 			life_rating = 10
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 2920
+				duration = 1095
 			}			
 		}
 		any_owned = {
@@ -397,7 +397,7 @@ country_event = {
 			life_rating = 5
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 3650
+				duration = 1825
 			}			
 		}		
 		any_owned = {
@@ -446,7 +446,7 @@ country_event = {
 			life_rating = 5
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1460
+				duration = 1095
 			}			
 		}
 		any_owned = {
@@ -473,7 +473,7 @@ country_event = {
 			}
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1460
+				duration = 1095
 			}			
 		}
 		any_owned = {
@@ -526,7 +526,7 @@ country_event = {
 		163 = { #Chicago
 			add_province_modifier = {
 				name = baby_boom
-				duration = 1460 
+				duration = 730 
 			}
 			life_rating = 3
 		}

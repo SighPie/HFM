@@ -277,7 +277,7 @@ political_decisions = {
 	}
 	
 	istria_rename_ita_slo = {
-		picture = gtfo
+		picture = italia_irredenta
 		potential = {
 			OR = {
 				primary_culture = north_italian
@@ -330,7 +330,7 @@ political_decisions = {
 	}
 	
 	istria_rename_ita_cro = {
-		picture = gtfo
+		picture = italia_irredenta
 		potential = {
 			OR = {
 				primary_culture = north_italian
@@ -1980,7 +1980,7 @@ political_decisions = {
 	}
 	
 	dalmatia_rename_cro = {
-		picture = gtfo
+		picture = italian_dalmatia
 		potential = {
 			OR = {
 				primary_culture = croat
@@ -2012,7 +2012,7 @@ political_decisions = {
 	}
 	
 	dalmatia_rename_ita = {
-		picture = gtfo
+		picture = italian_dalmatia
 		potential = {
 			is_culture_group = italian
 			owns = 780
@@ -2041,7 +2041,7 @@ political_decisions = {
 	}
 	
 	dalmatia_rename_aus = {
-		picture = gtfo
+		picture = italian_dalmatia
 		potential = {
 			is_culture_group = germanic
 			NOT = {
@@ -2079,7 +2079,7 @@ political_decisions = {
 	}
 	
 	san_marino_question = {
-		picture = gtfo
+		picture = san_marino
 		potential = {
 			tag = SMR
 			exists = ITA
@@ -2098,7 +2098,7 @@ political_decisions = {
 	}
 	
 	italian_renamed_savoy_aosta = {
-		picture = gtfo
+		picture = claim_aosta
 		potential = {
 			is_culture_group = italian
 			OR = {
@@ -2143,7 +2143,7 @@ political_decisions = {
 	}
 	
 	french_renamed_savoy_aosta = {
-		picture = gtfo
+		picture = claim_aosta
 		potential = {
 			primary_culture = french
 			OR = {
@@ -2252,7 +2252,7 @@ political_decisions = {
 	}
 
 	italian_veneto = {
-		picture = gtfo
+		picture = italia_irredenta
 		potential = {
 			OR = {
 				primary_culture = north_italian
@@ -2332,7 +2332,7 @@ political_decisions = {
 	}
 
 	italian_lombardy = {
-		picture = gtfo
+		picture = italia_irredenta
 		potential = {
 			OR = {
 				primary_culture = north_italian
@@ -2484,11 +2484,11 @@ political_decisions = {
 			OR = {
 				AND = {
 					is_culture_group = germanic
-					owns = 349 NOT = { has_global_flag = german_renamed_lorraine }
+					owns = 411 NOT = { has_global_flag = german_renamed_lorraine }
 				}
 				AND = {
 					is_culture_group = french
-					owns = 349 NOT = { has_global_flag = french_renamed_lorraine }
+					owns = 411 NOT = { has_global_flag = french_renamed_lorraine }
 				}
 			}
 		}
@@ -2510,7 +2510,7 @@ political_decisions = {
 				}
 				414 = { change_province_name = "Spinneln" }
 				413 = { change_province_name = "Wirten" }
-				owner = { 
+				owner = {
 					set_global_flag = german_renamed_lorraine
 					clr_global_flag = french_renamed_lorraine
 				}

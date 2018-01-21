@@ -53,6 +53,7 @@ political_decisions = {
 ######################
 
 	cologne_cathedral = {
+		picture = "cologne_cathedral"
 		potential = {
 			NOT = { has_global_flag = cologne_cathedral_build }
 			owns = 575
@@ -84,6 +85,7 @@ political_decisions = {
 ##########
 
 	free_press_in_baden = {
+		picture = "free_press_in_baden"
 		potential = {
 		  tag = BAD
 		  NOT = { has_country_flag = free_press_in_baden }
@@ -179,14 +181,14 @@ political_decisions = {
 		allow = {
 			year = 1838
 			romanticism = 1
-			money = 5000
+			money = 15000
 		}
 		
 		effect = {
 			set_global_flag = schiller_denkmal_build
 			prestige = 10
 			plurality = 5
-			treasury = -5000
+			treasury = -15000
 			any_pop = {
 				scaled_consciousness = {
 					ideology = liberal
@@ -233,7 +235,7 @@ political_decisions = {
 		allow = {
 			romanticism = 1
 			invention = populism_vs._establishment
-			money = 30000
+			money = 55000
 			OR = { 
 				government = absolute_monarchy
 				government = prussian_constitutionalism
@@ -243,9 +245,9 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = maximilianstrasse_build
-			treasury = -35000
+			treasury = -55000
 			prestige = 10
-			599 = { life_rating = 1 }
+			599 = { life_rating = 3 }
 		}
 		
 		ai_will_do = {

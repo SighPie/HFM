@@ -2243,15 +2243,15 @@ country_event = {
 			year = 1880
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.75
 			year = 1905
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.5
 			year = 1910
 		}
 		modifier = {
-			factor = 0.95
+			factor = 0.1
 			year = 1915
 		}
 	}

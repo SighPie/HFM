@@ -22,7 +22,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = manufacturing_belt
-				duration = 1095
+				duration = 1825
 			}
 			any_owned = {
 				limit = {
@@ -30,7 +30,7 @@ political_decisions = {
 				}
 				add_province_modifier = {
 					name = manufacturing_belt_city
-					duration = 1085
+					duration = 365
 				}			
 			}
 			any_owned = {
@@ -51,7 +51,7 @@ political_decisions = {
 				}
 				add_province_modifier = {
 					name = manufacturing_belt_city
-					duration = 720
+					duration = 365
 				}			
 			}
 

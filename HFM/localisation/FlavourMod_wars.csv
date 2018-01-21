@@ -1,4 +1,6 @@
 ;;;;;;;;;;;x
+NORMAL_WAR_PUPPET_NAME_ENG_AFG;The $ORDER$Anglo-Afghan War;;;;;;;;;;;;x,,,
+AGRESSION_WAR_PUPPET_NAME_ENG_AFG;The $ORDER$Anglo-Afghan War;;;;;;;;;;;;x,,,
 acquire_substate_core_region;Acquire substate core region;Acquérir une région comme Sous-État;Beschafft eine Unterstaatsregion;;;;;;;;;;;x
 acquire_substate_core_region_desc;Acquire a core region from enemy §Ysubstate§W;Acquérir une région d'un §YSous-État§W ennemi;Beschafft eine Region des Feindes §Ysubstate§W;;;;;;;;;;;x
 acquire_substate_core_region_short;Acquire $STATE$;Prendre $STATE$;$STATE$ erobern;;Adquirir $STATE$;;;;;;;;;x

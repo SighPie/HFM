@@ -196,7 +196,7 @@ political_decisions = {
 				357 = {
 					change_province_name = "Mitau"
 					state_scope = {
-						change_region_name = "Kurland"
+						change_region_name = "Kurland-Semgallen"
 					}
 				}
 				358 = { change_province_name = "Windau" }
@@ -341,7 +341,7 @@ political_decisions = {
 				350 = {
 					change_province_name = "Narwa"
 					state_scope = {
-						change_region_name = "Estland"
+						change_region_name = "Livland"
 					}
 				}
 				351 = { change_province_name = "Pernau" }
@@ -398,7 +398,7 @@ political_decisions = {
 				350 = {
 					change_province_name = "Narva"
 					state_scope = {
-						change_region_name = "Estoniya"
+						change_region_name = "Liflyandiya"
 					}
 				}
 				351 = { change_province_name = "Pernov" }

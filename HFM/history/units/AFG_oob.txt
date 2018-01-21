@@ -13,6 +13,7 @@ leader = {
 	date = 1836.1.1
 	personality = stalwart
 	background = debutante
+	prestige = 0.2
 }
 
 leader = {
@@ -21,6 +22,16 @@ leader = {
 	date = 1836.1.1
 	personality = intuitive 
 	background = aristocrat
+	prestige = 0.2
+}
+
+leader = {
+	name = "Akbar Khan"
+	type = land
+	date = 1836.1.1
+	personality = intuitive 
+	background = aristocrat
+	prestige = 0.2
 }
 
 army = {

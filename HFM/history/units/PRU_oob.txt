@@ -573,7 +573,7 @@ leader = {
 	date = 1836.1.1
 	background = school_of_firepower
 	personality = implacable
-	prestige = 0.75
+	prestige = 1.0
 	}
 	
 leader = {

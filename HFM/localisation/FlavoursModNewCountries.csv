@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+CAL;The California Republic;;;;;;;;;;;;;x
 BAN_colonial_company;Freistaat Banat;;;;;;;;;;;;;x
 SIE_colonial_company;Siebenbürgen;;;;;;;;;;;;;x
 SIE_colonial_company_ADJ;Siebenbürger;;;;;;;;;;;;;x
@@ -21,6 +22,7 @@ KNY_colonial_company;East Africa;;;;;;;;;;;;;x,
 NGR_colonial_company;West Africa;;;;;;;;;;;;;x,
 IRE_french_bourbon;The Irish Dominion;;;;;;;;;;;;;x,
 IRE_hms_government;The Irish Free State;;;;;;;;;;;;;x,
+UBD_democracy;The Baltic Union;;;;;;;;;;;;;x,
 UBD_colonial_company;The Baltic Governorates;;;;;;;;;;;;;x,
 HND_colonial_company;The Raj;;;;;;;;;;;;x,
 TCA_colonial_company;The Caucasus Viceroyalty;;;;;;;;;;;;;x,
