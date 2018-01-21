@@ -372,6 +372,7 @@ fanatic_army = {
 	land_organisation = 0.2
 	war_exhaustion = -20
 	org_regain = 0.25
+	land_unit_start_experience = 5
 	mobilisation_size = 0.15
 	supply_consumption = -0.1
 	prestige = -0.02
@@ -2923,11 +2924,10 @@ ever_victorious_army = {
 }
 
 the_xiang_army = {
-	war_exhaustion = -5
 	org_regain = 0.1
 	land_organisation = 0.05
 	supply_consumption = -0.1
-	global_pop_militancy_modifier = -0.1
+	global_pop_militancy_modifier = -0.05
 	icon = 15
 }
 

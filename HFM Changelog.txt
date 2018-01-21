@@ -16,6 +16,7 @@
 - Fixed PROV691 Naval Base position
 - Wake Island will no longer be renamed Hamilton
 - Forming Romania now requires WAL/MDV to not be vassals
+- Fixed AI Germany not taking the Ruhr Industralism & Ruhr Boom Decisions
 
 #Changes to Europe
 - 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
@@ -24,11 +25,14 @@
 - Changed the German & Russian names for estonia to Livland & Liflyandiya
 - Increased duration of starting baby boom modifiers for Russia
 - Changed Theocratic Italy Flag
+- The Italo-Turkish War can now be fired as long as Italy has the Dark Continent Researched
 
 #Other Changes
 - Delayed Dates where rebels get military techs
 - Slightly reduced the benefits of the health care reforms
 - Updated the colours of some Events/Decision pictures
+- Adjusted AI ship spawning levels
+- Reactionary Rebels will no longer turn Theocracies to Absolute Monarchies
 
 # Migration Changes
 - Lowered base migration chance, but increased pre-Great War era migration to have a steady amount of migration in the early game, but not a overly large amount in the late-game

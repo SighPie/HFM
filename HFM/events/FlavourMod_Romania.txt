@@ -74,6 +74,11 @@
 	
 		option = {
 			name = "EVTOPTA97531"
+			casus_belli = {
+				target = WAL
+				type = make_puppet
+				months = 24
+			}
 			war = {
 				target = WAL
 				attacker_goal = {

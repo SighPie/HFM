@@ -249,6 +249,7 @@ political_decisions = {
 					has_global_flag = taiping_has_been_defeated
 					has_country_flag = arrow_incident
 					has_global_flag = ever_victorious_army 
+					war_exhaustion = 20
 				}
 				exists = yes
 				OR = {
