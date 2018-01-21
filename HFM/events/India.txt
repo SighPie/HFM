@@ -450,18 +450,23 @@ country_event = {
 		tag = PNJ
 		has_country_flag = singh
 		NOT = { has_leader = "Ranjit Singh" }
+		year = 1839
 		NOT = { truce_with = ENG }
-		NOT = { has_country_flag = ranjit_singh_dead }
-		
+		NOT = { has_global_flag = ranjit_singh_dead }
 	}
 	
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = "EVT97115OPTA"
-		set_country_flag = ranjit_singh_dead
+		set_global_flag = ranjit_singh_dead
 		any_pop = { militancy = 4 }
-		ENG = { country_event = 97116 }
+		leave_alliance = ENG
+		add_country_modifier = {
+			name = power_vacuum
+			duration = 1825
+		}
+		#ENG = { country_event = 97116 }
 	}
 }
 
@@ -476,27 +481,32 @@ country_event = {
 	news_desc_short = "EVTDESC97116_NEWS_SHORT"
 	picture = "ranjit_singh_death"
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = ENG
+		has_global_flag = ranjit_singh_dead
+		NOT = { truce_with = ENG }
+		war = no
+		NOT = { has_global_flag = 1_anglo_sikh_war }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 0.8 PNJ = { average_militancy = 3 } }
+		
+		modifier = { factor = 0.5 PNJ = { average_militancy = 7 } }
+		
+		modifier = { factor = 0.1 year = 1845 }
+		
+		modifier = { factor = 0.01 year = 1846 }
+	}
+	
+	immediate = { set_global_flag = 1_anglo_sikh_war }
 	
 	option = {
 		name = "EVT97116OPTA"
-		badboy = 2
+		#badboy = 2
 		relation = { who = PNJ value = -100 }
 		leave_alliance = PNJ
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { nationalism_n_imperialism = 1 }
-				}
-			}
-			owner = {
-				casus_belli = {
-					target = PNJ
-					type = demand_concession_casus_belli
-					months = 60
-				}
-			}
-		}
 		random_owned = {
 			limit = {
 				owner = {
@@ -529,12 +539,8 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0
-				modifier = {
-				factor = 100
-				PNJ = { ai = no }
-				}
-			}
 		}
+	}
 			
 	option = {
 		name = "EVT97116OPTB"
@@ -543,19 +549,18 @@ country_event = {
 		leave_alliance = PNJ
 		war = {
 			target = PNJ
-			attacker_goal = { casus_belli = conquest_any }
+			attacker_goal = { 
+				casus_belli = great_game_cb
+			}
 			defender_goal = { casus_belli = status_quo }
-			call_ally = yes
+			call_ally = no
 		}
+		
 		ai_chance = {
 			factor = 100
-				modifier = {
-				factor = 0
-				PNJ = { ai = no }
-				}
-			}
 		}
 	}
+}
 #country_event = {
 #
 #	id = 97117

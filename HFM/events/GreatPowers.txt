@@ -2043,6 +2043,36 @@ country_event = {
 				duration = 1825
 			}
 		}
+		#1st Anglo-Sikh War
+		random_owned = {
+			limit = {
+				is_core = KAS
+				owner = {
+					civilized = no
+					tag = PNJ
+					truce_with = ENG
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = KAS }
+					secede_province = ENG
+				}
+			}
+		}
+		#2nd Anglo-Sikh War
+		random_owned = {
+			limit = {
+				is_core = PNJ
+				owner = {
+					civilized = no
+					tag = PNJ
+					truce_with = ENG
+					has_global_flag = 2_anglo_sikh_war
+				}
+			}
+			PNJ = { annex_to = ENG }
+		}
 	}
 }
 

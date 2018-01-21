@@ -129,6 +129,10 @@ country_event = {
 			year = 1875
 		}
 		modifier = {
+			factor = 0.75
+			RUS = { is_greater_power = no }
+		}
+		modifier = {
 			factor = 0.8
 			ai = no
 		}

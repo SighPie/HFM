@@ -510,6 +510,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = appoint_yuan_shikai
+			prestige = 5
 			add_country_modifier = {
 				name = yuan_shikai
 				duration = -1
@@ -537,6 +538,7 @@ political_decisions = {
 		
 		effect = {
 			1482 = { naval_base = 3}
+			prestige = 5
 			treasury = -75000
 			set_country_flag = fuzhou_aresenal_established 
 			activate_technology = post_nelsonian_thought
@@ -578,7 +580,7 @@ political_decisions = {
 				name = maritime_customs_service
 				duration = -1
 			}
-			activate_technology = freedom_of_trade
+			activate_technology = no_standard
 			CHI = { activate_technology = no_standard }
 			KMT = { activate_technology = no_standard }
 		}
@@ -800,6 +802,7 @@ political_decisions = {
 		
 		effect = {
 			treasury = -75000
+			prestige = 5
 			set_global_flag = hanyang_arsenal 
 			random_owned = {
 				limit = { owner = { civilized = no } }
@@ -828,6 +831,86 @@ political_decisions = {
 				THIS = { capital = 1616 }
 			}
 			1516 = { trade_goods = coal }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_china_merchants_group  = {
+		picture = china_merchants_group
+		potential = {
+			tag = QNG
+			year = 1870
+			OR = { 
+				AND = { 
+					civilized = no
+					has_country_flag = self_strengthening_movement
+				}
+				civilized = yes
+			}
+			NOT = { has_country_flag = establish_china_merchants_group }
+		}
+		
+		allow = {
+			war = no
+			money = 50001
+		}
+		
+		effect = {
+			set_country_flag = establish_china_merchants_group
+			prestige = 5
+			treasury = -5000
+			activate_technology = freedom_of_trade
+			CHI = { activate_technology = freedom_of_trade }
+			KMT = { activate_technology = freedom_of_trade }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	abolish_the_imperial_examinations  = {
+		picture = imperial_examinations
+		potential = {
+			tag = QNG
+			year = 1890
+			OR = { 
+				AND = { 
+					civilized = no
+					has_country_flag = new_policies
+				}
+				civilized = yes
+			}
+			NOT = { has_country_flag = abolish_the_imperial_examinations }
+		}
+		
+		allow = {
+			war = no
+			OR = { 
+				civilization_progress = 0.5
+				civilized = yes
+			}
+		}
+		
+		effect = {
+			set_country_flag = abolish_the_imperial_examinations
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = { economic_reform = yes_admin_reform }
+			}	
+			random_owned = {
+				limit = {
+					owner = { school_reforms = no_schools }
+					}
+				owner = { social_reform = low_schools }
+			}
+			any_pop = {
+				limit = {
+					location = { is_core = CHI }
+				}
+				consciousness = 1
+			}
+			KMT = { social_reform = low_schools }
+			CHI = { social_reform = low_schools }
 		}
 		
 		ai_will_do = { factor = 1 }

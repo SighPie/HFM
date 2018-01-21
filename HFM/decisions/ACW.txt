@@ -1152,7 +1152,6 @@ political_decisions = {
 				}
 				set_country_flag = alaska_purchase_interest
 			}
-			LSK = { government = democracy }
 		}
 		ai_will_do = {
 			factor = 1

@@ -970,7 +970,10 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			invention = the_dark_continent
+			OR = { 
+				invention = the_dark_continent
+				AFG = { vassal_of = THIS }
+			}
 			NOT = { year = 1920 }
 			#NOT = { relation = { who = AFG value = 100 } }
 		}
@@ -1509,6 +1512,8 @@ political_decisions = {
 				limit = {
 					owner = {
 						OR = {
+							primary_culture = french_australian
+							primary_culture = neo_zelandais
 							is_culture_group = french
 						}
 					}

@@ -2755,7 +2755,7 @@ political_decisions = {
 					duration = -1
 				}
 			}
-			
+			treasury = 50000
 			LAN = {
 				government = presidential_dictatorship
 			}

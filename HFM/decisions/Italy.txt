@@ -316,6 +316,13 @@ political_decisions = {
 				diplomatic_influence = { who = PAP value = -200 }
 				diplomatic_influence = { who = SIC value = -200 }
 			}
+			random_country = {
+				limit = {
+					tag = SIC
+					ai = yes
+				}
+				prestige = -20
+			}
 		}
 	}
 	

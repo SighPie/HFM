@@ -723,16 +723,16 @@ country_event = {
 		prestige = 100
 		war_exhaustion = -20
 		relation = { who = SPC value = 50 }
-		BEL = { 
-			all_core = {
-				add_core = FRA
-			}
-		}
-		FLA = {
-			all_core = {
-				add_core = FRA
-			}
-		}
+		#BEL = { 
+			#all_core = {
+				#add_core = FRA
+			#}
+		#}
+		#FLA = {
+			#all_core = {
+				#add_core = FRA
+			#}
+		#}
 		WLL = {
 			all_core = {
 				add_core = FRA
@@ -743,35 +743,19 @@ country_event = {
 				add_core = FRA
 			}
 		}
-		381 = {
-			add_core = FRA
-		}
-		570 = {
-			add_core = FRA
-		}
-		571 = {
-			add_core = FRA
-		}
-		572 = {
-			add_core = FRA
-		}
-		573 = {
-			add_core = FRA
-		}
-		574 = {
-			add_core = FRA
-		}
-		575 = {
-			add_core = FRA
-		}
-		576 = {
-			add_core = FRA
-		}
-		577 = {
-			add_core = FRA
-		}
-		396 = {
-			add_core = FRA
+		any_owned = {
+			limit = {
+				OR = {
+					region = PRU_575
+					region = PRU_570
+					region = BEL_387
+					province_id = 381
+				}
+			}
+			add_province_modifier = {
+				name = core_integration
+				duration = -1
+			}
 		}
 		LUX = {
 			all_core = {
@@ -922,7 +906,7 @@ country_event = {
 					has_pop_culture = spanish
 				}
 			}
-			reduce_pop = 0.90
+			reduce_pop = 0.99
 			consciousness = 10
 			militancy = 10
 		}

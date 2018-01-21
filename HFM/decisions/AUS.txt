@@ -714,6 +714,7 @@ political_decisions = {
 			clr_country_flag = danube_proposal_in_progress
 			prestige = 25
 			political_reform = state_equal_weight
+			political_reform = confederalism
 			all_core = {
 				remove_core = KUK
 				add_core = DNB

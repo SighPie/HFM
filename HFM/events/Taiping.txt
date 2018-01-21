@@ -27,7 +27,7 @@ country_event = {
 		has_country_modifier = the_female_shortage
 		check_variable = {
 			which = taiping_provinces
-			value = 2
+			value = 3
 		}
 	}
 	

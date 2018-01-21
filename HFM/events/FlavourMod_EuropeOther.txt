@@ -308,7 +308,7 @@ country_event = {
 			defender_goal = {
 				casus_belli = status_quo
 			}
-			call_ally = np
+			call_ally = no
 		}
 		ai_chance = { factor = 5 }
 	}	

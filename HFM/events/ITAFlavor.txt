@@ -479,7 +479,7 @@ country_event = {
 							owns = 727
 							owns = 728
 						}
-						owns = {
+						AND = {
 							owns = 729
 							owns = 730
 							owns = 731
@@ -524,7 +524,7 @@ country_event = {
 							owns = 727
 							owns = 728
 						}
-						owns = {
+						AND = {
 							owns = 729
 							owns = 730
 							owns = 731
@@ -569,7 +569,7 @@ country_event = {
 							owns = 727
 							owns = 728
 						}
-						owns = {
+						AND = {
 							owns = 729
 							owns = 730
 							owns = 731
@@ -614,7 +614,7 @@ country_event = {
 							owns = 727
 							owns = 728
 						}
-						owns = {
+						AND = {
 							owns = 729
 							owns = 730
 							owns = 731

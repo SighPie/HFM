@@ -170,6 +170,52 @@ political_decisions = {
 		}
 	}
 	
+	anglo_afghan_war = {
+		picture = george_eden
+		potential = {
+			tag = EIC
+			is_substate = yes
+			NOT = { has_country_flag = anglo_afghan_war }
+			exists = AFG
+			AFG = {
+				ai = yes
+				is_vassal = no
+				NOT = { vassal_of = ENG }
+			}
+		}
+
+		allow = {
+			year = 1839
+			ENG = { 
+				war = no
+				NOT = { truce_with = AFG }
+			}
+		}
+
+		effect = {
+			set_country_flag = anglo_afghan_war
+			ENG = { country_event = 99100 }
+			random_country = {
+				limit = {
+					tag = PNJ
+					exists = yes
+					ai = yes
+				}
+				create_alliance = ENG
+				military_access = ENG
+				military_access = EIC
+				relation = {
+					who = ENG
+					value = 200
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	india_penal_code = {
 		picture = "india_penal_code"
 		potential = { 

@@ -35,6 +35,11 @@ BDN = {
 }
 
 #Middle East
+KWT = {
+	value = 150
+	level = 5
+	influence_value = 0
+}
 HAL = {
 	value = 150
 	level = 4

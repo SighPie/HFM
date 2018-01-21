@@ -833,10 +833,10 @@ pashtunwali = {
 		}
 	}
 	icon = 10
-	prestige = 0.1
-	supply_consumption = -0.5
-	land_organisation = 0.15
-	land_unit_start_experience = 10
-	org_regain = 0.15
+	supply_consumption = -0.75
+	land_organisation = 0.1
+	land_unit_start_experience = 5
+	org_regain = 0.2
 	war_exhaustion = -2.5
+	mobilisation_size = 0.2
 }

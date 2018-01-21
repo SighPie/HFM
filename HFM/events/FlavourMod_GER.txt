@@ -785,9 +785,9 @@ country_event = {
 		name = "Luxembourg is rightfully French!"
 		prestige = 15
 		NET = {
-			treasury = 250000
+			treasury = 200000
 		}
-		treasury = -250000
+		treasury = -200000
 		inherit = LUX
 		FROM = { country_event = 99983 }
 		

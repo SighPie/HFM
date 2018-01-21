@@ -2421,7 +2421,7 @@ integration_refusal = {
 core_integration = {
 	assimilation_rate = 0.1
 	immigrant_push = -0.25
-	immigrant_attract = 0.75
+	immigrant_attract = 1.0
 	pop_consciousness_modifier = 0.05
 	non_accepted_pop_consciousness_modifier = 0.01
 	icon = 7
@@ -2429,6 +2429,7 @@ core_integration = {
 
 national_assimilation = {
 	assimilation_rate = 0.1
+	immigrant_attract = 0.75
 	icon = 7
 }
 

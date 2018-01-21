@@ -1,4 +1,6 @@
 ;;;;;;;;;;;x
+NORMAL_WAR_PUPPET_NAME_ENG_PNJ;The $ORDER$Anglo-Sikh War;;;;;;;;;;;;x,,,
+AGRESSION_WAR_PUPPET_NAME_ENG_PNJ;The $ORDER$Anglo-Sikh War;;;;;;;;;;;;x,,,
 NORMAL_WAR_PUPPET_NAME_ENG_AFG;The $ORDER$Anglo-Afghan War;;;;;;;;;;;;x,,,
 AGRESSION_WAR_PUPPET_NAME_ENG_AFG;The $ORDER$Anglo-Afghan War;;;;;;;;;;;;x,,,
 acquire_substate_core_region;Acquire substate core region;Acquérir une région comme Sous-État;Beschafft eine Unterstaatsregion;;;;;;;;;;;x

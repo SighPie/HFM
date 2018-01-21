@@ -1,5 +1,12 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+KWT;Sheikhdom of Kuwait;;;;;;;;;;;x
+KWT_ADJ;Kuwaiti;;;;;;;;;;;x
+SYR_colonial_company;Mandat pour la Syrie;;;;;;;;;;;;;;x
+HDJ_colonial_company;Hejaz Vilayet;;;;;;;;;;;;;;x
+HDJ_absolute_monarchy;Hashemite Hejaz;;;;;;;;;;;;;;x
+HDJ_prussian_constitutionalism;Hashemiteb Hejaz;;;;;;;;;;;;;x,
+HDJ_hms_government;Hashemite Hejaz;;;;;;;;;;;;;x,
 CAL;The California Republic;;;;;;;;;;;;;x
 BAN_colonial_company;Freistaat Banat;;;;;;;;;;;;;x
 SIE_colonial_company;Siebenbürgen;;;;;;;;;;;;;x
@@ -23,9 +30,9 @@ NGR_colonial_company;West Africa;;;;;;;;;;;;;x,
 IRE_french_bourbon;The Irish Dominion;;;;;;;;;;;;;x,
 IRE_hms_government;The Irish Free State;;;;;;;;;;;;;x,
 UBD_democracy;The Baltic Union;;;;;;;;;;;;;x,
-UBD_colonial_company;The Baltic Governorates;;;;;;;;;;;;;x,
+UBD_colonial_company;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
 HND_colonial_company;The Raj;;;;;;;;;;;;x,
-TCA_colonial_company;The Caucasus Viceroyalty;;;;;;;;;;;;;x,
+TCA_colonial_company;Kavkaz Namestnik;;;;;;;;;;;;;x,
 DAI_colonial_company;Indochine;;;;;;;;;;;;;x
 INO_colonial_company;Oost-Indie;;;;;;;;;;;;;x
 LSK_colonial_company;Alyaska;;;;;;;;;;;;;x

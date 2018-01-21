@@ -15,7 +15,7 @@ monitor = {
 	#Core Abilities
 	priority = 30
 	max_strength = 100
-	default_organisation = 30
+	default_organisation = 35
 	maximum_speed = 8
 	weighted_value = 10.0
 

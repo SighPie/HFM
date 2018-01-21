@@ -379,7 +379,7 @@ country_event = {
 			}
 			add_country_modifier = {
 				name = no_more_war
-				days = 20
+				duration = 20
 			}
 			any_pop = {
 				limit = { has_pop_culture = hungarian }

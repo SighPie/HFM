@@ -1169,7 +1169,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA13067"
+		name = "EVOPTA13067"
 		prestige = -15
 		capital_scope = {
 			add_province_modifier = {

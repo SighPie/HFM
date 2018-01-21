@@ -25,6 +25,7 @@ nonstate_consciousness = 0
 
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
+foreign_officers = yes_foreign_officers
 flintlock_rifles = 1
 
 # Inventions

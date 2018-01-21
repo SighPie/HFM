@@ -467,7 +467,6 @@ country_event = {
 			who = SCH
 			value = 400
 		}
-		create_alliance = SCH
 		diplomatic_influence = {
 			who = LAU
 			value = 400

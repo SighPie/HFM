@@ -49,7 +49,7 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-schools = unciv_tech_school
+#schools = unciv_tech_school
 
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
