@@ -539,3 +539,61 @@ country_event = {
 		
 	}
 }
+
+country_event = {
+
+	id = 530001
+	title = "The Great New York Fire"
+	desc = "The fire has destroyed hundreds of buildings in one of our greatest cities!"
+	picture = "newyorkfire"
+
+	trigger = {
+		tag = USA
+		year = 1845
+		owns = 232 #NewYork
+		NOT = { year = 1846 }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+	}
+
+	option = {
+	  name = "How will we recover from this disaster?"
+		treasury = -150000
+		prestige = -5
+	}
+
+}
+
+country_event = {
+
+	id = 530002
+	title = "The Great Chicago Fire"
+	desc = "The fire has destroyed thousands of buildings and killed hundreds!"
+	picture = "chicagofire"
+
+	trigger = {
+		tag = USA
+		year = 1871
+		owns = 163 #Chicago
+		NOT = { year = 1872 }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 8
+	}
+
+	option = {
+	  name = "How will we recover from this disaster?"
+		treasury = -950000
+		prestige = -5
+	}
+
+}
+
+
