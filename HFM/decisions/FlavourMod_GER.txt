@@ -1289,6 +1289,14 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
+					province_id = 599 #Munich
+					owned_by = GCF
+					owner = { NOT = { has_global_flag = german_confederation_austrian } }
+				}
+				owner = { capital = 599 }
+			}
+			random_owned = {
+				limit = {
 					province_id = 549 #Berlin
 					owned_by = GER
 					owner = { primary_culture = north_german }
@@ -1368,6 +1376,14 @@ political_decisions = {
 					owner = { primary_culture = north_german }
 				}
 				owner = { capital = 549 }
+			}
+			random_owned = {
+				limit = {
+					province_id = 599 #Munich
+					owned_by = GCF
+					owner = { NOT = { has_global_flag = german_confederation_austrian } }
+				}
+				owner = { capital = 599 }
 			}
 			random_owned = {
 				limit = {
@@ -1454,7 +1470,7 @@ political_decisions = {
 		}
 	}
 	
-	return_cores_MIT = { 
+	return_cores_MIT = {
 		picture = return_cores_img
 		
 		potential = {

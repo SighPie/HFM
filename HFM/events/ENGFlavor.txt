@@ -2833,14 +2833,6 @@ country_event = {
 			create_vassal = KAS
 			diplomatic_influence = { who = KAS value = 400 }
 			relation = { who = KAS value = 400 }
-			#random_country = {
-				#limit = {
-					#exists = yes
-					#tag = CRL
-					#ai = yes
-				#}
-				#annex_to = KAS
-			#}
 			KAS = {
 				civilized = no
 				government = absolute_monarchy 

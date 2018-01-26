@@ -543,15 +543,15 @@ country_event = {
 country_event = {
 
 	id = 530001
-	title = "The Great New York Fire"
-	desc = "The fire has destroyed hundreds of buildings in one of our greatest cities!"
+	title = "EVTNAME530001"
+	desc = "EVTDESC530001"
 	picture = "newyorkfire"
 
 	trigger = {
 		tag = USA
 		year = 1845
 		owns = 232 #NewYork
-		NOT = { year = 1847 }
+		NOT = { has_country_flag = great_new_york_fire }
 	}
 
 	fire_only_once = yes
@@ -564,11 +564,99 @@ country_event = {
 		 year = 1845
 		}
 	}
+	
+	immediate = {
+		232 = { 
+			infrastructure = -1
+			any_pop = {
+				consciousness = 1.5
+			}
+		}
+		set_country_flag = great_new_york_fire
+	}
 
 	option = {
-	  name = "How will we recover from this disaster?"
-		treasury = -150000
-		prestige = -5
+		name = "EVTOPTA530001"
+		treasury = -35000
+		232 = { infrastructure = 1 }
+		random_list = {
+			50 = { 
+				232 = { 
+					add_province_modifier = { 
+						name = rebuilding_city 
+						duration = 90 
+					}
+				} 
+			}
+			50 = { 
+				232 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 60 
+					}
+				} 
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { money = 50100 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB530001"
+		treasury = -20000
+		random_list = {
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 60 
+						} 
+					} 
+				}
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 45 
+						} 
+					} 
+				}
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 30 
+						} 
+					} 
+				}
+			}
+			
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { money = 20100 }
+				}
+			}
+		}
+		
+	option = {
+		name = "EVTOPTC530001"
+		prestige = -15
+		232 = {
+			any_pop = {
+				consciousness = 1.5
+			}
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				NOT = { money = 10000 }
+			}
+		}
 	}
 
 }
@@ -576,8 +664,8 @@ country_event = {
 country_event = {
 
 	id = 530002
-	title = "The Great Chicago Fire"
-	desc = "The fire has destroyed thousands of buildings and killed hundreds!"
+	title = "EVTNAME530002"
+	desc = "EVTDESC530002"
 	picture = "chicagofire"
 
 	trigger = {
@@ -598,10 +686,92 @@ country_event = {
 		}
 	}
 
-	option = {
-	  name = "How will we recover from this disaster?"
-		treasury = -500000
-		prestige = -5
+	immediate = {
+		163 = { 
+			infrastructure = -1
+			any_pop = {
+				consciousness = 1.5
+			}
+		}
+		set_country_flag = great_new_york_fire
 	}
 
+	option = {
+		name = "EVTOPTA530001"
+		treasury = -55000
+		163 = { infrastructure = 1 }
+		random_list = {
+			50 = { 
+				163 = { 
+					add_province_modifier = { 
+						name = rebuilding_city 
+						duration = 90 
+					}
+				} 
+			}
+			50 = { 
+				163 = {
+					add_province_modifier = {
+						name = rebuilding_city
+						duration = 60 
+					}
+				} 
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { money = 50100 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB530001"
+		treasury = -35000
+		random_list = {
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 60 
+						} 
+					} 
+				}
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 45 
+						} 
+					} 
+				}
+			33 = { 232 = { 
+				add_province_modifier = { 
+					name = rebuilding_city 
+					duration = 30 
+						} 
+					} 
+				}
+			}
+			
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { money = 20100 }
+				}
+			}
+		}
+		
+	option = {
+		name = "EVTOPTC530001"
+		prestige = -15
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				NOT = { money = 15000 }
+			}
+		}
+	}
 }

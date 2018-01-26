@@ -322,7 +322,19 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = clean_up_unciv_monarchy
-			government = democracy
+			clr_country_flag = clean_up_colonial_government
+			random_owned = {
+				limit = {
+					owner = { civilized = yes }
+				}
+				owner = { government = democracy }
+			}
+			random_owned = {
+				limit = {
+					owner = { civilized = no }
+				}
+				owner = { government = absolute_monarchy }
+			}
 			random_owned = {
 				limit = {
 					is_core = ALD

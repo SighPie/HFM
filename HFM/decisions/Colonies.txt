@@ -793,7 +793,12 @@ political_decisions = {
 		picture = coffee_in_colombia
 		potential = {
 			any_owned_province = {
-				continent = africa
+					OR = {
+						continent = africa 
+						continent = south_west_africa 
+						continent = east_africa
+						continent = west_africa
+					}
 					NOT = { terrain = small_island }
 					NOT = { terrain = desert }
 					NOT = { terrain = semidesert }
@@ -821,7 +826,12 @@ political_decisions = {
 		effect = {
 			any_owned = {
 				limit = {
-					continent = africa
+					OR = {
+						continent = africa 
+						continent = south_west_africa 
+						continent = east_africa
+						continent = west_africa
+					}
 					NOT = { terrain = small_island }
 					NOT = { terrain = desert }
 					NOT = { terrain = semidesert }

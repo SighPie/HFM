@@ -560,6 +560,16 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -812,6 +822,16 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = africa }
 						THIS = { continent = africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -1199,6 +1219,16 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -1449,6 +1479,16 @@ province_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -1691,6 +1731,16 @@ province_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = africa }
 						THIS = { continent = africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -2563,6 +2613,16 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -2645,6 +2705,16 @@ country_event = {
 					AND = {
 						any_owned_province = { continent = africa }
 						THIS = { continent = africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
 					}
 					AND = {
 						any_owned_province = { continent = asia }
@@ -2849,6 +2919,16 @@ country_event = {
 					AND = {
 						any_owned_province = { continent = africa }
 						THIS = { continent = africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
 					}
 					AND = {
 						any_owned_province = { continent = asia }
@@ -3471,6 +3551,16 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -3632,6 +3722,16 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -3722,6 +3822,16 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = africa }
 						THIS = { continent = africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = west_africa }
+						THIS = { continent = west_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = east_africa }
+						THIS = { continent = east_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -4040,6 +4150,9 @@ country_event = {
 		NOT = { tag = GWA }
 		NOT = { tag = MYS }
 		NOT = { tag = AFG }
+		NOT = { tag = KAL }
+		NOT = { tag = MAK }
+		NOT = { tag = TRA }
 		NOT = { has_country_flag = no_british_doctrine }
 		OR = {
 			EIC = { ideological_thought = 1 exists = yes }
@@ -4071,7 +4184,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 75
+		months = 80
 		modifier = {
 			factor = 1.5
 			NOT = { average_militancy = 1 }

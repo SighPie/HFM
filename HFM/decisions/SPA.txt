@@ -821,7 +821,12 @@ political_decisions = {
 				}
 				AND = {
 					any_owned_province = {
-						continent = africa
+						OR = {
+							continent = africa
+							continent = west_africa
+							continent = east_africa
+							continent = south_west_africa
+						}
 						is_colonial = no
 						NOT = { is_core = SAF }
 					}

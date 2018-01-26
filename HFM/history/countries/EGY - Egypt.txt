@@ -3,7 +3,7 @@ primary_culture = misri
 culture = mashriqi
 culture = bedouin
 religion = sunni
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -53,6 +53,10 @@ upper_house = {
 decision = EGY_1836_setup
 decision = LEB_1836_setup
 
+govt_flag = {
+	government = absolute_monarchy
+	flag = theocracy
+}
 
 set_country_flag = sunni_country
 

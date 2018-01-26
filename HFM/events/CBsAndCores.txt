@@ -2013,7 +2013,10 @@ province_event = {
 		}
 		OR = {
 			has_province_modifier = national_assimilation_acceptance
-			is_core = USA
+			AND = {
+				is_core = USA
+				owner = { NOT = { tag = USA } }
+			}
 		}
 		NOT = { has_province_modifier = nationalist_agitation }
 		controlled_by = THIS

@@ -4209,7 +4209,7 @@ country_event = {
 			limit = { is_core = CSA }
 			add_province_modifier = { name = reconstruction duration = 2555 }
 		}
-		CSA = { all_core = { remove_core = CSA } }
+		CSA = { all_core = { add_core = USA remove_core = CSA } }
 		TEX = { remove_accepted_culture = dixie }
 		any_pop = {
 			limit = { has_pop_culture = dixie }
@@ -4250,7 +4250,7 @@ country_event = {
 		random_owned = { limit = { any_pop = { has_pop_culture = texan } } owner = { add_accepted_culture = texan } }
 		random_owned = { limit = { any_pop = { has_pop_culture = dixie } } owner = { add_accepted_culture = dixie } }
 		remove_accepted_culture = afro_american
-		CSA = { all_core = { remove_core = CSA fort = -3} }
+		CSA = { all_core = { add_core = USA remove_core = CSA fort = -3} }
 		any_pop = {
 			limit = {
 				has_pop_culture = dixie

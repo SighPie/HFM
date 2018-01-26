@@ -1363,6 +1363,18 @@ assimilation_chance = {
 		has_culture_core = yes
 	}
 	
+	modifier = {
+		factor = -20
+		OR = { 
+			is_culture_group = east_asian
+			is_culture_group = south_asian
+		}
+		OR = {
+			location = { any_core = { is_accepted_culture = THIS is_cultural_union = yes } }
+			location = { is_overseas = yes any_core = { is_accepted_culture = THIS } }
+		}
+	}
+	
 	#modifier = {
 	#	factor = -20
 	#	OR = {
@@ -1387,6 +1399,7 @@ assimilation_chance = {
 		OR = {
 			has_pop_religion = yazidi
 			has_pop_religion = druze
+			has_pop_culture = asian_minor
 		}
 	}
 

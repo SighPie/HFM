@@ -503,26 +503,11 @@ country_event = {
 		name = "EVTOPT99962"
 		war_exhaustion = 50
 		QNG = { country_event = 99963 }
-		random_state = {
-			limit = { NOT = { region = CHI_2221 } }
-			any_owned = { secede_province = QNG }
-		}
-		random_state = {
-			limit = { NOT = { region = CHI_2221 } }
-			any_owned = { secede_province = QNG }
-		}
-		random_state = {
-			limit = { NOT = { region = CHI_2221 } }
-			any_owned = { secede_province = QNG }
-		}
-		random_state = {
-			limit = { NOT = { region = CHI_2221 } }
-			any_owned = { secede_province = QNG }
-		}
-		random_state = {
-			limit = { NOT = { region = CHI_2221 } }
-			any_owned = { secede_province = QNG }
-		}
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
 	}
 }
 
@@ -875,13 +860,11 @@ country_event = {
 		badboy = 8
 		any_country = {
 				limit = {
-					AND = {
-						OR = {
-							capital_scope = { continent = asia }
-							tag = PGG
-						}
-						is_culture_group = east_asian
+					OR = {
+						capital_scope = { continent = asia }
+						tag = PGG
 					}
+					is_culture_group = east_asian
 					civilized = no
 					exists = yes
 					ai = yes
@@ -1011,9 +994,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					tag = NIA
-				}
+				tag = NIA
 			}
 		}
 	}
@@ -1028,9 +1009,7 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 5
-				OR = {
-					tag = NIA
-				}
+				tag = NIA
 			}
 			modifier = {
 				factor = 0

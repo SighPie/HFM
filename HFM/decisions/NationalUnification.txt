@@ -786,6 +786,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			set_global_flag = german_confederation_austrian
 			prestige = 20
 			random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
 			random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }

@@ -191,7 +191,12 @@ political_decisions = {
 				in_sphere = THIS
 				war = no
 			}
-			any_owned_province = { continent = africa }
+			OR = { 
+				any_owned_province = { continent = africa } 
+				any_owned_province = { continent = south_west_africa } 
+				any_owned_province = { continent = east_africa } 
+				any_owned_province = { continent = west_africa }
+			}
 			has_global_flag = berlin_conference
 			invention = mission_to_civilize
 			war = no

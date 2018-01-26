@@ -48,13 +48,23 @@ political_decisions = {
 				}
 				AND = {
 					NOT = { badboy = 0.1 }
-					NOT = { any_owned_province = { continent = africa } }
+					NOT = { 
+						any_owned_province = { continent = africa } 
+						any_owned_province = { continent = south_west_africa } 
+						any_owned_province = { continent = east_africa } 
+						any_owned_province = { continent = west_africa }
+					}
 					naval_logistics = 1
 					year = 1885
 				}
 				AND = {
 					NOT = { badboy = 0.01 }
-					NOT = { any_owned_province = { continent = africa } }
+					NOT = { 
+						any_owned_province = { continent = africa } 
+						any_owned_province = { continent = south_west_africa } 
+						any_owned_province = { continent = east_africa } 
+						any_owned_province = { continent = west_africa }
+					}
 					NOT = { any_owned_province = { is_colonial = yes } }
 					raider_group_doctrine = 1
 					year = 1886
@@ -62,7 +72,12 @@ political_decisions = {
 				AND = {
 					tag = BEL
 					NOT = { badboy = 0.5 }
-					NOT = { any_owned_province = { continent = africa } }
+					NOT = { 
+						any_owned_province = { continent = africa } 
+						any_owned_province = { continent = south_west_africa } 
+						any_owned_province = { continent = east_africa } 
+						any_owned_province = { continent = west_africa }
+					}
 					NOT = { any_owned_province = { is_colonial = yes } }
 					raider_group_doctrine = 1
 					has_global_flag = yes_railroad
@@ -97,14 +112,26 @@ political_decisions = {
 			NOT = { has_country_flag = force_publique_formed }
 		}
 		allow = {
-			any_owned_province = { continent = africa }
+			OR = {
+				any_owned_province = { continent = africa } 
+				any_owned_province = { continent = south_west_africa } 
+				any_owned_province = { continent = east_africa } 
+				any_owned_province = { continent = west_africa }
+			}
 			military_logistics = 1
 		}
 		effect = {
 			set_country_flag = force_publique_formed
 			any_pop = {
 				limit = {
-					location = { continent = africa }
+					location = { 
+						OR = {
+							continent = africa 
+							continent = south_west_africa 
+							continent = east_africa
+							continent = west_africa
+						}
+					}
 					NOT = {
 						has_pop_culture = wallonian
 						has_pop_culture = flemish
@@ -114,7 +141,14 @@ political_decisions = {
 				militancy = 3
 			}
 			any_owned = {
-				limit = { continent = africa }
+				limit = {
+					OR = {
+						continent = africa 
+						continent = south_west_africa 
+						continent = east_africa
+						continent = west_africa
+					}
+				}
 				add_province_modifier = {
 					name = force_publique
 					duration = -1

@@ -945,8 +945,10 @@ country_event = {
 		
 		random_owned = {
 			limit = {
-				province_id = 1340
-				province_id = 1338
+				OR = { 
+					province_id = 1340
+					province_id = 1338
+				}
 			}
 			secede_province = FROM
 		}
@@ -963,8 +965,8 @@ country_event = {
 						province_id = 2572
 						province_id = 1355
 					}
-					secede_province = SIA
 				}
+				secede_province = SIA
 			}
 		}
 		ai_chance = {

@@ -1800,9 +1800,9 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		

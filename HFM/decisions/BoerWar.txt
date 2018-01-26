@@ -324,7 +324,12 @@ political_decisions = {
 				exists = no
 				NOT = { is_culture_group = THIS }
 			}
-			NOT = { capital_scope = { continent = africa } }
+			NOT = { 
+				capital_scope = { continent = africa } 
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
+			}
 		}
 		
 		allow = {

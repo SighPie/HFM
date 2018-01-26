@@ -704,10 +704,11 @@ country_event = {
 			modifier = {
 				factor = 100
 				NOT = { money = 900 }
-				}
 			}
 		}
 	}
+	
+}
 	
 country_event = {
 	id = 34612
@@ -716,9 +717,11 @@ country_event = {
 	picture = "prussian_constitution"
 
 	trigger = {
-		tag = PRU
+		OR = { 
+			tag = PRU
+			tag = NGF
+		}
 		year = 1847
-		month = 6
 		militancy = 5
 		OR = {
 			AND = {
@@ -757,7 +760,7 @@ country_event = {
 			ideology = reactionary 
 				}
 			}
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 99 }
 		}
 	
 	option = {
@@ -772,7 +775,7 @@ country_event = {
 			ideology = liberal 
 				}
 			}
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 1 }
 		}
 	}
 	

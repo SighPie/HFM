@@ -1171,7 +1171,12 @@ province_event = {
 	trigger = {
 		NOT = { has_country_modifier = recent_safari2 }
 		is_colonial = yes
-		continent = africa
+		OR = { 
+			continent = africa
+			continent = west_africa
+			continent = east_africa
+			continent = south_west_africa
+		}	
 		terrain = savanna
 	}
 	
@@ -1222,7 +1227,12 @@ province_event = {
 		year = 1860
 		NOT = { has_country_modifier = recent_safari }
 		is_colonial = yes
-		continent = africa
+		OR = { 
+			continent = africa
+			continent = west_africa
+			continent = east_africa
+			continent = south_west_africa
+		}	
 		owner = { civilized = yes }
 		terrain = savanna
 	}

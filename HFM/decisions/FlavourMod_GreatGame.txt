@@ -1,0 +1,151 @@
+political_decisions = {
+	herat_expedition = {
+		picture = "herat"
+		potential = {
+			tag = PER
+			AFG = {
+				civilized = no
+				ai = yes
+			}
+			year = 1837
+			NOT = {
+				owns = 1212
+				has_global_flag = herat_expedition
+			}
+		}
+		
+		allow = {
+			war = no
+			1212 = {
+				owned_by = AFG
+				owner = { 
+					war = no 
+					is_vassal = no
+				}
+				NOT = { is_core = THIS }
+			}
+		}
+		effect = {
+			set_global_flag = herat_expedition
+			random_owned = {
+				limit = {
+					owner = { civilized = no }
+				}
+				owner = {
+					military_reform = yes_foreign_officers
+				}
+			}
+			prestige = 5
+			1212 = { add_core = PER }
+			random_country = {
+				limit = { 
+					tag = ENG 
+				}
+				country_event = 99200
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	second_herat_expedition = {
+		picture = "herat"
+		potential = {
+			tag = PER
+			year = 1856
+			AFG = {
+				civilized = no
+				ai = yes
+			}
+			has_global_flag = herat_expedition
+			NOT = { 
+				owns = 1212
+				has_global_flag = anglo_persian_war  
+				has_global_flag = second_herat_expedition 
+			}
+		}
+		allow = {
+			war = no
+			1212 = {
+				owned_by = AFG
+				owner = { 
+					war = no 
+					is_vassal = no
+				}
+				NOT = { is_core = THIS }
+			}
+		}
+		
+		effect = {
+			set_global_flag = second_herat_expedition
+			prestige = 10
+			1212 = { add_core = PER }
+			random_country = {
+				limit = { 
+					tag = ENG 
+				}
+				country_event = 99202
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	treaty_of_paris_anglo_persian = {
+		picture = "treaty_of_paris_anglo_persian"
+		potential = {
+			tag = ENG
+			has_global_flag = anglo_persian_war
+			OR = {
+				PER = {
+					war_with = THIS
+					civilized = no
+					exists = yes
+				}
+				AND = {
+					truce_with = PER
+					OR = {
+						owns = 1071
+						PER = { has_recently_lost_war = yes }
+					}
+				}
+			}
+			NOT = { has_country_flag = treaty_of_paris_anglo_persian }
+		}
+		
+		allow = {
+			OR = {
+				PER = {
+					OR = {
+						war_exhaustion = 50
+						national_provinces_occupied = 0.15
+						blockade = 0.8
+					}
+				}
+				PER = { truce_with = THIS }
+			}
+		}
+		
+		effect = {
+			set_country_flag = treaty_of_paris_anglo_persian
+			prestige = 15
+			PER = { country_event = 99204 }
+			relation = { 
+				who = AFG
+				value = 100
+			}
+			any_owned = {
+				limit = {
+					is_core = PER
+				}
+				secede_province = PER
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

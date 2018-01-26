@@ -2497,6 +2497,7 @@ monroe_doctrine = {
 	is_triggered_only = yes
 	months = 12
 	crisis = no
+	always = yes
 	
 	construction_speed = 1.0
 
@@ -3119,6 +3120,13 @@ great_game_cb = {
 				tag = AFG 
 				THIS = { tag = ENG } 
 				has_global_flag = afghan_1
+				OR = {
+					NOT = { has_global_flag = graveyard_of_empires  }
+					AND = {
+						has_global_flag = graveyard_of_empires 
+						has_global_flag = afgan_2
+					}
+				}
 			}
 		}
 		THIS = {

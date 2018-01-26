@@ -536,20 +536,28 @@ country_event = {
 		}
 		war = no
 		OR = {
-			AND = { 
-				412 = { NOT = { owned_by = THIS } }
-				OR = {
-					NOT = { has_country_flag = lost_the_rhine_crisis }
-					has_global_flag = franco_prussian_war_has_begun
-				}
-			}
 			AND = {
 				412 = { NOT = { owned_by = THIS } }
-				year = 1870
+				OR = {
+					has_country_flag = lost_the_rhine_crisis
+					has_global_flag = franco_prussian_war_has_begun
+					AND = { 
+						exists = GER
+						412 = { owned_by = GER }
+					}
+					AND = { 
+						exists = GCF
+						412 = { owned_by = GCF }
+					}
+				}
 			}
-			NOT = { rank = 5 }
+			is_greater_power = no
 			is_disarmed = yes
-			472 = { is_core = FRA NOT = { owned_by = FRA } } #Savoie`
+			AND = {
+				472 = { is_core = FRA NOT = { owned_by = FRA } } #Savoie
+				exists = ITA
+				truce_with = ITA
+			}
 		}
 		NOT = {
 			has_country_flag = louis_deposed
@@ -606,11 +614,6 @@ country_event = {
 			scaled_militancy = {
 				ideology = socialist
 				factor = -2
-			}
-		}
-		CAT = {
-			all_core = {
-				remove_core = FRA
 			}
 		}
 		any_greater_power = {
