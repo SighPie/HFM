@@ -922,6 +922,7 @@ political_decisions = {
 			tag = QNG
 			civilized = yes
 			exists = LAN
+			LAN = { is_vassal = no }
 		}
 
 		allow = {
@@ -931,7 +932,6 @@ political_decisions = {
 					in_sphere = QNG
 					part_of_sphere = no
 				}
-				is_vassal = no
 			}
 		}
 
