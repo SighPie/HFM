@@ -974,6 +974,8 @@ political_decisions = {
 		potential = {
 			exists = yes
 			OR = {
+				AND = { tag = GLM owns = 375 NOT = { capital = 702 } }
+				AND = { tag = NET owns = 375 NOT = { capital = 375 } }
 				AND = { tag = POL owns = 706 NOT = { capital = 706 } }
 				AND = { tag = BUL owns = 809 NOT = { capital = 809 } }
 				AND = { tag = HUN owns = 641 NOT = { capital = 641 } }
@@ -1065,6 +1067,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = ALD } } owner = { capital = 1700 } }
 			random_owned = { limit = { owner = { tag = NIG } } owner = { capital = 1808 } }
 			random_owned = { limit = { owner = { tag = MLI } } owner = { capital = 1794 } }
+			random_owned = { limit = { owner = { tag = NET } } owner = { capital = 375 } }
+			random_owned = { limit = { owner = { tag = GLM } } owner = { capital = 702 } }
 		}
 		
 		ai_will_do = { factor = 1 }

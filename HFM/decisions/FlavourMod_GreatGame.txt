@@ -131,6 +131,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = treaty_of_paris_anglo_persian
 			prestige = 15
+			badboy = -2
 			PER = { country_event = 99204 }
 			relation = { 
 				who = AFG
@@ -148,4 +149,42 @@ political_decisions = {
 		}
 	}
 	
+	gwadar_treaty = {
+		picture = gwadar_pakistan
+		potential = {
+			year = 1863
+			1222 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						in_sphere = THIS
+						vassal_of = THIS
+						war = no
+						civilized = no
+					}
+				}
+			}
+			2640 = {
+				owner = {
+					in_sphere = THIS
+					war = no
+					civilized = no
+					ai = yes
+				}
+			}
+			NOT = { has_global_flag = gwadar_treaty }
+		}
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+		}
+		
+		effect = {
+			set_global_flag = gwadar_treaty
+			prestige = 5
+			2640 = { secede_province = THIS }
+		}
+	}
 }

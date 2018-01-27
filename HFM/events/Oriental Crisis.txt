@@ -420,7 +420,10 @@ country_event = {
 			}
 			annex_to = THIS
 		}
-		HDJ = { all_core = { add_core = TUR } }
+		HDJ = { 
+			all_core = { add_core = TUR } 
+			government = absolute_monarchy
+		}
 		set_country_flag = egypt_restricted
 		random_country = {
 			limit = {
@@ -462,6 +465,13 @@ country_event = {
 				consciousness = 2
 			}
 		}
+		#Return any Egyptian cores
+		any_owned = {
+			limit = {
+				is_core = EGY
+			}
+			secede_province = EGY
+		}
 		any_greater_power = {
 			limit = { has_country_flag = leave_alliance_after_crisis }
 			clr_country_flag = leave_alliance_after_crisis
@@ -478,7 +488,7 @@ country_event = {
 			country_event = 90089
 		}		
 		ai_chance = {
-			factor = 80
+			factor = 95
 		}
 	}
 	
@@ -506,7 +516,10 @@ country_event = {
 			}
 			annex_to = THIS
 		}
-		HDJ = { all_core = { add_core = TUR } }
+		HDJ = { 
+			all_core = { add_core = TUR } 
+			government = absolute_monarchy
+		}
 			
 		relation = { who = RUS value = -200 }
 		leave_alliance = RUS
@@ -534,7 +547,7 @@ country_event = {
 			leave_alliance = TUR
 		}
 		ai_chance = {
-			factor = 20
+			factor = 5
 		}
 	}
 }
@@ -940,7 +953,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 1
 		modifier = {
 			factor = 0.1
 			1745 = { NOT = { controlled_by = THIS } }
@@ -948,6 +961,10 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			national_provinces_occupied = 0.30
+		}
+		modifier = {
+			factor = 0.01
+			ai = yes
 		}
 	}
 
@@ -1088,6 +1105,7 @@ country_event = {
 			who = EGY
 			value = 400
 		}
+		EGY = { government = colonial_company }
 		ai_chance = {
 			factor = 100
 		}

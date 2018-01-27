@@ -4184,7 +4184,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 80
+		months = 85
 		modifier = {
 			factor = 1.5
 			NOT = { average_militancy = 1 }

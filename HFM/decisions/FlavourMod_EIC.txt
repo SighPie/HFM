@@ -173,6 +173,7 @@ political_decisions = {
 	anglo_afghan_war = {
 		picture = george_eden
 		potential = {
+			NOT = { war_exhaustion = 1 }
 			OR = {
 				AND = {
 					tag = EIC

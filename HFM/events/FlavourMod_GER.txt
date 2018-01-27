@@ -383,10 +383,10 @@ country_event = {
 				vassal_of = FRA
 			}
 			annex_to = THIS
-		}
-		release = PAP
-		PAP = { 
-			government = theocracy
+			release = PAP
+			PAP = { 
+				government = theocracy
+			}
 		}
 	}
 }

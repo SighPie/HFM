@@ -538,7 +538,6 @@ political_decisions = {
 		potential = { 
 			is_greater_power = yes
 			primary_culture = north_german
-			alliance_with = NET
 			387 = { is_core = NET }
 			NET = { war_with = BEL }
 			NOT = { has_global_flag = dutch_prussian_alliance }
@@ -561,25 +560,18 @@ political_decisions = {
 	
 	treaty_of_amsterdamn = {
 		picture = "treaty_signing"
-		potential = { 
+		potential = {
 			is_greater_power = yes
 			primary_culture = north_german
 			NOT = { exists = BEL }
-			alliance_with = NET
-			387 = {
-				owned_by = NET
-			}
+			387 = { owned_by = NET }
 			has_global_flag = dutch_prussian_alliance_accepted
-			NOT = {
-				has_global_flag = treaty_of_amsterdamn
-			}
+			NOT = { has_global_flag = treaty_of_amsterdamn }
 		}
 		allow = {
 			war = no
 			NOT = { exists = BEL }
-			387 = {
-				owned_by = NET
-			}
+			387 = { owned_by = NET }
 		}
 		
 		effect = {

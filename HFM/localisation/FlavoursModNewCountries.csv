@@ -1,5 +1,12 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+SPA_democracy;The Spanish Republic;;;;;;;;;;;;;x,
+SPA_proletarian_dictatorship;The Spanish Republic;;;;;;;;;;;;;x,
+SPA_presidential_dictatorship;The Spanish State;;;;;;;;;;;;;x,
+SPA_fascist_dictatorship;The Spanish State;;;;;;;;;;;;;x,
+BOR;France;;;;;;;;;x;;;;;;;;
+BOR_absolute_monarchy;The Kingdom of France;;;;;;;;;x;;;;;;;;
+BOR_ADJ;French;French;French;;French;;;;;;;;;x;;;;
 EGY_absolute_monarchy;Sultanate of Egypt;;;;;;;;;;;;;;x
 EGY_prussian_constitutionalism;The Egyptian Kingdom;;;;;;;;;;;;;x
 EGY_hms_government;The Egyptian Kingdom;;;;;;;;;;;;;x,
@@ -18,6 +25,7 @@ SIE_colonial_company_ADJ;Siebenbürger;;;;;;;;;;;;;x
 SIE_reactionary;Sachsen Landtag;;;;;;;;;;;;;x,
 SIE_conservative;Unio Trium Nationum;;;;;;;;;;;;;x,
 LBY_colonial_company;Libia;;;;;;;;;;;;;x,
+ETH_absolute_monarchy;Abyssinia;;;;;;;;;;;;;x,
 ETH_colonial_company;Africa Orientale;;;;;;;;;;;;;x,
 BUR_absolute_monarchy;Konbaung Dynasty;;;;;;;;;;;;;x,
 IVC_colonial_company;Cote d'Ivoire;;;;;;;;;;;;;x,

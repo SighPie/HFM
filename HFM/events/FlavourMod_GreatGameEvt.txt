@@ -69,6 +69,10 @@ country_event = {
 	title = "EVTNAME99101" 
 	desc = "EVTDESC99101"
 	picture = "graveyard_of_empires"
+	news = yes
+	news_desc_long = "EVTDESC99101_NEWS_LONG"
+	news_desc_medium = "EVTDESC99101_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC99101_NEWS_SHORT"
 	
 	trigger = {
 		tag = ENG
@@ -93,7 +97,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA99101"
-		prestige = -35
+		prestige = -45
 		set_global_flag = graveyard_of_empires
 		relation = { who = AFG value = -200 }
 		diplomatic_influence = { who = AFG value = -200 }
@@ -181,7 +185,7 @@ country_event = {
 	id = 99200
 	title = "EVTNAME99200" 
 	desc = "EVTDESC99200"
-	picture = "Administration"
+	picture = "siege_of_herat"
 	
 	is_triggered_only = yes
 	
@@ -209,9 +213,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA99201"
 		prestige = -5
-		1212 = { 
-		remove_core = PER
-		}
+		1212 = { remove_core = PER }
 		ENG = { country_event = 99203 }
 		ai_chance = { factor = 100 }
 	}
@@ -237,6 +239,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA99200"
 		set_global_flag = anglo_persian_war
+		badboy = 2
 		war = {
 			target = PER
 			attacker_goal = { casus_belli = treaty_port_casus_belli }
@@ -249,6 +252,24 @@ country_event = {
 				casus_belli = status_quo
 			}
 			call_ally = yes
+		}
+		random_country = {
+			limit = {
+				tag = AFG
+				ai = yes
+				NOT = { vassal_of = ENG }
+				NOT = { war_with = THIS }
+			}
+			war = {
+				target = PER
+				attacker_goal = { 
+					casus_belli = acquire_core_state
+					state_province_id = 1212
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+			}
 		}
 		
 		ai_chance = { 
@@ -275,7 +296,18 @@ country_event = {
 		name = "EVTOPT99910"
 		prestige = 5
 		1212 = { remove_core = PER }
-		PER = { war_exhaustion = 5 }
+		FROM = { 
+			war_exhaustion = 5 
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					strata = rich
+				}
+				militancy = 2.5
+				consciousness = 2.5
+			}
+		}
+		RUS = { prestige = -5 }
 		
 		ai_chance = { 
 			factor = 100 
@@ -324,5 +356,61 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+	}
+}
+
+#Bowring Treaty - Siam Response
+country_event = {
+	id = 99300
+	title = "EVTNAME99300"
+	desc = "EVTDESC99300"
+	picture = "treaty"
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA99300"
+		prestige = -5
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+			}
+			consciousness = 1
+			militancy = 1
+		}
+		FROM = {
+			relation = {
+				who = THIS
+				value = 100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 50
+			}
+		}
+		remove_country_modifier = uncivilized_isolationism
+		add_country_modifier = {
+			name = "western_influences"
+			duration = -1
+		}
+		1346 = {
+			add_province_modifier = {
+				name = extraterritoriality_granted
+				duration = -1
+			}
+		}
+		economic_reform = yes_monetary_reform 
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVTOPTB99300"
+		prestige = 15
+		add_country_modifier = {
+			name = "uncivilized_isolationism"
+			duration = -1
+		}
+		ai_chance = { factor = 0 }
 	}
 }

@@ -90,6 +90,7 @@ political_decisions = {
 			treasury = 5000
 			small_arms = 20
 			regular_clothes = 50
+			military_reform = yes_foreign_navies
 			military_reform = yes_foreign_training
 			add_country_modifier = {
 				name = muhammad_alis_reforms

@@ -1,4 +1,10 @@
 ;;;;;;;;;;;x
+NORMAL_WAR_RESTORE_ORDER_NAME_DEN_SWH;The $ORDER$Schleswig War;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_RESTORE_ORDER_NAME_DEN_SWH;The $ORDER$Schleswig War;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_HUMILIATE_NAME_ENG_ETH;British Expedition to Abyssinia;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_ENG_ETH;British Expedition to Abyssinia;;;;;;;;;;;x,,,
+NORMAL_WAR_AUSTRIAN_EMPIRE_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_AUSTRIAN_EMPIRE_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;;x,,,
 NORMAL_PUNITIVE_EXPEDITION_WAR_NAME_ENG_PER;The $ORDER$Anglo-Persian War;;;;;;;;;;;;;;;;;x,,,
 AGRESSION_PUNITIVE_EXPEDITION_WAR_NAME_ENG_PER;The $ORDER$Anglo-Persian War;;;;;;;;;;;;;;;;;x,,,
 NORMAL_WAR_PUPPET_NAME_ENG_PNJ;The $ORDER$Anglo-Sikh War;;;;;;;;;;;;x,,,

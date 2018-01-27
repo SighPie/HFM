@@ -1047,6 +1047,17 @@ muhammad_alis_reforms = {
 	icon = 5
 }
 
+ismail_pasha_reforms = {
+	loan_interest = 0.25
+	max_loan_modifier = 0.25
+	education_efficiency_modifier = 0.05
+	global_pop_consciousness_modifier = 0.02
+	research_points_modifier = 0.1
+	supply_consumption = 0.1
+	min_military_spending = 0.25
+	icon = 5
+}
+
 ##### SUFFRAGETTE MOVEMENTS #####
 #number_of_voters = 1.0
 female_suffrage = {
@@ -1616,7 +1627,7 @@ stock_market_crash = {
 great_depression = {
 	factory_throughput = -0.3
 	rgo_output = -0.3
-	tax_efficiency = -0.05
+	tax_efficiency = -0.15
 	loan_interest = 0.02
 	pop_militancy_modifier = 0.2
 	pop_consciousness_modifier = 0.2
@@ -2153,7 +2164,7 @@ zemene_mesafint = {
 	mobilisation_size = 0.12
 	mobilisation_economy_impact = -0.3
 	supply_consumption = -0.3
-	war_exhaustion = -0.5
+	war_exhaustion = -1
 	icon = 5
 }
 
@@ -2165,12 +2176,14 @@ exploiting_the_land = {
 }
 
 tewodros_reforms = {
-	land_organisation = 0.1
+	mobilisation_size = 0.1
+	land_organisation = 0.15
 	supply_consumption = -0.25
-	land_unit_start_experience = 5
-	land_attack_modifier = 0.05
+	land_unit_start_experience = 10
+	org_regain = 0.1
 	tax_efficiency = 0.3
 	prestige = -0.25
+	war_exhaustion = -5
 	icon = 15
 }
 
@@ -2182,6 +2195,15 @@ disunited_country = {
 	research_points_modifier = -0.1
 	prestige = -0.7
 	icon = 8
+}
+
+tewodros_ii = {
+	mobilisation_size = 0.1
+	land_unit_start_experience = 10
+	org_regain = 0.05
+	global_pop_militancy_modifier = 0.02
+	prestige = -0.5
+	icon = 15
 }
 
 ### The Great Game ###

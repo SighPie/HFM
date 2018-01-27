@@ -450,7 +450,7 @@ country_event = {
 		tag = PNJ
 		has_country_flag = singh
 		NOT = { has_leader = "Ranjit Singh" }
-		year = 1839
+		year = 1838
 		NOT = { truce_with = ENG }
 		NOT = { has_global_flag = ranjit_singh_dead }
 	}
@@ -490,7 +490,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 30
 		modifier = { factor = 0.8 PNJ = { average_militancy = 3 } }
 		
 		modifier = { factor = 0.5 PNJ = { average_militancy = 7 } }

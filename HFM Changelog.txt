@@ -15,10 +15,10 @@
 - Fixed several Italian Decisions being unavailable in 1.27c
 - Fixed PROV691 Naval Base position
 - Wake Island will no longer be renamed Hamilton
-- Forming Romania now requires WAL/MDV to not be vassals
+- Forming Romania now requires both WAL/MDV to not be vassals
 - Fixed AI Germany not taking the Ruhr Industralism & Ruhr Boom Decisions
 - Fixed Issues with Asian Minor pops assimilating & Chinese pops assimilating into Manchu 
-- Fixed a Zoutpansberg flag
+- Fixed the Zoutpansberg monarchy flag
 
 #Changes to Europe
 - 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
@@ -31,6 +31,8 @@
 - Changed the names of the Caucasus Viceroyalty and Baltic Governate
 - 'Acension of Queen Victoria' - Places Hannover into Austria's SoI
 - Changed the requires for the Deposing of Napoleon III
+- Added war name localization for the Krakow Uprising
+- Added war name localization for the Schleswig War
 
 #Other Changes
 - Delayed Dates where rebels get military techs
@@ -58,8 +60,11 @@
 -- Autonomous Govt: The Khedivate of Egypt
 -- Absolute Monarchy: The Sultanate of Egypt
 -- Semi/Constitutional Monarchy: The Egyptian Kingdom
+- Added a decision to form the Kingdom of Egypt
+- Added a decision to enact Ismail Pasha's reforms
+- Added a Ottoman flag for Hedjaz
 
-#Changes to Central Asia
+#Changes to Central Asia/India
 - Removed the Annex Rajputana Decision as the substate CB now serves the same purpose and works.
 - Increased the debuffs the EIC gets when the Sepoy Rebellion occurs
 - Added a Triggered modifier 'Pashtunwali' for Afghanistan, gives military buffs when a greater power is at war with it, must be uncivilized
@@ -69,6 +74,9 @@
 - Added events for the First Anglo-Afghan War, and the Massacre of Elphinstone's Army
 - Added an event for the Second Anglo-Sikh War
 - Added events for the Sieges of Herat, and the Anglo-Persian War
+- Added a decision to claim Gwadar if civilized and owns Bela
+- Changed Persia Semi/Constitutional Monarchy Flag & Name
+- Removed Sikh core in Chitral
 
 #Changes to Asia
 - 'The Ever Victorious Army' - Some of the more extreme bonuses are now given to the AI only, most of the modifier effects have been changed to a more reasonable amount
@@ -78,12 +86,15 @@
 - Added a decision 'Found the China Merchants Steam Navigation Company'
 - Added a decision 'Abolish the Imperial Examinations'
 - Increased preparation time for the Taiping Rebellion to 120 days
+- Added a decision 'Treaty of Friendship & Commerce between the British Empire and Siam'
 
 #Changes to Oceania
 - Slightly decreased the pop growth effects of the Australia migration modifiers
 
 #Changes to Africa
 - Made the Kassa Hailu event occur faster and more consistently
+- Renamed Ethiopia to Abyssinia
+- Added events for the British Expedition to Abyssinia, and the death of Tewodros II
 
 ###1.27C###
 #Changes from 1.27c Beta

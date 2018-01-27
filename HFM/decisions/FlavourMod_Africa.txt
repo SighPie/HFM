@@ -39,20 +39,6 @@ political_decisions = {
 		effect = {
 			inherit = SUD
 			inherit = EGY
-			badboy = -5
-			302 = {
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-			}
 			set_country_flag = ai_annex_egypt
 		}
 	}
@@ -140,19 +126,6 @@ political_decisions = {
 			POR = {
 				inherit = AGC	
 				2001 = { secede_province = POR any_pop = { literacy = -0.99 } }
-			}
-			302 = {
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
 			}
 			badboy = -15
 			set_country_flag = ai_west_africa
@@ -569,6 +542,40 @@ political_decisions = {
 					call_ally = no
 				}
 			set_country_flag = british_matabale
+		}
+	}
+	
+	enact_ismail_pasha_reforms = {
+		picture = ismail_pasha
+		potential = {
+			tag = EGY
+			civilized = no
+			year = 1863
+			NOT = { has_country_flag = enact_ismail_pasha_reforms }
+		}
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = enact_ismail_pasha_reforms
+			prestige = 15
+			economic_reform = yes_admin_reform
+			#Bonus for AI
+			random_owned = {
+				limit = {
+					owner = { ai = yes }
+				}
+				owner = { economic_reform = yes_education_reform }
+			}
+			add_country_modifier = {
+				name = ismail_pasha_reforms
+				duration = -1
+			}
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				consciousness = 2
+			}
 		}
 	}
 }

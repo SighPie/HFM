@@ -35,13 +35,13 @@
 	farmers = {
 		culture = north_german
 		religion = catholic
-		size = 14900
+		size = 17900
 	}
 	
 	craftsmen = {
 		culture = north_german
 		religion = catholic
-		size = 10
+		size = 20
 	}
 
 	aristocrats = {
@@ -83,13 +83,7 @@
 	farmers = {
 		culture = french
 		religion = catholic
-		size = 23375
-	}
-	
-	craftsmen = {
-		culture = french
-		religion = catholic
-		size = 10
+		size = 20375
 	}
 
 }
