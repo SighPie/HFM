@@ -1838,7 +1838,10 @@ country_event = {
 			limit = { 
 				is_sphere_leader_of = THIS
 				NOT = { is_our_vassal = THIS }
-				THIS = { is_substate = no }
+				THIS = {
+					is_substate = no
+					NOT = { tag = EGY }
+				}
 			}
 			diplomatic_influence = {
 				who = THIS

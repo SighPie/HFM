@@ -696,7 +696,7 @@ stop_it_mec = {
 					capital = 2560
 					capital = 565
 				}
-				total_pops = 150000
+				total_pops = 125000
 			}
 			AND = {
 				OR = {

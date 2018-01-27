@@ -428,7 +428,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	western_transylvania_rename_hun = {
+	northern_transylvania_rename_hun = {
 		picture = gtfo
 		potential = {
 			OR = { 
@@ -436,125 +436,12 @@ political_decisions = {
 				tag = KUK
 				tag = DNB
 			}
-			owns = 647
 			owns = 651
 			owns = 654
-			owns = 655
-			owns = 656
 			owns = 661
-			NOT = { has_global_flag = western_transylvania_rename_hun }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_global_flag = western_transylvania_rename_hun
-			clr_global_flag = western_transylvania_rename_rom
-			prestige = 2
-			647 = { 
-				change_province_name = "Nagyvárad" 
-				state_scope = { change_region_name = "Nyugat-Erdély" }
-			}
-			651 = { change_province_name = "Szatmár" }
-			654 = { change_province_name = "Kolozsvár" }
-			655 = { change_province_name = "Gyulafehérvár" }
-			656 = { change_province_name = "Déva" }
-			661 = { change_province_name = "Beszterce" }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	western_transylvania_rename_rom = {
-		picture = gtfo
-		potential = {
-			primary_culture = romanian
-			owns = 647
-			owns = 651
-			owns = 654
-			owns = 655
-			owns = 656
-			owns = 661
-			NOT = { has_global_flag = western_transylvania_rename_rom }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_global_flag = western_transylvania_rename_rom
-			clr_global_flag = western_transylvania_rename_hun
-			prestige = 2
-			647 = { 
-				change_province_name = "Oradea"
-				state_scope = { change_region_name = "Vestul Transilvania" }
-			}
-			651 = { change_province_name = "Carei" }
-			654 = { change_province_name = "Cluj" }
-			655 = { change_province_name = "Alba Iulia" }
-			656 = { change_province_name = "Deva" }
-			661 = { change_province_name = "Bistrita" }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	western_transylvania_rename_aus = {
-		picture = gtfo
-		potential = {
-			is_culture_group = germanic
-			NOT = { 
-				OR = {
-					tag = KUK
-					tag = DNB
-				}
-			}
-			owns = 647
-			owns = 651
-			owns = 654
-			owns = 655
-			owns = 656
-			owns = 661
-			OR = {
-				has_global_flag = western_transylvania_rename_hun
-				has_global_flag = western_transylvania_rename_rom
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			clr_global_flag = western_transylvania_rename_hun
-			clr_global_flag = western_transylvania_rename_rom
-			647 = { 
-				change_province_name = "Großwardein"
-				state_scope = { change_region_name = "West-Siebenbürgen" }
-			}
-			651 = { change_province_name = "Sathmar" }
-			654 = { change_province_name = "Klausenburg" }
-			655 = { change_province_name = "Weißenburg" }
-			656 = { change_province_name = "Diemrich" }
-			661 = { change_province_name = "Bistritz" }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	eastern_transylvania_rename_hun = {
-		picture = gtfo
-		potential = {
-			OR = { 
-				primary_culture = hungarian
-				tag = KUK
-				tag = DNB
-			}
-			owns = 657
-			owns = 659
-			owns = 660
 			owns = 2533
-			NOT = { has_global_flag = eastern_transylvania_rename_hun }
+			owns = 660
+			NOT = { has_global_flag = northern_transylvania_rename_hun }
 		}
 		
 		allow = {
@@ -562,29 +449,31 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_global_flag = eastern_transylvania_rename_hun
-			clr_global_flag = eastern_transylvania_rename_rom
+			set_global_flag = northern_transylvania_rename_hun
+			clr_global_flag = northern_transylvania_rename_rom
 			prestige = 2
-			657 = { 
-				change_province_name = "Nagyszeben" 
-				state_scope = { change_region_name = "Kelet-Erdély" }
+			651 = { 
+				change_province_name = "Szatmár"
+				state_scope = { change_region_name = "Észak-Erdély" }
 			}
-			659 = { change_province_name = "Brassó" }
+			654 = { change_province_name = "Kolozsvár" }
 			2533 = { change_province_name = "Vásárhely" }
+			661 = { change_province_name = "Beszterce" }
 			660 = { change_province_name = "Udvarhely" }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	eastern_transylvania_rename_rom = {
+	northern_transylvania_rename_rom = {
 		picture = gtfo
 		potential = {
 			primary_culture = romanian
-			owns = 657
-			owns = 659
-			owns = 660
+			owns = 651
+			owns = 654
+			owns = 661
 			owns = 2533
-			NOT = { has_global_flag = eastern_transylvania_rename_rom }
+			owns = 660
+			NOT = { has_global_flag = northern_transylvania_rename_rom }
 		}
 		
 		allow = {
@@ -592,21 +481,23 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_global_flag = eastern_transylvania_rename_rom
-			clr_global_flag = eastern_transylvania_rename_hun
+			set_global_flag = northern_transylvania_rename_rom
+			clr_global_flag = northern_transylvania_rename_hun
 			prestige = 2
-			657 = { 
-				change_province_name = "Sibiu"
-				state_scope = { change_region_name = "Estul-Transilvania" }
+			654 = { 
+				change_province_name = "Cluj"
+				state_scope = { change_region_name = "Transilvania de Nord" }
 			}
-			659 = { change_province_name = "Brasov" }
-			2533 = { change_province_name = "Târgu Mures" }
+			651 = { change_province_name = "Carei" }
+			
+			661 = { change_province_name = "Bistrita" }
 			660 = { change_province_name = "Trei Scaune" }
+			2533 = { change_province_name = "Târgu Mures" }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
-	eastern_transylvania_rename_aus = {
+	northern_transylvania_rename_aus = {
 		picture = gtfo
 		potential = {
 			is_culture_group = germanic
@@ -616,13 +507,14 @@ political_decisions = {
 					tag = DNB
 				}
 			}
-			owns = 657
-			owns = 659
-			owns = 660
+			owns = 651
+			owns = 654
+			owns = 661
 			owns = 2533
+			owns = 660
 			OR = {
-				has_global_flag = eastern_transylvania_rename_hun
-				has_global_flag = eastern_transylvania_rename_rom
+				has_global_flag = northern_transylvania_rename_hun
+				has_global_flag = northern_transylvania_rename_rom
 			}
 		}
 		
@@ -631,14 +523,127 @@ political_decisions = {
 		}
 		
 		effect = {
-			clr_global_flag = eastern_transylvania_rename_hun
-			clr_global_flag = eastern_transylvania_rename_rom
+			clr_global_flag = northern_transylvania_rename_hun
+			clr_global_flag = northern_transylvania_rename_rom
+			651 = { 
+				change_province_name = "Sathmar" 
+				state_scope = { change_region_name = "Nord-Siebenbürgen" }
+			}
+			654 = { change_province_name = "Klausenburg" }
+			661 = { change_province_name = "Bistritz" }
+			660 = { change_province_name = "Udvarhely" }
+			2533 = { change_province_name = "Neumarkt" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	southern_transylvania_rename_hun = {
+		picture = gtfo
+		potential = {
+			OR = { 
+				primary_culture = hungarian
+				tag = KUK
+				tag = DNB
+			}
+			owns = 647
+			owns = 655
+			owns = 656
+			owns = 657
+			owns = 659
+			NOT = { has_global_flag = southern_transylvania_rename_hun }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = southern_transylvania_rename_hun
+			clr_global_flag = southern_transylvania_rename_rom
+			prestige = 2
+			647 = { 
+				change_province_name = "Nagyvárad" 
+				state_scope = { change_region_name = "Dél-Erdély" }
+			}
+			657 = { change_province_name = "Nagyszeben" }
+			655 = { change_province_name = "Gyulafehérvár" }
+			656 = { change_province_name = "Déva" }
+			659 = { change_province_name = "Brassó" }
+			
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	southern_transylvania_rename_rom = {
+		picture = gtfo
+		potential = {
+			primary_culture = romanian
+			owns = 647
+			owns = 655
+			owns = 656
+			owns = 657
+			owns = 659
+			NOT = { has_global_flag = southern_transylvania_rename_rom }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = southern_transylvania_rename_rom
+			clr_global_flag = southern_transylvania_rename_hun
+			prestige = 2
+			647 = {  change_province_name = "Oradea" }
 			657 = { 
+				change_province_name = "Sibiu"
+				state_scope = { change_region_name = "Transilvania de Sud" }
+			}
+			655 = { change_province_name = "Alba Iulia" }
+			656 = { change_province_name = "Deva" }
+			659 = { change_province_name = "Brasov" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	southern_transylvania_rename_aus = {
+		picture = gtfo
+		potential = {
+			is_culture_group = germanic
+			NOT = { 
+				OR = {
+					tag = KUK
+					tag = DNB
+				}
+			}
+			owns = 647
+			owns = 655
+			owns = 656
+			owns = 657
+			owns = 659
+			OR = {
+				has_global_flag = southern_transylvania_rename_hun
+				has_global_flag = southern_transylvania_rename_rom
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_global_flag = southern_transylvania_rename_hun
+			clr_global_flag = southern_transylvania_rename_rom
+			647 = { change_province_name = "Großwardein" }
+			655 = { change_province_name = "Weißenburg" }
+			656 = { change_province_name = "Diemrich" }
+			657 = {
 				change_province_name = "Hermannstadt"
-				state_scope = { change_region_name = "Ost-Siebenbürgen" }
+				state_scope = { change_region_name = "Süd-Siebenbürgen" }
 			}
 			659 = { change_province_name = "Kronstadt" }
-			2533 = { change_province_name = "Neumarkt" }
+			
 		}
 		ai_will_do = { factor = 1 }
 	}

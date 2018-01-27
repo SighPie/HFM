@@ -34,36 +34,23 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
-			factor = 20
-			NOT = { year = 1845 }
-		}
-		modifier = {
-			factor = 10
-			year = 1845
-			NOT = { year = 1850 }
-		}
-		modifier = {
 			factor = 0.75
 			year = 1850
 			NOT = { year = 1852 }
 		}
 		modifier = {
-			factor = 0.2
-			year = 1855
+			factor = 0.3
+			year = 1853
 			NOT = { year = 1860 }
 		}
 		modifier = {
 			factor = 0.1
-			year = 1860
+			year = 1855
+			NOT = { year = 1860 }
 		}
 		modifier = {
-			factor = 5
-			NOT = {
-				check_variable = {
-					which = taiping_provinces
-					value = 4
-				}
-			}
+			factor = 0.01
+			year = 1860
 		}
 	}
 	

@@ -190,6 +190,7 @@ political_decisions = {
 				is_vassal = no
 				NOT = { vassal_of = ENG }
 			}
+			NOT = { year = 1855 }
 			NOT = { has_country_flag = anglo_afghan_war }
 		}
 

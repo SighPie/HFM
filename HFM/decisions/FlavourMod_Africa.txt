@@ -1,47 +1,47 @@
 political_decisions = {
-	eng_ai_annex_egypt = {
-		picture = "suezcanal"
-		potential = { 
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
-			has_global_flag = yes_railroad
-			is_greater_power = yes
-			has_global_flag = berlin_conference
-			NOT = { has_country_flag = ai_annex_egypt }
-			ai = yes
-		}
+	#eng_ai_annex_egypt = {
+		#picture = "suezcanal"
+		#potential = { 
+			#capital_scope = { continent = europe }
+			#NOT = { tag = TUR }
+			#has_global_flag = yes_railroad
+			#is_greater_power = yes
+			#has_global_flag = berlin_conference
+			#NOT = { has_country_flag = ai_annex_egypt }
+			#ai = yes
+		#}
 		
-		allow = {
-			is_greater_power = yes
-			owns = 1755
-			EGY = {
-				civilized = no
-				ai = yes
-				OR = {
-					part_of_sphere = no
-					in_sphere = THIS
-				}
-			}
-			OR = { 
-				EGY = {
-					NOT = { vassal_of = TUR }
-				}
-				AND = { 
-					EGY = { vassal_of = TUR }
-					TUR = { 
-						is_greater_power = no
-						ai = yes
-					}
-				}
-			}
-		}
+		#allow = {
+			#is_greater_power = yes
+			#owns = 1755
+			#EGY = {
+				#civilized = no
+				#ai = yes
+				#OR = {
+					#part_of_sphere = no
+					#in_sphere = THIS
+				#}
+			#}
+			#OR = { 
+				#EGY = {
+					#NOT = { vassal_of = TUR }
+				#}
+				#AND = { 
+					#EGY = { vassal_of = TUR }
+					#TUR = { 
+						#is_greater_power = no
+						#ai = yes
+					#}
+				#}
+			#}
+		#}
 		
-		effect = {
-			inherit = SUD
-			inherit = EGY
-			set_country_flag = ai_annex_egypt
-		}
-	}
+		#effect = {
+			#inherit = SUD
+			#inherit = EGY
+			#set_country_flag = ai_annex_egypt
+		#}
+	#}
 	
 	eng_ai_west_africa = {
 		picture = "suezcanal"
@@ -551,6 +551,7 @@ political_decisions = {
 			tag = EGY
 			civilized = no
 			year = 1863
+			TUR = { ai = yes }
 			NOT = { has_country_flag = enact_ismail_pasha_reforms }
 		}
 		allow = {
@@ -564,9 +565,13 @@ political_decisions = {
 			#Bonus for AI
 			random_owned = {
 				limit = {
-					owner = { ai = yes }
+					owner = { 
+						ai = yes 
+						vassal_of = TUR
+					}
 				}
 				owner = { economic_reform = yes_education_reform }
+				TUR = { release = EGY }
 			}
 			add_country_modifier = {
 				name = ismail_pasha_reforms
@@ -577,5 +582,33 @@ political_decisions = {
 				consciousness = 2
 			}
 		}
+	}
+	
+	establish_the_egyptian_railways = {
+		picture = robert_stephenson
+		potential = {
+			tag = EGY
+			civilized = no
+			year = 1851
+			NOT = { has_country_flag = establish_the_egyptian_railways }
+		}
+		
+		allow = {
+			war = no
+			money = 45100
+		}
+		
+		effect = {
+			prestige = 5
+			treasury = -45000
+			economic_reform = yes_transport_improv
+			build_railway_in_capital = {
+				in_whole_capital_state = yes # no = just in main capital province.
+				limit_to_world_greatest_level = yes
+			}
+			set_country_flag = establish_the_egyptian_railways
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

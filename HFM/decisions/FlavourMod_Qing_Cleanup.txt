@@ -153,14 +153,14 @@ political_decisions = {
 		allow = {
 			QNG = {
 				has_global_flag = taiping_has_happened
-				NOT = { has_country_flag = tpg_war_started }
+				NOT = { has_global_flag = tpg_war_started }
 				NOT = { has_country_modifier = no_more_war }
 			}
 		}
 		
 		effect = {
 			QNG = {
-				set_country_flag = tpg_war_started
+				set_global_flag = tpg_war_started
 				country_event = 99931
 			}
 		}

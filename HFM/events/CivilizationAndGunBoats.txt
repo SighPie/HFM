@@ -4225,7 +4225,10 @@ country_event = {
 			factor = 0.1
 			OR = {
 				tag = BHP
-				tag = CRL
+				AND = {
+					tag = CRL
+					year = 1900
+				}
 				NOT = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism

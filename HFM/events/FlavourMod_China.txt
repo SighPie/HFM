@@ -196,7 +196,7 @@ country_event = {
 				casus_belli = civil_war
 			}
 		}		
-		set_country_flag = tpg_war_started
+		set_global_flag = tpg_war_started
 		small_arms = 150
 		canned_food = 150
 		regular_clothes = 150
@@ -578,7 +578,7 @@ country_event = {
 	trigger = {
 		tag = QNG
 		has_global_flag = huang2
-		has_global_flag = taiping_has_happened
+		has_global_flag = tpg_war_started
 		NOT = { has_global_flag = nien_rebellion }
 	}
 	

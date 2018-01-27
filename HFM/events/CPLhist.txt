@@ -13,7 +13,10 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = january_uprising_happened }
-		year = 1855
+		OR = {
+			year = 1860
+			has_global_flag = crimea_has_happened	
+		}
 		owns = 706
 		NOT = { is_culture_group = polish_culture_group }
 		NOT = { accepted_culture = polish }

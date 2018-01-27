@@ -148,6 +148,25 @@ country_event = {
 				}
 			}
 		}
+		#Return the Suez to Egypt
+		random_owned = {
+			limit = {
+				province_id = 1755
+				EGY = { 
+					exists = yes 
+					owns = 1757
+				}
+			}
+			secede_province = EGY
+			remove_core = THIS
+			owner = {
+				diplomatic_influence = {
+					who = EGY
+					value = 400
+				}
+				badboy = -2
+			}
+		}
 	}
 }
 		
@@ -247,7 +266,7 @@ country_event = {
 		is_canal_enabled = 2
 		owns = 1755
 		NOT = {
-			war_policy = pacifism
+			#war_policy = pacifism
 			has_country_modifier = neutrality
 			has_country_flag = suez_egypt_intervention
 		}
@@ -260,6 +279,10 @@ country_event = {
 				vassal_of = THIS
 			}
 			OR = {
+				AND = {
+					ai = yes
+					has_global_flag = berlin_conference
+				}
 				revolt_percentage = 0.25
 				any_owned_province = {
 					is_capital = yes
@@ -279,6 +302,10 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			EGY = { revolt_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0.01
+			has_global_flag = berlin_conference
 		}
 		modifier = {
 			factor = 1.5
@@ -632,6 +659,10 @@ country_event = {
 	option = {
 		name = "EVT36981OPTA"
 		treasury = 50000
+		random_owned = {
+			limit = { owner = { civilized = no } }
+			owner = { economic_reform = yes_finance_reform }
+		}
 		relation = { who = FROM value = 100 }
 		FROM = { diplomatic_influence = { who = THIS value = 400 } }
 		any_country = {

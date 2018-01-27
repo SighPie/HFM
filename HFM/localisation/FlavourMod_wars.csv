@@ -1,4 +1,12 @@
 ;;;;;;;;;;;x
+NORMAL_UNIFICATION_HUMILIATE_NAME_NGF_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;;x;;
+AGRESSION_UNIFICATION_HUMILIATE_NAME_NGF_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;x;;
+NORMAL_UNIFICATION_HUMILIATE_NAME_PRU_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;;x;;
+AGRESSION_UNIFICATION_HUMILIATE_NAME_PRU_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;x;;
+NORMAL_UNIFICATION_HUMILIATE_NAME_AUS_PRU;The Austro-Prussian Brother's War;;;;;;;;;;;;;;;x;;
+AGRESSION_UNIFICATION_HUMILIATE_NAME_AUS_PRU;The Austro-Prussian Brother's War;;;;;;;;;;;;;;x;;
+AGRESSION_WAR_RESTORE_ORDER_NAME_RUS_CIR;The $ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_RESTORE_ORDER_NAME_RUS_CIR;The $ORDER$Russo-Circassian War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_RESTORE_ORDER_NAME_DEN_SWH;The $ORDER$Schleswig War;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_DEN_SWH;The $ORDER$Schleswig War;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_ENG_ETH;British Expedition to Abyssinia;;;;;;;;;;;x,,,
@@ -19,7 +27,7 @@ NORMAL_WAR_RESTORE_ORDER_NAME_MEX_YUC;The $ORDER$Yucatan War of Independence;;;;
 AGRESSION_WAR_RESTORE_ORDER_NAME__YUC;The $ORDER$Yucatan War of Independence;;;;;;;;;;;;;x,,,
 NORMAL_WAR_RESTORE_ORDER_NAME_MEX_RGR;The $ORDER$Rio Grande Rebellion;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_MEX_RGR;The $ORDER$Rio Grande Rebellion;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_SIK;The British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_SIK;British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_RESTORE_ORDER_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_ENG_GRE;$ORDER$The Don Pacifico Affair;;;;;;;;;;;;x,,,

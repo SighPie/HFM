@@ -655,6 +655,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			add_accepted_culture = sindi
+			1223 = { add_core = PNJ }
 			set_country_flag = embraced_sindi
 		}
 		

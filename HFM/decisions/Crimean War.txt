@@ -18,7 +18,7 @@ political_decisions = {
 			OR = { 
 				nationalism_n_imperialism = 1
 				AND = { 
-					year = 1855
+					year = 1853
 					has_country_modifier = louis_napoleon_iii
 					has_country_flag = 2nd_empire
 					NOT = { has_country_flag = louis_deposed }

@@ -33,6 +33,7 @@
 - Changed the requires for the Deposing of Napoleon III
 - Added war name localization for the Krakow Uprising
 - Added war name localization for the Schleswig War
+- Changed Eastern & Western Transylvania to Northern and Southern
 
 #Other Changes
 - Delayed Dates where rebels get military techs
@@ -63,6 +64,7 @@
 - Added a decision to form the Kingdom of Egypt
 - Added a decision to enact Ismail Pasha's reforms
 - Added a Ottoman flag for Hedjaz
+- Changed the way the Suez is built, once completed, the Suez province will be returned to Egypt, it can be seized again later.
 
 #Changes to Central Asia/India
 - Removed the Annex Rajputana Decision as the substate CB now serves the same purpose and works.
@@ -76,7 +78,8 @@
 - Added events for the Sieges of Herat, and the Anglo-Persian War
 - Added a decision to claim Gwadar if civilized and owns Bela
 - Changed Persia Semi/Constitutional Monarchy Flag & Name
-- Removed Sikh core in Chitral
+- Removed Sikh core in Chitral, can be added via decision
+- 2nd Burma War - Sets the specific wargoal to be Pegu
 
 #Changes to Asia
 - 'The Ever Victorious Army' - Some of the more extreme bonuses are now given to the AI only, most of the modifier effects have been changed to a more reasonable amount

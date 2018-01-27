@@ -101,11 +101,11 @@ political_decisions = {
 			OR = {
 				AND = {
 					tag = FRA
-					year = 1870
+					year = 1858
 				}
 				AND = {
 					tag = ENG
-					year = 1855
+					year = 1865
 				}
 				AND = {
 					is_greater_power = yes
@@ -118,7 +118,10 @@ political_decisions = {
 			invention = machine_tools
 			invention = nitroglycerin		
 			iron_steamers = 1
-			business_banks = 1
+			OR = { 
+				business_banks = 1
+				money = 250000
+			}
 			money = 50100
 			1755 = { owner = { NOT = { truce_with = THIS war_with = THIS is_greater_power = yes } } }
 		}
@@ -140,14 +143,19 @@ political_decisions = {
 			is_canal_enabled = 2
 			NOT = { owns = 1755 }
 			is_greater_power = yes
-			1755 = { owner = { in_default = THIS } }
+			1755 = {
+				OR = {
+					owner = { in_default = THIS } 
+					owner = { civilized = no }
+				}
+			}
 			any_owned_province = { has_building = naval_base }
 			NOT = { has_country_modifier = in_bankrupcy }
 		}
 		
 		allow = {
 			war = no
-			1755 = { owner = { NOT = { truce_with = THIS } war = no in_default = THIS } }
+			1755 = { owner = { NOT = { truce_with = THIS } war = no } }
 			raider_group_doctrine = 1
 			invention = ironclads
 			total_num_of_ports = 50
@@ -166,6 +174,7 @@ political_decisions = {
 			1755 = { owner = { country_event = 36980 } }
 			1755 = { secede_province = THIS }
 		}
+		
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 0 month = 1 NOT = { month = 2 } }

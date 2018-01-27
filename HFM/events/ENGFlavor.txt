@@ -2065,6 +2065,7 @@ country_event = {
 			number_of_states = 2
 			any_owned_province = { port = yes }
 			NOT = { truce_with = ENG }
+			owns = 1332
 		}
 		OR = {
 			war_policy = jingoism
@@ -2074,6 +2075,16 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 12
+		
+		modifier = {
+			factor = 0.75
+			year = 1852
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 1853
+		}
 	}
 	
 	option = {
@@ -2087,8 +2098,16 @@ country_event = {
 			type = demand_concession_NI_casus_belli
 			months = 60
 		}
+		war = {
+			target = BUR
+			attacker_goal = { 
+				casus_belli = demand_concession_NI_casus_belli 
+				state_province_id = 1332
+			}
+			defender_goal = { casus_belli = status_quo }
+		}
 		ai_chance = {
-			factor = 95
+			factor = 99
 		}
 	}
 	
@@ -2111,7 +2130,7 @@ country_event = {
 			militancy = 2
 		}
 		ai_chance = {
-			factor = 5
+			factor = 1
 		}
 	}
 }
@@ -2823,7 +2842,7 @@ country_event = {
 	option = {
 		name = "EVT3697009OPTA"
 			prestige = 5
-			badboy = -2
+			badboy = -5
 			treasury = 50000
 			release = KAS
 			EIC = {

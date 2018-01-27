@@ -27,7 +27,7 @@
 				who = TUR
 				value = -200
 			}
-			TUR = { 
+			TUR = {
 				country_event = 97531
 				release_vassal = WAL
 				leave_alliance = WAL
@@ -90,6 +90,13 @@
 			}
 			TUR = {
 				diplomatic_influence = { who = WAL value = -300 }			
+			}
+			random_country = {
+				limit = {
+					tag = RUS
+					ai = yes
+				}
+				leave_alliance = WAL
 			}
 			ai_chance = { factor = 100 }
 		}

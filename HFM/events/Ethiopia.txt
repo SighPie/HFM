@@ -85,8 +85,18 @@ country_event = {
 		owns = 1853
 		war = no
 		OR = {
-			owns = 1857
-			owns = 1859
+			AND = { 
+				owns = 1857
+				owns = 1859	
+			}
+			AND = {
+				year = 1855
+				ai = yes
+				OR = {
+					owns = 1857
+					owns = 1859	
+				}
+			}
 		}
 		NOT = { tag = ETH }
 		ETH = { exists = no }
@@ -103,6 +113,16 @@ country_event = {
 		remove_country_modifier = zemene_mesafint
 		add_country_modifier = { name = disunited_country duration = 5475 }
 		add_country_modifier = { name = tewodros_ii duration = 9125 }
+		any_country = {
+			limit = {
+				OR = {
+					tag = GON
+					tag = TIG
+					tag = SHW
+				}
+			}
+			remove_country_modifier = zemene_mesafint
+		}
 		capital = 1853
 		1853 = { change_province_name = "Magdala" }
 		change_tag = ETH
@@ -114,7 +134,7 @@ country_event = {
 	id = 111002
 	title = "EVTNAME111002"
 	desc = "EVTDESC111003"
-	picture = "tewodros_ii"
+	picture = "tewodros"
 	
 	trigger = {
 		tag = ETH
@@ -154,7 +174,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT111003OPTA"
+		name = "EVTOPTA111003"
 		prestige = 5
 		war = {
 			target = ETH
@@ -169,7 +189,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT111003OPTB"
+		name = "EVTOPTB111003"
 		prestige = -35
 		diplomatic_influence = {
 			who = ETH

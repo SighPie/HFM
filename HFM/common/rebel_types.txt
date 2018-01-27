@@ -3942,6 +3942,13 @@ unciv_reactionary_rebels = {
 			country = { tag = QNG }
 		}
 		modifier = {
+			factor = 0
+			country = { 
+				tag = EGY 
+				ai = yes
+			}
+		}
+		modifier = {
 			year = 1895
 			country = { primary_culture = manchu }
 			factor = 0
@@ -4019,6 +4026,14 @@ unciv_reactionary_rebels = {
 			}
 		}
 		modifier = {
+			factor = 0
+			country = {
+				tag = EGY 
+				ai = yes
+			}
+		}
+		
+		modifier = {
 			factor = 1.02
 			country = { 
 				civilization_progress = 0.1
@@ -4067,6 +4082,13 @@ unciv_reactionary_rebels = {
 		modifier = {
 			factor = 0
 			country = { tag = QNG }
+		}
+		modifier = {
+			factor = 0
+			country = { 
+				tag = EGY 
+				ai = yes
+			}
 		}
 		modifier = {
 			year = 1895
@@ -4931,6 +4953,10 @@ independence_rebels = {
 			war_exhaustion = 8
 			factor = 0.95
 		}
+		modifier = {
+			factor = 0
+			country = { tag = EGY ai = yes }
+		}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -4939,6 +4965,10 @@ independence_rebels = {
 		modifier = {
 			factor = 0
 			country = { is_vassal = no }
+		}
+		modifier = {
+			factor = 0
+			country = { tag = EGY ai = yes }
 		}
 		modifier = {
 			factor = 0

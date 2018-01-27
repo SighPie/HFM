@@ -3058,7 +3058,7 @@ great_game_cb = {
 
 	badboy_factor = 1
 	prestige_factor = 2
-	peace_cost_factor = 0.5
+	peace_cost_factor = 0.4
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 1

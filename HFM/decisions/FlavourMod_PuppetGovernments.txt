@@ -313,7 +313,6 @@ political_decisions = {
 			is_vassal = no
 			government = colonial_company
 			NOT = { tag = EIC }
-			NOT = { tag = EGY }
 		}
 		
 		allow = {

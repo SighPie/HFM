@@ -341,9 +341,9 @@ AUS_641 = { 641 645 646 648 649 650 } #Central Hungary
 
 AUS_652 = { 652 653 } #Banat
 
-AUS_654 = { 654 655 656 661 651 647 } #Western Transylvania
+AUS_654 = { 654 661 651 2533 660 } #Northern Transylvania
 
-AUS_657 = { 657 659 660 2533 } #Eastern Transylvania
+AUS_657 = { 657 659 647 655 656 } #Southern Transylvania
 
 AUS_702 = { 703 704 705 714 } #Galicia-Lodomeria
 

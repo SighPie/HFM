@@ -722,7 +722,7 @@ country_event = {
 			tag = NGF
 		}
 		year = 1847
-		militancy = 5
+		militancy = 4
 		OR = {
 			AND = {
 				NOT = { press_rights = free_press }
