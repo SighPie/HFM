@@ -15,7 +15,8 @@ country_event = {
 		NOT = { has_global_flag = january_uprising_happened }
 		OR = {
 			year = 1860
-			has_global_flag = crimea_has_happened	
+			has_global_flag = treaty_of_paris_1856
+			has_global_flag = treaty_of_paris_russia
 		}
 		owns = 706
 		NOT = { is_culture_group = polish_culture_group }

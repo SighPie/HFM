@@ -245,6 +245,7 @@ political_decisions = {
 			tag = ENG
 			war_with = MUG
 			EIC = {
+				exists = yes
 				war = no
 				ai = yes
 				NOT = { 

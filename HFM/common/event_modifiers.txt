@@ -1052,8 +1052,7 @@ ismail_pasha_reforms = {
 	max_loan_modifier = 0.25
 	education_efficiency_modifier = 0.05
 	global_pop_consciousness_modifier = 0.02
-	research_points_modifier = 0.1
-	supply_consumption = 0.1
+	supply_consumption = 0.15
 	min_military_spending = 0.25
 	icon = 5
 }

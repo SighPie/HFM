@@ -4153,6 +4153,7 @@ country_event = {
 		NOT = { tag = KAL }
 		NOT = { tag = MAK }
 		NOT = { tag = TRA }
+		NOT = { tag = CRL }
 		NOT = { has_country_flag = no_british_doctrine }
 		OR = {
 			EIC = { ideological_thought = 1 exists = yes }

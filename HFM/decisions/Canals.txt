@@ -120,7 +120,7 @@ political_decisions = {
 			iron_steamers = 1
 			OR = { 
 				business_banks = 1
-				money = 250000
+				money = 150000
 			}
 			money = 50100
 			1755 = { owner = { NOT = { truce_with = THIS war_with = THIS is_greater_power = yes } } }

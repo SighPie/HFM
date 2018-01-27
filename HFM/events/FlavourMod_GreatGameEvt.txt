@@ -242,6 +242,11 @@ country_event = {
 		name = "EVTOPTA99200"
 		set_global_flag = anglo_persian_war
 		badboy = 2
+		casus_belli = {
+			target = PER
+			type = treaty_port_casus_belli
+			months = 60
+		}
 		war = {
 			target = PER
 			attacker_goal = { casus_belli = treaty_port_casus_belli }
@@ -349,6 +354,7 @@ country_event = {
 				OR = {
 					vassal_of = FROM
 					substate_of = FROM
+					tag = AFG
 				}
 				war_with = THIS
 			}

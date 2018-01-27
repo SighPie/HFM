@@ -4912,7 +4912,7 @@ independence_rebels = {
 		french_bourbon = hms_government
 		democracy = democracy
 		theocracy = theocracy
-		colonial_company = democracy
+		colonial_company = absolute_monarchy
 	}
 	
 	
@@ -4955,7 +4955,7 @@ independence_rebels = {
 		}
 		modifier = {
 			factor = 0
-			country = { tag = EGY ai = yes }
+			country = { tag = EGY }
 		}
 	}
 	
@@ -4968,7 +4968,7 @@ independence_rebels = {
 		}
 		modifier = {
 			factor = 0
-			country = { tag = EGY ai = yes }
+			country = { tag = EGY }
 		}
 		modifier = {
 			factor = 0
@@ -5012,6 +5012,10 @@ independence_rebels = {
 		modifier = {
 			factor = 5.0
 			is_capital = yes
+		}
+		modifier = {
+			factor = 0
+			country = { tag = EGY }
 		}
 	}
 	

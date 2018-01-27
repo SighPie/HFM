@@ -565,13 +565,15 @@ political_decisions = {
 			#Bonus for AI
 			random_owned = {
 				limit = {
-					owner = { 
+					owner = {
 						ai = yes 
 						vassal_of = TUR
 					}
 				}
-				owner = { economic_reform = yes_education_reform }
-				TUR = { release = EGY }
+				TUR = { 
+					release = EGY 
+					release_vassal = EGY 
+				}
 			}
 			add_country_modifier = {
 				name = ismail_pasha_reforms
@@ -579,7 +581,7 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = { is_primary_culture = yes }
-				consciousness = 2
+				consciousness = -2
 			}
 		}
 	}

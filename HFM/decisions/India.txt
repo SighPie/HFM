@@ -340,6 +340,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = rajputana_formed
 			prestige = 5
+			badboy = -5
 			ENG_1264 = { add_core = RAJ }
 			random_country = {
 				limit = {

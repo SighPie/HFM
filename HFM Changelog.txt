@@ -19,6 +19,7 @@
 - Fixed AI Germany not taking the Ruhr Industralism & Ruhr Boom Decisions
 - Fixed Issues with Asian Minor pops assimilating & Chinese pops assimilating into Manchu 
 - Fixed the Zoutpansberg monarchy flag
+- 'Prussian-Italian Alliance' - Fixed the requirements for Italy to get Venice after the Brothers War
 
 #Changes to Europe
 - 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
@@ -34,6 +35,7 @@
 - Added war name localization for the Krakow Uprising
 - Added war name localization for the Schleswig War
 - Changed Eastern & Western Transylvania to Northern and Southern
+- 'The Dutch-Prussian Alliance' - Now easier for Prussia to claim Luxembourg from the Dutch
 
 #Other Changes
 - Delayed Dates where rebels get military techs
@@ -90,6 +92,7 @@
 - Added a decision 'Abolish the Imperial Examinations'
 - Increased preparation time for the Taiping Rebellion to 120 days
 - Added a decision 'Treaty of Friendship & Commerce between the British Empire and Siam'
+- Added a decision to either vassalize or add a core to Lanfang, based on contribution by Mo1tke
 
 #Changes to Oceania
 - Slightly decreased the pop growth effects of the Australia migration modifiers
