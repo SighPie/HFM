@@ -100,7 +100,10 @@ political_decisions = {
 			}
 			OR = {
 				AND = {
-					tag = FRA
+					OR = { 
+						tag = FRA
+						tag = BOR
+					}
 					year = 1858
 				}
 				AND = {

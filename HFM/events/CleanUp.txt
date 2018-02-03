@@ -696,6 +696,11 @@ country_event = {
 				tag = RHI
 				is_culture_group = french
 			}
+			capital_scope = { continent = africa }
+			capital_scope = { continent = west_africa }
+			capital_scope = { continent = east_africa }
+			capital_scope = { continent = south_west_africa }
+			capital_scope = { continent = asia }
 		}
 		NOT = { has_country_flag = post_colonial_country }
 	}

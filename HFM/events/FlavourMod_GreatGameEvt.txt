@@ -133,6 +133,7 @@ country_event = {
 		tag = ENG
 		has_global_flag = 1_anglo_sikh_war
 		PNJ = {
+			exists = yes
 			vassal_of = ENG
 			NOT = { truce_with = ENG }
 		}
@@ -236,7 +237,17 @@ country_event = {
 	desc = "EVTDESC99202"
 	picture = "anglo_persian_war"
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = ENG
+		1227 = {
+			OR = {
+				owned_by = THIS
+				owner = { vassal_of = THIS }
+			}
+		}
+		1212 = { owned_by = PER }
+		NOT = { has_global_flag = anglo_persian_war }
+	}
 	
 	option = {
 		name = "EVTOPTA99200"
@@ -277,6 +288,11 @@ country_event = {
 					casus_belli = status_quo
 				}
 			}
+		}
+		
+		diplomatic_influence = {
+			who = AFG
+			value = 400
 		}
 		
 		ai_chance = { 
@@ -371,57 +387,5 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-	}
-}
-
-#Bowring Treaty - Siam Response
-country_event = {
-	id = 99300
-	title = "EVTNAME99300"
-	desc = "EVTDESC99300"
-	picture = "treaty"
-	
-	major = yes
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA99300"
-		prestige = -5
-		any_pop = {
-			limit = {
-				is_primary_culture = yes
-			}
-			consciousness = 1
-			militancy = 1
-		}
-		FROM = {
-			relation = {
-				who = THIS
-				value = 100
-			}
-		}
-		remove_country_modifier = uncivilized_isolationism
-		add_country_modifier = {
-			name = "western_influences"
-			duration = -1
-		}
-		1346 = {
-			add_province_modifier = {
-				name = extraterritoriality_granted
-				duration = -1
-			}
-		}
-		economic_reform = yes_monetary_reform 
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		name = "EVTOPTB99300"
-		prestige = 15
-		add_country_modifier = {
-			name = "uncivilized_isolationism"
-			duration = -1
-		}
-		ai_chance = { factor = 0 }
 	}
 }

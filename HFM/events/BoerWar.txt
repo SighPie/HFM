@@ -2439,12 +2439,12 @@ country_event = {
 		
 	option = {
 		name = "EVT98262OPTA"
+		add_country_modifier = { name = gold_rush_country duration = 5475 }
 		2094 = {
 			secede_province = THIS
 			change_province_name = "Kimberley"
 			trade_goods = precious_metal
 			add_province_modifier = { name = gold_rush duration = 5475 }
-			add_country_modifier = { name = gold_rush_country duration = 5475 }
 			any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
 		}
 	}

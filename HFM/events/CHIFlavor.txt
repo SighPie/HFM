@@ -1232,7 +1232,9 @@ country_event = {
 				OR = { 
 					is_core = GNG
 					is_core = GXI
+					is_core = FJN
 					region = CHI_1482
+					region = CHI_1578
 				}
 			}
 			add_province_modifier = {

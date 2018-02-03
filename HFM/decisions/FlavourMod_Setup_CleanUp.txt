@@ -6,9 +6,9 @@ political_decisions = {
 			ai = yes
 			OR = {
 				tag = ZUL
-				tag = DAI
-				tag = CAM
-				tag = TUN
+				#tag = DAI
+				#tag = CAM
+				#tag = TUN
 				#tag = MOR
 				tag = MAD
 				tag = CHK
@@ -544,51 +544,7 @@ political_decisions = {
 			}
 		}
 	}
-	
-	#clean_up_raj = {
-		#picture = "map_india"
-		#potential = { 
-			#ai = no
-			#is_vassal = no
-			#RAJ = { 
-				#exists = yes
-				#OR = {
-					#vassal_of = ENG
-					#substate_of = ENG
-				#}
-			#}
-			#is_culture_group = south_asian
-			#NOT = { tag = RAJ }
-			#NOT = {
-				#has_country_flag = clean_up_raj
-			#}
-		#}
-		
-		#allow = {
-			#RAJ = {
-				#all_core = {
-					#OR = {
-						#controlled_by = THIS
-						#controller = { alliance_with = THIS }
-					#}
-				#}
-			#}
-			#RAJ = {
-				#is_vassal = yes
-				#OR = { 
-					#vassal_of = ENG
-					#substate_of = ENG
-				#}
-				#war_with = THIS
-			#}
-		#}
-		
-		#effect = {
-			#inherit = RAJ
-			#set_country_flag = clean_up_raj
-		#}
-	#}	
-	
+
 	ai_give_warships_steamer = {
 		potential = {
 			ai = yes
@@ -685,7 +641,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = ai_warships_cooldown
-				duration = 365
+				duration = 545
 			}
 			#Bonus for British
 			random_owned = {

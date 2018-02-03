@@ -20,6 +20,7 @@
 - Fixed Issues with Asian Minor pops assimilating & Chinese pops assimilating into Manchu 
 - Fixed the Zoutpansberg monarchy flag
 - 'Prussian-Italian Alliance' - Fixed the requirements for Italy to get Venice after the Brothers War
+- 'The Rhine Crisis' - can no longer be triggered while in a truce with NGF/PRU/GER
 
 #Changes to Europe
 - 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
@@ -34,6 +35,7 @@
 - Changed the requires for the Deposing of Napoleon III
 - Added war name localization for the Krakow Uprising
 - Added war name localization for the Schleswig War
+- Added war name localization for the Roman Revolution
 - Changed Eastern & Western Transylvania to Northern and Southern
 - 'The Dutch-Prussian Alliance' - Now easier for Prussia to claim Luxembourg from the Dutch
 
@@ -44,6 +46,7 @@
 - Adjusted AI ship spawning levels
 - Reactionary Rebels will no longer turn Theocracies to Absolute Monarchies
 - Added localisation for certain wars
+- Some Military Unciv Reforms will now only give 5% civilization progress
 
 # Migration Changes
 - Lowered base migration chance, but increased pre-Great War era migration to have a steady amount of migration in the early game, but not a overly large amount in the late-game
@@ -54,6 +57,7 @@
 - 'Integrating French Guiana' will now give a Integration modifier rather than adding the core straight away.
 - Added two events for the Great Fires of New York and Chicago, modified version of Shayco122's contribution
 - EXPERIMENTAL: The Monroe Doctrine CB is now always available for the U.S.
+- Added flags for Buenos Aires by GAGG1111111
 
 #Changes to Balkans/Middle East
 - Kuwait now starts as a satalite of the Ottomans, rather than direct rule
@@ -67,6 +71,7 @@
 - Added a decision to enact Ismail Pasha's reforms
 - Added a Ottoman flag for Hedjaz
 - Changed the way the Suez is built, once completed, the Suez province will be returned to Egypt, it can be seized again later.
+- The Crimean War can now occur if Egypt won the Oriental Crisis
 
 #Changes to Central Asia/India
 - Removed the Annex Rajputana Decision as the substate CB now serves the same purpose and works.
@@ -93,6 +98,12 @@
 - Increased preparation time for the Taiping Rebellion to 120 days
 - Added a decision 'Treaty of Friendship & Commerce between the British Empire and Siam'
 - Added a decision to either vassalize or add a core to Lanfang, based on contribution by Mo1tke
+- Added a event 'The Guangzhou Uprising'
+- 'The Eight Banners' - Now gives minimum social spending in the form of government pensions paid to Manchu Bannermen.
+- Added unique Chinese tech school 'The Three Principles of the People'
+- Changed the Guominjun's flag
+- Changed the flag of Manchuria - Now uses the Imperial banner of the Qing Emperor
+- Added several historical decisions for Siam to reform and westernizes
 
 #Changes to Oceania
 - Slightly decreased the pop growth effects of the Australia migration modifiers

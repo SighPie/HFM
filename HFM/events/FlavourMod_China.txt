@@ -2,27 +2,119 @@
 
 ### Qing ai Buffs & Debuffs ### 
 
-#ChinaResearchDebuff
-#country_event = {
-	#id = 99905
-	#title = "EVTNAME99905"
-	#desc = "EVTDESC99905"
-	#picture = "singapore"
-	#fire_only_once = yes	
-	#trigger = {
-		#ai = yes
-		#tag = QNG
-		#year = 1836
-	#}
+#The Guangzhou Uprising
 
-	#option = {
-		#name = "EVTOPT99905"
-		#add_country_modifier = {
-			#name = china_isolationism
-			#duration = 5475
-		#}
-	#}
-#}
+country_event = {
+	id = 99905
+	title = "EVTNAME99905"
+	desc = "EVTDESC99905"
+	picture = "guangzhou_uprising"
+	
+	trigger = {
+		tag = QNG
+		OR = {
+			NOT = { owns = 1485 } #Taipei
+			NOT = { owns = 1538 } #Shanghai
+			NOT = { owns = 1481 } #Port Arthur
+			NOT = { owns = 1569 } #Weihaiwei
+			NOT = { owns = 1566 } #Qingdao
+			NOT = { owns = 1608 } #Ningbo
+			NOT = { owns = 1499 } #Ningbo
+			NOT = { owns = 2632 } #Ningbo
+			exists = LEG
+		}
+		OR = {
+			year = 1895
+			civilized = yes
+		}
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		1493 = { #Canton
+			OR = {
+				owned_by = THIS
+				owner = {
+					vassal_of = THIS
+					is_greater_power = no
+				}
+			}
+		}
+		NOT = { has_country_flag = guangzhou_uprising }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			year = 1902
+			}
+
+		modifier = {
+			factor = 0.1
+			year = 1903
+		}
+
+		modifier = {
+			factor = 0.5
+			civilized = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+
+		modifier = {
+			factor = 0.8
+			average_militancy = 7
+		}
+
+		modifier = {
+			factor = 0.8
+			average_militancy = 8
+		}
+
+		modifier = {
+			factor = 0.8
+			average_militancy = 9
+		}
+	}
+
+	option = {
+		name = "EVT90904OPTA"
+		set_country_flag = guangzhou_uprising
+		any_pop = {
+			limit = {
+				is_culture_group = east_asian
+				NOT = { has_pop_culture = manchu }
+				location = { is_core = GNG }
+			}
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 4
+			}
+			dominant_issue = {
+				value = free_press
+				factor = 0.1
+			}
+			dominant_issue = {
+				value = universal_voting
+				factor = 0.1
+			}
+		}
+
+	}
+}
 
 country_event = {
 	id = 99912
@@ -41,18 +133,6 @@ country_event = {
 		name = "EVTOPT99905"
 		grain = 500
 		set_country_flag = qing_tpg_buff
-		XBI = {
-			add_country_modifier = {
-			name = qing_substate_boost
-			duration = 1825
-			}
-		}
-		MCK = {
-			add_country_modifier = {
-			name = qing_substate_boost
-			duration = 1825
-			}
-		}
 	}
 }
 
@@ -470,6 +550,7 @@ country_event = {
 	option = {
 		name = "EVT99953OPTA"
 		1569 = {
+			sub_unit = { type = ironclad value = current }
 			sub_unit = { type = ironclad value = current }
 			sub_unit = { type = ironclad value = current }
 			sub_unit = { type = ironclad value = current }

@@ -3,14 +3,26 @@ political_decisions = {
 	france_protector_of_eastern_christians = {
 		picture = protect_eastern_christians
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			state_n_government = 1
 			NOT = { has_country_flag = claimed_authority_over_holy_land }
 			NOT = { has_global_flag = berlin_congress_held }
-			TUR = {
-				owns = 917
-				neighbour = RUS
+			TUR = { neighbour = RUS }
+			917 = {
+				OR = {
+					owned_by = TUR
+					AND = {
+						owned_by = EGY
+						EGY = {
+							in_sphere = FRA
+							is_vassal = no
+						}
+					}
+				}
 			}
 		}
 		
@@ -68,6 +80,7 @@ political_decisions = {
 			NOT = { has_country_flag = crimean_war }
 			NOT = { has_global_flag = berlin_congress_held }
 			exists = TUR
+			FRA = { war = no }
 			OR = {
 				has_global_flag = france_protector_of_eastern_christians
 				AND = {
@@ -117,9 +130,17 @@ political_decisions = {
 				}
 				leave_alliance = THIS
 			}
+			random_country = {
+				limit = {
+					tag = PRU
+					ai = yes
+				}
+				leave_alliance = TUR
+			}
 			any_greater_power = {
 				limit = {
 					NOT = { tag = TUR }
+					NOT = { tag = BOR }
 					NOT = { tag = FRA }
 					NOT = { tag = THIS }
 					NOT = { tag = PRU }
@@ -157,7 +178,10 @@ political_decisions = {
 	treaty_of_paris_1856 = {
 		picture = treaty_signing
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			has_global_flag = crimea_has_happened
 			NOT = { has_global_flag = treaty_of_paris_1856 }
 			NOT = { has_global_flag = treaty_of_paris_russia }

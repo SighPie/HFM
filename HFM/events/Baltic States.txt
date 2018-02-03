@@ -13,7 +13,7 @@ country_event = {
 		primary_culture = volga_german
 		OR = { 
 			has_country_flag = ubd_substate
-			government = deomocracy
+			government = democracy
 		}
 	}
 

@@ -943,7 +943,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = vassalize_lanfang
 			prestige = 15
-			create_vasal = LAN
+			create_vassal = LAN
 			diplomatic_influence = {
 				who = LAN
 				value = 400
@@ -987,4 +987,40 @@ political_decisions = {
 			}	
 		}
 	}
+	
+	three_principles_of_the_people = {
+		picture = sun_yat_sen
+		potential = {
+			OR = {
+				tag = QNG
+				tag = CHI
+				tag = KMT
+				tag = GMJ
+			}
+			civilized = yes
+			NOT = {	
+				#government = absolute_monarchy
+				#government = prussian_constitutionalism
+				tech_school = chinese_tech_school
+			}
+		}
+		
+		allow = {
+			war = no
+			civilized = yes
+		}
+		
+		effect = {
+			tech_school = chinese_tech_school
+			plurality = 5
+			prestige = 5
+			any_pop = {
+				limit = {
+					is_culture_group = east_asian
+				}
+				militancy = -1
+				consciousness = -1
+			}
+		}
+	}	
 }

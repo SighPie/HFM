@@ -775,8 +775,8 @@ colonialmigration_chance = {
 
 #general emigration chance
 emigration_chance = {
-	factor = 0.65
-		
+	factor = 0.6
+	
 	modifier = {
 		factor = -2.0
 		OR = {
@@ -1057,13 +1057,6 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = -0.5
-		THIS = { is_culture_group = east_asian  }
-		country = { is_culture_group = east_asian }
-		country = { NOT = { has_country_flag = preparations_to_kill } }
-	}
-	
-	modifier = {
 		factor = -0.25
 		agree_with_ruling_party = 0.25
 		#country = { NOT = { has_country_flag = preparations_to_kill } }
@@ -1079,6 +1072,13 @@ emigration_chance = {
 		factor = 0.1
 		country = { citizens_rights = primary_culture_only }
 		not = { culture = this }
+	}
+	
+	modifier = {
+		factor = -0.35
+		THIS = { is_culture_group = east_asian  }
+		country = { is_culture_group = east_asian civilized = yes }
+		country = { NOT = { has_country_flag = preparations_to_kill } }
 	}
 	
 	modifier = {
@@ -1108,7 +1108,7 @@ emigration_chance = {
 			is_culture_group = germanic 
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		location = { 
 			controlled_by = owner
 			NOT = {
@@ -1139,7 +1139,7 @@ emigration_chance = {
 			primary_culture = south_german 
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1890 }
+		NOT = { year = 1905 }
 		location = { 
 			controlled_by = owner
 		}
@@ -1160,7 +1160,7 @@ emigration_chance = {
 			is_culture_group = germanic 
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1890 }
+		NOT = { year = 1905 }
 		location = { 
 			controlled_by = owner
 		}
@@ -1205,7 +1205,7 @@ emigration_chance = {
 			has_pop_culture = french
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		location = { controlled_by = owner }
 		country = {
 			primary_culture = french
@@ -1219,7 +1219,7 @@ emigration_chance = {
 			is_culture_group = italian
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		location = { controlled_by = owner }
 		country = { 
 			is_greater_power = yes
@@ -1239,7 +1239,7 @@ emigration_chance = {
 			}
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		location = { controlled_by = owner }
 		location = {
 			NOT = {
@@ -1261,7 +1261,7 @@ emigration_chance = {
 			has_pop_culture = irish
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		location = { controlled_by = owner }
 		country = { 
 			primary_culture = british
@@ -1327,9 +1327,9 @@ emigration_chance = {
 	}
 		
 	modifier = {
-		factor = 0.35
+		factor = 0.4
 		year = 1837
-		NOT = { year = 1900 }
+		NOT = { year = 1905 }
 		country = { 
 			AND = { 
 				NOT = { war_exhaustion = 1 }

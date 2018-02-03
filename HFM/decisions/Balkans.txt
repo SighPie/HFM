@@ -698,6 +698,7 @@ political_decisions = {
 			}
 			OR = {
 				tag = FRA
+				tag = BOR
 				tag = RUS
 				any_owned_province = { is_core = ALB }
 				any_owned_province = { is_core = BUL }

@@ -39,6 +39,10 @@ colonial_policy = no_colonies
 
 set_country_flag = mahayana_country
 
+govt_flag = {
+	government = democracy
+	flag = proletarian_dictatorship
+}
 ruling_party = FJN_conservative
 upper_house = {
 	fascist = 0

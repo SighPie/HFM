@@ -15,6 +15,7 @@ UTI		="countries/Utility Tag.txt"
 OCC		="countries/Occitania.txt"
 ACA		="countries/Acadia.txt"
 VIC 	="countries/Nationalist France.txt"
+BOR		="countries/The Kingdom of France.txt"
 
 ##HFM New Nations
 #ATB	= "countries/Saxe-Altenburg.txt"

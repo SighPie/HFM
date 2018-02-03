@@ -408,6 +408,9 @@ acquire_core_state = {
 			THIS = { NOT = { has_country_flag = in_great_war } }
 			THIS = { ai = no }
 		}
+		THIS = {
+			NOT = { has_country_modifier = no_more_war }
+		}
 	}
 	
 	allowed_states = {

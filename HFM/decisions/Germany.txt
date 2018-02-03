@@ -131,7 +131,7 @@ political_decisions = {
 					build_factory_in_capital_state = steamer_shipyard
 				}
 				369 = {
-					naval_base = 6 
+					naval_base = 5
 					add_province_modifier = {
 						name = germania_werft
 						duration = -1

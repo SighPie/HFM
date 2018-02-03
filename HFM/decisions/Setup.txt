@@ -2472,6 +2472,13 @@ political_decisions = {
 				relation = { who = USA value = -75 }
 			}
 			
+			random_country = {
+				limit = {
+					tag = SIA
+				}
+				add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+			}
+			
 			any_country = {
 				limit = {
 					OR = {

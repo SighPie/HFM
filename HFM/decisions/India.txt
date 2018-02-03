@@ -607,7 +607,7 @@ political_decisions = {
 				name = shastar_vidya
 				duration = -1
 			}
-			plurality = 1
+			plurality = 5
 		}
 		ai_will_do = {
 			factor = 1

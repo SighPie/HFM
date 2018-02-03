@@ -1160,7 +1160,7 @@ beer_hall_putsch = {
 ##### Civilization & Gunboats #####
 local_opium_habit = {
 	local_RGO_throughput = -0.2
-	land_organisation = -0.01
+	land_organisation = -0.005
 	naval_organisation = -0.01
 	pop_consciousness_modifier = -0.05
 	icon = 20
@@ -2886,6 +2886,7 @@ emergency_wartime_austria = {
 }
 
 zollervein  = {
+	supply_consumption = -0.05
 	tax_efficiency = 0.03
 	influence_modifier = 0.2
 	import_cost = -0.05
@@ -2918,7 +2919,7 @@ unciv_balance = {
 ###HFM China Modifiers
 
 unciv_balance_qng = {
-	research_points_modifier = -0.8
+	research_points_modifier = -0.5
 	icon = 10
 }
 
@@ -2956,10 +2957,13 @@ the_xiang_army = {
 the_eight_banners = {
 	land_organisation = -0.05
 	naval_organisation = -0.15
-	administrative_efficiency_modifier = -0.05
+	administrative_efficiency_modifier = -0.1
 	min_military_spending = 0.2
 	tax_efficiency = -0.05
+	pension_level = 0.1
+	min_social_spending = 0.25
 	research_points_modifier = -0.1
+	cb_generation_speed_modifier = -0.1
 	icon = 16
 }
 
@@ -3026,6 +3030,21 @@ yuan_shikai = {
 	supply_consumption = -0.1
 	land_organisation = 0.1
 	icon = 17
+}
+
+rama_iv = {
+	global_pop_consciousness_modifier = -0.1
+	global_pop_militancy_modifier = -0.05
+	research_points_modifier = 0.1
+	icon = 5
+}
+
+rama_v = {
+	global_pop_consciousness_modifier = -0.05
+	research_points_modifier = 0.05
+	education_efficiency_modifier = 0.05
+	diplomatic_points_modifier = 0.1 
+	icon = 5
 }
 
 #HFM EIC Modifiers

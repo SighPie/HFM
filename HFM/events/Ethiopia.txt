@@ -181,6 +181,9 @@ country_event = {
 			attacker_goal = {
 				casus_belli = humiliate
 			}
+			attacker_goal = {
+				casus_belli = war_reparations
+			}
 			defender_goal = {
 				casus_belli = humiliate
 			}

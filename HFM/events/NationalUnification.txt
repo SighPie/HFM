@@ -719,6 +719,13 @@ country_event = {
 		NOT = { tag = LIE }
 		NOT = { tag = VLG }
 		NOT = { tag = GCF }
+		NOT = { 
+			capital_scope = { continent = africa }
+			capital_scope = { continent = west_africa }
+			capital_scope = { continent = east_africa }
+			capital_scope = { continent = south_west_africa }
+			capital_scope = { continent = asia }
+		}
 		has_country_flag = crown_from_the_gutter
 		is_culture_group = germanic
 		is_greater_power = yes

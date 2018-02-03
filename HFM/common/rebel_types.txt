@@ -1826,6 +1826,13 @@ pan_nationalist_rebels = {
 			factor = 5.0
 			is_capital = yes
 		}
+		modifier = {
+			factor = 0
+			country = { 
+				tag = QNG
+				civilized = no
+			}
+		}
 	}
 	
  	# Province Scope

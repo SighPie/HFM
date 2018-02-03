@@ -16,7 +16,7 @@ country_event = {
 		civilized = no
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		NOT = {
 			has_country_modifier = western_influences

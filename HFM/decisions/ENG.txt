@@ -418,7 +418,7 @@ political_decisions = {
 			1496 = {
 				add_province_modifier = {
 					name = colonial_recruitment
-					duration = 1095
+					duration = 720
 				}
 			}
 			QNG = {

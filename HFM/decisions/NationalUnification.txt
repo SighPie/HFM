@@ -711,6 +711,11 @@ political_decisions = {
 						tag = LIE
 						tag = VLG
 						tag = SIE
+						capital_scope = { continent = africa }
+						capital_scope = { continent = west_africa }
+						capital_scope = { continent = east_africa }
+						capital_scope = { continent = south_west_africa }
+						capital_scope = { continent = asia }
 					}
 					OR = {
 						is_vassal = no
@@ -853,6 +858,11 @@ political_decisions = {
 						tag = VLG
 						tag = LIE
 						tag = SIE
+						capital_scope = { continent = africa }
+						capital_scope = { continent = west_africa }
+						capital_scope = { continent = east_africa }
+						capital_scope = { continent = south_west_africa }
+						capital_scope = { continent = asia }
 					}
 					OR = {
 						is_vassal = no

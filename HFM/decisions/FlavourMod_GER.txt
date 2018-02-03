@@ -1126,7 +1126,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = wilhelmshaven_imperial_shipyard_built
 			treasury = -50000
-			3259 = { naval_base = 6 }
+			3259 = { naval_base = 3 }
 			random_owned = {
 				limit = {
 					province_id = 3259 #Wilhelmshaven
@@ -1208,7 +1208,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = danzig_imperial_shipyard_built
 			treasury = -50000
-			690 = { naval_base = 6 }
+			690 = { naval_base = 3 }
 			random_owned = {
 				limit = {
 					province_id = 690 #Westpreußen
@@ -1470,6 +1470,11 @@ political_decisions = {
 						tag = VLG
 						tag = LIE
 						tag = SIE
+						capital_scope = { continent = africa }
+						capital_scope = { continent = west_africa }
+						capital_scope = { continent = east_africa }
+						capital_scope = { continent = south_west_africa }
+						capital_scope = { continent = asia }
 					}
 					OR = {
 						is_vassal = no

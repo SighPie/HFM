@@ -101,10 +101,16 @@ political_decisions = {
 			prestige = 20
 			random_country = {
 				limit = {
-					OR = {
-						tag = JAP
-						tag = TKG
-					}
+					tag = TKG
+					exists = yes
+				}
+				relation = { who = FRA value = 50 }
+				years_of_research = 0.2
+				military_reform = yes_foreign_training
+			}
+			random_country = {
+				limit = {
+					tag = JAP
 					exists = yes
 				}
 				relation = { who = FRA value = 50 }
@@ -251,6 +257,7 @@ political_decisions = {
 		
 		allow = {
 			war = no
+			NOT = { truce_with = PRU }
 			state_n_government = 1
 		}
 		

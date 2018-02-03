@@ -1355,8 +1355,8 @@ military_reforms = {
 		yes_foreign_training = {
 			#unit stats improve	
 			land_organisation = 0.1
-			technology_cost = 9000
-			civilization_progress_modifier = 0.1
+			technology_cost = 8500
+			civilization_progress_modifier = 0.05
 			research_points_on_conquer = 0.25
 			
 			allow = {
@@ -1398,7 +1398,7 @@ military_reforms = {
 		}
 		yes_foreign_weapons = {
 			land_defense_modifier = 0.1
-			technology_cost = 8000
+			technology_cost = 8500
 			civilization_progress_modifier = 0.05
 
 			on_execute = {
@@ -1430,8 +1430,8 @@ military_reforms = {
 				core_pop_militancy_modifier = -0.005
 		}
 		yes_military_constructions = {
-			technology_cost = 11000
-			civilization_progress_modifier = 0.1
+			technology_cost = 8500
+			civilization_progress_modifier = 0.05
 			allow = {
 				NOT = { has_country_flag = lacking_writing_system }
 				money = 2000 
@@ -1482,8 +1482,8 @@ military_reforms = {
 		}
 		yes_foreign_officers = {
 			leadership_modifier = 0.1
-			technology_cost = 11000
-			civilization_progress_modifier = 0.1
+			technology_cost = 8500
+			civilization_progress_modifier = 0.05
 			research_points_on_conquer = 0.25
 			allow = {
 				OR = {
@@ -1525,8 +1525,8 @@ military_reforms = {
 		}
 		yes_army_schools = {
 			land_unit_start_experience = 10
-			technology_cost = 11000
-			civilization_progress_modifier = 0.1
+			technology_cost = 8500
+			civilization_progress_modifier = 0.05
 			allow = {
 				NOT = { has_country_flag = lacking_writing_system }
 				OR = {
@@ -1570,8 +1570,8 @@ military_reforms = {
 		}
 		yes_foreign_naval_officers = {
 			tariff_efficiency_modifier = 0.2
-			technology_cost = 12000
-			civilization_progress_modifier = 0.1
+			technology_cost = 10000
+			civilization_progress_modifier = 0.05
 			research_points_on_conquer = 0.25
 			
 			allow = {
@@ -1614,8 +1614,8 @@ military_reforms = {
 		}
 		yes_naval_schools = {
 			naval_unit_start_experience = 10
-			technology_cost = 12000
-			civilization_progress_modifier = 0.1
+			technology_cost = 10000
+			civilization_progress_modifier = 0.05
 			research_points_on_conquer = 0.25
 			
 			allow = {
@@ -1660,7 +1660,7 @@ military_reforms = {
 		yes_foreign_navies = {
 			naval_attack_modifier = 0.2
 			naval_defense_modifier = 0.2
-			technology_cost = 16000
+			technology_cost = 12000
 			civilization_progress_modifier = 0.1
 			
 			allow = {
@@ -1746,7 +1746,7 @@ military_reforms = {
 		no_foreign_artillery = {
 		}
 		yes_foreign_artillery = {
-			technology_cost = 8000
+			technology_cost = 8500
 			civilization_progress_modifier = 0.05
 			
 			on_execute = {
