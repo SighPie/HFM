@@ -113,6 +113,7 @@ country_event = {
 				OR = { 
 					tag = RUS
 					tag = USA
+					tag = JAP
 				}
 			}
 			modifier = {
@@ -180,6 +181,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_culture_group = east_asian
+			}
+			modifier = {
+				factor = 0
+				primary_culture = japanese
 			}
 		}
 	}

@@ -149,6 +149,32 @@ promotion_chance = {
 	}
 	
 	modifier = {
+		factor = 10
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
+		state_scope = { is_colonial = yes }
+		country = {
+			colonial_policy = settlement
+			primary_culture = russian
+		}
+		location = {
+			is_colonial = yes 
+			NOT = { is_core = THIS }
+			NOT = { is_core = CRI }
+			total_pops = 25000
+			or = {
+				continent = africa
+				continent = west_africa
+				continent = east_africa
+				continent = south_west_africa
+			}
+			culture = russian
+		}
+	}
+	
+	modifier = {
 		factor = -0.1
 		not = { culture = this }
 	}
@@ -397,6 +423,26 @@ migration_chance = {
 	modifier = {
 		factor = -2.2
 		state_scope = { is_colonial = yes }
+	}
+	
+	modifier = {
+		factor = 100
+		THIS = { is_culture_group = east_slavic }
+		country = {
+			colonial_policy = settlement
+			primary_culture = russian
+		}
+		location = { 
+			culture = russian
+			OR = { 
+				continent = west_africa 
+				continent = east_africa
+				continent = asia
+				continent = africa
+			}
+			total_pops = 75000
+		}
+		year = 1860
 	}
 	
 	modifier = {
@@ -1558,8 +1604,11 @@ conversion_chance = {
 	}
 	
 	modifier = {
-		factor = -0.02
-		country = { civilized = no }
+		factor = -0.1
+		country = { 
+			civilized = no 
+			NOT = { government = theocracy }
+		}
 	}
 	
 	modifier = {

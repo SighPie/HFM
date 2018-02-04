@@ -868,7 +868,10 @@ political_decisions = {
 	create_cambodian_protectorate = {
 		picture = unequal_treaty
 		potential = {
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
 			CAM = {
 				exists = yes
 				neighbour = FRA
@@ -885,11 +888,17 @@ political_decisions = {
 				war = no
 				OR = {
 					part_of_sphere = no
-					in_sphere = FRA
+					OR = { 
+						in_sphere = FRA
+						in_sphere = BOR
+					}
 				}
 				OR = {
 					is_vassal = no
-					vassal_of = FRA
+					OR = {
+						vassal_of = FRA
+						vassal_of = BOR
+					}
 				}
 			}
 		}

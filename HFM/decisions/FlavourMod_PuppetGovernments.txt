@@ -29,6 +29,8 @@ political_decisions = {
 			NOT = { tag = LAN }
 			NOT = { tag = PHL }
 			NOT = { tag = LEG }
+			NOT = { tag = EGY }
+			NOT = { tag = KOR }
 			NOT = { has_country_flag = clean_up_unciv_monarchy }
 			NOT = { has_country_flag = clean_up_colonial_government }
 			NOT = { year = 1920 }
@@ -142,6 +144,18 @@ political_decisions = {
 					tag = SIE
 					is_culture_group = germanic
 					OR = {
+						vassal_of = GER
+						vassal_of = GCF
+						vassal_of = NGF
+						vassal_of = SGF
+					}
+				}
+				AND = {
+					tag = LOM
+					732 = { is_core = LOM }
+					OR = {
+						vassal_of = AUS
+						vassal_of = KUK
 						vassal_of = GER
 						vassal_of = GCF
 						vassal_of = NGF
@@ -313,6 +327,13 @@ political_decisions = {
 			is_vassal = no
 			government = colonial_company
 			NOT = { tag = EIC }
+			OR = {
+				NOT = { tag = EGY }
+				AND = {
+					tag = EGY
+					NOT = { has_global_flag = egypt_submitted_to_ottomans }
+				}
+			}
 		}
 		
 		allow = {

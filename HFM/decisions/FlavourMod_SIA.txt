@@ -48,7 +48,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = enact_rama_iv_reforms
 			prestige = 5
-			plurality = 2
 			economic_reform = yes_education_reform
 			add_country_modifier = {
 				name = rama_v
@@ -100,7 +99,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = magha_puja
-			plurality = 5
+			plurality = 1
 			any_pop = {
 				limit = {
 					OR = { 

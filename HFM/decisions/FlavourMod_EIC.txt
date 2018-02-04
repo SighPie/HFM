@@ -667,4 +667,36 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	end_mughals = {
+		picture = panthay
+		potential = {
+			tag = ENG
+			ai = yes
+			exists = MUG
+			NOT = { exists = EIC }
+			NOT = { has_country_flag = end_mughals }
+		}
+		
+		allow = {
+			war = no
+			MUG = { ai = yes }
+			NOT = { truce_with = MUG }
+		}
+		
+		effect = {
+			diplomatic_influence = {
+				who = MUG
+				value = -400
+			}
+			war = {
+				target = MUG
+				attacker_goal = { casus_belli = conquest_any }
+				defender_goal = { casus_belli = status_quo }
+			}
+			set_country_flag = end_mughals 
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }

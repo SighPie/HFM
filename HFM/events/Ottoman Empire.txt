@@ -1404,6 +1404,10 @@ country_event = {
 				average_militancy = 6
 			}
 		}
+		modifier = {
+			factor = 0.5
+			is_greater_power = yes
+		}
 	}
 	
 	option = {

@@ -6,10 +6,6 @@ political_decisions = {
 			ai = yes
 			OR = {
 				tag = ZUL
-				#tag = DAI
-				#tag = CAM
-				#tag = TUN
-				#tag = MOR
 				tag = MAD
 				tag = CHK
 				tag = LUA
@@ -65,7 +61,7 @@ political_decisions = {
 	viet_remove_sphere = {
 		picture = "reichstag"
 		potential = { 
-			has_global_flag = yes_railroad
+			#has_global_flag = yes_railroad
 			ai = yes
 			OR = {
 				tag = DAI
@@ -73,6 +69,7 @@ political_decisions = {
 				tag = CAM
 				tag = LUA
 				tag = PGG
+				tag = NIA
 			}
 			civilized = no
 		}
@@ -455,7 +452,7 @@ political_decisions = {
 			ai = yes
 			is_greater_power = no
 			is_secondary_power = no
-			year = 1875
+			year = 1880
 			NOT = { has_global_flag = rebel_tech_1850 }
 		}
 		
@@ -565,12 +562,15 @@ political_decisions = {
 					year = 1880
 				}
 				AND = {
-					tag = JAP
-					year = 1880
+					OR = { 
+						tag = JAP
+						tag = TKG
+					}
+					is_greater_power = yes
 				}
 				AND = {
 					tag = ITA
-					year = 1880
+					year = 1870
 				}
 				AND = {
 					tag = USA
@@ -731,6 +731,18 @@ political_decisions = {
 				sub_unit = { type = ironclad value = current }
 				sub_unit = { type = ironclad value = current }
 				owner = { treasury = -25000 }
+			}
+			
+			#Bonus for Japan
+			random_owned = {
+				limit = {
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					owner = { invention = ironclads NOT = { invention = pre_dreadnought } is_culture_group = japanese }
+				}
+				sub_unit = { type = ironclad value = current }
+				owner = { treasury = -15000 }
 			}
 			
 			#Cruisers

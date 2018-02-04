@@ -409,7 +409,7 @@ migration_target =
 	}
 	
 	modifier = {
-		factor = -100.1
+		factor = 0.001
 		OR = { 
 			continent = west_africa 
 			continent = east_africa
@@ -417,6 +417,12 @@ migration_target =
 			continent = africa
 		}
 		country = { primary_culture = russian }
+	}
+	
+	modifier = {
+		factor = 0
+		is_overseas = yes
+		country = { colonial_policy = settlement primary_culture = russian }
 	}
 	
 	modifier = {

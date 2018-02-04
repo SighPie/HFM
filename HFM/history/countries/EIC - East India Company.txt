@@ -45,10 +45,12 @@ foreign_officers = yes_foreign_officers
 foreign_weapons = yes_foreign_weapons
 army_schools = yes_army_schools
 land_reform = yes_land_reform
-education_reform = yes_education_reform
+monetary_reform = yes_monetary_reform
+foreign_naval_officers = yes_foreign_naval_officers
 foreign_navies = yes_foreign_navies
 naval_schools = yes_naval_schools
 admin_reform = yes_admin_reform
+finance_reform = yes_finance_reform
 
 ruling_party = EIC_reactionary
 upper_house = {

@@ -614,14 +614,6 @@ political_decisions = {
 			}
 			2629 = { secede_province = THIS }
 			18 = { secede_province = THIS }
-			
-			any_owned = {
-				limit = {
-					is_core = RPL
-					owner = { primary_culture = british }
-				}
-				secede_province = RPL
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}

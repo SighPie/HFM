@@ -55,6 +55,7 @@ set_country_flag = tozama_daimyo
 
 
 foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
 army_schools = yes_army_schools
 land_reform = yes_land_reform
 education_reform = yes_education_reform

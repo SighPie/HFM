@@ -7,9 +7,11 @@ political_decisions = {
 				civilized = no
 				ai = yes
 			}
+			owns = 1148
 			year = 1837
 			NOT = {
 				owns = 1212
+				truce_with = AFG
 				has_global_flag = herat_expedition
 			}
 		}
@@ -55,6 +57,7 @@ political_decisions = {
 			tag = PER
 			year = 1856
 			is_vassal = no
+			owns = 1148
 			AFG = {
 				civilized = no
 				ai = yes
@@ -62,6 +65,7 @@ political_decisions = {
 			has_global_flag = herat_expedition
 			NOT = { 
 				owns = 1212
+				truce_with = AFG
 				has_global_flag = anglo_persian_war  
 				has_global_flag = second_herat_expedition 
 			}
@@ -111,10 +115,7 @@ political_decisions = {
 				}
 				AND = {
 					truce_with = PER
-					OR = {
-						owns = 1071
-						PER = { has_recently_lost_war = yes }
-					}
+					owns = 1071 #Qeshm
 				}
 			}
 			NOT = { has_country_flag = treaty_of_paris_anglo_persian }
@@ -177,6 +178,7 @@ political_decisions = {
 					ai = yes
 				}
 			}
+			invention = the_dark_continent
 			NOT = { has_global_flag = gwadar_treaty }
 		}
 		
@@ -189,7 +191,40 @@ political_decisions = {
 		effect = {
 			set_global_flag = gwadar_treaty
 			prestige = 5
-			2640 = { secede_province = THIS }
+			2640 = { secede_province = THIS add_core = HND }
+		}
+	}
+	
+	wakhan_treaty = {
+		picture = "wakhan_treaty"
+		potential = {
+			tag = ENG
+			is_greater_power = yes
+			OR = {
+				revolution_n_counterrevolution = 1
+				AFG = {
+					any_core = { 
+						owned_by = RUS
+					}
+				}
+			}
+			NOT = { has_global_flag = wakhan_treaty }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+			NOT = { truce_with = RUS }
+			NOT = { truce_with = AFG }
+		}
+		
+		effect = {
+			set_global_flag = wakhan_treaty
+			RUS = { country_event = 99103 }
+		}
+		
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

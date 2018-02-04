@@ -12,7 +12,7 @@
 - Fixed San Marino petitioning to join Italy
 - 'The Limburg Crisis' - Now checks for NGF's CB on the Netherlands rather than Limburg, should have a 12 month preparation period
 - Qing demanding Macao - Now properly reduces relations rather than increases it
-- Fixed several Italian Decisions being unavailable in 1.27c
+- Fixed Italian Decisions being unavailable in 1.27c
 - Fixed PROV691 Naval Base position
 - Wake Island will no longer be renamed Hamilton
 - Forming Romania now requires both WAL/MDV to not be vassals
@@ -21,6 +21,7 @@
 - Fixed the Zoutpansberg monarchy flag
 - 'Prussian-Italian Alliance' - Fixed the requirements for Italy to get Venice after the Brothers War
 - 'The Rhine Crisis' - can no longer be triggered while in a truce with NGF/PRU/GER
+- Fixed a bug causing a crash for EVT95518
 
 #Changes to Europe
 - 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
@@ -36,8 +37,11 @@
 - Added war name localization for the Krakow Uprising
 - Added war name localization for the Schleswig War
 - Added war name localization for the Roman Revolution
-- Changed Eastern & Western Transylvania to Northern and Southern
+- Changed Eastern & Western Transylvania to Northern and Southern, pre-WW2 borders of Hungary & Romania is now possible
 - 'The Dutch-Prussian Alliance' - Now easier for Prussia to claim Luxembourg from the Dutch
+- EXPERIMENTAL: Changed the way Italy claims/reclaims its cores in Venice, Tirol, Savoie and Aosta
+- Added a new tag 'South Tirol' - In order to prevent Italians from assimilating since the Italian cores will be claimed slightly later than ususal
+- 'The Crimean War' - The Treaty of Paris for Russia no longer gives greater Bulgaria, it'll instead be formed in the Great Eastern Crisis
 
 #Other Changes
 - Delayed Dates where rebels get military techs
@@ -46,7 +50,7 @@
 - Adjusted AI ship spawning levels
 - Reactionary Rebels will no longer turn Theocracies to Absolute Monarchies
 - Added localisation for certain wars
-- Some Military Unciv Reforms will now only give 5% civilization progress
+- Military Unciv Reforms will now only give 5% civilization progress
 
 # Migration Changes
 - Lowered base migration chance, but increased pre-Great War era migration to have a steady amount of migration in the early game, but not a overly large amount in the late-game
@@ -72,6 +76,7 @@
 - Added a Ottoman flag for Hedjaz
 - Changed the way the Suez is built, once completed, the Suez province will be returned to Egypt, it can be seized again later.
 - The Crimean War can now occur if Egypt won the Oriental Crisis
+- Modified the AI decision to conquer Egypt, it no longer auto-annexes Egypt, but rather the great power must conquer it.
 
 #Changes to Central Asia/India
 - Removed the Annex Rajputana Decision as the substate CB now serves the same purpose and works.
@@ -87,6 +92,7 @@
 - Changed Persia Semi/Constitutional Monarchy Flag & Name
 - Removed Sikh core in Chitral, can be added via decision
 - 2nd Burma War - Sets the specific wargoal to be Pegu
+- Added an event chain for the British to demand a Russian withdrawal from Afghanistan if Russia owns any Afghan cores
 
 #Changes to Asia
 - 'The Ever Victorious Army' - Some of the more extreme bonuses are now given to the AI only, most of the modifier effects have been changed to a more reasonable amount
@@ -104,6 +110,8 @@
 - Changed the Guominjun's flag
 - Changed the flag of Manchuria - Now uses the Imperial banner of the Qing Emperor
 - Added several historical decisions for Siam to reform and westernizes
+- Added events for the Black Flag Army, and the Sino-French War
+- Added decision 'Kaiping Tramway & Chinese Railway Administration'
 
 #Changes to Oceania
 - Slightly decreased the pop growth effects of the Australia migration modifiers
@@ -111,7 +119,7 @@
 #Changes to Africa
 - Made the Kassa Hailu event occur faster and more consistently
 - Renamed Ethiopia to Abyssinia
-- Added events for the British Expedition to Abyssinia, and the death of Tewodros II
+- Added events for the British Expedition to Abyssinia, and the death of Tewodros II, Yohannes IV
 
 ###1.27C###
 #Changes from 1.27c Beta
@@ -139,7 +147,7 @@
 - Doubled the time taken for nationalist rebels to enforce their demands
 - Autonomous Dependencies (Colonial Governments) now appear more often, certain colonies will be turned into colonial governments with special flags if released by the right country (This list doesn't include colonial countries like New Zealand, Mittelafrika etc.)
 - Reduced the Tax-Penalty from Non-Core Provinces back to a reasonable level
-## List of Autonomous Dependencies added in 1.28
+## Experimental: List of Autonomous Dependencies added in 1.28
 -- Russia: Alyaska (LSK)
 -- Russia: The Baltic Governorates (UBD)
 -- Russia: The Caucasus Viceroyalty (TCA)

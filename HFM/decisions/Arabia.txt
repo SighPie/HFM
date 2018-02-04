@@ -841,7 +841,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_NI_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -856,7 +856,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_BC_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -871,7 +871,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_NI_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -886,7 +886,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_BC_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -901,7 +901,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_NI_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -916,7 +916,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_BC_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -931,7 +931,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_NI_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -946,7 +946,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_BC_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -961,7 +961,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_NI_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 			
@@ -976,7 +976,7 @@ political_decisions = {
 			add_casus_belli = {
 				target = THIS
 				type = establish_protectorate_BC_casus_belli
-				months = 100
+				months = 120
 				}
 			}
 		}

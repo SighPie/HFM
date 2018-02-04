@@ -739,6 +739,14 @@ political_decisions = {
 					remove_core = ENG
 				}
 			}
+			RPL = {
+				any_owned = {
+					limit = {
+						is_core = COL
+					}
+					secede_province = ENG
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

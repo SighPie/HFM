@@ -159,7 +159,7 @@ country_event = {
 			}
 			secede_province = EGY
 			remove_core = THIS
-			owner = {
+			THIS = {
 				diplomatic_influence = {
 					who = EGY
 					value = 400
@@ -643,6 +643,17 @@ country_event = {
 			limit = { tag = FROM NOT = { is_sphere_leader_of = THIS } }
 			money = -200000
 			THIS = { money = 200000 }
+		}
+		random_owned = {
+			limit = {
+				owner = { tag = EGY }
+			}
+			FROM = {
+				diplomatic_influence = {
+					who = THIS
+					value = 400
+				}
+			}
 		}
 	}
 }

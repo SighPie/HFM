@@ -4,15 +4,16 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			exists = PGG
-			NOT = { exists = TPG }
+			has_global_flag = taiping_has_been_defeated
 			NOT = { war_with = PGG }
 			has_global_flag = taiping_has_happened
 			NOT = { has_country_flag = end_panthay_rebellion }
+			NOT = { truce_with = ENG }
 		}
 		
 		allow = {
 			war = no
-			NOT = { war_exhaustion = 20 }
+			NOT = { war_exhaustion = 5 }
 		}
 		
 		effect = {
@@ -22,6 +23,16 @@ political_decisions = {
 				defender_goal = { casus_belli = status_quo }
 				call_ally = no
 			}
+			random_owned = {
+				limit = {
+					owner = { ai = yes }
+				}
+				owner = {
+					grain = 250
+					war_exhaustion = -5
+				}
+			}
+			war_exhaustion = -5
 			set_country_flag = end_panthay_rebellion 
 
 		}
@@ -34,7 +45,7 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			exists = GUI
-			NOT = { exists = TPG }
+			has_global_flag = taiping_has_been_defeated
 			NOT = { war_with = GUI }
 			has_global_flag = miao_rebellion
 			has_global_flag = taiping_has_happened
@@ -42,11 +53,12 @@ political_decisions = {
 				NOT = { has_country_flag = end_miao_rebellion }
 				NOT = { truce_with = GUI }
 			}
+			NOT = { truce_with = ENG }
 		}
 		
 		allow = {
 			war = no
-			NOT = { war_exhaustion = 20 }
+			NOT = { war_exhaustion = 5 }
 		}
 		
 		effect = {
@@ -56,6 +68,16 @@ political_decisions = {
 				defender_goal = { casus_belli = status_quo }
 				call_ally = no
 			}
+			random_owned = {
+				limit = {
+					owner = { ai = yes }
+				}
+				owner = {
+					grain = 250
+					war_exhaustion = -5
+				}
+			}
+			war_exhaustion = -5
 			set_country_flag = end_miao_rebellion 
 		}
 		
@@ -67,25 +89,36 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			exists = NIA
-			NOT = { exists = TPG }
+			has_global_flag = taiping_has_been_defeated
 			NOT = { war_with = NIA }
 			has_global_flag = nien_rebellion
 			has_global_flag = taiping_has_happened
 			NOT = { has_country_flag = end_nien_rebellion }
+			NOT = { truce_with = ENG }
 		}
 		
 		allow = {
 			war = no
-			NOT = { war_exhaustion = 20 }
+			NOT = { war_exhaustion = 5 }
 		}
 		
 		effect = {
+			random_owned = {
+				limit = {
+					owner = { ai = yes }
+				}
+				owner = {
+					grain = 250
+					war_exhaustion = -5
+				}
+			}
 			war = {
 				target = NIA
 				attacker_goal = { casus_belli = conquest_any }
 				defender_goal = { casus_belli = status_quo }
 				call_ally = no
 			}
+			war_exhaustion = -5
 			set_country_flag = end_nien_rebellion 
 		}
 		
@@ -97,7 +130,7 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			exists = XBI
-			NOT = { exists = TPG }
+			has_global_flag = taiping_has_been_defeated
 			NOT = { war_with = XBI }
 			has_country_flag = qinghai_revolt_dungan
 			has_global_flag = taiping_has_happened
@@ -106,7 +139,7 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			NOT = { war_exhaustion = 20 }
+			NOT = { war_exhaustion = 5 }
 		}
 		
 		effect = {
@@ -116,6 +149,7 @@ political_decisions = {
 				defender_goal = { casus_belli = status_quo }
 				call_ally = no
 			}
+			war_exhaustion = -5
 			set_country_flag = end_dungan_qinghai_rebellion 
 		}
 		
@@ -129,6 +163,7 @@ political_decisions = {
 			tag = TIB
 			civilized = no
 			government = absolute_monarchy
+			NOT = { year = 1900 }
 			#NOT = { has_country_flag = cleanup_tibet }
 		}
 		

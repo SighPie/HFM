@@ -418,7 +418,7 @@ political_decisions = {
 			1496 = {
 				add_province_modifier = {
 					name = colonial_recruitment
-					duration = 720
+					duration = 365
 				}
 			}
 			QNG = {
@@ -1535,7 +1535,7 @@ political_decisions = {
 	
 	
 	the_foster_act = {
-		picture = mortimer_durand
+		picture = william_foster
 		
 		potential = {
 			tag = ENG

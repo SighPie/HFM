@@ -34,7 +34,7 @@ penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
-centralization = unitary
+centralization = regionalism
 colonial_policy = no_colonies 
 
 set_country_flag = mahayana_country
@@ -53,6 +53,7 @@ upper_house = {
 
 foreign_weapons = yes_foreign_weapons
 army_schools = yes_army_schools
+foreign_artillery = yes_foreign_artillery
 land_reform = yes_land_reform
 education_reform = yes_education_reform
 finance_reform = yes_finance_reform

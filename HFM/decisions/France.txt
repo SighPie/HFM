@@ -99,24 +99,21 @@ political_decisions = {
 		
 		effect = {
 			prestige = 20
-			random_country = {
+			any_country = {
 				limit = {
-					tag = TKG
+					OR = { 
+						tag = TKG
+						tag = CHO
+						tag = JAP
+						tag = SAT
+					}
 					exists = yes
 				}
 				relation = { who = FRA value = 50 }
 				years_of_research = 0.2
 				military_reform = yes_foreign_training
 			}
-			random_country = {
-				limit = {
-					tag = JAP
-					exists = yes
-				}
-				relation = { who = FRA value = 50 }
-				years_of_research = 0.2
-				military_reform = yes_foreign_training
-			}
+
 			set_country_flag = military_mission_in_japan
 		}
 	}

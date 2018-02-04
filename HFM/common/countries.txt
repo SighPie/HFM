@@ -46,6 +46,8 @@ SMR		= "countries/San Marino.txt"
 SAA 	= "countries/Saar.txt"
 LAU 	= "countries/Lauenburg.txt"
 MML 	= "countries/Memelland.txt"
+HQJ		= "countries/Black Flag.txt"
+TST		= "countries/South Tirol.txt"
 
 
 ###Colonial Spain Countries

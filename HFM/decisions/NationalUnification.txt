@@ -336,6 +336,8 @@ political_decisions = {
 				}
 				country_event = 11106
 			}
+			370 = { add_core = GER }
+			371 = { add_core = GER }
 		}
 		ai_will_do = {
 			factor = 1

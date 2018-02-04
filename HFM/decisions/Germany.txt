@@ -520,7 +520,7 @@ political_decisions = {
 				}
 				AND = {
 					ai = yes
-					year = 1855
+					year = 1860
 				}
 			}
 		}

@@ -432,7 +432,10 @@ country_event = {
 				NOT = { exists = QNG }
 			}
 		}
-		civilized = yes
+		OR = { 
+			civilized = yes
+			year = 1905
+		}
 		OR = {
 			government = absolute_monarchy
 			government = prussian_constitutionalism
@@ -492,25 +495,21 @@ country_event = {
 			NOT = { liberal = 10 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			year = 1900
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.1
 			year = 1905
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.01
 			year = 1910
-		}
-		modifier = {
-			factor = 0.8
-			year = 1915
 		}
 	}
 	
 	immediate = {
-		set_country_flag = tongmenghui
+		set_country_flag = tongmenghui 
 	}
 	
 	option = {
@@ -1321,7 +1320,7 @@ country_event = {
 		name = "EVT1316081OPTA"
 		ENG = { country_event = 131709 }
 		any_owned = { remove_province_modifier = foreign_smugglers }
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 95 }
 	}
 	option = {
 		name = "EVT1316081OPTB"
@@ -1333,7 +1332,7 @@ country_event = {
 			limit = { is_primary_culture = no }
 			militancy = 3
 		}
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 5 }
 	}
 }
 country_event = {
@@ -1362,6 +1361,13 @@ country_event = {
 				casus_belli = status_quo
 			}
 			call_ally = no
+		}
+		any_country = {
+			limit = {
+				alliance_with = QNG
+				NOT = { vassal_of = QNG }
+			}
+			leave_alliance = QNG
 		}
 		ai_chance = { factor = 99 }
 	}
@@ -1493,6 +1499,12 @@ country_event = {
 				any_pop = { militancy = 6 }
 				secede_province = THIS
 			}
+		}
+		any_owned = {
+			limit = {
+				region = CHI_1485
+			}
+			any_pop = { militancy = 6 }
 		}
 		any_country = {
 			limit = {
@@ -1906,6 +1918,10 @@ country_event = {
 			war = yes
 		}
 		modifier = {
+			factor = 0.5
+			has_country_flag = the_xiang_army
+		}
+		modifier = {
 			factor = 0.3
 			1082 = { owned_by = RUS }
 		}
@@ -1982,6 +1998,7 @@ country_event = {
 	
 	option = {
 		name = "EVT131709OPTA"
+		badboy = 2
 		war = {
 			target = FROM
 			attacker_goal = { casus_belli = treaty_port_casus_belli }
@@ -2502,6 +2519,7 @@ province_event = {
 				tag = KMT
 				tag = TPG
 				tag = QNG
+				tag = HQJ
 			}
 		}
 		NOT = {
@@ -2517,6 +2535,7 @@ province_event = {
 			is_core = XBI
 			is_core = XIN
 			is_core = YNN
+			is_core = HQJ
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465

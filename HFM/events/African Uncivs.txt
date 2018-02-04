@@ -60,20 +60,20 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
 		MAT = {
 			capital = 2071
 			add_country_modifier = { name = assegai duration = -1 }
-		any_owned = {
-			limit = {
-			OR = {
-				province_id = 2105
-				province_id = 2106
-				province_id = 2107
-				province_id = 2108
-				province_id = 2109
+			any_owned = {
+				limit = {
+				OR = {
+					province_id = 2105
+					province_id = 2106
+					province_id = 2107
+					province_id = 2108
+					province_id = 2109
+					}
 				}
-			}
-			secede_province = FROM 
+				secede_province = TRN 
 			}
 		}
-		2071 = { state_scope = { change_region_name = "Matabeleland" } }
+		random_owned = { limit = { province_id = 2071 } state_scope = { change_region_name = "Matabeleland" } }
 	}
 }
 	

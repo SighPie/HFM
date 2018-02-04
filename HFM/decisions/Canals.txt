@@ -53,11 +53,18 @@ political_decisions = {
 				1755 = { owner = { in_sphere = THIS } }
 				owns = 1755
 			}
-			invention = machine_tools
-			invention = nitroglycerin		
-			iron_steamers = 1
+			OR = {
+				AND = {
+					invention = machine_tools
+					invention = nitroglycerin		
+					iron_steamers = 1
+				}
+				AND = {
+					year = 1859
+					ai = yes
+				}
+			}
 			money = 250000
-
 		}
 		
 		effect = {
@@ -95,6 +102,10 @@ political_decisions = {
 					OR = {
 						part_of_sphere = no 
 						in_sphere = THIS
+						AND = {
+							in_sphere = TUR
+							TUR = { ai = yes }
+						}
 					}
 				}
 			}
@@ -108,7 +119,7 @@ political_decisions = {
 				}
 				AND = {
 					tag = ENG
-					year = 1865
+					year = 1861
 				}
 				AND = {
 					is_greater_power = yes
@@ -118,9 +129,17 @@ political_decisions = {
 		}
 		
 		allow = {
-			invention = machine_tools
-			invention = nitroglycerin		
-			iron_steamers = 1
+			OR = {
+				AND = {
+					invention = machine_tools
+					invention = nitroglycerin		
+					iron_steamers = 1
+				}
+				AND = {
+					year = 1859
+					ai = yes
+				}
+			}
 			OR = { 
 				business_banks = 1
 				money = 150000
@@ -170,22 +189,21 @@ political_decisions = {
 					1755 = { owner = { NOT = { part_of_sphere = yes } } }
 				}
 				1755 = { owner = { in_sphere = THIS } }
+				AND = {
+					tag = ENG
+					EGY = { sphere_owner = { ai = yes } }
+				}
 			}
 		}
+		
 		effect = {
 			random_country = { limit = { owns = 1755 NOT = { in_sphere = THIS } } THIS = { treasury = -200000 } }
 			1755 = { owner = { country_event = 36980 } }
-			1755 = { secede_province = THIS }
+			1755 = { secede_province = THIS add_core = THIS }
 		}
 		
 		ai_will_do = {
 			factor = 1
-			modifier = { factor = 0 month = 1 NOT = { month = 2 } }
-			modifier = { factor = 0 month = 3 NOT = { month = 4 } }
-			modifier = { factor = 0 month = 5 NOT = { month = 6 } }
-			modifier = { factor = 0 month = 7 NOT = { month = 8 } }
-			modifier = { factor = 0 month = 9 NOT = { month = 10 } }
-			modifier = { factor = 0 month = 11 NOT = { month = 12 } }
 		}
 	}
 

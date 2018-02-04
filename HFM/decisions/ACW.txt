@@ -90,6 +90,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 # USA	
@@ -227,6 +229,8 @@ political_decisions = {
 			prestige = 1
 			set_country_flag = custers_expedition_sent
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	enact_the_homestead_act = {
@@ -251,6 +255,8 @@ political_decisions = {
 				duration = -1
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 			
 	bixby_letter = {
@@ -271,6 +277,8 @@ political_decisions = {
 			set_country_flag = bixby_letter_sent
 			war_exhaustion = -2
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	enact_anaconda_plan = {
@@ -297,6 +305,8 @@ political_decisions = {
 			}
 			set_global_flag = anaconda_plan_active
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	shermans_march_to_the_sea = {
@@ -339,6 +349,8 @@ political_decisions = {
 				war_exhaustion = 4
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	emancipation_proclamation = {
@@ -380,6 +392,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}		
 	manifest_destiny = {
 		potential = {
@@ -523,7 +537,10 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
+	
 	gag_rule = {
 		picture = gag_rule
 		potential = {
@@ -549,6 +566,8 @@ political_decisions = {
 			}
 			set_country_flag = house_gag_rule_enacted
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	corwin_amendment = {
@@ -576,6 +595,8 @@ political_decisions = {
 			}
 			set_country_flag = corwin_amendment_enacted
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	fugitive_slave_act = {
@@ -604,6 +625,8 @@ political_decisions = {
 			}
 			set_country_flag = fugitive_slave_act_enacted
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	nashville_convention = {
@@ -635,6 +658,8 @@ political_decisions = {
 			}
 			set_country_flag = nashville_convention_held
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	ostend_manifesto = {
@@ -774,6 +799,8 @@ political_decisions = {
 			}
 			set_country_flag = kansas_nebraska_act_acting
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	wilmot_proviso = {
@@ -826,9 +853,11 @@ political_decisions = {
 			USA_121 = { is_slave = no remove_core = CSA }
 			USA_116 = { is_slave = no remove_core = CSA }
 			USA_91 = { is_slave = no remove_core = CSA }
-
+			USA_144 = { is_slave = yes add_core = CSA }
 			set_country_flag = wilmot_proviso_providing
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	form_kellys_irish_brigade = {
@@ -860,6 +889,8 @@ political_decisions = {
 			war_exhaustion = -1
 			set_country_flag = kellys_irish_brigade
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	raise_the_bonnie_blue_flag = {
@@ -927,6 +958,8 @@ political_decisions = {
 			
 			set_country_flag = bonnie_blue_flag
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	enact_radical_reconstruction = {
@@ -998,6 +1031,8 @@ political_decisions = {
 			}
 			set_country_flag = has_used_radical_reconstruction
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	annex_hawaii = {
@@ -1096,6 +1131,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = USA ai = yes } } 658 = { naval_base = 1 } }
 			HAW = { civilized = yes }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	sell_alaska = {
@@ -1498,6 +1535,8 @@ political_decisions = {
 			USA_91 = { is_slave = no remove_core = CSA }
 			set_country_flag = clay_and_douglas_draft_enacted
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	offer_to_buy_cuba = {
@@ -1537,6 +1576,8 @@ political_decisions = {
 			set_country_flag = trying_to_buy_cuba
 			2209 = { owner = { country_event = 90131 } }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	annexation_santo_domingo = {

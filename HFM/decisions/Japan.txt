@@ -918,6 +918,7 @@ political_decisions = {
 			prestige = 10
 			remove_country_modifier = ansei_purge
 			remove_country_modifier = kobu_gattai
+			political_reform = unitary
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				ideology = {
@@ -1434,37 +1435,44 @@ political_decisions = {
 			has_country_modifier = fukoku_kyohei
 			civilized = yes
 			NOT = { has_country_flag = negotiate_treaty_shimonoseki }
-			1485 = {
-				owner = {
-					is_culture_group = east_asian
-					war_with = THIS
-					NOT = {
-						capital = 1485
-						has_country_flag = negotiate_unequal_treaty
+			OR = {
+				1485 = {
+					owner = {
+						is_culture_group = east_asian
+						war_with = THIS
+						NOT = {
+							capital = 1485
+							has_country_flag = negotiate_unequal_treaty
+						}
 					}
 				}
+				truce_with = QNG
+				truce_with = TPG
 			}
 		}
 		
 		allow = {
-			1485 = {
-				owner = {
-					OR = {
-						war_exhaustion = 50
-						any_owned_province = { controlled_by = THIS }
+			OR = { 
+				1485 = {
+					owner = {
+						OR = {
+							war_exhaustion = 50
+							any_owned_province = { controlled_by = THIS }
+						}
+						OR = {
+							national_provinces_occupied = 0.10
+							blockade = 0.50
+						}
+						war_exhaustion = 10
 					}
-					OR = {
-						national_provinces_occupied = 0.10
-						blockade = 0.50
-					}
-					war_exhaustion = 10
 				}
+				owns = 1485
 			}
 		}
 		
 		effect = {
 			set_country_flag = negotiate_treaty_shimonoseki
-			1485 = {
+			1616 = {
 				owner = {
 					set_country_flag = negotiate_unequal_treaty
 					country_event = 1316085

@@ -451,7 +451,7 @@ country_event = {
 		}
 		any_owned = {
 			limit = { region = TUR_885 }
-			secede_province = RUS
+			secede_province = TCA
 		}
 		
 		# Any Montenegran lands given to Montenegro, it is freed if vassaled
@@ -474,28 +474,6 @@ country_event = {
 				vassal_of = TUR
 			}
 			TUR = { release_vassal = BUL }
-		}
-		random_owned = {
-			limit = {
-				province_id = 806 #Kavala
-				owned_by = TUR
-			}
-			state_scope = {
-				any_owned = {
-					secede_province = BUL
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				province_id = 823 #Kavala
-				owned_by = TUR
-			}
-			state_scope = {
-				any_owned = {
-					secede_province = BUL
-				}
-			}
 		}
 		random_owned = {
 			limit = {

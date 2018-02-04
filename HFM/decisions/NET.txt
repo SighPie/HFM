@@ -324,7 +324,7 @@ political_decisions = {
 					province_id = 381
 					owner = { owns = 387 }
 				}
-				398 = { 
+				381 = { 
 					change_province_name = "Maastricht"
 				}
 				owner = { 

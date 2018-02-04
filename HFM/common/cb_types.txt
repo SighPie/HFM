@@ -1300,6 +1300,21 @@ unification_humiliate_cb = {
 			war_with = THIS
 			THIS = { NOT = { has_country_modifier = no_more_war } }
 		}
+		OR = {
+			THIS = { NOT = { tag = PRU } }
+			THIS = { ai = no }
+			THIS = {
+				tag = PRU
+				ai = yes
+				OR = { 
+					AND = { 
+						has_country_modifier = prussian_general_staff
+						NOT = { war_exhaustion = 1 }
+					}
+					year = 1860
+				}
+			}
+		}
 	}
 	po_clear_union_sphere = yes
 	
@@ -2024,14 +2039,18 @@ liberate_country = {
 			NOT = { relation = { who = THIS value = 0 } }
 			FROM = { involved_in_crisis = yes }
 			THIS = { ai = no }
+			has_global_flag = intervention_in_vietnam
 			has_global_flag = italy_fights_turk
+			has_global_flag = wakhan_treaty
 		}
 		OR = {
 			NOT = { has_country_flag = dismantle_declared }
 			THIS = { NOT = { has_country_flag = in_great_war } }
 			FROM = { involved_in_crisis = yes }
 			THIS = { ai = no }
+			has_global_flag = intervention_in_vietnam
 			has_global_flag = italy_fights_turk
+			has_global_flag = wakhan_treaty
 		}
 	}
 
@@ -2045,6 +2064,8 @@ liberate_country = {
 			FROM = { involved_in_crisis = yes }
 		}
 		OR = {
+			THIS = { has_global_flag = intervention_in_vietnam }
+			THIS = { has_global_flag = wakhan_treaty }
 			THIS = { ai = no }
 			FROM = { NOT = { any_core = { is_core = THIS } } }
 			FROM = { involved_in_crisis = yes }
@@ -2065,7 +2086,13 @@ liberate_country = {
 		}
 		OR = {
 			AND = {
-				THIS = { ai = no }
+				OR = {
+					THIS = { ai = no }
+					THIS = { has_global_flag = wakhan_treaty }
+					has_global_flag = wakhan_treaty
+					THIS = { has_global_flag = intervention_in_vietnam }
+					has_global_flag = intervention_in_vietnam
+				}
 				any_owned_province = { is_core = FROM }
 			}
 			AND = {
@@ -2159,6 +2186,15 @@ liberate_country = {
 			AND = {
 				FROM = { exists = no }
 				THIS = { civilized = yes }
+				THIS = { capital_scope = { continent = indochina } }
+				any_owned_province = {
+					continent = indochina
+					is_core = FROM
+				}
+			}
+			AND = {
+				FROM = { exists = no }
+				THIS = { civilized = yes }
 				THIS = { capital_scope = { continent = africa } }
 				any_owned_province = {
 					continent = africa
@@ -2211,6 +2247,10 @@ liberate_country = {
 			FROM = { civilized = yes }
 			THIS = { civilized = no }
 			THIS = { ai = no }
+			THIS = { has_global_flag = wakhan_treaty }
+			has_global_flag = wakhan_treaty
+			THIS = { has_global_flag = intervention_in_vietnam }
+			has_global_flag = intervention_in_vietnam
 		}
 		OR = {
 			FROM = { exists = no }
@@ -2223,7 +2263,12 @@ liberate_country = {
 				THIS = { has_country_flag = oriental_crisis_support_OE }
 				FROM = { tag = TUR }
 			}
+			tag = AFG
 			THIS = { ai = no }
+			THIS = { has_global_flag = wakhan_treaty }
+			has_global_flag = wakhan_treaty
+			THIS = { has_global_flag = intervention_in_vietnam }
+			has_global_flag = intervention_in_vietnam
 		}
 	}
 
@@ -3946,6 +3991,7 @@ demand_concession_casus_belli = {
 			THIS = { NOT = { nationalism_n_imperialism = 1 } }
 			NOT = { has_global_flag = berlin_conference }
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7
@@ -3953,6 +3999,7 @@ demand_concession_casus_belli = {
 		}
 		OR = {
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7
@@ -4119,6 +4166,7 @@ demand_concession_NI_casus_belli = {
 			civilization_progress = 0.7
 			has_country_flag = post_colonial_country
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			has_country_modifier = neutrality
@@ -4269,8 +4317,10 @@ demand_concession_BC_casus_belli = {
 		NOT = {
 			has_country_modifier = neutrality
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
+			primary_culture = manchu
 			civilization_progress = 0.7
 			has_country_flag = post_colonial_country
 		}
@@ -4932,6 +4982,7 @@ establish_protectorate_casus_belli = {
 			THIS = { NOT = { nationalism_n_imperialism = 1 } }
 			NOT = { has_global_flag = berlin_conference }
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7
@@ -4940,6 +4991,7 @@ establish_protectorate_casus_belli = {
 		OR = {
 			THIS = { NOT = { nationalism_n_imperialism = 1 } }
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7
@@ -5013,6 +5065,7 @@ establish_protectorate_NI_casus_belli = {
 		}
 		NOT = {
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7
@@ -5134,6 +5187,7 @@ establish_protectorate_BC_casus_belli = {
 		}
 		NOT = {
 			primary_culture = japanese
+			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
 			civilization_progress = 0.7

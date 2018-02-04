@@ -94,14 +94,63 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	treaty_of_tientsin = {
+		picture = treaty_of_nanking
+		potential = {
+			tag = ENG
+			has_global_flag = second_opium_war
+			has_country_modifier = negotiating_treaty	
+			NOT = { owns = 1538 }
+			1538 = { owner = { civilized = no } }
+			QNG = { exists = yes truce_with = THIS }
+			NOT = { has_country_modifier = chinese_treaty_port }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			prestige = 10
+			badboy = -2
+			remove_country_modifier = negotiating_treaty
+			1538 = {
+				secede_province = THIS
+				secede_province = QNG
+				remove_core = TPG
+				trade_goods = precious_goods 
+				add_province_modifier = {
+					name = western_presence
+					duration = -1
+				}
+				add_province_modifier = {
+					name = foreign_trading_post
+					duration = -1
+				}
+				add_province_modifier = {
+					name = missionary_activity
+					duration = -1
+				}
+			}
+			add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+				modifier = {
+					factor = 0
+					tag = ENG
+					NOT = { owns = 1496 }
+					1496 = { owner = { civilized = no truce_with = THIS } }
+				}
+		}
+	}
 
 	the_ever_victorious_army = {
 		picture = ever_victorious
 		potential = {
 			tag = QNG
-			TPG = {
-				exists = yes
-			}
+			TPG = { exists = yes }
 			has_country_flag = the_xiang_army
 			has_country_flag = arrow_incident
 			NOT = { has_global_flag = ever_victorious_army }
@@ -109,14 +158,17 @@ political_decisions = {
 		
 		allow = {
 			TPG = {
-			   ai = yes
 			   exists = yes
 			   OR = {
 					military_score = 80
 					brigades_compare = 1
 			   }
 			}
-			truce_with = ENG
+			OR = { 
+				truce_with = ENG
+				national_provinces_occupied = 0.5
+				has_country_flag = gave_up_2nd_opium
+			}
 		}
 		
 		effect = {
@@ -127,6 +179,16 @@ political_decisions = {
 			}
 			activate_technology = military_staff_system
 			set_global_flag = ever_victorious_army 		
+			define_general = {
+				name = "Frederick Townsend Ward"
+				personality = sharp
+				background = adventurer
+			}
+			define_general = {
+				name = "Charles George Gordon"
+				personality = intelligent
+				background = gifted_administrator
+			}
 			random_owned = {
 				limit = {
 					province_id = 1616
@@ -137,7 +199,7 @@ political_decisions = {
 						militancy = -2
 						consciousness = -2
 					}	
-					grain = 500
+					grain = 250
 					war_exhaustion = -5
 				}
 			}
@@ -182,6 +244,11 @@ political_decisions = {
 			add_country_modifier = {
 				name = the_xiang_army 
 				duration = 3650
+			}
+			define_general = {
+				name = "Zeng Guofan"
+				personality = implacable
+				background = gifted_administrator
 			}
 			set_country_flag = the_xiang_army 	
 			random_owned = {
@@ -343,7 +410,6 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			has_country_flag = self_strengthening_movement
-			year = 1870
 			NOT = { has_country_flag = beiyang_fleet_established }
 		}
 		
@@ -430,15 +496,22 @@ political_decisions = {
 		picture = the_new_army
 		potential = {
 			tag = QNG
-			year = 1880
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = the_new_army_established }
 		}
 		
 		allow = {
 			OR = {
-				civilization_progress = 0.40
+				year = 1890
+				civilization_progress = 0.50
 				civilized = yes
+				AND = {
+					foreign_weapons = yes_foreign_weapons
+					foreign_training = yes_foreign_training
+					foreign_officers = yes_foreign_officers
+					army_schools = yes_army_schools
+					foreign_navies = yes_foreign_navies
+				}
 			}
 			war = no
 			OR = { 
@@ -499,7 +572,6 @@ political_decisions = {
 		picture = yuan_shikai
 		potential = {
 			tag = QNG
-			year = 1870
 			has_country_flag = the_new_army_established
 			NOT = { has_country_flag = appoint_yuan_shikai }
 		}
@@ -525,7 +597,6 @@ political_decisions = {
 		picture = fuzhou_aresenal
 		potential = {
 			tag = QNG
-			year = 1860
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = fuzhou_aresenal_established }
 		}
@@ -534,6 +605,20 @@ political_decisions = {
 			owns = 1482
 			war = no
 			money = 75001
+			OR = {
+				ENG = {
+					raider_group_doctrine = 1
+					NOT = { war_with = THIS }
+				}
+				GER = {
+					raider_group_doctrine = 1
+					NOT = { war_with = THIS }
+				}
+				FRA = {
+					raider_group_doctrine = 1
+					NOT = { war_with = THIS }
+				}
+			}
 		}
 		
 		effect = {
@@ -631,7 +716,6 @@ political_decisions = {
 		picture = peking_field_force
 		potential = {
 			tag = QNG
-			year = 1862
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = establish_the_peking_field_force }
 		}
@@ -696,6 +780,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			remove_country_modifier = uncivilized_isolationism
 			set_country_flag = new_policies 
 			add_country_modifier = {
 				name = the_new_policies
@@ -787,9 +872,12 @@ political_decisions = {
 	hanyang_arsenal = {
 		picture = hanyang_arsenal
 		potential = {
-			tag = QNG
+			OR = { 
+				tag = QNG
+				tag = KMT
+				tag = CHI
+			}
 			has_country_flag = self_strengthening_movement
-			year = 1885
 			capital = 1616
 			owns = 1516
 			NOT = { has_global_flag = hanyang_arsenal }
@@ -798,6 +886,11 @@ political_decisions = {
 		allow = {
 			war = no
 			money = 75001
+			OR = {
+				year = 1885
+				civilized = yes
+				firearms_production = yes_firearms_production
+			}
 		}
 		
 		effect = {
@@ -840,7 +933,6 @@ political_decisions = {
 		picture = china_merchants_group
 		potential = {
 			tag = QNG
-			year = 1870
 			OR = { 
 				AND = { 
 					civilized = no
@@ -854,6 +946,11 @@ political_decisions = {
 		allow = {
 			war = no
 			money = 50001
+			OR = {
+				year = 1870
+				civilized = yes
+				finance_reform = yes_finance_reform
+			}
 		}
 		
 		effect = {
@@ -999,8 +1096,8 @@ political_decisions = {
 			}
 			civilized = yes
 			NOT = {	
-				#government = absolute_monarchy
-				#government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = prussian_constitutionalism
 				tech_school = chinese_tech_school
 			}
 		}
@@ -1023,4 +1120,246 @@ political_decisions = {
 			}
 		}
 	}	
+	
+	kansu_braves = {
+		picture = kansu_braves
+		potential = {
+			tag = QNG
+			OR = {
+				has_country_flag = qinghai_revolt_dungan
+				year = 1895
+			}
+			owns = 1557
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = kansu_braves }
+		}
+		
+		allow = {
+			money = 25001
+			OR = { 
+				AND = {
+					foreign_weapons = yes_foreign_weapons
+					civilization_progress = 0.5
+				}
+				civilized = yes
+			}
+		}
+		
+		effect = {
+			set_country_flag = kansu_braves 
+			treasury = -25000
+			define_general = {
+				name = "Dong Fuxiang"
+				personality = brilliant
+				background = natural_born_leader
+			}
+			any_pop = {
+				limit = {
+					type = soldiers
+					location = { region = CHI_1490 }
+				}
+				reduce_pop = 1.2
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	intervention_in_vietnam = {
+		picture = black_flag
+		potential = {
+			tag = QNG
+			1369 = {
+				owner = {
+					NOT = { 
+						tag = DAI 
+						truce_with = THIS
+					}
+				}
+			}
+			NOT = { exists = DAI }
+			HQJ = {
+				exists = yes
+				vassal_of = THIS
+				neighbour = THIS
+				total_amount_of_divisions = 1
+			}
+			has_global_flag = black_flag_army
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = intervention_in_vietnam }
+		}
+		
+		allow = {
+			war = no
+			NOT = { war_exhaustion = 5 }
+		}
+		
+		effect = {
+			set_country_flag = intervention_in_vietnam
+			set_global_flag = intervention_in_vietnam 
+			prestige = 15
+			plurality = 5
+			any_pop = {
+				limit = {
+					is_culture_group = east_asian
+				}
+				consciousness = -1
+				militancy = -1
+			}
+			random_country = {
+				limit = {
+					owns = 1369
+					is_greater_power = yes
+					NOT = { primary_culture = vietnamese }
+				}
+				country_event = 999952
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	treaty_of_tientsin_france = {
+		picture = unequal_treaty
+		potential = {
+			has_country_flag = black_flag_war
+			HQJ = {
+				ai = yes
+				exists = yes
+				is_vassal = no
+			}
+			truce_with = QNG
+			NOT = { exists = DAI }
+			NOT = { has_global_flag = treaty_of_tientsin_france }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = treaty_of_tientsin_france
+			prestige = 5
+			badboy = 1
+			HQJ = {
+				annex_to = THIS
+				all_core = {
+					remove_core = HQJ
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	treaty_of_tientsin_chinese = {
+		picture = black_flag
+		potential = {
+			tag = QNG
+			HQJ = {
+				ai = yes
+				exists = yes
+				vassal_of = THIS
+			}
+			exists = DAI
+			NOT = { has_global_flag = treaty_of_tientsin_chinese }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = treaty_of_tientsin_chinese
+			prestige = 20
+			plurality = 5
+			badboy = 5
+			HQJ = {
+				years_of_research = 1
+				any_pop = {
+					limit = { is_culture_group = east_asian }
+					reduce_pop = 1.15
+				}
+				remove_accepted_culture = vietnamese
+				remove_country_modifier = fanatic_army
+			}
+			any_pop = {
+				limit = {
+					is_culture_group = east_asian
+				}
+				consciousness = -1
+				militancy = -1
+			}
+			random_country = {
+				limit = {
+					has_country_flag = black_flag_war
+					owns = 1364
+				}
+				release = CAM
+				THIS = { create_vassal = CAM prestige = 10 }
+			}
+			random_country = {
+				limit = {
+					has_country_flag = black_flag_war
+					owns = 1356
+				}
+				release = LUA
+				THIS = { create_vassal = LUA prestige = 10 }
+			}
+			random_country = {
+				limit = {
+					has_country_flag = black_flag_war
+					owns = 1346
+					owns = 1348
+				}
+				release = SIA
+				THIS = { create_vassal = SIA prestige = 25 }
+			}
+			create_vassal = DAI
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_kaiping_tramway = {
+		picture = kaiping_tramway
+		potential = {
+			OR = {
+				tag = QNG
+				tag = CHI
+				tag = KMT
+			}
+			has_country_flag = self_strengthening_movement
+			NOT = { has_global_flag = establish_the_kaiping_tramway }
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				civilization_progress = 0.65
+				year = 1895
+				civilized = yes
+			}
+			money = 75100
+		}
+		
+		effect = {
+			prestige = 10
+			treasury = -75000
+			economic_reform = yes_transport_improv
+			build_railway_in_capital = {
+				in_whole_capital_state = yes # no = just in main capital province.
+				limit_to_world_greatest_level = yes
+			}
+			random_owned = {
+				limit = {
+					province_id = 1493
+				}
+				1493 = { infrastructure = 1 }
+			}
+			set_global_flag = establish_the_kaiping_tramway
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }

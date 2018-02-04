@@ -544,6 +544,13 @@ political_decisions = {
 			387 = { change_province_name = "Brussel" }
 			set_global_flag = dutch_rename_brussels
 			clr_global_flag = france_rename_brussels
+			any_pop = {
+				limit = {
+					has_pop_culture = flemish
+				}
+				militancy = -5
+				consciousness = -5
+			}
 		}
 
 		ai_will_do = {

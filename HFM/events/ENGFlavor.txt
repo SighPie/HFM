@@ -44,7 +44,7 @@ country_event = {
 				tag = AUS
 				is_greater_power = yes
 			}
-			diplomatic_influence = { who = HAN value = 200 }
+			diplomatic_influence = { who = HAN value = 400 }
 		}
 		prestige = 5
 		election = yes

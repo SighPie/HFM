@@ -1296,6 +1296,12 @@ political_decisions = {
 				create_vassal = MEC
 				create_vassal = BRA
 			}
+			
+			VEN = {
+				all_core = {
+					add_core = LOM
+				}
+			}
 		}
 	}
 	
@@ -2334,6 +2340,10 @@ political_decisions = {
 				random_owned = {
 					limit = { owner = { foreign_training = yes_foreign_training } }
 					owner = { add_country_modifier = { name = isolationist_foreign_training duration = -1 } }
+				}
+				relation = {
+					who = QNG
+					value = -150
 				}
 			}
 			#Emperor Faction

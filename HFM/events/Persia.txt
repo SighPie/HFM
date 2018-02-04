@@ -552,6 +552,15 @@ country_event = {
 		random_owned = { limit = { province_id = 686 } secede_province = FROM remove_core = THIS }
 		relation = { who = FROM value = 100 }
 		any_pop = { limit = { is_primary_culture = yes } militancy = 1 }
+		FROM = {
+			any_owned = {
+				limit = { 
+					is_core = THIS
+					owner = { ai = yes }
+				}
+				secede_province = THIS
+			}
+		}
 		ai_chance = {
 			factor = 80
 			modifier = { factor = 1.5 in_sphere = FROM }

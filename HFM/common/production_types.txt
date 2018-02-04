@@ -536,7 +536,7 @@ canned_food_factory = {
 		fish = 4 		#6	total input+maint = 29.15
 	}
 	output_goods = canned_food 
-	value = 2.1			#33.6
+	value = 2.2			#33.6
 	bonus = {
 		trigger = { trade_goods_in_state = grain }
 		value = 0.075

@@ -1150,6 +1150,7 @@ country_event = {
 					is_overseas = yes
 				}
 				secede_province = THIS
+				remove_core = THIS
 			}
 		}
 	}

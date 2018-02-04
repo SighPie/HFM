@@ -11,8 +11,8 @@ country_event = {
 			tag = RUS
 			is_disarmed = no
 		}
-		NOT = { alliance_with = TUR }
-		NOT = { is_sphere_leader_of = TUR }
+		#NOT = { alliance_with = TUR }
+		#NOT = { is_sphere_leader_of = TUR }
 		is_greater_power = yes
 		capital_scope = { continent = europe }
 		OR = {
@@ -113,6 +113,10 @@ country_event = {
 		set_country_flag = started_the_great_eastern_crisis
 		set_global_flag = great_eastern_crisis
 		leave_alliance = TUR
+		diplomatic_influence = {
+			who = TUR
+			value = -400
+		}
 		relation = {
 			who = TUR
 			value = -200
@@ -688,9 +692,40 @@ country_event = {
 			}
 			secede_province = RUS
 		}
+		random_owned = {
+			limit = {
+				province_id = 861 #Uskandar
+				owned_by = TUR
+			}
+			secede_province = RUS
+		}
 		any_owned = {
 			limit = { region = TUR_885 }
 			secede_province = RUS
+		}
+		
+		#Secede to Bulgaria
+		random_owned = {
+			limit = {
+				province_id = 806 #Kavala
+				owned_by = TUR
+			}
+			state_scope = {
+				any_owned = {
+					secede_province = BUL
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				province_id = 823 #Kavala
+				owned_by = TUR
+			}
+			state_scope = {
+				any_owned = {
+					secede_province = BUL
+				}
+			}
 		}
 		
 		

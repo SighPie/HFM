@@ -505,6 +505,16 @@ country_event = {
 	
 	immediate = {
 		war_exhaustion = 35
+		plurality = -5
+		random_owned = {
+			limit = {
+				owner = { ai = no }
+			}
+			owner = {
+				remove_country_modifier = ever_victorious_army
+				remove_country_modifier = the_xiang_army
+			}
+		}
 		any_pop = {
 			ideology = {
 				factor = 0.6
@@ -521,7 +531,7 @@ country_event = {
 			}
 		any_pop = {	
 			militancy = -7
-			reduce_pop = 0.95
+			reduce_pop = 0.98
 		}
 		any_country = { limit = { vassal_of = THIS }
 			any_pop = {
@@ -545,7 +555,7 @@ country_event = {
 			limit = { is_core = TPG }
 			any_pop = {
 				militancy = -6
-				reduce_pop = 0.9
+				reduce_pop = 0.95
 			}
 		}
 		any_pop = {
@@ -1524,6 +1534,11 @@ province_event = {
 			region = CHI_1559
 			region = CHI_1508
 			region = CHI_1510
+			region = CHI_1563
+			region = CHI_1578
+			region = CHI_1493
+			region = CHI_1499
+			region = CHI_1579
 		}
 		is_core = CHI
 		is_primary_culture = no

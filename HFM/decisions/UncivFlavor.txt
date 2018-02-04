@@ -570,6 +570,7 @@ political_decisions = {
 		potential = {
 			1875 = { empty = yes }
 			civilized = yes
+			has_global_flag = berlin_conference
 			OR = {
 				AND = {
 					OR = {

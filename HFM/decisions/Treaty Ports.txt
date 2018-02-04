@@ -162,19 +162,8 @@ political_decisions = {
 		picture = shanghai_china
 		
 		potential = {
-			tag = ENG
 			has_country_modifier = negotiating_treaty	
-			OR = {
-				1538 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
-				AND = {
-						1538 = { owned_by = TPG }
-						has_global_flag = second_opium_war
-						OR = {
-							truce_with = TPG
-							truce_with = QNG
-						}
-					}
-			}
+			1538 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
 			NOT = { has_country_modifier = chinese_treaty_port }
 		}
 		
@@ -193,6 +182,7 @@ political_decisions = {
 					factor = 0
 					tag = ENG
 					NOT = { owns = 1496 }
+					NOT = { has_country_flag = treaty_of_tientsin }
 					1496 = { owner = { civilized = no truce_with = THIS } }
 				}
 				modifier = {

@@ -1,5 +1,17 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+TST;Alto Adige;;;;;;;;;x;;;;;;;;
+TST_colonial_company;Südtirol;;;;;;;;;;;;;;x
+LOM_colonial_company;The Kingdom of Lombardy–Venetia;;;;;;;;;;;;;;x
+HQJ_ADJ;Chinese;;;;;;;;;x;;;;;;;;
+HQJ;Heiqi Jun;;;;;;;;;x;;;;;;;;
+HQJ_conservative;Liu Yongfu;;;;;;;;;;;;;x,
+BUR_conservative;Konbaung Dynasty;;;;;;;;;;;;;x,
+SIA_reactionary;Kong Thap Bok Thai;;;;;;;;;;;;;x,
+SIA_fascist;Khana Ratsadon;;;;;;;;;;;;;x,
+SIA_communist;Communist Party of Thailand;;;;;;;;;;;;;x,
+SIA_conservative;Ratchawong Chakkri;;;;;;;;;;;;;x,
+SIA_liberal;Ratchawong Chakkri;;;;;;;;;;;;;x,
 SPA_democracy;The Spanish Republic;;;;;;;;;;;;;x,
 SPA_proletarian_dictatorship;The Spanish Republic;;;;;;;;;;;;;x,
 SPA_presidential_dictatorship;The Spanish State;;;;;;;;;;;;;x,
