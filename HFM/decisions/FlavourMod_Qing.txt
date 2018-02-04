@@ -115,7 +115,6 @@ political_decisions = {
 			badboy = -2
 			remove_country_modifier = negotiating_treaty
 			1538 = {
-				secede_province = THIS
 				secede_province = QNG
 				remove_core = TPG
 				trade_goods = precious_goods 
