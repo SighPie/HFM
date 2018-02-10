@@ -1,4 +1,3 @@
-# HFM
 # Historical Flavour Mod
 Current Version: 1.27D Beta
 How to download:
