@@ -42,12 +42,12 @@ political_decisions = {
 			}
 			casus_belli = {
 				target = EGY
-				type = establish_protectorate_casus_belli
+				type = annex_africa_full
 				months = 60
 			}
 			war = {
 				target = EGY
-				attacker_goal = { casus_belli = establish_protectorate_casus_belli }		
+				attacker_goal = { casus_belli = annex_africa_full }		
 				defender_goal = { casus_belli = status_quo }
 			}	
 			set_country_flag = ai_annex_egypt
@@ -64,27 +64,35 @@ political_decisions = {
 				government = prussian_constitutionalism
 				government = hms_government
 			}
-			mass_politics = 1
-			EGY = {
-				all_core = {
-					owned_by = THIS
-				}	
+			OR = {
+				EGY = {
+					all_core = {
+						owned_by = THIS
+					}	
+				}
+				EGY = { vassal_of = THIS }
 			}
+			year = 1900
 			NOT = { has_global_flag = form_kingdom_of_egypt }
 		}
 		
 		allow = {
 			is_greater_power = yes
-			EGY = {
-				all_core = {
-					owned_by = THIS
-				}	
+			mass_politics = 1
+			OR = {
+				EGY = {
+					all_core = {
+						owned_by = THIS
+					}	
+				}
+				EGY = { vassal_of = THIS }
 			}
 			OR = {
 				any_owned_province = {
 					is_core = EGY
 					average_militancy = 6
 				}
+				EGY = { vassal_of = THIS }
 				has_global_flag = egyptian_revolution
 				year = 1919
 			}
@@ -96,7 +104,7 @@ political_decisions = {
 			any_owned = {
 				limit = { 
 					is_core = EGY
-					NOT = { province = 1755 }
+					NOT = { province_id = 1755 }
 					NOT = { is_core = SUD }
 				}
 				secede_province = EGY
@@ -110,6 +118,19 @@ political_decisions = {
 				political_reform = appointed
 				political_reform = no_slavery
 				plurality = -5
+				
+				any_owned = {
+					limit = {
+						is_core = SUD
+					}
+					secede_province = THIS
+				}
+				
+				random_owned = {
+					limit = { province_id = 1755 }
+					secede_province = THIS
+					add_core = THIS
+				}
 			}
 			relation = {
 				who = EGY
@@ -117,9 +138,9 @@ political_decisions = {
 			}
 			diplomatic_influence = {
 				who = EGY
-				value = 200
+				value = 400
 			}
-			1755 = { secede_province = THIS }
+			create_alliance = EGY
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -130,8 +151,8 @@ political_decisions = {
 		potential = {
 			tag = EGY
 			civilized = no
-			year = 1863
 			TUR = { ai = yes }
+			is_canal_enabled = 2
 			NOT = { has_country_flag = enact_ismail_pasha_reforms }
 		}
 		allow = {
@@ -141,7 +162,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = enact_ismail_pasha_reforms
 			prestige = 15
-			economic_reform = yes_admin_reform
 			#Bonus for AI
 			random_owned = {
 				limit = {
@@ -177,12 +197,12 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			money = 45100
+			money = 155100
 		}
 		
 		effect = {
 			prestige = 5
-			treasury = -45000
+			treasury = -155000
 			economic_reform = yes_transport_improv
 			build_railway_in_capital = {
 				in_whole_capital_state = yes # no = just in main capital province.

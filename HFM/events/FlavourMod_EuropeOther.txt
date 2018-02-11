@@ -109,11 +109,12 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 5
+				factor = 10
 				OR = { 
 					tag = RUS
 					tag = USA
 					tag = JAP
+					tag = ITA
 				}
 			}
 			modifier = {

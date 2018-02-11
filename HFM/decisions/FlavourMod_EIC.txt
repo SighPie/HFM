@@ -319,6 +319,15 @@ political_decisions = {
 				}
 				reduce_pop = 2.5
 			}
+			any_country = {
+				limit = {
+					exists = yes
+					civilized = no
+					is_culture_group = south_asian
+					vassal_of = THIS
+				}	
+				economic_reform = yes_admin_reform
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -591,7 +600,7 @@ political_decisions = {
 				life_rating = 6 
 				add_province_modifier = {
 					name = recently_built_city
-					duration = 1825
+					duration = 1095
 				}
 				
 			}

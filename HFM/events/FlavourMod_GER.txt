@@ -172,6 +172,7 @@ country_event = {
 		create_alliance = FROM
 		war = {
 			target = FRA
+			attacker_goal = { casus_belli = humiliate }
 			attacker_goal = { casus_belli = war_reparations }
 			defender_goal = { casus_belli = war_reparations }
 			call_ally = yes
@@ -1057,7 +1058,7 @@ country_event = {
 		owns = 544
 		OR = {
 			tag = GER
-			tag = GCF
+			#tag = GCF
 		}
 		NOT = { capital = 599 }
 		is_disarmed = no

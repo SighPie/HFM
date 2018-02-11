@@ -53,8 +53,6 @@ upper_house = {
 decision = QNG_setup
 decision = unciv_balance_qng
 
-land_reform = yes_land_reform
-
 # Technologies
 
 # Technologies

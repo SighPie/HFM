@@ -736,10 +736,10 @@ country_event = {
 			secede_province = RUS
 		}
 		ai_chance = {
-			factor = 80
+			factor = 85
 			modifier = {
 				factor = 0.5
-				NOT = { war_exhaustion = 25 }
+				NOT = { war_exhaustion = 10 }
 				1082 = { owner = { part_of_sphere = no } }
 			}
 			modifier = {

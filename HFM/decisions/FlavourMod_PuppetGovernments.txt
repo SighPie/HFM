@@ -58,7 +58,6 @@ political_decisions = {
 			ai = yes
 			is_vassal = yes
 			exists = yes
-			year = 1885
 			OR = {
 				government = democracy
 				government = prussian_constitutionalism
@@ -70,21 +69,19 @@ political_decisions = {
 			}
 			OR = {
 				###British Puppets###
-				AND = { 
-					tag = NGR
-					vassal_of = ENG
-				}
 				AND = {
 					tag = LEG
 					vassal_of = ENG
 					has_country_flag = british_orient
 				}
-				AND = {
-					tag = CYP
-					vassal_of = ENG
-				}
 				AND = { 
-					tag = BLZ
+					OR = {
+						tag = BLZ
+						tag = NGR
+						tag = MLT
+						tag = SWK
+						tag = HAN
+					}
 					vassal_of = ENG
 				}
 				AND = { 
@@ -92,13 +89,15 @@ political_decisions = {
 					is_culture_group = british
 					vassal_of = ENG
 				}
-				AND = { 
-					tag = MLT
-					vassal_of = ENG
-				}
-				AND = { 
-					tag = SWK
-					vassal_of = ENG
+				AND = {
+					tag = CYP
+					OR = {
+						vassal_of = ENG
+						AND = { 
+							vassal_of = TUR
+							in_sphere = ENG
+						}
+					}
 				}
 				###German Puppets###
 				AND = { 
@@ -141,13 +140,17 @@ political_decisions = {
 					}
 				}
 				AND = {
-					tag = SIE
+					OR = { 
+						tag = SIE
+						tag = ALS
+					}
 					is_culture_group = germanic
 					OR = {
 						vassal_of = GER
 						vassal_of = GCF
 						vassal_of = NGF
 						vassal_of = SGF
+						vassal_of = AUS
 					}
 				}
 				AND = {
@@ -162,25 +165,30 @@ political_decisions = {
 						vassal_of = SGF
 					}
 				}
+				AND = {
+					tag = BOS
+					OR = {
+						vassal_of = GER
+						vassal_of = GCF
+						vassal_of = NGF
+						vassal_of = SGF
+						vassal_of = AUS
+						vassal_of = KUK
+						vassal_of = TUR
+					}
+				}
 				###French Puppets###
 				AND = {
-					tag = DAI
-					vassal_of = FRA
-				}
-				AND = { 
-					tag = MAD
-					vassal_of = FRA
-				}
-				AND = { 
-					tag = SYR
-					vassal_of = FRA
-				}
-				AND = { 
-					tag = ALD
-					vassal_of = FRA
-				}
-				AND = {
-					tag = IVC
+					OR = {
+						tag = DAI
+						tag = MAD
+						tag = SYR
+						tag = IVC
+						AND = {
+							tag = ALD
+							year = 1870
+						}
+					}
 					vassal_of = FRA
 				}
 				###Portuguese Puppets###
@@ -262,16 +270,10 @@ political_decisions = {
 				}
 				###Italian Puppets###
 				AND = {
-					tag = ETH
-					OR = {
-						vassal_of = ITA
-						vassal_of = SAR
-						vassal_of = PAP
-						vassal_of = SVY
+					OR = { 
+						tag = ETH
+						tag = LBY
 					}
-				}
-				AND = {
-					tag = LBY
 					OR = {
 						vassal_of = ITA
 						vassal_of = SAR
@@ -288,6 +290,29 @@ political_decisions = {
 						vassal_of = EGY
 					}
 				}
+				AND = {
+					OR = { 
+						tag = SAM
+						tag = RUM
+						tag = WAL
+						tag = MOL
+					}
+					vassal_of = TUR
+				}
+				
+				###Chinese Puppets###
+				AND = {
+					OR = {
+						tag = GUI
+						tag = YNN
+						tag = XBI
+						tag = XIN
+						tag = MCK
+						tag = IMG
+						tag = MGL
+					}
+					vassal_of = QNG
+				}
 			}
 			NOT = { has_country_flag = clean_up_colonial_government }
 		}
@@ -300,18 +325,14 @@ political_decisions = {
 			set_country_flag = clean_up_colonial_government
 			government = colonial_company
 			random_owned = {
-				limit = {
-					is_core = ALD
-				}
+				limit = { is_core = ALD }
 				owner = { 
 					primary_culture = french
 					add_accepted_culture = maghrebi
 				}
 			}
 			random_owned = {
-				limit = {
-					is_core = TAI
-				}
+				limit = { is_core = TAI }
 				owner = { 
 					primary_culture = japanese
 					add_accepted_culture = min
@@ -372,6 +393,17 @@ political_decisions = {
 					owner = { tag = HDJ }
 				}
 				owner = { government = absolute_monarchy }
+			}
+			random_owned = {
+				limit = {
+					owner = { 
+						OR = {
+							tag = MOL
+							tag = WAL
+						}	
+					}
+				}
+				owner = { government = prussian_constitutionalism }
 			}
 		}
 		

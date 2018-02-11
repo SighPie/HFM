@@ -2,7 +2,7 @@ capital = 1534
 primary_culture = mongol
 culture = beifaren
 religion = animist
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.04
@@ -38,10 +38,14 @@ border_policy = closed_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
+govt_flag = {
+	government = presidential_dictatorship
+	flag = absolute_monarchy
+}
 
 set_country_flag = mahayana_country
 
-ruling_party = MGL_conservative
+ruling_party = YNN_reactionary_2
 last_election = 1834.1.1
 upper_house = {
 	fascist = 0

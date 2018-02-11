@@ -638,7 +638,10 @@ political_decisions = {
 			year = 1888
 			SWK = {
 				war = no
-				in_sphere = THIS
+				OR = {
+					in_sphere = THIS
+					part_of_sphere = no
+				}
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
@@ -650,7 +653,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			set_global_flag = sarawak_protectorate
-			SWK = { civilized = no }
+			SWK = { civilized = no government = colonial_company }
 			SWK = { annex_to = THIS }
 			SWK = { tech_school = unciv_tech_school }
 		}

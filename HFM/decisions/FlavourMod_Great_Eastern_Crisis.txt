@@ -54,7 +54,10 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_global_flag = treaty_of_paris_russia
+				AND = { 
+					has_global_flag = treaty_of_paris_russia
+					NOT = { badboy = 0.8 }
+				}
 				TUR = {
 					NOT = { alliance_with = NGF }
 				}
@@ -74,7 +77,7 @@ political_decisions = {
 			is_greater_power = yes
 			OR = {
 				owns = 771
-				CRO = { vassal_of = THIS }
+				771 = { owner = { vassal_of = THIS } }
 			}
 			has_global_flag = great_eastern_crisis
 			OR = {
@@ -145,6 +148,10 @@ political_decisions = {
 				TUR = {
 					alliance_with = NGF
 				}
+			}
+			modifier = {
+				factor = 0
+				badboy = 0.8
 			}
 		}
 	}

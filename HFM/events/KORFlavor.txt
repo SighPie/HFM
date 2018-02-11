@@ -167,11 +167,20 @@ country_event = {
 			type = humiliate
 			months = 12
 		}
+		random_country = {
+			limit = {
+				tag = RUS
+				ai = yes
+			}
+			diplomatic_influence = {
+				who = KOR
+				value = -400
+			}	
+		}
 		war = {
 			target = KOR
-			attacker_goal = {
-				casus_belli = humiliate
-			}
+			attacker_goal = { casus_belli = humiliate }
+			defender_goal = { casus_belli = humiliate }
 		}
 	}
 }
@@ -188,6 +197,16 @@ country_event = {
 		name = "EVT85004OPTA"
 		relation = { who = FROM value = 50 }
 		relation = { who = FRA value = -100 }
+		random_country = {
+			limit = {
+				tag = RUS
+				ai = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
 	}
 }
 

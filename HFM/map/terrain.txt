@@ -200,7 +200,7 @@ categories =  {
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
+		mine_rgo_eff = 0.25
 		
 		supply_limit = 6
 		min_build_railroad = 1
@@ -294,7 +294,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
+		mine_rgo_eff = 0.5
 		supply_limit = 10
 	}
 	pest = {
@@ -312,7 +312,7 @@ categories =  {
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 1.0
+		mine_rgo_eff = 1.25
 		supply_limit = 10
 	}
 	mexicocity = {
@@ -600,7 +600,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.25
+		mine_rgo_eff = 0.5
 		supply_limit = 10
 	}
 	luxemburg = {
@@ -610,7 +610,7 @@ categories =  {
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.5
+		mine_rgo_eff = 0.75
 		supply_limit = 6
 		combat_width = -0.20
 	}
@@ -817,7 +817,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.25
+		mine_rgo_eff = 0.75
 		supply_limit = 10
 	}
 
@@ -1054,7 +1054,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.75
+		mine_rgo_eff = 1.25
 		supply_limit = 10
 	}
 
@@ -1995,7 +1995,7 @@ categories =  {
 		mine_rgo_eff = 0.0
 		supply_limit = 2
 		combat_width = -0.3
-		immigrant_attract = -0.25
+		immigrant_attract = -0.75
 	}
 
 	tunis = {
@@ -2287,7 +2287,7 @@ categories =  {
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
+		mine_rgo_eff = 0.5
 		supply_limit = 10
 	}
 
@@ -2547,7 +2547,6 @@ categories =  {
 		supply_limit = 2
 		min_build_railroad = 2
 		attrition = 1
-		immigrant_attract = -0.5
 	}
 
 	valencia = {
@@ -2774,7 +2773,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 1.0
+		mine_rgo_eff = 1.25
 		supply_limit = 10
 	}
 	
@@ -2898,7 +2897,7 @@ categories =  {
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 1.0
+		mine_rgo_eff = 1.5
 		
 		supply_limit = 6
 		min_build_railroad = 1

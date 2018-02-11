@@ -453,6 +453,7 @@ political_decisions = {
 			owns = 726
 			owns = 727
 			owns = 728
+			owns = 744
 		}
 
 		effect = {
@@ -557,7 +558,10 @@ political_decisions = {
 					owns = 729 #Venice
 					NOT = { has_global_flag = italian_claimed_south_tirol } 
 					OR = {
-						ai = no
+						AND = {
+							ai = no
+							revolution_n_counterrevolution = 1
+						}
 						mass_politics = 1
 						great_wars_enabled = yes
 						734 = { #Trient
@@ -598,14 +602,19 @@ political_decisions = {
 					465 = { NOT = { is_core = ITA } } #Savoia
 					OR = {
 						NOT = { has_global_flag = plombieres }
-						ai = no
+						AND = {
+							ai = no
+							revolution_n_counterrevolution = 1
+						}
 						465 = { #Savoia
 							owner = {
 								NOT = { is_culture_group = italian }
 								OR = {
 									is_greater_power = no
 									has_global_flag = france_dismantled
+									is_disarmed = yes
 								}
+								NOT = { truce_with = THIS }
 							}
 						}
 					}
@@ -642,6 +651,25 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					province_id = 729 #Venetia
+					owner = { 
+						OR = {
+							AND = {
+								ai = no
+								revolution_n_counterrevolution = 1
+							}
+							mass_politics = 1
+							great_wars_enabled = yes
+							734 = { #Trient
+								owner = {
+									NOT = { is_culture_group = italian }
+									OR = {
+										is_greater_power = no
+										is_disarmed = yes
+									}
+								}
+							}
+						}
+					}
 				}
 				AUS_734 = { add_core = ITA remove_core = TST }
 				AUS_736 = { add_core = ITA }
@@ -657,8 +685,15 @@ political_decisions = {
 							NOT = { has_global_flag = plombieres }
 							has_global_flag = the_treaty_of_milan
 							has_global_flag = france_dismantled
-							ai = no
+							AND = {
+								ai = no
+								revolution_n_counterrevolution = 1
+							}
 						}
+						NOT = { 
+							truce_with = FRA
+							truce_with = BOR
+						}	
 					}
 				}
 				465 = { add_core = ITA }
@@ -672,6 +707,10 @@ political_decisions = {
 					owner = {
 						is_culture_group = italian
 						has_global_flag = the_treaty_of_milan
+						NOT = { 
+							truce_with = FRA
+							truce_with = BOR
+						}	
 					}
 				}
 				721 = { add_core = ITA }

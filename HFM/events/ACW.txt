@@ -383,20 +383,6 @@ country_event = {
 				}
 				pop_type = soldiers
 			}
-			any_pop = {
-				limit = {
-					culture = dixie
-					type = soldiers
-				}
-				reduce_pop = 2.5
-			}
-			any_pop = {
-				limit = {
-					culture = texan
-					type = soldiers
-				}
-				reduce_pop = 2.5
-			}
 			add_country_modifier = {
 				name = no_more_war
 				duration = 150

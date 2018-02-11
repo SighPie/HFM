@@ -2303,6 +2303,15 @@ political_decisions = {
 			any_country = { limit = { civilized = yes is_greater_power = no is_secondary_power = no number_of_states = 2 } treasury = 2000 }
 			any_country = { limit = { civilized = yes is_greater_power = no is_secondary_power = no NOT = { number_of_states = 2 } } treasury = 1000 }
 			any_country = { limit = { civilized = no NOT = { tag = QNG } } treasury = 500 }
+			QNG = {
+				any_pop = {
+					limit = {
+						location = { region = CHI_1485 }
+						NOT = { has_pop_culture = asian_minor }
+					}
+					reduce_pop = 0.8
+				}
+			}	
 			#################Giving Starting Money to Pops and Countries######################
 			
 			#################Japan Setup######################

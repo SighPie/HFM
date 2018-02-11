@@ -8,7 +8,10 @@ political_decisions = {
 		}
 		allow = {
 			money = 75000
-			iron_railroad = 1
+			OR = { 
+				iron_railroad = 1
+				year = 1890
+			}
 			owns = 1082
 			owns = 1078
 			owns = 1075
@@ -30,27 +33,26 @@ political_decisions = {
 	}
 	
 	build_the_manchurian_railway = { #Railroad through Manchuria if they own Port Arthur
-			picture = whistlestop_tour
-			potential = {
-				tag = RUS
-				has_country_flag = build_the_tsr
-				NOT = { has_country_flag = build_the_manchurian_railway }
-				owns = 1481
-				owns = 1082 #Sanity check if they haven't lost Vladivostok in the meantime
-			}
-			allow = {
-				money = 15000
-				war = no
-			}
-			effect = {
-				set_country_flag = build_the_manchurian_railway
-				treasury = -15000
-				1481 = { infrastructure = 2 }
-				diplomatic_influence = { who = MCK value = 50 }
-			}
-			ai_will_do = {
-				factor = 1
-			}
+		picture = eastern_china_railway
+		potential = {
+			tag = RUS
+			has_country_flag = build_the_tsr
+			NOT = { has_country_flag = build_the_manchurian_railway }
+			owns = 1481
+			owns = 1082 #Sanity check if they haven't lost Vladivostok in the meantime
+		}
+		allow = {
+			money = 35000
+		}
+		effect = {
+			set_country_flag = build_the_manchurian_railway
+			treasury = -35000
+			1481 = { infrastructure = 2 }
+			diplomatic_influence = { who = MCK value = 50 }
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
+}
 

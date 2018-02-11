@@ -2,7 +2,11 @@ political_decisions = {
 	notre_dame_afrique = {
 		picture = notre_dame_afrique
 		potential = {
-			tag = FRA	
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
+			is_greater_power = yes
 			year = 1865
 			owns = 1700 #Algiers
 			NOT = {
@@ -13,13 +17,15 @@ political_decisions = {
 			impressionism = 1
 			war = no
 		}
+		
 		effect = {
 			badboy = -1
 			prestige = 5
 			1700 = {
 				add_province_modifier = { name = notre_dame_afrique duration = -1 }
 			}
-			set_country_flag = bulit_notre_dame_afrique
+			FRA = { set_country_flag = bulit_notre_dame_afrique }
+			BOR = { set_country_flag = bulit_notre_dame_afrique }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -27,7 +33,10 @@ political_decisions = {
 	claim_monaco = {
 	picture = establish_panfrenchism
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			has_country_flag = 2nd_empire
 			has_global_flag = pan_french_nationalism
@@ -78,7 +87,10 @@ political_decisions = {
 	organize_algeria_departments = {
 	picture = organize_french_algeria
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			has_country_flag = 2nd_republic
 			NOT = { has_country_flag = organize_algeria_1848 }
@@ -94,11 +106,12 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = organize_algeria_1848
+			FRA = { set_country_flag = organize_algeria_1848 }
+			BOR = { set_country_flag = organize_algeria_1848 }
 			treasury = -45000
-			ALD_1704 = { add_core = FRA }
-			ALD_1708 = { add_core = FRA }
-			FRA_1700 = { add_core = FRA }
+			ALD_1704 = { add_core = THIS }
+			ALD_1708 = { add_core = THIS }
+			FRA_1700 = { add_core = THIS }
 			ALD = { government = colonial_company }
 			
 			any_pop = {
@@ -127,7 +140,10 @@ political_decisions = {
 	cremieux_decree = {
 	picture = cremieux_decree
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			has_country_flag = organize_algeria_1848
 			year = 1870
@@ -145,7 +161,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = cremieux_decree
+			FRA = { set_country_flag = cremieux_decree }
+			BOR = { set_country_flag = cremieux_decree }
 			add_accepted_culture = sephardic
 		}
 		
@@ -155,7 +172,10 @@ political_decisions = {
 	tonkin_campaign = {
 	picture = tonkin_campaign
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			nationalism_n_imperialism = 1
 			has_global_flag = berlin_conference
@@ -253,7 +273,10 @@ political_decisions = {
 	claim_wallonia = {
 	picture = become_wallonia
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			has_country_flag = 2nd_empire
 			has_global_flag = pan_french_nationalism
@@ -266,7 +289,7 @@ political_decisions = {
 			NOT = { exists = GCF }
 			WLL = {
 				all_core = {
-					NOT = { owned_by = FRA }
+					NOT = { owned_by = THIS }
 				}
 			}
 			owns = 412
@@ -312,7 +335,7 @@ political_decisions = {
 			OR = {
 				RHI = { 
 					exists = yes
-					vassal_of = FRA
+					vassal_of = THIS
 				}
 				AND = {
 					owns = 575
@@ -333,9 +356,9 @@ political_decisions = {
 				limit = {
 					owns = 394
 				}
-				leave_alliance = FRA
+				leave_alliance = THIS
 				relation = {
-					who = FRA
+					who = THIS
 					value = -400
 				}
 				country_event = 99984
@@ -354,7 +377,10 @@ political_decisions = {
 	establish_panfrenchism = {
 	picture = establish_panfrenchism
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			has_country_modifier = louis_napoleon_iii
 			owns = 412
@@ -379,7 +405,10 @@ political_decisions = {
 	integrate_guyana = {
 		picture = french_guyane
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			owns = 2241
 			owns = 2246			
 			year = 1880
@@ -411,7 +440,10 @@ political_decisions = {
 	haitian_integration = {
 		picture = map_caribbean
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			OR = {
 				government = hms_government
 				government = democracy
@@ -468,7 +500,10 @@ political_decisions = {
 	integrating_french_algeria = {
 		picture = french_algeria
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			year = 1900
 			ALD = {
 				all_core = {
@@ -495,7 +530,7 @@ political_decisions = {
 			prestige = 15
 			ALD = {
 				all_core = {
-					add_core = FRA
+					add_core = THIS
 				}
 			}
 			scaled_consciousness = {
@@ -522,30 +557,26 @@ political_decisions = {
 				factor = 6
 				ideology = liberal
 			}
-			FRA = {
-				any_pop = {
-					limit = {
-						OR = {
-							has_pop_culture = maghrebi
-							has_pop_culture = berber
-						}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = maghrebi
+						has_pop_culture = berber
 					}
-					reduce_pop = 0.4
-					consciousness = 10
-					militancy = 10
 				}
+				reduce_pop = 0.4
+				consciousness = 10
+				militancy = 10
 			}
-			FRA = {
-				any_owned = {
-					limit = {
-						is_core = ALD
-					}
-					add_province_modifier = {
-						name = colonial_recruitment
-						duration = 3650
-					}
+			any_owned = {
+				limit = {
+					is_core = ALD
 				}
-			}			
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 3650
+				}
+			}		
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -560,7 +591,10 @@ political_decisions = {
 					owned_by = THIS
 				}
 			}
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			NOT = { has_country_flag = walloon_autonomy }
 		}
 		
@@ -614,7 +648,10 @@ political_decisions = {
 	claim_catalonia = {
 		picture = french_catalonia
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			has_country_flag = 2nd_empire
 			NOT = { has_country_flag = 3rd_republic }
 			is_greater_power = yes
@@ -659,10 +696,10 @@ political_decisions = {
 		effect = {
 			set_country_flag = siezing_catalonia
 			badboy = 12
-			498 = { add_core = FRA }
-			499 = { add_core = FRA }
-			500 = { add_core = FRA }
-			501 = { add_core = FRA }
+			498 = { add_core = THIS }
+			499 = { add_core = THIS }
+			500 = { add_core = THIS }
+			501 = { add_core = THIS }
 			random_country = {
 				limit = { owns = 499 }
 				leave_alliance = THIS
@@ -682,7 +719,10 @@ political_decisions = {
 	claim_andorra = {
 	picture = establish_panfrenchism
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			#has_country_flag = 2nd_empire
 			OR = { 
@@ -825,8 +865,11 @@ political_decisions = {
 				419 = { owner = { truce_with = THIS } }
 			}
 			NOT = { owns = 419 }
-			tag = FRA
-		}
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
+		}	
 		
 		allow = {
 			war = no
@@ -855,11 +898,14 @@ political_decisions = {
 	annex_rhineland = {
 	picture = rhineland
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			RHI = {
 				exists = yes
-				vassal_of = FRA
+				vassal_of = THIS
 			}
 			has_recently_lost_war = no
 			NOT = { has_country_flag = annexed_rhineland }
@@ -893,7 +939,10 @@ political_decisions = {
 	picture = black_stain
 		alert = no
 		potential = {
-			tag = FRA
+			OR = { 
+				tag = FRA
+				tag = BOR
+			}
 			is_greater_power = yes
 			is_disarmed = no
 			OR = {
@@ -938,7 +987,7 @@ political_decisions = {
 			set_country_flag = black_stain
 			prestige = 10
 			FRA_412 = {
-				add_core = FRA
+				add_core = THIS
 			}
 		}
 		

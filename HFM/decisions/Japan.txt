@@ -514,6 +514,24 @@ political_decisions = {
 				}
 			}
 			
+			random_owned = {
+				limit = {
+					owner = { ai = yes }
+				}
+				owner = {
+					treasury = 150000
+					machine_parts = 400
+					steel = 600 #was iron
+					cement = 600
+					build_factory_in_capital_state = fabric_factory
+					build_factory_in_capital_state = canned_food_factory
+					build_factory_in_capital_state = liquor_distillery
+					activate_technology = high_pressure_steam_engine
+					activate_technology = freedom_of_trade
+					activate_technology = puddling
+				}
+			}
+			
 			government = prussian_constitutionalism
 			any_pop = { militancy = -2 }
 		}
@@ -636,15 +654,6 @@ political_decisions = {
 			NOT = { war_with = KOR	}
 			NOT = { truce_with = KOR }
 			OR = {
-				AND = {
-					KOR = {
-						ai = yes
-						civilized = no
-						in_sphere = THIS
-					}
-					ai = yes
-					war_with = RUS
-				}
 				AND = {
 					is_our_vassal = KOR
 					year = 1910

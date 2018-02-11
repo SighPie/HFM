@@ -1382,6 +1382,8 @@ political_decisions = {
 					duration = 1825
 				}
 			}
+			CHI = { set_country_flag = self_strengthening_movement }
+			KMT = { set_country_flag = self_strengthening_movement }
 		}
 		
 		ai_will_do = {

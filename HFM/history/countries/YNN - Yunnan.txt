@@ -2,7 +2,7 @@ capital = 1602
 primary_culture = nanfaren
 culture = hanhui
 religion = mahayana
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -52,12 +52,6 @@ upper_house = {
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
-
-govt_flag = {
-	government = presidential_dictatorship
-	flag = theocracy
-}
-
 
 foreign_weapons = yes_foreign_weapons
 flintlock_rifles = 1

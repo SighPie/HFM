@@ -10,19 +10,58 @@ country_event = {
 
 	option = {
 		name = "EVT110011OPTA"
-		treasury = 20000
+		treasury = 135000
 		prestige = 5
-		relation = { who = ENG value = 50 }
-		1132 = { trade_goods = oil } #Abadan
+		years_of_research = 2.0
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+			relation = { who = THIS value = 200 }
+		}
+		random_owned = {
+			limit = { owner = { civilized = no } }
+			owner = { economic_reform = yes_finance_reform }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1132
+				state_scope = {
+					NOT = { has_building = fuel_refinery }
+				}
+			}
+			
+			owner = {
+				capital = 1132
+				machine_parts = 200
+				steel = 200
+				cement = 200
+				build_factory_in_capital_state = fuel_refinery
+			}
+		}
+		capital = 1121
+		1132 = { #Abadan
+			trade_goods = oil 
+			any_pop = {
+				literacy = 0.1
+			}
+		} 
+		1132 = {
+			add_province_modifier = {
+				name = baby_boom
+				duration = 1825
+			}
+		}
 		any_pop = { militancy = 1 }
-		ai_chance = { factor = 80 }
+		ai_chance = { factor = 100 }
 	}	
 
 	option = {
 		name = "EVT110011OPTB"
 		relation = { who = ENG value = -50 }
 		any_pop = { militancy = -0.5 }
-		ai_chance = { factor = 20 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -52,6 +91,21 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		
+		modifer = {
+			factor = 0.8
+			has_country_flag = apoc
+		}
+		
+		modifer = {
+			factor = 0.5
+			mass_politics = 1
+		}
+		
+		modifer = { 
+			factor = 0.1
+			year = 1920
+		}
 	}
 
 	option = {

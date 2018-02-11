@@ -135,6 +135,7 @@ political_decisions = {
 					}
 				}
 				add_core = BYZ
+				remove_core = GRE
 			}
 			prestige = 40
 			badboy = -10
@@ -160,7 +161,7 @@ political_decisions = {
 			set_country_flag = claim_pontus
 			badboy = 3
 			PNT = {
-				all_core = { add_core = GRE remove_core = PNT }
+				all_core = { add_core = THIS remove_core = PNT }
 			}
 			any_pop = {
 				limit = { has_pop_culture = greek }

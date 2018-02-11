@@ -8,13 +8,13 @@ political_decisions = {
 			}
 			exists = WAL
 			exists = MOL
-			NOT = { has_country_modifier = wallachian_revolution }
 			NOT = { exists = ROM }
 		}
 
 		allow = {
 			nationalism_n_imperialism = 1
 			is_vassal = no
+			war = no
 			WAL = {
 				war = no
 				OR = {
@@ -212,7 +212,6 @@ political_decisions = {
 				tag = MDV
 				tag = URP
 			}
-			NOT = { has_country_modifier = wallachian_revolution }
 		}
 
 		allow = {

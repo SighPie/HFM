@@ -6,7 +6,10 @@ country_event = {
 	picture = "henri_riviere"
 	
 	trigger = {
-		tag = FRA
+		OR = { 
+			tag = FRA
+			tag = BOR
+		}
 		is_greater_power = yes
 		exists = DAI
 		has_country_flag = tonkin_campaign
@@ -127,7 +130,7 @@ country_event = {
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -400 }
 		}
-		any_country = {	limit = { is_greater_power = yes NOT = { alliance_with = FRA } capital_scope = { continent = europe } NOT = { tag = FRA } }
+		any_country = {	limit = { is_greater_power = yes NOT = { alliance_with = FROM } capital_scope = { continent = europe } NOT = { tag = FRA tag = BOR } }
 			country_event = 99985
 		}
 		ai_chance = { factor = 1 }
@@ -137,9 +140,9 @@ country_event = {
 	option = {
 		name = "EVT99984OPTB"
 		prestige = -50
-		relation = { who = FRA value = 100 }
+		relation = { who = FROM value = 100 }
 		release_vassal = WLL
-		FRA = { inherit = WLL }
+		FROM = { inherit = WLL }
 		any_pop = {
 			limit = { 
 				OR = {
@@ -167,18 +170,26 @@ country_event = {
 		name = "EVT99985OPTA"
 		set_country_flag = support_walloon_owner
 		leave_alliance = FRA
+		leave_alliance = BOR
 		create_alliance = FROM
 		relation = { who = FRA value = -250 }
+		relation = { who = BOR value = -250 }
 		relation = { who = FROM value = 400 }
 		ai_chance = {
 			factor = 80 
 			modifier = {
 				factor = 0
+				OR = { 
 					alliance_with = FRA
+					alliance_with = BOR
+				}
 			}
 			modifier = {
 				factor = 75
-				relation = { who = FRA value = 175 }
+				OR = { 
+					relation = { who = FRA value = 175 }
+					relation = { who = BOR value = 175 }
+				}	
 			}
 			modifier = {
 				factor = 40
@@ -193,11 +204,17 @@ country_event = {
 			factor = 0 
 			modifier = {
 				factor = 100
-				alliance_with = FRA
+				OR = { 
+					alliance_with = FRA
+					alliance_with = BOR
+				}
 			}
 			modifier = {
 				factor = 10
-				relation = { who = FRA value = 175 }
+				OR = { 
+					relation = { who = FRA value = 175 }
+					relation = { who = BOR value = 175 }
+				}	
 			}
 		}
 	}
@@ -246,7 +263,7 @@ country_event = {
 		badboy = -6
 		WLL = {
 			all_core = {
-				remove_core = FRA
+				remove_core = THIS
 			}
 		}
 		any_country = {
@@ -306,6 +323,7 @@ country_event = {
 	trigger = {
 		OR = {
 			tag = FRA
+			tag = BOR
 			tag = AUS
 			tag = DNB
 			tag = KUK
@@ -415,7 +433,7 @@ country_event = {
 		any_country = {
 			limit = {
 				owns = 570
-				truce_with = FRA
+				truce_with = THIS
 			}
 			country_event = 99995
 		}
@@ -423,7 +441,7 @@ country_event = {
 		any_country = {
 			limit = {
 				owns = 571
-				truce_with = FRA
+				truce_with = THIS
 			}
 			country_event = 99995
 		}

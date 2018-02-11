@@ -28,6 +28,21 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
+		any_country = {
+			limit = {
+				primary_culture = japanese
+				substate_of = THIS
+			}
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = isolationist_foreign_naval_officers
+			remove_country_modifier = isolationist_foreign_naval_schools
+			remove_country_modifier = isolationist_foreign_officers
+			remove_country_modifier = isolationist_foreign_training
+			add_country_modifier = {
+				name = "western_influences"
+				duration = -1
+			}
+		}
 		FROM = { country_event = 97606 }
 	}
 	
@@ -138,6 +153,21 @@ country_event = {
 		add_country_modifier = {
 			name = "western_influences"
 			duration = -1
+		}
+		any_country = {
+			limit = {
+				primary_culture = japanese
+				substate_of = THIS
+			}
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = isolationist_foreign_naval_officers
+			remove_country_modifier = isolationist_foreign_naval_schools
+			remove_country_modifier = isolationist_foreign_officers
+			remove_country_modifier = isolationist_foreign_training
+			add_country_modifier = {
+				name = "western_influences"
+				duration = -1
+			}
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -1468,6 +1498,19 @@ country_event = {
 		add_country_modifier = {
 			name = global_baby_boom
 			duration = 3650
+		}
+		random_owned = {
+			limit = {
+				owner = { ai = yes }
+			}
+			owner = {
+				machine_parts = 400
+				steel = 600 #was iron
+				cement = 600
+				build_factory_in_capital_state = fabric_factory
+				build_factory_in_capital_state = canned_food_factory
+				build_factory_in_capital_state = liquor_distillery
+			}
 		}
 	}
 	

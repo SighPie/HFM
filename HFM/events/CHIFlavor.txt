@@ -25,6 +25,7 @@ country_event = {
 		OR = {
 			AND = {
 				tag = QNG
+				has_global_flag = xuantong_emperor
 				TPG = { exists = no }
 				CHI = { exists = no }
 			}
@@ -50,7 +51,7 @@ country_event = {
 		
 		OR = {
 			revolt_percentage = 0.30
-			average_militancy = 5
+			average_militancy = 6
 			capital_scope = { controlled_by_rebels = yes }
 			AND = {
 				has_recently_lost_war = yes
@@ -136,6 +137,7 @@ country_event = {
 		CHI_1532 = { 
 			add_core = IMG
 		}
+		IMG = { government = democracy }
 		random_owned = {
 			limit = {
 				is_capital = yes
@@ -199,7 +201,8 @@ country_event = {
 				vassal_of = THIS
 			}
 			relation = { who = THIS value = 100 }
-			THIS = { release_vassal = MGL }
+			THIS = { release_vassal = MGL  }
+			MGL = { government = theocracy civilized = yes }
 		}
 		random_owned = {
 			limit = {
@@ -215,7 +218,7 @@ country_event = {
 					secede_province = MGL
 				}
 				relation = { who = MGL value = 100 }
-				MGL = { civilized = yes }
+				MGL = { civilized = yes government = theocracy }
 			}
 		}
 		CHI_1468 = { remove_core = CHI }
@@ -270,7 +273,7 @@ country_event = {
 			limit = { is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
-		ai_chance = { factor = 80 }
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
@@ -399,7 +402,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 20
+			factor = 0
 		}
 	}
 }
@@ -1919,7 +1922,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			has_country_flag = the_xiang_army
+			has_global_flag = the_xiang_army
 		}
 		modifier = {
 			factor = 0.3
@@ -2399,6 +2402,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = HUI
@@ -2468,6 +2472,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = GNG
@@ -2539,6 +2544,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = GXI
@@ -2606,6 +2612,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = HNN
@@ -2675,6 +2682,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = MCK
@@ -2749,6 +2757,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = XBI
@@ -2826,6 +2835,7 @@ province_event = {
 			state_scope = { any_owned_province = { is_capital = yes } }
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 		}
 		any_neighbor_province = {
 			is_core = YNN
@@ -2901,6 +2911,7 @@ province_event = {
 			is_core = YNN
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 			state_scope = { any_owned_province = { is_capital = yes } }
 		}
 		any_neighbor_province = {
@@ -2973,6 +2984,7 @@ province_event = {
 			is_core = YNN
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 			state_scope = { any_owned_province = { is_capital = yes } }
 		}
 		any_neighbor_province = {
@@ -3043,6 +3055,7 @@ province_event = {
 			is_core = YNN
 			region = CHI_1468
 			region = CHI_1465
+			region = CHI_1612
 			state_scope = { any_owned_province = { is_capital = yes } }
 		}
 		any_neighbor_province = {

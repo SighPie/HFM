@@ -1,39 +1,128 @@
-####Made by Merwitz/123e55,if you found any errors please let me,or Sighpie,know####
-
-#Wallachia
-#1848
 political_decisions = {
-	proclamation_of_islaz = {
-		picture = islaz
+	
+	become_romania = {
+		picture = create_romania
 		potential = {
-			tag = WAL
-			WAL = { war_with = TUR } 
-			NOT = {	has_country_flag = proclamation_of_islaz }
+			tag = URP
+			NOT = {
+				exists = ROM
+				tag = ROM
+			}	
+			
 		}
-		
 		allow = {
-			war = yes
+			war = no
+			is_vassal = no
+			OR = {
+				nationalism_n_imperialism = 1
+				year = 1866
+				has_global_flag = great_eastern_crisis
+			}
 		}
 		
 		effect = {
 			prestige = 5
-			political_reform = wealth_weighted_voting
-			political_reform = free_press
-			political_reform = harassment
-			political_reform = freedom_of_womb
+			change_tag = ROM
+			political_reform = universal_weighted_voting
+			ROM = { all_core = { remove_core = URP } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { 
+					has_global_flag = great_eastern_crisis
+					has_global_flag = berlin_congress_to_be_held
+				}
+			}
+		}
+	}
+	
+	abolish_slavery_romania = {
+		picture = abolish_slavery_romania
+		potential = {
+			primary_culture = romanian
+			state_n_government = 1
+			OR = {
+				slavery = yes_slavery
+				slavery = freedom_of_womb
+			}
+		}
+		allow = {
+			OR = {
+				slavery = yes_slavery
+				slavery = freedom_of_womb
+			}
+			OR = {
+				no_slavery = 5
+				freedom_of_womb = 5
+			}
+		}
+		effect = {
+			political_reform = no_slavery
+			remove_country_modifier = slave_growth
 			any_pop = {
 				limit = {
 					is_primary_culture = yes
 				}
-				militancy = -3
+				scaled_consciousness = {
+					factor = -5
+					issue = no_slavery
+				}
+				scaled_militancy = {
+					factor = -5
+					issue = no_slavery
+				}
+				scaled_consciousness = {
+					factor = -5
+					issue = freedom_of_womb
+				}
+				scaled_militancy = {
+					factor = -5
+					issue = freedom_of_womb
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	proclamation_of_islaz = {
+		picture = ion_heliade
+		potential = {
+			tag = WAL
+			OR = { 
+				WAL = { war_with = TUR } 
+				has_global_flag = wallachian_revolution
+			}
+			NOT = {	has_country_flag = proclamation_of_islaz }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			plurality = 2
+			prestige = 5
+			random_owned = { limit = { owner = { vote_franschise = landed_voting } } owner = { political_reform = wealth_weighted_voting } }
+			random_owned = { limit = { owner = { slavery = yes_slavery } } owner = { political_reform = freedom_of_womb } }
+			random_owned = { limit = { owner = { conscription = no_draft } } owner = { political_reform = one_year_draft } }
+			political_reform = free_press
+			political_reform = harassment
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+				}
+				militancy = -5
 			}
 			set_country_flag = proclamation_of_islaz
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
-#Cuza reforms
-	ioan_cuzas_westernization = {
-		picture = cuza
+	ioan_cuzas_reforms = {
+		picture = ioan_cuza
 		potential = {
 			OR = {
 				tag = WAL
@@ -46,72 +135,34 @@ political_decisions = {
 				government = prussian_constitutionalism
 				government = hms_government
 			}
-			state_n_government = 1
-			NOT = { has_country_flag = ioan_cuzas_westernization }
+			NOT = { has_global_flag = ioan_cuzas_reforms }
 			year = 1860
 		}
 			
 		allow = {
-			money = 15001
+			state_n_government = 1
 		}
 			
 		effect = {
-			treasury = -15000
-			school_reforms = low_schools
+			treasury = 25000
+			random_owned = { limit = { owner = { school_reforms = no_schools } } owner = { social_reform = low_schools } }
+			random_owned = { limit = { owner = { vote_franschise = wealth_weighted_voting } } owner = { political_reform = wealth_voting } }
+			random_owned = { limit = { owner = { vote_franschise = landed_voting } } owner = { political_reform = wealth_weighted_voting } }
 			add_country_modifier = {
 				name = cuza_reforms
-				duration = 4500
+				duration = 3650
 			}
-			set_country_flag = ioan_cuzas_westernization
-		
-		}
-	}
-
-	northern_bulgaria_rename_rom = {
-		picture = gtfo
-		potential = {
-			primary_culture = romanian
-			owns = 818
-			owns = 812
-			owns = 813
-			NOT = { has_global_flag = northern_bulgaria_rename_rom }
+			scaled_consciousness = {
+				factor = 2
+				issue = moralism
+			}
+			scaled_consciousness = {
+				factor = 1
+				issue = wealth_weighted_voting
+			}
+			set_global_flag = ioan_cuzas_reforms
 		}
 		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_global_flag = northern_bulgaria_rename_rom
-			prestige = 2
-			812 = { change_province_name = "Plevna" }
-			813 = { change_province_name = "Targoviste" }
-			795 = { change_province_name = "Timoc" }
-			818 = { change_province_name = "Cadrilater" }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	maramures_rename_mol = {
-		picture = gtfo
-		potential = {
-			tag = MOL
-			owns = 651
-			owns = 661
-			owns = 950
-			NOT = { has_global_flag = maramures_rename_mol }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_global_flag = maramures_rename_mol
-			prestige = 2
-			950 = { change_province_name = "Transcarpatia" }
-			661 = { change_province_name = "Maramuresul de Sud" }
-		}
 		ai_will_do = { factor = 1 }
 	}
 }

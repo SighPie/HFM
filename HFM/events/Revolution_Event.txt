@@ -476,11 +476,11 @@ country_event = {
 			}
 			scaled_militancy = {
 				ideology = socialist
-				factor = -4
+				factor = -10
 			}
 			scaled_militancy = {
 				ideology = communist
-				factor = -8
+				factor = -10
 			}
 		}
 		any_owned = {

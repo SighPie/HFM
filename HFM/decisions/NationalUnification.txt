@@ -9,9 +9,11 @@ political_decisions = {
 				has_country_flag = post_colonial_country
 				exists = SGF
 				exists = GER
+				exists = GCF
 				tag = DNB
 				tag = AUS
 				tag = KUK
+				tag = GCF
 				has_country_flag = inherit_sgf
 			}
 		}
@@ -182,28 +184,13 @@ political_decisions = {
 					}
 				}
 			}
-			SGM = { 
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							ai = yes
-							in_sphere = THIS
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
-							war = no
-							is_greater_power = no
-						}
-					}
-				}
-			}
+			594 = { owned_by = THIS }
 		}
 		
 		effect = {
 			prestige = 10
 			FRA_412 = { add_core = GER }
+			random_owned = { limit = { owner = { ai = yes } owner = { badboy = -5 } } }
 			random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
 			random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
 			random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }
@@ -259,6 +246,7 @@ political_decisions = {
 			NOT = {
 				has_country_flag = post_colonial_country
 				exists = GER
+				exists = GCF
 				exists = NGF
 				tag = UBD
 			}
@@ -746,6 +734,7 @@ political_decisions = {
 			NOT = { exists = GER }
 			NOT = { exists = GCF }
 			has_country_flag = austrian_greater_germany
+			NOT = { has_global_flag = german_confederation_austrian }
 		}
 		
 		allow = {
@@ -764,7 +753,7 @@ political_decisions = {
 					COB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					REU = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					NAS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-					SWH = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+					HOL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					SCL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					SWG = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					ANH = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
@@ -778,16 +767,13 @@ political_decisions = {
 					LUB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					FRM = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 					BRE = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-					#ai = yes
+					ai = yes
 					NOT = { exists = NGF }
 					OR = { 
 						SGF = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
 						NOT = { exists = SGF }
 					}
-					PRU = { 
-						exists = yes
-						ai = yes
-					}
+					PRU = { exists = yes ai = yes }
 				}
 			}
 		}
@@ -804,6 +790,8 @@ political_decisions = {
 				remove_core = THIS
 				add_core = GCF
 			}
+			370 = { add_core = GER }
+			371 = { add_core = GER }
 			GER = {
 				all_core = {
 					remove_core = GER
@@ -811,6 +799,7 @@ political_decisions = {
 				}
 			}
 			change_tag = GCF
+			capital = 619
 			add_accepted_culture = north_german
 			add_accepted_culture = siebenburger
 			add_accepted_culture = volga_german
@@ -820,6 +809,17 @@ political_decisions = {
 				limit = {
 					is_culture_group = germanic
 					exists = no
+					NOT = { 
+						tag = KUK
+						tag = AUS
+						tag = DNB
+						tag = BAN
+						tag = UBD
+						tag = VLG
+						tag = LIE
+						tag = SIE
+						tag = GCF
+					}
 					NOT = { tag = PRU }
 					NOT = { tag = BAN }
 					NOT = { tag = UBD }
@@ -860,6 +860,7 @@ political_decisions = {
 						tag = VLG
 						tag = LIE
 						tag = SIE
+						tag = GCF
 						capital_scope = { continent = africa }
 						capital_scope = { continent = west_africa }
 						capital_scope = { continent = east_africa }
@@ -887,17 +888,14 @@ political_decisions = {
 				tag = AUS
 				tag = KUK
 			}
-			SGF = { exists = yes }
-			PRU = {
-				in_sphere = THIS
-			}
-			NOT = { has_country_flag = austrian_destiny }
-			NOT = { has_country_flag = inherit_sgf }
 			is_greater_power = yes
+			SGF = { exists = yes vassal_of = THIS }
+			NOT = { has_country_flag = inherit_sgf }
 		}
 		
 		allow = {
 			war = no
+			NOT = { war_exhaustion = 1 }
 			SGF = {
 				OR = {
 					AND = {
@@ -927,7 +925,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				badboy = 0.7
+				badboy = 0.5
 			}
 		}
 	}
@@ -1154,6 +1152,7 @@ political_decisions = {
 					change_region_name = "Elsaﬂ-Lothringen"
 				}
 			}
+			ALS = { government = colonial_company }
 			FRA_412 = { add_core = GER }
 			prestige = 5
 			set_global_flag = germany_has_renamed_elsass
@@ -1184,6 +1183,7 @@ political_decisions = {
 					change_region_name = "Alsace-Lorraine"
 				}
 			}
+			ALS = { government = democracy }
 			prestige = 10
 			clr_global_flag = germany_has_renamed_elsass
 		}
@@ -1198,6 +1198,7 @@ political_decisions = {
 			NOT = {
 				has_country_flag = post_colonial_country
 				exists = GER
+				exists = GCF
 				exists = NGF
 				tag = UBD
 			}
@@ -1290,9 +1291,11 @@ political_decisions = {
 				has_country_flag = post_colonial_country
 				exists = SGF
 				exists = GER
+				exists = GCF
 				tag = AUS
 				tag = KUK
 				tag = DNB
+				tag = GCF
 			}
 			revolution_n_counterrevolution = 1
 		}

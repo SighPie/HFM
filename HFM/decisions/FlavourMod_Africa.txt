@@ -408,7 +408,6 @@ political_decisions = {
 		}
 		
 		allow = {
-			total_pops = 2000000
 			is_greater_power = yes
 			revolution_n_counterrevolution = 1
 			num_of_ports = 3
@@ -506,7 +505,13 @@ political_decisions = {
 		picture = yohannes_iv
 		potential = {
 			tag = ETH
-			has_country_flag = battle_of_magdala
+			OR = { 
+				has_country_flag = battle_of_magdala
+				AND = {
+					year = 1871
+					NOT = { has_country_modifier = tewodros_ii }
+				}
+			}
 			NOT = { has_country_flag = yohannes_iv }
 		}
 		
@@ -525,10 +530,12 @@ political_decisions = {
 				}
 				owner = { 
 					military_reform = yes_foreign_training 
-					years_of_research = 1
-					plurality = 5
+					economic_reform = yes_admin_reform
+					years_of_research = 5
+					plurality = 15
 				}
 			}
+			military_reform = yes_foreign_weapons 
 			add_country_modifier = {
 				name = yohannes_iv
 				duration = 6570

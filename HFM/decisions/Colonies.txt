@@ -56,19 +56,19 @@ political_decisions = {
 				}
 				AND = {
 					num_of_ports = 12
-					NOT = { check_variable = { which = ironclad_commision value = 6 } }
+					NOT = { check_variable = { which = ironclad_commision value = 10 } }
 				}
 				AND = {
 					num_of_ports = 18
-					NOT = { check_variable = { which = ironclad_commision value = 9 } }
+					NOT = { check_variable = { which = ironclad_commision value = 20 } }
 				}
 				AND = {
 					num_of_ports = 24
-					NOT = { check_variable = { which = ironclad_commision value = 12 } }
+					NOT = { check_variable = { which = ironclad_commision value = 25 } }
 				}
 				AND = {
 					num_of_ports = 30
-					NOT = { check_variable = { which = ironclad_commision value = 15 } }
+					NOT = { check_variable = { which = ironclad_commision value = 30 } }
 				}
 			}
 		}

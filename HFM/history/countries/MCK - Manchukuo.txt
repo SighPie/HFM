@@ -1,7 +1,7 @@
 capital = 1555
 primary_culture = manchu
 religion = mahayana
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -53,11 +53,6 @@ upper_house = {
 
 land_reform = yes_land_reform
 foreign_weapons = yes_foreign_weapons
-
-govt_flag = {
-	government = absolute_monarchy
-	flag = theocracy
-}
 
 # Technologies
 flintlock_rifles = 1

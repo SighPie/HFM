@@ -11,18 +11,14 @@ country_event = {
 			tag = RUS
 			is_disarmed = no
 		}
-		#NOT = { alliance_with = TUR }
-		#NOT = { is_sphere_leader_of = TUR }
 		is_greater_power = yes
-		capital_scope = { continent = europe }
 		OR = {
 			AND = { 
 				year = 1870
-				has_global_flag = treaty_of_paris_1856
-			}
-			AND = {
-				year = 1860
-				has_global_flag = treaty_of_paris_russia
+				OR = { 
+					has_global_flag = treaty_of_paris_1856
+					has_global_flag = treaty_of_paris_russia
+				}
 			}
 			AND = {
 				year = 1860
@@ -559,6 +555,7 @@ country_event = {
 			war = {
 				target = THIS
 				attacker_goal = { casus_belli = cut_down_to_size_ottoman }
+				defender_goal = { casus_belli = humiliate }
 				call_ally = yes
 			}
 		}

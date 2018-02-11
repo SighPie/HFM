@@ -11,18 +11,20 @@ political_decisions = {
 				has_country_flag = western_calendar
 			}
 		}
+		
 		allow = {
 			analytic_philosophy = 1
 			state_n_government = 1
 			war = no
 		}
+		
 		effect = {
 			prestige = 10
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				scaled_militancy = {
 					ideology = reactionary
-					factor = 0.3
+					factor = 0.1
 				}
 			}
 			set_country_flag = western_calendar
@@ -43,11 +45,13 @@ political_decisions = {
 				has_country_flag = christianity_ban_repealed
 			}
 		}
+		
 		allow = {
 			analytic_philosophy = 1
 			state_n_government = 1
 			war = no
 		}
+		
 		effect = {
 			any_greater_power = {
 				limit = {
@@ -93,7 +97,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 5
-			years_of_research = 0.3
+			years_of_research = 0.2
 			set_country_flag = technical_fine_arts_school
 		}
 		
@@ -105,17 +109,12 @@ political_decisions = {
 		
 		potential = {
 			tag = JAP
-			year = 1880
+			year = 1890
+			is_greater_power = yes
 			has_country_modifier = line_of_advantage
 			is_disarmed = no
 			war = no
-			OR = {
-				ai = yes
-				AND = {
-					ai = no
-					has_global_flag = yes_railroad
-				}
-			}
+			total_amount_of_ships = 15
 			2681 = {
 				is_colonial = no
 				owner = {
@@ -130,7 +129,6 @@ political_decisions = {
 			}
 			NOT = { has_country_flag = taiwan_line_of_advantage }
 		}
-		
 		
 		allow = {
 			war = no
@@ -169,116 +167,70 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	jap_ships = {
-		picture = "japanese_calendar"
+	imperial_japanese_navy = {
+		picture = "imperial_japanese_navy"
 		potential = { 
 			tag = JAP
-			OR = {
-				is_greater_power = yes
-				civilized = yes
-			}
-			ai = yes
-			NOT = {
-				has_country_flag = ships_bby
-			}
+			is_greater_power = yes
+			has_country_flag = has_line_of_advantage
+			NOT = { has_country_flag = imperial_japanese_navy }
 		}
+		
 		allow = {
-			year = 1880
+			money = 80001
+			OR = { 
+				year = 1880
+				raider_group_doctrine = 1
+				invention = ironclads
+			}
 		}
+		
 		effect = {
-		1649 = {
-				sub_unit = {
-					type = ironclad
-					value = current
+			treasury = -80000
+			prestige = 15
+			activate_technology = naval_professionalism
+			relation = {
+				who = ENG
+				value = 50
+			}	
+			1649 = {
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
+			}
+			any_owned = {
+				limit = {
+					region = JAP_1649
 				}
-				sub_unit = {
-					type = ironclad
-					value = current
+				naval_base = -3
+			}
+			random_owned = {
+				limit = { owner = { ai = yes } }
+				owner = {
+					activate_technology = steamers
+					activate_technology = iron_steamers
+					activate_technology = battleship_column_doctrine
+					activate_technology = raider_group_doctrine
+					1649 = {
+						naval_base = 3
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = ironclad value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+						sub_unit = { type = steam_transport value = current }
+				
+					}
 				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-				sub_unit = {
-					type = ironclad
-					value = current
-				}
-		}
-		set_country_flag = ships_bby
+			}
+			set_country_flag = imperial_japanese_navy
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -385,14 +337,14 @@ political_decisions = {
 
 		effect = {
 			prestige = 5
-			1535 = {	secede_province = JAP	}
-			1534 = {	secede_province = JAP	}
-			1532 = {	secede_province = JAP	}
+			1535 = { secede_province = JAP }
+			1534 = { secede_province = JAP }
+			1532 = { secede_province = JAP }
 			inherit = IMG
 			release_vassal = IMG
 			IMG = {
 				civilized = yes
-				government = colonial_company
+				government = presidential_dictatorship
 			}
 			set_country_flag = img_organized
 		}

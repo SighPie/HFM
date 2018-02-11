@@ -1108,18 +1108,23 @@ political_decisions = {
 			PER = { exists = yes }
 		}
 		
-		allow = { 
-			money = 20000
-			PER = { in_sphere = THIS }
+		allow = {
+			money = 150001
+			PER = {
+				OR = {
+					part_of_sphere = no
+					in_sphere = THIS 
+				}
+			}
 		}
 		
 		effect = { 
 			set_country_flag = apoc
-			treasury = -20000
-			prestige = 5
-			research_points = 1000
+			treasury = -150000
+			prestige = 25
 			PER = { country_event = 110011 }
 		}
+		
 		ai_will_do = { factor = 1 }
 	}
 	

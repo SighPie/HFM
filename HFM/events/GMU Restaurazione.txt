@@ -2477,10 +2477,11 @@ country_event = {
 	picture = "Foscolo"
 
 	trigger = {
-                tag = ITA
-                owns = 749
-                owns = 744
-                war = no
+		tag = ITA
+		owns = 749
+		owns = 744
+		war = no
+		NOT = { government = theocracy }
 	}
 
 	fire_only_once = yes
@@ -2492,11 +2493,10 @@ country_event = {
 
 	option = {
 		name = "We demand Foscolo!"
-                prestige = 5
-                ENG = { country_event = 202039 }
-		ai_chance = {
-			factor = 90
-                }
+		prestige = 5
+		ENG = { country_event = 202039 }
+		
+		ai_chance = { factor = 90 }
 	}
 
 	option = {
@@ -2513,9 +2513,7 @@ country_event = {
 			}
 			militancy = 1
 		}
-		ai_chance = {
-			factor = 10
-                }
+		ai_chance = { factor = 10  }
 	}
 }
 
@@ -2531,12 +2529,12 @@ country_event = {
 
 	option = {
 		name = "They should have their petty little poet. What was his name again?"
-                set_global_flag = Foscolo_returns
-                prestige = 1
-                relation = {
-                        who = ITA
-                        value = 25
-                }
+		set_global_flag = Foscolo_returns
+		prestige = 1
+		relation = {
+				who = ITA
+				value = 25
+		}
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -2546,27 +2544,25 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-                                   relation = {
-                                            who = ITA
-                                            value = 1
-                                    }
-                                }
+				   relation = {
+							who = ITA
+							value = 1
+					}
+				}
 			}
-                }
+		}
 	}
 
 	option = {
 		name = "I don't know this Fosco-guy, but he will stay here."
-                set_global_flag = Foscolo_denied
-                prestige = 2
-                badboy = 1
-                relation = {
-                        who = ITA
-                        value = -50
-                }
-		ai_chance = {
-			factor = 20
-                }
+		set_global_flag = Foscolo_denied
+		prestige = 2
+		badboy = 1
+		relation = {
+				who = ITA
+				value = -50
+		}
+		ai_chance = { factor = 20 }
 	}
 }
 
@@ -2579,24 +2575,23 @@ country_event = {
 	picture = "Foscolo"
 
 	trigger = {
-                tag = ITA
-                has_global_flag = Foscolo_denied
+		tag = ITA
+		has_global_flag = Foscolo_denied
 	}
 
 	fire_only_once = yes
  
 	mean_time_to_happen =  {
 		months = 2
-
 	}
 
 	option = {
 		name = "A scandal!"
-                prestige = -10
-                relation = {
-                        who = ENG
-                        value = -50
-                }
+		prestige = -10
+		relation = {
+				who = ENG
+				value = -50
+		}
 	}
 
 }
@@ -2610,8 +2605,8 @@ country_event = {
 	picture = "Foscolo"
 
 	trigger = {
-                tag = ITA
-                has_global_flag = Foscolo_returns
+		tag = ITA
+		has_global_flag = Foscolo_returns
 	}
 
 	fire_only_once = yes

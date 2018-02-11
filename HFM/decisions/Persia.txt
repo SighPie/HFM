@@ -2,52 +2,50 @@
 political_decisions = {
 	
 #Trip to Europe
-travel_to_europe = {
+	travel_to_europe = {
 		picture = dreams_of_empire
-		
 		potential = {
-				tag = PER 
-				NOT = {	has_country_flag = travel_to_europe }
-				}
+			tag = PER 
+			NOT = {	has_country_flag = travel_to_europe }
+		}
 		
 		allow = { 
 			money = 30000
-				}
+		}
 		
 		effect = { 
 			treasury = -25000
 			prestige = 2
-			years_of_research = 1
+			years_of_research = 2
 			relation = {
 				who = ENG
 				value = 50
-					}
+			}
 			set_country_flag = travel_to_europe
-				}
+		}
 		
 		ai_will_do = { factor = 1 }
-		
 	}
 
 #Persian Cinema
-persian_cinema = {
-	picture = fatherland_altar
-	
-	potential = { 
-		tag = PER
-		NOT = { has_country_flag = persian_cinema }
-		NOT = { has_country_modifier = silver_age }
-		year = 1880
-		}
+	persian_cinema = {
+		picture = fatherland_altar
 		
-	allow = {
-		OR = {
-			any_greater_power = { invention = the_talkies relation = { who = THIS value = 50 } }
-			invention = the_talkies
+		potential = { 
+			tag = PER
+			NOT = { has_country_flag = persian_cinema }
+			NOT = { has_country_modifier = silver_age }
+			year = 1880
 		}
-	}
-		
-	effect = {
+			
+		allow = {
+			OR = {
+				any_greater_power = { invention = the_talkies relation = { who = THIS value = 50 } }
+				invention = the_talkies
+			}
+		}
+			
+		effect = {
 			set_country_flag = persian_cinema
 			prestige = 2
 			years_of_research = 0.5
@@ -55,9 +53,8 @@ persian_cinema = {
 				militancy = -1
 			}
 		}
-	
-	
-	ai_will_do = { factor = 1 }
+		
+		ai_will_do = { factor = 1 }
 	}
 
 #Greater Iran
@@ -111,7 +108,7 @@ establish_the_dar_al_funun = {
 			has_country_modifier = amir_kabir
 		}
 		effect = {
-			years_of_research = 0.5
+			years_of_research = 1.5
 			any_pop = { consciousness = 1 }
 			set_country_flag = dar_al_funun_built
 			add_country_modifier = {

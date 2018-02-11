@@ -179,7 +179,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 20
+		months = 10
 	}
 	
 	option = {
@@ -241,7 +241,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10
+		months = 3
 	}
 	
 	option = {
@@ -255,9 +255,9 @@ country_event = {
 			country_event = 5001006
 		}
 		random_list = {
-			33={ treasury = -3000 }
-			33={ treasury = -2000 }
-			33={ treasury = 500 }
+			33 ={ treasury = -3000 }
+			33 ={ treasury = -2000 }
+			33 ={ treasury = 500 }
 		}
 		1479 = {
 			infrastructure = 3
@@ -303,14 +303,22 @@ country_event = {
 	option = {
 		name = "EVT5001006OPTA"
 		random_list = {
-			50={ treasury = 5000 }
-			50={ treasury = 2000 }
+			50 = { treasury = 5000 }
+			50 = { treasury = 2000 }
 		}
 		1554 = { 
 			change_province_name = "Harbin"
 			add_province_modifier = {
 				name = gateway_to_harbor
 				duration = 365
+			}
+		}
+		any_owned = {
+			limit = { 
+				is_core = MCK
+			}
+			any_pop = {
+				literacy = 0.05
 			}
 		}
 	}

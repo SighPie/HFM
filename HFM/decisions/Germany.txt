@@ -104,7 +104,7 @@ political_decisions = {
 			OR = {
 				tag = PRU
 				tag = GER
-				tag = GCF
+				#tag = GCF
 				tag = NGF
 			}
 			owns = 369
@@ -173,7 +173,7 @@ political_decisions = {
 					province_id = 619 #Vienna
 					owned_by = GCF
 				}
-				GCF = { capital = 619 }
+				owner = { capital = 619 }
 			}
 		}
 	}
@@ -184,6 +184,7 @@ political_decisions = {
 				tag = PRU
 				tag = GER
 				tag = NGF
+				tag = GCF
 			}
 			NOT = {
 				tech_school = prussian_tech_school
@@ -520,7 +521,7 @@ political_decisions = {
 				}
 				AND = {
 					ai = yes
-					year = 1860
+					year = 1858
 				}
 			}
 		}
@@ -744,12 +745,13 @@ political_decisions = {
 				tag = PRU
 				tag = NGF
 				tag = GER
+				tag = GCF
 			}
 			OR = {
-				684 = { NOT = { is_core = GER } }
-				685 = { NOT = { is_core = GER } }
-				690 = { NOT = { is_core = GER } }
-				699 = { NOT = { is_core = GER } }
+				684 = { NOT = { is_core = GER is_core = GCF } }
+				685 = { NOT = { is_core = GER is_core = GCF } }
+				690 = { NOT = { is_core = GER is_core = GCF } }
+				699 = { NOT = { is_core = GER is_core = GCF } }
 			}
 		}
 		
@@ -770,7 +772,7 @@ political_decisions = {
 							province_id = 684
 							province_id = 685
 						}
-						NOT = { is_core = GER }
+						NOT = { is_core = GER is_core = GCF }
 					}
 					war_policy = jingoism
 				}

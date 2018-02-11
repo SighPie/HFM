@@ -12,6 +12,7 @@ country_event = {
 		name = "EVTOPTA99100"
 		set_country_flag = anglo_afghan_war
 		prestige = 10
+		badboy = 3
 		leave_alliance = AFG
 		relation = { who = AFG value = -200 }
 		diplomatic_influence = { who = AFG value = -200 }
@@ -99,7 +100,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA99101"
-		prestige = -45
+		prestige = -55
 		set_global_flag = graveyard_of_empires
 		relation = { who = AFG value = -200 }
 		diplomatic_influence = { who = AFG value = -200 }
@@ -131,6 +132,8 @@ country_event = {
 	
 	trigger = {
 		tag = ENG
+		is_greater_power = yes
+		is_disarmed = no
 		war = no
 		has_global_flag = 1_anglo_sikh_war
 		PNJ = {
@@ -253,6 +256,10 @@ country_event = {
 					casus_belli = liberate_country
 					country = AFG
 				}
+				attacker_goal = { 
+					casus_belli = release_puppet
+					country = AFG
+				}
 				defender_goal = { casus_belli = cut_down_to_size }
 				call_ally = yes
 			}
@@ -341,6 +348,8 @@ country_event = {
 	
 	trigger = {
 		tag = ENG
+		is_greater_power = yes
+		is_disarmed = no
 		1227 = {
 			OR = {
 				owned_by = THIS
@@ -454,7 +463,7 @@ country_event = {
 		prestige = -20
 		FROM = { end_war = THIS }
 		relation = { who = FROM value = 200 }
-		diplomatic_influence = { who = FROM value = 400 }
+		diplomatic_influence = { who = FROM value = 500 }
 		any_country = {
 			limit = {
 				OR = {

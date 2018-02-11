@@ -5,8 +5,6 @@ political_decisions = {
 			has_global_flag = yes_railroad
 			ai = yes
 			OR = {
-				tag = ZUL
-				tag = MAD
 				tag = CHK
 				tag = LUA
 			}
@@ -46,12 +44,6 @@ political_decisions = {
 			add_country_modifier = {
 				name = unciv_balance_qng
 				duration = 3650
-			}
-			any_pop = {
-				limit = {
-					location = { region = CHI_1485 }
-				}
-				reduce_pop = 0.9
 			}
 			set_country_flag = unciv_balance_flag
 		}
@@ -554,6 +546,7 @@ political_decisions = {
 				tag = ENG
 				tag = EIC
 				tag = FRA
+				tag = ITA
 				AND = {
 					OR = { 
 						tag = GER
@@ -567,10 +560,6 @@ political_decisions = {
 						tag = TKG
 					}
 					is_greater_power = yes
-				}
-				AND = {
-					tag = ITA
-					year = 1870
 				}
 				AND = {
 					tag = USA
@@ -602,7 +591,12 @@ political_decisions = {
 				AND = {
 					year = 1880
 					NOT = { total_amount_of_ships = 50 }
-					NOT = { tag = EIC tag = ENG tag = GER tag = FRA }
+					NOT = { 
+						tag = EIC 
+						tag = ENG 
+						tag = GER 
+						tag = FRA 
+					}
 				}
 				AND = {
 					year = 1885
@@ -649,6 +643,7 @@ political_decisions = {
 					port = yes
 					is_overseas = yes
 					is_colonial = yes
+					controlled_by = THIS
 					owner = { NOT = { invention = ironclads } is_culture_group = british }
 				}
 				sub_unit = { type = manowar value = current }
@@ -664,6 +659,7 @@ political_decisions = {
 					port = yes
 					#is_core = yes
 					is_overseas = no
+					controlled_by = THIS
 					owner = { NOT = { invention = pre_dreadnought } }
 				}
 				sub_unit = { type = steam_transport value = current }
@@ -677,6 +673,7 @@ political_decisions = {
 					port = yes
 					#is_core = yes
 					is_overseas = no
+					controlled_by = THIS
 					owner = { invention = pre_dreadnought }
 				}
 				sub_unit = { type = steam_transport value = current }
@@ -689,6 +686,7 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
+					controlled_by = THIS
 					owner = { invention = commerce_raiders NOT = { invention = protected_cruisers } }
 				}
 				sub_unit = { type = commerce_raider value = current }
@@ -704,6 +702,7 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
+					controlled_by = THIS
 					owner = { invention = ironclads NOT = { invention = pre_dreadnought } }
 				}
 				sub_unit = { type = ironclad value = current }
@@ -720,6 +719,7 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
+					controlled_by = THIS
 					owner = { invention = ironclads NOT = { invention = pre_dreadnought } is_culture_group = british }
 				}
 				sub_unit = { type = ironclad value = current }
@@ -739,9 +739,24 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
-					owner = { invention = ironclads NOT = { invention = pre_dreadnought } is_culture_group = japanese }
+					controlled_by = THIS
+					owner = { invention = ironclads NOT = { invention = pre_dreadnought } primary_culture = japanese }
 				}
 				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = commerce_raider value = current }
+				sub_unit = { type = commerce_raider value = current }
+				sub_unit = { type = commerce_raider value = current }
+				sub_unit = { type = commerce_raider value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
 				owner = { treasury = -15000 }
 			}
 			
@@ -751,6 +766,7 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
+					controlled_by = THIS
 					owner = { invention = protected_cruisers }
 				}
 				sub_unit = { type = cruiser value = current }
@@ -762,6 +778,7 @@ political_decisions = {
 					port = yes
 					is_overseas = no
 					is_colonial = no
+					controlled_by = THIS
 					owner = { invention = protected_cruisers is_culture_group = british }
 				}
 				sub_unit = { type = cruiser value = current }
@@ -796,4 +813,27 @@ political_decisions = {
 			}
 		}	
 	}
+	
+	#test_end_really_long_wars = {
+		#picture = "reichstag"
+		#potential = { 
+			#tag = FRA
+			#war_with = RUS
+		#}
+		
+		#allow = {
+			#NOT = { casus_belli = RUS }
+		#}
+		
+		#effect = {
+			#end_war = RUS
+			#any_country = {
+				#limit = {
+					#alliance_with = RUS
+					#war_with = THIS
+				#}
+				#end_war = THIS
+			#}
+		#}
+	#}	
 }

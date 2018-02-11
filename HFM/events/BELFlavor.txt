@@ -224,11 +224,13 @@ country_event = {
 
 country_event = {
 	id = 36718
-	news = no
+	title = "EVTNAME36718"
+	desc = "EVTDESC36718"
+	picture = "anticorn"
 
 	trigger = {
 		tag = BEL 
-		year = 1848
+		has_global_flag = french_revolution_1848
 		NOT = {
 			ruling_party_ideology = reactionary
 			war = yes
@@ -242,16 +244,13 @@ country_event = {
 		months = 8
 	}
 
-	title = "EVTNAME36718"
-	desc = "EVTDESC36718"
-	picture = "Administration"
-
 	option = {
 		name = "EVTOPTA36718" 
+		any_pop = { dominant_issue = { value = pacifism factor = 0.05 } }
 		any_pop = { dominant_issue = { value = anti_military factor = 0.1 } }
-		prestige = 1
 	}
 }
+
 #########################################################
 #														#
 #      			Treaty of London Events					#

@@ -49,6 +49,7 @@ country_event = {
 			AND = {
 				ai = yes
 				has_country_flag = ai_demand_sigmaringen
+				has_country_flag = inherit_sgf
 				PRU = {
 					ai = yes
 					exists = yes
@@ -164,10 +165,11 @@ country_event = {
 			limit = {
 				is_primary_culture = no
 				is_accepted_culture = no
+				NOT = { is_cultural_group = germanic }
 				location = { is_core = GER }
 			}
-			consciousness = 8
-			militancy = 8
+			consciousness = 5
+			militancy = 5
 		}
 		random_owned = {
 			limit = {
@@ -219,7 +221,9 @@ country_event = {
 				NOT = { is_culture_group = germanic }
 				NOT = { tag = HUN }
 				NOT = { tag = SLV }
-				NOT = { tag = LOM }
+				NOT = { is_culture_group = south_slavic }
+				NOT = { is_culture_group = italian }
+				NOT = { is_culture_group = pan_romanian }
 				NOT = { primary_culture = ukrainian }
 				OR = {
 					NOT = { primary_culture = polish }
@@ -285,11 +289,11 @@ country_event = {
 				tag = KUK
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.8
 				government = absolute_monarchy
 			}
 			modifier = {
-				factor = 0
+				factor = 0.5
 				OR = {
 					government = democracy
 					government = hms_government
@@ -303,6 +307,7 @@ country_event = {
 		set_country_flag = austrian_destiny
 		set_country_flag = austrian_greater_germany
 		badboy = 10
+		624 = { remove_core = HUN }
 		all_core = {
 			limit = {
 				NOT = { is_core = HUN }

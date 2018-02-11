@@ -275,6 +275,7 @@ country_event = {
 		}
 
 		release_vassal = LAN
+		leave_alliance = LAN
 		ai_chance = { factor = 100 }
 		grain = 250
 	}
@@ -504,7 +505,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	immediate = {
-		war_exhaustion = 35
+		war_exhaustion = 45
 		plurality = -5
 		random_owned = {
 			limit = {
@@ -531,7 +532,7 @@ country_event = {
 			}
 		any_pop = {	
 			militancy = -7
-			reduce_pop = 0.98
+			reduce_pop = 0.97
 		}
 		any_country = { limit = { vassal_of = THIS }
 			any_pop = {
@@ -555,14 +556,14 @@ country_event = {
 			limit = { is_core = TPG }
 			any_pop = {
 				militancy = -6
-				reduce_pop = 0.95
+				reduce_pop = 0.9
 			}
 		}
 		any_pop = {
 			limit = {
 				religion = god_worshippers
 			}
-			reduce_pop = 0.7
+			reduce_pop = 0.75
 		}
 		TPG = { all_core = { remove_core = TPG 
 							 fort = -2} }

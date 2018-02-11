@@ -1,7 +1,7 @@
 capital = 1468
 primary_culture = mongol
 religion = gelugpa
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01

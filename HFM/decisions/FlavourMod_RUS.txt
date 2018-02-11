@@ -78,7 +78,10 @@ political_decisions = {
 		}
 		allow = {
 			money = 15000
-			early_railroad = 1
+			OR = { 
+				early_railroad = 1
+				year = 1845
+			}
 			owns = 706
 			owns = 713
 			owns = 716
@@ -94,6 +97,10 @@ political_decisions = {
 			689 = { infrastructure = 1 }
 			631 = { infrastructure = 1 }
 			619 = { infrastructure = 1 }
+			random_owned = {
+				limit = { owner = { ai = yes } }
+				owner = { activate_technology = early_railroad }
+			}
 		}
 		
 		ai_will_do = {
@@ -110,7 +117,10 @@ political_decisions = {
 		}
 		allow = {
 			money = 30000
-			early_railroad = 1
+			OR = { 
+				early_railroad = 1
+				year = 1842
+			}
 			owns = 994
 			owns = 1008
 			owns = 1003
@@ -402,6 +412,35 @@ political_decisions = {
 				706 = { is_core = RUS }
 				705 = { is_core = RUS }
 			}
+			OR = {
+				KUK = { 
+					exists = yes
+					is_greater_power = no
+					NOT = { truce_with = RUS }
+					OR = { 
+						owns = 705
+						owns = 704
+					}
+				}
+				AUS = { 
+					exists = yes
+					is_greater_power = no
+					NOT = { truce_with = RUS }
+					OR = { 
+						owns = 705
+						owns = 704
+					}
+				}
+				GCF = { 
+					exists = yes
+					is_greater_power = no
+					NOT = { truce_with = RUS }
+					OR = { 
+						owns = 705
+						owns = 704
+					}
+				}
+			}
 			NOT = { has_country_flag = claim_galicia }
 		}
 		allow = {
@@ -439,6 +478,15 @@ political_decisions = {
 						owns = 704
 					}
 				}
+				GCF = { 
+					exists = yes
+					is_greater_power = no
+					NOT = { truce_with = RUS }
+					OR = { 
+						owns = 705
+						owns = 704
+					}
+				}
 			}
 		}
 		effect = {
@@ -448,6 +496,7 @@ political_decisions = {
 					OR = { 
 						tag = KUK
 						tag = AUS
+						tag = GCF
 					}
 					OR = { 
 						owns = 705

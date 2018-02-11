@@ -660,6 +660,11 @@ communist_rebels = {
 			factor = 0.95
 			any_neighbor_country = { government = proletarian_dictatorship }
 		}
+		
+		modifier = {
+			factor = 0
+			country = { government = proletarian_dictatorship }
+		}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -809,6 +814,11 @@ communist_rebels = {
 		modifier = {
 			factor = 5.0
 			is_capital = yes
+		}
+		
+		modifier = {
+			factor = 0
+			country = { government = proletarian_dictatorship }
 		}
 	}
 	

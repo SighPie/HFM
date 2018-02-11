@@ -1121,7 +1121,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = -0.35
+		factor = -0.5
 		THIS = { is_culture_group = east_asian  }
 		country = { is_culture_group = east_asian civilized = yes }
 		country = { NOT = { has_country_flag = preparations_to_kill } }
@@ -1376,6 +1376,7 @@ emigration_chance = {
 		factor = 0.4
 		year = 1837
 		NOT = { year = 1905 }
+		THIS = { NOT = { is_culture_group = east_asian } }
 		country = { 
 			AND = { 
 				NOT = { war_exhaustion = 1 }
@@ -1609,6 +1610,20 @@ conversion_chance = {
 			civilized = no 
 			NOT = { government = theocracy }
 		}
+	}
+	
+	modifier = {
+		factor = 0.2
+		country = { 
+			civilized = no
+			has_country_flag = missionary_activity
+		}
+	}
+	
+	modifier = {
+		factor = 1.0
+		has_pop_religion = god_worshippers
+		country = { has_country_flag = protestant_country }
 	}
 	
 	modifier = {

@@ -2,286 +2,49 @@
 
 #Changes in 1.28
 #Bugfixes
-- Disabling microstates will no longer cause the end of Splendid Isolation
-- Added more conditions to make sure the EIC will be annexed after the Sepoy Rebellion
-- Added VLK as an exception to the ORA and TRN release events
-- Fixed some issues with the modified Great Game CB
-- 'Napoleon Deposed' Will now no longer be triggered by uncolonized cores in Quebec
-- 'The Luxembourg Crisis' - Will now check for the owner of Berlin rather than the owner of Saarbrucken
-- Fixed Luzern Unit Position
-- Fixed San Marino petitioning to join Italy
-- 'The Limburg Crisis' - Now checks for NGF's CB on the Netherlands rather than Limburg, should have a 12 month preparation period
-- Qing demanding Macao - Now properly reduces relations rather than increases it
-- Fixed Italian Decisions being unavailable in 1.27c
-- Fixed PROV691 Naval Base position
-- Wake Island will no longer be renamed Hamilton
-- Forming Romania now requires both WAL/MDV to not be vassals
-- Fixed AI Germany not taking the Ruhr Industralism & Ruhr Boom Decisions
-- Fixed Issues with Asian Minor pops assimilating & Chinese pops assimilating into Manchu 
-- Fixed the Zoutpansberg monarchy flag
-- 'Prussian-Italian Alliance' - Fixed the requirements for Italy to get Venice after the Brothers War
-- 'The Rhine Crisis' - can no longer be triggered while in a truce with NGF/PRU/GER
-- Fixed a bug causing a crash for EVT95518
+- Fixed the Peace of Prague AI Decision crash
+- Fixed issue causing the German Confederation to turn back into Germany
+- Fixed an issue with the wakhan_treaty decision/event
+- Added some sanity checks to make sure the AI ship spawning decisions spawn ships controlled by the AI.
+- Added sanity checks to make sure the Australia migration events only occur once.
 
 #Changes to Europe
-- 'The Peace of Prague' - Westfalen and Rhineland should now become puppets of Austria
-- 'maximilianstrasse' can now be enacted by any German country, as long as they own Munich
-- Updated some older decisions taken from the GMU mod
-- Changed the German & Russian names for estonia to Livland & Liflyandiya
-- Increased duration of starting baby boom modifiers for Russia
-- Changed Theocratic Italy Flag
-- The Italo-Turkish War can now be fired as long as Italy has the Dark Continent Researched
-- Changed the names of the Caucasus Viceroyalty and Baltic Governate
-- 'Acension of Queen Victoria' - Places Hannover into Austria's SoI
-- Changed the requires for the Deposing of Napoleon III
-- Added war name localization for the Krakow Uprising
-- Added war name localization for the Schleswig War
-- Added war name localization for the Roman Revolution
-- Changed Eastern & Western Transylvania to Northern and Southern, pre-WW2 borders of Hungary & Romania is now possible
-- 'The Dutch-Prussian Alliance' - Now easier for Prussia to claim Luxembourg from the Dutch
-- EXPERIMENTAL: Changed the way Italy claims/reclaims its cores in Venice, Tirol, Savoie and Aosta
-- Added a new tag 'South Tirol' - In order to prevent Italians from assimilating since the Italian cores will be claimed slightly later than ususal
-- 'The Crimean War' - The Treaty of Paris for Russia no longer gives greater Bulgaria, it'll instead be formed in the Great Eastern Crisis
+- Remade some Romanian Decisions/Events
+- The Hamburg Flavour events can now happen for whoever owns Hamburg itself, added event picture for the Sinking of the Austria event
+- Added alternate flag for Alsace-Lorraine
+- Added an event 'Brussels Peace Conference' - By Belsima on github
+- Added a flag for British Hannover
+- Changed the requirements for the Trans-Siberian Railway to allow the AI to get it more consistently
 
 #Other Changes
-- Delayed Dates where rebels get military techs
-- Slightly reduced the benefits of the health care reforms
-- Updated the colours of some Events/Decision pictures
-- Adjusted AI ship spawning levels
-- Reactionary Rebels will no longer turn Theocracies to Absolute Monarchies
-- Added localisation for certain wars
-- Military Unciv Reforms will now only give 5% civilization progress
+- Reduced War Reparations tax hit to 20% (Was 25%)
+- 'Warship Commissions' - Now gives an unciv country the Imported Warship reform when the commissioned ship arrives
+- Increased the default production of Coal & Sulphur
 
-# Migration Changes
-- Lowered base migration chance, but increased pre-Great War era migration to have a steady amount of migration in the early game, but not a overly large amount in the late-game
-- Adjusted Colonial & Internal Migration levels
-- Slightly reduced migration bonus that small new world nations get
+#Changes to China
+- 'The Treaty of Tientsin' - Now turns Qing to protestant, will now add a Missionaries modifier, this can be undone by Westernizing or the Boxer Rebellion
+- The Chinese substates now start as Autonomous Dependencies, now will use different flags when they're independent from the Qing
+- Changed Manchuria name and flag when its a vassal of Qing
+- Added a decision 'The Kiangnan Aresenal'
+- Added an event for the ascension of Emperor Puyi
 
-#Changes to the Americas
-- 'Integrating French Guiana' will now give a Integration modifier rather than adding the core straight away.
-- Added two events for the Great Fires of New York and Chicago, modified version of Shayco122's contribution
-- EXPERIMENTAL: The Monroe Doctrine CB is now always available for the U.S.
-- Added flags for Buenos Aires by GAGG1111111
+#Changes to Japan
+- Commodore Perry's Expedition now also removes isolation from the Japanese Substates
+- Added some buffs to help the Japanese AI
 
-#Changes to Balkans/Middle East
-- Kuwait now starts as a satalite of the Ottomans, rather than direct rule
-- Added Decisions to end the autonomy of Kuwait and Samos
-- Added colonial flag for French Syria
-- Changed Egypt's starting government type, flags and country names for different govts'
--- Autonomous Govt: The Khedivate of Egypt
--- Absolute Monarchy: The Sultanate of Egypt
--- Semi/Constitutional Monarchy: The Egyptian Kingdom
-- Added a decision to form the Kingdom of Egypt
-- Added a decision to enact Ismail Pasha's reforms
-- Added a Ottoman flag for Hedjaz
-- Changed the way the Suez is built, once completed, the Suez province will be returned to Egypt, it can be seized again later.
-- The Crimean War can now occur if Egypt won the Oriental Crisis
-- Modified the AI decision to conquer Egypt, it no longer auto-annexes Egypt, but rather the great power must conquer it.
+#Changes to Middle East
+- Adjusted some Plurality modifiers & research progress for Egypt
+- The Anglo-Persian Oil Company now provides more benefits to Persia, costs more for the UK
+- Fixed some issues with the UDI of Egyptian Indepedence decision
 
-#Changes to Central Asia/India
-- Removed the Annex Rajputana Decision as the substate CB now serves the same purpose and works.
-- Increased the debuffs the EIC gets when the Sepoy Rebellion occurs
-- Added a Triggered modifier 'Pashtunwali' for Afghanistan, gives military buffs when a greater power is at war with it, must be uncivilized
-- The Sikh Empire now starts with Foreign Officers, starts off in an alliance with the UK
-- The Death of Ranjit Singh - Will no longer cause the UK to declare war straight away
-- The First Anglo-Sikh War will now only take place sometime around 1845, will no longer completely annex the Sikh Empire
-- Added events for the First Anglo-Afghan War, and the Massacre of Elphinstone's Army
-- Added an event for the Second Anglo-Sikh War
-- Added events for the Sieges of Herat, and the Anglo-Persian War
-- Added a decision to claim Gwadar if civilized and owns Bela
-- Changed Persia Semi/Constitutional Monarchy Flag & Name
-- Removed Sikh core in Chitral, can be added via decision
-- 2nd Burma War - Sets the specific wargoal to be Pegu
-- Added an event chain for the British to demand a Russian withdrawal from Afghanistan if Russia owns any Afghan cores
-
-#Changes to Asia
-- 'The Ever Victorious Army' - Some of the more extreme bonuses are now given to the AI only, most of the modifier effects have been changed to a more reasonable amount
-- 'The Xiang Army' - Reduced modifier bonuses
-- Most of the new Qing decisions can now be enacted even if civilized
-- Added a decision 'Appoint Yuan Shikai'
-- Added a decision 'Found the China Merchants Steam Navigation Company'
-- Added a decision 'Abolish the Imperial Examinations'
-- Increased preparation time for the Taiping Rebellion to 120 days
-- Added a decision 'Treaty of Friendship & Commerce between the British Empire and Siam'
-- Added a decision to either vassalize or add a core to Lanfang, based on contribution by Mo1tke
-- Added a event 'The Guangzhou Uprising'
-- 'The Eight Banners' - Now gives minimum social spending in the form of government pensions paid to Manchu Bannermen.
-- Added unique Chinese tech school 'The Three Principles of the People'
-- Changed the Guominjun's flag
-- Changed the flag of Manchuria - Now uses the Imperial banner of the Qing Emperor
-- Added several historical decisions for Siam to reform and westernizes
-- Added events for the Black Flag Army, and the Sino-French War
-- Added decision 'Kaiping Tramway & Chinese Railway Administration'
-
-#Changes to Oceania
-- Slightly decreased the pop growth effects of the Australia migration modifiers
-
-#Changes to Africa
-- Made the Kassa Hailu event occur faster and more consistently
-- Renamed Ethiopia to Abyssinia
-- Added events for the British Expedition to Abyssinia, and the death of Tewodros II, Yohannes IV
-
-###1.27C###
-#Changes from 1.27c Beta
-
-#Bugfixes
-- Added some additional checks to prevent Romania from being formed during the Wallachian Revolution, fixed up some of the Romanian events
-- Fixed the Oregon Treaty 54-40 event where if the British back down the provinces aren't transferred
-- Irish Enclosures will no longer happen to Ireland
-- Fixed a bug that caused the UK to keep going over the infamy limit
-- Fixed China and India having a direct border through Leh
-- Fixed the Organzie Congo decision giving some provinces 60 Life Rating
-- Fixed the 'Missing Government Flags' Cleanup decision, newly released countries should now properly get their inventions
-- The Bear Flag Revolt should now occur again
-- Fixed a bug where CSA cores won't be added if Manifest Destiny doesn't occur
-- Mostar's naval base position has been fixed
-
-#Other Changes
-- Foreign Artillery & Weapons now only give 5% Civilization, but are now cheaper
-- Increased default organization of Battleships, Ironclads, Cruisers and Dreadnoughts
-- Reduced the Immigration Penalty New World Nations get when at war (-1.3 -> -0.8)
-- The Legation Cities will no longer be annexed through event
-- The 'Acquire Substate Region' CB can now be used on Colonial Provinces
-- Added a new CB 'Acquire Substate Core Region' - Can be used on substates that own your cores, mainly used against the British in India
-- Accepted Pops in Colonial provinces are less likely to be socialist
-- Doubled the time taken for nationalist rebels to enforce their demands
-- Autonomous Dependencies (Colonial Governments) now appear more often, certain colonies will be turned into colonial governments with special flags if released by the right country (This list doesn't include colonial countries like New Zealand, Mittelafrika etc.)
-- Reduced the Tax-Penalty from Non-Core Provinces back to a reasonable level
-## Experimental: List of Autonomous Dependencies added in 1.28
--- Russia: Alyaska (LSK)
--- Russia: The Baltic Governorates (UBD)
--- Russia: The Caucasus Viceroyalty (TCA)
--- Germany: Neuguinea (PPG)
--- Germany: Kamerun (CMR)
--- Germany: Sudwestafrika (NMB)
--- Germany: Ostafrika (TNZ)
--- Portugal: Mocambique (MOZ)
--- Portugal: Angola (ANG)
--- U.K.: East Africa (KNY)
--- U.K.: West Africa (NGR)
--- U.K.: Malta (MLT)
--- U.K.: The Raj (HND)
--- U.K.: The Orient (LEG)
--- U.K.: The Cape Colony (SAF)
--- U.K.: Sarawak (SWK)
--- France: Algerie (ALD)
--- France: Indochine (DAI)
--- France: Madagascar (MAD)
--- France: Cote d'Ivoire (IVC)
--- Spain: Las Filipinas (PHL)
--- Japan: Chosen (KOR)
--- Japan: Takasago (TAI)
--- Netherlands: Oost-Indie (IND)
--- Netherlands: Zuidafrika (VLK)
--- Italy: Africa Orientale (ETH)
--- Italy: Libia (LBY)
-
-- 'Good Schools' - Now requires bioglogicalism to be researched
-- 'mercantilism' - Now gives -5% tax efficiency
-- Increased the penalties of the British Raj modifier
-- Greatly reduced Effectiveness of the 'Drang nach Osten' modifier
-- Made some changes to what countries certain pops prefer to migrate to , increased (1.5 to 2.8) the importance of having a similar culture group when choosing where to migrate to, European migration should now be possible
-- EXTERNAL MIGRATION POP PREFERENCES:
--- Dutch -> Boer
--- German -> American/German/Swiss
--- British -> American/Canadian/Australian
--- Polish -> Polish
--- French/Walloon -> French Canadian/French New Zealand/French Australia/Cajun/Louisianan/French/Wallon/Swiss
--- Iberian -> Latin American
--- All Other Culture Groups -> Themselves (Italian-> Italian for example)
-- MIGRATION TARGET POP PREFERENCES 
-##(All Countries refer to provinces with those countries cores, so for example American pops will internally migrate more to provinces with MEX cores if USA owns any)
--- Russian: Ukraine/Kamchatka/Crimea/Urals/Siberia/Belarus
--- Russian: Baltics/Lithuania/Poland/Turkey/Caucasus/Galicia
--- German (+2.5): Baltics/Pozan/Slilesia/Pomeralia/Poland/France/Swiss/Luxemburg/Banat/Siebenburgen
--- German (+1.5): Tanganyika/Nambia/AOG/MIT/Elsass
--- Japanese (+2.0): Korea/Kamchatka
--- Japanese (+1.25): China
--- American (+2.5): Mexico/Canada/Colombia/Rupert's Land
--- British (+3.0): Maritimes/New Foundland/Colombia/Canada/Australia/New Zealand/Ireland/Whales
--- British (+1.5): Kenya/South Africa/China/Rhodesia
--- French (+2.5): Algeria/Tunis/Quebec/New Zealand/Australia/Canada/Louisiana/Rhineland/Wallonia/Luxemburg/Catalonia/Quebec/Swiss/Vietnam
--- Italian (+2.5): Tunis/Libya/Dalmatia/Swiss/France/Croatia/Albania/Treiste/Austria/Fiume/Slovenia
--- Chinese (+2.5): YNN/IMG/MGL/MCK/XBI/XIN/UYG/TIB/TNT/KML
--- Chinese (+2.0): JOH/LAN/SWK/MLY/INO/DAI/LUA/KOR/SUL
+#Changes to Balkans
+- Wallachia & Moldavia now start as Autonmous dependencies of the Ottoman Empire, they will now use different flags if they become independent
+- Added event 'The Convention of Balta Liman' if Wallachia loses the Wallachian Revolution
+- Bosnia will now use a different flag if it is an independent monarchy, it'll use the old one if it's an autonomous dependency
 
 #Changes to Map
-- Made text size on some Chinese provinces alot bigger
-- Made Antwerp a coastal province
-- Reshaped the Lorraine State to better match the Meuse River
-- Nantes added back to the Brittany state
-
-#Changes to Europe
-- Added Slilesia Core to Teschen
-- Belgium/Wallonia can now rename Rhine provinces to French
-- German/French can now rename Liege
-- Modified the 'Irish Dominion'/'Irish Republic' Decisions
-- 'Greater Germany' - Now only requires for Hungary to exist for German AI to get the event
-- Added a decision for the Leizpig Congress to form the German Confederation if France takes the Rhine (Based on More Stuff for HFM minimod)
-- A Irish HMS Government now uses the Irish tricolour flag
-- Removed the requirement for Alsace for Austria to create the South German Federation
-- Slightly modifier the Luxembourg Crisis
-- Added Renaming decisions for Northern Italy (Taken from the HFM Expanded Minimod)
-- Readded the 'Germania Werf' Modifier, was accidently removed
-- Added Danish OOB changed Danish Names, by contributed by Admiral Fisker
-- The Ottoman Empire now starts with the Dragoons invention
-- All Northern German states no longer start with Naval Bases to better reflect on naval neglect of the German Confederation.
-- Prussia no longer starts with Post-Nelsonian Thought or Naval Design Bureaus
-- Added Renaming decisions for the Baltics
-- The 'Conquest' CB can now be used on Switzerland
-- The Breaking Swiss Neutrality Decision now gives a conquest CB
-- Added an Event Chain for the Partition of Switzerland if it has been conquered by FRA/GER/ITA, all countries receiving the proposal will be able to choose whether or not to accept the Partition plan
--- If a country refuses to support the Swiss Partition, it will give the Nationalist Agitation modifiers to their ethnic counterpart in Switzerland (E.G. If France refuses, the French parts of Switzerland will get Nationalist Agitation)
--- If a country supports the Swiss Partition, they will get Core Integration modifiers in their region
-- Added a Triggered Modifier 'Poland Is Not Yet Lost' - Gives a immigration bonus to independent Polish Countries
-- Added a Triggered Modifier 'Breadbasket of Europe' - Gives war exhaustion relief, supply consumption reduction if Ukraine is either directly owned or puppeted
-- Added a Triggered Modifier 'Freie Stadt' - Gives immigration bonus to certain 1 OPM Republics, meant to help Hamburg & Frankfurt reach their historical pop levels
-- Added a Decision for certain AI GPs to get ships every year as long as they aren't disarmed, this is to make them land troops more often and maintain a healthy amount of ships in their navy compared to a player
-- Increased LR of some German Cities to compensate for higher levels of Migration
-- Removed Austrian Cores from Teschen & Bielitz
-- Added some Siebenburgen party names
-- 'Pact of Plombieres' - Can now be used for Venice
-- Prussian General Staff - Slightly buffed its effects
-- Added a Decision to rename Schleswig & Holstein into German/Danish
-- Changed requirements for the Jade Purchase
-- Volga will no longer be released when dismantling Russia
-
-#Changes to Asia
-- Fixed the Brunei Protectorate Decision to account for Sarawak cores being removed by Malaysia decision
-- Added a decision that allows any non-ai indian country that entirely controls RAJ to annex it during a war with the UK
-- Added a cleanup decision incase the EIC somehow bugs out and breaks free from the UK during the Sepoy Rebellion
-- Maldives now starts as a vassal of the UK rather than direct rule, added a decision to annex it
-- Changed terrain type for the Andaman & Nicobar Islands
-- Increased the RP debuff Qing gets at the start of the game
-- Added a Decision 'Establish the Peking Field Force', gives military techs and reforms to Qing
-- Added a Decision 'The New Policies', gives economic reforms to Qing
-- Canton now starts with 3 Modifiers 'The Cohong', 'Local Opium Habit', 'Foreign Smugglers', most of Guangdong also now starts with the Opium Habit modifier
-- Added a Decision 'Appoint Lin Zexu', starts as the new start point for the First Opium War Event Chain, having Lin Zexu as a modifier slows down the rate of which Opium will spread in China, but he will be removed if Qing loses the Opium War
-- 'Opium Habit' will now give a small debuff (that stacks per province with the modifier) to Land & Naval Organization, to better represent the effect of having Opium addicted troops
-- 'The Treaty of Nanking' will now add Foreign Trading Post modifiers to Fuzhou, Canton, Shanghai and Ningbo
-- Added more conditions to make sure the Government of India Act is passed
-- Added a Decision 'Establish the Hanyang Arsenal' - Constructs small arms factory in Hanyang, changes RGO to coal, activates Breech-Loaded Rifles Tech
-- The Anglo & French Siam Treaties will now return any non-historical territory owned
-- 'Selling Kashmir' - Now can only happen when the EIC is a puppet of the UK, Will no longer auto-annex an ai Chitral
-- 'The Great Game' Casus Belli - Can now be used by the UK or RUS at any time, will now add the targeted country to your sphere, adds 2.5 infamy every time its used.
+- Adjusted some city terrain modifiers
+- Changed province picture for Old Tianjin
 
 #Changes to Africa
-- Made the 'Educate the Natives' decision less effective
-- Improved the 'Form the Boer Union' decision, will now act the same way as the rest of the National Unification decisions
-- The 'Claim X' Decisions for the boer states will no longer appear if you own the provinces
-- Bugfix: EVT6015 will now only occur for Boer Countries
-- Added a triggered modifier to make West Africa colonial blobbing by small countries more difficult in the early game.
-
-#Changes to Americas
-- Added an alternate Rupert's Land Act if Canadian Dominion is refused
-- The British Colombia Dominion event will now work
-- Added a decision for the USA to become the FSA if Lousiana was taken by the French (Based on More Stuff for HFM minimod)
-- Adjusted pop growth buffs for USA
-- Added another way for the British to indicate their interest in Alaska
-- Several Latin American countries now start with the Dragoons invention
-- Changed Lousiana Republican Flag
-- Reduced some buffs for the CSA
-- French Lousiana - Any Greater Power will now get a Cut Down CB if France goes for Lousiana
-- Increased the Infamy gain for each step of the French North America Chain
-- Changed terrain picture for Vancouver
-- Modified the Oregon War Events
+- Added War name localization for the Boer War

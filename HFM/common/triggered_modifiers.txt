@@ -228,6 +228,7 @@ the_british_raj = {
 greater_germany = {
 	trigger = {
 		exists = yes
+		ai = no
 		549 = {
 			owned_by = THIS
 		}
@@ -303,7 +304,7 @@ vassal_nation = {
 		is_substate = no
 	}
 	icon = 10
-	prestige = -1
+	prestige = -2
 }
 
 substate_nation = {
@@ -313,7 +314,7 @@ substate_nation = {
 		civilized = yes
 	}
 	
-	prestige = -0.25
+	prestige = -2
 	max_loan_modifier = -1.0
 	min_tax = 0.4
 	max_military_spending = -0.25
@@ -558,7 +559,10 @@ help_ai_arc = {
 
 help_ai_spain = {
 	trigger = {
-		owns = 487
+		OR = {
+			owns = 487
+			owns = 1649
+		}
 		centralization = regionalism
 		ai = yes
 	}
@@ -688,6 +692,10 @@ stop_it_mec = {
 					capital = 540
 				}
 				total_pops = 65000
+			}
+			AND = {
+				capital = 370
+				total_pops = 90000
 			}
 			AND = {
 				OR = {
@@ -839,4 +847,14 @@ pashtunwali = {
 	org_regain = 0.2
 	war_exhaustion = -2.5
 	mobilisation_size = 0.2
+}
+
+line_of_advantage = {
+	trigger = {
+		primary_culture = japanese
+		is_mobilised = yes
+		ai = yes
+	}
+	icon = 10
+	mobilisation_economy_impact = -0.8
 }

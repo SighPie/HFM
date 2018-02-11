@@ -2446,7 +2446,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA810003" #We will abolish the sound dues
 		badboy = -2
-		prestige = -25
+		prestige = -40
 		372 = { trade_goods = grain remove_province_modifier = sound_dues_toll }
 		set_global_flag = sound_dues_abolished
 		treasury = 300000

@@ -9,7 +9,8 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
 		war = no
 		year = 1867
 		any_owned_province = { is_core = FCA }
@@ -51,7 +52,7 @@ country_event = {
 			militancy = -10
 		}
 		FCA = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		any_owned = {
 			limit = { 
@@ -175,7 +176,7 @@ country_event = {
 			militancy = -10
 		}
 		FCA = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		release_vassal = FCA
 		FCA = {
@@ -210,7 +211,8 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
 		war = no
 		year = 1890
 		any_owned_province = { is_core = NZF }
@@ -255,7 +257,7 @@ country_event = {
 			militancy = -10
 		}
 		NZF = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		any_owned = {
 			limit = { 
@@ -378,7 +380,7 @@ country_event = {
 			militancy = -10
 		}
 		NZF = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		release_vassal = NZF
 		NZF = { prestige = -80 }
@@ -411,7 +413,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
 		war = no
 		year = 1870
 		any_owned_province = { is_core = ULA }
@@ -471,7 +473,7 @@ country_event = {
 			militancy = -10
 		}
 		ULA = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		any_owned = {
 			limit = { 
@@ -594,7 +596,7 @@ country_event = {
 			militancy = -10
 		}
 		ULA = {
-			all_core = { remove_core = FRA }
+			all_core = { remove_core = THIS }
 		}
 		release_vassal = ULA
 		ULA = { prestige = -80 }

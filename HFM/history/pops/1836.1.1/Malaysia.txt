@@ -3,12 +3,6 @@
 #Ruled By Britain 1836
 #Singapore (36000/9000 POPS)
 1384 = {
-	bureaucrats = {
-		culture = british
-		religion = protestant
-		size = 10
-	}
-	
 	labourers = {
 		culture = min
 		religion = protestant

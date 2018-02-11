@@ -218,8 +218,9 @@ country_event = {
 				all_core = { remove_core = THIS }
 			}
 		}
+		
 		any_owned = {
-				secede_province = FROM
+			secede_province = FROM
 		}
 
 		random_owned = {

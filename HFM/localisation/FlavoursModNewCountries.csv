@@ -1,5 +1,13 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+MGL_colonial_company;Wai Menggu;;;;;;;;;;;;;x,
+MGL_theocracy;Bogd Khaanate;;;;;;;;;;;;;x,
+MGL_proletarian_dictatorship;Mongolian People's Republic;;;;;;;;;;;;;x,
+ALS_colonial_company;Reichsland Elsass-Lothringen;;;;;;;;;;;;;x,
+MCK_absolute_monarchy;Manchukuo;;;;;;;;;x;;;;;;;;
+MCK_prussian_constitutionalism;Manchukuo;;;;;;;;;;;;;x
+MCK_hms_government;Manchukuo;;;;;;;;;;;;;x,
+MCK_colonial_company;Guandong;;;;;;;;;;;;;x,
 TST;Alto Adige;;;;;;;;;x;;;;;;;;
 TST_colonial_company;Südtirol;;;;;;;;;;;;;;x
 LOM_colonial_company;The Kingdom of Lombardy–Venetia;;;;;;;;;;;;;;x
@@ -32,7 +40,7 @@ HDJ_prussian_constitutionalism;Hashemiteb Hejaz;;;;;;;;;;;;;x,
 HDJ_hms_government;Hashemite Hejaz;;;;;;;;;;;;;x,
 CAL;The California Republic;;;;;;;;;;;;;x
 BAN_colonial_company;Freistaat Banat;;;;;;;;;;;;;x
-SIE_colonial_company;Siebenbürgen;;;;;;;;;;;;;x
+SIE_colonial_company;Siebenburgen;;;;;;;;;;;;;x
 SIE_colonial_company_ADJ;Siebenbürger;;;;;;;;;;;;;x
 SIE_reactionary;Sachsen Landtag;;;;;;;;;;;;;x,
 SIE_conservative;Unio Trium Nationum;;;;;;;;;;;;;x,
@@ -106,9 +114,9 @@ KUK_democracy;The Austro-Hungarian Confederation;;;;;;;;;;x
 KUK_democracy_ADJ;Austro-Hungarian;Danubien;Donau-;;danubiana;;;;;;;;;x
 VLG;Volgaland;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 VLG_ADJ;Volga German;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-VLG_absolute_monarchy;The Duchy of the Volga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-VLG_prussian_constitutionalism;The Duchy of the Volga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-VLG_hms_government;The Duchy of the Volga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+VLG_absolute_monarchy;Herzogtum Wolga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+VLG_prussian_constitutionalism;Herzogtum Wolga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+VLG_hms_government;Herzogtum Wolga;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 VLG_democracy;The Volga Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 VLG_proletarian_dictatorship;The Volga German SSR;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 VLG_fascist_dictatorship;The Volga State;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -198,8 +206,8 @@ NIA;Nianjun;;;;;;;;;;;;x
 NIA_absolute_monarchy;Nianjun;;;;;;;;;;;;x
 NIA_ADJ;Nian;;;;;;;;;;;;x
 NIA_conservative;Zhang Lexing Faction;;;;;;;;;;;;x
-IMG;Inner Mongolia;;;;;;;;;;;;;x
-IMG_colonial_company;Mengjiang;;;;;;;;;;;;;x
+IMG;Mengjiang;;;;;;;;;;;;;x
+IMG_colonial_company;Nei Menggu;;;;;;;;;;;;;x
 IMG_ADJ;Mongolian;;;;;;;;;;;;;x
 MIT;Mittelafrika;;;;;;;;;;;;;;x
 MIT_ADJ;German;;;;;;;;;;;;;;x

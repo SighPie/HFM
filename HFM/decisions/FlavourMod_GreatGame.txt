@@ -200,8 +200,9 @@ political_decisions = {
 		potential = {
 			tag = ENG
 			is_greater_power = yes
+			is_disarmed = no
 			OR = {
-				revolution_n_counterrevolution = 1
+				AFG = { vassal_of = RUS }
 				AFG = {
 					any_core = { 
 						owned_by = RUS

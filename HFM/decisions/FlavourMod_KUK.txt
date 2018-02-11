@@ -122,10 +122,8 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			tag = AUS
-			ai = yes
-			PRU = {
-				ai = yes
-			}
+			#ai = yes
+			PRU = { ai = yes }
 			OR = {
 				SGM = {
 					exists = yes
@@ -136,12 +134,8 @@ political_decisions = {
 					is_vassal = no
 				}
 				AND = {
-					NOT = {
-						exists = SGM
-					}
-					594 = { #Sigmaringen
-						owned_by = PRU
-					}
+					NOT = { exists = SGM }
+					594 = { owned_by = PRU } #Sigmaringen 
 				}
 			}
 			NOT = { 
@@ -149,6 +143,11 @@ political_decisions = {
 				exists = SGF
 				exists = GER 
 				exists = GCF
+				has_country_flag = brothers_war_loser
+			}
+			OR = { 
+				BAV = { in_sphere = THIS }
+				BAD = { in_sphere = THIS }
 			}
 			NOT = { has_country_flag = ai_demand_sigmaringen }
 		}
@@ -156,9 +155,9 @@ political_decisions = {
 		allow = {
 			war = no
 			truce_with = PRU
-			has_recently_lost_war = no
 			PRU = {
-				has_recently_lost_war = yes
+				has_recently_lost_war = yes 
+				war_exhaustion = 40
 			}
 			OR = {
 				has_country_modifier = brothers_war_aggressor
@@ -169,6 +168,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = ai_demand_sigmaringen
+			war_exhaustion = -25
 			badboy = 5
 			remove_country_modifier = brothers_war_aggressor
 			any_country = {
@@ -184,28 +184,4 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	#become_german_confederation = {
-		#potential = {
-			#ai = no
-			#tag = GER	
-			#primary_culture = south_german
-			#NOT = { has_country_flag = become_german_confederation }
-		#}
-		
-		#allow = {
-			#war = no
-		#}
-		
-		#effect = {
-			#change_tag = GCF
-			#set_country_flag = become_german_confederation
-			#GER = {
-				#all_core = {
-					#remove_core = GER
-					#add_core = GCF
-				#}	
-			#}
-		#}
-	#}
 }

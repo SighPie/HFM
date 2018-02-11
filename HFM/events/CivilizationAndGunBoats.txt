@@ -21,6 +21,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = western_influences
 			has_country_modifier = uncivilized_isolationism
+			has_country_flag = new_policies
 		}
 		OR = {
 			any_owned_province = { port = yes }
@@ -985,7 +986,8 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				OR = {
+				OR = {	
+					government = colonial_company
 					government = absolute_monarchy
 					government = proletarian_dictatorship
 					government = fascist_dictatorship
@@ -1942,7 +1944,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		any_owned_province = {
 			has_pop_type = aristocrats
@@ -4124,7 +4126,12 @@ country_event = {
 		name = "EVTOPTA13355"
 		prestige = -25
 		war_exhaustion = 5
-		1612 = { clr_province_flag = summer_palace }
+		1612 = { 
+			clr_province_flag = summer_palace 
+			any_pop = {
+				reduce_pop = 0.99
+			}
+		}
 	}
 }
 
@@ -4531,7 +4538,10 @@ province_event = {
 			province_id = 1566
 			province_id = 1569
 			province_id = 2632
-			province_id = 1538
+			AND = {
+				province_id = 1538
+				owner = { civilized = yes }
+			}
 		}
 	}
 
@@ -4563,7 +4573,7 @@ province_event = {
 	
 	fire_only_once = yes
 
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { days = 1 }
 
 	immediate = {
 		1493 = { any_pop = { limit = { type = serfs culture = yue } move_pop = 1496 } }
@@ -5028,6 +5038,7 @@ country_event = {
 	
 	option = {
 		name = "EVT90962OPTA"
+		set_country_flag = missionary_activity
 		add_country_modifier = { name = missionary_activity duration = 1825 }
 		clr_country_flag = animist_country
 		clr_country_flag = lacking_writing_system

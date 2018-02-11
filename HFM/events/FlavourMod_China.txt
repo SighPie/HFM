@@ -18,10 +18,7 @@ country_event = {
 			NOT = { owns = 2632 } #Ningbo
 			exists = LEG
 		}
-		OR = {
-			year = 1895
-			civilized = yes
-		}
+		civilized = yes
 		OR = {
 			government = absolute_monarchy
 			government = prussian_constitutionalism
@@ -42,13 +39,18 @@ country_event = {
 	mean_time_to_happen = {
 		months = 60
 		modifier = {
-			factor = 0.5
+			factor = 0.3
 			year = 1902
 		}
 
 		modifier = {
 			factor = 0.1
 			year = 1903
+		}
+		
+		modifier = {
+			factor = 0.01
+			year = 1904
 		}
 
 		modifier = {
@@ -80,6 +82,7 @@ country_event = {
 	option = {
 		name = "EVTOPT99905"
 		set_country_flag = guangzhou_uprising
+		plurality = -1
 		any_pop = {
 			limit = {
 				is_culture_group = east_asian
@@ -96,7 +99,7 @@ country_event = {
 			}
 			scaled_militancy = {
 				ideology = liberal
-				factor = 4
+				factor = 6
 			}
 			dominant_issue = {
 				value = free_press
@@ -111,6 +114,7 @@ country_event = {
 	}
 }
 
+#Guangxu Emperor
 country_event = {
 	id = 99912
 	title = "EVTNAME99912"
@@ -147,6 +151,7 @@ country_event = {
 	
 	option = {
 		name = "EVT99912OPTA"
+		plurality = -2
 		any_pop = {
 			limit = {
 				is_primary_culture = yes
@@ -159,8 +164,7 @@ country_event = {
 			factor = 2
 		}
 		set_country_flag = guangxu_emperor
-	}
-		
+	}		
 }
 
 #Ever Victorious Army Boost
@@ -170,7 +174,7 @@ country_event = {
 	desc = "EVTDESC99912"
 	fire_only_once = yes	
 	trigger = {
-		has_country_flag = the_xiang_army
+		has_global_flag = the_xiang_army
 		ai = yes
 		tag = QNG
 		OR = {
@@ -210,7 +214,7 @@ country_event = {
 	title = "EVTNAME99912"
 	desc = "EVTDESC99912"
 	trigger = {
-		has_country_flag = the_xiang_army
+		has_global_flag = the_xiang_army
 		tag = QNG
 		ai = yes
 		1082 = { owned_by = RUS }
@@ -285,6 +289,7 @@ country_event = {
 
 	option = {
 		name = "EVT160001OPTA"
+		plurality = -5
 		war = {
 			target = TPG
 			attacker_goal = {
@@ -350,8 +355,7 @@ country_event = {
 	}
 }
 
-### End of Qing ai Buffs & Debuffs ### 
-
+#Miao Rebellion
 country_event = {
 	id = 99947
 	title = "EVTTITLE99947" #Miao Rebellion
@@ -363,7 +367,7 @@ country_event = {
 	trigger = {
 		tag = QNG
 		OR = {
-			has_global_flag = taiping_has_happened
+			has_global_flag = tpg_war_started
 			year = 1857
 		}
 		NOT = { has_global_flag = miao_rebellion }
@@ -384,10 +388,12 @@ country_event = {
 	option = {
 		name = "EVT80121OPTA"
 		set_global_flag = miao_rebellion
+		plurality = -1
 		any_country = {
 			limit = {
 				tag = GUI
 			}
+			government = absolute_monarchy
 			primary_culture = miao
 			religion = animist
 			any_pop = {
@@ -456,6 +462,7 @@ country_event = {
 		name = "EVT80126OPTA"
 		clr_global_flag = miao_rebellion
 		prestige = 10
+		plurality = -1
 		CHI_1505 = {
 			any_pop = {
 				limit = {
@@ -623,6 +630,7 @@ country_event = {
 	option = {
 		name = "EVTOPT99963"
 		war_exhaustion = -100
+		plurality = -1
 		any_owned = {
 			limit = {
 				controlled_by = TPG
@@ -839,11 +847,12 @@ country_event = {
 
 	option = {
 		name = "EVTOPT99966"
+		plurality = -1
 		define_general = {
-				name = "Sengge Rinchen"
-				personality = brilliant
-				background = expert_raider
-			}
+			name = "Sengge Rinchen"
+			personality = brilliant
+			background = expert_raider
+		}
 		war = {
 			target = NIA
 			attacker_goal = { casus_belli = conquest_any }
@@ -873,6 +882,7 @@ country_event = {
 	option = {
 		name = "EVT80126OPTA"
 		prestige = 10
+		plurality = -1
 		CHI_1508 = {
 			any_pop = {
 				reduce_pop = 0.95
@@ -1244,6 +1254,7 @@ country_event = {
 	option = {
 		name = "EVOPTA13067"
 		prestige = -15
+		plurality = -1
 		capital_scope = {
 			add_province_modifier = {
 				name = legation_quarter
@@ -1337,9 +1348,9 @@ country_event = {
 				personality = implacable
 				background = natural_born_leader
 			}
-			small_arms = 150
-			canned_food = 150
-			regular_clothes = 150
+			small_arms = 250
+			canned_food = 350
+			regular_clothes = 250
 			military_reform = yes_foreign_training 
 			military_reform = yes_foreign_weapons
 			military_reform = yes_foreign_officers
@@ -1406,3 +1417,151 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 999960
+	title = "EVTNAME999960"
+	desc = "EVTDESC999960"
+	picture = "siege_of_peking"
+
+	trigger = {	
+		OR = { 
+			tag = QNG
+			tag = CHI
+			tag = KMT
+			tag = GMJ
+		}
+		civilized = yes
+		NOT = { has_country_flag = century_of_humiliation }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA999960"
+		set_country_flag = century_of_humiliation
+		plurality = 1
+		random_owned = { limit = {  owner = { has_global_flag = ever_victorious_army } } owner = { activate_technology = military_staff_system } }
+		random_owned = { limit = {  owner = { has_global_flag = the_xiang_army } } owner = { activate_technology = army_command_principle } }
+		random_owned = { 
+			limit = {  owner = { has_country_flag = beiyang_fleet_established } }
+			owner = { 
+				activate_technology = battleship_column_doctrine
+				activate_technology = steamers
+				activate_technology = alphabetic_flag_signaling
+				activate_technology = iron_steamers 
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = the_new_army_established } }
+			owner = { 
+				activate_technology = army_command_principle
+				activate_technology = muzzle_loaded_rifles
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_staff_system
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = fuzhou_aresenal_established } }
+			owner = { 
+				activate_technology = post_nelsonian_thought
+				activate_technology = clipper_design
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = establish_the_peking_field_force } }
+			owner = { 
+				activate_technology = military_plans
+				activate_technology = army_professionalism
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = hanyang_arsenal } }
+			owner = { 
+				activate_technology = breech_loaded_rifles 
+				activate_technology = piston_steam_engine
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = abolish_the_imperial_examinations } }
+			owner = { 
+				social_reform = low_schools
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = kiangnan_aresenal_established } }
+			owner = { 
+				activate_technology = raider_group_doctrine
+				activate_technology = mechanized_mining
+			} 
+		}
+		random_owned = {
+			limit = {  owner = { has_country_flag = establish_china_merchants_group } }
+			owner = { 
+				activate_technology = freedom_of_trade
+			} 
+		}
+	}
+}
+
+#Xuantong Emperor
+country_event = {
+	id = 999961
+	title = "EVTNAME999961"
+	desc = "EVTDESC999961"
+	picture = "puyi_child"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = QNG
+		year = 1906
+		owns = 1616 #Peking
+		exists = yes
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = { has_global_flag = xuantong_emperor }
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 0.5
+			civilized = yes
+		}
+		
+		modifier = {
+			factor = 0.5
+			LEG = { exists = yes }
+		}
+		
+		modifier = {
+			factor = 0.1
+			year = 1908
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA999961"
+		plurality = -2
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+			}
+			consciousness = -1
+			militancy = -1
+		}
+		scaled_consciousness = {
+			ideology = liberal
+			factor = 3
+		}
+		scaled_militancy = {
+			ideology = liberal
+			factor = 3
+		}
+		set_global_flag = xuantong_emperor
+	}		
+}

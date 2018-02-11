@@ -1,5 +1,5 @@
-owner = ENG
-controller = ENG
+owner = EIC
+controller = EIC
 add_core = JOH
 add_core = SIA
 trade_goods = timber

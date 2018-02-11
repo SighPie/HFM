@@ -2768,13 +2768,7 @@
 	artisans = {
 		culture = british
 		religion = protestant
-		size = 400
-	}
-	
-	bureaucrats = {
-		culture = british
-		religion = protestant
-		size = 50
+		size = 100
 	}
 	
 	clergymen = {

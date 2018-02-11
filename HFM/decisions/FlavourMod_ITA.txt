@@ -1,5 +1,5 @@
 political_decisions = {
-		prussian_italian_alliance = {
+	prussian_italian_alliance = {
 		picture = form_italy
 		potential = {
 			OR = {

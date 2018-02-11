@@ -58,6 +58,10 @@ country_event = {
 			value = 100
 		}
 		create_alliance = SWK
+		SWK = {
+			economic_reform = yes_foreign_weapons
+			economic_reform = yes_admin_reform
+		}
 		ai_chance = {
 			factor = 90
 		}
@@ -943,11 +947,12 @@ country_event = {
 			}
 		}
 		
-		random_owned = {
+		any_owned = {
 			limit = {
 				OR = { 
 					province_id = 1340
 					province_id = 1338
+					is_core = BUR
 				}
 			}
 			secede_province = FROM
@@ -961,7 +966,6 @@ country_event = {
 					OR = {
 						region = SIA_1358
 						region = SIA_1392
-						region = SIA_1355
 						province_id = 2572
 						province_id = 1355
 					}

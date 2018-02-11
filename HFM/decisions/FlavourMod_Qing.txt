@@ -7,7 +7,7 @@ political_decisions = {
 				tag = GCF
 			}
 			is_greater_power = yes
-			1566 = { owner = { civilized = no } }
+			1566 = { owner = { civilized = no NOT = { war_with = THIS } } }
 			2531 = { owned_by = THIS} #NewGuinea
 			OR = {
 				government = absolute_monarchy
@@ -42,7 +42,7 @@ political_decisions = {
 			is_greater_power = yes
 			1369 = { owned_by = FRA } #Saigon
 			1496 = { owned_by = ENG } #HongKong
-			2632 = { owner = { civilized = no } }
+			2632 = { owner = { civilized = no NOT = { war_with = THIS }  } }
 			NOT = { has_country_flag = kwangchowan_treaty_port_fra }
 		}
 		
@@ -75,7 +75,7 @@ political_decisions = {
 				1481 = { owned_by = RUS }
 				1481 = { owned_by = JAP }
 			}
-			1569 = { owner = { civilized = no } }
+			1569 = { owner = { civilized = no NOT = { war_with = THIS } } }
 			NOT = { has_country_flag = weihaiwei_treaty_port_eng }
 		}
 		
@@ -102,9 +102,10 @@ political_decisions = {
 			has_global_flag = second_opium_war
 			has_country_modifier = negotiating_treaty	
 			NOT = { owns = 1538 }
-			1538 = { owner = { civilized = no } }
-			QNG = { exists = yes truce_with = THIS }
+			1538 = { owner  = { has_country_modifier = negotiating_unequal_treaty  truce_with = THIS tag = QNG } }
+			QNG = { exists = yes }
 			NOT = { has_country_modifier = chinese_treaty_port }
+			NOT = { has_global_flag = second_opium_war_treaty }
 		}
 		
 		allow = {
@@ -112,8 +113,10 @@ political_decisions = {
 		
 		effect = {
 			prestige = 10
-			badboy = -2
+			badboy = -3
 			remove_country_modifier = negotiating_treaty
+			set_global_flag = second_opium_war_treaty
+			relation = { who = QNG value = 150 }
 			1538 = {
 				secede_province = QNG
 				remove_core = TPG
@@ -127,10 +130,26 @@ political_decisions = {
 					duration = -1
 				}
 				add_province_modifier = {
-					name = missionary_activity
-					duration = -1
+					name = baby_boom
+					duration = 720
 				}
 			}
+			QNG = {
+				any_pop = {
+					limit = { is_state_religion = yes }
+					scaled_consciousness = { factor = 2 issue = moralism }
+					scaled_militancy = { factor = 1 issue = moralism }
+				}
+				remove_country_modifier = negotiating_unequal_treaty
+				plurality = -5
+				religion = protestant
+				set_country_flag = protestant_country
+				clr_country_flag = change_to_protestant
+				set_country_flag = missionary_activity
+				
+				add_country_modifier = { name = missionary_activity duration = 3650 }
+			}
+			
 			add_country_modifier = { name = chinese_treaty_port duration = 1095 }
 		}
 		
@@ -150,7 +169,7 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			TPG = { exists = yes }
-			has_country_flag = the_xiang_army
+			has_global_flag = the_xiang_army
 			has_country_flag = arrow_incident
 			NOT = { has_global_flag = ever_victorious_army }
 		}
@@ -176,7 +195,6 @@ political_decisions = {
 				name = ever_victorious_army 
 				duration = 1825
 			}
-			activate_technology = military_staff_system
 			set_global_flag = ever_victorious_army 		
 			define_general = {
 				name = "Frederick Townsend Ward"
@@ -212,7 +230,7 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			TPG = { exists = yes }
-			NOT = { has_country_flag = the_xiang_army }
+			NOT = { has_global_flag = the_xiang_army }
 		}
 		
 		allow = {
@@ -238,7 +256,6 @@ political_decisions = {
 		}
 		
 		effect = {
-			war_exhaustion = -10
 			activate_technology = army_command_principle
 			add_country_modifier = {
 				name = the_xiang_army 
@@ -249,7 +266,7 @@ political_decisions = {
 				personality = implacable
 				background = gifted_administrator
 			}
-			set_country_flag = the_xiang_army 	
+			set_global_flag = the_xiang_army 	
 			random_owned = {
 				limit = {
 					province_id = 1616
@@ -382,7 +399,13 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = imperial_decree_of_war 
+			plurality = 5
 			remove_country_modifier = boxer_attacked
+			remove_country_modifier = missionary_activity
+			religion = mahayana
+			set_country_flag = mahayana_country
+			clr_country_flag = protestant_country
+			clr_country_flag = change_to_protestant
 			any_greater_power = {
 				limit = { war_with = THIS }
 				set_country_flag = intervened_boxer_war
@@ -461,19 +484,16 @@ political_decisions = {
 				}
 				country_event = 99951
 			}
-			activate_technology = battleship_column_doctrine
-			activate_technology = steamers
+			#activate_technology = battleship_column_doctrine
+			#activate_technology = steamers
 			activate_technology = alphabetic_flag_signaling
-			activate_technology = iron_steamers
+			#activate_technology = iron_steamers
 			random_owned = {
-				limit = {
-					owner = { civilized = no }
-				}
-				owner = {
-					military_reform = yes_foreign_navies
-				}
+				limit = { owner = { civilized = no } }
+				owner = { military_reform = yes_foreign_navies }
 			}
 			CHI = {
+				set_country_flag = beiyang_fleet_established 
 				activate_technology = battleship_column_doctrine
 				activate_technology = steamers
 				activate_technology = alphabetic_flag_signaling
@@ -481,6 +501,7 @@ political_decisions = {
 			}
 			
 			KMT = {
+				set_country_flag = beiyang_fleet_established 
 				activate_technology = battleship_column_doctrine
 				activate_technology = steamers
 				activate_technology = alphabetic_flag_signaling
@@ -501,8 +522,8 @@ political_decisions = {
 		
 		allow = {
 			OR = {
-				year = 1890
-				civilization_progress = 0.50
+				year = 1895
+				civilization_progress = 0.5
 				civilized = yes
 				AND = {
 					foreign_weapons = yes_foreign_weapons
@@ -530,10 +551,11 @@ political_decisions = {
 			}
 			set_country_flag = the_new_army_established 
 			activate_technology = army_command_principle
+			activate_technology = flintlock_rifles
 			activate_technology = muzzle_loaded_rifles
 			activate_technology = bronze_muzzle_loaded_artillery
 			activate_technology = iron_muzzle_loaded_artillery
-			activate_technology = military_plans
+			activate_technology = military_staff_system
 			random_owned = {
 				limit = {
 					owner = { civilized = no }
@@ -541,6 +563,7 @@ political_decisions = {
 				owner = {
 					military_reform = yes_foreign_training
 					military_reform = yes_foreign_weapons
+					activate_technology = flintlock_rifles
 				}
 			}
 			any_pop = {
@@ -551,16 +574,28 @@ political_decisions = {
 				consciousness = -2
 			}
 			CHI = {
+				set_country_flag = the_new_army_established 
+				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
 				activate_technology = bronze_muzzle_loaded_artillery
 				activate_technology = iron_muzzle_loaded_artillery
-				activate_technology = military_plans
+				activate_technology = military_staff_system
 			}
 			KMT = {
+				set_country_flag = the_new_army_established 
+				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
 				activate_technology = bronze_muzzle_loaded_artillery
 				activate_technology = iron_muzzle_loaded_artillery
-				activate_technology = military_plans
+				activate_technology = military_staff_system
+			}
+			GMJ = {
+				set_country_flag = the_new_army_established 
+				activate_technology = flintlock_rifles
+				activate_technology = muzzle_loaded_rifles
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_staff_system
 			}
 		}
 		
@@ -582,6 +617,10 @@ political_decisions = {
 		effect = {
 			set_country_flag = appoint_yuan_shikai
 			prestige = 5
+			plurality = 5
+			clr_country_flag = nv_change
+			set_country_flag = switched_nv
+			nationalvalue = nv_autocracy
 			add_country_modifier = {
 				name = yuan_shikai
 				duration = -1
@@ -591,11 +630,14 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	
 	establish_the_fuzhou_aresenal = {
 		picture = fuzhou_aresenal
 		potential = {
-			tag = QNG
+			OR = { 
+				tag = QNG
+				tag = KMT
+				tag = CHI
+			}
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = fuzhou_aresenal_established }
 		}
@@ -628,10 +670,12 @@ political_decisions = {
 			activate_technology = post_nelsonian_thought
 			activate_technology = clipper_design
 			CHI = {
+				set_country_flag = fuzhou_aresenal_established 
 				activate_technology = post_nelsonian_thought
 				activate_technology = clipper_design
 			}
 			KMT = { 
+				set_country_flag = fuzhou_aresenal_established 
 				activate_technology = post_nelsonian_thought
 				activate_technology = clipper_design
 			}
@@ -702,10 +746,10 @@ political_decisions = {
 						type = officers
 					}
 				}
-				militancy = 3
-				consciousness = 5
+				militancy = 8
+				consciousness = 8
 			}
-			plurality = -1
+			plurality = -3
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -728,7 +772,7 @@ political_decisions = {
 			treasury = -75000
 			set_country_flag = establish_the_peking_field_force 
 			activate_technology = military_staff_system
-			activate_technology = flintlock_rifles
+			activate_technology = army_professionalism
 			random_owned = {
 				limit = {
 					owner = { civilized = no }
@@ -736,15 +780,20 @@ political_decisions = {
 				owner = {
 					military_reform = yes_foreign_weapons
 					military_reform = yes_foreign_officers
+					activate_technology = flintlock_rifles
 				}
 			}
 			CHI = {
-				activate_technology = military_staff_system
+				set_country_flag = establish_the_peking_field_force 
 				activate_technology = flintlock_rifles
+				activate_technology = military_staff_system
+				activate_technology = army_professionalism
 			}
 			KMT = {
-				activate_technology = military_staff_system
+				set_country_flag = establish_the_peking_field_force 
 				activate_technology = flintlock_rifles
+				activate_technology = military_staff_system
+				activate_technology = army_professionalism
 			}	
 		}
 		
@@ -769,6 +818,7 @@ political_decisions = {
 			OR = {
 				exists = LEG
 				year = 1900
+				civilized = yes
 			}
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = new_policies }
@@ -879,7 +929,7 @@ political_decisions = {
 			has_country_flag = self_strengthening_movement
 			capital = 1616
 			owns = 1516
-			NOT = { has_global_flag = hanyang_arsenal }
+			NOT = { has_country_flag = hanyang_arsenal }
 		}
 		
 		allow = {
@@ -895,14 +945,23 @@ political_decisions = {
 		effect = {
 			treasury = -75000
 			prestige = 5
-			set_global_flag = hanyang_arsenal 
+			set_country_flag = hanyang_arsenal 
 			random_owned = {
 				limit = { owner = { civilized = no } }
 				owner = { economic_reform = yes_firearms_production }
 			}	
 			activate_technology = breech_loaded_rifles
-			CHI = { activate_technology = breech_loaded_rifles }
-			KMT = { activate_technology = breech_loaded_rifles }
+			activate_technology = piston_steam_engine
+			CHI = { 
+				set_country_flag = hanyang_arsenal 
+				activate_technology = breech_loaded_rifles 
+				activate_technology = piston_steam_engine
+			}
+			KMT = { 
+				set_country_flag = hanyang_arsenal 
+				activate_technology = breech_loaded_rifles
+				activate_technology = piston_steam_engine
+			}
 			random_owned = {
 				limit = {
 					province_id = 1516
@@ -931,7 +990,11 @@ political_decisions = {
 	establish_china_merchants_group  = {
 		picture = china_merchants_group
 		potential = {
-			tag = QNG
+			OR = { 
+				tag = QNG
+				tag = KMT
+				tag = CHI
+			}
 			OR = { 
 				AND = { 
 					civilized = no
@@ -957,8 +1020,14 @@ political_decisions = {
 			prestige = 5
 			treasury = -5000
 			activate_technology = freedom_of_trade
-			CHI = { activate_technology = freedom_of_trade }
-			KMT = { activate_technology = freedom_of_trade }
+			CHI = { 
+				set_country_flag = establish_china_merchants_group
+				activate_technology = freedom_of_trade
+			}
+			KMT = { 
+				set_country_flag = establish_china_merchants_group
+				activate_technology = freedom_of_trade 
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -968,8 +1037,7 @@ political_decisions = {
 		picture = imperial_examinations
 		potential = {
 			tag = QNG
-			year = 1890
-			OR = { 
+			OR = {
 				AND = { 
 					civilized = no
 					has_country_flag = new_policies
@@ -1005,8 +1073,14 @@ political_decisions = {
 				}
 				consciousness = 1
 			}
-			KMT = { social_reform = low_schools }
-			CHI = { social_reform = low_schools }
+			KMT = { 
+				set_country_flag = abolish_the_imperial_examinations
+				social_reform = low_schools 
+			}
+			CHI = { 
+				set_country_flag = abolish_the_imperial_examinations
+				social_reform = low_schools 
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1049,6 +1123,8 @@ political_decisions = {
 				value = 200
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	reclaim_lanfang = {
@@ -1082,6 +1158,8 @@ political_decisions = {
 				add_core = LAN
 			}	
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	three_principles_of_the_people = {
@@ -1118,6 +1196,8 @@ political_decisions = {
 				consciousness = -1
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}	
 	
 	kansu_braves = {
@@ -1134,7 +1214,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			money = 25001
+			money = 35001
 			OR = { 
 				AND = {
 					foreign_weapons = yes_foreign_weapons
@@ -1146,7 +1226,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = kansu_braves 
-			treasury = -25000
+			treasury = -35000
 			define_general = {
 				name = "Dong Fuxiang"
 				personality = brilliant
@@ -1155,9 +1235,10 @@ political_decisions = {
 			any_pop = {
 				limit = {
 					type = soldiers
+					has_pop_culture = hanhui
 					location = { region = CHI_1490 }
 				}
-				reduce_pop = 1.2
+				reduce_pop = 3.5
 			}
 		}
 		
@@ -1181,7 +1262,6 @@ political_decisions = {
 				exists = yes
 				vassal_of = THIS
 				neighbour = THIS
-				total_amount_of_divisions = 1
 			}
 			has_global_flag = black_flag_army
 			has_country_flag = self_strengthening_movement
@@ -1240,6 +1320,14 @@ political_decisions = {
 			set_global_flag = treaty_of_tientsin_france
 			prestige = 5
 			badboy = 1
+			QNG = {
+				any_pop = {
+					limit = {
+						is_culture_group = east_asian 
+					}
+					militancy = 5
+				}
+			}
 			HQJ = {
 				annex_to = THIS
 				all_core = {
@@ -1345,7 +1433,10 @@ political_decisions = {
 		effect = {
 			prestige = 10
 			treasury = -75000
-			economic_reform = yes_transport_improv
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = { economic_reform = yes_transport_improv }
+			}
 			build_railway_in_capital = {
 				in_whole_capital_state = yes # no = just in main capital province.
 				limit_to_world_greatest_level = yes
@@ -1357,6 +1448,80 @@ political_decisions = {
 				1493 = { infrastructure = 1 }
 			}
 			set_global_flag = establish_the_kaiping_tramway
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	establish_the_kiangnan_aresenal = {
+		picture = kiangnan_aresenal
+		potential = {
+			capital = 1616
+			OR = {
+				tag = QNG
+				tag = CHI
+				tag = KMT
+			}
+			has_country_flag = beiyang_fleet_established
+			has_country_flag = self_strengthening_movement
+			NOT = { has_country_flag = kiangnan_aresenal_established }
+		}
+		
+		allow = {
+			owns = 1538
+			war = no
+			money = 150001
+		}
+		
+		effect = {
+			1538 = {
+				any_pop = {
+					limit = {
+						is_culture_group = east_asian
+						NOT = { type = serfs }
+					}
+					literacy = 0.1
+				}
+			}
+			prestige = 5
+			treasury = -150000
+			set_country_flag = kiangnan_aresenal_established 
+			#activate_technology = raider_group_doctrine
+			activate_technology = mechanized_mining
+			random_owned = {
+				limit = { owner = { civilized = no } }
+				owner = { military_reform = yes_western_shipyards }
+			}
+			CHI = {
+				set_country_flag = kiangnan_aresenal_established 
+				activate_technology = raider_group_doctrine
+				activate_technology = mechanized_mining
+			}
+			KMT = { 
+				set_country_flag = kiangnan_aresenal_established 
+				activate_technology = raider_group_doctrine
+				activate_technology = mechanized_mining
+			}
+			random_owned = {
+				limit = {
+					province_id = 1616 #Peking
+					state_scope = {
+						NOT = { has_building = steel_factory }
+					}
+				}
+				
+				owner = { 
+					capital = 1538
+					build_factory_in_capital_state = steel_factory
+					build_factory_in_capital_state = steamer_shipyard
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 1616 #Berlin
+				}
+				owner = { capital = 1616 }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

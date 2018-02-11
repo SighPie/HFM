@@ -437,6 +437,7 @@ country_event = {
 		leave_alliance = RUS
 		EGY = {
 			remove_country_modifier = muhammad_alis_reforms
+			plurality = -10
 			set_country_flag = surrendered_to_OE
 			all_core = {
 				limit = { is_core = TUR }
@@ -973,6 +974,7 @@ country_event = {
 		remove_country_modifier = muhammad_alis_reforms
 		set_global_flag = egypt_submitted_to_ottomans
 		war_exhaustion = 20
+		plurality = -10
 		prestige = -25
 		any_pop = {
 			limit = { is_primary_culture = misri }
@@ -995,6 +997,7 @@ country_event = {
 	option = {
 		name = "EVT90087OPTB"
 		remove_country_modifier = muhammad_alis_reforms
+		plurality = -5
 		war_exhaustion = -20
 		ai_chance = {
 			factor = 5

@@ -53,6 +53,7 @@ upper_house = {
 
 
 land_reform = yes_land_reform
+education_reform = yes_education_reform
 foreign_artillery = yes_foreign_artillery
 finance_reform = yes_finance_reform
 
