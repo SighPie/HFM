@@ -247,7 +247,7 @@ country_event = {
 	
 	mean_time_to_happen = { months = 3 }
 	
-	fire_only_once
+	fire_only_once = yes
 	
 	option = {
 		name = "EVT10401OPTA"
