@@ -584,6 +584,10 @@ freedom_of_trade = {
 			is_greater_power = yes
 		}
 		modifier = {
+			factor = 5
+			tag = JAP
+		}
+		modifier = {
 			factor = 1.05
 			literacy = 0.1 
 		}

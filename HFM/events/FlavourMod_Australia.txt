@@ -13,8 +13,6 @@ country_event = {
 		NOT = { has_country_flag = 	australian_migration }
 	}
 	
-	fire_only_once = yes
-	
 	option = {
 		name = "EVTOPT99902"
 		2478 = { add_province_modifier = {name = gateway_to_australia duration = 365} }
@@ -49,6 +47,7 @@ country_event = {
 		OR = { 
 			tag = ENG
 			tag = FRA
+			tag = BOR
 			tag = AST
 			tag = FAS
 		}
@@ -60,8 +59,6 @@ country_event = {
 		year = 1851
 		NOT = { has_country_flag = australian_gold_migration }
 	}
-	
-	fire_only_once = yes
 
 	mean_time_to_happen = { months = 3 }
 	
@@ -99,6 +96,7 @@ country_event = {
 		OR = { 
 			tag = ENG
 			tag = FRA
+			tag = BOR
 			tag = AST
 			tag = FAS
 		}
@@ -111,8 +109,6 @@ country_event = {
 	}
 
 	mean_time_to_happen = { months = 3 }
-	
-	fire_only_once = yes
 	
 	option = {
 		name = "EVTOPT99928"

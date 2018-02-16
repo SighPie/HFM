@@ -390,9 +390,10 @@ country_event = {
 			clr_country_flag = fascist_gov
 			clr_country_flag = anarcho_liberal_gov
 			small_arms = 400
-			regular_clothes = 100
+			regular_clothes = 400
 			leadership = 40
 			canned_food = 500
+			treasury = 35000
 			add_country_modifier = {
 				name = begin_revolution
 				duration = 365
@@ -430,9 +431,9 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = no_more_war
-			days = 20
+			duration = 20
 		}
-		HUN = { country_event = { id=998120 days = 20} }
+		HUN = { country_event = { id=998120 days=20} }
 		set_global_flag = 2nd_hungarian_revoultion
 	}
 }

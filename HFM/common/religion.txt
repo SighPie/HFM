@@ -30,11 +30,6 @@ christian = {
 		color = { 0 0.5 0.7 }
 		
 	}
-        
-    god_worshippers = {
-		icon = 2
-		color = { 0 0.4 0.6 }
-	}
 }
 
 muslim = {

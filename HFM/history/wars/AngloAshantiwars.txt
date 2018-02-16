@@ -1,4 +1,4 @@
-name = "Anglo-Ashanti War"
+name = "The Anglo-Ashanti War"
 
 1823.4.19 = {
 	add_attacker = ENG

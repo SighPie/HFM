@@ -28,6 +28,7 @@ reactionary_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		french_bourbon = absolute_monarchy
+		dominion = presidential_dictatorship
 		democracy = presidential_dictatorship
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
@@ -325,6 +326,7 @@ fascist_rebels = {
 		prussian_constitutionalism = fascist_dictatorship
 		hms_government = fascist_dictatorship
 		french_bourbon = fascist_dictatorship
+		dominion = fascist_dictatorship
 		democracy = fascist_dictatorship
 		theocracy = fascist_dictatorship
 		colonial_company = fascist_dictatorship
@@ -613,6 +615,7 @@ communist_rebels = {
 		prussian_constitutionalism = proletarian_dictatorship
 		hms_government = proletarian_dictatorship
 		french_bourbon = proletarian_dictatorship
+		dominion = proletarian_dictatorship
 		democracy = proletarian_dictatorship
 		theocracy = proletarian_dictatorship
 		colonial_company = proletarian_dictatorship
@@ -913,7 +916,8 @@ anarcho_liberal_rebels = {
 		absolute_monarchy = bourgeois_dictatorship
 		prussian_constitutionalism = bourgeois_dictatorship
 		hms_government = bourgeois_dictatorship
-		french_bourbon = hms_government
+		french_bourbon = bourgeois_dictatorship
+		dominion = bourgeois_dictatorship
 		democracy = bourgeois_dictatorship
 		theocracy = bourgeois_dictatorship
 		colonial_company = bourgeois_dictatorship
@@ -1231,6 +1235,7 @@ nationalist_rebels = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -1384,7 +1389,12 @@ nationalist_rebels = {
 		}
 		modifier = {
 			factor = 0
-			location = { is_core = ANT }
+			location = {
+				OR = {
+					is_core = ANT
+					is_core = TST
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1549,6 +1559,7 @@ pan_nationalist_rebels = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = hms_government
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -1961,6 +1972,7 @@ carlist_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		french_bourbon = absolute_monarchy
+		dominion = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
@@ -2225,6 +2237,7 @@ christino_rebels = {
 		prussian_constitutionalism = hms_government
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = hms_government
 		democracy = hms_government
 		theocracy = theocracy
 		colonial_company = hms_government
@@ -2469,6 +2482,7 @@ boxer_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		french_bourbon = absolute_monarchy
+		dominion = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
@@ -2738,6 +2752,8 @@ red_shirts = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
+		french_bourbon = hms_government
+		dominion = hms_government
 		democracy = democracy
 		theocracy = democracy
 		colonial_company = hms_government
@@ -2976,6 +2992,7 @@ indian_sepoys = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -3238,8 +3255,11 @@ indian_nationalists = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
+		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
+		colonial_company = democracy
 	}
 
 	defection = none		# If the country seeks independence, defection specifies what type of provinces it wants.
@@ -3453,6 +3473,7 @@ liberal_rebels = {
 		prussian_constitutionalism = hms_government
 		hms_government = democracy
 		french_bourbon = democracy
+		dominion = democracy
 		democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
@@ -3899,6 +3920,7 @@ unciv_reactionary_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		french_bourbon = absolute_monarchy
+		dominion = absolute_monarchy
 		democracy = absolute_monarchy
 		theocracy = absolute_monarchy
 		colonial_company = colonial_company
@@ -3924,7 +3946,7 @@ unciv_reactionary_rebels = {
 
 	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the factions strength
 	will_rise = {
-		factor = 0.5
+		factor = 0.35
 		
 		modifier = {
 			war_exhaustion = 4
@@ -3961,13 +3983,15 @@ unciv_reactionary_rebels = {
 		modifier = {
 			factor = 0
 			country = { 
-				tag = EGY 
+				OR = { 
+					tag = EGY 
+					tag = KOR
+				} 
 				ai = yes
 			}
 		}
 		modifier = {
-			year = 1895
-			country = { primary_culture = manchu }
+			year = 1885
 			factor = 0
 		}
 	}
@@ -4045,7 +4069,10 @@ unciv_reactionary_rebels = {
 		modifier = {
 			factor = 0
 			country = {
-				tag = EGY 
+				OR = { 
+					tag = EGY 
+					tag = KOR
+				}
 				ai = yes
 			}
 		}
@@ -4188,6 +4215,7 @@ separatist_rebels = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -4446,6 +4474,7 @@ socialist_rebels = {
 		prussian_constitutionalism = democracy
 		hms_government = democracy
 		french_bourbon = democracy
+		dominion = democracy
 		democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
@@ -4927,9 +4956,10 @@ independence_rebels = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
-		colonial_company = absolute_monarchy
+		colonial_company = democracy
 	}
 	
 	
@@ -4969,10 +4999,6 @@ independence_rebels = {
 		modifier = {
 			war_exhaustion = 8
 			factor = 0.95
-		}
-		modifier = {
-			factor = 0
-			country = { tag = EGY }
 		}
 	}
 	
@@ -5102,6 +5128,7 @@ turkish_nationalist_rebels = {
 		prussian_constitutionalism = democracy
 		hms_government = democracy
 		french_bourbon = democracy
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -5346,6 +5373,7 @@ native_rebels = {
 		prussian_constitutionalism = democracy
 		hms_government = democracy
 		french_bourbon = democracy
+		dominion = democracy
 		democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
@@ -5532,6 +5560,7 @@ sioux_nation = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
@@ -5655,6 +5684,7 @@ apache = {
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
 		french_bourbon = hms_government
+		dominion = democracy
 		democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy

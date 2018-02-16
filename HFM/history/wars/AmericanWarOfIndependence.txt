@@ -1,4 +1,4 @@
-name = "American War of Independence"
+name = "The American War of Independence"
 
 1775.4.19 = {
 	add_attacker = USA

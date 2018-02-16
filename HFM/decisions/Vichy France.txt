@@ -1,4 +1,3 @@
-
 political_decisions = {
 	the_french_menace = {
 		picture = swastika
@@ -13,20 +12,11 @@ political_decisions = {
 			is_disarmed = no
 			NOT = { has_country_flag = the_french_menace }
 			NOT = { has_country_modifier = no_more_war }
-			OR = {
-				government = fascist_dictatorship
-				government = proletarian_dictatorship
-			}
-			412 = {
-				NOT = {
-					owned_by = THIS
-				}
-			}
+			government = fascist_dictatorship
+			412 = { NOT = { owned_by = THIS } }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 		
 		effect = {
 			set_country_flag = the_french_menace
@@ -34,18 +24,29 @@ political_decisions = {
 			409 = { add_core = THIS }
 			410 = { add_core = THIS }
 			412 = { add_core = THIS }
-			war = {
-				target = FRA
-				attacker_goal = {
-					casus_belli = conquest
-				}
-				
-				defender_goal = {
-					casus_belli = install_democracy
+			random_owned = {
+				limit = { exists = FRA }
+				owner = {
+					war = {
+						target = FRA
+						attacker_goal = { casus_belli = conquest }
+						defender_goal = { casus_belli = install_democracy }
+					}
 				}
 			}
+			random_owned = {
+				limit = { exists = BOR }
+				owner = {
+					war = {
+						target = BOR
+						attacker_goal = { casus_belli = conquest }
+						defender_goal = { casus_belli = install_democracy }
+					}
+				}
+			}
+			
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1 }
 	}
 	
 	vichy_france = {
@@ -61,14 +62,10 @@ political_decisions = {
 			has_country_flag = the_french_menace
 			NOT = { has_country_flag = vf_released }
 			NOT = { has_country_modifier = no_more_war }
-			OR = {
-				government = fascist_dictatorship
-				government = proletarian_dictatorship
-			}
+			government = fascist_dictatorship
 			FRA = { exists = no }
-			425 = {
-				owned_by = THIS
-			}
+			BOR = { exists = no }
+			425 = { owned_by = THIS }
 		}
 		
 		allow = {
@@ -78,9 +75,9 @@ political_decisions = {
 		effect = {
 			set_country_flag = vf_released
 			badboy = -10
-			409 = { remove_core = FRA }
-			410 = { remove_core = FRA }
-			412 = { remove_core = FRA }
+			409 = { remove_core = FRA remove_core = BOR }
+			410 = { remove_core = FRA remove_core = BOR }
+			412 = { remove_core = FRA remove_core = BOR }
 			448 = { add_core = VIC }
 			449 = { add_core = VIC }
 			450 = { add_core = VIC }
@@ -116,13 +113,8 @@ political_decisions = {
 			430 = { add_core = VIC }
 			release_vassal = VIC
 			relation = { who = VIC value = 400 }
-			VIC = {
-				all_core = {
-					remove_core = VIC
-				}
-			}
-			
 		}
+		
 		ai_will_do = { factor = 1 }
 	}
 }

@@ -1152,10 +1152,7 @@ country_event = {
 		name = "An invitation? For me? How unexpected!" 
 		set_country_flag = beethovenfest
 		prestige = 2
-		relation = {
-				 who = FROM
-				 value = 25
-		}
+		relation = { who = FROM value = 25 }
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -1165,36 +1162,33 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = TUR 
-                        }
+			}
 			modifier = {
 				factor = 2
 				tag = ENG 
-                        }
+			}
 			modifier = {
 				factor = 2
 				tag = BAV 
-                        }
+			}
 			modifier = {
 				factor = 2
-				tag = FRA 
-                        }
-                }
-        }
+				primary_culture = french
+			}
+		}
+	}
 
 	option = {
 		name = "Classical music is overrated..."
 		prestige = 4
-		relation = {
-				 who = FROM
-				 value = -25
-		}
+		relation = { who = FROM value = -25 }
 		ai_chance = {
 			factor = 30
 			modifier = {
 				factor = 3
 				NOT = { capital_scope = { continent = europe } }
 			}
-                }
+		}
 	}
 }
 
@@ -1208,7 +1202,10 @@ country_event = {
 		owns = 575 
 		has_country_flag = beethovenfest
 		ENG = { has_country_flag = beethovenfest }
-		FRA = { has_country_flag = beethovenfest }
+		OR = { 
+			FRA = { has_country_flag = beethovenfest }
+			BOR = { has_country_flag = beethovenfest }
+		}
 		BAV = { has_country_flag = beethovenfest }        
 	}
 
@@ -1225,21 +1222,28 @@ country_event = {
 	option = {
 		name = "I found it rather amusing."
 		prestige = 2
-		relation = {
-				 who = FRA
-				 value = -25
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = -25 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = -25 } }
+		}	
+		relation = { who = ENG value = 5 }
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 200026
 		}
-		relation = {
-				 who = ENG
-				 value = 5
-		}
-		FRA = { country_event = 200026 }
 		ENG = { country_event = 200027 }
 		BAV = { country_event = 200028 }
-        }
+	}
 }
 
-#Beethovenfest FRA
+#Beethovenfest France
 
 country_event = {
 
@@ -1254,11 +1258,8 @@ country_event = {
 	option = {
 		name = "The next time we stay at home. Stupid germans..."
 		prestige = -2
-		relation = {
-				 who = FROM
-				 value = -25
-		}
-        }
+		relation = {  who = FROM  value = -25 }
+	}
 }
 
 #Beethovenfest ENG
@@ -1275,11 +1276,8 @@ country_event = {
 
 	option = {
 		name = "Alexander von Humboldt is a gentleman."
-		relation = {
-				 who = FROM
-				 value = 5
-		}
-        }
+		relation = { who = FROM  value = 5 }
+	}
 }
 
 #Beethovenfest BAV
@@ -1296,32 +1294,28 @@ country_event = {
 
 	option = {
 		name = "Lola, what have you done...?"
-                prestige = -1
-        }
+		prestige = -1
+	}
 }
 
 # Germanistentag 1846 Frankfurt
 
 country_event = {
-
 	id = 200029
-
-	trigger = {
-		        owns = 564       
-                        year = 1846
-                        NOT = { year = 1847 }
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
 	title = "EVTNAME200029"
 	desc = "EVTDESC200029"
 	picture = "Frankfurt"
+	major = yes
 
+	trigger = {
+		owns = 564       
+		year = 1846
+		NOT = { year = 1847 }
+	}
+	
+	fire_only_once = yes
+	mean_time_to_happen = { months = 1 }
+	
 	option = {
 		name = "Germany is a land of culture."
 		prestige = 2
@@ -1335,13 +1329,11 @@ country_event = {
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200030
 		}
-        }
+	}
 }
 
 # Germanistentag 1846 Frankfurt for others
@@ -1371,7 +1363,7 @@ country_event = {
 				factor = 0.5
 			}
 		}
-        }
+	}
 }
 
 # Germanistentag 1847 Lubeck
@@ -1379,6 +1371,10 @@ country_event = {
 country_event = {
 
 	id = 200031
+	title = "EVTNAME200031"
+	desc = "EVTDESC200031"
+	picture = "Lubeck"
+	major = yes
 
 	trigger = {
 		owns = 564       
@@ -1388,13 +1384,9 @@ country_event = {
 
 	fire_only_once = yes
 
-	mean_time_to_happen = {
-		months = 8
-	}
+	mean_time_to_happen = { months = 2 }
 
-	title = "EVTNAME200031"
-	desc = "EVTDESC200031"
-	picture = "Lubeck"
+	
 
 	option = {
 		name = "Germany is a land of culture."
@@ -1421,13 +1413,11 @@ country_event = {
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200032
 		}
-        }
+	}
 }
 
 # Germanistentag 1847 Lubeck for others
@@ -1458,12 +1448,12 @@ country_event = {
 			}
 		}
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 0.5
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 0.5
+			}
 		}
-        }
+	}
 }
 
 # Goethedenkmal
@@ -1488,19 +1478,20 @@ country_event = {
 				factor = 0.5
 			}
 		}
-        }
+	}
 }
 
 # Kurhessischer Verfassungskonflikt
 
 country_event = {
-
 	id = 200034
+	title = "EVTNAME200034"
+	desc = "EVTDESC200034"
+	picture = "Monarchy"
 
 	trigger = {
 		tag = HEK      
 		year = 1850
-		NOT = { year = 1860 }
 		OR = { 
 			ruling_party_ideology = reactionary
 			ruling_party_ideology = conservative
@@ -1510,14 +1501,7 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	title = "EVTNAME200034"
-	desc = "EVTDESC200034"
-	picture = "Monarchy"
+	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "Revoke this useless piece of paper!"
@@ -1542,11 +1526,14 @@ country_event = {
 				factor = 6
 			}
 		}
-        }
+		
+		ai_chance = { factor = 1 }
+	}
+	
 	option = {
 		name = "The constitution remains."
 		prestige = -2
-        }
+	}
 }
 
 # Kosmos (Humboldt)
@@ -1554,28 +1541,23 @@ country_event = {
 country_event = {
 
 	id = 200035
-
+	title = "EVTNAME200035"
+	desc = "EVTDESC200035"
+	picture = "Kosmos"
+	
 	trigger = {       
 		year = 1845
 		owns = 549
 	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 2
-	}
-
-	title = "EVTNAME200035"
-	desc = "EVTDESC200035"
-	picture = "Kosmos"
+	fire_only_once = yes 
+	mean_time_to_happen = { months = 2 }
 
 	option = {
 		name = "Humboldt? We shall invite him to a cup of tea."
 		prestige = 2
 		plurality = 2
 		years_of_research = 0.10
-        }
+	}
 }
 
 

@@ -1356,7 +1356,7 @@ country_event = {
 		year = 1875
 		OR = {
 			civilized = yes
-			civilization_progress = 0.50
+			civilization_progress = 0.75
 		}
 		NOT = {
 			has_global_flag = mahdist_uprising
@@ -1546,6 +1546,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		war = no
 		SUD = { exists = no }
 		any_owned_province = {
 			has_province_modifier = fundamentalist_sympathies

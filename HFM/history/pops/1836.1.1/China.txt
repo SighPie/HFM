@@ -618,20 +618,20 @@
 
 	soldiers = {
 		culture = beifaren
-		religion = god_worshippers
+		religion = protestant
 		size = 20450
 	}
 
 	farmers = {
 		culture = beifaren
-		religion = god_worshippers
-		size = 500900
+		religion = protestant
+		size = 100900
 	}
 	
 	farmers = {
 		culture = beifaren
 		religion = mahayana
-		size = 400000
+		size = 800000
 	}
 
 	serfs = {
@@ -2258,38 +2258,38 @@
 
 	aristocrats = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 725
 	}
 
 	clergymen = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 375
 	}
 
 	artisans = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 1850
 	}
 
 	soldiers = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 375
 	}
 	
 	serfs = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 22375
 	}
 
 
 	farmers = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 33675
 	}
 
@@ -2759,23 +2759,12 @@
 		size = 1375
 	}
 	
-	aristocrats = {
-		culture = british
-		religion = protestant
-		size = 75
-	}
-	
 	artisans = {
 		culture = british
 		religion = protestant
-		size = 100
+		size = 150
 	}
 	
-	clergymen = {
-		culture = british
-		religion = protestant
-		size = 50
-	}
 }
 #Waizao (2200000/550000 POPS)
 1497 = {
@@ -6633,7 +6622,7 @@
 2221 = {
 	aristocrats = {
 		culture = hakka
-		religion = god_worshippers
+		religion = protestant
 		size = 11500
 	}
 
@@ -6657,7 +6646,7 @@
 
 	artisans = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 11000
 	}
 	
@@ -6675,7 +6664,7 @@
 	
 	artisans = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 11000
 	}
 	
@@ -6687,7 +6676,7 @@
 
 	soldiers = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 9000
 	}
 
@@ -6699,14 +6688,20 @@
 
 	farmers = {
 		culture = nanfaren
-		religion = god_worshippers
-		size = 442800
+		religion = protestant
+		size = 42800
 	}
 
 	farmers = {
 		culture = nanfaren
-		religion = protestant
+		religion = catholic
 		size = 5000
+	}
+	
+	farmers = {
+		culture = nanfaren
+		religion = mahayana
+		size = 400000
 	}
 	
 	aristocrats = {
@@ -6979,7 +6974,7 @@
 	
 	farmers = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 5000
 	}
 
@@ -7015,7 +7010,7 @@
 	
 	farmers = {
 		culture = beifaren
-		religion = god_worshippers
+		religion = protestant
 		size = 1000
 	}
 }
@@ -7572,7 +7567,7 @@
 	
 	farmers = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 2000
 	}
 	
@@ -7620,7 +7615,7 @@
 	
 	farmers = {
 		culture = beifaren
-		religion = god_worshippers
+		religion = protestant
 		size = 6000
 	}
 }
@@ -12481,7 +12476,7 @@
 	
 	farmers = {
 		culture = nanfaren
-		religion = god_worshippers
+		religion = protestant
 		size = 200
 	}
 }

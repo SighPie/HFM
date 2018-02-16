@@ -42,6 +42,19 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = clean_up_unciv_monarchy
+			clr_country_flag = everywhere_genocide_only
+			clr_country_flag = non_colonial_genocide_only
+			clr_country_flag = colonial_genocide_only
+			clr_country_flag = preparations_to_kill
+			remove_country_modifier = preparations_to_kill
+			clr_country_flag = communist_gov
+			set_country_flag = absolute_monarchy_gov
+			clr_country_flag = semi_constitutional_monarchy_gov
+			clr_country_flag = constitutional_monarchy_gov
+			clr_country_flag = democracy_gov
+			clr_country_flag = presidential_dictatorship_gov
+			clr_country_flag = fascist_gov
+			clr_country_flag = anarcho_liberal_gov
 			government = absolute_monarchy
 			
 			random_owned = {
@@ -74,17 +87,22 @@ political_decisions = {
 					vassal_of = ENG
 					has_country_flag = british_orient
 				}
-				AND = { 
+				AND = {
 					OR = {
 						tag = BLZ
 						tag = NGR
 						tag = MLT
 						tag = SWK
 						tag = HAN
+						tag = FIJ
+						tag = ION
+						tag = SEY
+						tag = IOT
+						tag = MAU
 					}
 					vassal_of = ENG
 				}
-				AND = { 
+				AND = {
 					tag = KNY
 					is_culture_group = british
 					vassal_of = ENG
@@ -100,49 +118,24 @@ political_decisions = {
 					}
 				}
 				###German Puppets###
-				AND = { 
-					tag = NMB
+				AND = {
+					OR = { 
+						tag = NMB
+						tag = TNZ
+						tag = CMR
+						tag = PPG
+					}
 					is_culture_group = germanic
 					OR = { 
 						vassal_of = GER
 						vassal_of = GCF
-					}
-				}
-				AND = { 
-					tag = TNZ
-					is_culture_group = germanic
-					OR = { 
-						vassal_of = GER
-						vassal_of = GCF
-					}
-				}
-				AND = {
-					tag = CMR
-					is_culture_group = germanic
-					OR = { 
-						vassal_of = GER
-						vassal_of = GCF
-					}
-				}
-				AND = {
-					tag = PPG
-					OR = { 
-						vassal_of = GER
-						vassal_of = GCF
-					}
-				}
-				AND = {
-					tag = BAN
-					OR = {
-						vassal_of = GER
-						vassal_of = GCF
-						vassal_of = NGF
 					}
 				}
 				AND = {
 					OR = { 
 						tag = SIE
 						tag = ALS
+						tag = BAN
 					}
 					is_culture_group = germanic
 					OR = {
@@ -154,8 +147,13 @@ political_decisions = {
 					}
 				}
 				AND = {
-					tag = LOM
-					732 = { is_core = LOM }
+					OR = { 
+						AND = {
+							tag = LOM
+							732 = { is_core = LOM }
+						}
+						tag = BEL
+					}
 					OR = {
 						vassal_of = AUS
 						vassal_of = KUK
@@ -189,7 +187,10 @@ political_decisions = {
 							year = 1870
 						}
 					}
-					vassal_of = FRA
+					OR = { 
+						vassal_of = FRA
+						AND = { vassal_of = BOR BOR = { NOT = { government = absolute_monarchy } } }
+					}
 				}
 				###Portuguese Puppets###
 				AND = { 
@@ -296,6 +297,7 @@ political_decisions = {
 						tag = RUM
 						tag = WAL
 						tag = MOL
+						tag = SER
 					}
 					vassal_of = TUR
 				}
@@ -313,8 +315,19 @@ political_decisions = {
 					}
 					vassal_of = QNG
 				}
+				
+				###Sweden###
+				AND = {
+					tag = NOR
+					vassal_of = SWE
+				}
 			}
-			NOT = { has_country_flag = clean_up_colonial_government }
+			NOT = { 
+				OR = { 
+					has_country_flag = clean_up_colonial_government 
+					has_country_flag = dominion_gov
+				}
+			}
 		}
 		
 		allow = {
@@ -322,8 +335,6 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = clean_up_colonial_government
-			government = colonial_company
 			random_owned = {
 				limit = { is_core = ALD }
 				owner = { 
@@ -338,6 +349,47 @@ political_decisions = {
 					add_accepted_culture = min
 				}
 			}
+			random_owned = { limit = { owner = { OR = { vote_franschise = none_voting civilized = no } } } 
+				owner = { 
+					clr_country_flag = everywhere_genocide_only
+					clr_country_flag = non_colonial_genocide_only
+					clr_country_flag = colonial_genocide_only
+					clr_country_flag = preparations_to_kill
+					remove_country_modifier = preparations_to_kill
+					clr_country_flag = communist_gov
+					clr_country_flag = absolute_monarchy_gov
+					clr_country_flag = semi_constitutional_monarchy_gov
+					clr_country_flag = constitutional_monarchy_gov
+					clr_country_flag = democracy_gov
+					clr_country_flag = presidential_dictatorship_gov
+					clr_country_flag = fascist_gov
+					clr_country_flag = anarcho_liberal_gov
+					clr_country_flag = dominion_gov
+					set_country_flag = clean_up_colonial_government
+					government = colonial_company 
+				}
+			}
+			random_owned = { limit = { owner = { NOT = { vote_franschise = none_voting } } } 
+				owner = {
+					clr_country_flag = everywhere_genocide_only
+					clr_country_flag = non_colonial_genocide_only
+					clr_country_flag = colonial_genocide_only
+					clr_country_flag = preparations_to_kill
+					remove_country_modifier = preparations_to_kill
+					random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
+					clr_country_flag = communist_gov
+					clr_country_flag = absolute_monarchy_gov
+					clr_country_flag = semi_constitutional_monarchy_gov
+					clr_country_flag = constitutional_monarchy_gov
+					clr_country_flag = democracy_gov
+					clr_country_flag = presidential_dictatorship_gov
+					clr_country_flag = fascist_gov
+					clr_country_flag = anarcho_liberal_gov
+					clr_country_flag = clean_up_colonial_government
+					set_country_flag = dominion_gov
+					government = dominion 
+				} 
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -346,7 +398,10 @@ political_decisions = {
 	clean_up_freed_colonial_govt = {
 		potential = {
 			is_vassal = no
-			government = colonial_company
+			OR = {
+				government = colonial_company
+				government = dominion
+			}
 			NOT = { tag = EIC }
 			OR = {
 				NOT = { tag = EGY }
@@ -366,15 +421,11 @@ political_decisions = {
 			set_country_flag = clean_up_unciv_monarchy
 			clr_country_flag = clean_up_colonial_government
 			random_owned = {
-				limit = {
-					owner = { civilized = yes }
-				}
+				limit = { owner = { civilized = yes } }
 				owner = { government = democracy }
 			}
 			random_owned = {
-				limit = {
-					owner = { civilized = no }
-				}
+				limit = { owner = { civilized = no } }
 				owner = { government = absolute_monarchy }
 			}
 			random_owned = {
@@ -404,6 +455,14 @@ political_decisions = {
 					}
 				}
 				owner = { government = prussian_constitutionalism }
+			}
+			random_owned = {
+				limit = { owner = { tag = NOR } }
+				owner = { government = hms_government }
+			}
+			random_owned = {
+				limit = { owner = { tag = MSK } }
+				owner = { government = hms_government }
 			}
 		}
 		

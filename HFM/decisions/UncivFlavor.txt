@@ -576,6 +576,7 @@ political_decisions = {
 			1875 = { empty = yes }
 			civilized = yes
 			has_global_flag = berlin_conference
+			total_amount_of_ships = 50
 			OR = {
 				AND = {
 					OR = {

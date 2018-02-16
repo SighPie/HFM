@@ -118,12 +118,21 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { 
-					tag = FRA
-					owns = 574
-					owns = 392
-					owns = 397
-					owns = 466
+				OR = {
+					NOT = { 
+						tag = FRA
+						owns = 574
+						owns = 392
+						owns = 397
+						owns = 466
+					}
+					NOT = { 
+						tag = BOR
+						owns = 574
+						owns = 392
+						owns = 397
+						owns = 466
+					}
 				}
 			}
 		}

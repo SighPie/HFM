@@ -256,6 +256,13 @@ migration_target = {
 			continent = south_america
 		}
 	}
+	
+	modifier = {
+		factor = 5.0
+		NOT = { total_pops = 500 }
+	}
+	
+	
 	modifier = {
 		factor = 1.5
 		year = 1880
@@ -434,6 +441,12 @@ migration_target = {
 	modifier = {
 		factor = 0
 		is_overseas = yes
+		OR = { 
+			continent = west_africa 
+			continent = east_africa
+			continent = asia
+			continent = africa
+		}
 		country = { colonial_policy = settlement primary_culture = russian }
 	}
 	
@@ -488,6 +501,7 @@ migration_target = {
 			is_core = SLS
 			is_core = POL
 			is_core = FRA
+			is_core = BOR
 			is_core = SWI
 			is_core = LUX
 			is_core = BAN
@@ -634,6 +648,7 @@ migration_target = {
 			is_core = TUN
 			is_core = SWI
 			is_core = FRA
+			is_core = BOR
 			is_core = DLM
 			is_core = CRO
 			is_core = ALB

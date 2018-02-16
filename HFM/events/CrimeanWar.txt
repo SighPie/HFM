@@ -17,14 +17,14 @@ country_event = {
 		prestige = 10
 		RUS = {
 			prestige = 10
-			relation = { who = FRA value = -50 }
+			relation = { who = FROM value = -50 }
 		}
-		FRA = { country_event = 97501 }
+		FROM = { country_event = 97501 }
 		ai_chance = {
 			factor = 80
 			modifier = {
 				factor = 0
-				in_sphere = FRA
+				in_sphere = FROM
 			}
 			modifier = {
 				factor = 0.5
@@ -41,7 +41,7 @@ country_event = {
 		name = "EVT97500OPTB"
 		set_global_flag = france_protector_of_eastern_christians
 		prestige = -10
-		FRA = { country_event = 97504 }
+		FROM = { country_event = 97504 }
 		RUS = { country_event = 97503 }
 		ai_chance = {
 			factor = 20
@@ -53,7 +53,7 @@ country_event = {
 				factor = 0.5
 				part_of_sphere = yes
 				NOT = { in_sphere = RUS }
-				NOT = { in_sphere = FRA }
+				NOT = { in_sphere = FROM }
 			}
 			modifier = {
 				factor = 2
@@ -103,8 +103,8 @@ country_event = {
 		name = "EVT97502OPTA"
 		set_global_flag = france_protector_of_eastern_christians
 		prestige = -20
-		create_alliance = FRA
-		FRA = { country_event = 97504 }
+		create_alliance = FROM
+		FROM = { country_event = 97504 }
 		RUS = { country_event = 97503 }
 		ai_chance = {
 			factor = 90
@@ -120,7 +120,7 @@ country_event = {
 		set_country_flag = refused_french_claim
 		prestige = 5
 		relation = { who = RUS value = 50 }
-		FRA = {
+		FROM = {
 			diplomatic_influence = { who = TUR value = -100 }
 			relation = { who = TUR value = -200 }
 			leave_alliance = TUR
@@ -182,10 +182,12 @@ country_event = {
 			limit = {
 				is_sphere_leader_of = TUR
 				NOT = { tag = FRA }
+				NOT = { tag = BOR }
 				NOT = { tag = RUS }
 			}
 			diplomatic_influence = { who = TUR value = -100 }
 			relation = { who = FRA value = -25 }
+			relation = { who = BOR value = -25 }
 		}
 		diplomatic_influence = { who = TUR value = 300 }
 		relation = { who = TUR value = 300 }
@@ -207,11 +209,11 @@ country_event = {
 		owns = 917
 		OR = {
 			AND = {
-				in_sphere = FRA
+				OR = { in_sphere = FRA in_sphere = BOR }
 				ai = yes
 			}
 			AND = {
-				truce_with = FRA
+				OR = { truce_with = FRA truce_with = BOR }
 				is_disarmed = yes
 			}
 		}
@@ -229,7 +231,13 @@ country_event = {
 		name = "EVT97505OPTA"
 		set_global_flag = france_protector_of_eastern_christians
 		prestige = -10
-		FRA = { country_event = 97504 }
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 97504
+		}
 		RUS = { country_event = 97503 }
 	}
 }
@@ -313,6 +321,7 @@ country_event = {
 			is_capital = yes
 			controlled_by = RUS
 			NOT = { country_units_in_province = FRA }
+			NOT = { country_units_in_province = BOR }
 			NOT = { country_units_in_province = ENG }
 			NOT = { country_units_in_province = TUR }
 			province_control_days = 90
@@ -600,22 +609,43 @@ country_event = {
 			}
 			owner = { release_vassal = SAM }
 		}
-		
-		FRA = {
-			prestige = -20
-			relation = { who = RUS value = -100 }
-			leave_alliance = RUS
-			casus_belli = {
-				target = RUS
-				type = take_from_sphere
-				months = 60
-			}
-			casus_belli = {
-				target = TUR
-				type = add_to_sphere
-				months = 60
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = {
+				prestige = -20
+				relation = { who = RUS value = -100 }
+				leave_alliance = RUS
+				casus_belli = {
+					target = RUS
+					type = take_from_sphere
+					months = 60
+				}
+				casus_belli = {
+					target = TUR
+					type = add_to_sphere
+					months = 60
+				}
 			}
 		}
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = {
+				prestige = -20
+				relation = { who = RUS value = -100 }
+				leave_alliance = RUS
+				casus_belli = {
+					target = RUS
+					type = take_from_sphere
+					months = 60
+				}
+				casus_belli = {
+					target = TUR
+					type = add_to_sphere
+					months = 60
+				}
+			}
+		}	
+		
 		random_country = {
 			limit = {
 				tag = ENG
@@ -762,7 +792,11 @@ country_event = {
 			limit = {
 				NOT = { tag = THIS }
 				OR = {
-					tag = FRA
+					AND = {
+						primary_culture = french
+						is_greater_power = yes
+						capital = 425
+					}
 					has_country_flag = england_protecting_interests
 					alliance_with = TUR
 				}

@@ -42,6 +42,8 @@ political_decisions = {
 			random_country = {
 				limit = { 
 					tag = ENG 
+					is_greater_power = yes
+					is_disarmed = no
 				}
 				country_event = 99200
 			}
@@ -92,6 +94,8 @@ political_decisions = {
 			random_country = {
 				limit = { 
 					tag = ENG 
+					is_greater_power = yes
+					is_disarmed = no
 				}
 				country_event = 99202
 			}
@@ -103,9 +107,11 @@ political_decisions = {
 	}
 	
 	treaty_of_paris_anglo_persian = {
-		picture = "treaty_of_paris_anglo_persian"
+		picture = "persia_map"
 		potential = {
 			tag = ENG
+			is_greater_power = yes
+			is_disarmed = no
 			has_global_flag = anglo_persian_war
 			OR = {
 				PER = {
@@ -159,6 +165,8 @@ political_decisions = {
 		picture = gwadar_pakistan
 		potential = {
 			year = 1863
+			is_greater_power = yes
+			is_disarmed = no
 			1222 = {
 				OR = {
 					owned_by = THIS
@@ -193,6 +201,8 @@ political_decisions = {
 			prestige = 5
 			2640 = { secede_province = THIS add_core = HND }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	wakhan_treaty = {
@@ -224,8 +234,38 @@ political_decisions = {
 			RUS = { country_event = 99103 }
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { factor = 1 }
+	}
+	
+	persia_treaty = {
+		picture = "persia_map"
+		potential = {
+			tag = ENG
+			is_greater_power = yes
+			is_disarmed = no
+			OR = {
+				PER = { vassal_of = RUS }
+				PER = {
+					any_core = { 
+						owned_by = RUS
+					}
+				}
+			}
+			NOT = { has_global_flag = persia_treaty }
 		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+			NOT = { truce_with = RUS }
+			NOT = { truce_with = PER }
+		}
+		
+		effect = {
+			set_global_flag = persia_treaty
+			RUS = { country_event = 99104 }
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

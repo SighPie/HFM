@@ -157,6 +157,13 @@ country_event = {
 	mean_time_to_happen = {
 		months = 1
 		modifier = {
+			factor = 0.01
+			upper_house = {
+				ideology = liberal
+				value = 0.4
+			}
+		}
+		modifier = {
 			factor = 10
 			NOT = { year = 1845 }
 		}

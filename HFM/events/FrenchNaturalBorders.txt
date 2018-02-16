@@ -1,20 +1,31 @@
-#Siezing Catalonia [For SPA]
+#Siezing Catalonia
 country_event = {
 	id = 7790006
-	title = "The Fall of Madrid" #The Fall of Madrid
-	desc = "EVTDESC36715"
+	title = "EVTNAME7790006" #The Fall of Madrid
+	desc = "EVTDESC7790006"
 	picture = "carlists"
 	major = yes
 
 	trigger = {
-		tag = SPA
-		SPA = { national_provinces_occupied = .75 }
-		FRA = { has_country_flag = siezing_catalonia }
-		war_with = FRA
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		national_provinces_occupied = 0.75
+		OR = { 
+			FRA = { has_country_flag = siezing_catalonia }
+			BOR = { has_country_flag = siezing_catalonia }
+		}
+		OR = { 
+			war_with = FRA
+			war_with = BOR
+		}
 		487 = {
 			OR = {
 				controlled_by = FRA
 				controller = { alliance_with = FRA }
+				controlled_by = BOR
+				controller = { alliance_with = BOR }
 			}
 			province_control_days = 90
 		}
@@ -33,70 +44,72 @@ country_event = {
 	}
 
 	option = {
-		name = "We have no choice, we must surrender to France"
+		name = "EVT7790006OPTA"
 		set_country_flag = fall_of_madrid
 		prestige = -25
-		FRA = { country_event = 7790007 }
-		ai_chance = {
-			factor = 95
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 7790007
 		}
+		ai_chance = { factor = 95 }
 	}
 
 	option = {
-		name = "We will fight on, we must not let the French make us a puppet once more!"
+		name = "EVT7790006OPTB"
 		set_country_flag = fall_of_madrid_no_surrender
 		war_exhaustion = 10
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 5 }
 	}
 }
 
 country_event = {
 	
 	id = 7790007
-	title = "Spain has Surrendered" #The Spanish Surrender
+	title = "EVTNAME7790007" #The Spanish Surrender
 	desc = "EVTDESC7790007"
-	#news = yes
-	picture = "carlists"
 	major = yes
 
 	is_triggered_only = yes
+	
+	immediate = {
+		FRA = { set_country_flag = signed_treay_of_madrid }
+		BOR = { set_country_flag = signed_treay_of_madrid }
+		SPC = { set_country_flag = signed_treay_of_madrid }
+		SPA = { set_country_flag = signed_treay_of_madrid }
+	}
 
 	option = {
-		name = "We have achieved enough by humiliating Spain, Catalonia has no actual Value to France"
+		name = "EVT7790007OPTA"
+		badboy = -2
 		prestige = 40
 		war_exhaustion = -20
-		end_war = SPA
+		end_war = FROM
 		any_country = {
 			limit = {
 				war_with = THIS
-				alliance_with = SPA
+				alliance_with = FROM
 			}
 			end_war = THIS
 		}
 		any_country = {
 			limit = {
-				war_with = SPA
+				war_with = FROM
 				alliance_with = THIS
 			}
-			end_war = SPA
+			end_war = FROM
 		}
-		relation = { who = SPA value = 50 }
-		SPA = { 
-			all_core = {
-				remove_core = FRA
-			}
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
+		relation = { who = FROM value = 50 }
+		FROM = { all_core = { remove_core = THIS } }
+		THIS = {
 			any_owned = {
-				limit = { is_core = SPA }
-				secede_province = SPA
+				limit = { is_core = FROM }
+				secede_province = FROM
 			}
 		}
-		SPA = {
-			set_country_flag = signed_treay_of_madrid
+		FROM = {
 			prestige = -50
 			any_pop = {
 				limit = {
@@ -109,62 +122,41 @@ country_event = {
 				militancy = 7
 			}
 		}
-		any_greater_power = {
-			limit = { 
-				NOT = { 
-					OR = {
-						tag = PRU
-						tag = ENG
-					}
-				}
-			}	
-			relation = { who = FRA value = 20 }
-		}
-		relation = { who = ENG value = 150 }
-		relation = { who = PRU value = 150 }
 		add_country_modifier = {
 			name = no_more_war
-			duration = 730
+			duration = 365
 		}
-		ai_chance = {
-			factor = 80
-		}
+		ai_chance = { factor = 80 }
 	}
 
 	option = {
-		name = "Catalonia has no actual value to France, however we can demand the Spanish Philippines"
+		name = "EVT7790007OPTB"
 		prestige = 30
 		badboy = 10
-		end_war = SPA
+		end_war = FROM
 		any_country = {
 			limit = {
 				war_with = THIS
-				alliance_with = SPA
+				alliance_with = FROM
 			}
 			end_war = THIS
 		}
 		any_country = {
 			limit = {
-				war_with = SPA
+				war_with = FROM
 				alliance_with = THIS
 			}
-			end_war = SPA
+			end_war = FROM
 		}
-		relation = { who = SPA value = -100 }
-		SPA = { 
-			all_core = {
-				remove_core = FRA
-			}
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
+		relation = { who = FROM value = -100 }
+		FROM = { all_core = { remove_core = THIS } }
+		THIS = {
 			any_owned = {
-				limit = { is_core = SPA }
-				secede_province = SPA
+				limit = { is_core = FROM }
+				secede_province = FROM
 			}
 		}
-		SPA = {
-			set_country_flag = signed_treay_of_madrid
+		FROM = {
 			prestige = -40
 			any_pop = {
 				limit = {
@@ -176,344 +168,21 @@ country_event = {
 				consciousness = 5
 				militancy = 5
 			}
-		}
-		SPA = {
-			set_country_flag = signed_treay_of_madrid
 			any_owned = {
 				limit = { is_core = PHL }
-				secede_province = FRA
-			}
-		}
-		relation = { who = ENG value = -50 }
-		relation = { who = NET value = -50 }
-		add_country_modifier = {
-			name = no_more_war
-			duration = 730
-		}
-		ai_chance = {
-			factor = 20		
-			modifier = {
-				factor = 0
-				is_greater_power = no
-				is_secondary_power = no
-			}
-		}
-	}
-	
-	option = {
-		name = "We must restore French control over Catalonia!"
-		relation = { who = SPA value = -400 }
-		badboy = 12
-		war_exhaustion = 10
-		end_war = SPA
-		any_country = {
-			limit = {
-				war_with = THIS
-				alliance_with = SPA
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				war_with = SPA
-				alliance_with = THIS
-			}
-			end_war = SPA
-		}
-		SPA = { 
-			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
-			}
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-		}
-		SPA = {
-			set_country_flag = signed_treay_of_madrid
-			prestige = -70
-			any_pop = {
-				limit = {
-					has_pop_culture = spanish
-				}
-				consciousness = 5
-				militancy = 5
-			}
-			any_pop = {
-				limit = {
-					has_pop_culture = catalan
-				}
-				consciousness = 10
-				militancy = 10
-			}
-			remove_accepted_culture = catalan
-		}
-		relation = { who = ENG value = -100 }
-		relation = { who = PRU value = -100 }
-		add_country_modifier = {
-			name = no_more_war
-			duration = 730
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-
-	option = {
-		name = "We will demand Catalonia as well as the Spanish Philippines!"
-		relation = { who = SPA value = -400 }
-		badboy = 22
-		war_exhaustion = 15
-		end_war = SPA
-		any_country = {
-			limit = {
-				war_with = THIS
-				alliance_with = SPA
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				war_with = SPA
-				alliance_with = THIS
-			}
-			end_war = SPA
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-		}
-		SPA = { 
-			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
-			}
-			set_country_flag = signed_treay_of_madrid
-			prestige = -70
-			any_pop = {
-				limit = {
-					has_pop_culture = spanish
-				}
-				consciousness = 5
-				militancy = 5
-			}
-			any_pop = {
-				limit = {
-					has_pop_culture = catalan
-				}
-				consciousness = 10
-				militancy = 10
-			}
-			any_owned = {
-				limit = { is_core = PHL }
-				secede_province = FRA
-			}
-		}
-		relation = { who = ENG value = -200 }
-		relation = { who = PRU value = -100 }
-		relation = { who = NET value = -100 }
-		add_country_modifier = {
-			name = no_more_war
-			duration = 730
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-#Siezing Catalonia [For SPC]
-country_event = {
-	id = 7790008
-	title = "The Fall of Madrid" #The Fall of Madrid
-	desc = "EVTDESC7790008"
-	picture = "carlists"
-	major = yes
-
-	trigger = {
-		tag = SPC
-		SPC = { national_provinces_occupied = .75 }
-		FRA = { has_country_flag = siezing_catalonia }
-		war_with = FRA
-		487 = {
-			OR = {
-				controlled_by = FRA
-				controller = { alliance_with = FRA }
-			}
-			province_control_days = 90
-		}
-		NOT = {
-			has_country_flag = signed_treay_of_madrid
-			has_country_flag = fall_of_madrid
-		}
-	}
-
-
-	mean_time_to_happen = {
-		days = 10
-		modifier = {
-			factor = 0.1
-			has_country_flag = fall_of_madrid_no_surrender
-		}
-	}
-
-	option = {
-		name = "We have no choice, we must surrender to France"
-		set_country_flag = fall_of_madrid
-		prestige = -25
-		FRA = { country_event = 7790009 }
-		ai_chance = {
-			factor = 95
-		}
-	}
-
-	option = {
-		name = "We will fight on, we must not let the French make us a puppet once more!"
-		set_country_flag = fall_of_madrid_no_surrender
-		war_exhaustion = 10
-		ai_chance = {
-			factor = 5
-		}
-	}
-}
-
-country_event = {
-	
-	id = 7790009
-	title = "Spain has Surrendered" #The Carlist Surrender
-	desc = "EVTDESC7790009"
-	#news = yes
-	picture = "carlists"
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = "We have achieved enough by humiliating Spain, Catalonia has no actual Value to France"
-		prestige = 40
-		war_exhaustion = -20
-		end_war = SPC
-		any_country = {
-			limit = {
-				war_with = THIS
-				alliance_with = SPC
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				war_with = SPC
-				alliance_with = THIS
-			}
-			end_war = SPC
-		}
-		relation = { who = SPC value = 50 }
-		SPC = { 
-			all_core = {
-				remove_core = FRA
-			}
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-			any_owned = {
-				limit = { is_core = SPC }
-				secede_province = SPC
-			}
-		}
-		SPC = {
-			set_country_flag = signed_treay_of_madrid
-			prestige = -50
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_culture = spanish
-						has_pop_culture = catalan
-					}
-				}
-				consciousness = 7
-				militancy = 7
+				secede_province = THIS
+				PHL = { government = democracy }
 			}
 		}
 		any_greater_power = {
-			limit = { 
-				NOT = { 
-					OR = {
-						tag = PRU
-						tag = ENG
-					}
-				}
-			}	
-			relation = { who = FRA value = 20 }
+			relation = { who = THIS value = -100 }
 		}
-		relation = { who = ENG value = 150 }
-		relation = { who = PRU value = 150 }
+		
 		add_country_modifier = {
 			name = no_more_war
-			duration = 730
+			duration = 365
 		}
-		ai_chance = {
-			factor = 80
-		}
-	}
-
-	option = {
-		name = "Catalonia has no actual value to France, however we can demand the Spanish Philippines"
-		prestige = 30
-		badboy = 10
-		end_war = SPC
-		any_country = {
-			limit = {
-				war_with = THIS
-				alliance_with = SPC
-			}
-			end_war = THIS
-		}
-		any_country = {
-			limit = {
-				war_with = SPC
-				alliance_with = THIS
-			}
-			end_war = SPC
-		}
-		relation = { who = SPC value = -100 }
-		SPC = { 
-			all_core = {
-				remove_core = FRA
-			}
-		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-			any_owned = {
-				limit = { is_core = SPC }
-				secede_province = SPC
-			}
-		}
-		SPC = {
-			set_country_flag = signed_treay_of_madrid
-			prestige = -40
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_culture = spanish
-						has_pop_culture = catalan
-					}
-				}
-				consciousness = 5
-				militancy = 5
-			}
-		}
-		SPC = {
-			set_country_flag = signed_treay_of_madrid
-			any_owned = {
-				limit = { is_core = PHL }
-				secede_province = FRA
-			}
-		}
-		relation = { who = ENG value = -50 }
-		relation = { who = NET value = -50 }
-		add_country_modifier = {
-			name = no_more_war
-			duration = 730
-		}
+		
 		ai_chance = {
 			factor = 20		
 			modifier = {
@@ -525,36 +194,32 @@ country_event = {
 	}
 	
 	option = {
-		name = "We must restore French control over Catalonia!"
-		relation = { who = SPC value = -400 }
+		name = "EVT7790007OPTC"
+		relation = { who = FROM value = -400 }
 		badboy = 12
 		war_exhaustion = 10
-		end_war = SPC
+		end_war = FROM
 		any_country = {
 			limit = {
 				war_with = THIS
-				alliance_with = SPC
+				alliance_with = FROM
 			}
 			end_war = THIS
 		}
 		any_country = {
 			limit = {
-				war_with = SPC
+				war_with = FROM
 				alliance_with = THIS
 			}
-			end_war = SPC
+			end_war = FROM
 		}
-		SPC = { 
+		FROM = { 
 			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
+				limit = { is_core = THIS }
+				secede_province = THIS
 			}
 		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-		}
-		SPC = {
-			set_country_flag = signed_treay_of_madrid
+		FROM = {
 			prestige = -70
 			any_pop = {
 				limit = {
@@ -570,48 +235,43 @@ country_event = {
 				consciousness = 10
 				militancy = 10
 			}
-			remove_accepted_culture = catalan
 		}
-		relation = { who = ENG value = -100 }
-		relation = { who = PRU value = -100 }
 		add_country_modifier = {
 			name = no_more_war
-			duration = 730
+			duration = 365
 		}
-		ai_chance = {
-			factor = 0
+		any_greater_power = {
+			relation = { who = THIS value = -100 }
 		}
+		
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
-		name = "We will demand Catalonia as well as the Spanish Philippines!"
-		relation = { who = SPC value = -400 }
+		name = "EVT7790007OPTD"
+		relation = { who = FROM value = -400 }
 		badboy = 22
 		war_exhaustion = 15
-		end_war = SPC
+		end_war = FROM
 		any_country = {
 			limit = {
 				war_with = THIS
-				alliance_with = SPC
+				alliance_with = FROM
 			}
 			end_war = THIS
 		}
 		any_country = {
 			limit = {
-				war_with = SPC
+				war_with = FROM
 				alliance_with = THIS
 			}
-			end_war = SPC
+			end_war = FROM
 		}
-		FRA = {
-			set_country_flag = signed_treay_of_madrid
-		}
-		SPC = { 
+		FROM = {
 			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
+				limit = { is_core = THIS }
+				secede_province = THIS
 			}
-			set_country_flag = signed_treay_of_madrid
 			prestige = -70
 			any_pop = {
 				limit = {
@@ -629,12 +289,12 @@ country_event = {
 			}
 			any_owned = {
 				limit = { is_core = PHL }
-				secede_province = FRA
+				secede_province = THIS
 			}
 		}
-		relation = { who = ENG value = -200 }
-		relation = { who = PRU value = -100 }
-		relation = { who = NET value = -100 }
+		any_greater_power = {
+			relation = { who = THIS value = -200 }
+		}
 		add_country_modifier = {
 			name = no_more_war
 			duration = 730
@@ -646,103 +306,45 @@ country_event = {
 }
 
 country_event = {
-	
 	id = 7790010
-	title = "The Left Bank of the Rhine" #The Left Bank of the Rhine
+	title = "EVTNAME7790010" #The Left Bank of the Rhine
 	desc = "EVTDESC7790010"
 	#news = yes
 	picture = "carlists"
 	major = yes
 
-	
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		war = no
-		FRA = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		FLA = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		WLL = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		LUX = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		381 = {
-			owned_by = FRA
-		}
-		570 = {
-			owned_by = FRA
-		}
-		571 = {
-			owned_by = FRA
-		}
-		572 = {
-			owned_by = FRA
-		}
-		573 = {
-			owned_by = FRA
-		}
-		574 = {
-			owned_by = FRA
-		}
-		575 = {
-			owned_by = FRA
-		}
-		576 = {
-			owned_by = FRA
-		}
-		577 = {
-			owned_by = FRA
-		}
-		396 = {
-			owned_by = FRA
-		}
-		NOT = {
-			has_country_flag = french_natural_borders
-		}
+		THIS = { all_core = { owned_by = THIS } }
+		FLA = { all_core = { owned_by = THIS } }
+		WLL = { all_core = { owned_by = THIS } }
+		LUX = { all_core = { owned_by = THIS } }
+		381 = { owned_by = THIS }
+		570 = { owned_by = THIS }
+		571 = { owned_by = THIS }
+		572 = { owned_by = THIS }
+		573 = { owned_by = THIS }
+		574 = { owned_by = THIS }
+		575 = { owned_by = THIS }
+		576 = { owned_by = THIS }
+		577 = { owned_by = THIS }
+		396 = { owned_by = THIS }
+		NOT = { has_global_flag = french_natural_borders }
 	}
 
-	mean_time_to_happen =  {
-		months = 1
-	}
+	mean_time_to_happen =  { months = 1 }
 
 	option = {
-		name = "Vive la France!"
-		set_country_flag = french_natural_borders
+		name = "EVTOPT7790010"
+		set_global_flag = french_natural_borders
 		prestige = 100
 		war_exhaustion = -20
 		relation = { who = SPC value = 50 }
-		#BEL = { 
-			#all_core = {
-				#add_core = FRA
-			#}
-		#}
-		#FLA = {
-			#all_core = {
-				#add_core = FRA
-			#}
-		#}
-		WLL = {
-			all_core = {
-				add_core = FRA
-			}
-		}
-		LUX = {
-			all_core = {
-				add_core = FRA
-			}
-		}
+		WLL = { all_core = { add_core = THIS } }
+		LUX = { all_core = { add_core = THIS } }
 		any_owned = {
 			limit = {
 				OR = {
@@ -757,28 +359,22 @@ country_event = {
 				duration = -1
 			}
 		}
-		LUX = {
-			all_core = {
-				add_core = GER
-			}
-		}
+		LUX = { all_core = { add_core = GER } }
 		398 = { remove_core = LUX }
 		398 = { remove_core = GER }
 		any_owned = {
 			limit = {
 				is_core = NET
-				NOT = { is_core = FRA }
+				NOT = { is_core = THIS }
 			}
 			secede_province = NET
 		}
 		any_greater_power = {
 			limit = {
 				capital_scope = { continent = europe }
-				NOT = { 
-					alliance_with = FRA
-				}
+				NOT = { alliance_with = THIS }
 			}	
-			relation = { who = FRA value = -100 }
+			relation = { who = THIS value = -100 }
 		}
 		any_greater_power = {
 			limit = {
@@ -788,12 +384,10 @@ country_event = {
 					primary_culture = south_german
 				}
 			}	
-			relation = { who = FRA value = -400 }
+			relation = { who = THIS value = -400 }
 		}
 		relation = { who = ENG value = -400 }
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -808,63 +402,12 @@ country_event = {
 
 	
 	trigger = {
-		tag = FRA
-		war = no
-		FRA = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		FLA = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		WLL = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		LUX = {
-			all_core = {
-				owned_by = FRA
-			}
-		}
-		381 = {
-			owned_by = FRA
-		}
-		570 = {
-			owned_by = FRA
-		}
-		571 = {
-			owned_by = FRA
-		}
-		572 = {
-			owned_by = FRA
-		}
-		573 = {
-			owned_by = FRA
-		}
-		574 = {
-			owned_by = FRA
-		}
-		575 = {
-			owned_by = FRA
-		}
-		576 = {
-			owned_by = FRA
-		}
-		577 = {
-			owned_by = FRA
-		}
-		396 = {
-			owned_by = FRA
-		}
-		has_country_flag = french_natural_borders
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
+		has_global_flag = french_natural_borders
 		NOT = {
 			has_country_flag = chose_door_one
-		}
-		NOT = {
 			has_country_flag = chose_door_two
 		}
 	}
@@ -875,8 +418,14 @@ country_event = {
 
 	option = {
 		name = "One Culture, One Language, One Country!"
-		set_country_flag = french_cultural_assimilation
-		set_country_flag = chose_door_one
+		FRA = {
+			set_country_flag = french_cultural_assimilation
+			set_country_flag = chose_door_one
+		}
+		BOR = {
+			set_country_flag = french_cultural_assimilation
+			set_country_flag = chose_door_one
+		}
 		prestige = 10
 		relation = { who = SPC value = -50 }
 		relation = { who = SPA value = -50 }
@@ -896,7 +445,7 @@ country_event = {
 					has_pop_culture = flemish
 					AND = {
 						has_pop_culture = wallonian
-						FRA = {
+						THIS = {
 							NOT = { has_country_flag = walloon_autonomy }
 						}
 					}
@@ -915,15 +464,13 @@ country_event = {
 				OR = {
 					is_core = GCF
 					is_core = GER
-					NOT = { is_core = FRA }
+					NOT = { is_core = THIS }
 					is_core = NET
 					is_core = FLA
 					is_core = SWI
 					AND = {
 						is_core = WLL
-						FRA = {
-							NOT = { has_country_flag = walloon_autonomy }
-						}
+						THIS = { NOT = { has_country_flag = walloon_autonomy } }
 					}
 					is_core = ITA
 					is_core = CAT
@@ -937,11 +484,9 @@ country_event = {
 		any_greater_power = {
 			limit = {
 				capital_scope = { continent = europe }
-				NOT = { 
-					alliance_with = FRA
-				}
+				NOT = { alliance_with = THIS }
 			}	
-			relation = { who = FRA value = -100 }
+			relation = { who = THIS value = -100 }
 		}
 		any_greater_power = {
 			limit = {
@@ -951,10 +496,9 @@ country_event = {
 					primary_culture = south_german
 				}
 			}	
-			relation = { who = FRA value = -400 }
+			relation = { who = THIS value = -400 }
 		}
-		ai_chance = {
-			factor = 1
-		}
+		
+		ai_chance = { factor = 1 }
 	}
 }

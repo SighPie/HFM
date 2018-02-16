@@ -48,7 +48,11 @@ LAU 	= "countries/Lauenburg.txt"
 MML 	= "countries/Memelland.txt"
 HQJ		= "countries/Black Flag.txt"
 TST		= "countries/South Tirol.txt"
-
+HGL		="countries/Heligoland.txt"
+MSK		="countries/Mosquito Coast.txt"
+MAU		="countries/Mauritius.txt"
+SEY		="countries/Seychelles.txt"
+IOT		="countries/Indian Ocean Territory.txt"
 
 ###Colonial Spain Countries
 CGC 	= "countries/Colonial Chile.txt"

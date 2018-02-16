@@ -1285,10 +1285,10 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
-				alliance_with = FRA
+				alliance_with = THIS
 				is_vassal = no
 			}
-			leave_alliance = FRA
+			leave_alliance = THIS
 		}
 		war = {
 			target = FROM

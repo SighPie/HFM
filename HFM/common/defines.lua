@@ -534,7 +534,7 @@ diplomacy = {
 	GOODRELATION_INFAMY_CLEAR_UNION_SPHERE = 1, -- Militancy for asserting hegemony with good relations
 	GOODRELATION_PRESTIGE_CLEAR_UNION_SPHERE = -20, -- Prestige for asserting hegemony with good relations
 	GOODRELATION_MILITANCY_CLEAR_UNION_SPHERE = 2, -- Prestige for asserting hegemony with good relations
-	PEACE_COST_CLEAR_UNION_SPHERE = 0.5, -- Peace cost to assert hegemony per affected country
+	PEACE_COST_CLEAR_UNION_SPHERE = 0.35, -- Peace cost to assert hegemony per affected country
 	
 	GOOD_PEACE_REFUSAL_MILITANCY = 1.0, --Militancy hit from refusing a good peace offer
 	GOOD_PEACE_REFUSAL_WAREXH = 5.0, --War exhaustion hit from refusing a good peace offer

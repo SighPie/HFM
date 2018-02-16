@@ -64,6 +64,7 @@ political_decisions = {
 				NOT = {
 					alliance_with = ENG
 					alliance_with = FRA
+					alliance_with = BOR
 					alliance_with = RUS
 				}
 			}
@@ -77,14 +78,12 @@ political_decisions = {
 	
 	franco_prussian_war_memorial = {
 		picture = "franco_prussian_memorial"
-		potential = { 
+		potential = {
 			OR = {
 				tag = GER
 				tag = GCF
 			}
-			ALS = {
-				exists = no
-			}
+			ALS = { exists = no }
 			NOT = {
 				OR = {
 					has_global_flag = franco_prussian_memorial
@@ -101,20 +100,28 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = { 
-				truce_with = FRA
-				FRA = { has_recently_lost_war = yes }
+				AND = { 
+					truce_with = FRA
+					FRA = { has_recently_lost_war = yes }
+				}
+				AND = { 
+					truce_with = BOR
+					BOR = { has_recently_lost_war = yes }
+				}
 			}
-			
 		}
 		effect = {
 			badboy = -1
 			any_pop = {
-				limit = {
-					is_culture_group = THIS
-				}
+				limit = { is_culture_group = THIS }
 				consciousness = -0.5
 			}
-			FRA = {
+			random_country = {
+				limit = {
+					primary_culture = french
+					is_greater_power = yes
+					capital = 425
+				}	
 				country_event = 99932
 			}
 			set_global_flag = franco_prussian_memorial
@@ -128,59 +135,66 @@ political_decisions = {
 		potential = { 
 			is_greater_power = yes
 			is_culture_group = germanic
-			ALS = {
-				exists = yes
-			}
+			ALS = { exists = yes }
 			NOT = { has_global_flag = franco_prussian_memorial }
 		}
 		allow = {
 			war = no
-			truce_with = FRA
-			FRA = {
-				412 = {
-					NOT = { owned_by = FRA }
+			412 = {
+				owner = {
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+					NOT = { 
+						vassal_of = FRA 
+						vassal_of = BOR 
+					}
+					war = no
+					is_greater_power = no
 				}
-				war = no
+			}
+			OR = {
+				FRA = { exists = yes truce_with = THIS }
+				BOR = { exists = yes truce_with = THIS }
 			}
 		}
+		
 		effect = {
 			badboy = -1
 			any_pop = {
-				limit = {
-					is_culture_group = THIS
-				}
+				limit = { is_culture_group = THIS }
 				consciousness = -0.5
 			}
-			FRA = {
+			random_country = {
+				limit = {
+					primary_culture = french
+					is_greater_power = yes
+					capital = 425
+				}	
 				country_event = 99933
-			}
-			
+			}			
+			diplomatic_influence = { who = ALS value = 400 }
 			ALS = {
 				any_pop = {
 					limit = {
-						location = { 
+						location = {
 							OR = {
 								province_id = 412
 								province_id = 410
 								province_id = 409
 							}
-						 }
-						culture = french
+						}
+						has_pop_culture = french
 						OR = {
 							strata = middle
 							strata = rich
 							type = soldiers
-						}
-						
+						}					
 					}
 					move_pop = 406
 				}
 				create_alliance = THIS				
-			}
-			
-			diplomatic_influence = {
-				who = ALS
-				value = 100
 			}
 			set_global_flag = franco_prussian_memorial
 		}
@@ -242,9 +256,7 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			any_pop = {
-				limit = {
-					is_culture_group = THIS
-				}
+				limit = { is_culture_group = THIS }
 				consciousness = -2
 				militancy = -2
 			}
@@ -263,19 +275,15 @@ political_decisions = {
 					exists = yes
 					tag = GLM
 				}
-				all_core = {
-					remove_core = AUS
-				}
+				all_core = { remove_core = AUS }
 			}
 			random_country = {
 				limit = {
 					exists = yes
 					tag = HUN
 				}
-				all_core = {
-					limit = {
-						is_core = AUS
-					}
+				any_owned = {
+					limit = { is_core = AUS }
 					add_core = THIS
 				}
 			}
@@ -319,18 +327,14 @@ political_decisions = {
 		effect = {
 			badboy = -5
 			prestige = -20
-			AUS_626 = {
-				remove_core = BOH
-			}
+			AUS_626 = { remove_core = BOH }
 			release_vassal = BOH
 			BOH = {
 				any_pop = {
 					limit = { has_pop_culture = czech }
 					militancy = -8
 				}
-				all_core = {
-					remove_core = GER
-				}
+				all_core = { remove_core = GER }
 			}
 			any_pop = {
 				limit = { has_pop_culture = czech }
@@ -343,14 +347,8 @@ political_decisions = {
 				}
 				militancy = 1
 			}
-			relation = {
-				who = BOH
-				value = 50
-			}
-			diplomatic_influence = {
-				who = BOH
-				value = 200
-			}
+			relation = { who = BOH value = 50 }
+			diplomatic_influence = { who = BOH value = 400 }
 		}
 		
 		ai_will_do = {
@@ -457,11 +455,9 @@ political_decisions = {
 					exists = yes
 					neighbour = THIS
 				}
-			country_event = 60055559	
+				country_event = 60055559	
 			}
-			624 = {
-				add_core = THIS
-			}
+			624 = { add_core = THIS }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -469,7 +465,6 @@ political_decisions = {
 	ger_ai_banat = {
 		picture = "treaty_signing"
 		potential = { 
-			#ai = yes
 			OR = {
 				government = absolute_monarchy
 				government = prussian_constitutionalism
@@ -503,9 +498,7 @@ political_decisions = {
 					truce_with = THIS
 				}
 			}
-			NOT = {
-				has_country_flag = ger_ai_banat
-			}
+			NOT = { has_country_flag = ger_ai_banat }
 		}
 		allow = {
 			war = no
@@ -519,14 +512,12 @@ political_decisions = {
 			2538 = { secede_province = THIS	}
 			791 = {	secede_province = THIS	}
 			any_owned = {
-				limit = {
-					is_core = BAN
-				}
+				limit = { is_core = BAN }
 				secede_province = BAN
 			}
-			792 = {	secede_province = BAN	}
-			2538 = { secede_province = BAN	}
-			791 = {	secede_province = BAN	}
+			792 = {	secede_province = BAN }
+			2538 = { secede_province = BAN }
+			791 = {	secede_province = BAN }
 			set_country_flag = ger_ai_banat
 		}
 		
@@ -639,16 +630,14 @@ political_decisions = {
 			OR = {
 				AND = {
 					owns = 412 #Metz
-					RHI = {
-						vassal_of = FRA
-					}
+					RHI = { OR = { vassal_of = FRA vassal_of = BOR } }
 				}
 				RHI = {
 					is_vassal = no
 					in_sphere = THIS
 				}
 			}
-			truce_with = FRA
+			OR = { truce_with = FRA truce_with = BOR }
 		}
 		
 		effect = {
@@ -685,9 +674,7 @@ political_decisions = {
 				in_sphere = THIS
 				exists = yes
 				OR = {
-					NOT = { 
-						vassal_of = AUS
-					}
+					NOT = { vassal_of = AUS }
 					vassal_of = THIS
 				}
 			}
@@ -695,12 +682,9 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = claim_liechenstein
-			
 			LIE = {
 				country_event = 11101
-				all_core = {
-					add_core = THIS
-				}
+				all_core = { add_core = THIS }
 			}
 		}
 
@@ -907,9 +891,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	german_west_africa = {
@@ -1034,21 +1016,15 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			413 = { 
-				OR = { has_pop_culture = north_german has_pop_culture = south_german }
-			}
-			411 = { 
-				OR = { has_pop_culture = north_german has_pop_culture = south_german }
-			}
-			414 = { 
-				OR = { has_pop_culture = north_german has_pop_culture = south_german }
+			413 = { OR = { has_pop_culture = north_german has_pop_culture = south_german } }
+			411 = { OR = { has_pop_culture = north_german has_pop_culture = south_german } }
+			414 = { OR = { has_pop_culture = north_german has_pop_culture = south_german } }
+			OR = {
+				413 = { OR = { culture = south_german culture = north_german } }
+				411 = { OR = { culture = south_german culture = north_german } }
+				414 = { OR = { culture = south_german culture = north_german } }
 			}
 			OR = {
-				413 = {  OR = { culture = south_german culture = north_german } }
-				411 = {  OR = { culture = south_german culture = north_german } }
-				414 = {  OR = { culture = south_german culture = north_german } }
-			}
-			OR = { 
 				colonial_policy = settlement
 				has_country_flag = prussian_settlement_commission
 			}
@@ -1056,9 +1032,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = duchy_of_lorraine
-			FRA_411 = {
-				add_core = LOR
-			}
+			FRA_411 = { add_core = LOR }
 			412 = {
 				add_core = LOR
 				remove_core = ALS
@@ -1066,40 +1040,22 @@ political_decisions = {
 			LOR = {
 				primary_culture = north_german
 				add_accepted_culture = south_german
-				#add_accepted_culture = french
 			}
-			random_country = {
-				limit = {
-					tag = THIS
-					government = hms_government
-				}
-				LOR = {
-					government = hms_government
-				}
+			random_owned = {
+				limit = { owner = { government = hms_government } }
+				LOR = { government = hms_government }
 			}
-			random_country = {
-				limit = {
-					tag = THIS
-					government = absolute_monarchy
-				}
-				LOR = {
-					government = absolute_monarchy
-				}
+			random_owned = {
+				limit = { owner = { government = absolute_monarchy } }
+				LOR = { government = absolute_monarchy }
 			}
-			random_country = {
-				limit = {
-					tag = THIS
-					government = prussian_constitutionalism
-				}
-				LOR = {
-					government = prussian_constitutionalism
-				}
+			random_owned = {
+				limit = { owner = { government = prussian_constitutionalism } }
+				LOR = { government = prussian_constitutionalism }
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	wilhelmshaven_imperial_shipyard = {
@@ -1321,21 +1277,14 @@ political_decisions = {
 				capital = 2036
 				government = colonial_company
 			}
-			TNZ = {
-				all_core = {
-					add_core = MIT
-				}
-			}
+			TNZ = { all_core = { add_core = MIT } }
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	return_cores_MIT = {
 		picture = return_cores_img
-		
 		potential = {
 			is_culture_group = germanic
 			is_greater_power = yes
@@ -1366,7 +1315,7 @@ political_decisions = {
 		} 
 		
 		effect = {  
-			relation = { who = MIT value = 50 } 
+			relation = { who = MIT value = 200 } 
 			any_owned = {
 				limit = {
 					OR = {
@@ -1378,7 +1327,7 @@ political_decisions = {
 				}
 				secede_province = MIT
 			}
-		} 
+		}
 		
 		ai_will_do = { factor = 1 }
 	}
@@ -1395,8 +1344,9 @@ political_decisions = {
 				exists = GER
 				exists = RHI
 			}
-			FRA = {
-				has_country_flag = annexed_rhineland
+			OR = {
+				FRA = { has_country_flag = annexed_rhineland }
+				BOR = { has_country_flag = annexed_rhineland }
 			}
 		}
 		
@@ -1489,13 +1439,16 @@ political_decisions = {
 				country_event = 11101
 			}
 			capital = 559
-			FRA = {
+			random_country = {
+				limit = {
+					primary_culture = french
+					is_greater_power = yes
+					capital = 425
+				}	
 				country_event = 72752
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		
+		ai_will_do = { factor = 1 }
 	}
-	
 }

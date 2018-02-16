@@ -527,13 +527,8 @@ political_decisions = {
 			war = no
 			OR = {
 				revolution_n_counterrevolution = 1
-				AND = {
-					#citizenship_policy = full_citizenship
-					year = 1848
-					390 = {
-						average_militancy = 7
-					}
-				}
+				387 = { average_militancy = 6 }
+				num_of_revolts = 1
 			}
 		}
 

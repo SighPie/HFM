@@ -5,14 +5,15 @@ political_decisions = {
 				has_global_flag = statue_of_liberty_has_been_built
 				has_global_flag = treaty_of_new_york
 			}
-			tag = FRA
-			exists = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			exists = USA
 			USA = {
 				government = democracy
 				owns = 232
 			}
-			FRA = {
+			THIS = {
 				OR = {
 					government = hms_government
 					government = democracy
@@ -35,9 +36,7 @@ political_decisions = {
 				who = USA
 				value = 50
 			}
-			USA = {
-				country_event = { id=19300 days=0 }
-			}
+			USA = { country_event = 19300 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -47,9 +46,12 @@ political_decisions = {
 			}
 		}
 	}
+	
 	support_french_foreign_legion = {
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			owns = 1700
 			NOT = {
 				has_country_flag = french_foreign_legion_supported
@@ -63,17 +65,20 @@ political_decisions = {
 				name = the_french_foreign_legion
 				duration = -1
 			}
-			1700 = {
-				fort = 2
-			}
-			set_country_flag = french_foreign_legion_supported
+			1700 = { fort = 2 }
+			FRA = { set_country_flag = french_foreign_legion_supported }
+			BOR = { set_country_flag = french_foreign_legion_supported }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	french_military_mission_to_japan = {
 		picture = french_military_exp_japan
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			OR = {
 				AND = {
 					exists = JAP
@@ -84,9 +89,7 @@ political_decisions = {
 					TKG = { civilized = no }
 				}
 			}
-			NOT = {
-				has_country_flag = military_mission_in_japan
-			}
+			NOT = { has_country_flag = military_mission_in_japan }
 		}
 		
 		allow = {
@@ -109,24 +112,25 @@ political_decisions = {
 					}
 					exists = yes
 				}
-				relation = { who = FRA value = 50 }
+				relation = { who = THIS value = 50 }
 				years_of_research = 1.5
 				military_reform = yes_foreign_training
 				military_reform = yes_foreign_officers
 				military_reform = yes_foreign_naval_officers
 			}
-
-			set_country_flag = military_mission_in_japan
+			FRA = { set_country_flag = military_mission_in_japan }
+			BOR = { set_country_flag = military_mission_in_japan }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	palais_garnier = {
 		potential = {
-			NOT = {
-				has_country_flag = palais_garnier_built
-			}
-			tag = FRA
-			owns = 425
+			NOT = { has_country_flag = palais_garnier_built }
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 		}
 		
 		allow = {
@@ -135,16 +139,19 @@ political_decisions = {
 		
 		effect = {
 			prestige = 10
-			set_country_flag = palais_garnier_built
+			FRA = { set_country_flag = palais_garnier_built }
+			BOR = { set_country_flag = palais_garnier_built }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	the_lambert_charter = {
 		potential = {
-			NOT = {
-				has_country_flag = lambert_has_been_chartered
-			}
-			tag = FRA
+			NOT = { has_country_flag = lambert_has_been_chartered }
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			exists = MAD
 		}
 		
@@ -154,7 +161,7 @@ political_decisions = {
 			MAD = {
 				civilized = no
 				OR = {
-					in_sphere = FRA
+					in_sphere = THIS
 					part_of_sphere = no
 				}
 			}
@@ -172,8 +179,11 @@ political_decisions = {
 				who = MAD
 				value = 150
 			}
-			set_country_flag = lambert_has_been_chartered
+			FRA = { set_country_flag = lambert_has_been_chartered }
+			BOR = { set_country_flag = lambert_has_been_chartered }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	end_the_merina_monarchy = {
@@ -210,18 +220,24 @@ political_decisions = {
 			set_global_flag = merina_monarchy_is_over
 			MAD = { country_event = 95505 }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	brazzas_expedition = {
 		picture = brazzas_expedition
 		potential = {
-			tag = FRA
-			invention = mission_to_civilize
+			primary_culture = french
 			is_greater_power = yes
+			capital = 425
+			invention = mission_to_civilize
 			LOA = {
 				ai = yes
 				owns = 1977
-				part_of_sphere = no
+				OR = { 
+					part_of_sphere = no
+					in_sphere = THIS
+				}
 			}
 			NOT = { has_country_flag = brazzas_expedition }
 		}
@@ -232,17 +248,22 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = brazzas_expedition
+			FRA = { set_country_flag = brazzas_expedition }
+			BOR = { set_country_flag = brazzas_expedition }
 			prestige = 5
 			diplomatic_influence = { who = LOA value = 200 }
 			relation = { who = LOA value = 200 }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	the_rhine_crisis = {
 		picture = adolphe_thiers
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			exists = PRU
 			PRU = {
 				owns = 572
@@ -278,8 +299,10 @@ political_decisions = {
 				}
 			}
 			prestige = 10
-			set_country_flag = crisis_on_the_rhine
+			FRA = { set_country_flag = crisis_on_the_rhine }
+			BOR = { set_country_flag = crisis_on_the_rhine }
 		}
+		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -300,7 +323,9 @@ political_decisions = {
 	build_the_eiffel_tower = {
 		picture = build_the_eiffel_tower
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			NOT = {
 				has_country_flag = the_eiffel_tower_was_built
 			}
@@ -322,15 +347,19 @@ political_decisions = {
 		
 		effect = {
 			country_event = 37236
-			set_country_flag = the_eiffel_tower_was_built
+			FRA = { set_country_flag = the_eiffel_tower_was_built }
+			BOR = { set_country_flag = the_eiffel_tower_was_built }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	haussmanns_renovations = {
 		picture = haussmanns_renovations
 		potential = {
-			tag = FRA
-			owns = 425
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			NOT = { has_country_flag = extreme_home_makeover }
 			OR = {
 				realism = 1
@@ -360,15 +389,19 @@ political_decisions = {
 			}
 			425 = { life_rating = 5 add_province_modifier = { name = haussmanns_renovations duration = -1 } }
 			prestige = 10
-			set_country_flag = extreme_home_makeover
+			FRA = { set_country_flag = extreme_home_makeover }
+			BOR = { set_country_flag = extreme_home_makeover }
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	annex_mayotte = {
 		picture = dreams_of_empire
 		potential = {
-			tag = FRA
+			primary_culture = french
 			is_greater_power = yes
+			capital = 425
 			2124 = { empty = yes }
 		}
 		
@@ -379,24 +412,27 @@ political_decisions = {
 		
 		effect = {
 			prestige = 3
-			2124 = { add_core = FRA }
+			2124 = { add_core = THIS }
 			2123 = {
-				secede_province = FRA
+				secede_province = THIS
 			}
 			2124 = {
-				secede_province = FRA
+				secede_province = THIS
 				change_province_name = "Mayotte"
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	claim_savoy = {
 		picture = form_italy
 		potential = {
-			tag = FRA
+			primary_culture = french
 			is_greater_power = yes
+			capital = 425
 			NOT = {
-				465 = { is_core = FRA }
+				465 = { is_core = THIS }
 				has_global_flag = plombieres_refused
 				has_country_flag = claimed_savoy
 			}
@@ -409,7 +445,7 @@ political_decisions = {
 			}
 			ITA = {
 				exists = yes
-				NOT = { in_sphere = FRA }
+				NOT = { in_sphere = THIS }
 			}
 			NOT = {
 				has_country_modifier = punitive_effects
@@ -418,11 +454,12 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = claimed_savoy
+			FRA = { set_country_flag = claimed_savoy }
+			BOR = { set_country_flag = claimed_savoy }
 			badboy = 3
-			465 = { add_core = FRA }
-			466 = { add_core = FRA }
-			472 = { add_core = FRA }
+			465 = { add_core = THIS }
+			466 = { add_core = THIS }
+			472 = { add_core = THIS }
 			random_country = {
 				limit = { owns = 465 }
 				leave_alliance = THIS
@@ -434,12 +471,13 @@ political_decisions = {
 	claim_aosta = {
 		picture = claim_aosta
 		potential = {
-			tag = FRA
+			primary_culture = french
 			is_greater_power = yes
+			capital = 425
 			owns = 412 #Metz
 			owns = 472 #Nice
 			NOT = {
-				721 = { is_core = FRA }
+				721 = { is_core = THIS }
 				has_country_flag = claimed_aosta
 			}
 		}
@@ -451,7 +489,7 @@ political_decisions = {
 			}
 			ITA = {
 				exists = yes
-				NOT = { in_sphere = FRA }
+				NOT = { in_sphere = THIS }
 			}
 			NOT = {
 				has_country_modifier = punitive_effects
@@ -460,9 +498,10 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = claimed_aosta
+			FRA = { set_country_flag = claimed_aosta }
+			BOR = { set_country_flag = claimed_aosta }
 			badboy = 1
-			721 = { add_core = FRA }
+			721 = { add_core = THIS }
 			random_country = {
 				limit = { owns = 721 }
 				leave_alliance = THIS
@@ -489,8 +528,9 @@ political_decisions = {
 	annex_new_caledonia = {
 		picture = dreams_of_empire
 		potential = {
-			tag = FRA
+			primary_culture = french
 			is_greater_power = yes
+			capital = 425
 			state_n_government = 1
 			1097 = { empty = yes }
 			OR = {
@@ -507,8 +547,8 @@ political_decisions = {
 		
 		effect = {
 			prestige = 3
-			1097 = { add_core = FRA }
-			1097 = { secede_province = FRA }
+			1097 = { add_core = THIS }
+			1097 = { secede_province = THIS }
 			add_country_modifier = { name = penal_colonies duration = -1 }
 		}
 	}
@@ -516,7 +556,9 @@ political_decisions = {
 	french_language_schooling = {
 		picture = embrace_minority
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			any_owned_province = { is_core = BRT }
 			BRT = { exists = no }
 			NOT = { has_country_flag = enacted_french_schooling	 }
@@ -530,7 +572,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = enacted_french_schooling
+			FRA = { set_country_flag = enacted_french_schooling }
+			BOR = { set_country_flag = enacted_french_schooling }
 			remove_accepted_culture = picard
 			remove_accepted_culture = arpitan
 			remove_accepted_culture = breton
@@ -540,22 +583,22 @@ political_decisions = {
 			remove_accepted_culture = rhinelander
 			any_owned = {
 				limit = {
-					is_core = FRA
+					is_core = THIS
 					OR = {
 						is_core = BRT
 						is_core = WLL
 						is_core = CAT
 						is_core = CRS
 						is_core = ITA
-						is_core = FRA
+						is_core = THIS
 						is_core = SWI
 						AND = {
 							is_core = LUX
-							FRA = { has_country_flag = chose_door_one }
+							THIS = { has_country_flag = chose_door_one }
 						}
 						AND = {
 							is_core = RHI
-							FRA = { has_country_flag = chose_door_one }
+							THIS = { has_country_flag = chose_door_one }
 						}
 						culture = picard
 						culture = occitan
@@ -588,7 +631,7 @@ political_decisions = {
 				limit = {
 					tag = LUX
 					exists = yes
-					vassal_of = FRA
+					vassal_of = THIS
 				}
 				primary_culture = french
 			}
@@ -596,7 +639,7 @@ political_decisions = {
 				limit = {
 					tag = RHI
 					exists = yes
-					vassal_of = FRA
+					vassal_of = THIS
 				}
 				primary_culture = french
 			}	
@@ -606,7 +649,9 @@ political_decisions = {
 	st_barths_question = {
 		picture = map_caribbean
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			NOT = { owns = 3246 }
 			NOT = { has_country_flag = st_barths_referendum }
 			OR = {
@@ -625,7 +670,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = st_barths_referendum
+			FRA = { set_country_flag = st_barths_referendum }
+			BOR = { set_country_flag = st_barths_referendum }
 			3246 = { owner = { country_event = 36623 } }
 		}
 		ai_will_do = { factor = 1 }
@@ -739,7 +785,8 @@ political_decisions = {
 	the_1854_plan = {
 		picture = faidherbe
 		potential = {
-			tag = FRA
+			primary_culture = french
+			capital = 425
 			owns = 1784
 			year = 1845
 			NOT = { has_country_flag = faidherbe_ambitions }
@@ -755,7 +802,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = faidherbe_ambitions
+			FRA = { set_country_flag = faidherbe_ambitions }
+			BOR = { set_country_flag = faidherbe_ambitions }
 			2573 = {
 				secede_province = THIS
 				owner = { relation = { who = THIS value = -25 } }
@@ -811,20 +859,27 @@ political_decisions = {
 	tunisian_colony = {
 		picture = dreams_of_empire
 		potential = {
-			TUN = { exists = yes civilized = no ai = yes } 
+			capital_scope = { continent = europe }
+			TUN = { exists = yes civilized = no neighbour = THIS } 
 			is_greater_power = yes
-			is_sphere_leader_of = TUN
-			NOT = { is_our_vassal = TUN }
+			OR = { 
+				is_sphere_leader_of = TUN
+				is_our_vassal = TUN
+				TUN = { part_of_sphere = no }
+			}
+			has_global_flag = berlin_conference
+			NOT = { has_global_flag = tunisian_colony }
 		}
 		
 		allow = {
-			war = no
+			NOT = { any_greater_power = { war_with = THIS } }
 			nationalism_n_imperialism = 1
 			year = 1870
-			TUN = { NOT = { money = 3000 } }
+			TUN = { OR = { NOT = { money = 3000 } ai = yes } }
 		}
 		
 		effect = {
+			set_global_flag = tunisian_colony
 			badboy = 2
 			diplomatic_influence = { who = TUN value = -400 }
 			relation = { who = TUN value = -400 }
@@ -839,6 +894,7 @@ political_decisions = {
 			}
 			war = { target = TUN attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
 		}
+		
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 0 badboy = 0.92 }
@@ -883,7 +939,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = french_mines_placed
+			FRA = { set_country_flag = french_mines_placed }
+			BOR = { set_country_flag = french_mines_placed }
 			money = -30000
 			434 = { trade_goods = iron }
 			418 = { trade_goods = iron }
@@ -898,7 +955,9 @@ political_decisions = {
 devil_island = {
 	picture = FRA_devils_island
 	potential = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		GUY = { exists = no }
 		owns = 2241 #Cayenne
 		year = 1852
@@ -911,7 +970,8 @@ devil_island = {
 	}
 		
 	effect = {
-		set_country_flag = devil_island
+		FRA = { set_country_flag = devil_island }
+		BOR = { set_country_flag = devil_island }
 		treasury = -5000
 		prestige = 5
 		2241 = { life_rating = 1 }

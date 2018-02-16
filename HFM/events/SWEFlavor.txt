@@ -815,14 +815,14 @@ country_event = {
 			30 = { country_event = 36626 }
 			}
 		ai_chance = { factor = 0.7 }
-		3246 = { add_core = FRA }
+		3246 = { add_core = FROM }
 	}
 	
 	option = {
 		name = "EVTOPTB36623" 
-		3246 = { secede_province = FRA }
+		3246 = { secede_province = FROM }
 		3246 = { remove_core = THIS }
-		3246 = { add_core = FRA }
+		3246 = { add_core = FROM }
 		relation = { who = FROM value = 50 }
 		treasury = 50000
 		FROM = { treasury = -50000 }
@@ -830,7 +830,7 @@ country_event = {
 			factor = 0.1
 			modifier = {
 				factor = 9
-				in_sphere = FRA
+				in_sphere = FROM
 			}
 		}
 	}
@@ -839,8 +839,8 @@ country_event = {
 		name = "EVTOPTC36623" 
 		ENG = { country_event = 36624 }
 		3246 = { remove_core = THIS }
-		3246 = { add_core = FRA }
-		relation = { who = FRA value = -100 }
+		3246 = { add_core = FROM }
+		relation = { who = FROM value = -100 }
 		ai_chance = {
 			factor = 0.1
 			modifier = {
@@ -869,8 +869,8 @@ country_event = {
 		name = "EVTOPTD36623" 
 		NET = { country_event = 36624 }
 		3246 = { remove_core = THIS }
-		3246 = { add_core = FRA }
-		relation = { who = FRA value = -100 }
+		3246 = { add_core = FROM }
+		relation = { who = FROM value = -100 }
 		ai_chance = {
 			factor = 0.05
 			modifier = {
@@ -896,8 +896,8 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTE36623" 
-		FRA = { country_event = 36627 }
-		3246 = { add_core = FRA }
+		FROM = { country_event = 36627 }
+		3246 = { add_core = FROM }
 		relation = { who = FROM value = -200 }
 		badboy = 1
 		treasury = -50000
@@ -933,8 +933,16 @@ country_event = {
 	option = {
 		name = "EVTOPTA36624"
 		3246 = { secede_province = THIS }
-		FRA = { country_event = 36627 }
-		relation = { who = FRA value = -200 }
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 36627 }
+			owner = { relation = { who = FRA value = -200 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 36627 }
+			owner = { relation = { who = BOR value = -200 } }
+		}	
 		relation = { who = FROM value = 100 }
 		treasury = -50000
 		FROM = { treasury = 50000 }
@@ -953,7 +961,7 @@ country_event = {
 		random_list = {
 			70 = { country_event = 36625 }
 			30 = { country_event = 36626 }
-			}
+		}
 		}
 		ai_chance = {
 			factor = 0.1
@@ -976,18 +984,36 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA36625"
-		3246 = { secede_province = FRA }
 		3246 = { remove_core = THIS }
-		relation = { who = FRA value = 50 }
+		random_owned = {
+			limit = { exists = FRA }
+			3246 = { secede_province = FRA }
+			owner = { relation = { who = FRA value = 50 } }
+			FRA = { treasury = -50000 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 36627 }
+			3246 = { secede_province = BOR }
+			owner = { relation = { who = BOR value = 50 } }
+			BOR = { treasury = -50000 }
+		}
 		treasury = 50000
-		FRA = { treasury = -50000 }
+		
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
 		name = "EVTOPTB36625"
 		badboy = 2
-		FRA = { country_event = 36627 relation = { who = THIS value = -150 } }
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 36627 relation = { who = THIS value = -150 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 36627 relation = { who = THIS value = -150 } }
+		}	
 		ai_chance = { factor = 0 }
 	}
 }
@@ -1003,17 +1029,34 @@ country_event = {
 
 	option = {
 		name = "EVTOPTB36626"
-		3246 = { secede_province = FRA any_pop = { militancy = 4 } }
+		random_owned = {
+			limit = { exists = FRA }
+			3246 = { secede_province = FRA any_pop = { militancy = 4 } }
+			owner = { relation = { who = FRA value = 150 } }
+			FRA = { treasury = -50000 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 36627 }
+			3246 = { secede_province = BOR }
+			owner = { relation = { who = BOR value = 50 } }
+			BOR = { treasury = -50000 }
+		}
 		3246 = { remove_core = THIS }
-		relation = { who = FRA value = 150 }
 		treasury = 50000
-		FRA = { treasury = -50000 }
 		ai_chance = { factor = 0.2 }
 	}
 	
 	option = {
 		name = "EVTOPTA36625"
-		FRA = { country_event = 36627 }
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 36627 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 36627 }
+		}	
 		ai_chance = { factor = 0.8 }
 	}
 }
@@ -1035,7 +1078,7 @@ country_event = {
 				3246 = { is_colonial = yes }
 			}
 			add_casus_belli = {
-				target = FRA
+				target = THIS
 				type = place_in_the_sun
 				months = 60
 			}
@@ -1047,7 +1090,7 @@ country_event = {
 				3246 = { is_colonial = no }
 			}
 			add_casus_belli = {
-				target = FRA
+				target = THIS
 				type = acquire_state
 				months = 60
 			}

@@ -762,6 +762,7 @@ political_decisions = {
 	vassalize_trucial_states = {
 		picture = dubai_city
 		potential = {
+			NOT = { tag = ENG }
 			is_sphere_leader_of = ABU
 			ABU = {
 				ai = yes

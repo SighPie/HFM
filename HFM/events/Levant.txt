@@ -8,7 +8,10 @@ country_event = {
 	trigger = {
 		year = 1860
 		owns = 913
-		FRA = { has_country_flag = mount_lebanon_intervene }
+		OR = {
+			FRA = { has_country_flag = mount_lebanon_intervene }
+			BOR = { has_country_flag = mount_lebanon_intervene }
+		}
 	}
 		
 	mean_time_to_happen = { months = 50 }
@@ -22,7 +25,6 @@ country_event = {
 				duration = -1
 			}
 		}
-		
 		913 = {
 			any_pop = {#if no schools, desire low schools
 				limit = {

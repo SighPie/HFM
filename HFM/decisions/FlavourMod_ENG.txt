@@ -149,7 +149,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	
 	the_irish_dominion = {
 		picture = gtfo
 		potential = {
@@ -180,7 +179,7 @@ political_decisions = {
 			set_country_flag = the_irish_dominion
 			prestige = 5
 			IRE = {
-				government = french_bourbon
+				government = dominion
 				add_accepted_culture = british
 			}
 			255 = { secede_province = THIS }
@@ -197,7 +196,7 @@ political_decisions = {
 			tag = IRE
 			OR = {
 				government = hms_government
-				government = french_bourbon
+				government = dominion
 			}
 			NOT = { has_country_flag = easter_rising }
 			is_vassal = no
@@ -228,7 +227,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	
 	break_alliance_AI = {
 		picture = "pax_britannica"
 		potential = { 
@@ -239,9 +237,7 @@ political_decisions = {
 		}
 		allow = {
 			tag = ENG
-			any_greater_power = {
-				alliance_with = ENG
-			}
+			any_greater_power = { alliance_with = ENG }
 			NOT = { exists = IRE }
 			has_country_modifier = pax_britannica
 			NOT = { exists = GER }
@@ -250,11 +246,12 @@ political_decisions = {
 			NOT = { year = 1870 }
 			NOT = {
 				AND = {
-					EGY = {
-						war_with = TUR
-					}
+					EGY = { war_with = TUR }
 					war_with = EGY
-					war_with = FRA
+					OR = { 
+						war_with = FRA
+						war_with = BOR
+					}
 				}
 			}
 			OR = {
@@ -262,36 +259,28 @@ political_decisions = {
 					is_greater_power = yes
 					NOT = { alliance_with = THIS }
 				}
-				TUR = {
-					is_greater_power = no
-				}
+				TUR = { is_greater_power = no }
 			}
 			OR = {
 				JAP = {
 					is_greater_power = yes
 					NOT = { alliance_with = THIS }
 				}
-				JAP = {
-					is_greater_power = no
-				}
+				JAP = { is_greater_power = no }
 			}
 			OR = {
 				BEL = {
 					is_greater_power = yes
 					NOT = { alliance_with = THIS }
 				}
-				BEL = {
-					is_greater_power = no
-				}
+				BEL = { is_greater_power = no }
 			}
 			OR = {
 				POR = {
 					is_greater_power = yes
 					NOT = { alliance_with = THIS }
 				}
-				POR = {
-					is_greater_power = no
-				}
+				POR = { is_greater_power = no }
 			}
 		}
 		
@@ -316,162 +305,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	sykes_picot_agreement_no_great_war = { #Carve up the Ottoman Empire without a Great War
-		picture = "sykes_picot"
-		potential = { 
-			tag = ENG
-			is_disarmed = no
-			OR = {
-				TUR = { has_country_flag = ottomans_to_turks }
-				has_country_flag = turks_defy_congress
-			}
-			TUR = {
-				is_greater_power = no
-				is_secondary_power = no
-				owns = 917
-				owns = 913
-				owns = 926
-				owns = 908
-				owns = 900
-				owns = 902
-				owns = 897
-			}
-			relation = { who = FRA value = 100 }
-			NOT = { has_global_flag = sykes_picot }
-			NOT = { year = 1900 }
-		}
-		
-		allow = {
-			TUR = {
-				part_of_sphere = no
-			}
-			NOT = {
-				FRA = {
-					alliance_with = TUR
-				}
-			}
-			war = no
-			is_greater_power = yes
-			revolution_n_counterrevolution = 1
-			alliance_with = FRA
-			NOT = { truce_with = FRA }
-			FRA = { 
-				war = no
-			}
-		}
-		
-		effect = {
-			set_country_flag = sykes_picot_agreed
-			set_global_flag = sykes_picot
-			badboy = 6
-			prestige = 10
-			any_pop = {
-				limit = {
-					OR = {
-						religion = sunni
-						religion = shiite
-					}
-				}
-				consciousness = 8	
-				militancy = 8
-			}
-			FRA = {
-				country_event = 99972
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_greater_power = {
-					alliance_with = TUR
-				}
-			}
-		}
-	}
-	
-	the_asia_minor_agreement = { #Carve up the Ottoman Empire without a Great War - Without France as Ally
-		picture = "sykes_picot"
-		potential = { 
-			tag = ENG
-			is_disarmed = no
-			OR = {
-				TUR = { has_country_flag = ottomans_to_turks }
-				has_country_flag = turks_defy_congress
-			}
-			TUR = {
-				is_greater_power = no
-				is_secondary_power = no
-				owns = 917
-				owns = 913
-				owns = 926
-				owns = 908
-				owns = 900
-				owns = 902
-				owns = 897
-			}
-			FRA = { 
-				NOT = { alliance_with = ENG }
-			}
-			NOT = {
-				RUS = {
-					is_greater_power = yes
-					alliance_with = THIS
-				}
-			}
-			NOT = { has_global_flag = sykes_picot }
-			NOT = { year = 1900 }
-		}
-		
-		allow = {
-			any_greater_power = { 
-				NOT = { tag = JAP }
-				NOT = { tag = USA }
-				alliance_with = ENG
-			}
-			TUR = {
-				part_of_sphere = no
-			}
-			war = no
-			is_greater_power = yes
-			revolution_n_counterrevolution = 1
-		}
-		
-		effect = {
-			set_country_flag = sykes_picot_agreed
-			set_global_flag = sykes_picot
-			badboy = 6
-			prestige = 10
-			any_pop = {
-				limit = {
-					OR = {
-						religion = sunni
-						religion = shiite
-					}
-				}
-				consciousness = 8	
-				militancy = 8
-			}
-			any_greater_power = {
-				limit = {
-					alliance_with = ENG
-				}
-				country_event = 99972
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_greater_power = {
-					alliance_with = TUR
-				}
-			}
-		}
-	}
-	
 	ric_reorganize = {
 		picture = "ric_police"
 		potential = { 
@@ -479,28 +312,26 @@ political_decisions = {
 			NOT = { has_country_flag = ric_reorganized }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 		
 		effect = {
 			set_country_flag = ric_reorganized
 			any_owned = {
 				limit = { 
-						OR = {
-							province_id = 254
-							province_id = 255
-							province_id = 256
-							province_id = 257
-							province_id = 258
-							province_id = 259
-							province_id = 260
-							province_id = 261
-							province_id = 262
-							province_id = 263
-							province_id = 264
-							province_id = 265
-						}
+					OR = {
+						province_id = 254
+						province_id = 255
+						province_id = 256
+						province_id = 257
+						province_id = 258
+						province_id = 259
+						province_id = 260
+						province_id = 261
+						province_id = 262
+						province_id = 263
+						province_id = 264
+						province_id = 265
+					}
 				}
 				add_province_modifier = { name = royal_irish_constabulary duration = -1 }
 			}
@@ -512,7 +343,7 @@ political_decisions = {
 	organize_west_indies = {
 		picture = map_caribbean
 		potential = {
-						is_greater_power = yes
+			is_greater_power = yes
 			mass_politics = 1
 			OR = {
 				AND = {
@@ -523,30 +354,23 @@ political_decisions = {
 						has_global_flag = british_flee_to_canada
 					}
 					has_global_flag = france_dismantled
-					FRA = {
-						government = proletarian_dictatorship
-					}
-					ENG = {
-						government = proletarian_dictatorship
-					}
+					FRA = { government = proletarian_dictatorship }
+					ENG = { government = proletarian_dictatorship }
 				}
 				AND = {
 					tag = ENG
 					government = hms_government
 					NOT = { has_global_flag = british_dismantled }
 					has_global_flag = france_dismantled
-					FRA = {
-						government = proletarian_dictatorship
+					OR = { 
+						FRA = { government = proletarian_dictatorship }
+						BOR = { government = proletarian_dictatorship }
 					}
-					ENG = {
-						government = proletarian_dictatorship
-					}
+					ENG = { government = proletarian_dictatorship }
 				}
 			}
 			2217 = { owned_by = ENG }
-			NOT = { 
-				has_global_flag = caribbean_federation_formed
-			}
+			NOT = { has_global_flag = caribbean_federation_formed }
 		}
 		
 		allow = {
@@ -572,10 +396,15 @@ political_decisions = {
 					add_core = CRB
 					remove_core = ENG
 					remove_core = FRA
+					remove_core = BOR
 				}
 				release = CRB
 			}
-			FRA = {
+			random_country = {
+				limit = {
+					primary_culture = french
+					capital = 425
+				}	
 				country_event = 99992
 			}
 			CRB = {
@@ -597,47 +426,11 @@ political_decisions = {
 			NOT = { has_country_flag = india_colonial_to_republic }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 		
 		effect = {
 			set_country_flag = india_colonial_to_republic
 			government = democracy
-		}
-	}
-	
-	return_adana_to_turkey = {
-		picture = christian_question_armenia
-		potential = {
-			NOT = { 
-				primary_culture = turkish
-				primary_culture = greek
-				primary_culture = armenian
-			}
-			owns = 894
-			has_country_flag = sykes_picot_agreed
-			NOT = { has_country_flag = return_adana_to_turkey }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_country_flag = return_adana_to_turkey
-			badboy = -8
-			prestige = 5
-			any_owned = {
-				limit = {
-					is_core = TUR
-				}
-				secede_province = TUR
-			}
-			relation = {
-				who = TUR
-				value = 150
-			}
 		}
 	}
 	
@@ -701,57 +494,28 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}	
 	
-	
 	ai_get_british_wyoming = {
 		potential = {
 			tag = ENG
 			ai = yes
-			OR = {
-				AND = { 
-					owns = 93
-					owns = 114
-					owns = 83
-					owns = 78
-				}
-				RPL = {
-					vassal_of = THIS
-					owns = 93
-					owns = 114
-					owns = 83
-					owns = 78
-				}
-			}
-			USA = {
-				ai = yes
-			}
+			OR = { AND = {  owns = 93 owns = 114 owns = 83 owns = 78 } RPL = { vassal_of = THIS owns = 93 owns = 114 owns = 83 owns = 78 } }
+			USA = { ai = yes }
 			NOT = { has_country_flag = ai_get_british_wyoming }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 		
 		effect = {
 			set_country_flag = ai_get_british_wyoming
 			111 = { secede_province = ENG }
-			COL = { 
-				all_core = {
-					remove_core = ENG
-				}
-			}
-			RPL = {
-				any_owned = {
-					limit = {
-						is_core = COL
-					}
-					secede_province = ENG
-				}
-			}
+			COL = {  all_core = { remove_core = ENG } }
+			RPL = { any_owned = { limit = { is_core = COL } secede_province = ENG } }
 		}
 		
 		ai_will_do = { factor = 1 }
-	}	
-	
+	}
+
+		
 	landship_committee = {
 		picture = landship
 		potential = {
@@ -776,20 +540,15 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					province_id = 284
-					state_scope = {
-						NOT = { has_building = barrel_factory }
-					}
-				}
-				
+					state_scope = { NOT = { has_building = barrel_factory } }
+				}		
 				owner = { 
 					capital = 284
 					build_factory_in_capital_state = barrel_factory
 				}
 			}
 			random_owned = {
-				limit = {
-					province_id = 300 #London
-				}
+				limit = { province_id = 300 } #London
 				THIS = { capital = 300 }
 			}
 			set_global_flag = landship_committee
@@ -821,9 +580,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					province_id = 297
-					state_scope = {
-						NOT = { has_building = aeroplane_factory }
-					}
+					state_scope = { NOT = { has_building = aeroplane_factory } }
 				}
 				
 				owner = { 
@@ -832,9 +589,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = {
-					province_id = 300 #London
-				}
+				limit = { province_id = 300 } #London
 				THIS = { capital = 300 }
 			}
 		}
@@ -966,8 +721,79 @@ political_decisions = {
 			set_country_flag = maldives_protectorate
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { factor = 1 }
+	}
+	
+	papua_act = {
+		picture = papua_act
+		potential = {
+			tag = ENG
+			OR = {
+				AND = { 
+					owns = 2528
+					owns = 2529
+					NOT = { has_country_flag = papua_act_south }
+				}
+				AND = { 
+					owns = 2530
+					NOT = { has_country_flag = papua_act_north }
+				}
+				AND = { 
+					owns = 2534
+					NOT = { has_country_flag = papua_act_solomons }
+				}
+			}
+			AST = {
+				exists = yes
+				is_greater_power = no
+				OR = {
+					substate_of = ENG
+					vassal_of = ENG
+					in_sphere = ENG
+				}
+			}
 		}
+
+		allow = {
+			war = no
+			is_greater_power = yes
+			invention = the_dark_continent
+		}
+
+		effect = {
+			random_owned = {
+				limit = { region = AST_2528 }
+				owner = { 
+					any_owned = {
+						limit = { region = AST_2528 }
+						secede_province = AST
+					} 
+					badboy = -2 set_country_flag = papua_act_south 
+				}
+			}
+			random_owned = {
+				limit = { region = GER_2530 }
+				owner = {
+					any_owned = {
+						limit = { region = GER_2530 }
+						secede_province = AST
+					}
+					badboy = -2 set_country_flag = papua_act_north 
+				}
+				PPG = { government = hms_government }
+			}
+			random_owned = {
+				limit = { region = AST_2534 }
+				owner = {
+					any_owned = {
+						limit = { region = AST_2534 }
+						secede_province = AST
+					}
+					badboy = -1 set_country_flag = papua_act_solomons 
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

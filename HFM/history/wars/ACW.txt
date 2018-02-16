@@ -1,4 +1,4 @@
-#name = "War of Northern Aggression"
+#name = "The War of Northern Aggression"
 
 1861.4.13 = {
 	add_attacker = USA

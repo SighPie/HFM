@@ -102,13 +102,14 @@ political_decisions = {
 			set_global_flag = form_kingdom_of_egypt
 			badboy = -8
 			any_owned = {
-				limit = { 
+				limit = {
 					is_core = EGY
 					NOT = { province_id = 1755 }
 					NOT = { is_core = SUD }
 				}
-				secede_province = EGY
+				secede_province = UTI
 			}
+			EGY = { inherit = UTI }
 			create_vassal = EGY
 			EGY = {
 				prestige = -80
@@ -120,9 +121,7 @@ political_decisions = {
 				plurality = -5
 				
 				any_owned = {
-					limit = {
-						is_core = SUD
-					}
+					limit = { is_core = SUD }
 					secede_province = THIS
 				}
 				

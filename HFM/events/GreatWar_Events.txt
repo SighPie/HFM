@@ -459,6 +459,7 @@ country_event = {
 			tag = USA
 			tag = ENG
 			tag = FRA
+			tag = BOR
 			tag = AUS
 			tag = KUK
 			tag = DNB
@@ -1674,6 +1675,7 @@ country_event = {
 			tag = RUS
 			tag = USA
 			tag = ENG
+			tag = BOR
 			tag = FRA
 			tag = AUS
 			tag = KUK
@@ -2399,6 +2401,7 @@ country_event = {
 		#remove cores from Alsace-Lorraine if France has a truce	
 		random_country = {
 			limit = {
+				exists = yes
 				tag = FRA
 				truce_with = THIS
 			}
@@ -2411,9 +2414,25 @@ country_event = {
 			}
 		}
 		
+		random_country = {
+			limit = {
+				exists = yes
+				tag = BOR
+				truce_with = THIS
+			}
+			FRA_412 = {
+				remove_core = GER
+				remove_core = GCF
+				remove_core = ELS
+				remove_core = LOR
+				add_core = BOR
+			}
+		}
+		
 		#if France has a truce, and the Rhineland is not owned, release Westfalen as its puppet
 		random_country = {
 			limit = {
+				exists = yes
 				tag = FRA
 				truce_with = THIS
 				THIS = {
@@ -2448,10 +2467,49 @@ country_event = {
 				}
 			}
 		}
+		
+		random_country = {
+			limit = {
+				exists = yes
+				tag = BOR
+				truce_with = THIS
+				THIS = {
+					NOT = {
+						any_owned_province = {
+							OR = {
+								region = PRU_575
+								region = PRU_570
+								region = PRU_578
+							}
+						}
+					}
+				}
+				THIS = { owns = 581 }
+			}
+			PRU_581 = { add_core = WES }
+			THIS = {
+				any_owned = {
+					limit = { is_core = WES }
+					secede_province = BOR
+				}
+			}
+			release_vassal = WES
+			diplomatic_influence = {
+				who = WES
+				value = 200
+			}
+			THIS = {
+				diplomatic_influence = {
+					who = WES
+					value = -200
+				}
+			}
+		}
 
 		#if France has a truce and owns any Rhineland province, release the Rhineland as its puppet
 		random_country = {
 			limit = {
+				exists = yes
 				tag = FRA
 				any_owned_province = {
 					OR = {
@@ -2495,6 +2553,52 @@ country_event = {
 			}
 		}
 		
+		random_country = {
+			limit = {
+				exists = yes
+				tag = BOR
+				any_owned_province = {
+					OR = {
+						region = PRU_575
+						region = PRU_570
+						region = PRU_578
+					}
+				}
+				THIS = {
+					any_owned_province = {
+						OR = {
+							region = PRU_575
+							region = PRU_570
+							region = PRU_578
+						}
+					}
+				}
+			}
+			PRU_575 = { add_core = RHI }
+			PRU_570 = { add_core = RHI }
+			PRU_578 = { add_core = RHI }
+			THIS = {
+				any_owned = {
+					limit = {
+						NOT = { region = PRU_578 }
+						is_core = RHI
+					}
+					secede_province = BOR
+				}
+			}
+			release_vassal = RHI
+			diplomatic_influence = {
+				who = RHI
+				value = 200
+			}
+			THIS = {
+				diplomatic_influence = {
+					who = RHI
+					value = -200
+				}
+			}
+		}
+		
 		#release Danzig as ally, if controlled
 		any_country = {
 			limit = {
@@ -2517,7 +2621,27 @@ country_event = {
 		#if France has no truce, add Rhineland cores
 		random_country = {
 			limit = {
+				exists = yes
 				tag = FRA
+				NOT = { truce_with = THIS }
+				THIS = {
+					OR = {
+						owns = 575
+						owns = 570
+						owns = 578
+					}
+				}
+			}
+			PRU_575 = { add_core = RHI }
+			PRU_570 = { add_core = RHI }
+			PRU_578 = { add_core = RHI }
+		}	
+		
+		#if Bourbon France has no truce, add Rhineland cores
+		random_country = {
+			limit = {
+				exists = yes
+				tag = BOR
 				NOT = { truce_with = THIS }
 				THIS = {
 					OR = {
@@ -4491,9 +4615,19 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = FRA
+				exists = yes
 				truce_with = THIS
 			}
 			419 = { add_core = FRA }
+		}
+		
+		random_country = {
+			limit = {
+				tag = BOR
+				exists = yes
+				truce_with = THIS
+			}
+			419 = { add_core = BOR }
 		}
 		
 		#if any Congress Poland cores owned, re-add cores to Russia
@@ -5207,7 +5341,10 @@ country_event = {
 			has_country_flag = ultimatum_accepted
 			has_country_flag = dismantling_treaty
 		}
-		tag = FRA
+		OR = {
+			tag = FRA
+			tag = BOR
+		}
 		OR = {
 			has_country_flag = ultimatum_accepted
 			has_country_flag = dismantling_treaty
@@ -5273,7 +5410,7 @@ country_event = {
 				NOT = { exists = GCF }
 			}
 			FRA_412 = {
-				remove_core = FRA
+				remove_core = THIS
 				add_core = GER
 			}
 		}
@@ -5334,10 +5471,10 @@ country_event = {
 				owns = 472
 				owns = 473
 			}
-			465 = { remove_core = FRA }
-			466 = { remove_core = FRA }
-			472 = { remove_core = FRA }
-			473 = { remove_core = FRA }
+			465 = { remove_core = THIS }
+			466 = { remove_core = THIS }
+			472 = { remove_core = THIS }
+			473 = { remove_core = THIS }
 			
 		}
 
@@ -5571,6 +5708,7 @@ country_event = {
 				owns = 74
 				NOT = { owns = 77 }
 				NOT = { tag = FRA }
+				NOT = { tag = BOR }
 			}
 			country_event = 96092
 		}
@@ -5810,6 +5948,7 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = FRA
+				exists = yes
 				truce_with = THIS
 				THIS = { owns = 412 }
 			}
@@ -5817,6 +5956,21 @@ country_event = {
 				remove_core = GER
 				remove_core = GCF
 				add_core = FRA
+			}
+		}
+		
+		#remove cores from Alsace-Lorraine if owned and France has a truce	
+		random_country = {
+			limit = {
+				tag = BOR
+				exists = yes
+				truce_with = THIS
+				THIS = { owns = 412 }
+			}
+			FRA_412 = {
+				remove_core = GER
+				remove_core = GCF
+				add_core = BOR
 			}
 		}
 

@@ -3154,6 +3154,7 @@ country_event = {
 			}
 			NOT = { prestige = 200 }
 		}
+		NOT = { has_global_flag = warlord_era_has_begun }
 	}
 	
 	mean_time_to_happen = {

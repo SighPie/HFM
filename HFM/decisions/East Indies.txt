@@ -739,9 +739,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	sulu_protectorate = {
@@ -871,13 +869,13 @@ political_decisions = {
 	create_cambodian_protectorate = {
 		picture = unequal_treaty
 		potential = {
-			OR = {
-				tag = FRA
-				tag = BOR
-			}
+			owns = 1380
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			CAM = {
 				exists = yes
-				neighbour = FRA
+				neighbour = THIS
 				civilized = no
 				ai = yes
 			}
@@ -891,17 +889,11 @@ political_decisions = {
 				war = no
 				OR = {
 					part_of_sphere = no
-					OR = { 
-						in_sphere = FRA
-						in_sphere = BOR
-					}
+					in_sphere = THIS
 				}
 				OR = {
 					is_vassal = no
-					OR = {
-						vassal_of = FRA
-						vassal_of = BOR
-					}
+					in_sphere = THIS
 				}
 			}
 		}
@@ -917,8 +909,9 @@ political_decisions = {
 	create_laos_protectorate = {
 		picture = unequal_treaty
 		potential = {
-			tag = FRA
 			is_greater_power = yes
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			OR = {
 				LUA = {
 					NOT = { has_country_flag = annexed_to_FRA }
@@ -928,11 +921,11 @@ political_decisions = {
 					war = no
 					OR = {
 						part_of_sphere = no
-						in_sphere = FRA
+						in_sphere = THIS
 					}
 					OR = {
 						is_vassal = no
-						vassal_of = FRA
+						vassal_of = THIS
 					}
 				}
 				WIA = {
@@ -943,11 +936,11 @@ political_decisions = {
 					war = no
 					OR = {
 						part_of_sphere = no
-						in_sphere = FRA
+						in_sphere = THIS
 					}
 					OR = {
 						is_vassal = no
-						vassal_of = FRA
+						vassal_of = THIS
 					}
 				}
 				CHK = {
@@ -958,11 +951,11 @@ political_decisions = {
 					war = no
 					OR = {
 						part_of_sphere = no
-						in_sphere = FRA
+						in_sphere = THIS
 					}
 					OR = {
 						is_vassal = no
-						vassal_of = FRA
+						vassal_of = THIS
 					}
 				}
 			}
@@ -985,16 +978,16 @@ political_decisions = {
 					primary_culture = lao
 					OR = {
 						part_of_sphere = no
-						in_sphere = FRA
+						in_sphere = THIS
 					}
 					OR = {
 						is_vassal = no
-						vassal_of = FRA
+						vassal_of = THIS
 					}
 				}
 				set_country_flag = annexed_to_FRA
 				tech_school = unciv_tech_school
-				annex_to = FRA
+				annex_to = THIS
 			}
 		}
 	}
@@ -1002,11 +995,12 @@ political_decisions = {
 	siamese_border_treaty = {
 		picture = unequal_treaty
 		potential = {
-			tag = FRA
 			is_greater_power = yes
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			has_global_flag = berlin_conference
 			SIA = {
-				neighbour = FRA
+				neighbour = THIS
 				any_owned_province = {
 					OR = {
 						is_core = DAI
@@ -1016,13 +1010,14 @@ political_decisions = {
 					}
 				}
 			}
+			owns = 1369
 			NOT = { has_country_flag = enacted_siamese_border_treaty }
 		}
 		
 		allow = {
-			war = no
+			NOT = { war_with = SIA }
 			SIA = { war = no }
-			mass_politics = 1
+			invention = the_dark_continent
 		}
 		
 		effect = {
@@ -1034,14 +1029,15 @@ political_decisions = {
 	annex_champasak = {
 		picture = unequal_treaty
 		potential = {
-			tag = FRA
 			is_greater_power = yes
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			has_global_flag = berlin_conference
 			owns = 1368
 			CHK = { exists = yes ai = yes vassal_of = SIA }
 			OR = {
 				AND = {
-					SIA = { ai = yes neighbour = FRA has_recently_lost_war = yes }
+					SIA = { ai = yes neighbour = THIS has_recently_lost_war = yes }
 					truce_with = SIA
 				}
 				ai = yes
@@ -1066,7 +1062,8 @@ political_decisions = {
 		picture = unequal_treaty
 		potential = {
 			is_greater_power = yes
-			tag = FRA
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			NOT = { has_country_flag = negotiate_unequal_treaty }
 			NOT = { has_country_flag = tonkin_campaign }
 			DAI = {
@@ -1177,7 +1174,7 @@ political_decisions = {
 	form_french_indochina = {
 		picture = map_east_indies
 		potential = {
-			tag = FRA
+			primary_culture = french
 			1380 = {
 				owned_by = THIS
 				is_colonial = yes

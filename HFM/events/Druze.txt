@@ -70,35 +70,38 @@ country_event = {
 	}
 		
 	mean_time_to_happen = { 
-			months = 200
-			
-			modifier = {
-					factor = 0.5 #increase likelihood to happen
-					912 = {
-							any_pop = {
-									has_pop_religion = catholic#started by Maronite peasants who rioted
-									militancy = 4
-							}
-					}
+		months = 200
+		
+		modifier = {
+			factor = 0.2 #increase likelihood to happen
+			912 = {
+				any_pop = {
+					has_pop_religion = catholic#started by Maronite peasants who rioted
+					militancy = 4
+				}
 			}
-			
-			modifier = {
-					factor = 0.75 #increase likelihood to happen
-					OR = {
-							religion = sunni
-							religion = shiite
-					}
+		}
+		
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			OR = {
+				religion = sunni
+				religion = shiite
 			}
+		}
 	}
 	fire_only_once = yes
 
 	option = {
 		name = "EVT167010OPTA"
-		FRA = { country_event = { id = 167020 days = 10 } }
-		
-		ai_chance = {
-				factor = 1
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = { id = 167020 days = 10 }
 		}
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -106,53 +109,49 @@ country_event = {
 		
 		prestige = -10
 		any_pop = {
-				limit = {
-						OR = {
-								has_pop_religion = sunni
-								has_pop_religion = shiite
-						}
-						type = aristocrats
+			limit = {
+				OR = {
+						has_pop_religion = sunni
+						has_pop_religion = shiite
 				}
-				
-				consciousness = 2
-				militancy = 1
+				type = aristocrats
+			}
+			consciousness = 2
+			militancy = 1
 		}
 		
 		912 = {
-				any_pop = {
-						limit = {
-								OR = {
-										has_pop_religion = druze
-										has_pop_religion = catholic
-										has_pop_religion = orthodox
-								}
-						}
-						
-						consciousness = 6
-						militancy = 6
-						reduce_pop = 0.9
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = druze
+						has_pop_religion = catholic
+						has_pop_religion = orthodox
+					}
 				}
+				consciousness = 6
+				militancy = 6
+				reduce_pop = 0.9
+			}
 		}
 		
 		913 = {
-				any_pop = {
-						limit = {
-								OR = {
-										has_pop_religion = druze
-										has_pop_religion = catholic
-										has_pop_religion = orthodox
-								}
-						}
-						
-						consciousness = 6
-						militancy = 6
-						reduce_pop = 0.9
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_religion = druze
+						has_pop_religion = catholic
+						has_pop_religion = orthodox
+					}
 				}
+				
+				consciousness = 6
+				militancy = 6
+				reduce_pop = 0.9
+			}
 		}
 		
-		ai_chance = {
-				factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 

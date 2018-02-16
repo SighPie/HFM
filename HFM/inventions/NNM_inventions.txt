@@ -36,6 +36,7 @@ test_naval = {
 		OR = { 
 			tag = GER
 			tag = FRA
+			tag = BOR
 			tag = GCF
 			tag = RUS
 			tag = JAP

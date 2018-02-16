@@ -183,3 +183,9 @@ rama_iv_desc;King Mongkut, was the fourth monarch of Siam under the House of Cha
 rama_v;Rama V;;;;;;;;;;;;;;;;;;;x,,,,,
 rama_v_desc;King Chulalongkorn, was the fifth monarch of Siam under the House of Chakri, ascending to the throne in 1868. His reign was characterized by the modernization of Siam, governmental and social reforms, and territorial concessions to the British and French. As Siam was threatened by Western expansionism, Chulalongkorn, through his policies and acts, managed to save Siam from colonisation. \n\nAll his reforms were dedicated to ensuring Siam's survival in the face of Western colonialism, so that Chulalongkorn earned the epithet Phra Piya Maharat (the Great Beloved King).;;;;;;;;;;;;;;;;;;;;x,,,,,
 yohannes_iv;Yohannes IV;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
+clean_up_colonial_government;Autonomous Territory;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+dominion_gov;Dominion;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+dominion;Dominion;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+dominion_ruler;Prime Minister;;;;;;;;;;;;x,,,
+brothers_war_winner;Brother's War Victor;;;;;;;;;;;;x
+micro_nation;Microstate;;;;;;;;;;;;x

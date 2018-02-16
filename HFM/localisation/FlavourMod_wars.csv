@@ -1,4 +1,8 @@
 ;;;;;;;;;;;x
+NORMAL_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -21,6 +25,8 @@ NORMAL_WAR_CONQUEST_ANY_NAME_SAR_PAP;The Expedition of the Thousand;;;;;;;;;;;;;
 AGRESSION_WAR_CONQUEST_ANY_NAME_SAR_PAP;The Expedition of the Thousand;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_TAKE_CORE_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
 NORMAL_WAR_TAKE_CORE_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
+NORMAL_WAR_UNIFICATION_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
+AGRESSION_WAR_UNIFICATION_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
 AGRESSION_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_TAKE_CORE_NAME_WOL_FRA;French Conquest of Sengal;;;;;;;;;;;x,,,

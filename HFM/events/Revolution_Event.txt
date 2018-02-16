@@ -909,7 +909,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					tag = FRA
+					primary_culture = french
 					NOT = { has_country_flag = 2nd_republic }
 					OR = {
 						has_country_modifier = springtime_of_nations
@@ -917,7 +917,19 @@ country_event = {
 					}
 				}
 			}
-			owner = { set_country_flag = 2nd_republic }
+			FRA = { set_country_flag = 2nd_republic }
+			BOR = { set_country_flag = 2nd_republic }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					primary_culture = french
+					has_country_flag = 2nd_republic
+					NOT = { has_country_flag = 3rd_republic }
+				}
+			}
+			FRA = { set_country_flag = 3rd_republic }
+			BOR = { set_country_flag = 3rd_republic }
 		}
 		random_owned = {
 			limit = {
@@ -2588,7 +2600,7 @@ country_event = {
 				factor = 0
 				OR = {
 					tag = AUS
-					tag = FRA
+					primary_culture = french
 				}
 				FROM = { is_culture_group = italian }
 			}

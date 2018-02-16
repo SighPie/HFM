@@ -327,10 +327,10 @@ country_event = {
 		SAR = {
 			prestige = 10
 			relation = {
-				who = FRA
+				who = THIS
 				value = 150
 			}
-			create_alliance = FRA
+			create_alliance = THIS
 			add_country_modifier = {
 				name = small_country_draft
 				duration = 365
@@ -340,13 +340,13 @@ country_event = {
 			limit = {
 				is_culture_group = italian
 				OR = {
-					in_sphere = FRA
+					in_sphere = THIS
 					part_of_sphere = no
 				}
 				ai = yes
-				NOT = { alliance_with = FRA }
+				NOT = { alliance_with = THIS }
 			}
-			create_alliance = FRA
+			create_alliance = THIS
 		}		
 		random_country = {
 			limit = {
@@ -375,6 +375,13 @@ country_event = {
 					}
 					call_ally = yes
 				}
+			}
+			any_country = {
+				limit = {
+					ai = yes
+					alliance_with = AUS
+				}
+				leave_alliance = AUS
 			}
 		}
 		random_country = {
@@ -658,10 +665,10 @@ country_event = {
 		FROM = {
 			prestige = -10
 			relation = {
-				who = FRA
+				who = THIS
 				value = -100
 			}
-			leave_alliance = FRA
+			leave_alliance = THIS
 			country_event = 96161
 		}
 		ai_chance = {
@@ -789,8 +796,9 @@ country_event = {
 			owns = 727
 			owns = 728
 		}
-		FRA = {
-			war = no
+		OR = { 
+			FRA = { exists = yes war = no }
+			BOR = { exists = yes war = no }
 		}
 	}
 	
@@ -801,9 +809,23 @@ country_event = {
 	option = {
 		name = "EVT96161OPTA"
 		set_global_flag = plombieres_refused
-		465 = { add_core = FRA }
-		466 = { add_core = FRA }
-		472 = { add_core = FRA }
+		random_owned = {
+			limit = { exists = FRA }
+			owner = {
+				465 = { add_core = FRA }
+				466 = { add_core = FRA }
+				472 = { add_core = FRA }
+			}
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = {
+				465 = { add_core = BOR }
+				466 = { add_core = BOR }
+				472 = { add_core = BOR }
+			}
+		}	
+		
 		PAP_741 = { add_core = THIS }
 		#MOD_739 = { add_core = THIS }
 		TUS_744 = { add_core = THIS }
@@ -856,7 +878,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				tag = FRA
+				primary_culture = french
 				NOT = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }
@@ -915,7 +937,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				tag = FRA
+				primary_culture = french
 				NOT = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }
@@ -924,7 +946,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				tag = FRA
+				primary_culture = french
 				OR = {
 					465 = { owned_by = ITA }
 					466 = { owned_by = ITA }

@@ -100,74 +100,133 @@ political_decisions = {
 				DES = { vassal_of = THIS }
 				owns = 97
 			}
-			FRA = { NOT = { truce_with = THIS } }
+			OR = { 
+				FRA = { exists = yes NOT = { truce_with = THIS } }
+				BOR = { exists = yes NOT = { truce_with = THIS } }
+			}
 			OR = {
-				any_greater_power = {
-					war_with = FRA
+				any_greater_power = { war_with = FRA }
+				any_greater_power = { war_with = BOR }
+				FRA = { exists = yes is_disarmed = yes } 
+				BOR = { exists = yes is_disarmed = yes } 
+				412 = { 
+					NOT = { 
+						owned_by = FRA 
+						owned_by = BOR 
+					}
 				}
-				FRA = { is_disarmed = yes } 
-				NOT = { 412 = { owned_by = FRA } }
 			}	
 		}
 		
 		effect = {
 			set_country_flag = reconquer_the_west
-			ULA = {
-				all_core = {
-					add_core = USA
+			ULA = { all_core = { add_core = USA } }
+			ACA = { all_core = { add_core = USA } }
+			random_owned = {
+				limit = { exists = FRA }
+				owner = {
+					war = {
+						target = FRA
+						attacker_goal = { casus_belli = acquire_all_cores }
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 139 #Louisiana
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 144 #Arkansas
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 146 #Missouri
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 151 #Iowa
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 155 #Minnesota
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 78 #Washington
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 81 #Oregon
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 106 #Colorado
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 118 #North Dakota
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 120 #South Dakota
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size
+						}
+						call_ally = yes
+					}
 				}
 			}
-			ACA = {
-				all_core = {
-					add_core = USA
+			random_owned = {
+				limit = { exists = BOR }
+					owner = {
+					war = {
+						target = BOR
+						attacker_goal = { casus_belli = acquire_all_cores }
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 139 #Louisiana
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 144 #Arkansas
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 146 #Missouri
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 151 #Iowa
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 155 #Minnesota
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 78 #Washington
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 81 #Oregon
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 106 #Colorado
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 118 #North Dakota
+						}
+						attacker_goal = { 
+							casus_belli = acquire_core_state
+							state_province_id = 120 #South Dakota
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size
+						}
+						call_ally = yes
+					}
 				}
-			}
-			war = {
-				target = FRA
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 139 #Louisiana
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 144 #Arkansas
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 146 #Missouri
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 151 #Iowa
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 155 #Minnesota
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 78 #Washington
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 81 #Oregon
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 106 #Colorado
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 118 #North Dakota
-				}
-				attacker_goal = { 
-					casus_belli = acquire_core_state
-					state_province_id = 120 #South Dakota
-				}
-				defender_goal = {
-					casus_belli = cut_down_to_size
-				}
-				call_ally = yes
 			}
 		}
 		
@@ -203,8 +262,10 @@ political_decisions = {
 				DES = { vassal_of = THIS }
 				owns = 97
 			}
-			FRA = { truce_with = THIS }
-			FRA = {	has_recently_lost_war = yes	}
+			OR = { 
+				FRA = { exists = yes truce_with = THIS has_recently_lost_war = yes }
+				BOR = { exists = yes truce_with = THIS has_recently_lost_war = yes }
+			}
 		}
 		
 		effect = {
@@ -213,7 +274,11 @@ political_decisions = {
 			inherit = CAL
 			inherit = TEX
 			inherit = DES
-			FRA = {
+			random_country = {
+				limit = {
+					primary_culture = french
+					capital = 425
+				}	
 				release = ULA
 				release = ACA
 				remove_accepted_culture = cajun
@@ -221,18 +286,8 @@ political_decisions = {
 			}
 			inherit = ULA
 			inherit = ACA
-			ULA = {
-				all_core = {
-					remove_core = ULA
-				}
-			}
-			ACA = {
-				all_core = {
-					add_core = USA
-					remove_core = ACA
-				}
-			}
-			
+			ULA = { all_core = { remove_core = ULA } }
+			ACA = { all_core = { add_core = USA remove_core = ACA } }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -242,8 +297,7 @@ political_decisions = {
 		picture = manifest_destiny
 		potential = {
 			tag = TEX
-			139 = { owned_by = FRA }
-			exists = CSA
+			139 = { NOT = { owned_by = USA owned_by = CSA} }
 			vassal_of = USA
 			NOT = { has_country_flag = fra_loui_texas_join_csa }
 		}
@@ -279,11 +333,7 @@ political_decisions = {
 		picture = all_texas
 		potential = {
 			tag = MEX
-			TEX = { 
-				all_core = {
-					owned_by = THIS
-				}
-			}
+			TEX = { all_core = { owned_by = THIS } }
 			NOT = { has_global_flag = texas_renamed_mexico }
 			owns = 132
 		}
@@ -299,9 +349,7 @@ political_decisions = {
 			132 = { change_province_name = "Punto de Morgan" }
 			133 = {
 				change_province_name = "Santa Anna"
-				state_scope = {
-					change_region_name = "Tejas"
-				}
+				state_scope = { change_region_name = "Tejas" }
 			}
 			134 = { change_province_name = "San Angelo" } 
 			
@@ -316,11 +364,7 @@ political_decisions = {
 				tag = USA
 				tag = TEX
 			}
-			TEX = { 
-				all_core = {
-					owned_by = THIS
-				}
-			}
+			TEX = { all_core = { owned_by = THIS } }
 			has_global_flag = texas_renamed_mexico
 		}
 		
@@ -334,9 +378,7 @@ political_decisions = {
 			132 = { change_province_name = "Houston" }
 			133 = {
 				change_province_name = "Austin"
-				state_scope = {
-					change_region_name = "Texas"
-				}
+				state_scope = { change_region_name = "Texas" }
 			}
 			134 = { change_province_name = "Abilene" } 
 			prestige = 2

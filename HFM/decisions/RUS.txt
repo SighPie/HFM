@@ -245,6 +245,7 @@ political_decisions = {
 				}
 			}
 			QNG = {
+				neighbour = RUS
 				OR = {
 					has_global_flag = taiping_has_been_defeated
 					has_country_flag = arrow_incident

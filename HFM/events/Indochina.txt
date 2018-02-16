@@ -12,17 +12,34 @@ country_event = {
 		owns = 1380
 		civilized = no
 		is_vassal = no
-		FRA = {
-			war = no
-			is_disarmed = no
-			nationalism_n_imperialism = 1
-			is_greater_power = yes
-			NOT = {
-				alliance_with = THIS
-				truce_with = THIS
-				war_exhaustion = 20
-				war_policy = pacifism
-				has_country_flag = cochinchina_campaign
+		OR = { 
+			FRA = {
+				exists = yes
+				war = no
+				is_disarmed = no
+				nationalism_n_imperialism = 1
+				is_greater_power = yes
+				NOT = {
+					alliance_with = THIS
+					truce_with = THIS
+					war_exhaustion = 20
+					war_policy = pacifism
+					has_country_flag = cochinchina_campaign
+				}
+			}
+			BOR = {
+				exists = yes
+				war = no
+				is_disarmed = no
+				nationalism_n_imperialism = 1
+				is_greater_power = yes
+				NOT = {
+					alliance_with = THIS
+					truce_with = THIS
+					war_exhaustion = 20
+					war_policy = pacifism
+					has_country_flag = cochinchina_campaign
+				}
 			}
 		}
 	}
@@ -37,18 +54,24 @@ country_event = {
 			factor = 0.5
 			neighbour = FRA
 		}
+		modifier = {
+			factor = 0.5
+			neighbour = BOR
+		}
 	}
 	
 	option = {
 		name = "EVT95639OPTA"
-		FRA = {
-			set_country_flag = cochinchina_campaign
+		random_country = {
+			limit = {
+				primary_culture = french
+				is_greater_power = yes
+				exists = yes
+			}
 			country_event = 95640
 		}
 	}
 }
-	
-	
 
 country_event = {
 	id = 95640
@@ -60,10 +83,9 @@ country_event = {
 
 	option = {
 		name = "EVT95640OPTA"
+		set_country_flag = cochinchina_campaign
 		FROM = { country_event = 95641 }
-		ai_chance = {
-			factor = 99
-		}
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -78,9 +100,7 @@ country_event = {
 			who = FROM
 			value = 100
 		}
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -99,7 +119,7 @@ country_event = {
 		any_pop = { militancy = 3 }
 		any_owned = {
 			limit = { region = DAI_1380 }
-			secede_province = FRA
+			secede_province = FROM
 			1380 = { trade_goods = coffee }
 		}
 		ai_chance = { factor = 10 }
@@ -198,14 +218,17 @@ country_event = {
 			war = no
 			civilized = no
 		}
-		FRA = {
-			neighbour = THIS
-			war = no
-			is_disarmed = no
-			is_greater_power = yes
-			NOT = {
-				war_policy = pacifism
-				truce_with = DAI
+		1380 = { #Saigon
+			NOT = { owned_by = DAI }
+			owner = {
+				neighbour = THIS
+				war = no
+				is_disarmed = no
+				is_greater_power = yes
+				NOT = {
+					war_policy = pacifism
+					truce_with = DAI
+				}
 			}
 		}
 		NOT = {
@@ -232,7 +255,13 @@ country_event = {
 	
 	option = {
 		name = "EVT95645OPTA"
-		FRA = { country_event = 95646 }
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				owns = 1380 #Saigon
+			}
+			country_event = 95646
+		}
 		ai_chance = {
 			factor = 95
 		}
@@ -280,13 +309,13 @@ country_event = {
 		diplomatic_influence = { who = CAM value = 200 }
 		relation = { who = CAM value = 100 }
 		DAI = { country_event = 95647 }
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
 		name = "EVT95646OPTB"
 		CAM = { country_event = 95649 }
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -300,21 +329,21 @@ country_event = {
 	
 	option = {
 		name = "EVT95647OPTA"
-		FRA = { create_vassal = CAM }
-		relation = { who = FRA value = -100 }
 		random_country = {
 			limit = {
-				tag = SIA
-				exists = yes
+				owns = 1380 #Saigon
+				is_greater_power = yes
 			}
-			relation = { who = FRA value = -100 }
+			create_vassal = CAM
+			relation = { who = THIS value = -100 }
+			relation = { who = SIA value = -100 }
 		}
 		ai_chance = { factor = 75 }
 	}
 	
 	option = {
 		name = "EVT95647OPTB"
-		FRA = { country_event = 95648 }
+		FROM = { country_event = 95648 }
 		ai_chance = { factor = 25 }
 	}
 }
@@ -390,10 +419,12 @@ country_event = {
 	picture = "deliberation"
 
 	trigger = {
-		tag = FRA
+		owns = 1380 #Saigon
 		war = no
 		is_disarmed = no
 		is_greater_power = yes
+		capital_scope = { continent = europe }
+		NOT = { tag = TUR }
 		nationalism_n_imperialism = 1
 		has_global_flag = berlin_conference
 		any_neighbor_country = {
@@ -649,16 +680,16 @@ country_event = {
 	option = {
 		name = "EVT95652OPTA"
 		prestige = -20
-		FRA = { country_event = 95654 }
+		FROM = { country_event = 95654 }
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			militancy = 3
 		}
 		1365 = { remove_core = CAM }
 		random_owned = {
-			limit = { province_id = 1366 any_neighbor_province = { owned_by = FRA } }
+			limit = { province_id = 1366 any_neighbor_province = { owned_by = FROM } }
 			remove_core = SIA
-			secede_province = FRA
+			secede_province = FROM
 		}
 		any_owned = {
 			limit = {
@@ -667,21 +698,21 @@ country_event = {
 					is_core = WIA
 					is_core = CHK
 				}
-				any_neighbor_province = { owned_by = FRA }
+				any_neighbor_province = { owned_by = FROM }
 			}
 		remove_core = SIA
-		secede_province = FRA
+		secede_province = FROM
 		}
 		
 		random_country = {
 			limit = {
 				tag = CHK
 				exists = yes
-				neighbour = FRA
+				neighbour = FROM
 				ai = yes
 				vassal_of = THIS
 			}
-		annex_to = FRA
+		annex_to = FROM
 		}
 		
 		any_owned = {
@@ -704,7 +735,7 @@ country_event = {
 				is_core = CAM
 				CAM = { exists = no }
 			}
-			secede_province = FRA
+			secede_province = FROM
 		}
 		any_owned = {
 			limit = {
@@ -718,7 +749,7 @@ country_event = {
 				is_core = DAI
 				DAI = { exists = no }
 			}
-			secede_province = FRA
+			secede_province = FROM
 		}
 		any_owned = {
 			limit = {
@@ -732,14 +763,14 @@ country_event = {
 			modifier = {
 				factor = 0.25
 				part_of_sphere = yes
-				NOT = { in_sphere = FRA }
+				NOT = { in_sphere = FROM }
 			}
 		}
 	}
 	
 	option = {
 		name = "EVT95652OPTB"
-		FRA = { country_event = 95653 }
+		FROM = { country_event = 95653 }
 		prestige = 10
 		any_pop = {
 			limit = { is_primary_culture = yes }
@@ -749,7 +780,7 @@ country_event = {
 			factor = 5
 			modifier = {
 				factor = 0
-				in_sphere = FRA
+				in_sphere = FROM
 			}
 			modifier = {
 				factor = 4
@@ -807,8 +838,8 @@ country_event = {
 					region = SIA_1392
 					region = SIA_1355
 				}
-				secede_province = FROM
 			}
+			secede_province = SIA
 		}
 	}
 }
@@ -825,7 +856,7 @@ country_event = {
 	
 	option = {
 		name = "EVT95655OPTA"
-		FRA = { country_event = 95656 }
+		FROM = { country_event = 95656 }
 		prestige = -10
 		random_owned = {
 			limit = { owner = { has_country_modifier = uncivilized_isolationism }}
@@ -856,7 +887,7 @@ country_event = {
 			owner = {
 				any_owned = {
 					limit = { region = DAI_1375 }
-					secede_province = FRA
+					secede_province = FROM
 				}
 			}
 		}
@@ -865,7 +896,7 @@ country_event = {
 			owner = {
 				any_owned = {
 					limit = { region = DAI_1380 }
-					secede_province = FRA
+					secede_province = FROM
 				}
 			}
 		}

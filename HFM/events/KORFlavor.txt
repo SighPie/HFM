@@ -18,9 +18,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		war = no
 		year = 1866
+		is_disarmed = no
 		KOR = {
 			exists = yes
 			civilized = no
@@ -43,9 +46,7 @@ country_event = {
 	option = {
 		name = "EVT85000OPTA"
 		QNG = { country_event = 85001 }
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 99 }
 	}
 	
 	option = {
@@ -57,9 +58,7 @@ country_event = {
 				factor = 2
 			}
 		}
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -173,9 +172,9 @@ country_event = {
 				ai = yes
 			}
 			diplomatic_influence = {
-				who = KOR
+				who = THIS
 				value = -400
-			}	
+			}
 		}
 		war = {
 			target = KOR
@@ -196,7 +195,14 @@ country_event = {
 	option = {
 		name = "EVT85004OPTA"
 		relation = { who = FROM value = 50 }
-		relation = { who = FRA value = -100 }
+		random_owned = {
+				limit = { exists = FRA }
+				owner = { relation = { who = FRA value = -100 } }
+			}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = -100 } }
+		}
 		random_country = {
 			limit = {
 				tag = RUS
@@ -326,7 +332,7 @@ country_event = {
 			NOT = { year = 1870 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.2
 			year = 1875
 		}
 		modifier = {
@@ -595,8 +601,13 @@ country_event = {
 	
 	trigger = {
 		tag = KOR
-		civilized = no
-		civilization_progress = 0.7
+		OR = { 
+			AND = { 
+				civilized = no
+				civilization_progress = 0.7
+			}
+			year = 1894	
+		}
 		government = absolute_monarchy
 		OR = {
 			part_of_sphere = yes
@@ -642,6 +653,10 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			civilization_progress = 0.85
+		}
+		modifier = {
+			factor = 0
+			year = 1895
 		}
 	}
 	

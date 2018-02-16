@@ -92,12 +92,11 @@ country_event = {
 	mean_time_to_happen = {
 		months = 120
 		
-		modifer = {
+		modifier = {
 			factor = 0.8
 			has_country_flag = apoc
 		}
-		
-		modifer = {
+		modifier = {
 			factor = 0.5
 			mass_politics = 1
 		}

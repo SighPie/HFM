@@ -1,4 +1,4 @@
-name = "War of the Farrapos"
+name = "The War of the Farrapos"
 
 1835.10.2 = {
 	add_attacker = BRZ

@@ -200,14 +200,12 @@ country_event = {
 		name = "EVTOPTA99103"
 		prestige = 5
 		badboy = -8
-		set_global_flag = wakhan_treaty
+		clr_global_flag = wakhan_treaty
 		relation = { who = AFG value = -200 }
 		diplomatic_influence = { who = AFG value = -200 }
 		relation = { who = FROM value = 200 }
 		any_owned = { 
-			limit = {
-				is_core = AFG
-			}
+			limit = { is_core = AFG }
 			secede_province = AFG
 		}
 		1210 = { secede_province = AFG }
@@ -215,6 +213,7 @@ country_event = {
 			badboy = -3
 			prestige = 15
 			diplomatic_influence = { who = AFG value = 400 }
+			relation = { who = AFG value = 200 }
 		}
 		ai_chance = {
 			factor = 80
@@ -259,6 +258,112 @@ country_event = {
 				attacker_goal = { 
 					casus_belli = release_puppet
 					country = AFG
+				}
+				defender_goal = { casus_belli = cut_down_to_size }
+				call_ally = yes
+			}
+		}
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_disarmed = yes
+			}
+			modifier = {
+				factor = 0
+				war_exhaustion = 1
+			}
+			modifier = {
+				factor = 0
+				num_of_revolts = 1
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+}
+
+#Anglo-Russian Convention over Persia
+country_event = {
+	id = 99104
+	title = "EVTNAME99104" 
+	desc = "EVTDESC99104"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA99103"
+		prestige = 5
+		badboy = -8
+		clr_global_flag = persia_treaty
+		relation = { who = PER value = 200 }
+		diplomatic_influence = { who = PER value = 200 }
+		relation = { who = FROM value = 100 }
+		any_owned = {
+			limit = {
+				is_core = PER 
+				NOT = { province_id = 1204 }
+			}
+			secede_province = PER
+		}
+		FROM = {
+			badboy = -3
+			prestige = 15
+			diplomatic_influence = { who = PER value = 400 }
+			relation = { who = PER value = 200 }
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 5
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 5
+				is_disarmed = yes
+			}
+			modifier = {
+				factor = 5
+				war_exhaustion = 1
+			}
+			modifier = {
+				factor = 5
+				num_of_revolts = 1
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB99103"
+		
+		prestige = 25
+		badboy = 2
+		relation = { who = FROM value = -200 }
+		leave_alliance = FROM
+		FROM = {
+			casus_belli = {
+				target = RUS
+				type = liberate_country
+				months = 120
+			}
+			war = {
+				target = RUS
+				attacker_goal = { 
+					casus_belli = liberate_country
+					country = PER
+				}
+				attacker_goal = { 
+					casus_belli = release_puppet
+					country = PER
 				}
 				defender_goal = { casus_belli = cut_down_to_size }
 				call_ally = yes

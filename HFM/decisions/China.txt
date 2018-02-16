@@ -1359,7 +1359,7 @@ political_decisions = {
 			war = no
 			year = 1860
 			OR = {
-				money = 75001
+				money = 100001
 				ai = yes
 			}
 		}
@@ -1370,7 +1370,7 @@ political_decisions = {
 				limit = {
 					owner = { ai = no }
 				}
-				owner = { treasury = -75000 }
+				owner = { treasury = -100000 }
 			}
 			add_country_modifier = {
 				name = self_strengthening_movement

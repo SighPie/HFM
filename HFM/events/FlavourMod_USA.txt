@@ -330,6 +330,8 @@ country_event = {
 	
 	mean_time_to_happen = { months = 1 }
 	
+	fire_only_once = yes
+	
 	option = {
 		name = "EVTOPTA19300"
 		prestige = 5
@@ -461,19 +463,13 @@ country_event = {
 					province_id = 165 #Champaign
 					#New York
 					province_id = 238 #Syarcuse
-					#Texas
-					province_id = 137 #San Antonio
-					province_id = 132 #Houston
-					province_id = 43 #Dallas
 					#Indiana
 					province_id = 169 #Indianapolis
-					#Texas
-					province_id = 133 #Austin
 				}
 			}
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1095
+				duration = 365
 			}			
 		}
 		any_owned = {
@@ -520,7 +516,7 @@ country_event = {
 			}
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1095
+				duration = 365
 			}			
 		}
 		163 = { #Chicago

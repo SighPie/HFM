@@ -299,7 +299,7 @@ country_event = {
 				duration = -1
 			}
 		}
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 100 }
 	}	
 	
 	option = {
@@ -316,6 +316,6 @@ country_event = {
 			}
 			call_ally = no
 		}
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 0 }
 	}	
 }

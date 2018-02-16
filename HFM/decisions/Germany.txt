@@ -10,9 +10,7 @@ political_decisions = {
 				government = prussian_constitutionalism
 				government = hms_government
 			}
-			412 = {
-				NOT = { owned_by = THIS }
-			}
+			412 = { NOT = { owned_by = THIS } }
 			OR = {
 				has_country_flag = von_moltke
 				AND = {
@@ -34,14 +32,18 @@ political_decisions = {
 					ai = no
 				}
 			}
-			FRA = {
-				OR = {
-					is_mobilised = no
-					war = no
+			OR = { 
+				FRA = {
+					exists = yes
+					OR = { is_mobilised = no war = no }
+					NOT = { truce_with = THIS }
+					NOT = { relation = { who = THIS value = 100 } }
 				}
-				NOT = { truce_with = THIS }
-				NOT = {
-					relation = { who = THIS value = 100 }
+				BOR = {
+					exists = yes
+					OR = { is_mobilised = no war = no }
+					NOT = { truce_with = THIS }
+					NOT = { relation = { who = THIS value = 100 } }
 				}
 			}
 			OR = {
@@ -58,7 +60,13 @@ political_decisions = {
 		
 		effect = {
 			prestige = 5
-			FRA = { country_event = 19200 }
+			random_country = {
+				limit = {
+					primary_culture = french
+					capital = 425
+				}	
+				country_event = 19200
+			}
 			FRA_412 = { add_core = GER }
 			set_country_flag = ems_dispatch_sent
 			set_global_flag = franco_prussian_war_started
@@ -87,7 +95,8 @@ political_decisions = {
 					war_exhaustion = 5
 					num_of_revolts = 1
 					is_disarmed = yes
-					FRA = { brigades_compare = 2 }
+					FRA = { exists = yes brigades_compare = 2 }
+					BOR = { exists = yes brigades_compare = 2 }
 				}
 			}
 			modifier = {
@@ -228,19 +237,20 @@ political_decisions = {
 			}
 			NOT = { has_global_flag = watching_the_rhine }
 			OR = {
-			has_country_flag = french_claimed_the_rhine
-			NOT = { relation = { who = FRA value = 0 } }
-					575 = { owner = { NOT = { is_culture_group = germanic } } }
-					576 = { owner = { NOT = { is_culture_group = germanic } } }
-					577 = { owner = { NOT = { is_culture_group = germanic } } }
-					572 = { owner = { NOT = { is_culture_group = germanic } } }
+				has_country_flag = french_claimed_the_rhine
+				AND = { FRA = { exists = yes NOT = { relation = { who = FRA value = 0 } } } }
+				AND = { BOR = { exists = yes NOT = { relation = { who = BOR value = 0 } } } }
+				575 = { owner = { NOT = { is_culture_group = germanic } } }
+				576 = { owner = { NOT = { is_culture_group = germanic } } }
+				577 = { owner = { NOT = { is_culture_group = germanic } } }
+				572 = { owner = { NOT = { is_culture_group = germanic } } }
 				PRU_578 = { owner = { NOT = { is_culture_group = germanic } } }
 				PRU_570 = { owner = { NOT = { is_culture_group = germanic } } }
 				BAD_586 = { owner = { NOT = { is_culture_group = germanic } } }
 				WUR_589 = { owner = { NOT = { is_culture_group = germanic } } }
 				HES_2560 = { owner = { NOT = { is_culture_group = germanic } } }
-				}
 			}
+		}
 			
 		allow = {
 			romanticism = 1
@@ -268,9 +278,7 @@ political_decisions = {
 				tag = GCF
 			}
 			has_global_flag = watching_the_rhine
-			NOT = {
-				has_country_flag = niederwald_denkmal
-			}
+			NOT = { has_country_flag = niederwald_denkmal }
 		}
 		
 		allow = {
@@ -281,9 +289,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			any_pop = {
-				militancy = -2
-			}
+			any_pop = { militancy = -2 }
 			badboy = -3
 			set_country_flag = niederwald_denkmal
 		}
@@ -298,9 +304,7 @@ political_decisions = {
 				tag = GER
 			}
 			owns = 599
-			NOT = {
-				has_country_flag = schwabing_encircled
-			}
+			NOT = { has_country_flag = schwabing_encircled }
 		}
 		allow = {
 			expressionism = 1
@@ -315,9 +319,7 @@ political_decisions = {
 		potential = {
 			tag = LIP
 			year = 1880
-			NOT = {
-				has_country_flag = lippe_dispute_solved
-			}
+			NOT = { has_country_flag = lippe_dispute_solved }
 			exists = PRU
 		}
 		
@@ -406,7 +408,6 @@ political_decisions = {
 					change_region_name = "Kaiser-Wilhelms-Land"
 				}
 			}
-			PPG = { government = colonial_company }
 			set_global_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
 		}
 	}
@@ -440,6 +441,7 @@ political_decisions = {
 			533 = {
 				add_core = THIS # Heligoland is my last territorial demand!
 				add_core = ENG
+				remove_core = HGL
 			}
 			set_country_flag = has_questioned_heligoland
 		}

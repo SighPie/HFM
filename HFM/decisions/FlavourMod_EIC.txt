@@ -123,11 +123,13 @@ political_decisions = {
 
 		effect = {
 			prestige = -50
-			EIC = {
-				country_event = 9990002
-			}
+			EIC = { country_event = 9990002 }
 			set_country_flag = gov_india
 			remove_country_modifier = eic_balance2
+			any_country = {
+				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
+				economic_reform = yes_land_reform
+			}
 		}
 		
 		ai_will_do = {
@@ -256,6 +258,10 @@ political_decisions = {
 				militancy = -2
 				consciousness = -2
 			}
+			any_country = {
+				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
+				economic_reform = yes_admin_reform
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -320,13 +326,8 @@ political_decisions = {
 				reduce_pop = 2.5
 			}
 			any_country = {
-				limit = {
-					exists = yes
-					civilized = no
-					is_culture_group = south_asian
-					vassal_of = THIS
-				}	
-				economic_reform = yes_admin_reform
+				limit = { exists = yes civilized = no is_culture_group = south_asian vassal_of = THIS }	
+				economic_reform = yes_education_reform
 			}
 		}
 		
@@ -518,37 +519,12 @@ political_decisions = {
 		}
 	}
 	
-	demanded_access_bur = {
-		potential = { 
-			tag = EIC
-			ai = yes
-			BUR = {
-				ai = yes
-			}
-			war = yes
-			NOT = {
-				has_country_flag = demanded_access_bur
-			}
-		}
-		
-		allow = {
-			war_with = QNG
-		}
-		
-		effect = {
-			military_access = BUR
-			set_country_flag = demanded_access_bur
-		}
-	}
-	
 	eic_transfer_money_to_eng = {
 		potential = {
 			tag = EIC
 			ai = yes
-			money = 300000
-			ENG = {
-				NOT = { money = 50000 }
-			}
+			money = 250000
+			ENG = { NOT = { money = 50000 } }
 		}
 		
 		allow = {
@@ -600,7 +576,7 @@ political_decisions = {
 				life_rating = 6 
 				add_province_modifier = {
 					name = recently_built_city
-					duration = 1095
+					duration = 720
 				}
 				
 			}

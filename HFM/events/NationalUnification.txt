@@ -466,7 +466,7 @@ country_event = {
 				exists = yes
 				OR = {
 					has_country_flag = objects_to_italy
-					tag = FRA
+					primary_culture = french
 					tag = AUS
 					tag = KUK
 					AND = {
@@ -1018,7 +1018,10 @@ country_event = {
 					NOT = { province_id = 370 }
 					NOT = { province_id = 371 }
 					culture = north_german
-					owned_by = FRA
+					OR = { 
+						owned_by = FRA
+						owned_by = BOR
+					}
 				}
 			}
 		}

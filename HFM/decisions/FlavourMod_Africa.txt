@@ -92,10 +92,11 @@ political_decisions = {
 	ai_french_west_africa = {
 	picture = map_africa
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			ai = yes
 			has_global_flag = yes_railroad
-			is_greater_power = yes
 			has_global_flag = berlin_conference
 			NOT = { has_country_flag = ai_french_west_africa }
 			
@@ -106,20 +107,18 @@ political_decisions = {
 			owns = 1894
 			owns = 1784
 			NOT = {
-				OR = {
-					war_with = GER
-					war_with = GCF
-					war_with = ENG
-					war_with = ITA
-					war_with = KUK
-					war_with = RUS
-					war_with = JAP
-					war_with = USA
-					war_with = BEL
-					war_with = NET
-					war_with = SPA
-					war_with = TUR
-				}
+				war_with = GER
+				war_with = GCF
+				war_with = ENG
+				war_with = ITA
+				war_with = KUK
+				war_with = RUS
+				war_with = JAP
+				war_with = USA
+				war_with = BEL
+				war_with = NET
+				war_with = SPA
+				war_with = TUR
 			}
 		}
 		
@@ -148,18 +147,14 @@ political_decisions = {
 				}
 				country_event = 99954
 			}
-			1782 = {
-				secede_province = THIS
-			}
-			1781 = {
-				secede_province = THIS
-			}
+			1782 = { secede_province = THIS }
+			1781 = { secede_province = THIS }
 			any_country = {
 				limit = {
 					OR = {
 						AND = {
 							capital_scope = { continent = west_africa }
-							in_sphere = FRA
+							in_sphere = THIS
 						}
 						tag = LOA
 					}
@@ -178,7 +173,13 @@ political_decisions = {
 				}
 				country_event = 99959
 			}
-			470 = {
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					controlled_by = THIS
+				}
 				sub_unit = { type = steam_transport value = current }
 				sub_unit = { type = steam_transport value = current }
 				sub_unit = { type = steam_transport value = current }
@@ -199,7 +200,9 @@ political_decisions = {
 	ai_french_west_africa_stage_2 = {
 	picture = map_africa
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			year = 1888
 			has_global_flag = yes_railroad
 			OR = {
@@ -213,10 +216,8 @@ political_decisions = {
 				1808 = { owner = { civilized = yes } }
 				1804 = { owner = { civilized = yes } }
 			}
-			is_greater_power = yes
 			has_global_flag = berlin_conference
 			has_country_flag = ai_french_west_africa
-			war = no
 			NOT = { has_country_flag = ai_french_west_africa_2 }
 		}
 		
@@ -224,20 +225,18 @@ political_decisions = {
 			owns = 1894
 			owns = 1784
 			NOT = {
-				OR = {
-					war_with = GER
-					war_with = GCF
-					war_with = ENG
-					war_with = ITA
-					war_with = KUK
-					war_with = RUS
-					war_with = JAP
-					war_with = USA
-					war_with = BEL
-					war_with = NET
-					war_with = SPA
-					war_with = TUR
-				}
+				war_with = GER
+				war_with = GCF
+				war_with = ENG
+				war_with = ITA
+				war_with = KUK
+				war_with = RUS
+				war_with = JAP
+				war_with = USA
+				war_with = BEL
+				war_with = NET
+				war_with = SPA
+				war_with = TUR
 			}
 		}
 		
@@ -276,106 +275,34 @@ political_decisions = {
 			1814 = { secede_province = THIS any_pop = { literacy = -0.99 } }	
 			1813 = { secede_province = THIS any_pop = { literacy = -0.99 } }	
 			1812 = { secede_province = THIS any_pop = { literacy = -0.99 } }	
-			470 = {
-				sub_unit = { type = battleship value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-				sub_unit = { type = steam_transport value = current }
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	ai_french_tunis = {
-	picture = map_africa
-		potential = {
-			tag = FRA
-			ai = yes
-			has_global_flag = yes_railroad
-			is_greater_power = yes
-			has_global_flag = berlin_conference
-			NOT = { has_country_flag = ai_french_tunis }
-			exists = TUN
-		}
-		
-		allow = {
-			TUN = {
-				is_vassal = no
-			}
-			owns = 1894
-			owns = 1784
-			NOT = {
-				OR = {
-					war_with = GER
-					war_with = GCF
-					war_with = ENG
-					war_with = ITA
-					war_with = KUK
-					war_with = RUS
-					war_with = JAP
-					war_with = USA
-					war_with = BEL
-					war_with = NET
-					war_with = SPA
-					war_with = TUR
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					controlled_by = THIS
 				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = ai_french_tunis
-			war = {
-				target = TUN
-				attacker_goal = { casus_belli = annex_africa_full }
-				defender_goal = { casus_belli = status_quo }
-				call_ally = no
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
 			}
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
-	
-	cleanup_botswana = {
-		picture = map_africa
-		potential = {
-			tag = TSW
-			ai = yes
-			exists = yes
-			vassal_of = ENG
-			has_global_flag = yes_railroad
-			ENG = {
-				ai = yes
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			all_core = {
-				remove_core = TSW
-			}
-			annex_to = ENG
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+
 	italian_somaliland = {
 		picture = "italian_somaliland"
 		potential = { 
 			tag = ITA
-			#has_global_flag = yes_railroad
 			is_greater_power = yes
 			has_global_flag = berlin_conference
 			NOT = { government = proletarian_dictatorship }
@@ -428,12 +355,11 @@ political_decisions = {
 		picture = "british_somaliland"
 		potential = { 
 			tag = ENG
-			#has_global_flag = yes_railroad
 			has_global_flag = berlin_conference
 			is_greater_power = yes
 			NOT = { government = proletarian_dictatorship }
 			NOT = { has_country_flag = british_somaliland }
-			WRL = { 
+			WRL = {
 				ai = yes
 				civilized = no
 				exists = yes
@@ -451,7 +377,6 @@ political_decisions = {
 		allow = {
 			total_pops = 2000000
 			is_greater_power = yes
-			WRL = { war = no }
 			revolution_n_counterrevolution = 1
 			num_of_ports = 5
 			total_amount_of_ships = 30
@@ -463,6 +388,10 @@ political_decisions = {
 			prestige = 5
 			treasury = -35000
 			inherit = WRL
+			any_country = {
+				limit = { war_with = WRL }
+				end_war = WRL
+			}
 			set_country_flag = british_somaliland
 		}
 	}
@@ -523,11 +452,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = yohannes_iv
 			random_owned = {
-				limit = {
-					owner = {
-						ai = yes 
-					}
-				}
+				limit = { owner = { ai = yes } }
 				owner = { 
 					military_reform = yes_foreign_training 
 					economic_reform = yes_admin_reform
@@ -545,5 +470,37 @@ political_decisions = {
 				consciousness = -2
 			}
 		}
+	}
+	
+	end_mahadist_war = {
+		picture = map_africa
+		potential = {
+			capital_scope = { continent = europe }
+			is_greater_power = yes
+			OR = {
+				EGY = { all_core = { owned_by = THIS } }
+				EGY = { vassal_of = THIS }
+			}
+			exists = SUD
+			NOT = { has_country_flag = end_mahadist_war }
+		}
+		
+		allow = {
+			SUD = { is_vassal = no }
+			owns = 1745
+			NOT = { any_greater_power = { war_with = THIS } }
+		}
+		
+		effect = {
+			set_country_flag = end_mahadist_war
+			war = {
+				target = SUD
+				attacker_goal = { casus_belli = annex_africa_full }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

@@ -165,7 +165,6 @@ country_event = {
 			limit = {
 				is_primary_culture = no
 				is_accepted_culture = no
-				NOT = { is_cultural_group = germanic }
 				location = { is_core = GER }
 			}
 			consciousness = 5
@@ -455,6 +454,7 @@ country_event = {
 					neighbour = THIS
 					is_culture_group = THIS
 					tag = FRA
+					tag = BOR
 					tag = RUS
 					tag = ENG
 				}
@@ -510,6 +510,7 @@ country_event = {
 					neighbour = THIS
 					is_culture_group = THIS
 					tag = FRA
+					tag = BOR
 					tag = RUS
 					tag = ENG
 				}
@@ -566,7 +567,10 @@ country_event = {
 			}
 			AND = { 
 				exists = HUN
-				GER = { ai = yes }
+				GER = { 
+					ai = yes 
+					NOT = { badboy = 0.2 }
+				}
 			}
 		}
 		OR = {
@@ -577,7 +581,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		days = 14
 	}
 	
 	option = {
@@ -677,10 +681,10 @@ country_event = {
 		GER = { country_event = 31519 }
 		ai_chance = {
 			factor = 30
-			#modifier = {
-				#factor = 0.5
-				#is_secondary_power = yes
-			#}
+			modifier = {
+				factor = 1.5
+				is_secondary_power = yes
+			}
 			modifier = {
 				factor = 1.5
 				alliance_with = GER
@@ -703,11 +707,9 @@ country_event = {
 				}
 				GER = {
 					NOT = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-						}
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
 					}
 				}
 			}
@@ -719,10 +721,8 @@ country_event = {
 				}
 				GER = {
 					NOT = {
-						OR = {
-							government = democracy
-							government = hms_government
-						}
+						government = democracy
+						government = hms_government
 					}
 				}
 			}
@@ -777,6 +777,10 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				tag = KUK
+			}
+			modifier = {
+				factor = 0.5
+				GER = { ai = yes }
 			}
 			modifier = {
 				factor = 1.5
@@ -1053,6 +1057,7 @@ country_event = {
 					neighbour = THIS
 					is_culture_group = THIS
 					tag = FRA
+					tag = BOR
 					tag = RUS
 					tag = ENG
 				}
@@ -1253,7 +1258,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 80
+			factor = 90
 			modifier = {
 				factor = 0
 				OR = {
@@ -1293,20 +1298,20 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 20
+			factor = 10
 			modifier = {
 				factor = 0.5
 				war_policy = jingoism
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				OR = {
 					war_policy = anti_military
 					war_policy = pacifism
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				OR = {
 					government = democracy
 					government = hms_government
@@ -1518,6 +1523,7 @@ country_event = {
 					neighbour = THIS
 					is_culture_group = THIS
 					tag = FRA
+					tag = BOR
 					tag = RUS
 					tag = ENG
 				}
@@ -1709,6 +1715,7 @@ country_event = {
 				capital_scope = { continent = europe }
 				OR = {
 					tag = FRA
+					tag = BOR
 					tag = RUS
 					NOT = { relation = { who = THIS value = 0 } }
 				}

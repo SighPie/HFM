@@ -5,7 +5,9 @@ country_event = {
 	picture = "Waitangi"
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		money = 75000
 		has_global_flag = treaty_of_waitangi
 		NOT = { year = 1855 }
@@ -14,18 +16,13 @@ country_event = {
 	}
 
 	fire_only_once = yes
- 
-	mean_time_to_happen =  {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "EVTOPTA7790011"
 		prestige = 5
 		relation = { who = ENG value = 50 }
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
@@ -36,9 +33,7 @@ country_event = {
 			limit = { has_pop_culture = french }
 			militancy = 1
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -54,25 +49,21 @@ country_event = {
 	option = {
 		name = "The Treaty means that New Zealand is under British control" 
 		prestige = 5
-		FRA = { country_event = 7790013 }
-		ai_chance = {
-			factor = 95
-		}
+		FROM = { country_event = 7790013 }
+		ai_chance = { factor = 95 }
 	}
 	
 	option = {
 		name = "Let the French have New Zealand" 
 		prestige = -25
 		badboy = -10
-		FRA = { country_event = 7790014 }
-		ai_chance = {
-			factor = 0
-		}
+		FROM = { country_event = 7790014 }
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
 		name = "We should attempt to sell New Zealand to France" 
-		FRA = { country_event = 7790015 }
+		FROM = { country_event = 7790015 }
 		ai_chance = { factor = 5 }
 	}
 }
@@ -90,31 +81,22 @@ country_event = {
 		name = "There is nothing more we can do."
 		prestige = -5
 		relation = { who = ENG value = 20 }
-		ai_chance = {
-			factor = 70
-		}
+		ai_chance = { factor = 70 }
 	}
 	
 	option = {
 		name = "British paper is nothing against French steel!"
 		relation = { who = ENG value = -400 }
 		badboy = 5
-		NZL = {
-			all_core = {
-				add_core = FRA
-			}
-		}
+		NZL = { all_core = { add_core = THIS } }
 		ENG = {		
 			casus_belli = {
-				target = FRA
+				target = THIS
 				type = humiliate
 				months = 36
 			}
 		}
-		
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 30 }
 	}
 }
 
@@ -129,22 +111,9 @@ country_event = {
 	option = {
 		name = "A glorious day for France!"
 		prestige = 10
-		NZL = {
-			all_core = {
-				remove_core = ENG
-			}
-		}
-		NZL = {
-			all_core = {
-				add_core = FRA
-			}
-		}
-		ENG = {
-			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
-			}
-		}
+		NZL = { all_core = { remove_core = ENG } }
+		NZL = { all_core = { add_core = THIS } }
+		ENG = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 		relation = { who = FROM value = 150 }
 	}
 }
@@ -159,22 +128,9 @@ country_event = {
 
 	option = {
 		name = "We will accept their offer."
-		NZL = {
-			all_core = {
-				remove_core = ENG
-			}
-		}
-		NZL = {
-			all_core = {
-				add_core = FRA
-			}
-		}
-		ENG = {
-			any_owned = {
-				limit = { is_core = FRA }
-				secede_province = FRA
-			}
-		}
+		NZL = { all_core = { remove_core = ENG } }
+		NZL = { all_core = { add_core = THIS } }
+		ENG = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 		relation = { who = FROM value = 150 }
 		treasury = -250000
 		FROM = { treasury = 250000 }
@@ -184,14 +140,10 @@ country_event = {
 		name = "The British cannot sell what they do not rightfully own."
 		relation = { who = ENG value = -400 }
 		badboy = 8
-		NZL = {
-			all_core = {
-				add_core = FRA
-			}
-		}
-		ENG = {		
+		NZL = { all_core = { add_core = THIS } }
+		ENG = {	
 			casus_belli = {
-				target = FRA
+				target = THIS
 				type = humiliate
 				months = 36
 			}

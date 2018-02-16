@@ -534,6 +534,8 @@ political_decisions = {
 			
 			government = prussian_constitutionalism
 			any_pop = { militancy = -2 }
+			
+			create_vassal = RYU
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1261,6 +1263,10 @@ political_decisions = {
 				AND = {
 					tag = JAP
 					has_country_modifier = fukoku_kyohei
+					OR = {
+						has_country_flag = taiwan_line_of_advantage
+						revolution_n_counterrevolution = 1
+					}
 				}
 				AND = {
 					tag = TKG
@@ -1334,7 +1340,6 @@ political_decisions = {
 	}
 	
 	unite_with_japan = {
-
 		potential = {
 			primary_culture = japanese
 			JAP = {
@@ -1345,6 +1350,7 @@ political_decisions = {
 			NOT = {
 				tag = JAP
 				tag = TKG
+				tag = RYU
 				has_country_flag = unite_with_japan
 			}
 		}
@@ -1497,7 +1503,7 @@ political_decisions = {
 	anglo_japanese_alliance = {
 		picture = treaty_signing
 		potential = {
-			year = 1895
+			blue_and_brown_water_schools = 1
 			OR = {
 				tag = JAP
 				tag = TKG

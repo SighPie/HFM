@@ -1,4 +1,4 @@
-name = "Texan War of Independence"
+name = "The Texan War of Independence"
 
 1835.10.2 = {
 	add_attacker = MEX

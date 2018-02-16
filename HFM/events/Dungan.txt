@@ -65,7 +65,7 @@ province_event = {
 		}
 		any_pop = {
 			limit = { has_pop_religion = sunni }
-			reduce_pop = 0.97
+			reduce_pop = 0.99
 			militancy = 10
 			consciousness = 10
 		}
@@ -202,7 +202,7 @@ country_event = {
 				remove_province_modifier = anti_manchu_sentiment
 				any_pop = {
 					limit = { has_pop_religion = sunni }
-					reduce_pop = 0.40
+					reduce_pop = 0.7
 					militancy = -4
 				}
 			}
@@ -381,7 +381,7 @@ country_event = {
 	
 	option = {
 		name = "EVT80126OPTA"
-		clr_global_flag = dungan_rebellion
+		#clr_global_flag = dungan_rebellion
 		prestige = 10
 		plurality = -2
 		UYG = { 
@@ -433,7 +433,7 @@ country_event = {
 		name = "EVT80123OPTA"
 		prestige = 10
 		QNG = { prestige = -10 }
-		clr_global_flag = dungan_rebellion
+		#clr_global_flag = dungan_rebellion
 	}
 }
 
@@ -455,21 +455,38 @@ country_event = {
 				owns = 1557
 			}
 		}
+		year = 1870
 		OR = {
-			XBI = { average_militancy = 2 }
+			XBI = { average_militancy = 4 }
 			1557 = { average_militancy = 4 }
-			XBI = { civilization_progress = 0.4	 }
+			AND = { 
+				THIS = { civilization_progress = 0.4 }
+				year = 1885
+			}
 		}
 		has_global_flag = dungan_rebellion
 		NOT = { has_country_flag = qinghai_revolt_dungan }
 	}
 	
 	mean_time_to_happen = { 
-		months = 5
+		months = 25
+		
+		modifier = {
+			factor = 0.8
+			year = 1890
+		}
+		
+		modifier = {
+			factor = 0.01
+			year = 1895
+		}
 		
 		modifier = {
 			factor = 0.1
-			has_global_flag = ever_victorious_army
+			OR = { 
+				civilization_progress = 0.75
+				civilized = yes
+			}
 		}
 	}
 	

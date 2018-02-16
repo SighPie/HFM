@@ -1,31 +1,4 @@
 political_decisions = {
-	unciv_balance = {
-		picture = "reichstag"
-		potential = { 
-			has_global_flag = yes_railroad
-			ai = yes
-			OR = {
-				tag = CHK
-				tag = LUA
-			}
-			civilized = no
-			NOT = {
-				has_country_flag = unciv_balance_flag
-			}
-		}
-		
-		allow = {
-		}
-		
-		effect = {
-			add_country_modifier = {
-				name = unciv_balance
-				duration = 15000
-			}
-			set_country_flag = unciv_balance_flag
-		}
-	}
-
 	unciv_balance_qng = {
 		picture = "reichstag"
 		potential = { 
@@ -49,7 +22,6 @@ political_decisions = {
 		}
 	}	
 
-	
 	viet_remove_sphere = {
 		picture = "reichstag"
 		potential = { 
@@ -71,8 +43,9 @@ political_decisions = {
 				ai = yes
 				is_sphere_leader_of = THIS
 			}
-			FRA = {
-				ai = yes
+			OR = {
+				FRA = { exists = yes ai = yes }
+				BOR = { exists = yes ai = yes }
 			}
 		}
 		
@@ -80,7 +53,7 @@ political_decisions = {
 			USA = {
 				diplomatic_influence = {
 					who = THIS
-					value = -100
+					value = -400
 				}				
 			}
 		}
@@ -160,7 +133,12 @@ political_decisions = {
 		}
 		
 		effect = {
-			QNG = { change_tag = QNG }
+			#QNG = { change_tag = QNG }
+			THIS = {
+				all_core = {
+					add_core = BOR
+				}
+			}
 			set_country_flag = test_dec
 		}
 	}
@@ -213,22 +191,6 @@ political_decisions = {
 		}
 	}
 	
-	cleanup_kismayo = {
-		potential = {
-			1870 = { empty = no }
-			ai = yes
-			NOT = { has_global_flag = cleanup_kismayo }
-		}
-		
-		allow = {
-		}
-		
-		effect = {
-			1870 = { life_rating = 25 }
-			set_global_flag = cleanup_kismayo
-		}
-	}
-	
 	cleanup_eic = {
 		potential = {
 			tag = ENG
@@ -265,7 +227,7 @@ political_decisions = {
 			is_greater_power = yes
 			has_global_flag = yes_railroad
 			has_global_flag = tangier_protocol_succeeded
-			NOT = { tag = FRA }
+			NOT = { primary_culture = french }
 			NOT = { tag = SPA }
 			NOT = { tag = IBR }
 			NOT = { tag = SPC }
@@ -300,6 +262,17 @@ political_decisions = {
 					money = 75000
 				}
 				FRA = {
+					exists = yes
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+					money = 75000
+				}
+				BOR = {
+					exists = yes
 					OR = {
 						owns = 1683 #Taza
 						owns = 1680 #Fez
@@ -322,7 +295,8 @@ political_decisions = {
 			random_country = {
 				limit = {
 					OR = {
-						tag = FRA
+						AND = {  tag = FRA exists = yes }
+						AND = {  tag = BOR exists = yes }
 						tag = SPA
 						tag = SPC
 					}
@@ -344,6 +318,7 @@ political_decisions = {
 		potential = {
 			OR = { 
 				tag = FRA
+				tag = BOR
 				tag = ENG
 			}
 			has_global_flag = yes_railroad
@@ -546,6 +521,7 @@ political_decisions = {
 				tag = ENG
 				tag = EIC
 				tag = FRA
+				tag = BOR
 				tag = ITA
 				AND = {
 					OR = { 
@@ -596,6 +572,7 @@ political_decisions = {
 						tag = ENG 
 						tag = GER 
 						tag = FRA 
+						tag = BOR
 					}
 				}
 				AND = {
@@ -611,6 +588,8 @@ political_decisions = {
 					OR = { 
 						tag = GER
 						tag = FRA
+						tag = BOR
+						tag = JAP
 					}
 				}
 				AND = {

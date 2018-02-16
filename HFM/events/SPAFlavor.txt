@@ -2207,10 +2207,16 @@ country_event = {
 				factor = -2
 			}
 		}
-		FRA = { country_event = 37721 }
-		ai_chance = {
-			factor = 65
-		}
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 37721 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 37721 }
+		}	
+		
+		ai_chance = { factor = 65 }
 	}
 	option = {
 		name = "EVT37720OPTB"
@@ -2266,10 +2272,15 @@ country_event = {
 				factor = -2
 			}
 		}
-		FRA = { country_event = 37722 }
-		ai_chance = {
-			factor = 20
-		}
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 37722 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 37722 }
+		}	
+		ai_chance = { factor = 20 }
 	}
 	option = {
 		name = "EVT37720OPTC"
@@ -2310,10 +2321,16 @@ country_event = {
 				duration = 1095
 			}
 		}
-		FRA = { country_event = 37721 }
-		ai_chance = {
-			factor = 10
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = { country_event = 37721 }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = { country_event = 37721 }
 		}
+		
+		ai_chance = { factor = 10 }
 	}
 	option = {
 		name = "EVT37720OPTD"
@@ -2370,9 +2387,7 @@ country_event = {
 				factor = -2
 			}
 		}
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 5 }
 	}
 }
 
@@ -2497,6 +2512,10 @@ country_event = {
 			government = hms_government
 		}
 		OR = {
+			AND = {
+				war_with = BOR
+				average_militancy = 3
+			}
 			AND = {
 				war_with = FRA
 				average_militancy = 3

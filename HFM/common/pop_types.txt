@@ -207,11 +207,12 @@ promotion_chance = {
 		location = {
 			is_colonial = yes
 			is_core = ALD
-			is_core = FRA
+			OR = { 
+				is_core = FRA
+				is_core = BOR
+			}
 		}
-		country = {
-			primary_culture = french
-		}
+		country = { primary_culture = french }
 	}
 }
 
@@ -519,7 +520,8 @@ migration_chance = {
 	modifier = {
 		factor = -100
 		OR = {
-			not = { location = { total_pops = 500 } }
+			not = { location = { total_pops = 1000 } }
+			not = { location = { total_pops = 100 } }
 			not = { location = { controlled_by = owner } }
 		}
 	}
@@ -688,13 +690,15 @@ colonialmigration_chance = {
 	}
 	
 	modifier = {
-		factor = -5
+		factor = -100
 		OR = {
 			state_scope = { is_colonial = yes }
-			not = { location = { total_pops = 500 } }
+			not = { location = { total_pops = 1000 } }
+			not = { location = { total_pops = 100 } }
 			not = { location = { controlled_by = owner } }
 		}
 	}
+	
 	group = {
 		modifier = {
 			factor = 0.1
@@ -812,7 +816,7 @@ colonialmigration_chance = {
 			is_culture_group = italian
 		}
 	}
-
+	
 	#modifier = {
 	#	factor = -0.3
 	#	state_scope = { has_factories = yes }
@@ -821,7 +825,7 @@ colonialmigration_chance = {
 
 #general emigration chance
 emigration_chance = {
-	factor = 0.6
+	factor = 0.5
 	
 	modifier = {
 		factor = -2.0
@@ -1140,21 +1144,22 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = -5
+		factor = -100
 		OR = {
 			state_scope = { is_colonial = yes }
-			not = { location = { total_pops = 500 } }
+			not = { location = { total_pops = 1000 } }
+			not = { location = { total_pops = 100 } }
 			not = { location = { controlled_by = owner } }
 		}
 	}
 	
 	modifier = {
-		factor = 1.2
+		factor = 1.0
 		THIS = { 
 			is_culture_group = germanic 
 		}
 		NOT = { unemployment = 0.1 }
-		NOT = { year = 1905 }
+		NOT = { year = 1900 }
 		location = { 
 			controlled_by = owner
 			NOT = {
@@ -1373,7 +1378,7 @@ emigration_chance = {
 	}
 		
 	modifier = {
-		factor = 0.4
+		factor = 0.3
 		year = 1837
 		NOT = { year = 1905 }
 		THIS = { NOT = { is_culture_group = east_asian } }
@@ -1383,6 +1388,11 @@ emigration_chance = {
 				NOT = { average_consciousness = 5 }
 			}
 		}
+	}
+	
+	modifier = {
+		factor = -1
+		country = { has_country_flag = micro_nation }
 	}
 }
 
@@ -1618,12 +1628,6 @@ conversion_chance = {
 			civilized = no
 			has_country_flag = missionary_activity
 		}
-	}
-	
-	modifier = {
-		factor = 1.0
-		has_pop_religion = god_worshippers
-		country = { has_country_flag = protestant_country }
 	}
 	
 	modifier = {

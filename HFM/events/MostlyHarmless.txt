@@ -46,7 +46,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			tag = FRA
+			primary_culture = french
 		}
 	}
 	

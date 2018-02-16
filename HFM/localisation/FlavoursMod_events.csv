@@ -211,6 +211,8 @@ EVTDESC99981;Although public outcry throughout much of Germany objected our acti
 EVTNAME99980;The Luxembourg Crisis - $FROMCOUNTRY$ objects!;;;;;;;;;;;;;;;;;;x;;;;
 EVTDESC99980;$FROMCOUNTRY$ has objected to the sale of Luxembourg to $COUNTRY$, the $FROMCOUNTRY_ADJ$ government has threatened war if the sale were still to go through. However, they are willing to come to an acceptable compromise that leaves Luxembourg a part of neither country, leaving us with a possible face-saving outcome.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTNAME99982;The Luxembourg Crisis - The Treaty of London;;;;;;;;;;;;;;;;;;x;;;;
+EVT99980OPTA;A war must be avoided, we must find a compromise;;;;;;;;;;;;;;;;;;x;;;;
+EVT99980OPTB;Luxembourg is rightfully French!;;;;;;;;;;;;;;;;;;x;;;;
 EVTDESC99982;With the German public angered and an impasse developing, Napoleon III sought to backtrack - he certainly did not want to appear to be unduly expansionist to the other Great Powers. Thus, he demanded only that Prussia withdraw its soldiers from Luxembourg City, threatening war in the event that Prussia did not comply. Tsar Alexander II of Russia called for an international conference, to be held in London. The United Kingdom was more than happy to host the talks as the British government feared that the absorption of Luxembourg by either power would weaken Belgium, a useful buffer between Germany and France.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTNAME99983;The Luxembourg Crisis - $FROMCOUNTRY$ Annexes Luxembourg!;;;;;;;;;;;;;;;;;;x;;;;
 EVTDESC99983;Despite our objections and attempts at meditation for a peaceful outcome, the $FROMCOUNTRY_ADJ$ has pushed through the sale and has annexed Luxembourg regardless of the will of the international community. This leaves us without a choice but to go to war to liberate the people of Luxembourg from French rule.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -387,7 +389,7 @@ EVTNAME97530;The Wallachian Revolution of $YEAR$;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTDESC97530;As the Springtime of Nations sweeps across Europe, Romanian liberals and nationalists in $COUNTRY$, led by a group of young intellectuals and officers in the $COUNTRY_ADJ$ Militia, the movement has succeeded in toppling the ruling Prince Gheorghe Bibescu, who has fled the principality;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTOPTA97530;The Romanian people will be free!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTNAME97531;The Wallachian Problem;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
-EVTDESC97531;Romanian liberals and nationalists in $FROM_COUNTRY$, led by a group of young intellectuals and officers in the $FROM_COUNTRY_ADJ$ Militia, the movement has succeeded in toppling the ruling Prince Gheorghe Bibescu, and have established a provisional government in $COUNTRY$.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
+EVTDESC97531;Romanian liberals and nationalists in $FROM_COUNTRY$, led by a group of young intellectuals and officers in the $FROMCOUNTRY_ADJ$ Militia, the movement has succeeded in toppling the ruling Prince Gheorghe Bibescu, and have established a provisional government in $COUNTRY$.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTOPTA97531;$COUNTRY_ADJ$ suzerainty must be re-established!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTOPTB97531;Let them go.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTNAME97532;The $COUNTRY_ADJ$ Revolution of $YEAR$;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
@@ -421,6 +423,8 @@ EVTOPTB500059;We refuse to accept this unlawful occupation of Switzerland!;;;;;;
 EVTNAME500061;The Swiss Partition - $FROMCOUNTRY$ Agrees!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC500061;The $FROMCOUNTRY_ADJ$ foreign minister has agreed to our proposal, the $FROMCOUNTRY_ADJ$ cantons of Switzerland shall be transferred to their control;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTOPTA500061;Excellent;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPTA99982;Another Crisis has been avoided.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPTA99983;Luxembourg will be freed!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTNAME500062;The Swiss Partition - $FROMCOUNTRY$ Refuses!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC500062;The $FROMCOUNTRY_ADJ$ foreign minister has refused our proposal to split the Swiss Cantons, and have pronounced our 'occupation' of the Swiss region 'unlawful and unacceptable'.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTOPTA500062;Then the lands shall be $COUNTRY_ADJ$.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
@@ -473,7 +477,7 @@ EVTNAME111004;The Death of Tewodros II;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC111004;In the conflict with the British, Tewodros' army was decisively defeated, many of his men began to desert and the emperor was left with only 4,000 soldiers. Tewodros II attempted to make peace. Napier responded with a message thanking him for this peace offering and stating that he would treat the Emperor and his family with every dignity. Tewodros II furiously responded that he would never be taken prisoner. \n\nThe British shelled Magdala, killing most of Tewodros II's remaining loyal men. Tewodros released all the European unharmed but ordered 300 Ethiopian prisoners to be flung over the cliff. The emperor committed suicide, as the British troops stormed the citadel of Magdala.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTOPTA111004;A tragedy...;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
 EVTOPTA111005;Excellent;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
-EVTNAME99103;The Anglo-Russian Convention over Afghanistan;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME99103;Anglo-Russian Convention over Afghanistan;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC99103;The British ambassador has come to us with an interesting proposal - to establish a neutral ground over Afghanistan to ease tensions between $COUNTRY$ and $FROMCOUNTRY$ in Central Asia, Afghanistan would be placed under the British sphere of influence, while in return the British would recognize all our conquests in Central Asia.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTOPTA99103;We accept the British proposal.;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
 EVTOPTB99103;We will do whatever we please in Central Asia.;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
@@ -496,3 +500,30 @@ EVTOPTA97533;We will be free one day.;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
 EVTNAME999961;Xuantong Emperor;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTDESC999961;Chosen by Empress Dowager Cixi on her deathbed, Puyi became emperor at the age of 2 years in $YEAR$ after the death of the Guangxu Emperor. Titled the Xuantong Emperor, Puyi's introduction to the life of an emperor began when palace officials arrived at his family residence to take him. On one evening of $YEAR$, without any advance notice, a procession of eunuchs and guardsmen led by the palace chamberlain left for the Northern Mansion to inform Prince Chun that they were taking away his son Puyi to be the new emperor. The toddler Puyi screamed and resisted as the officials ordered the eunuch attendants to pick him up. \n\nPuyi's parents said nothing when they learned that they were losing their son. As Puyi cried, screaming that he did not want to leave his parents, he was forced into a palanquin that took him back to the Forbidden City. Puyi's wet nurse was the only person allowed to go with him, the only reason why she was taken along as only she could calm Puyi down by breastfeeding the young emperor.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
 EVTOPTA999961;May he grow to be a strong Emperor.;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,
+EVTNAME99700;The Treaty of Managua ($YEAR$);;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
+EVTDESC99700;The $FROMCOUNTRY_ADJ$ have come to us with a proposal to recognise $COUNTRY_ADJ$ sovereignty over the region of the Mosquito Coast, but will reserve, on the basis of historical rights, a self-governing enclave for the Miskito, an indigenous group in the area. The provisions of the treaty would be:\n\n1. Sovereignty over the Mosquito Coast belongs to $COUNTRY$, but the autonomy of the Miskito is guaranteed.\n2. $COUNTRY$ has the right to fly its flag in any part of the Mosquito Coast.\n3. $COUNTRY$ would maintain a Commissioner on the Mosquito Coast to defend her national interests.\n4. $COUNTRY$ would not make concessions to the exploitation of natural resources in the Mosquito Coast. That right alone corresponded to the Miskito government.\n5. $COUNTRY$ cannot regulate Miskito's trade tax, nor its importations nor exportations.\n6. $COUNTRY$ would pay a compensation to the Miskito king.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
+EVTOPTA99700;We shall sign the treaty;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,
+EVTOPTB99700;We shall take the Mosquito Coast by force!;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,
+EVTNAME600401;Abolishment of Elections in $COUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC600401;The system of elections in $COUNTRY$ has been abolished.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPT600401;Very well.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME600402;Elections in $COUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC600402;Sweeping reforms in $COUNTRY$ have allowed for the first elections, bringing us one step closer towards self-determination..;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPT600402;Rejoice!;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME24600;Russian Ballet;;;;;;;;;x;;;;
+EVTDESC24600;As part of Peter the Great's vision to have Russia capable of culturally challenging the west, in 1689 he introduced French ballet to the Russian Empire. By the 19th century, ballet in France began to plateau while Russian Ballet blossomed, and by $YEAR$ the latter was widely acknowledged to have come to surpass its French counterpart. With master composers like Tchaikovsky, Tcherepnin, Stravinsky, Glazunov, and Glière, Russian Ballet was lauded as the finest in the world, and would be for years to come.;;;;;;;;;x;;;;
+EVTOPTA24600;A Golden Age of theater!;;;;;;;;;;x;;;;
+EVTOPTB24600;Truly, we have far surpassed the French.;;;;;;;;;x;;;;
+EVT99828OPTA;Pronounce our support for the Ottomans;;;;;;;;;;x;;;;
+EVTDESC99761;We have received our territories as per the Asia Minor Agreement;;;;;;;;;;x;;;;
+EVTNAME99104;Anglo-Russian Convention over Persia;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC99104;The British ambassador has come to us with an interesting proposal - to establish a neutral ground over Persia to ease tensions between $COUNTRY$ and $FROMCOUNTRY$ in Central Asia, Persia would be placed under the British sphere of influence, while in return the British would recognize the rest of our conquests in Central Asia.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTNAME7790006;The Fall of $CAPITAL$;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC7790006;Despite our best efforts, the unthinkable has happened: $CAPITAL$ has fallen. It seems there is little choice but to surrender to the French and allow them to dictate terms. If they are kind, the peace treaty may be lenient...;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT7790006OPTA;We have no choice, we must surrender.;;;;;;;;;;x;;;;
+EVT7790006OPTB;We will fight on, we must not let the French make us a puppet once more!;;;;;;;;;;x;;;;
+EVTNAME7790007;The Treaty of Madrid ($YEAR$);;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVT7790007OPTA;We have achieved enough, Catalonia has no actual Value to France.;;;;;;;;;;x;;;;
+EVT7790007OPTB;Catalonia has no actual value to France, however we can demand Spain's Colonies.;;;;;;;;;;x;;;;
+EVT7790007OPTC;We must restore French control over Catalonia!;;;;;;;;;;x;;;;
+EVT7790007OPTD;We will demand Catalonia as well as the Spanish Colonies!;;;;;;;;;;x;;;;

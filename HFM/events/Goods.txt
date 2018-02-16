@@ -227,14 +227,9 @@ province_event = {
 			duration = 5475
 		}
 		change_province_name = "Johannesburg"
-		ramdom_country = {
-			limit = {
-				owns = 2106
-			}
-			add_country_modifier = {
-				name = witwatersrand_gold_rush
-				duration = 5475
-			}
+		add_country_modifier = {
+			name = witwatersrand_gold_rush
+			duration = 5475
 		}
 	}
 }

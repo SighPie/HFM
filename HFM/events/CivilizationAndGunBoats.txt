@@ -1118,7 +1118,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		civilized = no
 		NOT = { has_country_modifier = trade_restrictions }
@@ -1151,7 +1151,7 @@ country_event = {
 		}
 		
 		modifier = {
-			factor = 1.5
+			factor = 3.5
 			has_country_modifier = lin_zexu
 		}
 	}
@@ -1282,7 +1282,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		civilized = no
 		has_country_modifier = trade_restrictions
@@ -1952,6 +1952,7 @@ country_event = {
 		}
 		government = absolute_monarchy
 		civilized = no
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 	
 	mean_time_to_happen = {
@@ -2049,7 +2050,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		any_owned_province = { has_province_modifier = foreign_trading_post }
 	}
@@ -2117,6 +2118,7 @@ province_event = {
 			has_province_modifier = western_presence
 			has_province_modifier = european_military_mission
 		}
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 	mean_time_to_happen = {
 		months = 400
@@ -2254,7 +2256,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		has_country_flag = princes_recieve_foreign_education
 		OR = {
@@ -2305,7 +2307,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		civilized = no
 		has_country_modifier = western_influences
@@ -2419,7 +2421,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		war = yes
 		any_owned_province = {
@@ -2486,6 +2488,7 @@ province_event = {
 			has_province_modifier = foreign_smugglers
 		}
 		average_militancy = 3
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 
 	mean_time_to_happen = {
@@ -2567,7 +2570,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		any_owned_province = {
 			OR = {
@@ -2580,6 +2583,7 @@ country_event = {
 			port = yes
 		}
 		is_vassal = no
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 	
 	mean_time_to_happen = {
@@ -2874,7 +2878,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		civilized = no
 		war = no
@@ -3116,7 +3120,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		OR = {
 			has_country_modifier = uncivilized_isolationism
@@ -3413,7 +3417,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		has_country_modifier = western_influences
 		NOT = { has_country_modifier = educational_reform }
@@ -3467,7 +3471,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		any_owned_province = {
 			is_capital = yes
@@ -3476,6 +3480,7 @@ country_event = {
 		}
 		has_country_modifier = western_influences
 		is_vassal = no
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 	
 	mean_time_to_happen = {
@@ -3643,13 +3648,14 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		any_owned_province = {
 			is_capital = yes
 			has_province_modifier = legation_quarter
 			average_militancy = 1
 		}
+		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
 	
 	mean_time_to_happen = {
@@ -3797,7 +3803,7 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			has_country_flag = spectator
 		}
 		civilized = no
 		is_vassal = no
@@ -4901,7 +4907,11 @@ country_event = {
 						is_greater_power = yes
 						has_country_flag = catholic_country
 					}
-					tag = FRA
+					AND = { 
+						primary_culture = french
+						is_greater_power = yes
+						capital = 425
+					}
 				}
 			}
 			country_event = 90961

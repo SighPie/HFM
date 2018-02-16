@@ -2,49 +2,49 @@
 
 #Changes in 1.28
 #Bugfixes
-- Fixed the Peace of Prague AI Decision crash
-- Fixed issue causing the German Confederation to turn back into Germany
-- Fixed an issue with the wakhan_treaty decision/event
-- Added some sanity checks to make sure the AI ship spawning decisions spawn ships controlled by the AI.
-- Added sanity checks to make sure the Australia migration events only occur once.
+- Fixed a few localisation issues
+- The Great Fire of Bucharest will no longer fire more than once
 
-#Changes to Europe
-- Remade some Romanian Decisions/Events
-- The Hamburg Flavour events can now happen for whoever owns Hamburg itself, added event picture for the Sinking of the Austria event
-- Added alternate flag for Alsace-Lorraine
-- Added an event 'Brussels Peace Conference' - By Belsima on github
-- Added a flag for British Hannover
-- Changed the requirements for the Trans-Siberian Railway to allow the AI to get it more consistently
-
-#Other Changes
-- Reduced War Reparations tax hit to 20% (Was 25%)
-- 'Warship Commissions' - Now gives an unciv country the Imported Warship reform when the commissioned ship arrives
-- Increased the default production of Coal & Sulphur
+#Changes to South America
+- Added the Mosquito Kingdom, starts as a vassal of the UK
+- Added a decision 'The Treaty of Managua', turns the Mosquito Kingdom to a vassal of whoever controls Nicaragua
+- Modified the Nicaragua Crisis event chain
 
 #Changes to China
-- 'The Treaty of Tientsin' - Now turns Qing to protestant, will now add a Missionaries modifier, this can be undone by Westernizing or the Boxer Rebellion
-- The Chinese substates now start as Autonomous Dependencies, now will use different flags when they're independent from the Qing
-- Changed Manchuria name and flag when its a vassal of Qing
-- Added a decision 'The Kiangnan Aresenal'
-- Added an event for the ascension of Emperor Puyi
+- The Dungan Revolt in Qinghai will now fire closer to the historical date
+- Removed the God Worshipper religion, has been remerged into Protestant
 
-#Changes to Japan
-- Commodore Perry's Expedition now also removes isolation from the Japanese Substates
-- Added some buffs to help the Japanese AI
+#Changes to the Balkans/Ottomans/Central Asia
+- Changed the flags of the Ionian Islands, it will no longer use the British flag if it's independent, now starts as an Autonomous Dependency
+- 'The Reichstadt Agreement' - Is now possible even if Russia won the Crimean War
+- Made some improvements to the Great Eastern Crisis event chain
+- Rewritten & Overhauled the Treaty of Severes event to be more neat and partition any possible part of Ottoman Middle East
+- Added a decision for the U.K. to demand Russia to return cores to Persia
 
-#Changes to Middle East
-- Adjusted some Plurality modifiers & research progress for Egypt
-- The Anglo-Persian Oil Company now provides more benefits to Persia, costs more for the UK
-- Fixed some issues with the UDI of Egyptian Indepedence decision
+#Changes to Europe
+- The Heligoland Treaty now can be enacted as long as the UK is not at war with Germany
+- If AI Prussia manages to win the Brother's War, it can now form the NGF without having all of the North German states in its sphere
+- Greatly reduced MTTH for the Greater Germany event
+- Crimean War - Now requires the Ottomans to not be a greater power
+- Norway now starts as a Dominon of Sweden, uses the "herring salad" flag.
+- Added an alternate French Tag, for Orleanist & Legitimist France
+- The July Monarchy can now be turned into an Absolute Monarchy
 
-#Changes to Balkans
-- Wallachia & Moldavia now start as Autonmous dependencies of the Ottoman Empire, they will now use different flags if they become independent
-- Added event 'The Convention of Balta Liman' if Wallachia loses the Wallachian Revolution
-- Bosnia will now use a different flag if it is an independent monarchy, it'll use the old one if it's an autonomous dependency
+#Changes to Indochina
+- Most of the Indochina events are now not specific to to the French, and can be enacted by any European GP except the Ottoman Empire that controls Saigon or Hanoi
 
-#Changes to Map
-- Adjusted some city terrain modifiers
-- Changed province picture for Old Tianjin
+#Other Changes
+- Added a new government type 'Dominon', a counterpart to the Automous Dependency government type with voting enabled.
+- Changed the name of 'Independence Rebels'
+- Renamed 'Russland-German' to 'Eastern German'
+
+#Changes to Oceania
+- Added a decision for the U.K. to transfer territory in New Guinea to Australia, reduces 1 or 2 infamy for each region transferred.
+- Reduced the growth effects of the Austrlia population events
+- Added a flag for British Fiji
 
 #Changes to Africa
-- Added War name localization for the Boer War
+- The Scramble for Africa annex CB can now be used against Ethiopia and Egypt 
+- Added Seychelles, Mauritius, British Indian Ocean Territory to prevent pops from assimilating
+- Added a decision for any European GP that controls Egypt to declare war on Sudan if it broke away from Egypt
+- Fixed duration of Kimberly Gold Rush pop growth effect

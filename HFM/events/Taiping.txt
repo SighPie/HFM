@@ -532,7 +532,7 @@ country_event = {
 			}
 		any_pop = {	
 			militancy = -7
-			reduce_pop = 0.97
+			reduce_pop = 0.95
 		}
 		any_country = { limit = { vassal_of = THIS }
 			any_pop = {
@@ -556,32 +556,23 @@ country_event = {
 			limit = { is_core = TPG }
 			any_pop = {
 				militancy = -6
-				reduce_pop = 0.9
+				reduce_pop = 0.85
 			}
 		}
 		any_pop = {
 			limit = {
-				religion = god_worshippers
+				religion = protestant
+				location = { is_core = TPG }
 			}
 			reduce_pop = 0.75
 		}
-		TPG = { all_core = { remove_core = TPG 
-							 fort = -2} }
-		remove_country_modifier = qing_ai_boost
-		MCK = {
-			all_core = {
-				 add_core = QNG 
-			}
-		}
-		IMG = {
-			all_core = {
-				remove_core = IMG
-			}
-		}
+		TPG = { all_core = { remove_core = TPG } }
+		random_owned = { limit = { owner = { ai = yes } } owner = { remove_country_modifier = qing_ai_boost } }
+		MCK = { all_core = { add_core = QNG } }
+		IMG = { all_core = { remove_core = IMG } }
 		random_country = {
 			limit = {
 				tag = IMG
-				ai = yes
 				substate_of = QNG
 			}	
 			annex_to = QNG
@@ -589,15 +580,6 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = MCK
-				ai = yes
-				substate_of = QNG
-			}	
-			annex_to = QNG
-		}
-		random_country = {
-			limit = {
-				tag = XBI
-				ai = yes
 				substate_of = QNG
 			}	
 			annex_to = QNG

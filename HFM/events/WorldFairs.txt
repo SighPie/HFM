@@ -28,7 +28,7 @@ country_event = {
 		
 		modifier = {
 			factor = 0.01
-			tag = FRA
+			primary_culture = french
 			bessemer_process = 1
 			NOT = { has_country_flag = the_eiffel_tower_was_built }
 		}

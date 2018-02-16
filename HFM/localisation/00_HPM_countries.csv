@@ -2041,7 +2041,9 @@ RHO_democracy;Rhodesia;;;;;;;;;;;;x;;;;;;;;;;;;;;
 RMG;Romagna;;;;;;;;;;;;;x
 RMG_ADJ;Romagnan;;;;;;;;;;;;;x
 RPL_colonial_company;The Hudson's Bay Company;;;;;;;;;;;;x,
+RPL_dominion;The Hudson's Bay Company;;;;;;;;;;;;x,
 RPL_colonial_company_ADJ;British;;;;;;;;;;;;x
+RPL_dominion_ADJ;British;;;;;;;;;;;;x
 RPL;Assiniboia;;;;;;;;;;;;x
 RPL_ADJ;Assiniboian;;;;;;;;;;;;x
 RPL_hms_government;Rupert's Land;;;;;;;;;;;;x

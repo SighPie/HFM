@@ -560,7 +560,7 @@ political_decisions = {
 					OR = {
 						AND = {
 							ai = no
-							revolution_n_counterrevolution = 1
+							nationalism_n_imperialism = 1
 						}
 						mass_politics = 1
 						great_wars_enabled = yes
@@ -624,10 +624,8 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = {
-				invention = national_fraternity
-				is_greater_power = yes
-			}
+			invention = national_fraternity
+			is_greater_power = yes
 			OR = {
 				729 = { NOT = { is_core = ITA } } #Venice
 				736 = { NOT = { is_core = ITA } } #Triest
@@ -655,7 +653,7 @@ political_decisions = {
 						OR = {
 							AND = {
 								ai = no
-								revolution_n_counterrevolution = 1
+								nationalism_n_imperialism = 1
 							}
 							mass_politics = 1
 							great_wars_enabled = yes
@@ -687,7 +685,7 @@ political_decisions = {
 							has_global_flag = france_dismantled
 							AND = {
 								ai = no
-								revolution_n_counterrevolution = 1
+								nationalism_n_imperialism = 1
 							}
 						}
 						NOT = { 

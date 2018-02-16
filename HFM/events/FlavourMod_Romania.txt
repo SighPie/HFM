@@ -20,6 +20,8 @@
 			}
 			NOT = { has_global_flag = wallachian_revolution }
 		}
+		
+		fire_only_once = yes
 
 		mean_time_to_happen =  {
 			months = 6
@@ -64,14 +66,15 @@
 			government = prussian_constitutionalism
 			ruling_party_ideology = liberal
 			random_country = {
-				limit = {
-					tag = RUS
-					is_sphere_leader_of = THIS
-				}
+				limit = { tag = RUS }
 				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -200
+				}
 				diplomatic_influence = {
 					who = THIS
-					value = -100
+					value = -400
 				}
 			}
 			relation = {
@@ -159,6 +162,8 @@
 			days = 10
 		}
 		
+		fire_only_once = yes
+		
 		option = {
 			name = "EVTOPTA97533"
 			set_country_flag = convention_of_balta_liman
@@ -221,6 +226,8 @@
 			days = 10
 		}
 		
+		fire_only_once = yes
+		
 		option = {
 			name = "EVTOPTA97532"
 			set_country_flag = moldavia_revolution
@@ -243,13 +250,20 @@
 		picture = "bucharest_fire"
 		
 		trigger = {
-			year = 1847
+			year = 1845
 			owns = 664
 		}
 		
 		mean_time_to_happen = {
-			months = 4
+			months = 24
+			
+			modifier = {
+				factor = 0.5
+				year = 1847
+			}
 		}
+		
+		fire_only_once = yes
 		
 		option = {
 			name = "EVTOPTA21520"
@@ -267,6 +281,7 @@
 					NOT = { war_with = THIS }
 					OR = {
 						tag = FRA
+						tag = BOR
 						tag = RUS
 						tag = MOL
 						tag = AUS

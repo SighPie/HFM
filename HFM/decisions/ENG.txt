@@ -348,20 +348,23 @@ political_decisions = {
 		}
 
 		allow = {
-			war = no
+			NOT = { any_greater_power = { war_with = THIS } }
 			NOT = { government = fascist_dictatorship }
 			NOT = { government = proletarian_dictatorship }
-			year = 1890
+			OR = {
+				invention = the_dark_continent
+				year = 1899
+			}
 			2013 = { empty = no }
 			2015 = { empty = no }
-			OR = { 
+			OR = {
 				GER = {
 					exists = yes
-					war = no
+					NOT = { war_with = THIS }
 				}
 				GCF = {
 					exists = yes
-					war = no
+					NOT = { war_with = THIS }
 				}
 			}
 		}
@@ -370,7 +373,7 @@ political_decisions = {
 			set_country_flag = treaty_of_heligoland
 			badboy = -1
 			random_country = {
-				limit = { 
+				limit = {
 					exists = yes
 					OR = {
 						tag = GER
@@ -488,7 +491,7 @@ political_decisions = {
 			ABU = {
 				war = no
 				in_sphere = THIS
-				relation = { who = THIS value = 150 }
+				#relation = { who = THIS value = 150 }
 			}
 			mass_politics = 1
 		}
@@ -685,6 +688,7 @@ political_decisions = {
 		effect = {
 			prestige = 3
 			treasury = -10000
+			FIJ = { government = colonial_company }
 			2454 = {
 				secede_province = ENG
 				naval_base = 1
@@ -979,7 +983,10 @@ political_decisions = {
 			war = no
 			OR = { 
 				invention = the_dark_continent
-				AFG = { vassal_of = THIS }
+				AND = { 
+					AFG = { vassal_of = THIS }
+					revolution_n_counterrevolution = 1
+				}
 			}
 			NOT = { year = 1920 }
 			#NOT = { relation = { who = AFG value = 100 } }
@@ -1485,9 +1492,8 @@ political_decisions = {
 				FAS = { vassal_of = THIS }
 			}
 			OR = { 
-				AND = { 
-					primary_culture = french
-					FRA = { has_country_flag = australia_organized }
+				AND = {
+					OR = { FRA = { has_country_flag = australia_organized } BOR = { has_country_flag = australia_organized } }
 					2244 = { NOT = { is_core = FAS } }
 				}
 				AND = { 
@@ -1541,14 +1547,12 @@ political_decisions = {
 	
 	the_foster_act = {
 		picture = william_foster
-		
 		potential = {
 			tag = ENG
 			NOT = { school_reforms = good_schools}
 			NOT = { has_country_flag = foster_act_enacted }
 			year = 1865
-		}
-		
+		}		
 		
 		allow = {
 			war = no

@@ -106,11 +106,6 @@ country_event = {
 	option = {
 		name = "EVT99000OPTA"
 		set_country_flag = boxers_appeared
-		remove_country_modifier = missionary_activity
-		religion = mahayana
-		set_country_flag = mahayana_country
-		clr_country_flag = protestant_country
-		clr_country_flag = change_to_protestant
 		random_state = {
 			limit = {
 				any_owned_province = {
@@ -422,6 +417,15 @@ country_event = {
 			factor = 0.8
 			average_militancy = 8
 		}
+	}
+	
+	immediate = {
+		remove_country_modifier = missionary_activity
+		religion = mahayana
+		set_country_flag = mahayana_country
+		clr_country_flag = protestant_country
+		clr_country_flag = change_to_protestant
+		clr_country_flag = missionary_activity
 	}
 	
 	option = {

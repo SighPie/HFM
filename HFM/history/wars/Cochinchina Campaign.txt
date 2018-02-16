@@ -1,4 +1,4 @@
-name = "Cochinchina Campaign"
+name = "The Cochinchina Campaign"
 
 1861.4.13 = {
 	add_attacker = FRA

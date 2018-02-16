@@ -54,6 +54,7 @@ set_country_flag = shiite_country
 
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
+land_reform = yes_land_reform
 
 govt_flag = {
 	government = absolute_monarchy

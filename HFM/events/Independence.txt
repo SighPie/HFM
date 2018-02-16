@@ -2908,6 +2908,7 @@ country_event = {
 			consciousness = -4
 		}
 		NOR = {
+			government = hms_government
 			any_pop = {
 				militancy = -4
 			}
@@ -3017,6 +3018,7 @@ country_event = {
 		}
 		NOR = {
 			capital = 313
+			government = hms_government
 			any_pop = {
 				militancy = -4
 			}

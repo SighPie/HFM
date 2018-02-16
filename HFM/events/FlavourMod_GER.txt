@@ -88,7 +88,7 @@ country_event = {
 			}
 			create_alliance = THIS
 			casus_belli = {
-				target = FRA
+				target = FROM
 				type = cut_down_to_size
 				months = 20
 			}
@@ -105,11 +105,21 @@ country_event = {
 			}
 			country_event = 99978
 		}
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = humiliate }
+			attacker_goal = { 
+				casus_belli = acquire_state
+				state_province_id = 412
+			}
+			defender_goal = { casus_belli = liberate_country country = RHI }
+			call_ally = yes
+		}
 		ai_chance = {
 			factor = 0.7
 			modifier = {
 				factor = 100
-				FRA = { ai = no }
+				FROM = { ai = no }
 			}
 			modifier = {
 				factor = 0.5
@@ -121,9 +131,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.1
-				FRA = {
-					alliance_with = RUS
-				}
+				FROM = { alliance_with = RUS }
 			}
 		}
 	}
@@ -131,9 +139,7 @@ country_event = {
 	option = {
 		name = "EVT99925OPTB"
 		prestige = -5
-		FROM = {
-			remove_country_modifier = rhine_crisis
-		}
+		FROM = { remove_country_modifier = rhine_crisis }
 		any_country = {
 			limit = { 
 				exists = yes
@@ -143,15 +149,16 @@ country_event = {
 					primary_culture = south_german
 				}
 			}
-			end_military_access = FRA
-			leave_alliance = FRA
-			relation = { who = FRA value = -150 }
+			end_military_access = FROM
+			leave_alliance = FROM
+			relation = { who = FROM value = -150 }
 		}
+		
 		ai_chance = { 
 			factor = 0.30 
 			modifier = {
 				factor = 0
-				FRA = { ai = no }
+				FROM = { ai = no }
 			}
 		}
 	}
@@ -170,25 +177,30 @@ country_event = {
 		name = "EVT99978OPTA"
 		prestige = 10
 		create_alliance = FROM
-		war = {
-			target = FRA
-			attacker_goal = { casus_belli = humiliate }
-			attacker_goal = { casus_belli = war_reparations }
-			defender_goal = { casus_belli = war_reparations }
-			call_ally = yes
-		}
-		FROM = {
-			war = {
-				target = FRA
-				attacker_goal = { casus_belli = humiliate }
-				attacker_goal = { 
-					casus_belli = acquire_state
-					state_province_id = 412
+		random_owned = {
+			limit = { exists = FRA }
+			owner = {
+				war = {
+					target = FRA
+					attacker_goal = { casus_belli = humiliate }
+					attacker_goal = { casus_belli = war_reparations }
+					defender_goal = { casus_belli = war_reparations }
+					call_ally = yes
 				}
-				defender_goal = { casus_belli = liberate_country country = RHI }
-				call_ally = yes
 			}
-		}
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = {
+				war = {
+					target = BOR
+					attacker_goal = { casus_belli = humiliate }
+					attacker_goal = { casus_belli = war_reparations }
+					defender_goal = { casus_belli = war_reparations }
+					call_ally = yes
+				}
+			}
+		}	
 		
 		ai_chance = {
 			factor = 95
@@ -206,9 +218,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 5
-				FRA = {
-					ai = no
-				}
+				FROM = { ai = no }
 			}
 		}
 	}
@@ -220,20 +230,7 @@ country_event = {
 			who = FROM
 			value = -200
 		}
-		
-		FROM = {
-			war = {
-				target = FRA
-				attacker_goal = { casus_belli = humiliate }
-				attacker_goal = { 
-					casus_belli = acquire_state
-					state_province_id = 412
-				}
-				defender_goal = { casus_belli = liberate_country country = RHI }
-				call_ally = yes
-			}
-		}
-		
+			
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -250,14 +247,17 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				FRA = {
-					ai = no
-				}
+				FRA = { ai = no }
+			}
+			modifier = {
+				factor = 0
+				BOR = { ai = no }
 			}
 		}
 	}
 }
 
+#Treaty of Frankfurt (1/2)
 country_event = {
 	id = 99932
 	title = "EVTNAME99932"
@@ -271,13 +271,11 @@ country_event = {
 	option = {
 		name = "EVT99932OPTA"
 		badboy = -5
-		treasury = -200000
+		treasury = -100000
 		prestige = -20
-		411 = {
-			add_province_modifier = { name = war_graves duration = -1 }
-		}
+		411 = { add_province_modifier = { name = war_graves duration = -1 } }
 		FRA_412 = {
-			remove_core = FRA
+			remove_core = THIS
 			add_core = ALS
 		}
 		ALS = {
@@ -287,13 +285,13 @@ country_event = {
 		random_owned = {
 			limit = {
 				province_id = 397 #Luxembourg
-				owned_by = FRA
+				owned_by = THIS
 			}
-			397 = { remove_core = FRA }
+			397 = { remove_core = THIS }
 			secede_province = FROM
 		}
 		FROM = {
-			treasury = 200000
+			treasury = 100000
 			any_pop = {
 				limit = {
 					location = { 
@@ -315,21 +313,24 @@ country_event = {
 			}
 		}
 		
+		#Release the Papal States if vassalised
 		random_country = {
 			limit = {
 				tag = PAP
-				vassal_of = FRA
+				vassal_of = THIS
 			}
 			annex_to = THIS
 		}
-		release = PAP
-		PAP = { 
-			government = theocracy
+		
+		random_owned = {
+			limit = { province_id = 749 }
+			THIS = { release = PAP }
+			PAP = { government = theocracy }
 		}
 	}
 }
 
-#The Treaty of Frankfurt
+#The Treaty of Frankfurt (2/2)
 country_event = {
 	id = 99933
 	title = "EVTNAME99933"
@@ -343,21 +344,19 @@ country_event = {
 	option = {
 		name = "EVT99932OPTA"
 		badboy = -5
-		treasury = -200000
+		treasury = -100000
 		prestige = -20
-		411 = {
-			add_province_modifier = { name = war_graves duration = -1 }
-		}
+		411 = { add_province_modifier = { name = war_graves duration = -1 } }
 		random_owned = {
 			limit = {
 				province_id = 397 #Luxembourg
-				owned_by = FRA
+				owned_by = THIS
 			}
-			397 = { remove_core = FRA }
+			397 = { remove_core = THIS }
 			secede_province = LUX
 		}
 		FROM = {
-			treasury = 200000
+			treasury = 100000
 			any_pop = {
 				limit = {
 					location = { 
@@ -378,16 +377,20 @@ country_event = {
 				move_pop = 406
 			}
 		}
+		
+		#Release the Papal States if vassalised
 		random_country = {
 			limit = {
 				tag = PAP
-				vassal_of = FRA
+				vassal_of = THIS
 			}
 			annex_to = THIS
-			release = PAP
-			PAP = { 
-				government = theocracy
-			}
+		}
+		
+		random_owned = {
+			limit = { province_id = 749 }
+			THIS = { release = PAP }
+			PAP = { government = theocracy }
 		}
 	}
 }
@@ -672,9 +675,7 @@ country_event = {
 	option = {
 		name = "We cannot allow this."
 		prestige = 10
-		FROM = {
-			country_event = 99980
-		}
+		FROM = { country_event = 99980 }
 		any_pop = {
 			limit = {
 				is_primary_culture = yes
@@ -689,11 +690,11 @@ country_event = {
 			modifier = {
 				factor = 0.65
 				war = yes
-				NOT = { war_with = FRA }
+				NOT = { war_with = FROM }
 			}
 			modifier = {
 				factor = 10
-				war_with = FRA
+				war_with = FROM
 			}
 			modifier = {
 				factor = 0.1
@@ -722,9 +723,7 @@ country_event = {
 			consciousness = 5
 		}
 		
-		FROM = {
-			country_event = 99981
-		}
+		FROM = { country_event = 99981 }
 		
 		ai_chance = {
 			factor = 5
@@ -739,11 +738,11 @@ country_event = {
 			modifier = {
 				factor = 5
 				war = yes
-				NOT = { war_with = FRA }
+				NOT = { war_with = FROM }
 			}
 			modifier = {
 				factor = 0
-				war_with = FRA
+				war_with = FROM
 			}
 		}
 	}
@@ -759,12 +758,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "A war must be avoided, we must find a compromise"
+		name = "EVT99980OPTA"
 		prestige = 5
 		badboy = -2
-		FROM = {
-			country_event = 99982
-		}
+		FROM = { country_event = 99982 }
 		
 		ai_chance = {
 			factor = 0.95
@@ -773,21 +770,19 @@ country_event = {
 				OR = {
 					RHI = {
 						exists = yes
-						vassal_of = FRA
+						vassal_of = THIS
 					}
-					573 = { owned_by = FRA }
-					575 = { owned_by = FRA }
+					573 = { owned_by = THIS }
+					575 = { owned_by = THIS }
 				}
 			}
 		}
 	}
 	
 	option = {
-		name = "Luxembourg is rightfully French!"
+		name = "EVT99980OPTB"
 		prestige = 15
-		NET = {
-			treasury = 200000
-		}
+		NET = { treasury = 200000 }
 		treasury = -200000
 		inherit = LUX
 		FROM = { country_event = 99983 }
@@ -796,34 +791,26 @@ country_event = {
 			factor = 0.05
 			modifier = {
 				factor = 2
-				RUS = {
-					alliance_with = THIS
-				}
+				RUS = { alliance_with = THIS }
 			}
 			modifier = {
 				factor = 5
-				NGF = {
-					is_disarmed = yes
-				}
+				FROM = { is_disarmed = yes }
 			}
 			modifier = {
 				factor = 2
-				NGF = {
-					has_recently_lost_war = yes
-				}
+				FROM = { has_recently_lost_war = yes }
 			}
 			modifier = {
 				factor = 100
 				RHI = {
 					exists = yes
-					vassal_of = FRA
+					vassal_of = THIS
 				}
 			}
 			modifier = {
 				factor = 0
-				RUS = {
-					NOT = { alliance_with = THIS }
-				}
+				RUS = { NOT = { alliance_with = THIS } }
 			}
 		}
 	}
@@ -840,17 +827,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Excellent."
+		name = "EVTOPTA500061"
 		prestige = 15
-		NET = {
-			treasury = 200000
-		}
+		NET = { treasury = 200000 }
 		treasury = -200000
-		LUX = {
-			all_core = {
-				add_core = FRA
-			}
-		}
+		LUX = { all_core = { add_core = THIS } }
 		inherit = LUX
 	}
 }
@@ -866,24 +847,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Another Crisis has been avoided."
+		name = "EVTOPTA99982"
 		prestige = 5
 		any_pop = {
-				limit = {
-					is_primary_culture = yes
-					is_accepted_culture = yes
-				}
-				militancy = -1
-				consciousness = -1
-		}
-			
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = -1
+			consciousness = -1
+		}	
 		diplomatic_influence = {
 			who = LUX
 			value = -400
 		}
-		
 		relation = {
-			who = FRA
+			who = FROM
 			value = 100
 		}
 	}
@@ -900,15 +879,14 @@ country_event = {
 	major = yes
 	
 	option = {
-		name = "Luxembourg will be freed!"	
-			
+		name = "EVTOPTA99983"	
 		casus_belli = {
-			target = FRA
+			target = FROM
 			type = liberate_country
 			months = 24
 		}
 		war = {
-			target = FRA
+			target = FROM
 			attacker_goal = { casus_belli = liberate_country country = LUX }
 			defender_goal = { casus_belli = humiliate }
 			call_ally = yes
@@ -1031,7 +1009,6 @@ country_event = {
 				}
 			}
 		}
-		
 		ai_chance = { factor = 100 }
 	}
 	
@@ -1041,7 +1018,6 @@ country_event = {
 			who = FROM 
 			value = -200
 		}
-		
 		ai_chance = { factor = 0 }
 	}
 }
@@ -1144,16 +1120,12 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 14
-	}
+	mean_time_to_happen = { days = 14 }
 	
 	option = {
 		name = "EVT99815OPTA"	
 		any_country = {
-			limit = { 
-				has_country_modifier = brothers_war_aggressor
-			}
+			limit = { has_country_modifier = brothers_war_aggressor }
 			remove_country_modifier = brothers_war_aggressor
 		}
 		prestige = -15
@@ -1173,13 +1145,11 @@ country_event = {
 		name = "EVT72752OPTA"
 		
 		relation = {
-			who = GCF
+			who = FROM
 			value = -100
 		}
 		
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 

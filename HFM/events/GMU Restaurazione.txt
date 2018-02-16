@@ -226,7 +226,7 @@ country_event = {
 		inherit = LOM
 		LOM = { government = absolute_monarchy }
 		ai_chance = {
-			factor = 90
+			factor = 95
 			modifier = {
 				factor = 0
 				war = yes
@@ -261,6 +261,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.3
+				alliance_with = BOR
+			}
+			modifier = {
+				factor = 1.3
 				alliance_with = PRU
 			}
 			modifier = {
@@ -273,6 +277,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.4
+				AUS = { war_with = BOR }
+			}
+			modifier = {
+				factor = 1.4
 				AUS = { war_with = PRU }
 			}
 			modifier = {
@@ -281,9 +289,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				AUS = {
-					alliance_with = FRA
-				}
+				AUS = { alliance_with = FRA }
+			}	
+			modifier = {
+				factor = 0
+				AUS = { alliance_with = BOR }
 			}	
 		}
 	}
@@ -293,20 +303,14 @@ country_event = {
 		set_country_flag = first_war_of_italian_independence_refused
 		prestige = -5
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			militancy = 2
 		}
 		any_pop = {
-			limit = {
-				has_pop_culture = south_italian
-			}
+			limit = { has_pop_culture = south_italian }
 			militancy = 1
 		}
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 5 }
 	}
 }
 
@@ -914,26 +918,19 @@ country_event = {
 				militancy = -4
 			}
 			SAR = { inherit = THIS }
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 90 }
 	}
 	option = {
 		name = "We are Venetians!"
 		prestige = 10
 		set_country_flag = does_not_want_to_be_unified
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 	}
 }
-
-
 
 ##################
 # Mazzini's fate #
 ##################
-
 
 #Sardinia demands Mazzini
 country_event = {
@@ -945,32 +942,24 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = SAR
-                government = absolute_monarchy
-                NOT = { year = 1848 }
+		tag = SAR
+		government = absolute_monarchy
+		NOT = { year = 1848 }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Mazzini is a threat to traditional order and should be arrested."
-                prestige = 2
-	        set_global_flag = sardinia_demands_mazzini
-                relation = {
-                        who = SWI
-                        value = -25
-                }
-                relation = {
-                        who = AUS
-                        value = 25
-                }
+		prestige = 2
+		set_global_flag = sardinia_demands_mazzini
+		relation = {  who = SWI value = -25  }
+		relation = {  who = AUS value = 25  }
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 0.5
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 0.5
+			}
 		}
 		ai_chance = {
 			factor = 70
@@ -983,14 +972,11 @@ country_event = {
 				ruling_party_ideology = reactionary
 			}
 		}                
-        }
+	}
 	option = {
 		name = "We shouldn't disturb Switzerland with such matters."
-                prestige = -10
-                relation = {
-                        who = SWI
-                        value = 50
-                }
+		prestige = -10
+		relation = { who = SWI value = 50 }
 		middle_strata = {
 			ideology = {
 				value = liberal
@@ -1004,7 +990,7 @@ country_event = {
 				ruling_party_ideology = liberal
 			}
 		}    
-        }
+	}
 }
 
 #Sardinia demands Mazzini
@@ -1017,8 +1003,8 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = SWI
-	        has_global_flag = sardinia_demands_mazzini
+		tag = SWI
+		has_global_flag = sardinia_demands_mazzini
 	}
 
 	mean_time_to_happen = {
@@ -1027,22 +1013,16 @@ country_event = {
 
 	option = {
 		name = "Mazzini is our guest. No one has the right to blackmail our proud country!"
-	        set_global_flag = mazzini_in_exile
-                prestige = 5
-                badboy = 1
-                relation = {
-                        who = SAR
-                        value = -25
-                }
-                relation = {
-                        who = AUS
-                        value = -50
-                }
+		set_global_flag = mazzini_in_exile
+		prestige = 5
+		badboy = 1
+		relation = { who = SAR value = -25 }
+		relation = { who = AUS value = -50 }
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = -1
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = -1
+			}
 		}
 		ai_chance = {
 			factor = 30
@@ -1051,10 +1031,10 @@ country_event = {
 				ruling_party_ideology = liberal
 			}
 		}                
-        }
+	}
 	option = {
 		name = "Pretend that we arrest him, but let Mazzini time to escape."
-	        set_global_flag = mazzini_escaped
+		set_global_flag = mazzini_escaped
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1062,25 +1042,25 @@ country_event = {
 				ruling_party_ideology = conservative
 			}
 		}
-        }   
+	}   
 	option = {
 		name = "Very well, arrest and extradite him."
-	        set_global_flag = mazzini_arrested
-                prestige = -2
-                badboy = -1
-                relation = {
-                        who = SAR
-                        value = 50
-                }
-                relation = {
-                        who = AUS
-                        value = 50
-                }
+		set_global_flag = mazzini_arrested
+		prestige = -2
+		badboy = -1
+		relation = {
+			who = SAR
+			value = 50
+		}
+		relation = {
+			who = AUS
+			value = 50
+		}
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 1
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 1
+			}
 		}
 		ai_chance = {
 			factor = 20
@@ -1089,7 +1069,7 @@ country_event = {
 				ruling_party_ideology = reactionary
 			}
 		}     
-        }
+	}
 }
 
 #Mazzini seeks a new exile in GB
@@ -1102,31 +1082,23 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = ENG
-	        has_global_flag = mazzini_escaped
+		tag = ENG
+		has_global_flag = mazzini_escaped
 	}
 
-	mean_time_to_happen = {
-		months = 3
-	}
+	mean_time_to_happen = { months = 3 }
 
 	option = {
 		name = "Welcome Mazzini. Tea, anyone?"
-	        set_global_flag = mazzini_in_exile
-                prestige = 5
-                relation = {
-                        who = SAR
-                        value = -10
-                }
-                relation = {
-                        who = AUS
-                        value = -10
-                }
+		set_global_flag = mazzini_in_exile
+		prestige = 5
+		relation = { who = SAR value = -10 }
+		relation = { who = AUS value = -10 }
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = -0.5
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = -0.5
+			}
 		}
 		ai_chance = {
 			factor = 60
@@ -1150,7 +1122,7 @@ country_event = {
 	}
 	option = {
 		name = "We have enough troublemakers in our glorious nation."
-	        set_global_flag = mazzini_arrested
+		set_global_flag = mazzini_arrested
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -1165,8 +1137,8 @@ country_event = {
 				factor = 1.5
 				press_rights = state_press
 			}
-		}      
-        }
+		}     
+	}
 }
 
 #Mazzini arrested
@@ -1180,34 +1152,29 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = SAR
-	        has_global_flag = mazzini_arrested
+		tag = SAR
+		has_global_flag = mazzini_arrested
 	}
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "We caught that criminal!"
-                prestige = 10
-                relation = {
-                        who = AUS
-                        value = 50
-                }
+		prestige = 10
+		relation = { who = AUS value = 50 }
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = -1
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = -1
+			}
 		}
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = -1
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = -1
+			}
 		}              
-        }
+	}
 }
 
 #Mazzini exiled
@@ -1220,17 +1187,15 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-                tag = SAR
-	        has_global_flag = mazzini_in_exile
+		tag = SAR
+		has_global_flag = mazzini_in_exile
 	}
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "The liberals will celebrate this victory..."
-                prestige = -1
+		prestige = -1
 		any_pop = {
 			ideology = {
 				value = liberal
@@ -1238,21 +1203,19 @@ country_event = {
 			}
 		}    
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = 1
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
 		}
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 1
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 1
+			}
 		}           
-        }
+	}
 }
-
-
 
 ##################
 # Roman Republic #
@@ -1283,39 +1246,37 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "It is time for reforms."
-	        set_global_flag = pius_IX_reforms
-			prestige = 5
-			any_pop = {
-				ideology = {
-					value = liberal
-					factor = 0.01
-				}
-			}  
-			any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 2
-				}
+		set_global_flag = pius_IX_reforms
+		prestige = 5
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.01
 			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -1
-				}
+		}  
+		any_pop = {
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 2
 			}
-			ai_chance = {
-				factor = 70
-				modifier = {
-					factor = 1.5
-					ruling_party_ideology = liberal
-				}
-			}                
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = -1
+			}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+		}                
 	}
 		
 	option = {
@@ -1339,7 +1300,7 @@ country_event = {
 				ruling_party_ideology = reactionary
 			}
 		}    
-        }
+	}
 }
 
 #The Roman Republic
@@ -1352,13 +1313,14 @@ country_event = {
 	trigger = {
 		war = no
 		tag = PAP
-		FRA = { is_sphere_leader_of = PAP }
+		OR = {
+			FRA = { is_sphere_leader_of = PAP }
+			BOR = { is_sphere_leader_of = PAP }
+		}
 		has_global_flag = pius_IX_reforms
 		SAR = { has_country_flag = first_war_of_italian_independence_intervention }
 		SAR = { war_with = AUS }
 		NOT = { government = democracy }
-		#NOT = { has_global_flag = mazzini_arrested }
-		#NOT = { alliance_with = SAR }
 		NOT = { has_global_flag = roman_republic_occured }
 	}
 
@@ -1372,16 +1334,22 @@ country_event = {
 
 	option = {
 		name = "Long live the Roman Republic!"
-		FRA = { country_event = 202016 }
-                prestige = 5
-	        government = democracy
-                political_reform = universal_voting
-                political_reform = free_press
-                political_reform = population_equal_weight
-                political_reform = proportional_representation
-                political_reform = non_socialist
-                political_reform = secret_ballots
-                political_reform = yes_meeting
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 202016
+		}
+        prestige = 5
+	    government = democracy
+		political_reform = universal_voting
+		political_reform = free_press
+		political_reform = population_equal_weight
+		political_reform = proportional_representation
+		political_reform = non_socialist
+		political_reform = secret_ballots
+		political_reform = yes_meeting
 		random_country = {
 			limit = { is_sphere_leader_of = THIS }
 			release_vassal = THIS
@@ -1394,7 +1362,7 @@ country_event = {
 				who = THIS
 				value = -50
 			}
-                }
+		}
 		any_pop = {
 			ideology = {
 				value = liberal
@@ -1402,46 +1370,43 @@ country_event = {
 			}
 		}  
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 2
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 2
+			}
 		}
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = -10
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = -10
+			}
 		}
 		remove_country_modifier = global_liberal_agitation
 		remove_country_modifier = springtime_of_nations
 		clr_country_flag = liberal_revolution_in_progress
 		clr_country_flag = liberal_revolution_fired
 		set_country_flag = had_liberal_revolution
-		ai_chance = {
-			factor = 100
-		}                
-        }
+		ai_chance = { factor = 100 }                
+	}
+	
 	option = {
 		name = "The Swiss Guard will solve that problem!"
-                prestige = -20
-                badboy = 3
+		prestige = -20
+		badboy = 3
 		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 10
-			    }
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 10
+			}
 		}
 		any_pop = {
-			    scaled_militancy = {
-					ideology = liberal
-					factor = 10
-			    }
+			scaled_militancy = {
+				ideology = liberal
+				factor = 10
+			}
 		}
-		ai_chance = {
-			factor = 0
-		}    
-        }
+		ai_chance = { factor = 0 }    
+	}
 }
 
 #French intervention
@@ -1466,21 +1431,17 @@ country_event = {
 		prestige = -5
 		war = {
 			target = PAP
-			attacker_goal = {
-				casus_belli = add_to_sphere 
-			}
+			attacker_goal = { casus_belli = add_to_sphere }
 		}
 		ai_chance = {
-			factor = 90
+			factor = 100
 		}  
 	}
 	option = {
 		name = "We have more pressing matters."
 		set_country_flag = france_let_rome_go
 		prestige = -15
-		ai_chance = {
-			factor = 10
-		}  
+		ai_chance = { factor = 0 }  
 	}
 }
 
@@ -1497,7 +1458,10 @@ country_event = {
 		war = no
 		tag = PAP
 		has_global_flag = roman_republic_occured
-		FRA = { is_sphere_leader_of = PAP }
+		OR = {
+			FRA = { is_sphere_leader_of = PAP }
+			BOR = { is_sphere_leader_of = PAP }
+		}
 		PAP = { government = democracy }
 	}
 
@@ -1507,7 +1471,13 @@ country_event = {
 
 	option = {
 		name = "France is the protector of Rome."
-		FRA = { country_event = 202018 }
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 202018
+		}
 		PAP = { 
 			government = theocracy
 			political_reform = none_voting
@@ -1521,12 +1491,13 @@ country_event = {
 			limit = {
 				tag = RMG
 				ai = yes
-				in_sphere = FRA
+				OR = { 
+					in_sphere = FRA
+					in_sphere = BOR
+				}
 			}
 			annex_to = PAP
-			any_owed = {
-				secede_province = PAP
-			}
+			any_owned = { secede_province = PAP }
 		}
 	}
 }
@@ -1607,9 +1578,7 @@ country_event = {
 		name = "We have shown the world the heroism of the Italian people!"
 		set_global_flag = first_war_of_italian_independence_won
 		prestige = 35
-		726 = { add_core = THIS }
-		727 = { add_core = THIS }
-		728 = { add_core = THIS }
+		any_owned = { limit = { region = AUS_726 } add_core = THIS }
 		any_pop = {
 			limit = { is_culture_group = italian }
 			militancy = -5
@@ -1659,38 +1628,31 @@ country_event = {
 	desc = "EVTDESC202021"
 	picture = "italian_war_of_independence_lost"
 
-        is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "Milan is austrian territory."
 		prestige = 5
-                badboy = -1
-                FROM = { country_event = 202023 }
-		ai_chance = {
-			factor = 100
-		}
+		badboy = -1
+		FROM = { country_event = 202023 }
+		ai_chance = { factor = 100 }
 	}
+	
 	option = {
 		name = "Milan is sardinian territory."
-                prestige = -5
-                badboy = 5
-                relation = {
-                        who = FROM
-                        value = -200
-                }
+		prestige = -5
+		badboy = 5
+		relation = { who = FROM value = -200  }
 		any_country = {
-			limit = {
-				is_greater_power = yes
-			}
+			limit = { is_greater_power = yes }
 			relation = {
 				who = THIS
 				value = -100
 			}
 		}
-                FROM = { country_event = 202022 }
-		ai_chance = {
-			factor = 0
-		}
+		FROM = { country_event = 202022 }
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1701,7 +1663,7 @@ country_event = {
 	desc = "EVTDESC202022"
 	picture = "italian_war_of_independence_lost"
 
-        is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "These Sardinians are clearly mad!"
@@ -1711,10 +1673,7 @@ country_event = {
 			type = acquire_state
 			months = 100
 		}
-                relation = {
-                        who = FROM
-                        value = -200
-                }
+		relation = { who = FROM  value = -200  }
 	}
 }
 
@@ -1730,18 +1689,14 @@ country_event = {
 
 	option = {
 		name = "This treaty is in our interest."
-                prestige = 10
-                726 = { secede_province = THIS }
+		prestige = 10
+		726 = { secede_province = THIS }
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			militancy = -5
 		}
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			consciousness = -5
 		}
 	}
@@ -1759,47 +1714,43 @@ country_event = {
 		tag = SAR
 		war = no
 		has_global_flag = venetian_insurrection_occurred
-	        has_global_flag = five_days_of_milan_occurred
-	        has_global_flag = first_war_of_italian_independence_lost
-                has_country_flag = first_war_of_italian_independence_intervention
+		has_global_flag = five_days_of_milan_occurred
+		has_global_flag = first_war_of_italian_independence_lost
+		has_country_flag = first_war_of_italian_independence_intervention
 	}
 
-	mean_time_to_happen = {
-		days = 7
-	}
+	mean_time_to_happen = { days = 7 }
 
 	option = {
 		name = "We need a change in our politics."
 		prestige = 5
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -8
-				}
-				scaled_consciousness = {
-					ideology = liberal
-					factor = -2
-				}
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = -8
 			}
-                upper_house = {
-	                    ideology = liberal
-	                    value = 0.20
-                } 
+			scaled_consciousness = {
+				ideology = liberal
+				factor = -2
+			}
+		}
+		upper_house = {
+				ideology = liberal
+				value = 0.20
+		} 
 		rich_strata = {
 			ideology = {
 				value = liberal
 				factor = 0.05
 			}
-                }
-		ai_chance = {
-			factor = 100
 		}
+		
+		ai_chance = { factor = 100 }
 	}
+	
 	option = {
 		name = "The crown never failed and will never fail."
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2021,35 +1972,36 @@ country_event = {
 	desc = "EVTDESC202030"
 	picture = "Verdi_WF"
 
-	trigger = {       
+	trigger = {
 		year = 1859
 		NOT = { year = 1900 }
 		has_global_flag = Mameli
 		ITA = { has_country_flag = atworldfair }
-		FRA = { has_country_flag = atworldfair }
+		OR = { 
+			FRA = { has_country_flag = atworldfair }
+			BOR = { has_country_flag = atworldfair }
+		}
 		ENG = { has_country_flag = atworldfair }
 	}
 
 	fire_only_once = yes
 
-	mean_time_to_happen = {
-		days = 2
-	}
+	mean_time_to_happen = { days = 2 }
 
 	option = {
 		name = "Oh Italia, patria mia!"
-                prestige = 10
+		prestige = 10
 		ENG = { country_event = 202031 }
-                relation = {
-                        who = ENG
-                        value = 15
-                }
-		FRA = { country_event = 202032 }
-                relation = {
-                        who = FRA
-                        value = 15
-                }
-        }
+		relation = { who = ENG value = 15 }
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
+			country_event = 202032
+			relation = { who = THIS value = 15 }
+		}
+	}
 }
 
 #Verdi at the Worldfair (GB)
@@ -2064,15 +2016,12 @@ country_event = {
 
 	option = {
 		name = "I knew that the part with 'God save the Queen' sounded quite familiar..."
-                prestige = 5
-                relation = {
-                        who = ITA
-                        value = 15
-                }
-        }
+		prestige = 5
+		relation = { who = FROM value = 15  }
+	}
 }
 
-#Verdi at the Worldfair (FRA)
+#Verdi at the Worldfair (France)
 country_event = {
 
 	id = 202032
@@ -2084,12 +2033,9 @@ country_event = {
 
 	option = {
 		name = "Ah, la Marseillaise!"
-                prestige = 5
-                relation = {
-                        who = ITA
-                        value = 15
-                }
-        }
+		prestige = 5
+		relation = { who = FROM value = 15 }
+	}
 }
 
 #Manzoni, I promessi sposi
@@ -2116,25 +2062,19 @@ country_event = {
 
 	option = {
 		name = "It would be better if he wrote in German, who cares about a silly Italian novel?"
-                set_global_flag = Manzoni
+		set_global_flag = Manzoni
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			militancy = 2
 		}
 		any_pop = {
-			limit = {
-				has_pop_culture = north_italian
-			}
+			limit = { has_pop_culture = north_italian }
 			consciousness = 2
 		}
 		any_country = {
 			limit = {
 				is_culture_group = italian
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 202034
 		}
@@ -2153,7 +2093,7 @@ country_event = {
 
 	option = {
 		name = "Quite humourless, isn't it?" 
-                prestige = 5
+		prestige = 5
 		rich_strata = {
 			ideology = {
 				value = liberal
@@ -2167,9 +2107,7 @@ country_event = {
 			}
 		}
 		any_pop = {
-			limit = {
-				liberal = 10
-			}
+			limit = { liberal = 10 }
 			militancy = 1
 		}
 		ai_chance = {

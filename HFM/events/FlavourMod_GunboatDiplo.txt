@@ -136,18 +136,16 @@ country_event = {
 	option = {
 		name = "EVTOPT99910"
 		prestige = 10
-		relation = {
-			who = FRA
-			value = -15
-		} 		
-		relation = {
-			who = PRU
-			value = -15
-		} 		
-		relation = {
-			who = POR
-			value = 15
-		} 		
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = -15 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = -15 } 	 }
+		}		
+		relation = { who = PRU value = -15 } 		
+		relation = { who = POR value = 15 } 		
 		POR = { treasury = 1000 }
 	}
 }
@@ -181,10 +179,7 @@ country_event = {
 		middle_strata = { militancy = 0.5 }
 		rich_strata = { militancy = 0.5 }
 		treasury = -1000
-		ENG = {
-			country_event = { id=99910 days=15 }
-		}
-		
+		ENG = { country_event = { id=99910 days=15 } }
 		ai_chance = { factor = 0.95 }
 	}
 }

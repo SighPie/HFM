@@ -71,6 +71,7 @@ colonial_policy = no_colonies
 
 
 set_country_flag = catholic_country
+set_country_flag = micro_nation
 
 # Technologies
 private_banks = 1

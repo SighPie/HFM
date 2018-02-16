@@ -59,7 +59,7 @@ country_event = {
 		}
 		create_alliance = SWK
 		SWK = {
-			economic_reform = yes_foreign_weapons
+			military_reform = yes_foreign_weapons
 			economic_reform = yes_admin_reform
 		}
 		ai_chance = {

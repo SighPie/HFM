@@ -54,12 +54,14 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				AND = { 
-					has_global_flag = treaty_of_paris_russia
-					NOT = { badboy = 0.8 }
-				}
-				TUR = {
-					NOT = { alliance_with = NGF }
+				OR = { 
+					AND = { 
+						has_global_flag = treaty_of_paris_russia
+						NOT = { badboy = 0.8 }
+					}
+					TUR = {
+						NOT = { alliance_with = NGF }
+					}
 				}
 			}
 		}
@@ -73,16 +75,24 @@ political_decisions = {
 				tag = GCF
 				tag = AUS
 				tag = KUK
+				tag = DNB
 			}
 			is_greater_power = yes
+			is_disarmed = no
 			OR = {
 				owns = 771
 				771 = { owner = { vassal_of = THIS } }
 			}
-			has_global_flag = great_eastern_crisis
 			OR = {
 				TUR = { owns = 783 }
 				BOS = { vassal_of = TUR }
+			}
+			OR = {
+				AND = { 
+					has_global_flag = constantinople_conference
+					RUS = { NOT = { war_with = TUR } }
+				}
+				has_global_flag = russia_liberate_balkans
 			}
 			NOT = {
 				has_global_flag = the_reichstadt_agreement
@@ -92,8 +102,11 @@ political_decisions = {
 		}
 		
 		allow = {
-			NOT = { war_with = RUS }
-			has_country_modifier = great_eastern_crisis
+			NOT = { 
+				war_with = RUS 
+				truce_with = RUS
+			}
+			military_score = 100
 		}
 		
 		effect = {
@@ -127,9 +140,24 @@ political_decisions = {
 		}
 		
 		effect = {
+			set_global_flag = russia_liberate_balkans
 			set_country_flag = eastern_crisis_dismantle_ottomans
 			badboy = 3
 			prestige = 20
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = { alliance_with = RUS }
+					OR = {
+						tag = SER
+						tag = ROM
+						tag = MON
+						tag = BUL
+					}
+				}
+				create_alliance = RUS
+				country_event = 99829
+			}
 			TUR = { country_event = 99826 }
 		}
 		
@@ -214,17 +242,16 @@ political_decisions = {
 			OR = {
 				AND = {
 					tag = ENG
-					is_greater_power = yes
+					is_disarmed = no
 				}
-				AND = {
-					NOT = { tag = ENG }
-					ENG = { is_greater_power = no }
+				AND = { 
+					ENG = { is_disarmed = yes }
+					OR = { primary_culture = french is_culture_group = germanic }
 				}
 			}
 			is_greater_power = yes
-			capital_scope = {
-				continent = europe
-			}
+			capital_scope = { continent = europe }
+			NOT = { tag = TUR }
 			NOT = { has_global_flag = berlin_congress_to_be_held }
 		}
 		
@@ -315,7 +342,7 @@ political_decisions = {
 				has_country_flag = turks_defy_congress
 				has_country_flag = eastern_crisis_dismantle_ottomans
 			}
-			NOT = { has_country_flag = dismantle_ottomans }
+			NOT = { has_global_flag = dismantle_ottomans }
 		}
 		
 		allow = {
@@ -324,7 +351,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = dismantle_ottomans
+			set_global_flag = dismantle_ottomans
 			badboy = 5
 			prestige = 15
 			any_pop = {

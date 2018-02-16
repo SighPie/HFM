@@ -23,7 +23,6 @@ country_event = {
 					ideology = { factor = -0.4 value = reactionary }
 				}
 			}
-			
 			any_owned = {
 				limit = { NOT = { province_id = 2344 } }
 				any_pop = {
@@ -31,30 +30,18 @@ country_event = {
 					ideology = { factor = -0.2 value = reactionary }
 				}
 			}
-			
-			relation = {
-				who = BRZ
-				value = 150
-			}
-			
-			relation = {
-				who = ARC
-				value = -150
-			}
-			
-			relation = {
-				who = FRA
-				value = 100
-			}
-			
-			relation = {
-				who = ENG
-				value = 100
-			}
-			relation = {
-				who = PRG
-				value = -200
-			}
+			relation = { who = BRZ value = 150 }
+			relation = { who = ENG value = 100 }
+			relation = { who = PRG value = -200 }
+			relation = { who = ARC value = -150 }
+			random_owned = {
+				limit = { exists = FRA }
+				owner = { relation = { who = FRA value = 100 } }
+			}	
+			random_owned = {
+				limit = { exists = BOR }
+				owner = { relation = { who = BOR value = 100 } }
+			}		
 			treasury = 1500
 			small_arms = 20
 			ammunition = 20
@@ -389,87 +376,93 @@ country_event = {
 		}
 			
 		ENG = {
-			 casus_belli = {
+			casus_belli = {
 				target = ARC
 				type = humiliate
 				months = 6
-					}
-				}
-		FRA = {
-			 casus_belli = {
-				target = ARC
-				type = humiliate
-				months = 6
-					}
-				}
-		ai_chance = {
-			factor = 0.5
-		}
-	}
-		option = {
-			name = "EVTOPT600063B"		#back down from war
-			random_country = { limit = { exists = yes tag = CRT } country_event = 600064 }
-			clr_country_flag = corrientes_is_ready_for_war
-			clr_country_flag = rivera_is_true_president
-			clr_country_flag = oribe_is_true_president
-			prestige = -10
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = 9
-			}
-				scaled_militancy = {
-					ideology = reactionary
-					factor = 9
-			}
-				scaled_militancy = {
-					ideology = liberal
-					factor = 2
-			}
-			CRT = { set_country_flag = rivera_backed_down }
-			}
-				ai_chance = {
-					factor = 0.01
 			}
 		}
+		random_owned = {
+			limit = { exists = FRA }
+			FRA = {
+				casus_belli = {
+					target = ARC
+					type = humiliate
+					months = 6
+				}
+			}
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			BOR = {
+				casus_belli = {
+					target = ARC
+					type = humiliate
+					months = 6
+				}
+			}
+		}	
 		
-		option = {
-			name = "EVTOPT600063C"		#bid our time
-			random_country = { 
-				limit = { 
-					exists = yes
-					tag = CRT
-				}
-				create_alliance = URU
-			relation = {
-				who = URU
-				value = 400
-				}
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = "EVTOPT600063B"		#back down from war
+		random_country = { limit = { exists = yes tag = CRT } country_event = 600064 }
+		clr_country_flag = corrientes_is_ready_for_war
+		clr_country_flag = rivera_is_true_president
+		clr_country_flag = oribe_is_true_president
+		prestige = -10
+		any_pop = {
+			scaled_militancy = {
+				ideology = conservative
+				factor = 9
 			}
-			clr_country_flag = corrientes_is_ready_for_war
-			clr_country_flag = rivera_is_true_president
-			clr_country_flag = oribe_is_true_president
-			set_country_flag = war_on_rosas
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = 2
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 9
 			}
-				scaled_militancy = {
-					ideology = reactionary
-					factor = 3
-			}
-				scaled_militancy = {
-					ideology = liberal
-					factor = 1
-				}
-			}
-			 casus_belli = { target = ARC type = humiliate months = 36 }
-		ai_chance = {
-			factor = 0.4
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
 			}
 		}
+		CRT = { set_country_flag = rivera_backed_down }
+		ai_chance = { factor = 0.01 }
 	}
+		
+	option = {
+		name = "EVTOPT600063C"		#bid our time
+		random_country = { 
+			limit = { 
+				exists = yes
+				tag = CRT
+			}
+			create_alliance = URU
+			relation = { who = URU value = 400 }
+		}
+		clr_country_flag = corrientes_is_ready_for_war
+		clr_country_flag = rivera_is_true_president
+		clr_country_flag = oribe_is_true_president
+		set_country_flag = war_on_rosas
+		any_pop = {
+			scaled_militancy = {
+				ideology = conservative
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 1
+			}
+			}	
+		 casus_belli = { target = ARC type = humiliate months = 36 }
+		ai_chance = { factor = 0.4 }
+	}
+}
 	
 country_event = {
 	id = 600064

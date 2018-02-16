@@ -964,7 +964,11 @@ country_event = {
 			relation = { who = THIS value = -200 }
 			casus_belli = { target = THIS type = cut_down_to_size months = 12 }
 		}
-		FRA = {
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
 			create_alliance = SWI
 			set_country_flag = supports_switzerland
 			relation = { who = THIS value = -200 }
@@ -974,7 +978,7 @@ country_event = {
 			limit = {
 				is_greater_power = yes
 				capital_scope = { continent = europe }
-				NOT = { tag = FRA }
+				NOT = { primary_culture = french }
 				NOT = { tag = ENG }
 				NOT = { tag = THIS }
 				relation = { who = SWI value = 50 }

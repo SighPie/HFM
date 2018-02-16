@@ -771,9 +771,9 @@ political_decisions = {
 			NOT = {
 				has_global_flag = guinea_organized
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1879
 			owns = 1880
@@ -4825,10 +4825,11 @@ political_decisions = {
 			NOT = { exists = SOM }
 			state_n_government = 1
 			NOT = { capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa } }
+			capital_scope = { continent = west_africa } 
+			capital_scope = { continent = east_africa } 
+			capital_scope = { continent = south_west_africa } }
 			NOT = { has_global_flag = somalia_united }
+			invention = the_dark_continent
 			owns = 1868
 		}
 
@@ -4845,6 +4846,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = somalia_united
 			prestige = 2
+			1870 = { life_rating = 25 }
 			SOM_1868 = { add_core = SOM }
 			SOM_1872 = { add_core = SOM }
 			HBY = { all_core = { remove_core = HBY } }
@@ -4859,7 +4861,6 @@ political_decisions = {
 			SOM = { tech_school = unciv_tech_school nationalvalue = nv_tradition }
 		}
 	}
-	
 	
 	organize_timor = {
 		picture = moluccan_map
@@ -5075,7 +5076,6 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
 				add_accepted_culture = khoisan
-				government = democracy
 				political_reform = landed_voting
 				tech_school = unciv_tech_school
 				clr_country_flag = sunni_country
@@ -5160,6 +5160,7 @@ political_decisions = {
 			}
 			NMB = {
 				primary_culture = THIS
+				government = democracy
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -5958,9 +5959,9 @@ political_decisions = {
 				invention = the_dark_continent
 				AND = {
 					capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+					 capital_scope = { continent = west_africa } 
+					 capital_scope = { continent = east_africa } 
+					 capital_scope = { continent = south_west_africa }
 					civilized = yes
 				}
 				AND = {

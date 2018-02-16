@@ -294,7 +294,7 @@ categories =  {
 		farm_rgo_size = 0.2
 		farm_rgo_eff = 0.00
 		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.5
+		mine_rgo_eff = 0.0
 		supply_limit = 10
 	}
 	pest = {
@@ -3062,6 +3062,7 @@ categories =  {
 		min_build_railroad = 3
 		min_build_fort = 1
 		combat_width = -0.25
+		immigrant_attract = -0.25
 	}
 	
 	boreal = {
@@ -3250,6 +3251,7 @@ categories =  {
 		mine_rgo_eff = 0.0
 		min_build_railroad = 6
 		min_build_fort = 2
+		immigrant_push = -1.0
 		immigrant_attract = -0.25
 	}
 	

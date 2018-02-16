@@ -124,9 +124,12 @@ political_decisions = {
 			badboy = 5
 			set_country_flag = artois_claimed
 			FRA_404 = { add_core = NET }
-			relation = {
-				who = FRA
-				value = -400
+			random_country = {
+				limit = {
+					primary_culture = french
+					capital = 425
+				}	
+				relation = { who = THIS value = -400 }
 			}
 		}
 			
@@ -137,10 +140,10 @@ political_decisions = {
 		picture = NET_claim_artois
 		potential = {
 			tag = NET
-				owns = 399 #Lille
-				owns = 400 #Dunkirk
-				owns = 401 #Arras
-				owns = 404 #Cambrai
+			owns = 399 #Lille
+			owns = 400 #Dunkirk
+			owns = 401 #Arras
+			owns = 404 #Cambrai
 			NOT = { has_global_flag = dutch_artois }
 		}
 		
@@ -167,11 +170,11 @@ political_decisions = {
 	rename_artois_FRA = {
 		picture = FRA_rename_artois
 		potential = {
-			tag = FRA
-				owns = 399 #Lille
-				owns = 400 #Dunkirk
-				owns = 401 #Arras
-				owns = 404 #Cambrai
+			primary_culture = french
+			owns = 399 #Lille
+			owns = 400 #Dunkirk
+			owns = 401 #Arras
+			owns = 404 #Cambrai
 			has_global_flag = dutch_artois
 		}
 		

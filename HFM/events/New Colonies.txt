@@ -579,8 +579,8 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
 		}
 		OR = {
 			AND = {

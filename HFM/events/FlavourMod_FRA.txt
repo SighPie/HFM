@@ -6,11 +6,9 @@ country_event = {
 	picture = "henri_riviere"
 	
 	trigger = {
-		OR = { 
-			tag = FRA
-			tag = BOR
-		}
-		is_greater_power = yes
+		primary_culture = french
+			is_greater_power = yes
+			capital = 425
 		exists = DAI
 		has_country_flag = tonkin_campaign
 		NOT = { has_country_flag = tonkin_campaign_started }
@@ -74,9 +72,7 @@ country_event = {
 
 	option = {
 		name = "EVT99993OPTA"
-		FROM = {
-			inherit = THIS
-		}
+		FROM = { inherit = THIS }
 	}
 }
 
@@ -169,11 +165,21 @@ country_event = {
 	option = {
 		name = "EVT99985OPTA"
 		set_country_flag = support_walloon_owner
-		leave_alliance = FRA
-		leave_alliance = BOR
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { 
+				leave_alliance = FRA 
+				relation = { who = FRA value = -250 }
+			}
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { 
+				leave_alliance = BOR 
+				relation = { who = BOR value = -250 }
+			}
+		}
 		create_alliance = FROM
-		relation = { who = FRA value = -250 }
-		relation = { who = BOR value = -250 }
 		relation = { who = FROM value = 400 }
 		ai_chance = {
 			factor = 80 
@@ -461,10 +467,47 @@ country_event = {
 		name = "EVT99993OPTA"
 		prestige = -15
 		any_owned = {
-			limit = {
-				is_core = RHI
-			}
+			limit = { is_core = RHI }
 			secede_province = RHI
 		}
+	}
+}
+
+#French Government - Changing to Kingdom
+country_event = {
+	id = 99500
+	title = "EVTNAME60040"
+	desc = "EVTDESC60040"
+	picture = "Monarchy"
+	
+	trigger = {
+		tag = FRA
+		government = french_bourbon
+		civilized = yes	
+		vote_franschise = none_voting
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "EVTOPTA60040"
+		clr_country_flag = everywhere_genocide_only
+		clr_country_flag = non_colonial_genocide_only
+		clr_country_flag = colonial_genocide_only
+		clr_country_flag = preparations_to_kill
+		remove_country_modifier = preparations_to_kill
+		clr_country_flag = communist_gov
+		set_country_flag = absolute_monarchy_gov
+		clr_country_flag = semi_constitutional_monarchy_gov
+		clr_country_flag = constitutional_monarchy_gov
+		clr_country_flag = democracy_gov
+		clr_country_flag = presidential_dictatorship_gov
+		clr_country_flag = fascist_gov
+		clr_country_flag = anarcho_liberal_gov
+		change_tag = BOR
+		government = absolute_monarchy
+		all_core = { add_core = BOR remove_core = FRA }
 	}
 }

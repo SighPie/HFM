@@ -46,13 +46,17 @@ political_decisions = {
 			NOT = { has_global_flag = suez_canal_built }
 			is_greater_power = yes
 			interchangeable_parts = 1
+			OR = {
+				1755 = { owner = { in_sphere = THIS } }
+				AND = {
+					total_amount_of_ships = 75
+					1755 = { owner = { ai = yes civilized = no part_of_sphere = no } }
+				}
+				owns = 1755
+			}
 		}
 		
 		allow = {
-			OR = {
-				1755 = { owner = { in_sphere = THIS } }
-				owns = 1755
-			}
 			OR = {
 				AND = {
 					invention = machine_tools
@@ -111,10 +115,7 @@ political_decisions = {
 			}
 			OR = {
 				AND = {
-					OR = { 
-						tag = FRA
-						tag = BOR
-					}
+					primary_culture = french
 					year = 1858
 				}
 				AND = {

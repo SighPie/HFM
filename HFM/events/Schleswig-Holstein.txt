@@ -268,13 +268,21 @@ country_event = {
 			owns = 371
 			vassal_of = DEN
 		}
+		NOT = { has_global_flag = november_constitution }
 	}
 
 	fire_only_once = yes
 
 	mean_time_to_happen = {
 		months = 6
+		
+		modifier = { 
+			factor = 0.1
+			year = 1864
+		}
 	}
+	
+	immediate = { set_global_flag = november_constitution }
 
 	option = {
 		name = "EVT90053OPTA"
@@ -314,7 +322,7 @@ country_event = {
 			relation = { who = HOL value = 50 }
 		}
 		ai_chance = {
-			factor = 75
+			factor = 90
 		}
 	}
 	option = {
@@ -325,7 +333,7 @@ country_event = {
 			consciousness = 3
 		}
 		ai_chance = {
-			factor = 25
+			factor = 10
 		}
 	}
 }

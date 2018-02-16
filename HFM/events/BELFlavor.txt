@@ -270,11 +270,19 @@ country_event = {
 		badboy = -4
 		BEL = { country_event = 36710 }
 		relation = { who = ENG value = 150 }
-		relation = { who = FRA value = 150 }
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = 150 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = 150 } }
+		}	
 		any_greater_power = {
 			limit = {
 				capital_scope = { continent = europe }
 				NOT = { tag = ENG }
+				NOT = { tag = BOR }
 				NOT = { tag = FRA }
 				NOT = { tag = BEL }
 				NOT = { tag = THIS }
@@ -468,6 +476,7 @@ country_event = {
 						tag = GCF
 						tag = GER
 						tag = FRA
+						tag = BOR
 						tag = AUS
 						tag = KUK
 						tag = NET
@@ -591,6 +600,7 @@ country_event = {
 				NOT = { 
 					OR = {
 						tag = FRA
+						tag = BOR
 						tag = ENG
 					}
 				}
@@ -598,7 +608,14 @@ country_event = {
 			relation = { who = BEL value = 20 }
 		}
 		relation = { who = ENG value = 150 }
-		relation = { who = FRA value = 150 }
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = 150 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = 150 } }
+		}	
 		add_country_modifier = {
 			name = no_more_war
 			duration = 730
@@ -670,7 +687,14 @@ country_event = {
 			}
 		}
 		relation = { who = ENG value = -50 }
-		relation = { who = FRA value = -50 }
+		random_owned = {
+			limit = { exists = FRA }
+			owner = { relation = { who = FRA value = -50 } }
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { relation = { who = BOR value = -50 } }
+		}
 		add_country_modifier = {
 			name = no_more_war
 			duration = 730
@@ -695,10 +719,12 @@ country_event = {
 				NOT = { 
 					OR = {
 						tag = FRA
+						tag = BOR
 						tag = ENG
 					}
 				}
-			}	
+				exists = yes
+			}
 			relation = { who = BEL value = -25 }
 		}
 		add_casus_belli = {
@@ -706,10 +732,25 @@ country_event = {
 			type = free_allied_cores
 			months = 24
 		}
-		add_casus_belli = {
-			target = FRA
-			type = free_allied_cores
-			months = 24
+		random_owned = {
+			limit = { exists = FRA }
+			owner = {
+				add_casus_belli = {
+					target = FRA
+					type = free_allied_cores
+					months = 24
+				}
+			}
+		}	
+		random_owned = {
+			limit = { exists = BOR }
+			owner = { 
+				add_casus_belli = {
+					target = BOR
+					type = free_allied_cores
+					months = 24
+				}
+			}
 		}
 		ENG = {
 			diplomatic_influence = { who = BEL value = -100 }
@@ -717,7 +758,11 @@ country_event = {
 			leave_alliance = BEL
 			end_war = NET
 		}
-		FRA = {
+		random_country = {
+			limit = {
+				primary_culture = french
+				capital = 425
+			}	
 			diplomatic_influence = { who = BEL value = -100 }
 			relation = { who = BEL value = -100 }
 			leave_alliance = BEL

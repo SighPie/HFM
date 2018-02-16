@@ -536,7 +536,9 @@ political_decisions = {
 	kwangchowan_treaty_port = {
 		picture = kwangchowan_china
 		potential = {
-			tag = FRA
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
 			has_country_modifier = negotiating_treaty
 			2632 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
 			NOT = { has_country_modifier = chinese_treaty_port }

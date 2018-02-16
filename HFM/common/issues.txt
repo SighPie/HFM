@@ -476,6 +476,7 @@ political_reforms = {
 			global_immigrant_attract = -0.1
 			allow = {
 				OR = {
+					has_country_flag = clean_up_colonial_government
 					has_country_flag = absolute_monarchy_gov
 					has_country_flag = semi_constitutional_monarchy_gov
 				}
@@ -514,6 +515,7 @@ political_reforms = {
 				NOT = { press_rights = free_press }
 				citizenship_policy = residency
 				OR = {
+					has_country_flag = clean_up_colonial_government
 					has_country_flag = absolute_monarchy_gov
 					has_country_flag = communist_gov
 					has_country_flag = fascist_gov
@@ -600,6 +602,7 @@ political_reforms = {
 					AND = { 
 						ruling_party_ideology = reactionary
 						OR = {
+							has_country_flag = clean_up_colonial_government
 							has_country_flag = absolute_monarchy_gov
 							has_country_flag = presidential_dictatorship_gov
 							has_country_flag = theocratic_government

@@ -2507,7 +2507,10 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = claimed_bosnia
-		has_global_flag = berlin_congress_held
+		OR = { 
+			has_global_flag = berlin_congress_held
+			has_global_flag = dismantle_ottomans
+		}
 		is_greater_power = yes
 		BOS = {
 			exists = yes
@@ -2524,13 +2527,13 @@ country_event = {
 		clr_country_flag = claimed_bosnia
 		prestige = 10
 		BOS = { country_event = 19370 }
-		leave_alliance = RUS
-		relation = { who = RUS value = -50 }
-		add_casus_belli = {
-			target = RUS
-			type = release_puppet
-			months = 12
-		}
+		#leave_alliance = RUS
+		#relation = { who = RUS value = -50 }
+		#add_casus_belli = {
+			#target = RUS
+			#type = release_puppet
+			#months = 12
+		#}
 		ai_chance = { factor = 100 }
 	}
 	

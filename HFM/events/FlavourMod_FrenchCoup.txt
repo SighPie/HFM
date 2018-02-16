@@ -8,12 +8,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
 		has_country_flag = louis_deposed
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_recently_lost_war = yes
 		NOT = { has_country_flag = boulanger_director }
 	}
@@ -49,14 +49,14 @@ country_event = {
 			limit = {
 				strata = poor
 				is_culture_group = french
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			ideology = { factor = 0.05 value = conservative }
 			dominant_issue = { factor = 0.10 value = jingoism }
 		}
 		any_pop = {
 			limit = {
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			scaled_militancy = {
 				ideology = reactionary
@@ -78,11 +78,11 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		election = yes
 		has_country_flag = boulanger_director
 		NOT = { has_country_flag = boulanger_minister }
@@ -127,11 +127,11 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_country_flag = boulanger_minister
 		has_country_modifier = war_minister_boulanger
 		NOT = { has_country_flag = schnaebele_affair }
@@ -175,7 +175,7 @@ country_event = {
 			limit = {
 				strata = poor
 				is_culture_group = french
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			ideology = { factor = 0.05 value = conservative }
 			dominant_issue = { factor = 0.10 value = jingoism }
@@ -217,20 +217,16 @@ country_event = {
 			limit = {
 				strata = poor
 				is_culture_group = french
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			ideology = { factor = 0.1 value = conservative }
 			dominant_issue = { factor = 0.10 value = jingoism }
 			militancy = -5
 		}
 		set_country_flag = black_stain
-		FRA_412 = {
-			add_core = FRA
-		}
-
-		ai_chance = {
-			factor = 5
-		}
+		FRA_412 = { add_core = THIS }
+		
+		ai_chance = { factor = 5 }
 	}
 
 	option = {
@@ -254,16 +250,14 @@ country_event = {
 			limit = {
 				strata = poor
 				is_culture_group = french
-				location = { is_core = FRA }
+				location = { is_core = THIS }
 			}
 			ideology = { factor = 0.05 value = reactionary }
 			dominant_issue = { factor = 0.20 value = jingoism }
 			militancy = 5
 		}
 
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -290,25 +284,17 @@ country_event = {
 			}
 			militancy = 0.5
 		}
-		relation = { 
-			who = FROM
-			value = -50
-		}
+		relation = { who = FROM value = -50 }
+		FROM = { country_event = { id=99941 days=3 } }
 
-		FRA = {
-			country_event = { id=99941 days=3 }
-		}
-
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 95 }
 	}
 
 	option = {
 		name = "EVT99940OPTB"
-		
+		FRA_412 = { add_core = FROM }
 		war = {
-			target = FRA
+			target = FROM
 			attacker_goal = { casus_belli = cut_down_to_size }
 			defender_goal = { 
 				casus_belli = acquire_core_state 
@@ -316,9 +302,7 @@ country_event = {
 			}
 		}
 		
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 5 }
 	}
 }
 
@@ -380,11 +364,11 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_country_modifier = boulangisme
 		has_country_flag = schnaebele_affair
 		NOT = { has_country_flag = legion_scandal }
@@ -412,42 +396,33 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
 		election = no
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_country_modifier = boulangisme
 		has_country_flag = legion_scandal
 		NOT = { has_country_flag = boulanger_win }
 	}
 	
-	mean_time_to_happen =  {
-		days = 1
-	}
+	mean_time_to_happen =  { days = 1 }
 
-	immediate = {
-		set_country_flag = boulanger_win
-	}
+	immediate = { set_country_flag = boulanger_win }
 	
 	option = {
 		name = "EVT99943OPTA"
 		remove_country_modifier = boulangisme
 		set_country_flag = boulanger_coup_fails
-		ai_chance = {
-			factor = 80
-		}		
+		ai_chance = { factor = 90 }		
 	}
 
 	option = {
 		name = "EVT99943OPTB"
 		remove_country_modifier = boulangisme
 		set_country_flag = boulanger_coup_success
-
-		ai_chance = {
-			factor = 20
-		}			
+		ai_chance = { factor = 10 }			
 	}
 }
 
@@ -459,12 +434,12 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
 		election = no
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_country_flag = boulanger_coup_fails
 		NOT = { has_country_flag = boulanger_exiled }
 	}
@@ -491,7 +466,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { 
-					is_core = FRA
+					is_core = THIS
 				}
 				is_primary_culture = yes
 			}
@@ -527,23 +502,19 @@ country_event = {
 	major = yes
 
 	trigger = {
-		tag = FRA
+		primary_culture = french
+		is_greater_power = yes
+		capital = 425
 		government = democracy
 		election = no
-		412 = {
-			NOT = { owned_by = THIS }
-		}
+		412 = { NOT = { owned_by = THIS } }
 		has_country_flag = boulanger_coup_success
 		NOT = { has_country_flag = 4th_republic }
 	}
 
-	mean_time_to_happen =  {
-		days = 1
-	}
+	mean_time_to_happen =  { days = 1 }
 
-	immediate = {
-		set_country_flag = 4th_republic
-	}
+	immediate = { set_country_flag = 4th_republic }
 	
 	option = {
 		name = "EVT99945OPTA"
@@ -558,9 +529,7 @@ country_event = {
 
 		any_pop = {
 			limit = {
-				location = { 
-					is_core = FRA
-				}
+				location = {  is_core = THIS }
 				is_primary_culture = yes
 			}
 			scaled_militancy = {
@@ -608,13 +577,6 @@ country_event = {
 			relation = { who = THIS value = -100 }
 		}
 
-		any_country = {
-			limit = {
-				government = absolute_monarchy
-			}
-			relation = { who = RUS value = 75 }	
-		}
-
 		upper_house = {
 			ideology = conservative
 			value = 0.40
@@ -634,9 +596,7 @@ country_event = {
 		political_reform = underground_parties
 		political_reform = mandatory_service
 
-		ai_chance = {
-			factor = 80
-		}			
+		ai_chance = { factor = 80 }			
 	}
 
 	option = {
@@ -651,9 +611,7 @@ country_event = {
 
 		any_pop = {
 			limit = {
-				location = { 
-					is_core = FRA
-				}
+				location = { is_core = THIS }
 				is_primary_culture = yes
 			}
 			scaled_militancy = {
@@ -709,7 +667,8 @@ country_event = {
 			ideology = reactionary
 			value = 0.20
 		}
-
+		change_tag = BOR
+		all_core = { add_core = BOR remove_core = FRA }
 		government = hms_government
 		ruling_party_ideology = conservative
 		political_reform = universal_voting
@@ -738,9 +697,7 @@ country_event = {
 
 		any_pop = {
 			limit = {
-				location = { 
-					is_core = FRA
-				}
+				location = { is_core = THIS }
 				is_primary_culture = yes
 			}
 			scaled_militancy = {
@@ -796,7 +753,6 @@ country_event = {
 			ideology = reactionary
 			value = 0.20
 		}
-
 		government = absolute_monarchy
 		ruling_party_ideology = reactionary
 		political_reform = none_voting

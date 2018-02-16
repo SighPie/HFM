@@ -1403,6 +1403,7 @@ country_event = {
 			}
 			inherit = THIS
 		}
+		create_vassal = RYU
 	}
 }
 
@@ -1741,6 +1742,7 @@ country_event = {
 			end_war = THIS
 			country_event = 97652
 		}
+		create_vassal = RYU
 	}
 }
 
@@ -2628,6 +2630,7 @@ country_event = {
 	
 	trigger = {
 		tag = JAP
+		is_greater_power = yes
 		has_country_modifier = line_of_advantage
 		is_disarmed = no
 		war = no
@@ -2649,6 +2652,10 @@ country_event = {
 					war = no
 				}
 			}
+		}
+		OR = {
+			year = 1874
+			total_amount_of_ships = 35
 		}
 		NOT = {
 			has_country_flag = taiwan_line_of_advantage

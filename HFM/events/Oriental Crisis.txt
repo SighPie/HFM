@@ -80,6 +80,8 @@ country_event = {
 
 	major = yes
 	is_triggered_only = yes
+	
+	immediate = { random_owned = { limit = { owner = { ai = yes } } owner = { prestige = -5 } } }
 
 	option = {
 		name = "EVT90076OPTA"

@@ -120,6 +120,10 @@ country_event = {
 				factor = 1.2
 				militancy = 5
 			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
 			
 		}	
 	}
@@ -364,6 +368,10 @@ country_event = {
 				factor = 1.2
 				militancy = 5
 			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
 			
 		}	
 	}
@@ -575,6 +583,14 @@ country_event = {
 			modifier = {
 				factor = 1.2
 				militancy = 5
+			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
+			modifier = {
+				factor = 2.0
+				exists = AST
 			}
 			
 		}	
@@ -862,6 +878,14 @@ country_event = {
 			modifier = {
 				factor = 0.8
 				militancy = 5
+			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
+			modifier = {
+				factor = 2.0
+				exists = AST
 			}
 		}
 	}
@@ -1542,6 +1566,14 @@ country_event = {
 			modifier = {
 				factor = 1.2
 				militancy = 5
+			}
+			modifier = {
+				factor = 2.0
+				exists = CAN
+			}
+			modifier = {
+				factor = 2.0
+				exists = AST
 			}
 			
 		}	

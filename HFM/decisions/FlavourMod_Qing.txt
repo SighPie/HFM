@@ -38,9 +38,9 @@ political_decisions = {
 	kwangchowan_treaty_port_fra = {
 		picture = "kwangchowan_china"
 		potential = {
-			tag = FRA
+			NOT = { tag = ENG }
 			is_greater_power = yes
-			1369 = { owned_by = FRA } #Saigon
+			1369 = { owned_by = THIS } #Hanoi
 			1496 = { owned_by = ENG } #HongKong
 			2632 = { owner = { civilized = no NOT = { war_with = THIS }  } }
 			NOT = { has_country_flag = kwangchowan_treaty_port_fra }
@@ -118,6 +118,7 @@ political_decisions = {
 			set_global_flag = second_opium_war_treaty
 			relation = { who = QNG value = 150 }
 			1538 = {
+				life_rating = 3
 				secede_province = QNG
 				remove_core = TPG
 				trade_goods = precious_goods 
@@ -144,6 +145,7 @@ political_decisions = {
 				plurality = -5
 				religion = protestant
 				set_country_flag = protestant_country
+				set_country_flag = gave_up_2nd_opium
 				clr_country_flag = change_to_protestant
 				set_country_flag = missionary_activity
 				
@@ -484,10 +486,7 @@ political_decisions = {
 				}
 				country_event = 99951
 			}
-			#activate_technology = battleship_column_doctrine
-			#activate_technology = steamers
 			activate_technology = alphabetic_flag_signaling
-			#activate_technology = iron_steamers
 			random_owned = {
 				limit = { owner = { civilized = no } }
 				owner = { military_reform = yes_foreign_navies }
@@ -646,20 +645,7 @@ political_decisions = {
 			owns = 1482
 			war = no
 			money = 75001
-			OR = {
-				ENG = {
-					raider_group_doctrine = 1
-					NOT = { war_with = THIS }
-				}
-				GER = {
-					raider_group_doctrine = 1
-					NOT = { war_with = THIS }
-				}
-				FRA = {
-					raider_group_doctrine = 1
-					NOT = { war_with = THIS }
-				}
-			}
+			any_greater_power = { raider_group_doctrine = 1 }
 		}
 		
 		effect = {
@@ -1204,10 +1190,7 @@ political_decisions = {
 		picture = kansu_braves
 		potential = {
 			tag = QNG
-			OR = {
-				has_country_flag = qinghai_revolt_dungan
-				year = 1895
-			}
+			has_country_flag = qinghai_revolt_dungan
 			owns = 1557
 			has_country_flag = self_strengthening_movement
 			NOT = { has_country_flag = kansu_braves }
@@ -1521,6 +1504,12 @@ political_decisions = {
 					province_id = 1616 #Berlin
 				}
 				owner = { capital = 1616 }
+			}
+			1538 = {
+				add_province_modifier = {
+					name = baby_boom
+					duration = 1095
+				}
 			}
 		}
 		

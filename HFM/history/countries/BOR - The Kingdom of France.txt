@@ -76,6 +76,10 @@ romanticism = 1
 mechanical_production = 1
 high_pressure_steam_engine = 1
 
+govt_flag = {
+	government = absolute_monarchy
+	flag = theocracy
+}
 
 # Inventions
 #corvettes = yes
@@ -95,11 +99,6 @@ upper_house = {
 	anarcho_liberal = 0
 	socialist = 0
 	communist = 0
-}
-
-govt_flag = {
-	government = hms_government
-	flag = presidential_dictatorship
 }
 
 schools = culture_tech_school

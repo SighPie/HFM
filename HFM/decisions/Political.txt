@@ -1017,6 +1017,7 @@ political_decisions = {
 				AND = { tag = KAZ owns = 1181 NOT = { capital = 1181 } }
 				AND = { tag = MLI owns = 1794 NOT = { capital = 1794 } }
 				AND = { tag = ASH civilized = yes owns = 1907 NOT = { capital = 1907 } }
+				AND = { tag = SUD owns = 1827 NOT = { capital = 1827 } }
 			}
 		}
 		
@@ -1069,6 +1070,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = MLI } } owner = { capital = 1794 } }
 			random_owned = { limit = { owner = { tag = NET } } owner = { capital = 375 } }
 			random_owned = { limit = { owner = { tag = GLM } } owner = { capital = 702 } }
+			random_owned = { limit = { owner = { tag = SUD } } owner = { capital = 1827 } }
 		}
 		
 		ai_will_do = { factor = 1 }

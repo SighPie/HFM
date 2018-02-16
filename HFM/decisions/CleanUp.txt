@@ -276,7 +276,8 @@ political_decisions = {
 				AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 				AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
-				AND = { government = colonial_company NOT = { has_country_flag = colonial_company_gov } }
+				AND = { government = colonial_company NOT = { has_country_flag = clean_up_colonial_government } }
+				AND = { government = dominion NOT = { has_country_flag = dominion_gov } }
 				AND = { exists = yes NOT = { has_country_flag = existing_country } }
 				
 				any_neighbor_country = {
@@ -290,7 +291,8 @@ political_decisions = {
 						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
-						AND = { government = colonial_company NOT = { has_country_flag = colonial_company_gov } }
+						AND = { government = colonial_company NOT = { has_country_flag = clean_up_colonial_government } }
+						AND = { government = dominion NOT = { has_country_flag = dominion_gov } }
 						AND = { exists = yes NOT = { has_country_flag = existing_country } }
 					}
 				}
@@ -310,6 +312,8 @@ political_decisions = {
 			clr_country_flag = presidential_dictatorship_gov
 			clr_country_flag = fascist_gov
 			clr_country_flag = anarcho_liberal_gov
+			clr_country_flag = clean_up_colonial_government
+			clr_country_flag = dominion_gov
 			random_owned = { limit = { owner = { government = theocracy } } owner = { set_country_flag = theocratic_government } }
 			random_owned = { limit = { owner = { government = proletarian_dictatorship } } owner = { set_country_flag = communist_gov } }
 			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { set_country_flag = absolute_monarchy_gov } }
@@ -319,7 +323,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { government = presidential_dictatorship } } owner = { set_country_flag = presidential_dictatorship_gov } }
 			random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { set_country_flag = fascist_gov } }
 			random_owned = { limit = { owner = { government = bourgeois_dictatorship } } owner = { set_country_flag = anarcho_liberal_gov } }
-			random_owned = { limit = { owner = { government = colonial_company } } owner = { set_country_flag = colonial_company_gov } }
+			random_owned = { limit = { owner = { government = colonial_company } } owner = { set_country_flag = clean_up_colonial_government } }
+			random_owned = { limit = { owner = { government = dominion } } owner = { set_country_flag = dominion_gov } }
 			random_owned = { limit = { owner = { exists = yes NOT = { has_country_flag = existing_country } } } owner = { set_country_flag = existing_country } }
 			any_neighbor_country = {
 				limit = { exists = yes NOT = { has_country_flag = existing_country } }
@@ -342,6 +347,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = theocratic_government
 			}
 			any_neighbor_country = {
@@ -357,6 +363,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = communist_gov
 			}
 			any_neighbor_country = {
@@ -372,6 +379,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = absolute_monarchy_gov
 			}
 			any_neighbor_country = {
@@ -387,6 +395,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = semi_constitutional_monarchy_gov
 			}
 			any_neighbor_country = {
@@ -402,6 +411,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = constitutional_monarchy_gov
 			}
 			any_neighbor_country = {
@@ -417,6 +427,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = democracy_gov
 			}
 			any_neighbor_country = {
@@ -432,6 +443,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = presidential_dictatorship_gov
 			}
 			any_neighbor_country = {
@@ -447,6 +459,7 @@ political_decisions = {
 				clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = fascist_gov
 			}
 			any_neighbor_country = {
@@ -462,6 +475,7 @@ political_decisions = {
 				#clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = colonial_company_gov
 				clr_country_flag = clean_up_colonial_government
+				clr_country_flag = dominion_gov
 				set_country_flag = anarcho_liberal_gov
 			}
 			any_neighbor_country = {
@@ -476,7 +490,23 @@ political_decisions = {
 				clr_country_flag = fascist_gov
 				#clr_country_flag = anarcho_liberal_gov
 				clr_country_flag = anarcho_liberal_gov
-				set_country_flag = colonial_company_gov
+				clr_country_flag = dominion_gov
+				set_country_flag = clean_up_colonial_government
+			}
+			any_neighbor_country = {
+				limit = { government = dominion NOT = { has_country_flag = dominion_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				#clr_country_flag = anarcho_liberal_gov
+				clr_country_flag = anarcho_liberal_gov
+				clr_country_flag = clean_up_colonial_government
+				set_country_flag = dominion_gov
 			}
 		}
 		ai_will_do = { factor = 1 }
