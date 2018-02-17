@@ -27,6 +27,7 @@ install_fascism_make_puppet;Install a Fascist Puppet;;;;;;;;;;;;;;;;;;;;;;x;;;;;
 install_fascism_make_puppet_desc;Install a §Yfascist puppet government§W in the country's capital;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 install_fascism_make_puppet_short;Install a fascist puppet government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 install_fascism_make_puppet_setup;Install a fascist puppet government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+NORMAL_WAR_LIBERATE_NAME_BOR_EGY;$ORDER$French Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_LIBERATE_NAME_FRA_EGY;$ORDER$French Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_LIBERATE_NAME_NET_EGY;$ORDER$Dutch Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_LIBERATE_NAME_SPA_EGY;$ORDER$Spanish Intervention in Egypt;;;;;;;;;;;;;;;;;;;;;;;;x

@@ -426,6 +426,16 @@ migration_chance = {
 		state_scope = { is_colonial = yes }
 	}
 	
+	
+	modifier = {
+		factor = -100
+		OR = {
+			not = { location = { total_pops = 1000 } }
+			not = { location = { total_pops = 100 } }
+			not = { location = { controlled_by = owner } }
+		}
+	}
+	
 	modifier = {
 		factor = 100
 		THIS = { is_culture_group = east_slavic }
@@ -514,15 +524,6 @@ migration_chance = {
 				NOT = { war_exhaustion = 1 }
 				has_country_flag = ruhr_polen
 			}
-		}
-	}
-
-	modifier = {
-		factor = -100
-		OR = {
-			not = { location = { total_pops = 1000 } }
-			not = { location = { total_pops = 100 } }
-			not = { location = { controlled_by = owner } }
 		}
 	}
 
@@ -654,9 +655,7 @@ migration_chance = {
 			}
 			NOT = { province_id = 3250 }
 		}
-		country = { 
-			primary_culture = swiss_german
-		}
+		country = { primary_culture = swiss_german }
 
 	}
 	
@@ -847,6 +846,16 @@ emigration_chance = {
 		OR = {
 			is_accepted_culture = no
 			is_primary_culture = no
+		}
+	}
+	
+	modifier = {
+		factor = -100
+		OR = {
+			state_scope = { is_colonial = yes }
+			not = { location = { total_pops = 1000 } }
+			not = { location = { total_pops = 100 } }
+			not = { location = { controlled_by = owner } }
 		}
 	}
 	
@@ -1141,16 +1150,6 @@ emigration_chance = {
 		factor = -0.1
 		THIS = { NOT = { is_culture_group = polish_culture_group } }
 		country = { debt_law = peonage }
-	}
-	
-	modifier = {
-		factor = -100
-		OR = {
-			state_scope = { is_colonial = yes }
-			not = { location = { total_pops = 1000 } }
-			not = { location = { total_pops = 100 } }
-			not = { location = { controlled_by = owner } }
-		}
 	}
 	
 	modifier = {

@@ -1042,6 +1042,7 @@ promote_to =
 			NOT = { is_accepted_culture = yes }
 			NOT = { is_primary_culture = yes }
 		}	
+		
 		group = {
 			modifier = {
 				factor =  0.25

@@ -2563,7 +2563,6 @@ monroe_doctrine = {
 	is_triggered_only = yes
 	months = 12
 	crisis = no
-	always = yes
 	
 	construction_speed = 1.0
 
@@ -4341,7 +4340,6 @@ demand_concession_BC_casus_belli = {
 			primary_culture = manchu
 			primary_culture = korean
 			primary_culture = persian
-			primary_culture = manchu
 			civilization_progress = 0.7
 			has_country_flag = post_colonial_country
 		}
@@ -6195,7 +6193,7 @@ acquire_substate_core_region = {
 				}
 				any_owned_province = { any_neighbor_province = { owned_by = THIS } }
 			}
-			owner = { NOT = { in_sphere = THIS } }
+			NOT = { in_sphere = THIS }
 			number_of_states = 1
 		}
 	}

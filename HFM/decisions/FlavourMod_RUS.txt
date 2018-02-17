@@ -21,25 +21,27 @@ political_decisions = {
 		}
 		effect = {
 			treasury = -50000
-			activate_technology = muzzle_loaded_rifles
-			activate_technology = experimental_railroad 
-			social_reform = low_schools
+			random_owned = { 
+				limit = { owner = { ai = yes } }
+				owner = { 
+					activate_technology = muzzle_loaded_rifles
+					activate_technology = experimental_railroad 
+					social_reform = low_schools
+				}
+			}
 			set_country_flag = dmitry_reforms
 			add_country_modifier = {
 				name = russian_army_education
 				duration = 19710
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	russian_navy_reforms = {
 		picture = "russian_naval_crimea"
 		potential = { 
 			tag = RUS
-			ai = yes
 			OR = {
 				has_country_flag = crimean_war
 				year = 1870
@@ -53,17 +55,28 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			treasury = -50000
-			activate_technology = battleship_column_doctrine
-			activate_technology = raider_group_doctrine 
-			activate_technology = steamers
-			activate_technology = iron_steamers
+			random_owned = { 
+				limit = { owner = { ai = yes } }
+				owner = {
+					activate_technology = battleship_column_doctrine
+					activate_technology = raider_group_doctrine 
+					activate_technology = steamers
+					activate_technology = iron_steamers
+					treasury = -50000
+				}
+			}
+			random_owned = { 
+				limit = { owner = { ai = no } }
+				owner = {
+					activate_technology = battleship_column_doctrine
+					activate_technology = steamers
+					treasury = -75000
+				}
+			}
 			set_country_flag = russian_naval_reform
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	build_the_warsaw_vienna_railway = { #Warsaw-Vienna Railway
@@ -97,15 +110,9 @@ political_decisions = {
 			689 = { infrastructure = 1 }
 			631 = { infrastructure = 1 }
 			619 = { infrastructure = 1 }
-			random_owned = {
-				limit = { owner = { ai = yes } }
-				owner = { activate_technology = early_railroad }
-			}
+			random_owned = { limit = { owner = { ai = yes } } owner = { activate_technology = early_railroad } }
 		}
-		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	build_the_st_petersburg_moscow_railway = { #Saint Petersburg–Moscow Railway
@@ -137,12 +144,10 @@ political_decisions = {
 			1008 = { infrastructure = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
-	abolish_volga_region = { 
+	abolish_volga_region = {
 		picture = russify_baltic_states
 		potential = {
 			tag = RUS
@@ -162,15 +167,11 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = abolish_volga_region
-			1037 = {
-				remove_core = VLG
-			}
-			war_exhaustion = -15
+			VLG = { all_core = { remove_core = VLG } }
+			war_exhaustion = -5
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	establish_panslavism_rus = {
@@ -517,7 +518,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				badboy = 0.8
+				badboy = 0.5
 			}
 		}
 	}

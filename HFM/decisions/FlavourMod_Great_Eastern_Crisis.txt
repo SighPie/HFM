@@ -54,13 +54,25 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = { 
+				OR = {
+					AND = {
+						has_global_flag = treaty_of_paris_russia
+						badboy = 0.8
+					}
 					AND = { 
 						has_global_flag = treaty_of_paris_russia
-						NOT = { badboy = 0.8 }
+						exists = NGF
+						TUR = { alliance_with = NGF }
 					}
-					TUR = {
-						NOT = { alliance_with = NGF }
+					AND = { 
+						has_global_flag = treaty_of_paris_russia
+						exists = GER
+						TUR = { alliance_with = GER }
+					}
+					AND = {
+						has_global_flag = treaty_of_paris_russia
+						exists = GCF
+						TUR = { alliance_with = GCF }
 					}
 				}
 			}
@@ -173,8 +185,19 @@ political_decisions = {
 			}
 			modifier = {
 				factor = 0
-				TUR = {
-					alliance_with = NGF
+				OR = {
+					AND = {
+						exists = NGF
+						TUR = { alliance_with = NGF }
+					}
+					AND = { 
+						exists = GER
+						TUR = { alliance_with = GER }
+					}
+					AND = { 
+						exists = GCF
+						TUR = { alliance_with = GCF }
+					}
 				}
 			}
 			modifier = {
@@ -256,7 +279,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			war = no
+			NOT = { any_greater_power = { war_with = THIS } }
 			NOT = { truce_with = RUS }
 		}
 		

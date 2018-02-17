@@ -1,5 +1,7 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+VTU_colonial_company;New Hebrides;;;;;;;;;;;;x
+VTU_dominion;New Hebrides;;;;;;;;;;;;x
 SER_colonial_company;The Principality of Serbia;;;;;;;;;;;;x
 SER_dominion;The Principality of Serbia;;;;;;;;;;;;x
 IOT_absolute_monarchy;British Indian Ocean Territory;;;;;;;;;;;;x
@@ -40,6 +42,7 @@ MSK_absolute_monarchy;The Mosquito Kingdom;;;;;;;;;x;;;;;;;;
 MSK_prussian_constitutionalism;The Mosquito Kingdom;;;;;;;;;;;;;x
 MSK_hms_government;The Mosquito Kingdom;;;;;;;;;;;;;x,
 MSK_colonial_company;Reserva Mosquitia;;;;;;;;;;;;;x,
+MSK_dominion;Reserva Mosquitia;;;;;;;;;;;;;x,
 BLZ_colonial_company;British Honduras;;;;;;;;;;;;;x,
 BLZ_dominion;British Honduras;;;;;;;;;;;;;x,
 MGL_colonial_company;Wai Menggu;;;;;;;;;;;;;x,
@@ -79,7 +82,10 @@ EGY_hms_government;The Egyptian Kingdom;;;;;;;;;;;;;x,
 EGY_colonial_company;Khedivate of Egypt;;;;;;;;;;;;;;x
 KWT;Sheikhdom of Kuwait;;;;;;;;;;;x
 KWT_ADJ;Kuwaiti;;;;;;;;;;;x
-SYR_colonial_company;Mandat pour la Syrie;;;;;;;;;;;;;;x
+SYR_dominion;Grand Liban;;;;;;;;;;;;;;x
+SYR_colonial_company;Grand Liban;;;;;;;;;;;;;;x
+SYR_dominion;Syrie;;;;;;;;;;;;;;x
+SYR_colonial_company;Syrie;;;;;;;;;;;;;;x
 HDJ_colonial_company;Hejaz Vilayet;;;;;;;;;;;;;;x
 HDJ_absolute_monarchy;Hashemite Hejaz;;;;;;;;;;;;;;x
 HDJ_prussian_constitutionalism;Hashemiteb Hejaz;;;;;;;;;;;;;x,
@@ -98,6 +104,7 @@ ETH_absolute_monarchy;Abyssinia;;;;;;;;;;;;;x,
 ETH_colonial_company;Africa Orientale;;;;;;;;;;;;;x,
 BUR_absolute_monarchy;Konbaung Dynasty;;;;;;;;;;;;;x,
 IVC_colonial_company;Cote d'Ivoire;;;;;;;;;;;;;x,
+IVC_dominion;Cote d'Ivoire;;;;;;;;;;;;;x,
 CAR_colonial_company;Afrique Equatoriale;;;;;;;;;;;;;x,
 VLK_colonial_company;Zuidafrika;;;;;;;;;;;;;x,
 VLK_dominion;Zuidafrika;;;;;;;;;;;;;x,
@@ -112,8 +119,12 @@ MAD_absolute_monarchy;The Merina Kingdom;;;;;;;;;;;;;x,
 MAD_colonial_company;Protectorat de Madagascar;;;;;;;;;;;;;x,
 KNY_colonial_company;East Africa;;;;;;;;;;;;;x,
 NGR_colonial_company;West Africa;;;;;;;;;;;;;x,
+IRE_fascist_dictatorship;Eire;;;;;;;;;;;;;x,
 IRE_dominion;The Irish Dominion;;;;;;;;;;;;;x,
 IRE_hms_government;The Irish Free State;;;;;;;;;;;;;x,
+UBD_absolute_monarchy;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
+UBD_prussian_constitutionalism;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
+UBD_hms_government;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_democracy;The Baltic Union;;;;;;;;;;;;;x,
 UBD_colonial_company;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
 UBD_dominon;Baltiyskiy Guberniya;;;;;;;;;;;;;x,

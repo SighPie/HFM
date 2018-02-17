@@ -224,6 +224,8 @@ political_decisions = {
 			tech_school = prussian_tech_school
 			prestige = 5
 		}
+		
+		ai_will_do = { factor = 1 }
 	}	
 	
 	die_wacht_am_rhein = {
@@ -238,8 +240,8 @@ political_decisions = {
 			NOT = { has_global_flag = watching_the_rhine }
 			OR = {
 				has_country_flag = french_claimed_the_rhine
-				AND = { FRA = { exists = yes NOT = { relation = { who = FRA value = 0 } } } }
-				AND = { BOR = { exists = yes NOT = { relation = { who = BOR value = 0 } } } }
+				FRA = { exists = yes NOT = { relation = { who = FRA value = 0 } } }
+				BOR = { exists = yes NOT = { relation = { who = BOR value = 0 } } }
 				575 = { owner = { NOT = { is_culture_group = germanic } } }
 				576 = { owner = { NOT = { is_culture_group = germanic } } }
 				577 = { owner = { NOT = { is_culture_group = germanic } } }
@@ -269,6 +271,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	niederwald_denkmal = {

@@ -213,10 +213,12 @@ political_decisions = {
 			is_disarmed = no
 			OR = {
 				AFG = { vassal_of = RUS }
-				AFG = {
-					any_core = { 
-						owned_by = RUS
-					}
+				AFG = { any_core = { owned_by = RUS } }
+			}
+			1251 = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
 				}
 			}
 			NOT = { has_global_flag = wakhan_treaty }
@@ -249,6 +251,12 @@ political_decisions = {
 					any_core = { 
 						owned_by = RUS
 					}
+				}
+			}
+			1251 = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
 				}
 			}
 			NOT = { has_global_flag = persia_treaty }

@@ -182,19 +182,39 @@ political_decisions = {
 						tag = MAD
 						tag = SYR
 						tag = IVC
+						tag = LBN
+						tag = GAB
+						tag = VTU
 						AND = {
 							tag = ALD
-							year = 1870
+							has_global_flag = berlin_conference
 						}
 					}
-					OR = { 
+					OR = {
 						vassal_of = FRA
-						AND = { vassal_of = BOR BOR = { NOT = { government = absolute_monarchy } } }
+						AND = {
+							vassal_of = BOR 
+							BOR = { NOT = { government = absolute_monarchy } }
+						}
 					}
+				}
+				AND = {
+					OR = {
+						tag = NZF
+						tag = ULA
+						tag = ACA
+						tag = FCA
+						tag = QUE
+						tag = AST
+					}
+					vassal_of = BOR
 				}
 				###Portuguese Puppets###
 				AND = { 
-					tag = MOZ
+					OR = {
+						tag = MOZ
+						tag = ANG
+					}
 					primary_culture = portuguese
 					OR = { 
 						AND = { 
@@ -219,30 +239,20 @@ political_decisions = {
 						}
 					}
 				}
-				AND = { 
-					tag = ANG
-					primary_culture = portuguese
-					OR = { 
-						vassal_of = POR
-						vassal_of = IBR
-					}
-				}
 				###Russian Puppets###
 				AND = {
-					tag = LSK
-					vassal_of = RUS
-				}
-				AND = { 
-					tag = UBD
+					OR = { 
+						tag = LSK
+						tag = UBD
+					}
 					vassal_of = RUS
 				}
 				###Dutch Puppets###
 				AND = {
-					tag = INO
-					vassal_of = NET
-				}
-				AND = {
-					tag = VLK
+					OR = { 
+						tag = INO
+						tag = VLK
+					}
 					vassal_of = NET
 				}
 				###Japanese Puppets###
@@ -301,7 +311,13 @@ political_decisions = {
 					}
 					vassal_of = TUR
 				}
-				
+				AND = {
+					tag = EGY
+					ai = yes
+					in_sphere = TUR
+					civilized = no
+					NOT = { owns = 913 }
+				}
 				###Chinese Puppets###
 				AND = {
 					OR = {

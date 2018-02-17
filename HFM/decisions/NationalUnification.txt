@@ -190,7 +190,7 @@ political_decisions = {
 		effect = {
 			prestige = 10
 			FRA_412 = { add_core = GER }
-			random_owned = { limit = { owner = { ai = yes } owner = { badboy = -5 } } }
+			random_owned = { limit = { owner = { ai = yes } } owner = { badboy = -5 } }
 			random_owned = { limit = { owner = { accepted_culture = french } } owner = { remove_accepted_culture = french } }
 			random_owned = { limit = { owner = { accepted_culture = polish } } owner = { remove_accepted_culture = polish } }
 			random_owned = { limit = { owner = { accepted_culture = danish } } owner = { remove_accepted_culture = danish } }

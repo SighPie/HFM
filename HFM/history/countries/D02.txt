@@ -9,7 +9,7 @@ civilized = yes
 #is_releasable_vassal = no
 
 # Political reforms - inherit
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting

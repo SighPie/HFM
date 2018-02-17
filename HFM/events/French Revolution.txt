@@ -21,6 +21,7 @@ country_event = {
 		primary_culture = french
 		is_greater_power = yes
 		capital = 425
+		NOT = { government = democracy }
 		OR = {
 			has_country_modifier = springtime_of_nations
 			has_country_flag = liberal_revolution_in_progress
@@ -40,7 +41,10 @@ country_event = {
 				controlled_by = REB
 			}
 			revolt_percentage = 0.50
-			year = 1848
+			AND = { 
+				year = 1848
+				ai = yes
+			}
 		}
 	}
 	

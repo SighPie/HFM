@@ -239,7 +239,9 @@ FRO_fascist;Loysingarflokkurin;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,,,,,,,,
 RUS_proletarian_dictatorship;The Soviet Union;;;;;;;;;;;;;;;;;;;x
 NCT;Neuchatel;;;;;;;;;;;;;;;;;;;;;;x;;;;
 NCT_ADJ;Neuchateli;;;;;;;;;;;;;;;;;;;;;;x;;;;
-UBD;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
+UBD;The United Baltic Provinces;;;;;;;;;;;;;;;;;;;;;;x;;;;
+UBD_democracy;The Baltic Union;;;;;;;;;;;;;;;;;;;;;;x;;;;
+UBD_proletarian_dictatorship;The Baltic Worker's Union;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_fascist;Baltic Fascist Union;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_communist;Baltic Communist Party;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_socialist;Union of Baltic Workers and Socialists;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -1291,7 +1293,7 @@ CSA;The Confederate States of America;;;;;;;;;;;;;;
 CSA_bourgeois_dictatorship;The Confederate States of America;;;;;;;;;;;;;;
 CSA_fascist_dictatorship;The Confederacy;;;;;;;;;;;;;;
 CSA_proletarian_dictatorship;The People's Confederacy;;;;;;;;;;;;x
-ITA_democracy;Italian Republic;;;;;;;;;;;;;;x
+ITA_democracy;The Italian Republic;;;;;;;;;;;;;;x
 ITA_bourgeois_dictatorship_ADJ;Italian;;;;;;;;;;;;;x
 ITA_proletarian_dictatorship;The People's Republic of Italy;;;;;;;;;;;;;x
 ITA_proletarian_dictatorship_ADJ;Italian;;;;;;;;;;;;;x
@@ -2223,9 +2225,9 @@ SON_socialist;Partido Socialist;Partido socialiste;Partido Socialist;;;;;;;;;;;;
 SON_communist;Partido Communist;Partido communiste;Partido Communist;;;;;;;;;;;;x;;;;;;;;;;;;;;
 SON_fascist;Partido Fascist;Partido fasciste;Partido Fascist;;;;;;;;;;;;x;;;;;;;;;;;;;;
 SPC;Spain;;;;;;;;;;;;;x
-SPC_absolute_monarchy;Carlist Spain;;;;;;;;;;;;;x
-SPC_prussian_constitutionalism;Carlist Spain;;;;;;;;;;;;;x
-SPC_hms_government;Carlist Spain;;;;;;;;;;;;;x
+SPC_absolute_monarchy;The Spanish Empire;;;;;;;;;;;;;x
+SPC_prussian_constitutionalism;The Spanish Empire;;;;;;;;;;;;;x
+SPC_hms_government;The Spanish Empire;;;;;;;;;;;;;x
 SPC_ADJ;Spanish;;;;;;;;;;;;;x
 SPU;South Peru;;;;;;;;;;;;;x
 SPU_ADJ;South Peruvian;;;;;;;;;;;;;x

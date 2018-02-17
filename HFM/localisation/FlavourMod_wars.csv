@@ -1,6 +1,18 @@
 ;;;;;;;;;;;x
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
+NORMAL_WAR_LIBERATE_NAME_ITA_TUR;The Libyan War;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_LIBERATE_NAME_ITA_TUR;The Libyan War;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_WAR_CONCESSION_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONCESSION_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_BOR_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_BOR_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -29,7 +41,10 @@ NORMAL_WAR_UNIFICATION_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
 AGRESSION_WAR_UNIFICATION_NAME_NGF_DEN;The 2nd Schleswig War;;;;;;;;;;;x,,,
 AGRESSION_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
+AGRESSION_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
+NORMAL_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_TAKE_CORE_NAME_WOL_FRA;French Conquest of Sengal;;;;;;;;;;;x,,,
+NORMAL_WAR_TAKE_CORE_NAME_WOL_BOR;French Conquest of Sengal;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_PROTECTORATE_NAME_ENG_BUR;The 3rd Burma War;;;;;;;;;;;;;;;x;;
@@ -40,6 +55,8 @@ AGRESSION_WAR_PUPPET_NAME_QNG_KOR;The Qing-Korean War;;;;;;;;;;;;;;;x;;
 NORMAL_WAR_PUPPET_NAME_QNG_KOR;The Qing-Korean War;;;;;;;;;;;;;;;x;;
 AGRESSION_WAR_ADD_SPHERE_NAME_FRA_PAP;The Roman Revolution;;;;;;;;;;;;;;;x;;
 NORMAL_WAR_ADD_SPHERE_NAME_FRA_PAP;The Roman Revolution;;;;;;;;;;;;;;;x;;
+AGRESSION_WAR_ADD_SPHERE_NAME_BOR_PAP;The Roman Revolution;;;;;;;;;;;;;;;x;;
+NORMAL_WAR_ADD_SPHERE_NAME_BOR_PAP;The Roman Revolution;;;;;;;;;;;;;;;x;;
 NORMAL_UNIFICATION_HUMILIATE_NAME_NGF_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;;x;;
 AGRESSION_UNIFICATION_HUMILIATE_NAME_NGF_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;x;;
 NORMAL_UNIFICATION_HUMILIATE_NAME_PRU_AUS;The Austro-Prussian Brother's War;;;;;;;;;;;;;;;x;;
@@ -84,11 +101,21 @@ NORMAL_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Five Days of Milan;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Five Days of Milan;;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_FRA_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_FRA_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
+AGRESSION_WAR_HUMILIATE_NAME_BOR_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_BOR_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_PRU_FRA;The Rhine Crisis;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_PRU_FRA;The Rhine Crisis;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_AUS_FRA;The Rhine Crisis;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_AUS_FRA;The Rhine Crisis;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_PRU_BOR;The Rhine Crisis;;;;;;;;;;;x,,,
+AGRESSION_WAR_HUMILIATE_NAME_PRU_BOR;The Rhine Crisis;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_AUS_BOR;The Rhine Crisis;;;;;;;;;;;x,,,
+AGRESSION_WAR_HUMILIATE_NAME_AUS_BOR;The Rhine Crisis;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_PRU_RUS;The Crimean War;;;;;;;;;;;x,,,
+NORMAL_WAR_CONCESSION_NAME_BOR_DAI;The Cochinchina Campaign;;;;;;;;;;;x,,,
+AGRESSION_WAR_CONCESSION_NAME_BOR_DAI;The Cochinchina Campaign;;;;;;;;;;;x,,,
+NORMAL_WAR_PROTECTORATE_NAME_BOR_DAI;The Tonkin Campaign;;;;;;;;;;;x,,,
+AGRESSION_WAR_PROTECTORATE_NAME_BOR_DAI;The Tonkin Campaign;;;;;;;;;;;x,,,
 NORMAL_WAR_CONCESSION_NAME_FRA_DAI;The Cochinchina Campaign;;;;;;;;;;;x,,,
 AGRESSION_WAR_CONCESSION_NAME_FRA_DAI;The Cochinchina Campaign;;;;;;;;;;;x,,,
 NORMAL_WAR_PROTECTORATE_NAME_FRA_DAI;The Tonkin Campaign;;;;;;;;;;;x,,,
@@ -97,6 +124,10 @@ NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_PRU;The $ORDER$Franco-Prussian War;$ORDER$ 
 NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_NGF;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
 AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_PRU;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
 AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_NGF;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_PRU;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_NGF;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_PRU;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_NGF;The $ORDER$Franco-Prussian War;$ORDER$ guerre franco-prussienne;$ORDER$Franco-Preussischer Krieg;;;;;;;;;;;x,,,
 NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_RUS_HUN;$ORDER$Russian Intervention in Hungary;;;;;;;;;;;;;;;;;;;;;;;;x
 AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_RUS_HUN;$ORDER$Russian Intervention in Hungary;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_PUPPET_NAME_JAP_MCK;The Mukden Incident;;;;;;;;;;;;x,,,

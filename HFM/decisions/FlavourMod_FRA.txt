@@ -7,9 +7,7 @@ political_decisions = {
 			capital = 425
 			year = 1865
 			owns = 1700 #Algiers
-			NOT = {
-				has_country_flag = bulit_notre_dame_afrique
-			}
+			NOT = { has_country_flag = bulit_notre_dame_afrique }
 		}
 		allow = {
 			impressionism = 1
@@ -242,7 +240,10 @@ political_decisions = {
 				country_event = 99979
 			}
 		}
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			factor = 1 
+			modifier = { factor = 0 badboy = 0.85 }
+		}
 	}
 
 	claim_wallonia = {
@@ -308,7 +309,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				badboy = 0.5
+				badboy = 0.6
 			}
 		}
 	}	
@@ -432,7 +433,6 @@ political_decisions = {
 				ruling_party_ideology = fascist			
 			}
 			colonial_policy = settlement
-			NOT = { badboy = 0.8 }
 		}
 
 		effect = {
@@ -487,7 +487,10 @@ political_decisions = {
 			}		
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			factor = 1 
+			modifier = { factor = 0 badboy = 0.8 }
+		}
 	}
 
 	walloon_autonomy = {
@@ -592,10 +595,7 @@ political_decisions = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 5.5
-			}
+			modifier = { factor = 0 badboy = 0.5 }
 		}
 	}
 	
@@ -760,7 +760,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			badboy = 2
+			badboy = 1
 			419 = { secede_province = THIS }
 			419 = { add_core = THIS }
 		}
@@ -804,7 +804,10 @@ political_decisions = {
 			inherit = RHI
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			factor = 1
+			modifier = { factor = 0 badboy = 0.5 }
+		}
 	}
 	
 	reclaim_alsace = {
@@ -837,14 +840,20 @@ political_decisions = {
 					exists = yes
 					OR = {
 						is_disarmed = yes
-						has_recently_lost_war = yes
+						AND = {
+							has_recently_lost_war = yes
+							war_exhaustion = 10
+						}
 					}
 				}
 				GCF = {
 					exists = yes
 					OR = {
 						is_disarmed = yes
-						has_recently_lost_war = yes
+						AND = {
+							has_recently_lost_war = yes
+							war_exhaustion = 10
+						}
 					}
 				}
 				ai = no
@@ -900,9 +909,11 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = { 
+			factor = 1 
+			modifier = { factor = 0 badboy = 0.2 }
+		}
 	}
-	
 		
 	france_rename_rhine = {
 		picture = gtfo
@@ -1166,6 +1177,8 @@ political_decisions = {
 		}
 		allow = { ai = yes }
 		effect = { BOR = { all_core = { add_core = FRA remove_core = BOR } change_tag = FRA } }
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	remove_any_french_cores = {
@@ -1210,5 +1223,7 @@ political_decisions = {
 				FRA = { all_core = { remove_core = FRA add_core = BOR } }
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 }

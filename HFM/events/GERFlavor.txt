@@ -722,7 +722,7 @@ country_event = {
 		NOT = { has_country_flag = called_german_allies }
 	}
 	
-	mean_time_to_happen = { days = 7 }
+	mean_time_to_happen = { days = 1 }
 
 	option = {
 		name = "EVT33015OPTA"

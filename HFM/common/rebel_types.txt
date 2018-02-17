@@ -3913,7 +3913,7 @@ unciv_reactionary_rebels = {
 	# <this is the government in the country> = <this is what the rebels want>
 	government = {
 		proletarian_dictatorship = absolute_monarchy
-		presidential_dictatorship = absolute_monarchy
+		presidential_dictatorship = presidential_dictatorship
 		bourgeois_dictatorship = absolute_monarchy
 		fascist_dictatorship = absolute_monarchy
 		absolute_monarchy = absolute_monarchy
@@ -3986,6 +3986,7 @@ unciv_reactionary_rebels = {
 				OR = { 
 					tag = EGY 
 					tag = KOR
+					tag = LAN
 				} 
 				ai = yes
 			}

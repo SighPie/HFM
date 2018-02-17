@@ -5,21 +5,34 @@
 - Fixed a few localisation issues
 - The Great Fire of Bucharest will no longer fire more than once
 
+#Changes to North America
+- Modernized the old French Colonial Reconquest events
+## War for Quebec - Now can end in 3 possible ways
+- 1. Britain sells Quebec to France, if accepted, France will only gain Quebec, all other potential French colonies cores are removed.
+-- FRANCE WINS THE WAR
+-- 2. 'Treaty of Paris' is selected, Acadia and Quebec are seceded, all French colonial cores in the USA are removed.
+-- 3. 'Treaty of Montreal' is selected, British North America is seceded to France, French Canada gains all cores on whatever cores British Canada had. War for French Lousiana is now possible.
+## War for Lousiana - Will now always cause you to go over the Infamy limit
+-- The Treaty of New York can now only be enacted when America Loses the War
+
+
 #Changes to South America
 - Added the Mosquito Kingdom, starts as a vassal of the UK
 - Added a decision 'The Treaty of Managua', turns the Mosquito Kingdom to a vassal of whoever controls Nicaragua
 - Modified the Nicaragua Crisis event chain
 
-#Changes to China
+#Changes to China/South East Asia
 - The Dungan Revolt in Qinghai will now fire closer to the historical date
 - Removed the God Worshipper religion, has been remerged into Protestant
+- Lanfang now starts with some reforms
 
-#Changes to the Balkans/Ottomans/Central Asia
+#Changes to the Balkans/Middle East
 - Changed the flags of the Ionian Islands, it will no longer use the British flag if it's independent, now starts as an Autonomous Dependency
 - 'The Reichstadt Agreement' - Is now possible even if Russia won the Crimean War
 - Made some improvements to the Great Eastern Crisis event chain
 - Rewritten & Overhauled the Treaty of Severes event to be more neat and partition any possible part of Ottoman Middle East
 - Added a decision for the U.K. to demand Russia to return cores to Persia
+- Added a flag for French Lebanon
 
 #Changes to Europe
 - The Heligoland Treaty now can be enacted as long as the UK is not at war with Germany
@@ -28,7 +41,9 @@
 - Crimean War - Now requires the Ottomans to not be a greater power
 - Norway now starts as a Dominon of Sweden, uses the "herring salad" flag.
 - Added an alternate French Tag, for Orleanist & Legitimist France
-- The July Monarchy can now be turned into an Absolute Monarchy
+- The July Monarchy can now be turned into an Absolute Monarchy, French revolution event can now be avoided by a player
+- The UK will now more consistently call in the EIC into war
+- The French Colonial Reconquest Chain now gives more infamy
 
 #Changes to Indochina
 - Most of the Indochina events are now not specific to to the French, and can be enacted by any European GP except the Ottoman Empire that controls Saigon or Hanoi
@@ -37,6 +52,7 @@
 - Added a new government type 'Dominon', a counterpart to the Automous Dependency government type with voting enabled.
 - Changed the name of 'Independence Rebels'
 - Renamed 'Russland-German' to 'Eastern German'
+- Jungle Terrain now has a -25% immigrant attraction modifier
 
 #Changes to Oceania
 - Added a decision for the U.K. to transfer territory in New Guinea to Australia, reduces 1 or 2 infamy for each region transferred.
@@ -48,3 +64,5 @@
 - Added Seychelles, Mauritius, British Indian Ocean Territory to prevent pops from assimilating
 - Added a decision for any European GP that controls Egypt to declare war on Sudan if it broke away from Egypt
 - Fixed duration of Kimberly Gold Rush pop growth effect
+- Added flag for French Gabon
+- Added war name localisation for the Italo-Turkish War

@@ -2860,9 +2860,9 @@ war_graves = {
 }
 
 french_colonial_integration = {
+	population_growth = 0.001
 	assimilation_rate = 0.1
 	immigrant_attract = 3
-	population_growth = 0.005
 	icon = 19
 }
 

@@ -127,6 +127,13 @@ substate = {
 
 substate = {
 	first = FRA
+	second = ACA
+	start_date = 1800.1.1
+	end_date = 1936.1.1
+}
+
+substate = {
+	first = FRA
 	second = NZF
 	start_date = 1800.1.1
 	end_date = 1936.1.1

@@ -286,6 +286,8 @@ political_decisions = {
 		effect = {
 			set_country_flag = picking_up_a_tech_school
 		}
+		
+		ai_will_do = { factor = 0 }
 	}
 	
 	close_pick_up_a_tech_school = {
@@ -304,5 +306,7 @@ political_decisions = {
 		effect = {
 			clr_country_flag = picking_up_a_tech_school
 		}
+		
+		ai_will_do = { factor = 0 }
 	}
 }

@@ -5,7 +5,13 @@ political_decisions = {
 			primary_culture = french
 			is_greater_power = yes
 			capital = 425
-			NOT = { exists = CAN }
+			NOT = { 
+				exists = CAN 
+				exists = QUE
+				exists = FCA
+				exists = ACA
+				QUE = { any_core = { controlled_by = THIS } }
+			}
 			has_country_flag = french_america
 			NOT = { has_country_flag = demanded_quebec }
 		}
@@ -24,8 +30,8 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
-	
 
+	#Treaty of Paris - Gets France Quebec and British Acadia, does not get the rest of British North America
 	treaty_of_paris = {
 		picture = treaty_signing
 		potential = {
@@ -34,44 +40,67 @@ political_decisions = {
 			capital = 425
 			has_country_flag = french_america
 			has_country_flag = war_for_quebec
-			war_with = ENG
 			NOT = { has_country_flag = quebec_regained }
 		}
 
 		allow = {
 			money = 100000
-			QUE = { any_core = { OR = { controlled_by = REB controlled_by = THIS } } }
-			ENG = { war_exhaustion = 10 }
-			NOT = { national_provinces_occupied = 0.05 }
-			NOT = { war_exhaustion = 35 }
+			OR = {
+				AND = {
+					QUE = { any_core = { OR = { controlled_by = REB controlled_by = THIS } } }
+					ENG = { war_exhaustion = 10 }
+					NOT = { national_provinces_occupied = 0.05 }
+					NOT = { war_exhaustion = 35 }
+				}	
+				AND = { 
+					truce_with = ENG
+					is_greater_power = yes
+					ENG = {
+						NOT = { war_with = THIS }
+						is_disarmed = yes
+					}
+				}
+			}
 		}
 
 		effect = {
-			FRA = { set_country_flag = quebec_regained }
-			BOR = { set_country_flag = quebec_regained }
+			FRA = { 
+				set_country_flag = quebec_regained 
+				set_country_flag = quebec_and_acadia_only
+			}
+			BOR = { 
+				set_country_flag = quebec_regained 
+				set_country_flag = quebec_and_acadia_only
+			}
 			prestige = 10
-			badboy = 3
+			badboy = 5
 			treasury = -100000
-			QUE = { all_core = { add_core = THIS } }
-			random_owned = { limit = { owner = { war_with = ENG } }
+			random_owned = { 
+				limit = { owner = { war_with = ENG } }
 				owner = { end_war = ENG }
 				any_country = { limit = { war_with = THIS alliance_with = ENG } end_war = THIS }
 			}
-			77 = { add_core = QUE }
-			69 = { add_core = QUE remove_core = MRU }
 			CAN_60 = { add_core = QUE }
-			ENG = { any_owned = { limit = { is_core = QUE } secede_province = THIS } }
-			RPL = { any_owned = { limit = { is_core = QUE } secede_province = THIS } }
-			release = QUE
-			UTI = { inherit = QUE }
-			THIS = { inherit = UTI }
-			MRU = { all_core = { remove_core = ACA } }
-			QUE = { all_core = { remove_core = CAN remove_core = RPL } }
+			2625 = { add_core = QUE }
+			76 = { add_core = QUE }
+			77 = { add_core = QUE }
+			CAN_60 = { add_core = QUE }
+			ENG = { any_owned = { limit = { OR = { is_core = QUE is_core = ACA } } secede_province = THIS } }
+			RPL = { any_owned = { limit = { OR = { is_core = QUE is_core = ACA } } secede_province = THIS } }
+			QUE = { 
+				all_core = {
+					remove_core = THIS 
+					remove_core = CAN 
+					remove_core = RPL
+					remove_core = NEW
+				} 
+			}
 		}
 
 		ai_will_do = { factor = 1 }
 	}
 
+	#Full Treaty of Paris - Gives the whole of British North America
 	treaty_of_paris2 = {
 		picture = establish_panfrenchism
 		potential = {
@@ -97,13 +126,13 @@ political_decisions = {
 		effect = {
 			FRA = { set_country_flag = french_total_victory set_country_flag = quebec_regained }
 			BOR = { set_country_flag = french_total_victory set_country_flag = quebec_regained}
-			badboy = 5
+			badboy = 10
 			QUE = { all_core = { add_core = THIS } }
 			treasury = -50000
-			prestige = 10
+			prestige = 15
 			2625 = { add_core = QUE	}
 			76 = { add_core = QUE }
-			ENG = { 
+			ENG = {
 				any_owned = { 
 					limit = { OR = { is_core = CAN is_core = MRU is_core = NEW is_core = QUE is_core = COL is_core = RPL } }
 					remove_core = ENG
@@ -111,258 +140,13 @@ political_decisions = {
 				}
 			}
 			RPL = { annex_to = THIS }
-			release = QUE
-			release = MRU
-			release = NEW
-			release = RPL
-			release = COL
-			release = CAN
-			UTI = {
-				inherit = QUE
-				inherit = MRU
-				inherit = NEW
-				inherit = RPL
-				inherit = COL
-				inherit = CAN
-			}
-			THIS = { inherit = UTI }
 			any_owned = { limit = { OR = { province_id = 74 province_id = 75 } } secede_province = ENG }
 		}
 
 		ai_will_do = { factor = 1 }
 	}
 	
-	french_louisiana = {
-		picture = new_france_louisiana
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			has_country_flag = french_total_victory
-			has_country_flag = french_america
-			has_country_flag = quebec_regained
-			NOT = { has_country_flag = war_for_louisiana }
-		}
-		allow = {
-			war = no
-			NOT = { truce_with = USA }
-			NOT = { war_policy = pacifism }
-		}
-		effect = {
-			badboy = 15
-			USA = {
-				add_casus_belli = {
-					target = THIS
-					type = cut_down_to_size
-					months = 60
-				}
-			}
-			FRA = { set_country_flag = war_for_louisiana }
-			BOR = { set_country_flag = war_for_louisiana }
-			relation = { who = USA value = -200 }
-			diplomatic_influence = { who = USA value = -200 }
-			leave_alliance = USA
-			random_country = {
-				limit = {
-					tag = USA
-					vassal_of = THIS
-				}
-				THIS = { release_vassal = USA }
-			}
-			random_country = {
-				limit = {
-					is_our_vassal = USA
-					NOT = { tag = THIS }
-				}
-				relation = { who = THIS value = -200 }
-				leave_alliance = THIS
-			}
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { tag = THIS }
-				}
-				diplomatic_influence = { who = USA value = -400 }
-			}
-			any_pop = {
-				dominant_issue = {
-					factor = 0.05
-					value = jingoism
-				}
-				consciousness = 2
-			}
-			casus_belli = {
-				target = USA
-				type = cut_down_to_size
-				months = 12
-			}
-			war = {
-				target = USA
-				attacker_goal = { casus_belli = cut_down_to_size }
-				defender_goal = { casus_belli = cut_down_to_size }
-			}
-			any_pop = {
-				limit = { has_pop_culture = mexican }
-				militancy = 6
-			}
-			any_country = {
-				limit = {
-					is_greater_power = yes
-					NOT = { truce_with = THIS }
-				}
-				casus_belli = {
-					target = THIS
-					type = cut_down_to_size
-					months = 60
-				}
-			}
-		}
-	}
-	
-	treaty_of_new_york = {
-		picture = establish_panfrenchism
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			has_country_flag = war_for_louisiana
-			NOT = { has_global_flag = treaty_of_new_york }
-		}
-
-		allow = {
-			money = 150000
-			OR = {
-				AND = {
-					2146 = { controlled_by = THIS }
-					223 = { controlled_by = THIS }
-					232 = { controlled_by = THIS }
-					205 = { controlled_by = THIS }
-					243 = { controlled_by = THIS }
-					NOT = {
-						any_owned_province = { controlled_by = USA }
-						any_owned_province = { controller = { alliance_with = USA } }
-					}
-				}
-				USA = {
-					is_disarmed = yes
-					truce_with = THIS
-				}
-			}
-		}
-
-		effect = {
-			set_global_flag = treaty_of_new_york
-			badboy = 5
-			random_owned = {
-				limit = { owner = { war_with = USA } }
-				owner = { end_war = USA }
-				any_country = {
-					limit = {
-						war_with = THIS
-						alliance_with = USA
-					}
-					end_war = THIS
-				}
-			}
-			any_owned = { limit = { region = CAN_46 } add_core = USA }
-			51 = { remove_core = USA }
-			50 = { remove_core = USA }
-			USA_139 = { add_core = ULA } #Louisiana
-			USA_144 = { add_core = ULA } #Arkansas
-			USA_148 = { add_core = ULA } #Missouri
-			USA_118 = { add_core = ULA } #North Dakota
-			USA_121 = { add_core = ULA } #South Dakota
-			USA_124 = { add_core = ULA } #Nebraska
-			USA_151 = { add_core = ULA } #Idaho
-			USA_158 = { add_core = ULA } #Iowa
-			USA_116 = { add_core = ULA } #Montana
-			127 = { add_core = ULA } #Kansas
-			126 = { add_core = ULA } 
-			130 = { add_core = ULA } #Oklahoma
-			131 = { add_core = ULA }
-			106 = { add_core = ULA }
-			111 = { add_core = ULA } #Wyoming
-			112 = { add_core = ULA }
-			80 = { add_core = ULA } #Washington
-			93 = { add_core = ULA } #Idaho
-			92 = { add_core = ULA }
-			55 = { add_core = USA }
-			91 = { add_core = ULA }
-			80 = { add_core = ULA }
-			81 = { add_core = ULA }
-			82 = { add_core = ULA }
-			83 = { add_core = ULA }
-			78 = { add_core = ULA }
-			79 = { add_core = ULA }
-			80 = { secede_province = THIS }
-			81 = { secede_province = THIS }
-			82 = { secede_province = THIS }
-			83 = { secede_province = THIS }
-			91 = { secede_province = THIS }
-			249 = { secede_province = THIS }
-			USA = {
-				any_owned = {
-					limit = {
-						OR = {
-							is_core = ULA
-							is_core = ACA
-						}
-					}
-					secede_province = ULA
-				}
-			}
-			release = ACA
-			release = ULA
-			UTI = { inherit = ULA }
-			UTI = { inherit = ACA }
-			THIS = { inherit = UTI }
-			CAN = { all_core = { add_core = USA } }
-			USA = { all_core = { remove_core = CAN } }
-			THIS = {
-				any_owned = {
-					limit = { is_core = USA NOT = { is_core = ACA is_core = ULA } }
-					secede_province = USA
-				}
-			}
-			treasury = -150000
-			USA = { treasury = 150000 }
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
-	become_the_fsa_french_lousiana = {
-		potential = {
-			tag = USA
-			ai = yes
-			NOT = { owns = 139 }
-			has_global_flag = treaty_of_new_york
-			exists = CSA
-			NOT = { has_country_modifier = no_more_war }
-			has_global_flag = american_civil_war_has_happened
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release_vassal = CAL
-			release_vassal = DES
-			release_vassal = TEX
-			any_owned = {
-				limit = {
-					owned_by = USA
-					is_core = USA
-				}
-				add_core = FSA
-			}
-			change_tag = FSA
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+	#Organize Acadia
 	organize_acadia = {
 		picture = "organize_acadia"
 		potential = {
@@ -370,19 +154,24 @@ political_decisions = {
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = quebec_regained
-			has_global_flag = treaty_of_new_york
-			NOT = { has_country_flag = acadia_organized }
-		}
-		allow = {
-			money = 75000
-			war = no
-		}
-		effect = {
-			money = -75000
-			ACA = {
-				set_country_flag = post_colonial_country
-				all_core = { remove_core = MRU }
+			owns = 71
+			NOT = { 
+				exists = MRU 
+				exists = ACA
+				exists = FCA
+				has_country_flag = acadia_organized 
 			}
+		}
+		
+		allow = {
+			money = 50000
+			war = no
+			ACA = { all_core = { owned_by = THIS } }
+		}
+		
+		effect = {
+			money = -50000
+			ACA = { set_country_flag = post_colonial_country }
 			any_pop = { 
 				limit = { 
 					location = { is_core = ACA } 
@@ -438,8 +227,6 @@ political_decisions = {
 				}
 				move_pop = 71
 			}
-			release = ACA
-			UTI = { inherit = ACA }
 			any_pop = {
 				limit = {
 					location = {
@@ -459,10 +246,21 @@ political_decisions = {
 					has_pop_culture = yankee
 				}
 				move_pop = 243
+			}	
+			any_owned = {
+				limit = { is_core = ACA }
+				add_province_modifier = {
+					name = french_colonial_integration
+					duration = 1825
+				}
 			}
-			any_pop = { limit = { location = { is_core = ACA } culture = anglo_canadian } reduce_pop = 0.9 }
-			any_pop = { limit = { location = { is_core = ACA } culture = yankee } reduce_pop = 0.8 }
-			THIS = { inherit = UTI }
+			random_owned = { limit = { owner = { has_country_flag = french_total_victory } } 
+				ACA = { all_core = { add_core = FCA remove_core = ACA } }
+			}
+			###Set Acadia Flag Based on whether Bourbon/Napoleonic###
+			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } }
+			random_owned = { limit = { owner = { tag = BOR } } ACA = { government = colonial_company } }
+			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
 			FRA = { set_country_flag = acadia_organized }
 			BOR = { set_country_flag = acadia_organized }
 		}
@@ -471,23 +269,33 @@ political_decisions = {
 	}
 	
 	organize_canada = {
-		picture = "organize_canada"
+		picture = "quebec_question"
 		potential = {
 			primary_culture = french
 			is_greater_power = yes
 			capital = 425
+			NOT = {
+				exists = QUE 
+				exists = ACA
+				exists = ULA
+				exists = FCA
+			}
 			has_country_flag = quebec_regained
-			has_country_flag = acadia_organized
 			NOT = { has_country_flag = canada_organized }
 		}
 		
 		allow = {
-			money = 175000
+			money = 100001
 			war = no
+			owns = 65
+			owns = 2625
+			owns = 2592
+			owns = 71
 		}
 		
 		effect = {
-			treasury = -175000
+			###Effects that will happen if either the Treaty of Montreal or Paris is taken###
+			treasury = -100000
 			any_pop = {
 				limit = {
 					location = { is_core = QUE }
@@ -499,171 +307,285 @@ political_decisions = {
 				}
 				move_pop = 57
 			}
-			CAN = { all_core = { remove_core = CAN } }
-			RPL = { all_core = { add_core = FCA remove_core = ENG remove_core = RPL } }
-			58 = { state_scope = { change_region_name = "Southern Quebec" } }
-			QUE = { all_core = { add_core = FCA remove_core = THIS remove_core = NEW remove_core = QUE } }
-			COL = { all_core = { remove_core = COL remove_core = ENG add_core = FCA } }
-			random_pop = {
-				limit = {
-					has_pop_culture = french
-					has_pop_type = artisans
-					location = { continent = europe }
-				}
-				move_pop = 65
-			}
-			random_pop = {
-				limit = {
-					has_pop_culture = french
-					has_pop_type = farmers
-					location = { continent = europe }
-				}
-				move_pop = 58
-			}
-			random_pop = {
-				limit = {
-					has_pop_culture = french
-					has_pop_type = farmers
-					location = { continent = europe }
-				}
-				move_pop = 57
-			}
 			any_pop = {
-				limit = { location = { province_id = 72 } culture = french_canadian } reduce_pop = 2.5
-				militancy = -10
-				consciousness = -10
-			}
-			any_pop = {
-				limit = { culture = anglo_canadian }
+				limit = {
+					OR = {
+						culture = anglo_canadian 
+						culture = irish
+						culture = british
+					}
+				}
 				consciousness = 7
 				militancy = 7
 			}
 			any_pop = {
-				limit = {
-					location = { province_id = 62 }
-					has_pop_culture = cree
-				}
-				move_pop = 429
+				limit = { 
+				has_pop_culture = british
+				location = { is_core = QUE } }
+				move_pop = 57
 			}
+			2593 = { state_scope = { change_region_name = "Nord-du-Québec" } }
+			65 = { change_province_name = "Québec" state_scope = { change_region_name = "Québec" } }
+			58 = { change_province_name = "Montréal" }
+			63 = { change_province_name = "Témiscaming" }
+			70 = { change_province_name = "Île Saint-Jean" }
+			73 = { change_province_name = "Île-Royale" }
+			71 = { state_scope = { change_region_name = "Acadie" } }
+			77 = { add_core = QUE }
+			MRU = { all_core = { remove_core = MRU } }
+			###British Acadia###
 			any_pop = {
-				limit = {
-					location = { province_id = 61 }
-					has_pop_culture = cree
-				}
-				move_pop = 430
+				limit = { location = { province_id = 72 } culture = french_canadian } 
+				reduce_pop = 1.5
+				militancy = -10
+				consciousness = -10
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 51 }
-					has_pop_culture = cree
+			###End of Common Effects###
+			
+			###Effects for Treaty of Paris - This will end the French Goals in North America###
+			random_owned = {
+				limit = { owner = { has_country_flag = quebec_and_acadia_only } }
+				USA = { all_core = { remove_core = ACA } } #Removes Acadian Cores from the US
+				ULA = { all_core = { remove_core = ULA } }
+				owner = { badboy = -5 } #Reduces your infamy for dropping the rest of your claims
+				46 = { state_scope = { change_region_name = "Southern Ontario" } }
+				QUE = { all_core = { remove_core = ENG remove_core = THIS remove_core = RPL remove_core = CAN remove_core = NEW } }
+				THIS = {
+					any_owned = {
+						limit = { is_core = QUE }
+						add_province_modifier = {
+							name = french_colonial_integration
+							duration = 1825
+						}
+					}	
 				}
-				move_pop = 431
+				FRA = { set_country_flag = no_more_north_america }
+				BOR = { set_country_flag = no_more_north_america }	
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 50 }
-					has_pop_culture = cree
+			
+			###Effects for Treaty of Montreal - Will change cores for the whole of British North America###
+			random_owned = {
+				limit = { owner = { has_country_flag = french_total_victory } }
+				COL = { all_core = { remove_core = COL remove_core = ENG remove_core = THIS add_core = FCA } }
+				CAN = { all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = CAN remove_core = COL remove_core = MRU } }
+				RPL = { annex_to = THIS government = democracy all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = COL } }
+				74 = { change_province_name = "Québec" state_scope = { change_region_name = "Terre-Neuve" } }
+				QUE = { all_core = { add_core = FCA remove_core = ENG remove_core = THIS remove_core = RPL remove_core = CAN remove_core = NEW remove_core = QUE } }
+				ACA = { all_core = { add_core = ACA remove_core = ENG remove_core = THIS } }
+				owner = {
+					any_owned = {
+						limit = { is_core = FCA }
+						add_province_modifier = {
+							name = french_colonial_integration
+							duration = 1825
+						}
+					}	
 				}
-				move_pop = 432
+				FCA = { set_country_flag = post_colonial_country }
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 52 }
-					has_pop_culture = cree
-				}
-				move_pop = 433
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 51 }
-					has_pop_culture = native_american_minor
-				}
-				move_pop = 434
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 50 }
-					has_pop_culture = native_american_minor
-				}
-				move_pop = 435
-			}
-			any_owned = {
-				limit = {
-					OR = {
-						province_id = 50 #Thunder Bay
-						province_id = 51 #Sault Ste Marie
-						province_id = 74 #Labrador
-						province_id = 75 #Labrador
-						province_id = 77 #St Pierre
-						region = ENG_9 #Northwest Territories
-						region = CAN_13 #Colombia
-						region = ENG_22 #Alberta
-						region = ENG_30 #Saskatchewan
-						region = ENG_36 #Manitoba
-						region = CAN_50 #Northern Ontario
-						region = CAN_58 #Southern Quebec
-						region = CAN_60 #Northern Quebec
-						region = ENG_74 #Newfoundland
-					}
-				}
-				add_core = FCA
-			}
-			release = FCA
-			FCA = { set_country_flag = post_colonial_country }
-			UTI = { inherit = FCA }
-			THIS = { inherit = UTI }
-			any_owned = {
-				limit = { is_core = FCA }
-				add_province_modifier = {
-					name = french_colonial_integration
-					duration = 720
-				}
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 430 }
-					has_pop_culture = cree
-				}
-				move_pop = 61
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 431 }
-					has_pop_culture = cree
-				}
-				move_pop = 51
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 432 }
-					has_pop_culture = cree
-				}
-				move_pop = 50
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 433 }
-					has_pop_culture = cree
-				}
-				move_pop = 52
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 434 }
-					has_pop_culture = native_american_minor
-				}
-				move_pop = 51
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 435 }
-					has_pop_culture = native_american_minor
-				}
-				move_pop = 50
-			}
+			###Set Canada Flag Based on whether Bourbon/Napoleonic###
+			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } }
+			random_owned = { limit = { owner = { tag = BOR } } FCA = { government = colonial_company } }
+			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
 			FRA = { set_country_flag = canada_organized }
 			BOR = { set_country_flag = canada_organized }
 		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	french_louisiana = {
+		picture = new_france_louisiana
+		potential = {
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
+			has_country_flag = french_total_victory
+			has_country_flag = french_america
+			has_country_flag = canada_organized
+			NOT = { 
+				has_country_flag = war_for_louisiana 
+				exists = ULA
+			}
+		}
+		
+		allow = {
+			war = no
+			NOT = { truce_with = USA }
+			NOT = { war_policy = pacifism }
+			NOT = { revolution_n_counterrevolution = 1 }
+		}
+		
+		effect = {
+			badboy = 25
+			USA = {
+				add_casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 60
+				}
+			}
+			FRA = { set_country_flag = war_for_louisiana }
+			BOR = { set_country_flag = war_for_louisiana }
+			relation = { who = USA value = -200 }
+			diplomatic_influence = { who = USA value = -200 }
+			leave_alliance = USA
+			random_country = { limit = { tag = USA vassal_of = THIS } THIS = { release_vassal = USA } }
+			random_country = { limit = { is_our_vassal = USA NOT = { tag = THIS } } relation = { who = THIS value = -200 } leave_alliance = THIS }
+			any_pop = { dominant_issue = { factor = 0.05 value = jingoism } consciousness = 2 }
+			casus_belli = {
+				target = USA
+				type = cut_down_to_size
+				months = 12
+			}
+			war = {
+				target = USA
+				attacker_goal = { casus_belli = cut_down_to_size }
+				defender_goal = { casus_belli = cut_down_to_size }
+			}
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = mexican 
+						has_pop_culture = yankee 
+						has_pop_culture = british
+						has_pop_culture = anglo_canadian
+					}
+				}
+				militancy = 6
+			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = { truce_with = THIS }
+				}
+				casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 24
+				}
+			}
+		}
+	}
+	
+	treaty_of_new_york = {
+		picture = establish_panfrenchism
+		potential = {
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
+			has_country_flag = war_for_louisiana
+			NOT = { has_global_flag = treaty_of_new_york }
+		}
+
+		allow = {
+			money = 75000
+			USA = {
+				is_disarmed = yes
+				truce_with = THIS
+			}
+		}
+
+		effect = {
+			set_global_flag = treaty_of_new_york
+			###Secede Southern Ontario to USA###
+			CAN_46 = { add_core = USA }
+			51 = { remove_core = USA }
+			50 = { remove_core = USA }
+			USA = {
+				###Add Lousiana Cores###
+				any_owned = {
+					limit = {
+						OR = {
+							region = USA_139 #Louisiana
+							region = USA_144 #Arkansas
+							region = USA_148 #Missouri
+							region = USA_118 #North Dakota
+							region = USA_121 #South Dakota
+							region = USA_124 #Nebraska
+							region = USA_151 #Idaho
+							region = USA_158 #Iowa
+							region = USA_126 #Kansas
+							region = USA_129 #Oklahoma
+							region = USA_111 #Wyoming
+							region = USA_116 #Montana
+							region = USA_78 #Washington
+							region = USA_81 #Oregon
+							region = USA_91 #Idaho
+							province_id = 106
+							province_id = 78
+							province_id = 79
+						}
+						NOT = { 
+							province_id = 129 
+							province_id = 110
+							province_id = 107
+							province_id = 128
+						}
+					}
+					add_core = ULA
+				}
+				###Population Transfers
+				any_pop = { limit = { location = { is_core = NEN } has_pop_culture = french_canadian } move_pop = 71 }
+				###Remove Acadia Cores###
+				any_owned = { limit = { is_core = ACA } remove_core = ACA }
+				###Secede Provinces
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = ULA
+							is_core = ACA
+							is_core = FCA
+						}
+					}
+					secede_province = THIS
+				}
+				treasury = 75000
+			}
+			ULA = { all_core = { remove_core = FCA } }
+			THIS = {
+				any_owned = {
+					limit = { is_core = USA 
+					NOT = { is_core = ACA is_core = ULA region = USA_78 } }
+					secede_province = USA
+					remove_core = THIS
+					remove_core = FCA
+				}
+			}
+			treasury = -75000
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
+	become_the_fsa_french_lousiana = {
+		potential = {
+			tag = USA
+			ai = yes
+			NOT = { owns = 139 }
+			has_global_flag = treaty_of_new_york
+			exists = CSA
+			NOT = { has_country_modifier = no_more_war }
+			has_global_flag = american_civil_war_has_happened
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			release_vassal = CAL
+			release_vassal = DES
+			release_vassal = TEX
+			any_owned = {
+				limit = {
+					owned_by = USA
+					is_core = USA
+				}
+				add_core = FSA
+			}
+			change_tag = FSA
+		}
+		
 		ai_will_do = { factor = 1 }
 	}
 	
@@ -675,15 +597,83 @@ political_decisions = {
 			capital = 425
 			has_country_flag = quebec_regained
 			has_global_flag = treaty_of_new_york
-			has_country_flag = acadia_organized
-			NOT = { has_country_flag = louisiana_organized }
+			NOT = { 
+				has_country_flag = louisiana_organized 
+				exists = ULA
+			}
 		}
 		allow = {
-			money = 250000
+			money = 150000
 			war = no
 		}
 		effect = {
-			money = -250000
+			money = -150000
+			any_owned = {
+				limit = {
+					OR = {
+						region = USA_139 #Louisiana
+						region = USA_144 #Arkansas
+						region = USA_148 #Missouri
+						region = USA_118 #North Dakota
+						region = USA_121 #South Dakota
+						region = USA_124 #Nebraska
+						region = USA_151 #Idaho
+						region = USA_158 #Iowa
+						region = USA_126 #Kansas
+						region = USA_129 #Oklahoma
+						region = USA_111 #Wyoming
+						region = USA_116 #Montana
+						region = USA_78 #Washington
+						region = USA_81 #Oregon
+						region = USA_91 #Idaho
+						province_id = 106
+						province_id = 78
+						province_id = 79
+					}
+					NOT = { 
+						province_id = 129 
+						province_id = 110
+						province_id = 107
+						province_id = 128
+					}
+				}
+				remove_core = THIS
+				add_core = ULA
+			}
+			FCA = {
+				any_owned = {
+					limit = {
+						OR = {
+							region = USA_139 #Louisiana
+							region = USA_144 #Arkansas
+							region = USA_148 #Missouri
+							region = USA_118 #North Dakota
+							region = USA_121 #South Dakota
+							region = USA_124 #Nebraska
+							region = USA_151 #Idaho
+							region = USA_158 #Iowa
+							region = USA_126 #Kansas
+							region = USA_129 #Oklahoma
+							region = USA_111 #Wyoming
+							region = USA_116 #Montana
+							region = USA_78 #Washington
+							region = USA_81 #Oregon
+							region = USA_91 #Idaho
+							province_id = 106
+							province_id = 78
+							province_id = 79
+						}
+						NOT = { 
+							province_id = 129 
+							province_id = 110
+							province_id = 107
+							province_id = 128
+						}
+					}
+					remove_core = FCA
+					add_core = ULA
+				}
+			}
 			add_accepted_culture = louisianan
 			ULA = {
 				set_country_flag = post_colonial_country
@@ -691,8 +681,7 @@ political_decisions = {
 				add_accepted_culture = cajun 
 			}
 			ULA = { all_core = { remove_core = COL remove_core = FCA } }
-			78 = { add_core = ULA }
-			79 = { add_core = ULA }
+			D01 = { primary_culture = louisianan }
 			random_pop = {
 				limit = {
 					has_pop_culture = french
@@ -784,77 +773,6 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					location = { province_id = 139 }
-					has_pop_culture = cajun
-				}
-				move_pop = 117
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 140 }
-					has_pop_culture = cajun
-				}
-				move_pop = 118
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 141 }
-					has_pop_culture = cajun
-				}
-				move_pop = 119
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 142 }
-					has_pop_culture = cajun
-				}
-				move_pop = 120
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 139 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1887
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 140 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1887
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 141 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1888
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 142 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1888
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 139 }
-					has_pop_culture = afro_antillean
-				}
-				move_pop = 121
-			}
-			
-			any_pop = {
-				limit = {
-					location = { province_id = 141 }
-					has_pop_culture = afro_antillean
-				}
-				move_pop = 122
-			}
-			any_pop = {
-				limit = {
 					location = { province_id = 146 }
 					has_pop_culture = yankee
 				}
@@ -883,27 +801,6 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					location = { province_id = 150 }
-					is_state_religion = no
-				}
-				move_pop = 177
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 149 }
-					has_pop_culture = yankee
-				}
-				move_pop = 197
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 140 }
-					is_state_religion = no
-				}
-				move_pop = 194
-			}
-			any_pop = {
-				limit = {
 					location = { province_id = 143 }
 					has_pop_culture = afro_american
 				}
@@ -916,26 +813,16 @@ political_decisions = {
 				}
 				move_pop = 1887
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 149 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1888
+			any_owned = {
+				limit = { is_core = ULA }
+				secede_province = D01
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 148 }
-					has_pop_culture = afro_american
-				}
-				move_pop = 1887
+			D01 = { 
+				150 = { assimilate = yes }
+				146 = { assimilate = yes }
+				143 = { assimilate = yes }
 			}
-			release = ULA
-			150 = { assimilate = yes }
-			146 = { assimilate = yes }
-			143 = { assimilate = yes }
-			UTI = { inherit = ULA }
-			THIS = { inherit = UTI }
+			THIS = { inherit = D01 }
 			any_pop = {
 				limit = {
 					location = { province_id = 143 }
@@ -958,53 +845,47 @@ political_decisions = {
 				}
 			}
 			any_pop = {
-				limit = {
-					location = { province_id = 117 }
-					has_pop_culture = cajun
+				limit = { 
+					OR = {
+						has_pop_culture = cajun 
+						has_pop_culture = louisianan 
+					}
 				}
-				move_pop = 139
+				reduce_pop = 3
 			}
-			any_pop = {
-				limit = {
-					location = { province_id = 118 }
-					has_pop_culture = cajun
-				}
-				move_pop = 140
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 119 }
-					has_pop_culture = cajun
-				}
-				move_pop = 141
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 120 }
-					has_pop_culture = cajun
-				}
-				move_pop = 142
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 121 }
-					has_pop_culture = afro_antillean
-				}
-				move_pop = 139
-			}
-			any_pop = {
-				limit = {
-					location = { province_id = 122 }
-					has_pop_culture = afro_antillean
-				}
-				move_pop = 141
-			}
-			any_pop = { limit = { location = { province_id = 146 } } reduce_pop = 3 }
-			any_pop = { limit = { location = { province_id = 146 } type = soldiers } pop_type = artisans }
-			any_pop = { limit = { location = { is_core = ULA } culture = dixie } reduce_pop = 0.5 }
-			any_pop = { limit = { location = { is_core = ULA } culture = dixie } reduce_pop = 0.5 }
+			any_pop = { limit = { location = { province_id = 146 } } reduce_pop = 3.5 }
+			any_pop = { limit = { location = { province_id = 146 } type = soldiers } pop_type = farmers }
+			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
+			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } }
+			random_owned = { limit = { owner = { tag = BOR } } ULA = { government = colonial_company } }
+			
 			FRA = { set_country_flag = louisiana_organized }
 			BOR = { set_country_flag = louisiana_organized }
+			
+			139 = {
+				change_province_name = "Nouvelle-Orléans"
+				state_scope = { change_region_name = "Louisiane" }
+			}
+			140 = { change_province_name = "Bâton-Rouge" }
+			141 = { change_province_name = "Lac Charles" }
+			142 = { change_province_name = "Madele" }
+			#Arkansas
+			143 = {
+				change_province_name = "Chevreuils"
+				state_scope = { change_region_name = "Arcansas" }
+			}
+			144 = { change_province_name = "Adaie" }
+			#Oklahoma
+			130 = {
+				change_province_name = "Cenis"
+				state_scope = { change_region_name = "Cadodaquois" }
+			}
+			131 = { change_province_name = "Nacanne" }
+			#Missouri
+			148 = { change_province_name = "Oxiers" }
+			147 = { change_province_name = "Petit Rocher" }
+			149 = { change_province_name = "Mines" }
+			150 = { change_province_name = "Lafayette" }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1022,12 +903,14 @@ political_decisions = {
 			}
 			NOT = { has_global_flag = french_nzl }
 		}
+		
 		allow = {
-			money = 50000
+			money = 75000
 			war = no
 		}
+		
 		effect = {
-			money = -50000
+			money = -75000
 			add_accepted_culture = neo_zelandais
 			NZL = { all_core = { add_core = NZF } }
 			NZF = {
@@ -1040,6 +923,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = soldiers
 					location = { continent = europe }
 				}
 				move_pop = 2571
@@ -1047,6 +931,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = soldiers
 					location = { continent = europe }
 				}
 				move_pop = 2509
@@ -1054,6 +939,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2510
@@ -1061,6 +947,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2511
@@ -1068,6 +955,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2512
@@ -1075,6 +963,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = soldiers
 					location = { continent = europe }
 				}
 				move_pop = 2513
@@ -1082,6 +971,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2514
@@ -1089,6 +979,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2515
@@ -1096,6 +987,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2516
@@ -1178,8 +1070,11 @@ political_decisions = {
 				}
 				move_pop = 431
 			}
-			NZF = { primary_culture = neo_zelandais }
-			release = NZF
+			D02 = { primary_culture = neo_zelandais }
+			any_owned = {
+				limit = { is_core = NZF }
+				secede_province = D02
+			}
 			2510 = { assimilate = yes }
 			2511 = { assimilate = yes }
 			2512 = { assimilate = yes }
@@ -1197,8 +1092,7 @@ political_decisions = {
 					militancy = -5
 				}
 			}
-			UTI = { inherit = NZF }
-			THIS = { inherit = UTI }
+			inherit = D02
 			any_pop = {
 				limit = {
 					location = { province_id = 458 }
@@ -1269,6 +1163,20 @@ political_decisions = {
 					duration = 3650
 				}
 			}
+			any_pop = {
+				limit = {
+					location = { is_core = NZF }
+					OR = { 
+						has_pop_culture = neo_zelandais
+						is_culture_group = french
+					}
+				}
+				pop_type = farmers
+			}
+			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
+			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } }
+			random_owned = { limit = { owner = { tag = BOR } } NZF = { government = colonial_company } }
+			
 			set_global_flag = french_nzl
 		}
 		
@@ -1290,11 +1198,11 @@ political_decisions = {
 			NOT = { has_country_flag = australia_organized }
 		}
 		allow = {
-			money = 300000
+			money = 100000
 			war = no
 		}
 		effect = {
-			money = -300000
+			money = -100000
 			add_accepted_culture = french_australian
 			AST = { all_core = { add_core = FAS } }
 			FAS = { all_core = { remove_core = AST } }
@@ -1302,7 +1210,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
-					has_pop_type = farmers
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2468
@@ -1310,7 +1218,7 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
-					has_pop_type = farmers
+					type = soldiers
 					location = { continent = europe }
 				}
 				move_pop = 2472
@@ -1318,12 +1226,11 @@ political_decisions = {
 			random_pop = {
 				limit = {
 					has_pop_culture = french
-					has_pop_type = farmers
+					type = artisans
 					location = { continent = europe }
 				}
 				move_pop = 2469
 			}
-			any_pop = { limit = { location = { is_core = FAS } culture = aborigine } reduce_pop = 0.8 }
 			any_pop = {
 				limit = { culture = aborigine }
 				consciousness = 7
@@ -1413,15 +1320,18 @@ political_decisions = {
 				}
 				move_pop = 2474
 			}
-			release = FAS
+			D03 = { primary_culture = french_australian }
+			any_owned = {
+				limit = { is_core = FAS }
+				secede_province = D03
+			}
 			ENG_2468 = { assimilate = yes }
-			UTI = { inherit = FAS }
-			THIS = { inherit = UTI }
+			THIS = { inherit = D03 }
 			any_owned = {
 				limit = { is_core = FAS }
 				add_province_modifier = {
 					name = french_colonial_integration
-					duration = 1825
+					duration = 3650
 				}
 			}
 			any_pop = {
@@ -1510,6 +1420,9 @@ political_decisions = {
 			}
 			FRA = { set_country_flag = australia_organized }
 			BOR = { set_country_flag = australia_organized }
+			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
+			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } }
+			random_owned = { limit = { owner = { tag = BOR } } FAS = { government = colonial_company } }
 		}
 		
 		ai_will_do = { factor = 1 }

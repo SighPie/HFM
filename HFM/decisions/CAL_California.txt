@@ -109,6 +109,7 @@ annex_california = {
 		has_global_flag = mexican_american_war
 		has_country_flag = hasmanifestdestiny
 		war = no
+		neighbour = CAL
 		NOT = { has_country_flag = second_velasco }
 		NOT = { has_country_flag = annex_california }
 	}
@@ -116,9 +117,10 @@ annex_california = {
 	allow = {
 		prestige = 35
 		war = no
-		has_recently_lost_war = no
-		owns = 100
-		owns = 105
+		MEX = { 
+			has_recently_lost_war = yes
+			truce_with = THIS
+		}
 		CAL = {
 			OR = {
 				is_vassal = no
