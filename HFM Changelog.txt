@@ -12,9 +12,11 @@
 -- FRANCE WINS THE WAR
 -- 2. 'Treaty of Paris' is selected, Acadia and Quebec are seceded, all French colonial cores in the USA are removed.
 -- 3. 'Treaty of Montreal' is selected, British North America is seceded to France, French Canada gains all cores on whatever cores British Canada had. War for French Lousiana is now possible.
-## War for Lousiana - Will now always cause you to go over the Infamy limit
+## War for Lousiana - Will now always cause you to go over the Infamy limit, must be started before revolution & counterrevolution, French Canada must not exist yet.
 -- The Treaty of New York can now only be enacted when America Loses the War
-
+-- Added a decisions to rename most of French America, I'm open to any suggestions for better names, since i don't speak french.
+-- Remade the Invest in X decisions for each of the North America Colonies
+- Thunder Bay & Sault Ste Marie moved to Northern Ontario Region
 
 #Changes to South America
 - Added the Mosquito Kingdom, starts as a vassal of the UK
@@ -53,6 +55,7 @@
 - Changed the name of 'Independence Rebels'
 - Renamed 'Russland-German' to 'Eastern German'
 - Jungle Terrain now has a -25% immigrant attraction modifier
+- Decreased Farm & Mine Sizes for Islands
 
 #Changes to Oceania
 - Added a decision for the U.K. to transfer territory in New Guinea to Australia, reduces 1 or 2 infamy for each region transferred.

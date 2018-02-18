@@ -19,16 +19,8 @@ political_decisions = {
 			regular_clothes = 50
 			CAN_60 = { add_core = QUE }
 			capital = 57
-			46 = {
-				state_scope = {
-					change_region_name = "Southern Ontario"
-				}
-			}
-			58 = {
-				state_scope = {
-					change_region_name = "Southern Quebec"
-				}
-			}
+			46 = { state_scope = { change_region_name = "Southern Ontario" } }
+			58 = { state_scope = { change_region_name = "Québec" } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -67,11 +59,7 @@ political_decisions = {
 				add_core = QUE
 				remove_core = RPL
 			}
-			58 = {
-				state_scope = {
-					change_region_name = "Southern Quebec"
-				}
-			}
+			58 = { state_scope = { change_region_name = "Québec" } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -258,7 +246,15 @@ political_decisions = {
 	build_the_cnr = {
 		picture = whistlestop_tour
 		potential = {
-			tag = CAN
+			OR = {
+				tag = CAN
+				tag = FCA
+			}
+			owns = 52
+			owns = 36
+			owns = 30
+			owns = 26
+			owns = 13
 			early_railroad = 1
 			NOT = { has_country_flag = build_the_cnr }
 			NOT = { has_country_flag = build_the_cnr3 }
@@ -284,7 +280,7 @@ political_decisions = {
 				}
 				infrastructure = 1
 			}
-			13 = { change_province_name = "Vancouver" }
+			random_owned = { limit = { owner = { primary_culture = anglo_canadian } } 13 = { change_province_name = "Vancouver" } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -298,7 +294,10 @@ political_decisions = {
 		news_desc_short = "EVTDESC44355_NEWS_SHORT"
 		picture = whistlestop_tour
 		potential = {
-			tag = CAN
+			OR = { 
+				tag = CAN
+				tag = FCA
+			}
 			early_railroad = 1
 			has_country_flag = build_the_cnr
 			NOT = { has_country_flag = build_the_cnr1 }

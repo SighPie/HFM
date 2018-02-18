@@ -10,7 +10,7 @@ civilized = yes
 #set_country_flag = dynamic_tag
 
 # Political reforms - inherit
-slavery = yes_slavery
+slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting

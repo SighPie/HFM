@@ -15,6 +15,10 @@ country_event = {
 		year = 1867
 		any_owned_province = { is_core = FCA }
 		NOT = { exists = FCA }
+		AND = {
+			has_country_flag = acadia_organized 
+			has_country_flag = canada_organized
+		}
 		is_possible_vassal = FCA
 	}
 
@@ -41,7 +45,7 @@ country_event = {
 			NOT = { has_country_flag = FCA_independence_refused }
 		}
 	}
-
+	
 	option = {
 		name = "EVT99802OPTA"
 		clr_country_flag = FCA_independence_refused
@@ -51,30 +55,16 @@ country_event = {
 			limit = { location = { is_core = FCA } }
 			militancy = -10
 		}
-		FCA = {
-			all_core = { remove_core = THIS }
-		}
+		FCA = { all_core = { remove_core = THIS } }
 		any_owned = {
-			limit = { 
-				is_core = FCA
-			}
+			limit = { is_core = FCA }
 			secede_province = FCA
 		}
 		create_vassal = FCA
-		FCA = {
-			prestige = -80
-		}
-		relation = {
-			who = FCA
-			value = 200
-		}
-		diplomatic_influence = {
-			who = FCA
-			value = 200
-		}
-		any_pop = {
-			consciousness = 1
-		}
+		FCA = { prestige = -80 }
+		relation = { who = FCA value = 200 }
+		diplomatic_influence = { who = FCA value = 200 }
+		any_pop = { consciousness = 1 }
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -217,6 +207,7 @@ country_event = {
 		year = 1890
 		any_owned_province = { is_core = NZF }
 		NOT = { exists = NZF }
+		has_global_flag = french_nzl
 		is_possible_vassal = NZF
 	}
 
@@ -246,7 +237,7 @@ country_event = {
 			NOT = { has_country_flag = NZF_independence_refused }
 		}
 	}
-
+	
 	option = {
 		name = "EVT99802OPTA"
 		clr_country_flag = NZF_independence_refused
@@ -418,6 +409,7 @@ country_event = {
 		year = 1870
 		any_owned_province = { is_core = ULA }
 		NOT = { exists = ULA }
+		has_country_flag = louisiana_organized
 		ULA = {
 			all_core = {
 				OR = {

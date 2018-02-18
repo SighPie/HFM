@@ -110,6 +110,10 @@ country_event = {
 					}
 				}
 			}
+			modifier = {
+				factor = 100
+				owner = { tag = D01 }
+			}
 		}
 	}
 	

@@ -787,7 +787,7 @@ political_decisions = {
 			prestige = 5
 			create_vassal = ABU
 			create_alliance = ABU
-			ABU = { political_reform = no_slavery research_points = 1000 }
+			ABU = { political_reform = no_slavery research_points = 3000 }
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -88,18 +88,6 @@ political_decisions = {
 			war = no
 			is_greater_power = yes
 			is_disarmed = no
-			OR = {
-				TEX = { vassal_of = THIS }
-				owns = 133
-			}
-			OR = {
-				CAL = { vassal_of = THIS }
-				owns = 104
-			}
-			OR = {
-				DES = { vassal_of = THIS }
-				owns = 97
-			}
 			OR = { 
 				FRA = { exists = yes NOT = { truce_with = THIS } }
 				BOR = { exists = yes NOT = { truce_with = THIS } }
@@ -128,46 +116,7 @@ political_decisions = {
 					war = {
 						target = FRA
 						attacker_goal = { casus_belli = acquire_all_cores }
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 139 #Louisiana
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 144 #Arkansas
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 146 #Missouri
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 151 #Iowa
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 155 #Minnesota
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 78 #Washington
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 81 #Oregon
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 106 #Colorado
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 118 #North Dakota
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 120 #South Dakota
-						}
+						attacker_goal = { casus_belli = cut_down_to_size }
 						defender_goal = {
 							casus_belli = cut_down_to_size
 						}
@@ -181,49 +130,8 @@ political_decisions = {
 					war = {
 						target = BOR
 						attacker_goal = { casus_belli = acquire_all_cores }
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 139 #Louisiana
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 144 #Arkansas
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 146 #Missouri
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 151 #Iowa
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 155 #Minnesota
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 78 #Washington
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 81 #Oregon
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 106 #Colorado
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 118 #North Dakota
-						}
-						attacker_goal = { 
-							casus_belli = acquire_core_state
-							state_province_id = 120 #South Dakota
-						}
-						defender_goal = {
-							casus_belli = cut_down_to_size
-						}
+						attacker_goal = { casus_belli = cut_down_to_size }
+						defender_goal = { casus_belli = cut_down_to_size }
 						call_ally = yes
 					}
 				}

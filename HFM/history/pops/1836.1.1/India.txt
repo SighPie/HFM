@@ -3010,7 +3010,7 @@
 	farmers = {
 		culture = bengali
 		religion = hindu
-		size = 69500
+		size = 109500
 	}
 	
 	artisans = {

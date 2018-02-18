@@ -311,13 +311,6 @@ political_decisions = {
 					}
 					vassal_of = TUR
 				}
-				AND = {
-					tag = EGY
-					ai = yes
-					in_sphere = TUR
-					civilized = no
-					NOT = { owns = 913 }
-				}
 				###Chinese Puppets###
 				AND = {
 					OR = {

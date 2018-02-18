@@ -59,9 +59,7 @@ land_reform = yes_land_reform
 govt_flag = {
 	government = absolute_monarchy
 	flag = theocracy
-}
-
-govt_flag = {
+	
 	government = theocracy
 	flag = democracy
 }

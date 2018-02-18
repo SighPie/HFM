@@ -109,26 +109,3 @@ govt_flag = {
 	government = absolute_monarchy
 	flag = theocracy
 }
-
-# Inventions
-#corvettes = yes
-commerce_raiders = yes
-
-# Starting Consciousness
-consciousness = 3
-nonstate_consciousness = 1
-
-ruling_party = FRA_conservative
-last_election = 1834.6.21
-upper_house = {
-	fascist = 0
-	liberal = 12
-	conservative = 70
-	reactionary = 18
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
-}
-
-schools = culture_tech_school
-decision = france_1836_setup
