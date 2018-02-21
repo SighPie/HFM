@@ -182,7 +182,13 @@ political_decisions = {
 					factor = 0
 					tag = ENG
 					NOT = { owns = 1496 }
-					NOT = { has_country_flag = treaty_of_tientsin }
+					AND = { 
+						NOT = { has_country_flag = treaty_of_tientsin }
+						QNG = {
+							exists = yes
+							owns = 1496
+						}
+					}
 					1496 = { owner = { civilized = no truce_with = THIS } }
 				}
 				modifier = {

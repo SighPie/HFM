@@ -32,6 +32,7 @@ pensions = no_pensions
 school_reforms = no_schools
 
 set_country_flag = protestant_country
+set_country_flag = post_colonial_country
 
 #New Reforms
 conscription = no_draft

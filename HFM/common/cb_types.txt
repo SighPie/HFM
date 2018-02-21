@@ -841,11 +841,13 @@ claim_holy_land = {
 				tag = ENG
 				tag = AUS
 				tag = KUK
+				tag = BYZ
 				is_culture_group = east_slavic
 				is_culture_group = south_slavic
 				is_culture_group = italian
 				is_culture_group = iberian
 			}
+			ai = no
 			has_global_flag = abandoned_holy_land
 		}
 		OR = {

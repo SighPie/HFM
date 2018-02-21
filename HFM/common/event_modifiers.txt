@@ -2921,7 +2921,7 @@ drang_nach_osten = {
 ###HFM China Modifiers
 
 unciv_balance_qng = {
-	research_points_modifier = -0.5
+	research_points_modifier = -0.4
 	cb_generation_speed_modifier = -0.25
 	icon = 10
 }

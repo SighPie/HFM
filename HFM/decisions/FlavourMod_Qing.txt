@@ -389,7 +389,6 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			civilized = no
-			#NOT = { owns = 1485 }
 			has_country_flag = hundred_days_reform
 			has_country_flag = boxers_attacked_capital
 			NOT = { has_country_flag = imperial_decree_of_war }
@@ -541,12 +540,8 @@ political_decisions = {
 		
 		effect = {
 			random_owned = {
-				limit = {
-					owner = { ai = no }
-				}
-				owner = {
-					treasury = -100001
-				}
+				limit = { owner = { ai = no } }
+				owner = { treasury = -100001 }
 			}
 			set_country_flag = the_new_army_established 
 			activate_technology = army_command_principle
@@ -556,9 +551,7 @@ political_decisions = {
 			activate_technology = iron_muzzle_loaded_artillery
 			activate_technology = military_staff_system
 			random_owned = {
-				limit = {
-					owner = { civilized = no }
-				}
+				limit = { owner = { civilized = no } }
 				owner = {
 					military_reform = yes_foreign_training
 					military_reform = yes_foreign_weapons
@@ -566,9 +559,7 @@ political_decisions = {
 				}
 			}
 			any_pop = {
-				limit = {
-					location = { is_core = CHI }
-				}
+				limit = { location = { is_core = CHI } }
 				militancy = -2
 				consciousness = -2
 			}
@@ -670,7 +661,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	establish_the_maritime_customs_service  = {
+	establish_the_maritime_customs_service = {
 		picture = maritime_customs_service
 		potential = {
 			capital = 1616
@@ -822,12 +813,8 @@ political_decisions = {
 				duration = 1825
 			}
 			random_owned = {
-				limit = {
-					owner = { civilized = no }
-				}
-				owner = {
-					economic_reform = yes_education_reform
-				}
+				limit = { owner = { civilized = no } }
+				owner = { economic_reform = yes_education_reform }
 			}
 			activate_technology = private_banks
 			activate_technology = no_standard
@@ -1048,15 +1035,11 @@ political_decisions = {
 				owner = { economic_reform = yes_admin_reform }
 			}	
 			random_owned = {
-				limit = {
-					owner = { school_reforms = no_schools }
-					}
+				limit = { owner = { school_reforms = no_schools } }
 				owner = { social_reform = low_schools }
 			}
 			any_pop = {
-				limit = {
-					location = { is_core = CHI }
-				}
+				limit = { location = { is_core = CHI } }
 				consciousness = 1
 			}
 			KMT = { 
@@ -1118,9 +1101,7 @@ political_decisions = {
 		potential = {
 			tag = QNG
 			is_greater_power = yes
-			LAN = { 
-				exists = no
-			}
+			LAN = { exists = no }
 			NOT = { has_country_flag = vassalize_lanfang }
 		}
 
@@ -1469,7 +1450,6 @@ political_decisions = {
 			prestige = 5
 			treasury = -150000
 			set_country_flag = kiangnan_aresenal_established 
-			#activate_technology = raider_group_doctrine
 			activate_technology = mechanized_mining
 			random_owned = {
 				limit = { owner = { civilized = no } }
@@ -1487,10 +1467,8 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					province_id = 1616 #Peking
-					state_scope = {
-						NOT = { has_building = steel_factory }
-					}
+					province_id = 1538 #Shanghai
+					state_scope = { NOT = { has_building = steel_factory } }
 				}
 				
 				owner = { 
@@ -1500,9 +1478,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = {
-					province_id = 1616 #Berlin
-				}
+				limit = { province_id = 1616 #Berlin }
 				owner = { capital = 1616 }
 			}
 			1538 = {
