@@ -1478,7 +1478,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { province_id = 1616 #Berlin }
+				limit = { province_id = 1616 } #Peking 
 				owner = { capital = 1616 }
 			}
 			1538 = {
