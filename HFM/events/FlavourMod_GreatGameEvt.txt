@@ -1,4 +1,3 @@
-
 #The First Anglo-Afghan War
 country_event = {
 	id = 99100
@@ -215,6 +214,8 @@ country_event = {
 			diplomatic_influence = { who = AFG value = 400 }
 			relation = { who = AFG value = 200 }
 		}
+		release = AFG
+		release_vassal = AFG
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -321,6 +322,8 @@ country_event = {
 			diplomatic_influence = { who = PER value = 400 }
 			relation = { who = PER value = 200 }
 		}
+		release = PER
+		release_vassal = PER
 		ai_chance = {
 			factor = 80
 			modifier = {
