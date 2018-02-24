@@ -561,8 +561,8 @@ biologism = {
 			capital_scope = { continent = europe }
 			NOT = { tag = TUR }
 			OR = {
-				not = { literacy = 0.7 }
-				year = 1880
+				not = { literacy = 0.75 }
+				year = 1870
 				tag = ENG
 			}
 			OR = {
@@ -845,7 +845,7 @@ nationalism_n_imperialism = {
 		modifier = {
 			factor = 50
 			is_greater_power = yes
-			year = 1855
+			year = 1860
 		}
 		modifier = {
 			factor = 200
@@ -898,6 +898,7 @@ nationalism_n_imperialism = {
 				AND = {
 					cultural_union = { exists = no }
 					is_greater_power = yes
+					year = 1855
 				}
 				tag = POR
 			}

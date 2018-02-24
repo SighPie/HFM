@@ -619,7 +619,7 @@ political_reforms = {
 			suppression_points_modifier = -0.30
 			leadership_modifier = -0.05
 			administrative_efficiency_modifier = -0.05
-			mobilisation_size = -0.05
+			mobilisation_size = -0.01
 			cb_generation_speed_modifier = -0.15
 			supply_consumption = -0.1
 			allow = {
@@ -961,15 +961,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 0.5
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -991,15 +991,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 0.5
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1027,15 +1027,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 0.5
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1084,15 +1084,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 0.5
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1143,15 +1143,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 0.5
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1226,15 +1226,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 1
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 2
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1260,15 +1260,15 @@ economic_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 1
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 2
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1381,15 +1381,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1413,15 +1413,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1465,15 +1465,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1508,15 +1508,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1553,15 +1553,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1597,15 +1597,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1642,15 +1642,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1687,15 +1687,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1730,15 +1730,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}
@@ -1761,15 +1761,15 @@ military_reforms = {
 					any_pop = {
 						scaled_militancy = {
 							ideology = liberal
-							factor = 2
+							factor = 0.25
 						}
 						scaled_militancy = {
 							ideology = conservative
-							factor = 1
+							factor = 0.5
 						}
 						scaled_militancy = {
 							ideology = reactionary
-							factor = 3
+							factor = 1.5
 						}
 					}
 				}

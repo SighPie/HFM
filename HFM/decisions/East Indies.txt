@@ -597,6 +597,7 @@ political_decisions = {
 				militancy = -6
 			}
 			MLY = { tech_school = unciv_tech_school }
+			SGP = { tech_school = unciv_tech_school }
 			any_owned = {
 				limit = { is_core = MLY NOT = { province_id = 1393 } }
 				remove_core = SWK
@@ -912,6 +913,7 @@ political_decisions = {
 			is_greater_power = yes
 			capital_scope = { continent = europe }
 			NOT = { tag = TUR }
+			owns = 1369
 			OR = {
 				LUA = {
 					NOT = { has_country_flag = annexed_to_FRA }

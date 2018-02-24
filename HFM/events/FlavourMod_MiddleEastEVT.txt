@@ -419,6 +419,21 @@ country_event = {
 			owner = { any_owned = { limit = { is_core = NYE } secede_province = NYE } }
 			ENG = { diplomatic_influence = { who = NYE value = 400 } }
 		}
+		#Cyprus
+		random_owned = {
+			limit = {
+				OR = { 
+					AND = { 
+						is_core = CYP
+						NOT = { exists = CYP }
+					}
+					CYP = { vassal_of = TUR }
+				}
+			}
+			owner = { any_owned = { limit = { is_core = CYP } secede_province = CYP } release_vassal = CYP  }
+			ENG = { diplomatic_influence = { who = CYP value = 400 } create_vassal = CYP }
+			CYP = { government = dominion }
+		}
 		
 		###2ND GP SPHERE OF INFLUENCE###
 		random_owned = {

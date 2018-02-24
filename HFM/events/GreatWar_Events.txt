@@ -52,6 +52,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA96000" #We shall be victorious!
+		set_country_flag = great_war_has_happened
 		set_country_flag = in_great_war
 		war_exhaustion = -20
 		any_pop = {

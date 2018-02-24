@@ -1,7 +1,7 @@
 capital = 2512
 primary_culture = australian
 religion = protestant
-government = hms_government
+government = colonial_company
 plurality = 0.88
 nationalvalue = nv_liberty
 literacy = 0.5
@@ -36,6 +36,11 @@ citizens_rights = culture_voting_only
 border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
+
+govt_flag = {
+	government = dominion
+	flag = hms_government
+}
 
 set_country_flag = protestant_country
 set_country_flag = existing_country

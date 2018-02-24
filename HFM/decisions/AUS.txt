@@ -1009,6 +1009,7 @@ political_decisions = {
 				tag = DNB
 				tag = HUN
 				tag = GCF
+				tag = GER
 			}
 			owns = 641
 			NOT = { has_global_flag = budapest_founded }
@@ -1022,7 +1023,14 @@ political_decisions = {
 		effect = {
 			treasury = -20000
 			set_global_flag = budapest_founded
-			641 = { change_province_name = "Budapest" }
+			random_owned = {
+				limit = { owner = { accepted_culture = hungarian } }
+				641 = { change_province_name = "Budapest" }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { accepted_culture = hungarian } } }
+				641 = { change_province_name = "Ofenpesth" }
+			}
 			641 = { 
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }

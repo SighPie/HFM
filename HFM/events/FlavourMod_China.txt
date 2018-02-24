@@ -21,12 +21,10 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 36
-		
 		modifier = {
 			factor = 0.5
 			year = 1874
 		}
-		
 		modifier = {
 			factor = 0.1
 			year = 1875
@@ -37,9 +35,7 @@ country_event = {
 		name = "EVT99912OPTA"
 		plurality = -2
 		any_pop = {
-			limit = {
-				is_primary_culture = yes
-			}
+			limit = { is_primary_culture = yes }
 			consciousness = -1
 			militancy = -1
 		}
@@ -78,9 +74,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 7
-	}
+	mean_time_to_happen = { days = 7 }
 
 	option = {
 		name = "EVTOPT99905"
@@ -107,19 +101,13 @@ country_event = {
 			average_militancy = 6
 		}
 		has_global_flag = taiping_has_happened
-		TPG = {
-		   ai = yes
-		   exists = yes
-		}		
+		TPG = { ai = yes  exists = yes }		
 	}
 	
 	option = {
 		name = "EVTOPT99905"
 		war_exhaustion = -60
-		any_pop = {	
-			militancy = -6
-			consciousness = -2
-		}
+		any_pop = {	militancy = -6 consciousness = -2 }
 	}
 }
 
@@ -138,22 +126,15 @@ country_event = {
 		OR = {
 			has_global_flag = ever_victorious_army
 			NOT = { military_score = 100 }
-			QNG = {
-				brigades_compare = 0.7
-			}	
+			QNG = { brigades_compare = 0.7 }	
 		}
 		national_provinces_occupied = 0.25
-		QNG = {
-		   exists = yes
-		   ai = yes
-		}		
+		QNG = {  exists = yes   ai = yes }		
 	}
 
 	option = {
 		name = "EVTOPT99905"
-		any_pop = {	
-			militancy = -10
-		}
+		any_pop = { militancy = -10 }
 		grain = 500
 		small_arms = 150
 		canned_food = 150
@@ -176,19 +157,14 @@ country_event = {
 		plurality = -5
 		war = {
 			target = TPG
-			attacker_goal = {
-				casus_belli = civil_war
-			}		
-			defender_goal = {
-				casus_belli = civil_war
-			}
+			attacker_goal = { casus_belli = civil_war }		
+			defender_goal = { casus_belli = civil_war }
 		}		
 		set_global_flag = tpg_war_started
 		small_arms = 150
 		canned_food = 150
 		regular_clothes = 150
 		grain = 1000
-		
 	}
 }
 
@@ -204,13 +180,8 @@ country_event = {
 	option = {
 		name = "EVT99946OPTA"
 		military_access = QNG
-		EIC = {
-			military_access = QNG
-		}
-		relation = {
-			who = QNG
-			value = 150
-		}
+		EIC = { military_access = QNG }
+		relation = { who = QNG value = 150 }
 		prestige = 15
 		badboy = -1
 		war = {
@@ -219,23 +190,15 @@ country_event = {
 			defender_goal = { casus_belli = humiliate }
 			call_ally = no
 		}
-		
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
 		name = "EVT99946OPTB"
 		prestige = -35
 		badboy = -3
-		relation = {
-			who = QNG
-			value = -100
-		}		
-		ai_chance = {
-			factor = 0
-		}
+		relation = { who = QNG value = -100 }		
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -273,10 +236,7 @@ country_event = {
 		name = "EVT80121OPTA"
 		set_global_flag = miao_rebellion
 		plurality = -1
-		any_country = {
-			limit = {
-				tag = GUI
-			}
+		GUI = {
 			government = absolute_monarchy
 			primary_culture = miao
 			religion = animist
@@ -288,33 +248,21 @@ country_event = {
 				militancy = 10
 			}	
 			any_pop = {
-				limit = {
-					culture = miao
-				}
+				limit = { culture = miao }
 				consciousness = -10
 				militancy = -10
 			}			
 		}
-		any_country = {
-			limit = {
-				war_with = GUI
-			}
-			end_war = GUI
-		}
+		any_country = { limit = { war_with = GUI } end_war = GUI }
 		release_vassal = GUI
-		
-		casus_belli = {
-			target = GUI
-			type = conquest
-			months = 12
-		}
-		
+		casus_belli = { target = GUI type = conquest months = 12 }
 		war = {
 			target = GUI
 			attacker_goal = { casus_belli = conquest_any }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
+		set_variable = { which = china_destablization value = 1 }
 		ai_chance = { factor = 100 }
 	}
 }
@@ -338,29 +286,15 @@ country_event = {
 		owns = 1505
 	}
 	
-	mean_time_to_happen = {
-		days = 5
-	}
+	mean_time_to_happen = { days = 5 }
 	
 	option = {
 		name = "EVT80126OPTA"
 		clr_global_flag = miao_rebellion
 		prestige = 10
 		plurality = -1
-		CHI_1505 = {
-			any_pop = {
-				limit = {
-					culture = miao
-				}
-				reduce_pop = 0.5
-			}
-		}
-		any_owned = {
-			limit = {
-				is_core = GUI
-			}
-			remove_core = GUI
-		}
+		CHI_1505 = { any_pop = { limit = { culture = miao } reduce_pop = 0.5 } }
+		any_owned = { limit = { is_core = GUI } remove_core = GUI }
 	}
 }
 
@@ -390,6 +324,7 @@ country_event = {
 			militancy = -10
 		}
 		ruling_party_ideology = reactionary
+		set_variable = { which = china_destablization value = 1 }
 		set_country_flag = wuxu_coup
 	}
 }
@@ -404,16 +339,7 @@ country_event = {
 	
 	option = {
 		name = "EVT99951OPTA"
-		QNG = {
-			country_event = {
-				id = 99952
-				days = 5
-			}
-		}
-		relation = {
-			who = QNG
-			value = 100
-		}
+		QNG = { country_event = { id = 99952 days = 5 } }
 		treasury = 50000
 		set_country_flag = building_beiyang_fleet
 		ai_chance = { factor = 100 }
@@ -422,10 +348,7 @@ country_event = {
 	option = {
 		name = "EVT99951OPTB"
 		prestige = -5
-		relation = {
-			who = QNG
-			value = -100
-		}
+		relation = { who = QNG value = -100 }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -441,10 +364,7 @@ country_event = {
 	option = {
 		name = "EVT99952OPTA"
 		treasury = -80000
-		country_event = {
-			id = 99953
-			days = 730
-		}		
+		country_event = { id = 99953 days = 730 }		
 	}
 }
 
@@ -466,15 +386,6 @@ country_event = {
 			sub_unit = { type = ironclad value = current }
 			sub_unit = { type = ironclad value = current }
 			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
-			sub_unit = { type = ironclad value = current }
 		}
 	}
 }
@@ -486,7 +397,6 @@ country_event = {
 	desc = "EVTDESC99962"
 	picture = "qing_emperor"
 	major = yes
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -508,19 +418,13 @@ country_event = {
 	desc = "EVTDESC99963"
 	picture = "qing_emperor"
 	major = yes
-	
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPT99963"
 		war_exhaustion = -100
 		plurality = -1
-		any_owned = {
-			limit = {
-				controlled_by = TPG
-			}
-			change_controller = THIS
-		}
+		any_owned = { limit = { controlled_by = TPG } change_controller = THIS }
 	}
 }
 
@@ -538,9 +442,7 @@ country_event = {
 		NOT = { has_country_flag = nian_setup }
 	}
 
-	mean_time_to_happen = {
-		days = 10
-	}
+	mean_time_to_happen = { days = 10 }
 
 	option = {
 		name = "EVTOPT99964"
@@ -552,9 +454,7 @@ country_event = {
 				consciousness = 2
 			}
 		}
-		CHI_1508 = {
-			add_core = NIA
-		}
+		CHI_1508 = { add_core = NIA }
 	}
 }
 
@@ -563,7 +463,6 @@ country_event = {
 	title = "EVTNAME99965" #Nien Rebellion
 	desc = "EVTDESC99965"
 	picture = "nien_rebellion"
-	
 	fire_only_once = yes
 	
 	trigger = {
@@ -573,150 +472,64 @@ country_event = {
 		NOT = { has_global_flag = nien_rebellion }
 	}
 	
-	mean_time_to_happen = {
-		days = 14
-	}
+	mean_time_to_happen = { days = 14 }
 	
 	option = {
 		name = "EVT80121OPTA"
 		set_global_flag = nien_rebellion
 		QNG = {
-			add_country_modifier = {
-				name = no_more_war
-				duration = 14
-			}
-			country_event = { id=99966 days=14 }
-		}
-		
-		any_owned = {
-			limit = {
-				is_core = NIA
-				not = { province_id = 1616 }
-			}
-			secede_province = NIA
-		}
-		
+			add_country_modifier = { name = no_more_war duration = 14 }
+			country_event = { id = 99966 days = 14 }
+			set_variable = { which = china_destablization value = 1 }
+		}	
+		any_owned = { limit = { is_core = NIA not = { province_id = 1616 } } secede_province = NIA }
 		NIA = {
 			grain = 50
 			treasury = 10000
 			capital = 1508
 			NIA = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
-			any_pop = {
-				consciousness = -5
-				militancy = -5
-			}
-
+			any_pop = { consciousness = -5 militancy = -5 }
 			add_country_modifier = {
 				name = no_more_war
 				duration = 14
 			}
-			
 			define_general = {
 				name = "Li Zhang Lexing"
 				personality = stout
 				background = innovative_tactician
 			}
-			
 			define_general = {
 				name = "Lai Wenguang"
 				personality = spirited
 				background = gifted_administrator
 			}
-			
 			define_general = {
 				name = "Zhang Zongyu"
 				personality = stout
 				background = incompetent
 			}
-			
 			define_general = {
 				name = "Ren Zhu"
 				personality = audacious
 				background = expert_raider
 			}
 		}
-		
-		random_owned = {
-			limit = { owner = { land_reform = yes_land_reform } }
-			NIA = { economic_reform = yes_land_reform }
-		}
-		
-		random_owned = {
-			limit = { owner = { admin_reform = yes_admin_reform } }
-			NIA = { economic_reform = yes_admin_reform }
-		}
-		
-		random_owned = {
-			limit = { owner = { finance_reform = yes_finance_reform } }
-			NIA = { economic_reform = yes_finance_reform }
-		}
-		
-		random_owned = {
-			limit = { owner = { finance_reform = finance_reform_two } }
-			NIA = { economic_reform = finance_reform_two }
-		}
-		
-		random_owned = {
-			limit = { owner = { monetary_reform = yes_monetary_reform } }
-			NIA = { economic_reform = yes_monetary_reform }
-		}
-		
-		random_owned = {
-			limit = { owner = { monetary_reform = monetary_reform_two } }
-			NIA = { economic_reform = monetary_reform_two activate_technology = no_standard }
-		}
-		
-		random_owned = {
-			limit = { owner = { education_reform = yes_education_reform } }
-			NIA = { economic_reform = yes_education_reform }
-		}
-		
-		random_owned = {
-			limit = { owner = { research_reform = yes_research_reform } }
-			NIA = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_training = yes_foreign_training } }
-			NIA = { military_reform = yes_foreign_training }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_weapons = yes_foreign_weapons } }
-			NIA = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_officers = yes_foreign_officers } }
-			NIA = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
-		}
-		
-		random_owned = {
-			limit = { owner = { army_schools = yes_army_schools } }
-			NIA = { military_reform = yes_army_schools }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } }
-			NIA = { military_reform = yes_foreign_naval_officers }
-		}
-		
-		random_owned = {
-			limit = { owner = { naval_schools = yes_naval_schools } }
-			NIA = { military_reform = yes_naval_schools }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_navies = yes_foreign_navies } }
-			NIA = { military_reform = yes_foreign_navies activate_technology = post_nelsonian_thought }
-		}
-		
-		random_owned = {
-			limit = { owner = { foreign_artillery = yes_foreign_artillery } }
-			NIA = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
-		}
-		
-		ai_chance = { factor = 100 }
+		random_owned = { limit = { owner = { land_reform = yes_land_reform } } NIA = { economic_reform = yes_land_reform } }
+		random_owned = { limit = { owner = { admin_reform = yes_admin_reform } } NIA = { economic_reform = yes_admin_reform } }
+		random_owned = { limit = { owner = { finance_reform = yes_finance_reform } } NIA = { economic_reform = yes_finance_reform } }
+		random_owned = { limit = { owner = { finance_reform = finance_reform_two } } NIA = { economic_reform = finance_reform_two } }
+		random_owned = { limit = { owner = { monetary_reform = yes_monetary_reform } } NIA = { economic_reform = yes_monetary_reform } }
+		random_owned = { limit = { owner = { monetary_reform = monetary_reform_two } } NIA = { economic_reform = monetary_reform_two activate_technology = no_standard } }
+		random_owned = { limit = { owner = { education_reform = yes_education_reform } } NIA = { economic_reform = yes_education_reform } }
+		random_owned = { limit = { owner = { research_reform = yes_research_reform } } NIA = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy } }
+		random_owned = { limit = { owner = { foreign_training = yes_foreign_training } } NIA = { military_reform = yes_foreign_training } }
+		random_owned = { limit = { owner = { foreign_weapons = yes_foreign_weapons } } NIA = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles } }
+		random_owned = { limit = { owner = { foreign_officers = yes_foreign_officers } } NIA = { military_reform = yes_foreign_officers activate_technology = military_staff_system } }
+		random_owned = { limit = { owner = { army_schools = yes_army_schools } } NIA = { military_reform = yes_army_schools } }
+		random_owned = { limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } } NIA = { military_reform = yes_foreign_naval_officers } }	
+		random_owned = { limit = { owner = { naval_schools = yes_naval_schools } } NIA = { military_reform = yes_naval_schools } }
+		random_owned = { limit = { owner = { foreign_navies = yes_foreign_navies } } NIA = { military_reform = yes_foreign_navies activate_technology = post_nelsonian_thought } }
+		random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } } NIA = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 	}
 }
 
@@ -742,13 +555,14 @@ country_event = {
 			attacker_goal = { casus_belli = conquest_any }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
-		}		
+		}
 	}
 }
 
+#Nien Rebellion Crushed
 country_event = {
 	id = 99967
-	title = "EVTNAME99967" #Nien Rebellion Crushed
+	title = "EVTNAME99967" 
 	desc = "EVTDESC99967"
 	picture = "nien_rebellion"
 	
@@ -759,37 +573,23 @@ country_event = {
 		NOT = { has_country_flag = nien_rebellion_crushed }
 	}
 	
-	mean_time_to_happen = {
-		days = 5
-	}
+	mean_time_to_happen = { days = 5 }
 	
 	option = {
 		name = "EVT80126OPTA"
 		prestige = 10
 		plurality = -1
-		CHI_1508 = {
-			any_pop = {
-				reduce_pop = 0.95
-			}
-		}
-		CHI_1510 = {
-			any_pop = {
-				reduce_pop = 0.95
-			}
-		}
-		any_owned = {
-			limit = {
-				is_core = NIA
-			}
-			remove_core = NIA
-		}
+		CHI_1508 = { any_pop = { reduce_pop = 0.95 } }
+		CHI_1510 = { any_pop = { reduce_pop = 0.95 } }
+		any_owned = { limit = { is_core = NIA } remove_core = NIA }
 		set_country_flag = nien_rebellion_crushed
 	}
 }
 
+#Taiping Victory - British Response
 country_event = {
 	id = 99968
-	title = "EVTNAME99968" #Taiping Victory - British Response
+	title = "EVTNAME99968" 
 	desc = "EVTDESC99968"
 	picture = "taiping_attack"
 	
@@ -870,9 +670,7 @@ country_event = {
 		1608 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } remove_core = TPG }
 		1493 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } remove_core = TPG }
 		1538 = { remove_core = TPG }
-		TPG = {
-			country_event = 99970
-		}
+		TPG = { country_event = 99970 }
 		
 		ai_chance = {
 			factor = 35
@@ -912,11 +710,7 @@ country_event = {
 		prestige = -10
 		badboy = -2
 		end_war = TPG
-		relation = {
-			who = TPG
-			value = 150
-		}
-		
+		relation = { who = TPG value = 150 }
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -957,18 +751,10 @@ country_event = {
 	
 	option = {
 		name = "EVTOPT99969"
-		relation = {
-			who = FROM
-			value = 100
-		}
+		relation = { who = FROM value = 100 }
 		military_access = FROM
 		create_alliance = FROM
-		FROM = {
-			diplomatic_influence = {
-				who = THIS
-				value = 200
-			}
-		}
+		FROM = { diplomatic_influence = { who = THIS value = 200 } }
 		
 		ai_chance = {
 			factor = 90
@@ -989,9 +775,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB99969"
-		TPG = {
-			inherit = THIS
-		}
+		TPG = { inherit = THIS }
 		
 		ai_chance = {
 			factor = 20
@@ -1019,13 +803,8 @@ country_event = {
 		name = "EVT99970OPTA"
 		war = {
 			target = ENG
-			attacker_goal = {
-				casus_belli = unification_casus_belli
-				state_province_id = 1493 
-			}
-			defender_goal = { 
-				casus_belli = status_quo
-			}
+			attacker_goal = { casus_belli = unification_casus_belli state_province_id = 1493  }
+			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
 	}
@@ -1058,7 +837,6 @@ country_event = {
 	}
 }
 
-
 #Opium Habit Stamped Out
 country_event = {
 	id = 13066
@@ -1071,9 +849,7 @@ country_event = {
 		has_country_modifier = lin_zexu
 		year = 1840
 		war = no
-		any_owned_province = {
-			has_province_modifier = local_opium_habit
-		}
+		any_owned_province = { has_province_modifier = local_opium_habit }
 	}
 	
 	mean_time_to_happen = {
@@ -1099,29 +875,11 @@ country_event = {
 	option = {
 		name = "EVTOPTA13065"
 		random_state = {
-			limit = {
-				any_owned_province = { has_province_modifier = local_opium_habit }
-			}
-			any_owned = {
-				remove_province_modifier = local_opium_habit
-			}
-			any_pop = {
-				ideology = {
-					factor = 0.05
-					value = reactionary
-				}
-			}
+			limit = { any_owned_province = { has_province_modifier = local_opium_habit } }
+			any_owned = { remove_province_modifier = local_opium_habit }
+			any_pop = { ideology = { factor = 0.05 value = reactionary } }
 		}
-		random_country = {
-			limit = {
-				is_greater_power = yes
-				num_of_ports = 1
-			}
-			relation = {
-				who = THIS
-				value = -40
-			}
-		}
+		random_country = { limit = { is_greater_power = yes num_of_ports = 1 } relation = { who = THIS value = -40 } }
 	}
 }
 
@@ -1140,12 +898,7 @@ country_event = {
 		name = "EVOPTA13067"
 		prestige = -15
 		plurality = -1
-		capital_scope = {
-			add_province_modifier = {
-				name = legation_quarter
-				duration = -1
-			}
-		}
+		capital_scope = { add_province_modifier = { name = legation_quarter duration = -1 } }
 		remove_country_modifier = lin_zexu
 		any_owned = {
 			limit = {
@@ -1156,25 +909,18 @@ country_event = {
 					province_id = 1493
 				}
 			}
-			add_province_modifier = {
-				name = foreign_trading_post
-				duration = -1
-			}
+			add_province_modifier = { name = foreign_trading_post duration = -1 }
 		}
 		1493 = {
 			remove_province_modifier = canton_system
-			add_province_modifier = {
-				name = foreign_smugglers
-				duration = 3650
-			}
+			add_province_modifier = { name = foreign_smugglers duration = 3650 }
 		}
 		any_pop = {
-			limit = {
-				is_culture_group = east_asian
-			}
+			limit = { is_culture_group = east_asian }
 			militancy = 2
 			consciousness = 2
 		}
+		set_variable = { which = china_destablization value = 1 }
 	}
 }
 
@@ -1198,34 +944,19 @@ country_event = {
 		NOT = { has_global_flag = black_flag_army }
 	}
 	
-	mean_time_to_happen = { 
-		days = 14
-	}
+	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "EVT99993OPTA"
 		set_global_flag = black_flag_army
 		prestige = -5
 		1373 = {
-			any_pop = {
-				limit = {
-					is_culture_group = east_asian
-				}
-				reduce_pop = 1.1
-			}
+			any_pop = { limit = { is_culture_group = east_asian } reduce_pop = 1.1 }
 			add_core = HQJ
 		}
-		1371 = {
-			add_core = HQJ
-		}
-		1372 = {
-			add_core = HQJ
-		}
-		casus_belli = {
-			target = QNG 
-			type = release_puppet
-			months = 36
-		}
+		1371 = { add_core = HQJ }
+		1372 = { add_core = HQJ }
+		casus_belli = { target = QNG type = release_puppet months = 36 }
 		release = HQJ
 		HQJ = {
 			define_general = {
@@ -1255,10 +986,7 @@ country_event = {
 			create_alliance = HQJ
 			create_vassal = HQJ
 		}
-		any_owned = {
-			limit = { is_core = HQJ }
-			secede_province = HQJ
-		}
+		any_owned = { limit = { is_core = HQJ } secede_province = HQJ }
 	}
 }
 
@@ -1276,26 +1004,17 @@ country_event = {
 		FROM = {
 			create_vassal = HQJ
 			create_alliance = HQJ
-			
 			casus_belli = {
 				target = THIS
 				type = liberate_country
 				months = 120
 			}
 		}
-		HQJ = {
-			any_pop = { limit = { type = soldiers has_pop_culture = zhuang } reduce_pop = 5 }
-		}	
+		HQJ = { any_pop = { limit = { type = soldiers has_pop_culture = zhuang } reduce_pop = 5 } }	
 		war = {
 			target = QNG
-			attacker_goal = { 
-				casus_belli = release_puppet
-				country = HQJ
-			}
-			defender_goal = { 
-				casus_belli = liberate_country
-				country = DAI
-			}
+			attacker_goal = { casus_belli = release_puppet country = HQJ }
+			defender_goal = { casus_belli = liberate_country country = DAI }
 		}
 	}
 }

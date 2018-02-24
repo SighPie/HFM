@@ -100,8 +100,7 @@ country_event = {
 			factor = 0.5
 			mass_politics = 1
 		}
-		
-		modifer = { 
+		modifier = { 
 			factor = 0.1
 			year = 1920
 		}

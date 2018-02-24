@@ -1,5 +1,62 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+AUS_conservative;Metternich's Faction;Faction de Metternich;Metternich-Fraktion;;Facci? de Metternich;;;;;;;;;x;;;;
+AUS_conservative_2;Kolovrat's Faction;Faction de Kolovrat;Kolovrat-Fraktion;;Facci? de Kolovrat;;;;;;;;;x;;;;
+AUS_reactionary;Neo-absolutists;N?-absolutistes;Neo-Absolutisten;;Neoabsolutistas;;;;;;;;;x;;;;
+AUS_socialist;Radicals;Radicaux;Radikale;;Radicales;;;;;;;;;x;;;;
+AUS_liberal;Verfassungspartei;F??alistes;F?eralisten;;Federalistas;;;;;;;;;x;;;;
+AUS_conservative_3;Bach's Faction;Faction de Bach;Bach's Faction;;Facci? de Bach;;;;;;;;;x;;;;
+AUS_conservative_4;The Iron Ring;Iron Ring;The Iron Ring;;El Anillo de Hierro;;;;;;;;;x;;;;
+AUS_socialist_2;Socialists;Socialistes;Socialists;;Socialistas;;;;;;;;;x;;;;
+AUS_reactionary_2;Christlichsoziale Partei;Radicaux allemands;German Radicals;;Radicales alemanes;;;;;;;;;x;;;;
+AUS_conservative_5;Sozialdemokratische Partei Österreichs;Conservateurs;Conservatives;;Conservadores;;;;;;;;;x;;;;
+AUS_liberal_2;Föderalistische;Grands propri?aires f??alistes;Federalist Great Proprietors;;Grandes Pro
+MLW_dominion;Nyasaland;;;;;;;;;;;;x
+MLW_colonial_company;Nyasaland;;;;;;;;;;;;;x,
+NAL_dominion;Natal;;;;;;;;;;;;x
+NAL_colonial_company;Natal;;;;;;;;;;;;;x,
+ZAM_dominion;Northern Rhodesia;;;;;;;;;;;;x
+ZAM_colonial_company;Northern Rhodesia;;;;;;;;;;;;;x,
+#AFG_prussian_constitutionalism;The Kingdom of Afghanistan;;;;;;;;;;;;;;x
+#AFG_hms_government;The Kingdom of Afghanistan;;;;;;;;;;;;;;x
+ITA_theocracy;The Papal Kingdom;;;;;;;;;;;;;;x
+MTQ_ADJ;Martiniquan;;;;;;;;;;;;x
+MTQ;Martinique;;;;;;;;;;;;x
+SGP_dominion;The Straits Settlement;;;;;;;;;;;;x
+SGP_colonial_company;The Straits Settlement;;;;;;;;;;;;;x,
+SGP_ADJ;Singaporean;;;;;;;;;;;;x
+SGP;Singapore;;;;;;;;;;;;x
+SGP_democracy_ADJ;Singapore;;;;;;;;;;;;x
+SGP_liberal;Labour Front;;;;;;;;;;;;x
+SGP_conservative;People's Action Party;;;;;;;;;;;;x
+SGP_socialist;Barisan Sosialis;;;;;;;;;;;;x
+SGP_reactionary;Progressive Party;;;;;;;;;;;;x
+SGP_anarcho_liberal;National Union for Democracy and Progress;;;;;;;;;;;;x
+SGP_communist;Singapore Communist Party;;;;;;;;;;;;x
+SGP_fascist;Singapore Fascist Party;;;;;;;;;;;;x
+MLY_colonial_company;The Malayan Union;;;;;;;;;;;;x,
+MLY_dominon;The Malayan Union;;;;;;;;;;;;x,
+MUG_colonial_company;The Dominion of India;;;;;;;;;;;;x,
+MUG_dominon;The Dominion of India;;;;;;;;;;;;x,
+RHO_colonial_company;Rhodesia;;;;;;;;;;;;x
+RHO_dominion;Southern Rhodesia;;;;;;;;;;;;x
+NEW_colonial_company;The Newfoundland Colony;;;;;;;;;;;;x
+NEW_dominion;The Dominion of Newfoundland;;;;;;;;;;;;x
+AST_colonial_company;Australia;;;;;;;;;;;;x
+AST_dominion;The Dominion of Australia;;;;;;;;;;;;x
+AST_absolute_monarchy;The Dominion of Australia;;;;;;;;;;;;x
+AST_prussian_constitutionalism;The Dominion of Australia;;;;;;;;;;;;x
+AST_hms_government;The Dominion of Australia;;;;;;;;;;;;;x,
+NZL_colonial_company;The New Zealand Colony;;;;;;;;;;;;x
+NZL_dominion;The Dominion of New Zealand;;;;;;;;;;;;x
+NZL_absolute_monarchy;The Dominion of New Zealand;;;;;;;;;;;;x
+NZL_prussian_constitutionalism;The Dominion of New Zealand;;;;;;;;;;;;x
+NZL_hms_government;The Dominion of New Zealand;;;;;;;;;;;;;x,
+CAN_colonial_company;The Dominion of Canada;;;;;;;;;;;;x
+CAN_dominion;The Dominion of Canada;;;;;;;;;;;;x
+CAN_absolute_monarchy;The Dominion of Canada;;;;;;;;;;;;x
+CAN_prussian_constitutionalism;The Dominion of Canada;;;;;;;;;;;;x
+CAN_hms_government;The Dominion of Canada;;;;;;;;;;;;;x,
 VTU_colonial_company;New Hebrides;;;;;;;;;;;;x
 VTU_dominion;New Hebrides;;;;;;;;;;;;x
 SER_colonial_company;The Principality of Serbia;;;;;;;;;;;;x
@@ -112,6 +169,7 @@ KOR_colonial_company;Chosen;;;;;;;;;;;;;x,
 KOR_dominion;Chosen;;;;;;;;;;;;;x,
 TAI_colonial_company;Takasago;;;;;;;;;;;;;x,
 TAI_dominion;Takasago;;;;;;;;;;;;;x,
+SAF_hms_government;The Union of South Africa;;;;;;;;;;;;;x,
 SAF_colonial_company;The Cape Colony;;;;;;;;;;;;;x,
 SAF_dominon;The Cape Colony;;;;;;;;;;;;;x,
 PHL_colonial_company;Las Filipinas;;;;;;;;;;;;;x,
@@ -120,8 +178,8 @@ MAD_colonial_company;Protectorat de Madagascar;;;;;;;;;;;;;x,
 KNY_colonial_company;East Africa;;;;;;;;;;;;;x,
 NGR_colonial_company;West Africa;;;;;;;;;;;;;x,
 IRE_fascist_dictatorship;Eire;;;;;;;;;;;;;x,
-IRE_dominion;The Irish Dominion;;;;;;;;;;;;;x,
-IRE_hms_government;The Irish Free State;;;;;;;;;;;;;x,
+IRE_colonial_company;The Irish Dominion;;;;;;;;;;;;;x,
+IRE_dominion;The Irish Free State;;;;;;;;;;;;;x,
 UBD_absolute_monarchy;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_prussian_constitutionalism;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_hms_government;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -129,6 +187,7 @@ UBD_democracy;The Baltic Union;;;;;;;;;;;;;x,
 UBD_colonial_company;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
 UBD_dominon;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
 HND_colonial_company;The Raj;;;;;;;;;;;;x,
+HND_dominon;The Dominion of India;;;;;;;;;;;;x,
 TCA_colonial_company;Kavkaz Namestnik;;;;;;;;;;;;;x,
 DAI_colonial_company;Indochine;;;;;;;;;;;;;x
 INO_colonial_company;Oost-Indie;;;;;;;;;;;;;x
@@ -138,7 +197,7 @@ MOZ_colonial_company;Mocambique;;;;;;;;;;;;;x
 CMR_colonial_company;Kamerun;;;;;;;;;;;;;x
 ALD_colonial_company;Algerie;;;;;;;;;;;;;x
 ALD_dominion;Algerie;;;;;;;;;;;;;x
-COL_hms_government;The Dominion of Colombia;;;;;;;;;;;;;x
+COL_hms_government;The Dominion of Columbia;;;;;;;;;;;;;x
 NMB_colonial_company;Südwestafrika;;;;;;;;;;;;;x
 NMB_dominon;Südwestafrika;;;;;;;;;;;;;x
 TNZ_colonial_company;Ostafrika;;;;;;;;;;;;;x

@@ -1,4 +1,10 @@
 ;;;;;;;;;;;x
+AGRESSION_WAR_CONQUEST_NAME_ENG_ASH;The War of the Golden Stool;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_NAME_ENG_ASH;The War of the Golden Stool;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_ASH;The 2nd Ashanti Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_ENG_ASH;The 2nd Ashanti Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONCESSION_NAME_ENG_ASH;The Ashanti Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONCESSION_NAME_ENG_ASH;The $ORDER$Ashanti Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
 AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_FRA_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,
 NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_BOR_ENG;The $ORDER$Anglo-French War;;;;;;;;;;;;x,,,

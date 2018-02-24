@@ -1590,9 +1590,7 @@ political_decisions = {
 		
 		effect = {
 			random_owned = {
-				limit = {
-					province_id = 690
-				}
+				limit = { province_id = 690 }
 				690 = { change_province_name = "Gdánsk" }
 				owner = { 
 					set_global_flag = danzig_rename_polish
@@ -1600,9 +1598,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = {
-					province_id = 691
-				}
+				limit = { province_id = 691 }
 				691 = { 
 					change_province_name = "Tuchola" 
 					state_scope = { change_region_name = "Pomorskie" }
@@ -1747,9 +1743,19 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = central_hungary_rename_hun
-			641 = { 
-				change_province_name = "Pest"
-				state_scope = { change_region_name = "Közép-Magyarország" }
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = budapest_founded } } }
+				641 = { 
+					change_province_name = "Pest"
+					state_scope = { change_region_name = "Közép-Magyarország" }
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_global_flag = budapest_founded } }
+				641 = { 
+					change_province_name = "Budapest"
+					state_scope = { change_region_name = "Közép-Magyarország" }
+				}
 			}
 			645 = { change_province_name = "Kecskemét" }
 			646 = { change_province_name = "Miskolc" }
@@ -1775,9 +1781,19 @@ political_decisions = {
 		
 		effect = {
 			clr_global_flag = central_hungary_rename_hun
-			641 = { 
-				change_province_name = "Pest"
-				state_scope = { change_region_name = "Pest-Ofen" }
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = budapest_founded } } }
+				641 = { 
+					change_province_name = "Pesth"
+					state_scope = { change_region_name = "Pesth-Ofen" }
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_global_flag = budapest_founded } }
+				641 = { 
+					change_province_name = "Ofenpesth"
+					state_scope = { change_region_name = "Pesth-Ofen" }
+				}
 			}
 			645 = { change_province_name = "Ketschkemet" }
 			646 = { change_province_name = "Mischkolz" }

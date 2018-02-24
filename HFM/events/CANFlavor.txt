@@ -371,15 +371,14 @@ country_event = {
 			}
 		}
 		any_owned = { 
-			limit = { 
-				is_core = CAN
-			}
+			limit = { is_core = CAN }
 			secede_province = CAN
 		}
 		create_vassal = CAN
 		CAN = {
 			prestige = -100
 			relation = { who = USA value = 200 }
+			government = dominion
 		}
 		13 = {
 			add_province_modifier = {
@@ -516,6 +515,7 @@ country_event = {
 		release_vassal = CAN
 		CAN = {
 			prestige = -100
+			government = dominion
 			relation = { who = USA value = 200 }
 		}
 		relation = {
@@ -615,9 +615,7 @@ country_event = {
 			who = QUE
 			value = 200
 		}
-		any_pop = {
-			consciousness = 1
-		}
+		any_pop = { consciousness = 1 }
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -828,6 +826,7 @@ country_event = {
 		}
 		create_vassal = MRU
 		MRU = {
+			government = dominion
 			prestige = -100
 			relation = { who = USA value = 200 }
 		}
@@ -957,6 +956,7 @@ country_event = {
 		}
 		release_vassal = MRU
 		MRU = {
+			government = dominion
 			prestige = -100
 			relation = { who = USA value = 200 }
 		}
@@ -1076,6 +1076,7 @@ country_event = {
 		}
 		create_vassal = COL
 		COL = {
+			government = dominion
 			prestige = -100
 			relation = { who = USA value = 200 }
 		}
@@ -1206,6 +1207,7 @@ country_event = {
 		}
 		release_vassal = COL
 		COL = {
+			government = dominion
 			prestige = -100
 			relation = { who = USA value = 200 }
 		}
@@ -1278,6 +1280,7 @@ country_event = {
 				AND = {
 					relation = { who = THIS value = 100 }
 					OR = {
+						government = dominion
 						government = hms_government
 						government = democracy
 					}
@@ -1651,6 +1654,10 @@ country_event = {
 			OR = {
 				in_sphere = THIS
 				vassal_of = THIS
+				AND = {
+					government = dominion
+					relation = { who = THIS value = 100 }
+				}
 				AND = {
 					government = hms_government
 					relation = { who = THIS value = 100 }

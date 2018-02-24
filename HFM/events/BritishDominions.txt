@@ -42,6 +42,10 @@ country_event = {
 			year = 1912
 			NOT = { has_country_flag = NEW_independence_refused }
 		}
+		modifier = {
+			factor = 0.01
+			exists = NZL
+		}
 	}
 
 	option = {
@@ -57,14 +61,13 @@ country_event = {
 			all_core = { remove_core = THIS remove_core = ENG }
 		}
 		any_owned = { 
-			limit = { 
-				is_core = NEW
-			}
+			limit = { is_core = NEW }
 			secede_province = NEW
 		}
 		create_vassal = NEW
-		NEW = {
-			prestige = -80
+		NEW = { 
+			prestige = -80 
+			government = dominion
 		}
 		relation = {
 			who = NEW
@@ -303,17 +306,13 @@ country_event = {
 			limit = { location = { is_core = AST } }
 			militancy = -10
 		}
-		AST = {
-			all_core = { remove_core = THIS remove_core = ENG }
-		}
-		any_owned = { 
-			limit = { 
-				is_core = AST
-			}
-			secede_province = AST
-		}
+		AST = { all_core = { remove_core = THIS remove_core = ENG } }
+		any_owned = { limit = { is_core = AST } secede_province = AST }
 		create_vassal = AST
-		AST = { prestige = -80 }
+		AST = { 
+			government = dominion
+			prestige = -80 
+		}
 		relation = {
 			who = AST
 			value = 200
@@ -434,7 +433,10 @@ country_event = {
 			all_core = { remove_core = THIS remove_core = ENG }
 		}
 		release_vassal = AST
-		AST = { prestige = -80 }
+		AST = { 
+			prestige = -80 
+			government = dominion
+		}
 		relation = {
 			who = AST
 			value = 200
@@ -508,23 +510,16 @@ country_event = {
 			limit = { location = { is_core = NZL } }
 			militancy = -10
 		}
-		AOT = {
-			all_core = { remove_core = AOT }
-		}
 		NZL = {
 			set_country_flag = post_colonial_country
 			all_core = { remove_core = THIS remove_core = ENG }
 		}
-		any_owned = { 
-			limit = { 
-				is_core = NZL
-			}
-			secede_province = NZL
-		}
+		any_owned = { limit = { is_core = NZL } secede_province = NZL }
 		create_vassal = NZL
 		NZL = {
 			prestige = -80
 			capital = 2512
+			government = dominion
 		}
 		relation = {
 			who = NZL
@@ -534,9 +529,7 @@ country_event = {
 			who = NZL
 			value = 200
 		}
-		any_pop = {
-			consciousness = 1
-		}
+		any_pop = { consciousness = 1 }
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -600,9 +593,7 @@ country_event = {
 		set_country_flag = NZL_independence_refused
 		any_owned = {
 			limit = { is_core = NZL }
-			any_pop = {
-				militancy = 3
-			}
+			any_pop = { militancy = 3 }
 		}
 		ai_chance = {
 			factor = 20
@@ -656,6 +647,7 @@ country_event = {
 		NZL = {
 			prestige = -80
 			capital = 2512
+			government = dominion
 		}
 		relation = {
 			who = NZL
@@ -751,11 +743,10 @@ country_event = {
 			limit = { location = { is_core = SAF } }
 			militancy = -10
 		}
-		SAF = {
-			all_core = { remove_core = THIS remove_core = ENG }
-		}
+		SAF = { all_core = { remove_core = THIS remove_core = ENG } }
 		release_vassal = SAF
 		SAF = {
+			government = hms_government
 			prestige = -80
 			capital = 2087
 		}
@@ -1508,22 +1499,13 @@ country_event = {
 			limit = { location = { is_core = RHO } }
 			militancy = -10
 		}
-		RHO = { all_core = { remove_core = ENG } }
-		any_owned = { limit = { is_core = RHO }
-			secede_province = RHO 
-			}
-		release_vassal = RHO
-		relation = {
-			who = RHO
-			value = 200
-		}
-		diplomatic_influence = {
-			who = RHO
-			value = 200
-		}
-		any_pop = {
-			consciousness = 1
-		}
+		RHO = { government = dominion all_core = { remove_core = ENG } }
+		ZAM = { all_core = { remove_core = RHO } }
+		any_owned = { limit = { is_core = RHO } secede_province = RHO }
+		create_vassal = RHO
+		relation = { who = RHO value = 200 }
+		diplomatic_influence = { who = RHO value = 200 }
+		any_pop = { consciousness = 1 }
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -1583,9 +1565,7 @@ country_event = {
 		set_country_flag = RHO_independence_refused
 		any_owned = {
 			limit = { is_core = RHO }
-			any_pop = {
-				militancy = 3
-			}
+			any_pop = { militancy = 3 }
 		}
 		ai_chance = {
 			factor = 80

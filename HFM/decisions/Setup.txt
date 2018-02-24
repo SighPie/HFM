@@ -2045,8 +2045,8 @@ political_decisions = {
 		
 		effect = {
 			any_pop = { limit = { has_pop_culture = south_german } literacy = 0.5 }
-			GRE_837 = { add_province_modifier = { name = small_baby_boom duration = 2920 } }
-			GRE_826 = { add_province_modifier = { name = small_baby_boom duration = 2920 } }
+			GRE_837 = { add_province_modifier = { name = small_baby_boom duration = 3650 } }
+			GRE_826 = { add_province_modifier = { name = small_baby_boom duration = 3650 } }
 			SER = {
 				any_owned = { add_province_modifier = { name = small_baby_boom duration = 5475 } }
 			}
@@ -2304,6 +2304,7 @@ political_decisions = {
 			any_country = { limit = { civilized = yes is_greater_power = no is_secondary_power = no NOT = { number_of_states = 2 } } treasury = 1000 }
 			any_country = { limit = { civilized = no NOT = { tag = QNG } } treasury = 500 }
 			QNG = {
+				set_variable = { which = china_destablization value = 0 }
 				any_pop = {
 					limit = {
 						location = { region = CHI_1485 }

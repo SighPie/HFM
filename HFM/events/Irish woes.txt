@@ -1247,12 +1247,11 @@ country_event = {
 			}
 			militancy = -10
 		}
-		IRE = {
-			all_core = { remove_core = THIS }
-		}
+		IRE = { all_core = { remove_core = THIS } }
 		release_vassal = IRE
 		IRE = {
 			prestige = -80
+			government = dominion
 			any_owned = {
 				limit = { region = ENG_254 }
 				add_core = THIS
@@ -1385,6 +1384,7 @@ country_event = {
 		}
 		release_vassal = IRE
 		IRE = {
+			government = dominion
 			prestige = -80
 			any_owned = {
 				limit = { region = ENG_254 }

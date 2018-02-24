@@ -127,49 +127,13 @@ political_decisions = {
 			set_country_flag = gov_india
 			remove_country_modifier = eic_balance2
 			any_country = {
-				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
+				limit = { ai = yes is_culture_group = south_asian civilized = no vassal_of = THIS }
 				economic_reform = yes_land_reform
+				military_reform = yes_foreign_officers
+				military_reform = yes_foreign_naval_officers
 			}
 		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	eic_ai_transports = {
-		picture = map_india
-		potential = {
-			tag = EIC
-			is_substate = yes
-			NOT = { has_country_flag = eic_ai_transports }
-		}
-
-		allow = {
-			war_with = QNG
-			year = 1838
-		}
-
-		effect = {
-			1251 = {
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-				sub_unit = { type = clipper_transport value = current }
-			}
-			set_country_flag = eic_ai_transports
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	anglo_afghan_war = {
@@ -259,7 +223,7 @@ political_decisions = {
 				consciousness = -2
 			}
 			any_country = {
-				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
+				limit = { ai = yes is_culture_group = south_asian civilized = no vassal_of = THIS }
 				economic_reform = yes_admin_reform
 			}
 		}
@@ -326,7 +290,7 @@ political_decisions = {
 				reduce_pop = 2.5
 			}
 			any_country = {
-				limit = { exists = yes civilized = no is_culture_group = south_asian vassal_of = THIS }	
+				limit = { ai = yes exists = yes civilized = no is_culture_group = south_asian vassal_of = THIS }	
 				economic_reform = yes_education_reform
 			}
 		}

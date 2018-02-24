@@ -36,7 +36,6 @@ political_decisions = {
 			}
 			war = no
 			TUR = {
-				is_greater_power = no
 				war = no
 				NOT = { truce_with = THIS }
 			}
@@ -111,7 +110,11 @@ political_decisions = {
 			war = no
 			NOT = { truce_with = TUR }
 			NOT = { is_sphere_leader_of = TUR }
-			has_recently_lost_war = no
+			NOT = {
+				is_disarmed = yes
+				war_exhaustion = 1
+				num_of_revolts = 1
+			}
 		}
 		
 		effect = {
@@ -139,6 +142,7 @@ political_decisions = {
 					has_country_flag = england_protecting_interests
 				}
 				diplomatic_influence = { who = TUR value = 100 }
+				create_alliance = TUR
 				leave_alliance = THIS
 			}
 			random_country = {

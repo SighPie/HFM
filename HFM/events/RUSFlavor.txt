@@ -496,7 +496,7 @@ country_event = {
 		random_owned = {
 			limit = { owner = { is_culture_group = british } }
 			LSK = { primary_culture = anglo_canadian }
-			LSK = { government = hms_government }
+			LSK = { government = democracy }
 		}
 		FROM = {
 			remove_accepted_culture = alaskan

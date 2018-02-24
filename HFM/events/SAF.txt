@@ -691,6 +691,8 @@ country_event = {
 		2068 = { change_province_name = "Herculaastad" }
 		2108 = { any_pop = { limit = { type = soldiers culture = boer } move_pop = 2068 } }
 		2108 = { any_pop = { limit = { type = artisans culture = boer } pop_type = soldiers } }
+		ZAM = { government = colonial_company }
+		MLW = { government = colonial_company }
 	}
 	
 	option = {

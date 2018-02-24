@@ -479,7 +479,7 @@ paper_mill = {
 regular_clothes_factory = {       
 	template = factory_template
 	input_goods = {  
-		fabric = 40		#72	total input+maint = 82
+		fabric = 35		#72	total input+maint = 82
 	}
 	output_goods = regular_clothes 
 	value = 15			#87
@@ -780,7 +780,7 @@ coffee_plantation = {
 cotton_plantation = {
 	template = RGO_template_farmers
 	output_goods = cotton 
-	value = 1.8 #3
+	value = 2.0 #3
 	farm = yes
 }
 

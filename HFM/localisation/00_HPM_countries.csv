@@ -2225,9 +2225,9 @@ SON_socialist;Partido Socialist;Partido socialiste;Partido Socialist;;;;;;;;;;;;
 SON_communist;Partido Communist;Partido communiste;Partido Communist;;;;;;;;;;;;x;;;;;;;;;;;;;;
 SON_fascist;Partido Fascist;Partido fasciste;Partido Fascist;;;;;;;;;;;;x;;;;;;;;;;;;;;
 SPC;Spain;;;;;;;;;;;;;x
-SPC_absolute_monarchy;The Spanish Empire;;;;;;;;;;;;;x
-SPC_prussian_constitutionalism;The Spanish Empire;;;;;;;;;;;;;x
-SPC_hms_government;The Spanish Empire;;;;;;;;;;;;;x
+SPC_absolute_monarchy;The Kingdom of Spain;;;;;;;;;;;;;x
+SPC_prussian_constitutionalism;The Kingdom of Spain;;;;;;;;;;;;;x
+SPC_hms_government;The Kingdom of Spain;;;;;;;;;;;;;x
 SPC_ADJ;Spanish;;;;;;;;;;;;;x
 SPU;South Peru;;;;;;;;;;;;;x
 SPU_ADJ;South Peruvian;;;;;;;;;;;;;x
@@ -2465,7 +2465,7 @@ TRK;Truk;Truk;Truk;;;;;;;;;;;;x
 TRK_ADJ;Trukese;Trukese;Trukese;;;;;;;;;;;;x
 TRS;Tarasco;;;;;;;;;;;;;x
 TRS_ADJ;Tarascan;;;;;;;;;;;;;x
-TTB;Trinidad;Trinité & Tobago;Trinidad & Tobago;;Trinidad & Tobago;;;;;;;;;x
+TTB;Trinidad & Tobago;Trinité & Tobago;Trinidad & Tobago;;Trinidad & Tobago;;;;;;;;;x
 TTB_ADJ;Trinidadian;Trinidadien;Trinidadisch;;Trinidadian;;;;;;;;;x
 TTB_conservative;Conservative Party;Conservative Party;Conservative Party;;;;;;;;;;;x
 TTB_liberal;Citizens' Alliance;Citizens' Alliance;Citizens' Alliance;;;;;;;;;;;x

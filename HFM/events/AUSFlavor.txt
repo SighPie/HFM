@@ -861,9 +861,9 @@ country_event = {
 		random_owned = { limit = { owner = { primary_culture = north_german } } owner = { set_global_flag = prussia_agrees } }
 		random_owned = { limit = { owner = { primary_culture = russian } } owner = { set_global_flag = russia_agrees } }
 		ai_chance = {
-			factor = 0.98
-			modifier = { factor = 0.5 NOT = { relation = { who = AUS value = 0 } } }
-			modifier = { factor = 0.75 NOT = { relation = { who = AUS value = 50 } } }
+			factor = 0.99
+			modifier = { factor = 0.75 NOT = { relation = { who = AUS value = 0 } } }
+			modifier = { factor = 0.9 NOT = { relation = { who = AUS value = 50 } } }
 		}
 	}
 	
@@ -880,7 +880,7 @@ country_event = {
 		relation = { who = AUS value = -100 }
 		any_pop = { limit = { is_culture_group = polish_culture_group } militancy = 7 consciousness = 9 }
 		ai_chance = { 
-			factor = 0.02
+			factor = 0.01
 			modifier = { factor = 1.5 NOT = { relation = { who = AUS value = 0 } } }
 			modifier = { factor = 1.75 NOT = { relation = { who = AUS value = 50 } } }
 		}
@@ -958,11 +958,9 @@ country_event = {
 		}
 	}
 	
-	
 	mean_time_to_happen = { days = 4 } 
 	
 	fire_only_once = yes
-
 	
 	option = {
 		name = "EVT600055OPTA" #We don't care

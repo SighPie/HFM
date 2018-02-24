@@ -101,9 +101,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	treaty_of_paris_anglo_persian = {
@@ -225,7 +223,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			nationalism_n_imperialism = 1
+			state_n_government = 1
 			war = no
 			NOT = { truce_with = RUS }
 			NOT = { truce_with = AFG }
@@ -247,11 +245,10 @@ political_decisions = {
 			is_disarmed = no
 			OR = {
 				PER = { vassal_of = RUS }
-				PER = {
-					any_core = { 
-						owned_by = RUS
-					}
-				}
+				1149 = { owned_by = RUS } 
+				1108 = { owned_by = RUS }
+				1113 = { owned_by = RUS }
+				1142 = { owned_by = RUS }
 			}
 			1251 = {
 				OR = {
@@ -263,7 +260,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			nationalism_n_imperialism = 1
+			state_n_government = 1
 			war = no
 			NOT = { truce_with = RUS }
 			NOT = { truce_with = PER }

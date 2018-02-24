@@ -313,14 +313,21 @@ country_event = {
 				duration = 365
 			}
 		}
-		any_owned = {
+		any_pop = { limit = { location = { is_core = MCK } NOT = { type = slaves } } literacy = 0.1 }
+		random_owned = {
 			limit = { 
-				is_core = MCK
+				owner = {
+					owns = 1479
+					owns = 1616
+				}
 			}
-			any_pop = {
-				literacy = 0.05
+			owner = {
+				capital = 1479 
+				build_factory_in_capital_state = steel_factory
+				build_factory_in_capital_state = glass_factory
 			}
 		}
+		random_owned = { limit = { province_id = 1616 } THIS = { capital = 1616 } } #Peking
 	}
 }
 

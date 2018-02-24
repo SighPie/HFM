@@ -1,6 +1,5 @@
 owner = ENG
 controller = ENG
-add_core = ENG
 trade_goods = fruit
 life_rating = 35
 colonial = 2

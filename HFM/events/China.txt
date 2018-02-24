@@ -27,6 +27,12 @@ country_event = {
 			limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
 			owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
 		}
+		remove_country_modifier = missionary_activity
+		religion = mahayana
+		set_country_flag = mahayana_country
+		clr_country_flag = protestant_country
+		clr_country_flag = change_to_protestant
+		clr_country_flag = missionary_activity
 		MCK = { all_core = { add_core = CHI } }
 		XBI = { all_core = { add_core = CHI } }
 		XIN = { all_core = { add_core = CHI } }

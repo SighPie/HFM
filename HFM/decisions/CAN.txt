@@ -20,7 +20,7 @@ political_decisions = {
 			CAN_60 = { add_core = QUE }
 			capital = 57
 			46 = { state_scope = { change_region_name = "Southern Ontario" } }
-			58 = { state_scope = { change_region_name = "QuÃ©bec" } }
+			58 = { state_scope = { change_region_name = "Québec" } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -59,7 +59,7 @@ political_decisions = {
 				add_core = QUE
 				remove_core = RPL
 			}
-			58 = { state_scope = { change_region_name = "QuÃ©bec" } }
+			58 = { state_scope = { change_region_name = "Québec" } }
 		}
 		ai_will_do = {
 			factor = 1

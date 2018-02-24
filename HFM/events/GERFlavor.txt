@@ -423,6 +423,7 @@ country_event = {
 		2043 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 		2044 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 		2046 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+		
 		ai_chance = { factor = 100 }
 	}
 

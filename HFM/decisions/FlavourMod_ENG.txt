@@ -150,7 +150,7 @@ political_decisions = {
 	}
 	
 	the_irish_dominion = {
-		picture = gtfo
+		picture = ireland
 		potential = {
 			tag = ENG
 			exists = IRE
@@ -161,7 +161,7 @@ political_decisions = {
 				}
 				ai = yes
 				vassal_of = ENG
-				NOT = { government = french_bourbon }
+				NOT = { government = colonial_company }
 				owns = 254
 			}
 			truce_with = IRE
@@ -179,24 +179,27 @@ political_decisions = {
 			set_country_flag = the_irish_dominion
 			prestige = 5
 			IRE = {
-				government = dominion
+				government = colonial_company
 				add_accepted_culture = british
+				any_owned = {
+					limit = { region = ENG_254 }
+					add_core = THIS
+					secede_province = THIS
+				}
 			}
-			255 = { secede_province = THIS }
-			256 = { secede_province = THIS }
-			254 = { secede_province = THIS }
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
 	
 	the_irish_republic = {
-		picture = gtfo
+		picture = ireland
 		potential = {
 			tag = IRE
 			OR = {
 				government = hms_government
 				government = dominion
+				government = colonial_company
 			}
 			NOT = { has_country_flag = easter_rising }
 			is_vassal = no
@@ -218,10 +221,8 @@ political_decisions = {
 		effect = {
 			set_country_flag = the_irish_republic
 			prestige = 5
-			IRE = {
-				government = democracy
-				remove_accepted_culture = british
-			}
+			government = democracy
+			remove_accepted_culture = british
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -722,6 +723,49 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+	}
+	
+	papua_colony = {
+		picture = papua_act
+		potential = {
+			tag = ENG
+			has_global_flag = berlin_conference
+			is_greater_power = yes
+			is_disarmed = no
+			invention = prophylaxis_against_malaria
+			invention = mission_to_civilize
+			invention = colonial_negotiations
+			2530 = { OR = { owned_by = GER owned_by = GCF } }
+			2468 = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						OR = {
+						vassal_of = THIS
+						substate_of = THIS
+						}
+					}
+				}
+			}
+			NOT = { has_country_flag = papua_colony }
+		}
+
+		allow = { NOT = { any_greater_power = { war_with = THIS } } }
+
+		effect = {
+			set_country_flag = papua_colony
+			badboy = 1
+			2529 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+			2528 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.9
+			}
+		}
 	}
 	
 	papua_act = {

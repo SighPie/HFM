@@ -186,7 +186,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
-			
+			government = dominion
 			government = colonial_company
 		}
 	}
@@ -207,7 +207,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
-			
+			government = dominion
 			government = colonial_company
 		}
 	}
@@ -1274,7 +1274,12 @@ serfs = {
 				location = { is_colonial = yes is_overseas = yes }
 				AND = { 
 					location = { is_colonial = yes }
-					country = { government = colonial_company }
+					country = { 
+						OR = {
+							government = colonial_company 
+							government = dominion
+						}
+					}
 				}
 			}
 			is_primary_culture = no
@@ -1292,7 +1297,12 @@ serfs = {
 				location = { is_colonial = yes is_overseas = yes }
 				AND = { 
 					location = { is_colonial = yes }
-					country = { government = colonial_company }
+					country = { 
+						OR = {
+							government = colonial_company 
+							government = dominion
+						}
+					}
 				}
 			}
 			is_primary_culture = no

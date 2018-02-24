@@ -192,37 +192,30 @@ country_event = {
 			factor = 0.3
 			year = 1902
 		}
-
 		modifier = {
 			factor = 0.1
 			year = 1903
 		}
-		
 		modifier = {
 			factor = 0.01
 			year = 1904
 		}
-
 		modifier = {
 			factor = 0.5
 			civilized = yes
 		}
-
 		modifier = {
 			factor = 0.8
 			average_militancy = 6
 		}
-
 		modifier = {
 			factor = 0.8
 			average_militancy = 7
 		}
-
 		modifier = {
 			factor = 0.8
 			average_militancy = 8
 		}
-
 		modifier = {
 			factor = 0.8
 			average_militancy = 9 
@@ -260,6 +253,6 @@ country_event = {
 				factor = 0.1
 			}
 		}
-
+		set_variable = { which = china_destablization value = 1 }
 	}
 }

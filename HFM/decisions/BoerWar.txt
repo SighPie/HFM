@@ -430,7 +430,10 @@ political_decisions = {
 		
 		allow = {
 			war = yes
-			2087 = { controlled_by = THIS }
+			2087 = { 
+				controlled_by = THIS 
+				province_control_days = 120
+			}
 			SAF = {
 				all_core = {
 					OR = {
@@ -447,6 +450,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			set_global_flag = won_boer_war
 			random_country = {
 				limit = {
 					owns = 2087

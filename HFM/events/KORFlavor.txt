@@ -167,14 +167,8 @@ country_event = {
 			months = 12
 		}
 		random_country = {
-			limit = {
-				tag = RUS
-				ai = yes
-			}
-			diplomatic_influence = {
-				who = THIS
-				value = -400
-			}
+			limit = { tag = RUS ai = yes }
+			diplomatic_influence = { who = KOR value = -400 }
 		}
 		war = {
 			target = KOR

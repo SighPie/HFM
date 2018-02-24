@@ -89,6 +89,18 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
+						tag = CAN
+						tag = AST
+						tag = NEW
+						tag = NZL
+						tag = COL
+						tag = MRU
+					}
+					vassal_of = ENG
+					NOT = { has_global_flag = british_commonwealth }
+				}
+				AND = {
+					OR = {
 						tag = BLZ
 						tag = NGR
 						tag = MLT
@@ -99,6 +111,12 @@ political_decisions = {
 						tag = SEY
 						tag = IOT
 						tag = MAU
+						tag = HND
+						tag = BUR
+						tag = JAM
+						tag = MLY
+						tag = NEN
+						tag = TTB
 					}
 					vassal_of = ENG
 				}
@@ -205,7 +223,7 @@ political_decisions = {
 						tag = ACA
 						tag = FCA
 						tag = QUE
-						tag = AST
+						tag = FAS
 					}
 					vassal_of = BOR
 				}
@@ -466,11 +484,22 @@ political_decisions = {
 				owner = { government = prussian_constitutionalism }
 			}
 			random_owned = {
-				limit = { owner = { tag = NOR } }
-				owner = { government = hms_government }
-			}
-			random_owned = {
-				limit = { owner = { tag = MSK } }
+				limit = {
+					owner = {
+						OR = {
+							tag = NOR 
+							tag = NEW
+							tag = RHO
+							tag = SAF
+							tag = CAN
+							tag = NZL
+							tag = AST
+							tag = COL
+							tag = MRU
+							tag = MSK
+						}
+					} 	
+				}
 				owner = { government = hms_government }
 			}
 		}

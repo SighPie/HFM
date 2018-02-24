@@ -53,6 +53,8 @@ MSK		="countries/Mosquito Coast.txt"
 MAU		="countries/Mauritius.txt"
 SEY		="countries/Seychelles.txt"
 IOT		="countries/Indian Ocean Territory.txt"
+SGP		="countries/Singapore.txt"
+MTQ		="countries/Martinique.txt"
 
 ###Colonial Spain Countries
 CGC 	= "countries/Colonial Chile.txt"

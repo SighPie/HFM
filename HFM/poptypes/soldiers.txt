@@ -194,7 +194,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
-			
+			government = dominion
 			government = colonial_company
 		}
 	}
@@ -215,7 +215,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
-			
+			government = dominion
 			government = colonial_company
 		}
 	}
@@ -805,7 +805,12 @@ promote_to = {
 							continent = africa
 						}
 					}
-					country = { government = colonial_company }
+					country = {
+						OR = {
+							government = colonial_company 
+							government = dominion
+						}
+					}
 				}
 			}
 			is_primary_culture = no

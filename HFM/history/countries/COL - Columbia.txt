@@ -1,7 +1,7 @@
 capital = 13
 primary_culture = anglo_canadian
 religion = protestant
-government = hms_government
+government = colonial_company
 plurality = 0.5
 nationalvalue = nv_liberty
 literacy = 0.6

@@ -896,14 +896,14 @@ national_tragedy = {
 ##### CIVILIZATION AND GUNBOATS #####
 missionary_activity = {
 	research_points_modifier = 0.05
-	education_efficiency_modifier = 0.025
-	global_pop_militancy_modifier = 0.02
+	education_efficiency_modifier = 0.05
+	global_pop_militancy_modifier = 0.05
 	icon = 13
 }
 
 western_influences = {
-	global_pop_militancy_modifier = 0.1
-	global_pop_consciousness_modifier = 0.1
+	global_pop_militancy_modifier = 0.05
+	global_pop_consciousness_modifier = 0.05
 	research_points_modifier = 0.2
 	icon = 10
 }
@@ -1144,6 +1144,7 @@ the_massacre = {
 	population_growth = -0.01
 	icon = 18
 }
+
 fascist_welfare = {
 	poor_everyday_needs = -0.1
 	population_growth = 0.001
@@ -1159,7 +1160,7 @@ beer_hall_putsch = {
 
 ##### Civilization & Gunboats #####
 local_opium_habit = {
-	local_RGO_throughput = -0.2
+	local_RGO_throughput = -0.15
 	land_organisation = -0.005
 	naval_organisation = -0.005
 	pop_consciousness_modifier = -0.05
@@ -1713,6 +1714,7 @@ the_french_foreign_legion = {
 	prestige = 0.01
 	mobilisation_size = 0.015
 	land_unit_start_experience = 5
+	global_immigrant_attract = 0.1
 	icon = 17
 }
 
@@ -2002,8 +2004,8 @@ self_strengthening_movement = {
 	prestige = 0.05
 	research_points = 2.0
 	org_regain = 0.1
-	global_pop_consciousness_modifier = 0.05
-	global_pop_militancy_modifier = 0.02
+	global_pop_consciousness_modifier = 0.1
+	global_pop_militancy_modifier = 0.1
 	icon = 17
 }
 
@@ -2959,7 +2961,7 @@ the_xiang_army = {
 
 the_eight_banners = {
 	land_organisation = -0.05
-	naval_organisation = -0.2
+	naval_organisation = -0.25
 	administrative_efficiency_modifier = -0.1
 	min_military_spending = 0.25
 	tax_efficiency = -0.05

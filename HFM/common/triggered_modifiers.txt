@@ -603,7 +603,10 @@ help_ai_spain = {
 			owns = 487
 			owns = 1649
 		}
-		centralization = regionalism
+		OR = { 
+			centralization = regionalism
+			primary_culture = japanese
+		}
 		ai = yes
 	}
 	icon = 10

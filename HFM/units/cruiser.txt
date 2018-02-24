@@ -8,7 +8,7 @@ cruiser = {
 	unit_type = light_ship
 	move_sound = steam_move
 	select_sound = steam_selected
-	colonial_points = 16
+	colonial_points = 25
 	
 	#Core Abilities
 	priority = 12

@@ -8,6 +8,10 @@ SIA = {
 	value = -200		#relation
 }
 
+DAI = {
+	value = -100		#relation
+}
+
 army = {
 	name = "Army of Burma"
 	location = 1335

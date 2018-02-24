@@ -813,6 +813,10 @@ country_event = {
 			type = cut_down_to_size
 			months = 60
 		}
+		war = {
+			target = SIA
+			attacker_goal = { casus_belli = cut_down_to_size }
+		}
 	}
 }
 

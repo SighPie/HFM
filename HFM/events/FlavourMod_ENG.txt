@@ -44,36 +44,28 @@ country_event = {
 				is_greater_power = yes
 				NOT = { alliance_with = THIS }
 			}
-			TUR = {
-				is_greater_power = no
-			}
+			TUR = { is_greater_power = no }
 		}
 		OR = {
 			BEL = {
 				is_greater_power = yes
 				NOT = { alliance_with = THIS }
 			}
-			BEL = {
-				is_greater_power = no
-			}
+			BEL = { is_greater_power = no }
 		}
 		OR = {
 			JAP = {
 				is_greater_power = yes
 				NOT = { alliance_with = THIS }
 			}
-			JAP = {
-				is_greater_power = no
-			}
+			JAP = { is_greater_power = no }
 		}
 		OR = {
 			POR = {
 				is_greater_power = yes
 				NOT = { alliance_with = THIS }
 			}
-			POR = {
-				is_greater_power = no
-			}
+			POR = { is_greater_power = no }
 		}
 	}
 
@@ -125,9 +117,7 @@ country_event = {
 	major = yes
 	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		days = 14
-	}
+	mean_time_to_happen = { days = 14 }
 	
 	option = {
 		name = "EVT99934OPTA"
@@ -208,9 +198,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = "EVT99957OPTA"
@@ -259,6 +247,11 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 24
+		
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}
 	}
 	
 	option = {
@@ -303,9 +296,7 @@ country_event = {
 			}
 			militancy = 2
 		}
-		ai_chance = {
-			factor = 1
-		}
+		ai_chance = { factor = 1 }
 	}
 }
 
@@ -353,5 +344,374 @@ country_event = {
 		ENG = { all_core = { limit = { life_rating = 37 is_overseas = no NOT = { is_core = IRE } NOT = { province_id = 300 } } life_rating = -5 } }
 		ENG = { all_core = { limit = { life_rating = 35 is_overseas = no NOT = { is_core = IRE } } life_rating = -3 } }
 		set_country_flag = lr_normalized_eng
+	}
+}
+
+#Imperial Conference 1907
+country_event = {
+	id = 999100
+	title = "EVTNAME999100"
+	desc = "EVTDESC999100"
+	picture = "big_ben_finished"
+	major = yes
+
+	trigger = {
+		tag = ENG
+		is_greater_power = yes
+		OR = {
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+		}
+		CAN = { exists = yes vassal_of = THIS }
+		NEW = { exists = yes vassal_of = THIS }
+		AST = { exists = yes vassal_of = THIS }
+		NZL = { exists = yes vassal_of = THIS }
+		NOT = { has_global_flag = colonial_conference }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 12 }
+	
+	immediate = { 
+		set_global_flag = colonial_conference 
+	}
+	
+	###Grant Dominion Status Only###
+	option = {
+		name = "EVT999100OPTA" 
+		prestige = -25
+		AST = {  prestige = -80 government = dominion }
+		CAN = {  prestige = -80 government = dominion }
+		NEW = {  prestige = -80 government = dominion }
+		NZL = {  prestige = -80 government = dominion }
+		random_country = {
+			limit = {
+				tag = SAF
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = MRU
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = COL
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		any_greater_power = {
+			diplomatic_influence = { who = AST value = -400 }	
+			diplomatic_influence = { who = CAN value = -400 }	
+			diplomatic_influence = { who = NEW value = -400 }	
+			diplomatic_influence = { who = NZL value = -400 }	
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	###Grant Dominion & Imperial Preference###
+	option = {
+		name = "EVT999100OPTB" 
+		prestige = -25
+		AST = {  prestige = -80 government = dominion }
+		CAN = {  prestige = -80 government = dominion }
+		NEW = {  prestige = -80 government = dominion }
+		NZL = {  prestige = -80 government = dominion }
+		random_country = {
+			limit = {
+				tag = SAF
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = MRU
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = COL
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		any_greater_power = {
+			diplomatic_influence = { who = AST value = -400 }	
+			diplomatic_influence = { who = CAN value = -400 }	
+			diplomatic_influence = { who = NEW value = -400 }	
+			diplomatic_influence = { who = NZL value = -400 }	
+		}
+		set_country_flag = imperial_preference
+	}
+	
+	###Grant Dominion Status, Grant Irish Home Rule###
+	option = {
+		name = "EVT999100OPTC"
+		prestige = -75
+		AST = {  prestige = -80 government = dominion }
+		CAN = {  prestige = -80 government = dominion }
+		NEW = {  prestige = -80 government = dominion }
+		NZL = {  prestige = -80 government = dominion }
+		random_country = {
+			limit = {
+				tag = SAF
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = MRU
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = COL
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		###Irish Free State###
+		clr_country_flag = IRE_independence_refused
+		badboy = -5
+		any_pop = {
+			limit = {
+				has_pop_culture = irish
+				has_pop_religion = catholic
+				location = { is_core = IRE }
+			}
+			militancy = -10
+		}
+		IRE = { all_core = { remove_core = THIS } }
+		release_vassal = IRE
+		IRE = {
+			prestige = -80
+			government = dominion
+			any_owned = {
+				limit = { region = ENG_254 }
+				add_core = THIS
+				secede_province = THIS
+			}
+		}
+		relation = {
+			who = IRE
+			value = 200
+		}
+		diplomatic_influence = {
+			who = IRE
+			value = 200
+		}
+		any_greater_power = {
+			diplomatic_influence = { who = AST value = -400 }	
+			diplomatic_influence = { who = CAN value = -400 }	
+			diplomatic_influence = { who = NEW value = -400 }	
+			diplomatic_influence = { who = NZL value = -400 }	
+		}
+	}
+	
+	###Grant Dominion Status, Grant Irish Home Rule, Imperial Preference###
+	option = {
+		name = "EVT999100OPTD"
+		prestige = -75
+		AST = {  prestige = -80 government = dominion }
+		CAN = {  prestige = -80 government = dominion }
+		NEW = {  prestige = -80 government = dominion }
+		NZL = {  prestige = -80 government = dominion }
+		random_country = {
+			limit = {
+				tag = SAF
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				exists = yes
+				primary_culture = british
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = MRU
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		random_country = {
+			limit = {
+				tag = COL
+				exists = yes
+				vassal_of = ENG
+			}
+			prestige = -80 government = dominion
+		}
+		###Irish Free State###
+		clr_country_flag = IRE_independence_refused
+		badboy = -5
+		any_pop = {
+			limit = {
+				has_pop_culture = irish
+				has_pop_religion = catholic
+				location = { is_core = IRE }
+			}
+			militancy = -10
+		}
+		IRE = { all_core = { remove_core = THIS } }
+		release_vassal = IRE
+		IRE = {
+			prestige = -80
+			government = dominion
+			any_owned = {
+				limit = { region = ENG_254 }
+				add_core = THIS
+				secede_province = THIS
+			}
+		}
+		relation = {
+			who = IRE
+			value = 200
+		}
+		diplomatic_influence = {
+			who = IRE
+			value = 200
+		}
+		any_greater_power = {
+			diplomatic_influence = { who = AST value = -400 }	
+			diplomatic_influence = { who = CAN value = -400 }	
+			diplomatic_influence = { who = NEW value = -400 }	
+			diplomatic_influence = { who = NZL value = -400 }	
+		}
+		set_country_flag = imperial_preference
+	}
+}
+
+#Imperial Conference 1907
+country_event = {
+	id = 999101
+	title = "EVTNAME999101"
+	desc = "EVTDESC999101"
+	picture = "big_ben_finished"
+	major = yes
+
+	trigger = {
+		tag = ENG
+		is_greater_power = yes
+		OR = {
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+		}
+		OR = {	
+			has_country_flag = great_war_has_happened
+			AND = { 
+				year = 1921
+				ai = yes
+			}
+		}
+		NOT = { has_global_flag = british_dismantled }
+		has_global_flag = colonial_conference
+		NOT = { has_global_flag = imperial_conference }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 24 }
+	
+	immediate = { set_global_flag = imperial_conference }
+	
+	###Switch Dominions to HMS Govts.###
+	option = {
+		name = "EVT999101OPTA" 
+		prestige = -25
+		random_country = {
+			limit = { tag = SAF exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = RHO exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = MRU exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = COL exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = CAN exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = AST exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = NZL exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		random_country = {
+			limit = { tag = NEW exists = yes vassal_of = ENG }
+			prestige = -80 government = hms_government
+		}
+		ai_chance = { factor = 1 }
 	}
 }

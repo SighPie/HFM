@@ -442,7 +442,7 @@ country_event = {
 		relation = { who = FROM value = -200 }
 		FROM = { country_event = 98213 }
 		ai_chance = {
-			factor = 10
+			factor = 5
 		}
 	}
 	
@@ -463,8 +463,9 @@ country_event = {
 			}
 			2111 = { any_pop = { limit = { is_culture_group = south_asian } reduce_pop = 3.5 } }
 		}
+		NAL = { government = colonial_company }
 		ai_chance = {
-			factor = 90
+			factor = 95
 		}
 	}
 }

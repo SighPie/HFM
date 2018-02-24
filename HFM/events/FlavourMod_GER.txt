@@ -58,9 +58,7 @@ country_event = {
 		set_country_flag = german_new_guinea_company
 		badboy = -1
 		
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -677,14 +675,10 @@ country_event = {
 		prestige = 10
 		FROM = { country_event = 99980 }
 		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				is_accepted_culture = yes
-			}
+			limit = { is_culture_group = germanic }
 			militancy = -1
 			consciousness = -1
 		}
-		
 		ai_chance = {
 			factor = 95
 			modifier = {
@@ -710,21 +704,13 @@ country_event = {
 	option = {
 		name = "EVT99999OPTB"
 		prestige = -25
-		relation = {
-			who = FROM
-			value = 100
-		}
+		relation = { who = FROM value = 100 }
 		any_pop = {
-			limit = {
-				is_primary_culture = yes
-				is_accepted_culture = yes
-			}
+			limit = { is_culture_group = germanic }
 			militancy = 5
 			consciousness = 5
 		}
-		
 		FROM = { country_event = 99981 }
-		
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -857,14 +843,9 @@ country_event = {
 			militancy = -1
 			consciousness = -1
 		}	
-		diplomatic_influence = {
-			who = LUX
-			value = -400
-		}
-		relation = {
-			who = FROM
-			value = 100
-		}
+		diplomatic_influence = { who = LUX value = -400 }
+		relation = { who = FROM value = 100 }
+		397 = { fort = -2 }
 	}
 }
 
@@ -880,11 +861,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA99983"	
-		casus_belli = {
-			target = FROM
-			type = liberate_country
-			months = 24
-		}
+		casus_belli = { target = FROM type = liberate_country months = 24 }
 		war = {
 			target = FROM
 			attacker_goal = { casus_belli = liberate_country country = LUX }
@@ -907,80 +884,39 @@ country_event = {
 	
 	option = {
 		name = "EVT99999OPTA"	
-		relation = {
-			who = THIS
-			value = 200
-		}
+		relation = { who = FROM value = 200 }
 		create_alliance = NGF				
-		NGF = {
-			diplomatic_influence = {
-				who = THIS
-				value = 400
-			}
-		}
+		NGF = { diplomatic_influence = { who = THIS value = 400 } }
 		leave_alliance = KUK
 		leave_alliance = AUS
 		ai_chance = {
 			factor = 99
 			modifier = {
 				factor = 0
-				AND = {
-					in_sphere = KUK
-					KUK = {
-						ai = no
-						exists = yes
-					}
-				}
+				AND = { in_sphere = KUK KUK = { ai = no exists = yes } }
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					in_sphere = AUS
-					AUS = {
-						ai = no
-						exists = yes
-					}
-				}
+				AND = { in_sphere = AUS AUS = { ai = no exists = yes } }
 			}
 		}
 	}
 	
 	option = {
 		name = "EVT99999OPTB"	
-		relation = {
-			who = THIS
-			value = -100
-		}
+		relation = { who = FROM value = -100 }
 		leave_alliance = FROM
 		prestige = -15
-		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			militancy = 5
-			consciousness = 5
-		}	
+		any_pop = { limit = { is_culture_group = germanic } militancy = 5 consciousness = 5 }	
 		ai_chance = {
 			factor = 1
 			modifier = {
 				factor = 100
-				AND = {
-					in_sphere = KUK
-					KUK = {
-						ai = no
-						exists = yes
-					}
-				}
+				AND = { in_sphere = KUK KUK = { ai = no exists = yes } }
 			}
 			modifier = {
 				factor = 100
-				AND = {
-					in_sphere = AUS
-					AUS = {
-						ai = no
-						exists = yes
-					}
-				}
+				AND = { in_sphere = AUS AUS = { ai = no exists = yes } }
 			}
 		}
 	}
@@ -1000,14 +936,8 @@ country_event = {
 		treasury = 50000
 		FROM = { treasury = -50000 }
 		random_owned = {
-			limit = {
-				province_id = 2038
-			}
-			state_scope = {
-				any_owned = {
-					secede_province = FROM
-				}
-			}
+			limit = { province_id = 2038 }
+			state_scope = { any_owned = { secede_province = FROM } }
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -1143,13 +1073,7 @@ country_event = {
 	 
 	option = { 
 		name = "EVT72752OPTA"
-		
-		relation = {
-			who = FROM
-			value = -100
-		}
-		
-		ai_chance = { factor = 1 }
+		relation = { who = FROM value = -100 }
 	}
 }
 

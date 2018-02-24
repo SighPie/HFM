@@ -579,9 +579,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = rumelia_unite_with_bulgaria
-			BUL = {
-				inherit = THIS
-			}
+			any_owned = { secede_province = BUL }
 		}
 		ai_will_do = { factor = 1 }
 	}

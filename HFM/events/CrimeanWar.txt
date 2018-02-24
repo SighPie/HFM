@@ -40,7 +40,7 @@ country_event = {
 	option = {
 		name = "EVT97500OPTB"
 		set_global_flag = france_protector_of_eastern_christians
-		prestige = -10
+		prestige = -15
 		FROM = { country_event = 97504 }
 		RUS = { country_event = 97503 }
 		ai_chance = {
@@ -273,7 +273,7 @@ country_event = {
 		diplomatic_influence = { who = TUR value = -50 }
 		relation = { who = RUS value = 50 }
 		ai_chance = {
-			factor = 10
+			factor = 5
 			modifier = {
 				factor = 2
 				NOT = {
@@ -281,7 +281,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 20
 				alliance_with = RUS
 			}
 		}
@@ -297,7 +297,11 @@ country_event = {
 		leave_alliance = RUS
 		create_alliance = TUR
 		ai_chance = {
-			factor = 90
+			factor = 95
+			modifier = {
+				factor = 0.5
+				alliance_with = RUS
+			}
 		}
 	}
 }

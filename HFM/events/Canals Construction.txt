@@ -647,10 +647,8 @@ country_event = {
 			THIS = { money = 200000 }
 		}
 		random_owned = {
-			limit = {
-				owner = { tag = EGY }
-			}
-			plurality = -15
+			limit = { owner = { tag = EGY } }
+			EGY = { plurality = -15 }
 			FROM = {
 				diplomatic_influence = {
 					who = THIS

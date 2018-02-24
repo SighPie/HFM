@@ -219,13 +219,13 @@ political_decisions = {
 		
 		effect = {
 			prestige = 3
-			RHO = { set_country_flag = post_colonial_country neutrality = yes }
-			release_vassal = RHO
+			RHO = { set_country_flag = post_colonial_country }
+			RHO = { government = dominion all_core = { remove_core = ENG } }
+			ZAM = { all_core = { remove_core = RHO } }
+			any_owned = { limit = { is_core = RHO } secede_province = RHO }
+			create_vassal = RHO
 			create_alliance = RHO
-			diplomatic_influence = {
-				who = RHO
-				value = 400
-			}	
+			diplomatic_influence = { who = RHO value = 400 }	
 		}
 		
 		ai_will_do = {
@@ -271,14 +271,10 @@ political_decisions = {
 				any_pop = { limit = { type = farmers culture = british } reduce_pop = 2 }
 				state_scope = {
 					change_region_name = "Southern Rhodesia"
-					any_owned = {
-						add_core = RHO
-					}
+					any_owned = { add_core = RHO }
 				}
 			}
-			2072 = {
-				change_province_name = "Wankie"
-			}
+			2072 = { change_province_name = "Wankie" }
 			ENG_2071 = { add_core = RHO }
 			ENG_2014 = { add_core = RHO }
 			ENG_2016 = { add_core = RHO }
@@ -353,7 +349,7 @@ political_decisions = {
 			NOT = { government = proletarian_dictatorship }
 			OR = {
 				invention = the_dark_continent
-				year = 1899
+				year = 1889
 			}
 			2013 = { empty = no }
 			2015 = { empty = no }
@@ -424,9 +420,7 @@ political_decisions = {
 					duration = 365
 				}
 			}
-			QNG = {
-				country_event = 13067
-			}
+			QNG = { country_event = 13067 }
 			diplomatic_influence = {
 				who = QNG
 				value = 50
@@ -697,7 +691,7 @@ political_decisions = {
 	}
 	
 	invest_in_irish = {
-		picture = embrace_minority
+		picture = ireland
 		potential = {
 			tag = ENG
 			NOT = {
@@ -964,7 +958,7 @@ political_decisions = {
 			set_country_flag = renaming_act
 			2068 = { state_scope = { change_region_name = "Southern Rhodesia" } }
 		}
-	ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1 }
 	}
 	
 	durand_line = {

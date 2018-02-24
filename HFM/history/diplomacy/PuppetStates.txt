@@ -22,7 +22,7 @@ substate = {
 	end_date = 1936.1.1
 }
 
-#Canada / NZL / AST / MRU / NEW / RHO
+#CAN / NZL / AST / MRU / NEW / RHO
 substate = {
 	first = ENG
 	second = CAN
@@ -64,7 +64,6 @@ substate = {
 	start_date = 1815.1.1
 	end_date = 1936.1.1
 }
-
 
 #Prussia - Sigmaringen
 vassal = {

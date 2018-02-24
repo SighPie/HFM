@@ -15,7 +15,10 @@ political_decisions = {
 		effect = {
 			set_global_flag = summer_palace_torched
 			badboy = 3
-			QNG = { country_event = 13355 }
+			QNG = { 
+				country_event = 13355 
+				set_variable = { which = china_destablization value = 1 }
+			}
 		}
 	}
 	
@@ -41,15 +44,12 @@ political_decisions = {
 				consciousness = 1
 			}
 			any_pop = {
-				limit = {
-					NOT = { has_pop_culture = manchu }
-				}
+				limit = { NOT = { has_pop_culture = manchu } }
 				militancy = -2
 				consciousness = -1
 			}
-			MCK = {
-				add_accepted_culture = beifaren
-			}
+			MCK = { add_accepted_culture = beifaren }
+			set_variable = { which = china_destablization value = 1 }
 			set_country_flag = manchu_elite_cleared_out
 		}
 	}

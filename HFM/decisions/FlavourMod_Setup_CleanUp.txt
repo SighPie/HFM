@@ -502,7 +502,7 @@ political_decisions = {
 			OR = {
 				#Before 1885
 				AND = { 
-					NOT = { year = 1880 }
+					NOT = { steel_steamers = 1 }
 					NOT = { total_amount_of_ships = 150 }
 					NOT = { tag = EIC }
 					NOT = { tag = ENG }
@@ -514,13 +514,13 @@ political_decisions = {
 				}
 				AND = { 
 					year = 1860
-					NOT = { year = 1885 }
+					NOT = { steel_steamers = 1 }
 					NOT = { total_amount_of_ships = 250 }
 					tag = ENG
 				}
 				#After 1885
 				AND = {
-					year = 1880
+					steel_steamers = 1
 					NOT = { total_amount_of_ships = 50 }
 					NOT = { 
 						tag = EIC 
@@ -531,14 +531,14 @@ political_decisions = {
 					}
 				}
 				AND = {
-					year = 1885
+					steel_steamers = 1
 					NOT = { year = 1905 }
 					NOT = { total_amount_of_ships = 100 }
 					tag = ENG
 					owns = 1251
 				}
 				AND = {
-					year = 1880
+					steel_steamers = 1
 					NOT = { total_amount_of_ships = 80 }
 					OR = { 
 						tag = GER
@@ -562,7 +562,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			money = 35000
+			money = 25000
 			is_disarmed = no
 		}
 		

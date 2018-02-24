@@ -233,7 +233,13 @@ political_decisions = {
 		allow = {
 			war = no
 			nationalism_n_imperialism = 1
-			is_secondary_power = yes
+			OR = {
+				is_secondary_power = yes
+				AND = { 
+					has_global_flag = won_boer_war
+					owns = 2087
+				}
+			}
 			OR = {
 				tag = TRN
 				tag = ORA
@@ -246,6 +252,10 @@ political_decisions = {
 							owned_by = THIS
 							owner = {
 								OR = {
+									AND = { 
+										alliance_with = THIS
+										has_global_flag = won_boer_war
+									}
 									in_sphere = THIS
 									vassal_of = THIS
 								}
@@ -267,6 +277,10 @@ political_decisions = {
 							owned_by = THIS
 							owner = {
 								OR = {
+									AND = { 
+										alliance_with = THIS
+										has_global_flag = won_boer_war
+									}
 									in_sphere = THIS
 									vassal_of = THIS
 								}
@@ -288,6 +302,10 @@ political_decisions = {
 							owned_by = THIS
 							owner = {
 								OR = {
+									AND = { 
+										alliance_with = THIS
+										has_global_flag = won_boer_war
+									}
 									in_sphere = THIS
 									vassal_of = THIS
 								}
@@ -957,9 +975,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			SAF = {
-				all_core = {
-					add_core = VLK
-				}
+				all_core = { add_core = VLK }
 				primary_culture = british
 				add_accepted_culture = boer
 			}
@@ -979,24 +995,21 @@ political_decisions = {
 		picture = form_south_africa
 		potential = {
 			tag = VLK
-			mass_politics = 1
 			SAF = {
 				exists = no 
 				all_core = { owned_by = THIS }
 			}
-			NOT = { 
-				has_global_flag = south_africa_formed 
-				has_global_flag = unified_south_africa
-			}
 			NOT = {
 				ruling_party_ideology = reactionary
 				ruling_party_ideology = fascist
+				has_global_flag = south_africa_formed
+				has_global_flag = unified_south_africa
 				has_country_flag = british_nervous
 			}
 		}
 		
 		allow = {
-			tag = VLK
+			mass_politics = 1
 			war = no
 			owns = 2087
 			owns = 2111
@@ -1005,18 +1018,16 @@ political_decisions = {
 		
 		effect = {
 			prestige = 5
-			SAF = {
-				all_core = {
-					remove_core = VLK
-				}
+			SAF  = {
+				all_core = { remove_core = VLK }
 				primary_culture = boer
-				add_accepted_culture = british
 			}
 			any_pop = {
 				limit = { has_pop_culture = british }
 				militancy = -4
 			}
 			change_tag = SAF
+			add_accepted_culture = british
 			set_global_flag = unified_south_africa
 			set_global_flag = south_africa_formed
 		}

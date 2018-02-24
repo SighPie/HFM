@@ -1013,7 +1013,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { government = hms_government } }
 				owner = { PAK = { government = democracy } }
-			}		
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

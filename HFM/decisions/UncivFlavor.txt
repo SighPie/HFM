@@ -31,15 +31,10 @@ political_decisions = {
 			}
 		}
 		allow = {
-			relation = {
-				who = USA
-				value = 0
-			}
+			relation = { who = USA value = 0 }
 		}
 		effect = {
-			USA = {
-				country_event = { id=13350 days=0 }
-			}
+			USA = { country_event = { id=13350 days=0 } }
 			set_country_flag = sent_an_elephant_to_america
 		}
 	}
@@ -63,9 +58,6 @@ political_decisions = {
 		effect = {
 			badboy = 1
 			inherit = CHK
-			SIA = {
-				years_of_research = 5
-			}
 			set_country_flag = champassak_integrated
 		}
 	}
@@ -80,9 +72,7 @@ political_decisions = {
 				has_global_flag = egypt_submitted_to_ottomans
 			}
 		}
-		allow = {
-			vassal_of = TUR
-		}
+		allow = { vassal_of = TUR }
 		
 		effect = {
 			set_country_flag = muhammad_alis_reforms_enacted
@@ -92,14 +82,9 @@ political_decisions = {
 			regular_clothes = 50
 			military_reform = yes_foreign_navies
 			military_reform = yes_foreign_training
-			add_country_modifier = {
-				name = muhammad_alis_reforms
-				duration = -1
-			}
-			
+			add_country_modifier = { name = muhammad_alis_reforms duration = -1 }
 			any_owned = { limit = { continent = africa is_core = EGY NOT = { terrain = desert terrain = semidesert } }
 			add_province_modifier = { name = baby_boom duration = 5475 } }
-			
 			any_pop = {
 				limit = { is_primary_culture = yes }
 				consciousness = 4
@@ -305,9 +290,7 @@ political_decisions = {
 			ENG_1848 = { add_core = TIG }
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	eth_mission_to_cairo = {
