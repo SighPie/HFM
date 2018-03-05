@@ -283,6 +283,24 @@ synthetic_oil_factory = {
 	}
 }
 
+synthetic_sulphur_factory = {       
+	template = factory_template
+	input_goods = { 
+		coal = 11		#25.3	
+		iron = 1		#3.5 	total input+maint = 40.2
+	}
+	output_goods = sulphur
+	value = 2.5			#15
+	bonus = {
+		trigger = { trade_goods_in_state = coal }
+		value = 0.20
+	}
+	bonus = {
+		trigger = { trade_goods_in_state = iron }
+		value = 0.05
+	}
+}
+
 ############# ADVANCED FACTORIES
 
 fuel_refinery = {       
