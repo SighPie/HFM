@@ -874,6 +874,7 @@ country_event = {
 	news_desc_medium = "EVTDESC160008_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC160008_NEWS_SHORT"
 	picture = "taiping"
+	fire_only_once = yes
 	
 	trigger = {
 		has_global_flag = taiping_has_happened

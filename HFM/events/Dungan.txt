@@ -222,6 +222,7 @@ country_event = {
 	news_desc_medium = "EVTDESC80123_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC80123_NEWS_SHORT"
 	picture = "panthay_rebellion"
+	fire_only_once = yes
 	
 	trigger = {
 		tag = PGG
@@ -417,6 +418,7 @@ country_event = {
 	news_desc_medium = "EVTDESC80127_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC80127_NEWS_SHORT"
 	picture = "dungan_revolt_xinhai"
+	fire_only_once = yes
 	
 	trigger = {
 		tag = UYG
