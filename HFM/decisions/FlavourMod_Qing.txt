@@ -1230,11 +1230,11 @@ political_decisions = {
 	treaty_of_tientsin_france = {
 		picture = unequal_treaty
 		potential = {
-			has_country_flag = black_flag_war
 			HQJ = {
 				ai = yes
 				exists = yes
 				is_vassal = no
+				truce_with = THIS
 			}
 			truce_with = QNG
 			NOT = { exists = DAI }
@@ -1251,17 +1251,13 @@ political_decisions = {
 			badboy = 1
 			QNG = {
 				any_pop = {
-					limit = {
-						is_culture_group = east_asian 
-					}
+					limit = { is_culture_group = east_asian  }
 					militancy = 5
 				}
 			}
 			HQJ = {
 				annex_to = THIS
-				all_core = {
-					remove_core = HQJ
-				}
+				all_core = { remove_core = HQJ }
 			}
 		}
 		

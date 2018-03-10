@@ -1,4 +1,6 @@
 ;;;;;;;;;;;x
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_ZUL;The $ORDER$Anglo-Zulu War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_ENG_ZUL;The $ORDER$Anglo-Zulu War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_NAME_ENG_ASH;The War of the Golden Stool;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_NAME_ENG_ASH;The War of the Golden Stool;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_ASH;The 2nd Ashanti Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -29,8 +31,8 @@ NORMAL_WAR_CONQUEST_NAME_ENG_TRN;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_NAME_ENG_TRN;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_ENG_TRN;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_TRN;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_RESTORE_ORDER_NAME_JAP_EZO;The Battle of Hakodate;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_RESTORE_ORDER_NAME_JAP_EZO;The Battle of Hakodate;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_RESTORE_ORDER_NAME_JAP_EZO;The Hakodate Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_RESTORE_ORDER_NAME_JAP_EZO;The Hakodate Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PROTECTORATE_NAME_ENG_EGY;The Anglo-Egyptian War;;;;;;;;;;;;;;;x;;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_EGY;The Anglo-Egyptian War;;;;;;;;;;;;;;;x;;
 AGRESSION_WAR_RESTORE_ORDER_NAME_KUK_HUN;The 2nd Hungarian Revolution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;

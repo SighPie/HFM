@@ -214,10 +214,8 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					tag = NEW
-					is_vassal = yes
-				}
+				tag = NEW
+				vassal_of = ENG
 			}
 		}
 	}
@@ -771,9 +769,8 @@ political_decisions = {
 			}
 			inherit = RPL
 			RPL = {
-				all_core = {
-					add_core = CAN
-				}
+				government = hms_government
+				all_core = { add_core = CAN }
 			}
 			set_country_flag = rupert_land_act
 		}

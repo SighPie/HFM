@@ -5,6 +5,7 @@
 - Fixed the issues with the Leipizg Congress event
 - Fixed issues with the Anglo-Russian Convention not releasing Afghanistan/Persia if they are puppets, causing the event to repeat
 - Fixed localization issue when renaming Quebec
+- Fixed Italy no longer getting cores on the Italian Islands
 
 #Changes to North America
 - Removed British & French cores from the Caribbean Islands, added Martinique core
@@ -29,6 +30,7 @@
 #Changes to Africa
 - Liberia will now begin with several reforms
 - Modified the Golden Stool Event, added war-name localization for the Anglo-Ashanti Wars
+- Added war-name localization for the Anglo-Zulu War
 
 #Changes to Colonial Governments
 - British Dominions (CAN/NEW/NZL/AST/SAF/COL) will now use the Dominion Government type when released, they will change flags based on whether they're dominions or constitutional monarchies

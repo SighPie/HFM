@@ -2087,10 +2087,7 @@ country_event = {
 	option = {
 		name = "EVT98250OPTA"
 		badboy = 2
-		diplomatic_influence = {
-			who = ZUL
-			value = -200
-		}
+		diplomatic_influence = { who = ZUL value = -200 }
 		leave_alliance = ZUL
 		casus_belli = {
 			target = ZUL
@@ -2099,12 +2096,10 @@ country_event = {
 		}
 		war = {
 			target = ZUL
-			attacker_goal = {
-				casus_belli = establish_protectorate_casus_belli
-			}
+			attacker_goal = { casus_belli = establish_protectorate_casus_belli }
 		}	
 		ai_chance = {
-			factor = 95
+			factor = 99
 			modifier = {
 				factor = 0
 				badboy = 0.92
@@ -2126,7 +2121,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 5
+			factor = 1
 		}
 	}
 }
