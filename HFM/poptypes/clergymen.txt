@@ -445,13 +445,14 @@ migration_target =
 		terrain = montane_tundra
 	}
 	
+	
 	modifier = {
-		factor = 0.001
+		factor = 0.01
 		OR = { 
 			continent = west_africa 
 			continent = east_africa
-			continent = asia
 			continent = africa
+			continent = south_west_africa
 		}
 		country = { primary_culture = russian }
 	}
@@ -462,22 +463,16 @@ migration_target =
 		OR = { 
 			continent = west_africa 
 			continent = east_africa
-			continent = asia
+			continent = oceania #Near East
 			continent = africa
+			continent = south_west_africa
 		}
 		country = { colonial_policy = settlement primary_culture = russian }
 	}
 	
 	modifier = {
 		factor = -0.52
-		OR = { 
-			is_core = KAZ
-			is_core = TKS
-			is_core = UZB
-			is_core = TKM
-			is_core = TAJ
-			is_core = KYR
-		}
+		continent = oceania #Near East
 		country = { primary_culture = russian }
 	}
 	
@@ -531,6 +526,8 @@ migration_target =
 	modifier = {
 		factor = 1.5
 		OR = { 
+			continent = east_africa
+			continent = south_west_africa
 			is_core = TNZ
 			is_core = NMB
 			is_core = AOG
@@ -542,15 +539,10 @@ migration_target =
 	
 	
 	modifier = {
-		factor = -0.25
+		factor = -0.5
 		OR = { 
-			is_core = DAI
-			is_core = JOH
-			is_core = MLY
-			is_core = INO
-			is_core = SIA
-			is_core = PHL
-			is_core = LXA
+			continent = indochina
+			continent = east_indies
 		}
 		country = { primary_culture = japanese }
 	}
@@ -584,13 +576,12 @@ migration_target =
 	}
 	
 	modifier = {
-		factor = -1.81
+		factor = -2.81
 		OR = { 
 			is_core = HND
 			is_core = QUE
 			is_core = BUR
 			is_core = SRI
-			is_core = JOH
 			is_core = PRK
 			is_core = PHG
 			is_core = LHJ
@@ -598,7 +589,8 @@ migration_target =
 			is_core = MLY
 			is_core = MLT
 			continent = west_africa
-			is_core = TSW
+			continent = east_indies
+			continent = africa
 			is_core = MLW
 			is_core = SUD
 		}
@@ -607,21 +599,18 @@ migration_target =
 	
 	modifier = {
 		factor = 5.01
-		OR = { 
-			state_id = 71
-			is_core = NEW
-			is_core = COL
-			is_core = CAN
-			is_core = AST
-			is_core = NZL
+		OR = {
+			continent = australia_new_zealand
+			continent = north_america
 			is_core = IRE
 			is_core = WHA
+			is_core = EGY
 		}
 		country = { primary_culture = british }
 	}
 	
 	modifier = {
-		factor = 1.5
+		factor = 3.5
 		OR = { 
 			is_core = KNY
 			is_core = SAF
@@ -641,21 +630,17 @@ migration_target =
 	}
 	
 	modifier = {
-		factor = 2.5
+		factor = 3.0
 		OR = { 
-			is_core = TUN
-			is_core = QUE
-			is_core = ALD
-			is_core = NZF
-			is_core = FAS
-			is_core = FCA
-			is_core = ULA
 			is_core = RHI
 			is_core = WAL
 			is_core = LUX
 			is_core = CAT
 			is_core = SWI
-			is_core = DAI
+			continent = australia_new_zealand
+			continent = north_america
+			continent = africa
+			continent = indochina
 		}
 		country = { primary_culture = french }
 	}
@@ -663,8 +648,8 @@ migration_target =
 	modifier = {
 		factor = 3.0
 		OR = { 
-			is_core = LBY
-			is_core = TUN
+			continent = africa
+			continent = east_africa
 			is_core = SWI
 			is_core = FRA
 			is_core = BOR
@@ -692,23 +677,14 @@ migration_target =
 			is_core = TIB
 			is_core = TNT
 			is_core = KML
+			is_core = KOR
 		}
 		country = { is_culture_group = east_asian }
 	}
 	
 	modifier = {
 		factor = 2.0
-		OR = {
-			is_core = JOH
-			is_core = LAN
-			is_core = MLY
-			is_core = INO
-			is_core = DAI
-			is_core = LUA
-			is_core = KOR
-			is_core = SWK
-			is_core = SUL
-		}
+		continent = east_indies
 		country = { is_culture_group = east_asian }
 	}
 	

@@ -18,53 +18,66 @@ country_event = {
 	picture = "california_gold_rush"
 	
 	trigger = {
-		tag = USA
+		year = 1848
+		OR = { 
+			has_country_flag = hasmanifestdestiny
+			has_country_flag = manifest_destiny_refuted
+		}
+		war = no
+		owns = 104
 		AND = {
-			owns = 104
+			104 = { is_colonial = no produces = precious_metal }
+			89 = { produces = precious_metal }
+			90 = { produces = precious_metal }			
 		}
-		AND = {
-			104 = {
-				is_colonial = no
-				produces = precious_metal
-			}
-			89 = {
-				produces = precious_metal
-			}
-			90 = {
-				produces = precious_metal
-			}			
-		}
-		NOT = { year = 1870 }
-		NOT = { 
-			has_country_flag = cali_gold_rush
-		}
+		NOT = { has_global_flag = cali_gold_rush }
 	}
+	
+	fire_only_once = yes
 
 	option = {
 		name = "EVT99903OPTA"
-			any_pop = {
-				limit = {
-					location = {
-						is_core = CAL
+			random_owned = {
+				limit = { owner = { primary_culture = yankee } }
+				owner = {
+					any_pop = {
+						limit = {
+							location = { is_core = CAL }
+							culture = yankee
+						}
+						reduce_pop = 1.5
 					}
-					culture = yankee
+					any_pop = {
+						limit = {
+							location = { is_core = CAL }
+							culture = mexican
+						}
+						reduce_pop = 0.2
+					}
 				}
-				reduce_pop = 1.5
+			}
+			random_owned = {
+				limit = { owner = { primary_culture = mexican } }
+				owner = {
+					any_pop = {
+						limit = {
+							location = { is_core = CAL }
+							culture = mexican
+						}
+						reduce_pop = 1.5
+					}
+					any_pop = {
+						limit = {
+							location = { is_core = CAL }
+							culture = yankee
+						}
+						reduce_pop = 0.2
+					}
+				}
 			}
 			any_pop = {
 				limit = {
-					location = {
-						is_core = CAL
-					}
-					culture = mexican
-				}
-				reduce_pop = 0.2
-			}
-			any_pop = {
-				limit = {
-					location = {
-						is_core = CAL
-					}
+					location = { is_core = CAL }
 					culture = native_american_minor
 				}
 				reduce_pop = 0.05
@@ -93,7 +106,7 @@ country_event = {
 					duration = 365
 				}			
 			}
-			set_country_flag = cali_gold_rush
+			set_global_flag = cali_gold_rush
 	}
 }
 

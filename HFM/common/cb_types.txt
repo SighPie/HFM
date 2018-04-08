@@ -1198,7 +1198,7 @@ add_to_sphere = {
 	
 	badboy_factor = 2
 	prestige_factor = 2
-	peace_cost_factor = 50
+	peace_cost_factor = 35
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 5

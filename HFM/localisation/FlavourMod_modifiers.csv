@@ -125,6 +125,8 @@ help_ai_turk;AI: Ottoman buff;;;;;;;;;;;;;;;;;;x,,,,
 help_ai_spain;AI: Spain buff;;;;;;;;;;;;;;;;;;x,,,,
 help_ai_arc;AI: Spain buff;;;;;;;;;;;;;;;;;;x,,,,
 drang_nach_osten;Drang nach Osten;;;;;;;;;;;;;;;;;;x,,,,
+drang_nach_osten_country;Drang nach Osten;;;;;;;;;;;;;;;;;;x,,,,
+drang_nach_osten_country_desc;Drang nach Osten "Yearning for the East" was a term coined in the 19th century to designate German expansion to the east. Currently the Baltic region is undergoing Germanisation policies to more closely integrate the region into Germany proper;;;;;;;;;;;;;;;;;;x,,,,
 french_growth_nerf;Low Birth Rates;;;;;;;;;;;;;;;;;;x,,,,
 french_growth_nerf_desc;A combination of many factors has led to low fertility rates amongst our people.;;;;;;;;;;;;;;;;;;x,,,,
 constantinople_conference;Hosted the Constantinople Conference;;;;;;;;;;;;;;;;;;x,,,,
@@ -189,6 +191,7 @@ dominion;Dominion;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 dominion_ruler;Prime Minister;;;;;;;;;;;;x,,,
 brothers_war_winner;Brother's War Victor;;;;;;;;;;;;x
 micro_nation;Microstate;;;;;;;;;;;;x
+incorporate_the_baltic_states;Ostland Integration;;;;;;;;;;;;x
 haber_process;Haber Process;;;;;;;;;;;;;;;;;;;x;;;;
 haber_process_desc;The Haber process, also called the Haber–Bosch process, is an artificial nitrogen fixation process and is the main industrial procedure for the production of ammonia today.It is named after its inventors, the German chemists Fritz Haber and Carl Bosch, who developed it in the first half of the 20th century. The process converts atmospheric nitrogen (N2) to ammonia (NH3) by a reaction with hydrogen (H2) using a metal catalyst under high temperatures and pressures;;;;;;;;;;;;;;;;;;;x;;;;
 carl_bosch;Carl Bosch;;;;;;;;;;;;;;;;;;;x;;;;

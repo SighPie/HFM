@@ -12,6 +12,8 @@ claim_wallonia_title;Claim Wallonia;;;;;;;;;;;;;x
 claim_wallonia_desc;With our natural borders at the Rhine secured, to accomplish the goal of Francophone unity, the French-Speaking Wallonians must be brought into the fold. However, there is no doubt that this would cause an uproar among other Great Powers, if we were to proclaim Wallonia as French, we will cause another crisis in Europe.;;;;;;;;;;;;;x
 annex_united_baltic_duchy_title;Vereinigtes Baltisches Herzogtum;;;;;;;;;;;;;x
 annex_united_baltic_duchy_desc;The time has come to incorporate the Baltics as a imperial state of the German Empire, his Highness Adolf Friedrich the First, Duke of Mecklenburg-Schwerin and of the United Baltic Duchy, has requested from the Reichstag and the Deutsche Kaiser the recognition of his Baltic domains as a Constituent State of the German Empire.;;;;;;;;;;;;;x
+incorporate_the_baltic_states_title;Incorporate the Baltic Provinces;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
+incorporate_the_baltic_states_desc;The Baltic Provinces should be incorporated more closely into $COUNTRY$ so that we may better secure our eastern border and begin to prepare the region for annexation;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 ober_ost_title;Ober Ost Litauen;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 ober_ost_desc;In our military sucesses against the Russians in the east, many more eastern lands are now under our rule, while the local German Nobility can be left in charge of Estonia and Lativa, Lithuania will require a much more direct method of control. Ober Ost, 'Supreme Command of All German Forces in the East', will be assigned to the region to both pacifiy the native population and civilize them with German ideals and culture.;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 demand_russian_latvia_title;Demand Russian Latvia;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
@@ -436,8 +438,6 @@ claim_pontus_title;Claim Pontus;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 claim_pontus_desc;The region of Pontus has been settled by Greeks since antiquity, but the Pontic Greeks have been under Ottoman supression since the 17th Century, it is time to reunite the Pontic Greeks under a single flag.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 grecofication_title;Grecofication;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 grecofication_desc;Our rightful Greek lands have been returned to us after so many years of Muslim oppression, rightful Greek names should be restored to our new territories.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
-incorporate_the_baltic_states_title;Incorporate the Baltic Duchy;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
-incorporate_the_baltic_states_desc;The Baltic Duchy should be incorporated more closely into $COUNTRY$ so that we may better secure our eastern border and begin to prepare the region for annexation;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 abolish_volga_region_title;Abolish the Volga Autonomous Region;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 abolish_volga_region_desc;It is time to end the privileges that the Volga Germans enjoy for the sake of our country's security.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
 france_rename_rhine_title;The French Rhine;;;;;;;;;;;;x,,,,,,,,,,,,,,,,

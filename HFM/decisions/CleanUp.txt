@@ -852,27 +852,27 @@ political_decisions = {
 		allow = {
 			OR = {
 				AND = {
-					steamer_convoy = 2
-					check_variable = { which = owed_steamers value = 1 }
+					steamer_convoy = 6
+					check_variable = { which = owed_steamers value = 5 }
 				}
 				AND = {
-					artillery = 2
-					check_variable = { which = owed_artillery value = 1 }
+					artillery = 6
+					check_variable = { which = owed_artillery value = 5 }
 				}
 				AND = {
-					canned_food = 2
-					check_variable = { which = owed_canned_food value = 1 }
+					canned_food = 6
+					check_variable = { which = owed_canned_food value = 5 }
 				}
 				AND = {
-					small_arms = 2
-					check_variable = { which = owed_small_arms value = 1 }
+					small_arms = 6
+					check_variable = { which = owed_small_arms value = 5 }
 				}
 				AND = {
-					ammunition = 2
-					check_variable = { which = owed_ammunition value = 1 }
+					ammunition = 6
+					check_variable = { which = owed_ammunition value = 5 }
 				}
 				AND = {
-					money = 10000
+					money = 50000
 					check_variable = { which = owed_cash_money value = 1 }
 				}
 			}
@@ -883,145 +883,94 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						ammunition = 1
-						check_variable = { which = owed_ammunition value = 1 }
+						ammunition = 5
+						check_variable = { which = owed_ammunition value = 5 }
 					}
 				}
 				owner = {
-					ammunition = -1
-					change_variable = { which = owed_ammunition value = -1 }
+					ammunition = -5
+					change_variable = { which = owed_ammunition value = -5 }
 				}
 			}
 		
 			random_owned = {
 				limit = {
 					owner = {
-						small_arms = 1
-						check_variable = { which = owed_small_arms value = 1 }
+						small_arms = 5
+						check_variable = { which = owed_small_arms value = 5 }
 					}
 				}
 				owner = {
-					small_arms = -1
-					change_variable = { which = owed_small_arms value = -1 }
+					small_arms = -5
+					change_variable = { which = owed_small_arms value = -5 }
 				}
 			}
 			
 			random_owned = {
 				limit = {
 					owner = {
-						steamer_convoy = 12
-						check_variable = { which = owed_steamers value = 10 }
+						steamer_convoy = 5
+						check_variable = { which = owed_steamers value = 5 }
 					}
 				}
 				owner = {
-					steamer_convoy = -12
-					change_variable = { which = owed_steamers value = -10 }
+					steamer_convoy = -5
+					change_variable = { which = owed_steamers value = -5 }
 				}
 			}
 			
 			random_owned = {
 				limit = {
 					owner = {
-						steamer_convoy = 4
-						check_variable = { which = owed_steamers value = 4 }
+						steamer_convoy = 5
+						check_variable = { which = owed_steamers value = 5 }
 					}
 				}
 				owner = {
-					steamer_convoy = -4
-					change_variable = { which = owed_steamers value = -4 }
+					steamer_convoy = -5
+					change_variable = { which = owed_steamers value = -5 }
 				}
 			}
 			
 			random_owned = {
 				limit = {
 					owner = {
-						steamer_convoy = 4
-						check_variable = { which = owed_steamers value = 4 }
+						steamer_convoy = 5
+						check_variable = { which = owed_steamers value = 5 }
 					}
 				}
 				owner = {
-					steamer_convoy = -4
-					change_variable = { which = owed_steamers value = -4 }
-				}
-			}
-		
-			random_owned = {
-				limit = {
-					owner = {
-						steamer_convoy = 2
-						check_variable = { which = owed_steamers value = 1 }
-					}
-				}
-				owner = {
-					steamer_convoy = -2
-					change_variable = { which = owed_steamers value = -2 }
+					steamer_convoy = -5
+					change_variable = { which = owed_steamers value = -5 }
 				}
 			}
 			
 			random_owned = {
 				limit = {
 					owner = {
-						artillery = 4
-						check_variable = { which = owed_artillery value = 4 }
+						artillery = 5
+						check_variable = { which = owed_artillery value = 5 }
 					}
 				}
 				owner = {
-					artillery = -4
-					change_variable = { which = owed_artillery value = -4 }
+					artillery = -5
+					change_variable = { which = owed_artillery value = -5 }
 				}
 			}
 			
 			random_owned = {
 				limit = {
 					owner = {
-						artillery = 4
-						check_variable = { which = owed_artillery value = 4 }
+						canned_food = 5
+						check_variable = { which = owed_canned_food value = 5 }
 					}
 				}
 				owner = {
-					artillery = -4
-					change_variable = { which = owed_artillery value = -4 }
+					canned_food = -5
+					change_variable = { which = owed_canned_food value = -5 }
 				}
 			}
-			
-			random_owned = {
-				limit = {
-					owner = {
-						artillery = 2
-						check_variable = { which = owed_artillery value = 1 }
-					}
-				}
-				owner = {
-					artillery = -2
-					change_variable = { which = owed_artillery value = -2 }
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = {
-						canned_food = 4
-						check_variable = { which = owed_canned_food value = 4 }
-					}
-				}
-				owner = {
-					canned_food = -4
-					change_variable = { which = owed_canned_food value = -4 }
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = {
-						canned_food = 2
-						check_variable = { which = owed_canned_food value = 1 }
-					}
-				}
-				owner = {
-					canned_food = -2
-					change_variable = { which = owed_canned_food value = -2 }
-				}
-			}
+
 			
 			random_owned = {
 				limit = {
@@ -1071,46 +1020,46 @@ political_decisions = {
 			NOT = { has_country_modifier = monthly_payment_made }
 			OR = {
 				AND = {
-					money = 500
+					money = 1500
 					NOT = { total_pops = 750000 }
 				}
 				AND = {
-					money = 750
+					money = 2500
 					total_pops = 750000
 					NOT = { total_pops = 100000 }
 				}
 				AND = {
-					money = 1000
+					money = 3000
 					total_pops = 1000000
 					NOT = { total_pops = 1250000 }
 				}
 				AND = {
-					money = 1250
+					money = 3500
 					total_pops = 1250000
 					NOT = { total_pops = 1500000 }
 				}
 				AND = {
-					money = 1500
+					money = 4000
 					total_pops = 1500000
 					NOT = { total_pops = 1750000 }
 				}
 				AND = {
-					money = 1750
+					money = 4500
 					total_pops = 1750000
 					NOT = { total_pops = 2000000 }
 				}
 				AND = {
-					money = 2000
+					money = 5000
 					total_pops = 2000000
 					NOT = { total_pops = 2250000 }
 				}
 				AND = {
-					money = 2250
+					money = 5500
 					total_pops = 2250000
 					NOT = { total_pops = 2500000 }
 				}
 				AND = {
-					money = 2500
+					money = 6000
 					total_pops = 2500000
 				}
 			}
@@ -1120,78 +1069,78 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { total_pops = 750000 } } }
 				owner = {
-					treasury = -500
-					overlord = { treasury = 500 }
+					treasury = -1500
+					overlord = { treasury = 1000 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 750000 NOT = { total_pops = 1000000 } } }
 				owner = {
-					treasury = -750
-					overlord = { treasury = 750 }
+					treasury = -2500
+					overlord = { treasury = 1500 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 1000000 NOT = { total_pops = 1250000 } } }
 				owner = {
-					treasury = -1000
-					overlord = { treasury = 1000 }
+					treasury = -3000
+					overlord = { treasury = 2000 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 1250000 NOT = { total_pops = 1500000 } } }
 				owner = {
-					treasury = -1250
-					overlord = { treasury = 1250 }
+					treasury = -3500
+					overlord = { treasury = 2500 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 1500000 NOT = { total_pops = 1750000 } } }
 				owner = {
-					treasury = -1500
-					overlord = { treasury = 1500 }
+					treasury = -4000
+					overlord = { treasury = 3000 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 1750000 NOT = { total_pops = 2000000 } } }
 				owner = {
-					treasury = -1750
-					overlord = { treasury = 1750 }
+					treasury = -4500
+					overlord = { treasury = 3500 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 2000000 NOT = { total_pops = 2250000 } } }
 				owner = {
-					treasury = -2000
-					overlord = { treasury = 2000 }
+					treasury = -5000
+					overlord = { treasury = 4000 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 2250000 NOT = { total_pops = 2500000 } } }
 				owner = {
-					treasury = -2250
-					overlord = { treasury = 2250 }
+					treasury = -5500
+					overlord = { treasury = 4500 }
 				}
 			}
 			
 			random_owned = {
 				limit = { owner = { total_pops = 2500000 } }
 				owner = {
-					treasury = -2500
-					overlord = { treasury = 2500 }
+					treasury = -6000
+					overlord = { treasury = 5000 }
 				}
 			}
 			
-			random_owned = { limit = { owner = { is_substate = yes } } owner = { add_country_modifier = { name = monthly_payment_made duration = 25 } } }
+			random_owned = { limit = { owner = { is_substate = yes } } owner = { add_country_modifier = { name = monthly_payment_made duration = 365 } } }
 			random_owned = {
-				limit = { owner = { is_vassal = yes is_substate = no } } owner = { add_country_modifier = { name = monthly_payment_made duration = 50 } } 
+				limit = { owner = { is_vassal = yes is_substate = no } } owner = { add_country_modifier = { name = monthly_payment_made duration = 365 } } 
 			}
 			random_owned = {
 				limit = { owner = { has_country_flag = counting_payments } }
@@ -1276,46 +1225,46 @@ political_decisions = {
 					}
 					OR = {
 						AND = {
-							money = 500
+							money = 1500
 							NOT = { total_pops = 750000 }
 						}
 						AND = {
-							money = 750
+							money = 2500
 							total_pops = 750000
 							NOT = { total_pops = 100000 }
 						}
 						AND = {
-							money = 1000
+							money = 3000
 							total_pops = 1000000
 							NOT = { total_pops = 1250000 }
 						}
 						AND = {
-							money = 1250
+							money = 3500
 							total_pops = 1250000
 							NOT = { total_pops = 1500000 }
 						}
 						AND = {
-							money = 1500
+							money = 4000
 							total_pops = 1500000
 							NOT = { total_pops = 1750000 }
 						}
 						AND = {
-							money = 1750
+							money = 4500
 							total_pops = 1750000
 							NOT = { total_pops = 2000000 }
 						}
 						AND = {
-							money = 2000
+							money = 5000
 							total_pops = 2000000
 							NOT = { total_pops = 2250000 }
 						}
 						AND = {
-							money = 2250
+							money = 5500
 							total_pops = 2250000
 							NOT = { total_pops = 2500000 }
 						}
 						AND = {
-							money = 2500
+							money = 6000
 							total_pops = 2500000
 						}
 					}

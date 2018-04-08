@@ -146,7 +146,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
-					set_variable = { which = owed_steamers value = 24 }
+					set_variable = { which = owed_steamers value = 20 }
 					set_variable = { which = owed_artillery value = 10 }
 					set_variable = { which = owed_canned_food value = 10 }
 				}

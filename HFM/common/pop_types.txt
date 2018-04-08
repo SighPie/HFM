@@ -426,7 +426,6 @@ migration_chance = {
 		state_scope = { is_colonial = yes }
 	}
 	
-	
 	modifier = {
 		factor = -100
 		OR = {
@@ -437,47 +436,13 @@ migration_chance = {
 	}
 	
 	modifier = {
-		factor = 100
-		THIS = { is_culture_group = east_slavic }
-		country = {
-			colonial_policy = settlement
-			primary_culture = russian
-		}
-		location = { 
-			culture = russian
-			OR = { 
-				continent = west_africa 
-				continent = east_africa
-				continent = asia
-				continent = africa
-			}
-			total_pops = 75000
-		}
-		year = 1860
-	}
-	
-	modifier = {
-		factor = 100
-		state_scope = { is_colonial = yes }
-		THIS = { is_culture_group = east_slavic }
-		location = { 
-			is_colonial = yes 
-			NOT = { is_core = THIS }
-			culture = russian
-			total_pops = 100000
-		}
-		country = { 	
-			OR = { 
-				colonial_policy = settlement 
-				border_policy = closed_borders
-			}
-			primary_culture = russian
-		}
-	}
-	
-	modifier = {
 		factor = 0.15
 		country = { colonial_policy = settlement }
+	}
+	
+	modifier = {
+		factor = 0.05
+		country = { administration_spending = 0.75 colonial_policy = settlement }
 	}
 	
 	modifier = {
@@ -613,11 +578,8 @@ migration_chance = {
 	modifier = {
 		factor = 0.5
 		THIS = { has_pop_culture = afro_american }
-		country = { 
-			slavery = no_slavery 
-		}
+		country = { slavery = no_slavery }
 	}
-	
 		
 	modifier = {
 		factor = 10
@@ -656,9 +618,46 @@ migration_chance = {
 			NOT = { province_id = 3250 }
 		}
 		country = { primary_culture = swiss_german }
-
 	}
 	
+		modifier = {
+		factor = 100
+		THIS = { is_culture_group = east_slavic }
+		country = {
+			colonial_policy = settlement
+			primary_culture = russian
+		}
+		location = { 
+			culture = russian
+			OR = { 
+				continent = west_africa 
+				continent = east_africa
+				continent = asia
+				continent = africa
+			}
+			total_pops = 75000
+		}
+		year = 1860
+	}
+	
+	modifier = {
+		factor = 100
+		state_scope = { is_colonial = yes }
+		THIS = { is_culture_group = east_slavic }
+		location = { 
+			is_colonial = yes 
+			NOT = { is_core = THIS }
+			culture = russian
+			total_pops = 100000
+		}
+		country = { 	
+			OR = { 
+				colonial_policy = settlement 
+				border_policy = closed_borders
+			}
+			primary_culture = russian
+		}
+	}
 }
 
 #general colonial migration mtth, same for all pops
@@ -672,7 +671,7 @@ colonialmigration_chance = {
 			is_accepted_culture  = no
 		}
 	}
-	
+
 	group = {
 		modifier = {
 			factor = -0.1
@@ -722,6 +721,11 @@ colonialmigration_chance = {
 	modifier = {
 		factor = 0.1
 		country = { penal_system = colonial_transportation }
+	}
+	
+	modifier = {
+		factor = 0.05
+		country = { administration_spending = 0.75 colonial_policy = settlement }
 	}
 	
 	group = {
@@ -1533,8 +1537,14 @@ assimilation_chance = {
 	
 	group = {
 		modifier = {
-			factor = 10
-			#is_accepted_culture = no
+			factor = 1
+			OR = {
+				is_state_religion = yes
+				AND = {
+					country = { NOT = { religious_policy = moralism } }
+					is_state_religion = no
+				}
+			}
 			country = { has_country_flag = new_world_nation }
 			OR = {
 				location = { continent = north_america }
@@ -1667,6 +1677,20 @@ conversion_chance = {
 		has_culture_core = yes
 	}
 	
+	modifier = {
+		factor = -0.75
+		OR = {
+			country = { capital_scope = { pop_majority_religion = protestant } }
+			country = { capital_scope = { pop_majority_religion = catholic } }
+			country = { capital_scope = { pop_majority_religion = orthodox } }
+		}
+		OR = {
+			has_pop_religion = catholic
+			has_pop_religion = protestant
+			has_pop_religion = orthodox
+		}
+	}
+			
 	modifier = {
 		factor = 0.8
 		has_pop_religion = animist

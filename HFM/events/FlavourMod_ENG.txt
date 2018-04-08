@@ -347,6 +347,43 @@ country_event = {
 	}
 }
 
+#Battle of Rorke's Drift
+country_event = {
+	id = 99809
+	title = "EVTNAME99809" 
+	desc = "EVTDESC99809"
+	picture = "rorkes_drift"
+	#news = yes
+	#news_desc_long = "EVTDESC99101_NEWS_LONG"
+	#news_desc_medium = "EVTDESC99101_NEWS_MEDIUM"
+	#news_desc_short = "EVTDESC99101_NEWS_SHORT"
+	
+	trigger = {
+		tag = ENG
+		war_with = ZUL
+		2113 = { country_units_in_province = ENG }
+	}
+	
+	fire_only_once = yes	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVT99809OPTA"
+		prestige = -55
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+				OR = { 
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = 0.5
+			consciousness = 2.5
+		}
+	}
+}
+
 #Imperial Conference 1907
 country_event = {
 	id = 999100

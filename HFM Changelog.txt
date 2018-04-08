@@ -10,12 +10,16 @@
 #Changes to North America
 - Removed British & French cores from the Caribbean Islands, added Martinique core
 - Renamed Trinidad to Trinidad & Tobago
+- Modified the California Gold Rush event to allow Mexico and California to have the event as well
 
 #Changes to Europe
 - Renaming Central Hungary will now rename Pest correctly depending on whether Budapest has been founded or not
+- Renamed Katholieke Partij to Parti catholique
+- Modified how the Baltic Provinces are annexed into Germany
 
 #Changes to Asia
 - Afghanistan will now use a different flag if it is no longer a absolute monarchy
+- Anglo-Afghan War and the first Anglo-Sikh War can now be avoided if Afghanistan or the Sikh Empire has either an alliance with the UK or over 150 relations
 - Added a decision for the UK to claim Southern New Guinea if Northern New Guinea is owned by Germany, must own or control Australia
 
 #Changes to China
@@ -26,6 +30,14 @@
 - Reduced the militancy modifier of Western Influences
 - Halved the militancy impact of getting most westernization reforms
 - Increased the colonal points Battleships, Crusiers and Dreadnoughts give, Steamer transports now give 2 colonial points
+- Increased MTTH for Chlorea Event
+- Colonial Settlement is now 5% more powerful with over 75% Admin Spending
+- Catholics, Orthodox, Protestant pops are much less likely to convert in a Christian country
+- The assmiliation bonus to the new world now will not apply to religious minorities, unless religious policy is not Moralism
+- EXPERIMENTAL: Reduced the assmiliation bonus new world nations get from 1000% to 100%
+- Fixed some pop migration targets, Russians should now migrate to asia again
+- Changed the vassal monthly payment system to a yearly payment to reduce popup spam, amount payable has been increased
+- Added Sulphur Factories, contributed by ozyhuboi
 
 #Changes to Africa
 - Liberia will now begin with several reforms

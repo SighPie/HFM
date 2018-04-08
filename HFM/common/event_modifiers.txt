@@ -2920,6 +2920,11 @@ drang_nach_osten = {
 	icon = 19
 }
 
+drang_nach_osten_country = {
+	global_immigrant_attract = 0.5
+	icon = 19
+}
+
 ###HFM China Modifiers
 
 unciv_balance_qng = {

@@ -484,7 +484,11 @@ country_event = {
 	trigger = {
 		tag = ENG
 		has_global_flag = ranjit_singh_dead
-		NOT = { truce_with = ENG }
+		NOT = { 
+			truce_with = PNJ 
+			relation = { who = PNJ value = 150 }
+			alliance_with = PNJ
+		}
 		war = no
 		NOT = { has_global_flag = 1_anglo_sikh_war }
 	}
