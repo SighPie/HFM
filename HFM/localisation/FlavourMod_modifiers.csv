@@ -189,3 +189,7 @@ dominion;Dominion;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 dominion_ruler;Prime Minister;;;;;;;;;;;;x,,,
 brothers_war_winner;Brother's War Victor;;;;;;;;;;;;x
 micro_nation;Microstate;;;;;;;;;;;;x
+haber_process;Haber Process;;;;;;;;;;;;;;;;;;;x;;;;
+haber_process_desc;The Haber process, also called the Haber–Bosch process, is an artificial nitrogen fixation process and is the main industrial procedure for the production of ammonia today.It is named after its inventors, the German chemists Fritz Haber and Carl Bosch, who developed it in the first half of the 20th century. The process converts atmospheric nitrogen (N2) to ammonia (NH3) by a reaction with hydrogen (H2) using a metal catalyst under high temperatures and pressures;;;;;;;;;;;;;;;;;;;x;;;;
+carl_bosch;Carl Bosch;;;;;;;;;;;;;;;;;;;x;;;;
+carl_bosch_desc;Carl Bosch attended the University of Leipzig, and this is where he studied under Johannes Wislicenus, and he obtained his doctorate in 1898 for research in organic chemistry. After he left In 1899 he took an entry level job at BASF, then Germany's largest chemical and dye firm. From 1909 until 1913 he transformed Fritz Haber's tabletop demonstration of a method to fix nitrogen using high pressure chemistry into an important industrial process to produce megatons of fertilizer and explosives.;;;;;;;;;;;;;;;;;;;x;;;;
