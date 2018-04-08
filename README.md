@@ -1,5 +1,5 @@
 # Historical Flavour Mod
-Current Version: 1.27D Beta
+Current Version: 1.27F Beta
 How to download:
 1. Click this link: https://github.com/SighPie/HFM/archive/Development.zip
 3. Unzip "HFM-Development.zip"
