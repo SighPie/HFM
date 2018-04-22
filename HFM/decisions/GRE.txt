@@ -110,7 +110,6 @@ political_decisions = {
 			tag = GRE
 			NOT = { exists = BYZ }
 			has_country_flag = greece_has_got_a_brand_new_bag
-			has_global_flag = fantasy_countries_enabled
 		}
 		
 		allow = {

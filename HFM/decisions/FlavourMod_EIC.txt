@@ -81,6 +81,11 @@ political_decisions = {
 				}
 				literacy = -0.08
 			}
+			
+			any_country = {
+				limit = { capital_scope = { is_core = HND } civilized = no vassal_of = ENG }
+				economic_reform = yes_monetary_reform
+			}
 		}
 	}
 
@@ -290,10 +295,6 @@ political_decisions = {
 					location = { is_core = HND }
 				}
 				reduce_pop = 2.5
-			}
-			any_country = {
-				limit = { ai = yes exists = yes civilized = no is_culture_group = south_asian vassal_of = THIS }	
-				economic_reform = yes_education_reform
 			}
 		}
 		

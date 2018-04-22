@@ -1,4 +1,10 @@
 ;;;;;;;;;;;x
+AGRESSION_WAR_ADD_SPHERE_NAME_ENG_MNP;British Intervention in Bahrain;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_ADD_SPHERE_NAME_ENG_MNP;British Intervention in Bahrain;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_MNP;The $ORDER$Anglo-Manipur War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_ENG_MNP;The $ORDER$Anglo-Manipur War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PUPPET_NAME_ENG_BHU;The Duar War;;;;;;;;;;;;;;;x;;
+NORMAL_WAR_PUPPET_NAME_ENG_BHU;The Duar War;;;;;;;;;;;;;;;x;;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_ZUL;The $ORDER$Anglo-Zulu War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PROTECTORATE_NAME_ENG_ZUL;The $ORDER$Anglo-Zulu War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_NAME_ENG_ASH;The War of the Golden Stool;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -93,7 +99,9 @@ NORMAL_WAR_RESTORE_ORDER_NAME_MEX_YUC;The $ORDER$Yucatan War of Independence;;;;
 AGRESSION_WAR_RESTORE_ORDER_NAME__YUC;The $ORDER$Yucatan War of Independence;;;;;;;;;;;;;x,,,
 NORMAL_WAR_RESTORE_ORDER_NAME_MEX_RGR;The $ORDER$Rio Grande Rebellion;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_MEX_RGR;The $ORDER$Rio Grande Rebellion;;;;;;;;;;;;;x,,,
-AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_SIK;British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PUPPET_NAME_ENG_SIK;The British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PUPPET_NAME_ENG_SIK;The British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_SIK;The British Expedition to Sikkim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_RESTORE_ORDER_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_KRA;The $ORDER$Krakow Uprising;;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_ENG_GRE;$ORDER$The Don Pacifico Affair;;;;;;;;;;;;x,,,

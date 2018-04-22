@@ -465,6 +465,7 @@ country_event = {
 							is_colonial = yes
 							any_owned_province = { 
 								OR = {
+									continent = central_africa 
 									continent = east_africa 
 									continent = west_africa
 									continent = africa
@@ -486,6 +487,7 @@ country_event = {
 			remove_core = HGL
 			secede_province = FROM
 			add_core = FROM
+			change_province_name = "Helgoland"
 		}
 		TNZ = { government = colonial_company }
 		random_owned = {

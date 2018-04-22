@@ -37,6 +37,13 @@ country_event = {
 
 	option = {
 		name = "EVT99903OPTA"
+		any_pop = {
+			limit = {
+				location = { is_core = CAL }
+				culture = native_american_minor
+			}
+				reduce_pop = 0.05
+			}
 			random_owned = {
 				limit = { owner = { primary_culture = yankee } }
 				owner = {
@@ -47,13 +54,9 @@ country_event = {
 						}
 						reduce_pop = 1.5
 					}
-					any_pop = {
-						limit = {
-							location = { is_core = CAL }
-							culture = mexican
-						}
-						reduce_pop = 0.2
-					}
+					104 = { assimilate = yes }
+					89 = { assimilate = yes }
+					90 = { assimilate = yes }
 				}
 			}
 			random_owned = {
@@ -75,13 +78,7 @@ country_event = {
 					}
 				}
 			}
-			any_pop = {
-				limit = {
-					location = { is_core = CAL }
-					culture = native_american_minor
-				}
-				reduce_pop = 0.05
-			}
+			
 			84 = { 
 				add_province_modifier = {
 					name = california_gold_rush
@@ -131,20 +128,6 @@ country_event = {
 
 	option = {
 		name = "EVT99935OPTA"
-		any_pop = {
-			limit = {
-				location = {
-					is_core = TEX
-				}
-				culture = texan
-				NOT = { 
-					type = soldiers 
-					type = bureaucrats
-					type = aristocrats
-				}
-			}
-			reduce_pop = 2
-		}
 		TEX = { 
 			all_core = {
 				limit = {  
@@ -384,7 +367,7 @@ country_event = {
 			life_rating = 12
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1825
+				duration = 1095
 			}			
 		}
 		any_owned = {
@@ -398,7 +381,7 @@ country_event = {
 			life_rating = 10
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1095
+				duration = 720
 			}			
 		}
 		any_owned = {
@@ -412,7 +395,7 @@ country_event = {
 			life_rating = 5
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1825
+				duration = 720
 			}			
 		}		
 		any_owned = {
@@ -429,7 +412,7 @@ country_event = {
 			life_rating = 5
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 2920
+				duration = 1460
 			}			
 		}			
 		any_owned = {
@@ -461,7 +444,7 @@ country_event = {
 			life_rating = 5
 			add_province_modifier = {
 				name = gateway_to_america
-				duration = 1095
+				duration = 730
 			}			
 		}
 		any_owned = {
@@ -535,7 +518,7 @@ country_event = {
 		163 = { #Chicago
 			add_province_modifier = {
 				name = baby_boom
-				duration = 730 
+				duration = 547 
 			}
 			life_rating = 3
 		}

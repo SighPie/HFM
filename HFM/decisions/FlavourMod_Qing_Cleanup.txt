@@ -183,6 +183,7 @@ political_decisions = {
 		picture = panthay
 		potential = {
 			ai = yes
+			NOT = { has_global_flag = tpg_war_started }
 		}
 		
 		allow = {

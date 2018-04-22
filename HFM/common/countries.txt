@@ -55,6 +55,10 @@ SEY		="countries/Seychelles.txt"
 IOT		="countries/Indian Ocean Territory.txt"
 SGP		="countries/Singapore.txt"
 MTQ		="countries/Martinique.txt"
+SVA		="countries/Svaneti.txt"
+MIG		="countries/Mingrelia.txt"
+CHH		="countries/Chhatarpur.txt"
+REW		="countries/Rewah.txt"
 
 ###Colonial Spain Countries
 CGC 	= "countries/Colonial Chile.txt"

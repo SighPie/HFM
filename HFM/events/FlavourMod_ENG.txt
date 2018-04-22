@@ -257,7 +257,7 @@ country_event = {
 	option = {
 		name = "EVT99991OPTA"
 		prestige = 5
-		badboy = 2
+		badboy = 3
 		relation = { who = BUR value = -200 }
 		diplomatic_influence = { who = BUR value = -200 }
 		casus_belli = {
@@ -272,9 +272,7 @@ country_event = {
 			call_ally = no
 		}
 		set_country_flag = burma_3
-		ai_chance = {
-			factor = 99
-		}
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -292,11 +290,11 @@ country_event = {
 		any_pop = {
 			limit = {
 				location = { is_core = HND }
-				is_primary_culture = no
+				is_primary_culture = yes
 			}
 			militancy = 2
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -686,7 +684,8 @@ country_event = {
 	desc = "EVTDESC999101"
 	picture = "big_ben_finished"
 	major = yes
-
+	fire_only_once = yes
+	
 	trigger = {
 		tag = ENG
 		is_greater_power = yes
@@ -750,5 +749,168 @@ country_event = {
 			prestige = -80 government = hms_government
 		}
 		ai_chance = { factor = 1 }
+	}
+}
+
+#Anglo-Bhutan War
+country_event = {
+	id = 99105
+	title = "EVTNAME99105" 
+	desc = "EVTDESC99105"
+	picture = "anglo_bhutan_war"
+	fire_only_once = yes
+		
+	trigger = {
+		tag = ENG
+		NOT = { exists = EIC }
+		owns = 1251
+		has_country_flag = empress_of_india
+		is_greater_power = yes
+		nationalism_n_imperialism = 1
+		BHU = {
+			war = no
+			civilized = no
+			is_vassal = no
+			exists = yes
+			neighbour = ENG
+			NOT = { truce_with = ENG }
+		}
+		OR = {
+			war_policy = jingoism
+			war_policy = pro_military
+		}
+		NOT = { has_country_flag = anglo_bhutan_war }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.1
+			year = 1864
+		}
+	}
+	
+	option = {
+		name = "EVT99105OPTA"
+		prestige = 5
+		relation = { who = BHU value = -200 }
+		diplomatic_influence = { who = BHU value = -200 }
+		leave_alliance = BHU
+		war = {
+			target = BHU
+			attacker_goal = { casus_belli = great_game_cb }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		set_country_flag = anglo_bhutan_war
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVT99105OPTB"
+		prestige = -25
+		relation = { who = BHU value = 25 }
+		set_country_flag = anglo_bhutan_war
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			dominant_issue = {
+				factor = 0.05
+				value = pacifism
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = HND }
+				is_primary_culture = yes
+			}
+			militancy = 2
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Anglo-Manipur War
+country_event = {
+	id = 99106
+	title = "EVTNAME99106" 
+	desc = "EVTDESC99106"
+	picture = "anglo_manipur_war"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		NOT = { exists = EIC }
+		owns = 1251
+		has_country_flag = empress_of_india
+		is_greater_power = yes
+		invention = the_dark_continent
+		MNP = {
+			war = no
+			civilized = no
+			vassal_of = ENG
+			exists = yes
+			neighbour = ENG
+			NOT = { truce_with = ENG }
+		}
+		OR = {
+			war_policy = jingoism
+			war_policy = pro_military
+		}
+		NOT = { has_country_flag = anglo_manipur_war }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.1
+			year = 1895
+		}
+	}
+	
+	option = {
+		name = "EVT99106OPTA"
+		prestige = 5
+		badboy = 3
+		relation = { who = MNP value = -200 }
+		diplomatic_influence = { who = MNP value = -200 }
+		release_vassal = MNP
+		leave_alliance = MNP
+		casus_belli = {
+			target = MNP
+			type = establish_protectorate_BC_casus_belli
+			months = 60
+		}
+		war = {
+			target = MNP
+			attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		set_country_flag = anglo_manipur_war
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVT99106OPTB"
+		prestige = -25
+		relation = { who = MNP value = 25 }
+		set_country_flag = anglo_manipur_war
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			dominant_issue = {
+				factor = 0.05
+				value = pacifism
+			}
+		}
+		any_pop = {
+			limit = {
+				location = { is_core = HND }
+				is_primary_culture = yes
+			}
+			militancy = 2
+		}
+		ai_chance = { factor = 0 }
 	}
 }

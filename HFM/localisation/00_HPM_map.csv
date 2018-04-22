@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PROV3274;Svaneti;;;;;;;;;;x;;;;
+PROV2095;Dithakong;;;;;;;;;;x;;;;
 RUS_994;Ingriya;;;;;;;;;;;;;;x
 SWI_603;Mittelland;;;;;;;;;;;;;;x
 SWI_607;Région Lémanique;;;;;;;;;;;;;;x
@@ -965,6 +967,7 @@ PROV3259;Jadegebiet;;;;;;;;;;;;;x
 east_africa;East Africa;;;;;;;;;;;;;x
 west_africa;West Africa;;;;;;;;;;;;;x
 south_west_africa;South-West Africa;;;;;;;;;;;;;x
+central_africa;Equatorial Africa;;;;;;;;;;;;;x
 east_indies;East-Indies;;;;;;;;;;;;;x
 indochina;Indochina;;;;;;;;;;;;;x
 equatorial_africa;Equatorial Africa;;;;;;;;;;;;;x

@@ -84,6 +84,7 @@ country_event = {
 			capital_scope = { continent = africa }
 			capital_scope = { continent = west_africa }
 			capital_scope = { continent = east_africa }
+			capital_scope = { continent = central_africa }
 			capital_scope = { continent = south_west_africa }
 		}
 		has_global_flag = berlin_conference
@@ -138,6 +139,7 @@ country_event = {
 			capital_scope = { continent = africa }
 			capital_scope = { continent = west_africa }
 			capital_scope = { continent = east_africa }
+			capital_scope = { continent = central_africa }
 			capital_scope = { continent = south_west_africa }
 		}
 		NOT = { has_global_flag = berlin_conference }
@@ -279,6 +281,7 @@ country_event = {
 			capital_scope = { continent = africa }
 			capital_scope = { continent = west_africa }
 			capital_scope = { continent = east_africa }
+			capital_scope = { continent = central_africa }
 			capital_scope = { continent = south_west_africa }
 		}
 		civilized = no
@@ -818,6 +821,7 @@ country_event = {
 			capital_scope = { continent = africa }
 			capital_scope = { continent = west_africa }
 			capital_scope = { continent = east_africa }
+			capital_scope = { continent = central_africa }
 			capital_scope = { continent = south_west_africa }
 		}
 				civilized = no

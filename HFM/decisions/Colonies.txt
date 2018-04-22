@@ -377,12 +377,8 @@ political_decisions = {
 			war = no
 			OR = {
 				AND = {
-					2512 = {
-						is_colonial = no
-					}
-					2515 = {
-						is_colonial = no
-					}
+					2512 = { is_colonial = no }
+					2515 = { is_colonial = no }
 				}
 				year = 1850
 			}
@@ -401,7 +397,7 @@ political_decisions = {
 			2571 = { life_rating = 5 }
 			2514 = { life_rating = 2 }
 			any_pop = { limit = { location = { is_core = NZL } culture = australian } reduce_pop = 2.5 }
-			any_pop = { limit = { location = { is_core = NZL } is_culture_group = british strata = poor} reduce_pop = 1.8 }
+			any_pop = { limit = { location = { is_core = NZL } culture = british strata = poor} reduce_pop = 1.8 }
 			any_pop = { limit = { location = { is_core = NZL } culture = maori } literacy = -0.8 reduce_pop = 0.9 }
 			
 			any_pop = {
@@ -416,7 +412,7 @@ political_decisions = {
 				}
 				add_province_modifier = {
 					name = colonial_recruitment
-					duration = 1095
+					duration = 365
 				}
 			}
 			NZL = { all_core = { remove_core = ENG } }
@@ -798,6 +794,7 @@ political_decisions = {
 						continent = south_west_africa 
 						continent = east_africa
 						continent = west_africa
+						continent = central_africa
 					}
 					NOT = { terrain = small_island }
 					NOT = { terrain = desert }
@@ -830,6 +827,7 @@ political_decisions = {
 						continent = africa 
 						continent = south_west_africa 
 						continent = east_africa
+						continent = central_africa
 						continent = west_africa
 					}
 					NOT = { terrain = small_island }

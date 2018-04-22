@@ -1967,62 +1967,24 @@ country_event = {
 	title = "EVTNAME36950"
 	desc = "EVTDESC36950"
 	picture = "administration"
-
-	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		ASH = { owns = 1907 }
-		owns = 1908
-		year = 1850
-		relation = { who = DEN value = 0 }
-		NOT = {
-			has_country_flag = sale_of_danish_gold_coast
-			alliance_with = ASH
-		}
-	}
 	
-	mean_time_to_happen = {
-		months = 40
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "EVT36950OPTA"
-		set_country_flag = sale_of_danish_gold_coast
-		DEN = { prestige = 5 }
+		treasury = -35000
+		DEN = {
+			prestige = 5 
+			treasury = 35000
+		}
 		diplomatic_influence = { who = ASH value = -200 }
 		relation = { who = ASH value = -200 }
 		random_country = {
 			limit = {
 				owns = 1907
-				civilized = no
-				NOT = { has_global_flag = berlin_conference }
-			}
-			add_casus_belli = {
-				target = THIS
-				type = demand_concession_casus_belli
-				months = 60
-			}
-		}
-		random_country = {
-			limit = {
-				owns = 1907
-				civilized = no
-				has_global_flag = berlin_conference
-			}
-			add_casus_belli = {
-				target = THIS
-				type = demand_concession_BC_casus_belli
-				months = 60
-			}
-		}
-		random_country = {
-			limit = {
-				owns = 1907
 				civilized = yes
 			}
-			1907 = { add_core = THIS }
+			1907 = { secede_province = THIS remove_core = FROM }
 		}
 		ai_chance = {
 			factor = 100
@@ -2030,7 +1992,6 @@ country_event = {
 	}
 	option = {
 		name = "EVT36950OPTB"
-		set_country_flag = sale_of_danish_gold_coast
 		prestige = -5
 		ai_chance = {
 			factor = 0
@@ -2962,10 +2923,10 @@ country_event = {
 			relation = { who = SIK value = -400 }
 			diplomatic_influence = { who = SIK value = -400 }
 			leave_alliance = THIS
-			casus_belli = { target = SIK type = conquest_any months = 30 }
+			casus_belli = { target = SIK type = make_puppet months = 30 }
 			war = {
 				target = SIK
-				attacker_goal = { casus_belli = conquest_any }
+				attacker_goal = { casus_belli = make_puppet }
 				defender_goal = { casus_belli = humiliate }
 			}
 			SIK = { tech_school = unciv_tech_school }
@@ -2984,34 +2945,9 @@ country_event = {
 				neighbour = THIS
 				NOT = { number_of_states = 2 }
 				civilized = no
-				NOT = { THIS = { nationalism_n_imperialism = 1 } }
 			}
-			add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 24 }
+			add_casus_belli = { target = THIS type = make_puppet months = 24 }
 		}
-		random_country = {
-			limit = {
-				tag = SIK
-				exists = yes
-				neighbour = THIS
-				NOT = { number_of_states = 2 }
-				civilized = no
-				THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
-			}
-			add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 24 }
-		}
-		
-		random_country = {
-			limit = {
-				tag = SIK
-				exists = yes
-				neighbour = THIS
-				NOT = { number_of_states = 2 }
-				civilized = no
-				THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
-			}
-			add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 24 }
-		}
-		
 		random_country = {
 			limit = {
 				tag = SIK
@@ -3020,7 +2956,7 @@ country_event = {
 				NOT = { number_of_states = 2 }
 				civilized = yes
 			}
-			add_casus_belli = { target = THIS type = conquest months = 40 }
+			add_casus_belli = { target = THIS type = make_puppet months = 40 }
 		}
 		
 		ai_chance = { factor = 0 }

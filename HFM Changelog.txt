@@ -1,54 +1,81 @@
-#Changelog v1.28
+1.28 Changelog
 
-#Changes in 1.28
 #Bugfixes
-- Fixed the issues with the Leipizg Congress event
-- Fixed issues with the Anglo-Russian Convention not releasing Afghanistan/Persia if they are puppets, causing the event to repeat
-- Fixed localization issue when renaming Quebec
-- Fixed Italy no longer getting cores on the Italian Islands
+- Fixed some bugs regarding the Baltic integration changes
 
-#Changes to North America
-- Removed British & French cores from the Caribbean Islands, added Martinique core
-- Renamed Trinidad to Trinidad & Tobago
-- Modified the California Gold Rush event to allow Mexico and California to have the event as well
+#Europe
+- Sardinia-Piedmont, Two Sicilies and Tuscany will now use different flags when becoming constitutional monarchies
+- Changed some flags for Sardinia, Savoy, Sardinia-Piedmont, Modena, Parma and Lucca
+- Color-Corrected most of the German minors' starting flags
+- Schleswig & Holstein each now use a different flag when independent, they will use their original flags when they're puppets of Denmark
+- Disabling the Microstates now also removes the Catalonia core from the Andorra Province
+- Schleswig-Holstein now starts as an Autonomous Dependency of Denmark
+- Added an event that allows the NGF to release the southern half of Hesse-Darmstadt when the NGF is formed, contributed by Hammonia
+- BYZ can now be formed by default
+- Changed some flags for Congress Poland
+- Added colonial flags for Bohemia and Poland occupied by a fascist Germany (Generalgouvernement & Protektorat Böhmen-Mähren)
+- Changed flags for Pomerelia, Poznan and Silesia, Danzig
+- Added the Georgian Principalities of Svaneti and Mingrelia
+- Andorra will now use the correct flag for the time period
+- Highlander Raids modifier in the caucasus will now will typically last longer
+- Reduced benefits of 'Russian Army Reforms' modifier
+- PROV1057 Kizylyar changed core to Dagestan rather than Chechnya
+- Renamed 'Sardinia-Piedmont' to 'The Kingdom of Sardinia'
 
-#Changes to Europe
-- Renaming Central Hungary will now rename Pest correctly depending on whether Budapest has been founded or not
-- Renamed Katholieke Partij to Parti catholique
-- Modified how the Baltic Provinces are annexed into Germany
-
-#Changes to Asia
-- Afghanistan will now use a different flag if it is no longer a absolute monarchy
-- Anglo-Afghan War and the first Anglo-Sikh War can now be avoided if Afghanistan or the Sikh Empire has either an alliance with the UK or over 150 relations
-- Added a decision for the UK to claim Southern New Guinea if Northern New Guinea is owned by Germany, must own or control Australia
-
-#Changes to China
-- Slightly reduced the research debuff China gets
-- Added an alternate ending to the First Opium War, The Treaty of Macao, removes all Opium Modifiers in China
-
-#Other Changes
-- Reduced the militancy modifier of Western Influences
-- Halved the militancy impact of getting most westernization reforms
-- Increased the colonal points Battleships, Crusiers and Dreadnoughts give, Steamer transports now give 2 colonial points
-- Increased MTTH for Chlorea Event
-- Colonial Settlement is now 5% more powerful with over 75% Admin Spending
-- Catholics, Orthodox, Protestant pops are much less likely to convert in a Christian country
-- The assmiliation bonus to the new world now will not apply to religious minorities, unless religious policy is not Moralism
-- EXPERIMENTAL: Reduced the assmiliation bonus new world nations get from 1000% to 100%
-- Fixed some pop migration targets, Russians should now migrate to asia again
-- Changed the vassal monthly payment system to a yearly payment to reduce popup spam, amount payable has been increased
-- Added Sulphur Factories, contributed by ozyhuboi
+#North & South America
+- Added a colonial flag for Portuguese Brazil
+- EXPERIMENTAL: Added a system for catholic populations growth in the USA, similar to slave pop growth in order to better reach the historical catholic population in the US (Eventually will be done for Australia/New Zealand too, as well as a Protestant version for Brazil/Mexico)
+-- Added more starting Yankee catholic pops in the USA in regions with Catholic pops, this is meant to counter the fact that assimilation also converts pops to Protestant, so there will be more Catholic Yankee/Dixie Pops
+- Paraguay now starts with 'Totalitarianism'
+- Removed Dutch core in the Caribbean
 
 #Changes to Africa
-- Liberia will now begin with several reforms
-- Modified the Golden Stool Event, added war-name localization for the Anglo-Ashanti Wars
-- Added war-name localization for the Anglo-Zulu War
+- Adjusted the continents of several regions
+- Added continent 'Equatorial Africa'
+- Renamed PROV2095 to Dithakong
+- Modified the conditions for forming Mittelafrika
+- Accra now starts as owned by Denmark, the territory can be sold to the owner of Cape Coast in 1850
+- Changed several African flags
+- Added Colonial flag for French Soudan, British Sierra Leone
 
-#Changes to Colonial Governments
-- British Dominions (CAN/NEW/NZL/AST/SAF/COL) will now use the Dominion Government type when released, they will change flags based on whether they're dominions or constitutional monarchies
-- Added an event that turns all the British dominions into HMS govts if a great war has been fought and won
-- Modified the British Cyprus Flag
-- Canada HMS Govt will now use the 1921 Flag rather than the 1957 flag
-- Ireland HMS Government will no longer be known as 'The Irish Free State', now Ireland will be released as a Dominion if Home Rule is granted
-- Australia and New Zealand will now be released as Dominions
-- Added British Colonial Flags for Burma, Natal, Oranje, Transval, Nyasaland, Northern Rhodesia, The Straits Settlement
+#Changes to Asia & Oceania
+- Removed reforms for the Chinese substates to match the Qing
+- Changed Sarawak's Flag, changed its religion to Protestant
+- Added a new modifier 'The White Rajahs' for Sarawak
+- Added a decision 'Form the Sarawak Rangers' for Sarawak, gives some military reforms
+- Modified some modifiers that Qing gets
+- Adjusted some pop growth events for New Zealand
+- Hokkaido and Sakhalin now start as colonial provinces
+
+#Changes to India
+- Anglo-Sikkim War - Changed CB to puppet
+- Significantly increased MTTH for the Doctrine of Lapse
+- Manipur now starts as a vassal of the UK
+- Bundelkhand tag changed to two seperate tags, Chhatarpur and Rewah, Bundelkhand can now be formed as the Central India Agency
+- Baluchistan can now be formed by the UK as the Baluchistan Agency
+- Bijapur and Ajmer are now controlled by the EIC
+- Moved provinces of Chitral and Peshawar to Pashtunistan region
+- Added event 'The Bhutan Conflict'
+- Most of the Indian states now start with more reforms
+- Added a decision for the British AI to renew its alliances with its Indian Vassals every year
+- Most of Pakistan has been moved to the Near East Continent
+
+#Changes to Arabia
+- Added a decision for the UK to create a Oman protectorate
+- Taking certain decision will now increase diplomatic influence throughout the Arabian pennisula
+- Renamed Oman to 'Muscat-Oman'
+
+#Other Changes
+- Added an alternative system for uncivs to get military reforms, you can purchase military reforms with money and a small amount of research points from great powers as long as they have the required tech for the reforms, only can be used if part of a sphere. Must not have Isolationism
+-- Training Methods -> $25,000 & Field Training Invention (Invention)
+-- Foreign Officers -> $10,000 & Army Professionalism (Tech)
+-- Army Schools -> $25,000 & Army Academic Training (Invention), 5% Literacy
+-- Military Constructions -> $45,000 & Field Fortifications (Invention)
+-- Foreign Weapons -> $35,000 & Breech-Loaded Rifles (Invention)
+-- Foreign Artillery -> $55,000 & Iron-Muzzle Loaded Artillery (Invention)
+-- Foreign Ships -> $65,000 & Iron Steamers (Tech)
+-- Foreign Shipyards -> $55,000 & Raider Group Doctrine (Tech)
+-- Foreign Artillery -> $10,000 & Naval Professionalism (Tech)
+- Adjusted some of the unciv reforms
+- Increased default output of Fruit
+- Artisans now can use Wool to produce fabrics

@@ -99,7 +99,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = magha_puja
-			plurality = 3
+			plurality = 1
 			any_pop = {
 				limit = {
 					OR = { 

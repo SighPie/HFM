@@ -8,6 +8,7 @@ political_decisions = {
 				has_global_flag = nigeria_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa }
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -161,9 +162,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = central_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -290,6 +292,7 @@ political_decisions = {
 				has_global_flag = togo_organized
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -376,6 +379,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
  capital_scope = { continent = east_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -454,6 +458,7 @@ political_decisions = {
 				has_global_flag = ivory_coast_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -544,6 +549,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
  capital_scope = { continent = east_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -623,6 +629,7 @@ political_decisions = {
 				has_global_flag = sierra_leone_organized
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -689,6 +696,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } SLE = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } SLE = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } SLE = { religion =  yazidi set_country_flag = yazidi_country } }
+			random_owned = { limit = { owner = { primary_culture = british } } SLE = { government = colonial_company } }
 		}
 	}
 	
@@ -704,9 +712,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				 capital_scope = { continent = west_africa } 
+				 capital_scope = { continent = central_africa } 
+				 capital_scope = { continent = east_africa } 
+				 capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -761,6 +770,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } SLE = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } SLE = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } SLE = { religion =  yazidi set_country_flag = yazidi_country } }
+			
+			random_owned = { limit = { owner = { primary_culture = british } } SLE = { government = colonial_company } }
 		}
 	}
 	
@@ -772,6 +783,7 @@ political_decisions = {
 				has_global_flag = guinea_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -856,6 +868,7 @@ political_decisions = {
 			NOT = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -932,6 +945,7 @@ political_decisions = {
 				has_global_flag = senegal_organized
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -983,6 +997,7 @@ political_decisions = {
 			NOT = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -1027,6 +1042,7 @@ political_decisions = {
 				has_global_flag = niger_organized
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -1118,6 +1134,7 @@ political_decisions = {
 			NOT = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -1203,6 +1220,7 @@ political_decisions = {
 				has_global_flag = chad_organized
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -1300,6 +1318,7 @@ political_decisions = {
 			NOT = {
 				capital_scope = { continent = africa } 
  capital_scope = { continent = west_africa } 
+ capital_scope = { continent = central_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
 			}
@@ -1388,6 +1407,7 @@ political_decisions = {
 				has_global_flag = cameroon_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -1477,9 +1497,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				 capital_scope = { continent = west_africa } 
+				 capital_scope = { continent = east_africa } 
+				 capital_scope = { continent = central_africa } 
+				 capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -1566,7 +1587,8 @@ political_decisions = {
 				has_global_flag = gabon_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
-				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = east_africa }
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1972
@@ -1649,6 +1671,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -1719,6 +1742,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1977
@@ -1787,6 +1811,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } CGO = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } CGO = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } CGO = { religion =  yazidi set_country_flag = yazidi_country } }
+			
+			random_owned = { limit = { owner = { primary_culture = french } } CGO = { government = colonial_company } }
 		}
 	}
 	
@@ -1804,6 +1830,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -1873,6 +1900,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } CGO = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } CGO = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } CGO = { religion =  yazidi set_country_flag = yazidi_country } }
+			
+			random_owned = { limit = { owner = { primary_culture = french } } CGO = { government = colonial_company } }
 		}	
 	}
 	
@@ -1885,6 +1914,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1982
@@ -1996,6 +2026,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa } 
 			}
 			NOT = { has_country_flag = not_congo_primary_culture }
@@ -2099,6 +2130,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2012
@@ -2205,6 +2237,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -2302,6 +2335,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2024
@@ -2402,6 +2436,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -2492,6 +2527,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2044
@@ -2591,6 +2627,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -2681,6 +2718,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			2609 = { empty = no }
@@ -2755,6 +2793,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } MLI = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } MLI = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } MLI = { religion =  yazidi set_country_flag = yazidi_country } }
+			
+			random_owned = { limit = { owner = { primary_culture = french } } MLI = { government = colonial_company } }
 		}
 	}
 	
@@ -2772,6 +2812,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -2845,6 +2886,8 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } MLI = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } MLI = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } MLI = { religion =  yazidi set_country_flag = yazidi_country } }
+			
+			random_owned = { limit = { owner = { primary_culture = french } } MLI = { government = colonial_company } }
 		}	
 	}
 	
@@ -2858,6 +2901,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1731
@@ -2938,6 +2982,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1965
@@ -3026,6 +3071,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa } 
 			}
 		}
@@ -3109,6 +3155,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2067
@@ -3201,6 +3248,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -3273,6 +3321,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1785
@@ -3355,6 +3404,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -3425,6 +3475,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1999
@@ -3517,6 +3568,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -3598,6 +3650,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				 capital_scope = { continent = west_africa } 
 				 capital_scope = { continent = east_africa } 
+				 capital_scope = { continent = central_africa } 
 				 capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -3739,6 +3792,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -3823,6 +3877,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 				primary_culture = french
 			}
@@ -3866,6 +3921,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2019
@@ -3951,6 +4007,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -4019,6 +4076,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2074
@@ -4101,6 +4159,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -4174,6 +4233,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2048
@@ -4211,6 +4271,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 				OR = {
 					tag = EGY
@@ -4257,6 +4318,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1910
@@ -4337,6 +4399,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -4409,6 +4472,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1901
@@ -4494,6 +4558,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -4569,6 +4634,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1775
@@ -4608,6 +4674,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1920
@@ -4691,6 +4758,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -4847,6 +4915,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 			capital_scope = { continent = west_africa } 
 			capital_scope = { continent = east_africa } 
+			capital_scope = { continent = central_africa } 
 			capital_scope = { continent = south_west_africa } }
 			NOT = { has_global_flag = somalia_united }
 			invention = the_dark_continent
@@ -5054,6 +5123,7 @@ political_decisions = {
 				has_global_flag = namibia_organized
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -5158,6 +5228,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 		}
@@ -5423,6 +5494,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1877
@@ -5510,6 +5582,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -5589,6 +5662,7 @@ political_decisions = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 2115
@@ -5673,6 +5747,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 			capital_scope = { continent = west_africa } 
 			capital_scope = { continent = east_africa } 
+			capital_scope = { continent = central_africa } 
 			capital_scope = { continent = south_west_africa } }
 		}
 		
@@ -5746,6 +5821,7 @@ political_decisions = {
 				capital_scope = { continent = west_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = central_africa } 
 				primary_culture = british
 			}
 			owns = 2068
@@ -5826,6 +5902,7 @@ political_decisions = {
 			NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } }
 			NOT = { has_country_flag = ian_would_be_proud }
 		}
@@ -5909,6 +5986,7 @@ political_decisions = {
 			2081 = { owner = { NOT = { capital_scope = { continent = africa } 
 					capital_scope = { continent = west_africa } 
 					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = central_africa } 
 					capital_scope = { continent = south_west_africa } } } }
 			OR = {
 				2081 = { owner = { has_country_flag = treaty_of_heligoland } }
@@ -5983,6 +6061,7 @@ political_decisions = {
 					 capital_scope = { continent = west_africa } 
 					 capital_scope = { continent = east_africa } 
 					 capital_scope = { continent = south_west_africa }
+					 capital_scope = { continent = central_africa } 
 					civilized = yes
 				}
 				AND = {
@@ -6027,6 +6106,7 @@ political_decisions = {
 							invention = the_dark_continent
 							AND = {
 								capital_scope = { continent = africa } 
+								capital_scope = { continent = central_africa } 
  capital_scope = { continent = west_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
@@ -6050,6 +6130,7 @@ political_decisions = {
 							invention = the_dark_continent
 							AND = {
 								capital_scope = { continent = africa } 
+								capital_scope = { continent = central_africa } 
  capital_scope = { continent = west_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
@@ -6073,6 +6154,7 @@ political_decisions = {
 							invention = the_dark_continent
 							AND = {
 								capital_scope = { continent = africa } 
+								capital_scope = { continent = central_africa } 
  capital_scope = { continent = west_africa } 
  capital_scope = { continent = east_africa } 
  capital_scope = { continent = south_west_africa }
@@ -6095,6 +6177,7 @@ political_decisions = {
 							AND = {
 								capital_scope = { continent = africa } 
 								 capital_scope = { continent = west_africa } 
+								 capital_scope = { continent = central_africa } 
 								 capital_scope = { continent = east_africa } 
 								 capital_scope = { continent = south_west_africa }
 								civilized = yes

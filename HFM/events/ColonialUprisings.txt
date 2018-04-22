@@ -1175,6 +1175,7 @@ province_event = {
 			continent = africa
 			continent = west_africa
 			continent = east_africa
+			continent = central_africa
 			continent = south_west_africa
 		}	
 		terrain = savanna
@@ -1231,6 +1232,7 @@ province_event = {
 			continent = africa
 			continent = west_africa
 			continent = east_africa
+			continent = central_africa
 			continent = south_west_africa
 		}	
 		owner = { civilized = yes }

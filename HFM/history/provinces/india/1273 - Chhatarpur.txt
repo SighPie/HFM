@@ -1,5 +1,6 @@
-owner = BUN
-controller = BUN
+owner = CHH
+controller = CHH
+add_core = CHH
 add_core = BUN
 add_core = MUG
 add_core = HND

@@ -523,8 +523,8 @@ EVTDESC7790006;Despite our best efforts, the unthinkable has happened: $CAPITAL$
 EVT7790006OPTA;We have no choice, we must surrender.;;;;;;;;;;x;;;;
 EVT7790006OPTB;We will fight on, we must not let the French make us a puppet once more!;;;;;;;;;;x;;;;
 EVTNAME7790007;The Treaty of Madrid ($YEAR$);;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-EVT7790007OPTA;We have achieved enough, Catalonia has no actual Value to France.;;;;;;;;;;x;;;;
-EVT7790007OPTB;Catalonia has no actual value to France, however we can demand Spain's Colonies.;;;;;;;;;;x;;;;
+EVT7790007OPTA;We have achieved enough, Iberian lands have no actual Value to us.;;;;;;;;;;x;;;;
+EVT7790007OPTB;Iberia has no actual value to us, however we can demand her Colonies.;;;;;;;;;;x;;;;
 EVT7790007OPTC;We must restore French control over Catalonia!;;;;;;;;;;x;;;;
 EVT7790007OPTD;We will demand Catalonia as well as the Spanish Colonies!;;;;;;;;;;x;;;;
 EVTNAME999100;Imperial Conference of $YEAR$;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
@@ -539,3 +539,16 @@ EVT999101OPTA;This can only be good for the empire;;;;;;;;;;x;;;;
 EVTNAME99809;The Battle of Rorke's Drift;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC99809;Following disaster at the initial invasion, British forces in Zululand were scattered. At Rorke's Drift, a field supply depot and hospital, a small force under Lt. Gonville Bromhead received news of a large Zulu force approaching. Noting that a small column, travelling in open country and burdened with carts of the wounded, would be easily overran by a numerically superior Zulu force, the only choice was to remain and fight.\n\nIn the end, just over 150 British and colonial troops successfully defended the garrison against an assault by 4,000 Zulus. The massive but piecemeal Zulu attacks on Rorke's Drift came very close to defeating the much smaller garrison, but were ultimately repelled. Eleven Victoria Crosses were awarded to the defenders, along with a number of other decorations and honours.;;;;;;;;;;x;;;;
 EVT99809OPTA;What heroism!;;;;;;;;;;x;;;;
+EVTNAME34627;The Fate of Groﬂherzogtum Hessen;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTDESC34627;We have sucessfully united the Northern German states under the $COUNTRY$, however some issues remain. A cultural demarcation between the North and South has always been the Main River, so it would make sense to declare it as the southern border of $COUNTRY$. But that would also mean splitting the Grand Duchy of Hesse in two, taking the Hessian hinterland tightly as a member state of $COUNTRY$, whilst leaving the rest of the Duchy outside of our direct influence.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTOPTA34627;The whole Duchy will join $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTOPTB34627;Yes, the Main River shall be our southern border.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTOPTC34627;Hessen will remain outside of $COUNTRY$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTNAME99105;Conflict in Bhutan;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC99105;Following a peace mission sent to Bhutan in early $YEAR$, in the wake of the recent conclusion of a civil war there, under Ashley Eden. The dzongpon of Punakha ñ who had emerged victorious ñ had broken with the central government and set up a rival Druk Desi while the legitimate druk desi sought the protection of the penlop of Paro and was later deposed. \n\nThe British mission dealt alternately with the rival penlop of Paro and the penlop of Trongsa (the latter acted on behalf of the druk desi), but Bhutan rejected the peace and friendship treaty it offered. \n\nBritain soon declared war. Bhutan had no regular army, and what forces existed were composed of dzong guards armed with matchlocks, bows and arrows, swords, knives, and catapults. Some of these dzong guards, carrying shields and wearing chainmail armor, engaged the well-equipped British forces.;;;;;;;;;;x;;;;
+EVT99105OPTA;Time to put the Bhutanese down.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVT99105OPTB;We have other interests elsewhere.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME99106;The Execution of J.W. Quinton;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC99106;Throughout the 19th century, Britain attempted to gain a foothold in Manipur state affairs. Political instability, culminated in the aftermath of Maharajah Chandrakirti's death. In $YEAR$, prince Kulachandra Singh led a revolt against reigning Maharaja Surchandra dethroning him. Surchandra filed a complaint to Viceroy of India Lord Landsdowne, who in turn dispatched 400 Gurkhas under the command of J.W. Quinton, aiming at arresting the conspirators.\n\nBritish troops launched a raid on the Kangla Palace but were captured Manipuri troops. Quinton then held talks with Kulachandra, expressing his intent at ceasing all hostilities and returning to Kohima. However, he perceived Quinton's assertions as an act of deception, and he was detained and beheaded along with four other British officers.;;;;;;;;;;x;;;;
+EVT99106OPTA;Dispatch a punitive expedition!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVT99106OPTB;We have other interests elsewhere.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

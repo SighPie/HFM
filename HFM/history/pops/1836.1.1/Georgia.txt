@@ -665,3 +665,36 @@
 	}
 
 }
+
+#Svaneti
+3274 = {
+	aristocrats = {
+		culture = georgian
+		religion = orthodox
+		size = 5
+	}
+	
+	clergymen = {
+		culture = georgian
+		religion = orthodox
+		size = 10
+	}
+
+	artisans = {
+		culture = georgian
+		religion = orthodox
+		size = 50
+	}
+
+	serfs = {
+		culture = georgian
+		religion = orthodox
+		size = 2300
+	}
+	
+	farmers = {
+		culture = georgian
+		religion = orthodox
+		size = 250
+	}
+}

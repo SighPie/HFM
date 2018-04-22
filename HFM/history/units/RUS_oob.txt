@@ -63,6 +63,17 @@ WAL = {
 	level = 4
 	influence_value = 0
 }
+SVA = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+
+MIG = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
 
 #Asia
 QNG = {

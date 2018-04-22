@@ -119,7 +119,7 @@ political_decisions = {
 			set_global_flag = disable_microstates
 			3251 = { remove_core = MNC add_core = SAR add_core = ITA }
 			SAR = { inherit = MNC }
-			3252 = { remove_core = ADO add_core = FRA }
+			3252 = { remove_core = ADO remove_core = CAT add_core = FRA }
 			FRA = { inherit = ADO }
 			3253 = { remove_core = LIE add_core = AUS }
 			AUS = { inherit = LIE }
@@ -746,6 +746,165 @@ political_decisions = {
 				end_war = THIS
 			}
 		}	
+	}
+	
+	american_catholic_pop_growth = {
+		potential = {
+			ai = yes
+			exists = yes
+			NOT = { year = 1850 }
+			OR = {
+				AND = { 
+					is_culture_group = american_cultures
+					government = democracy
+					NOT = { has_country_modifier = catholic_growth }
+				}
+				any_neighbor_country = {
+					ai = no
+					government = democracy
+					is_culture_group = american_cultures
+					NOT = { has_country_modifier = catholic_growth }
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { 
+					owner = {
+						NOT = { has_country_modifier = catholic_growth }
+						is_culture_group = american_cultures 
+					} 
+				}
+				
+				owner = {
+					any_pop = {
+						limit = {
+							has_pop_religion = catholic 
+							is_culture_group = american_cultures
+							location = { is_overseas = no }
+							NOT = { 
+								culture = texan
+								type = craftsmen 
+								type = bureaucrats
+								strata = rich
+								strata = middle
+							}
+							
+						}
+						random_list = {
+							15 = { reduce_pop = 1.03 }
+							35 = { reduce_pop = 1.05 }
+							45 = { reduce_pop = 1.06 }
+						}
+					}
+					any_pop = {
+						limit = {
+							has_pop_religion = catholic 
+							is_culture_group = american_cultures
+							location = { is_overseas = no }
+							OR = { 
+								strata = rich
+								strata = middle
+							}
+							
+						}
+						random_list = {
+							20 = { reduce_pop = 1.03 }
+							35 = { reduce_pop = 1.02 }
+							40 = { reduce_pop = 1.04 }
+						}
+					}
+					any_pop = {
+						limit = {
+							has_pop_religion = catholic 
+							has_pop_culture = cajun
+							NOT = { type = craftsmen }
+							location = { is_overseas = no }
+						}
+						random_list = {
+							40 = { reduce_pop = 1.02 }
+							30 = { reduce_pop = 1.03 }
+							25 = { reduce_pop = 1.04 }
+						}
+					}
+					random_list = {
+						30 = { add_country_modifier = { name = catholic_growth duration = 1825 } }
+						50 = { add_country_modifier = { name = catholic_growth duration = 2190 } }
+						25 = { add_country_modifier = { name = catholic_growth duration = 2555 } }
+					}
+				}
+			}
+			
+			any_country = {
+				limit = {
+					NOT = { has_country_modifier = catholic_growth }
+					is_culture_group = american_cultures 
+				}
+				any_pop = {
+					limit = {
+						has_pop_religion = catholic 
+						is_culture_group = american_cultures
+						location = { is_overseas = no }
+						NOT = { 
+							has_pop_culture = texan
+							type = craftsmen 
+							type = bureaucrats
+							strata = rich
+							strata = middle
+						}
+						
+					}
+					random_list = {
+						15 = { reduce_pop = 1.03 }
+						35 = { reduce_pop = 1.05 }
+						45 = { reduce_pop = 1.06 }
+					}
+				}
+				any_pop = {
+					limit = {
+						has_pop_religion = catholic 
+						is_culture_group = american_cultures
+						location = { is_overseas = no }
+						OR = { 
+							strata = rich
+							strata = middle
+						}
+						
+					}
+					random_list = {
+						20 = { reduce_pop = 1.03 }
+						35 = { reduce_pop = 1.02 }
+						40 = { reduce_pop = 1.04 }
+					}
+				}
+				any_pop = {
+					limit = {
+						has_pop_religion = catholic 
+						OR = { 
+							has_pop_culture = cajun
+							has_pop_culture = texan
+						}
+						NOT = { type = craftsmen }
+						location = { is_overseas = no }
+					}
+					random_list = {
+						40 = { reduce_pop = 1.03 }
+						30 = { reduce_pop = 1.04 }
+						25 = { reduce_pop = 1.05 }
+					}
+				}
+				random_list = {
+					33 = { add_country_modifier = { name = catholic_growth duration = 1825 } }
+					33 = { add_country_modifier = { name = catholic_growth duration = 2190 } }
+					33 = { add_country_modifier = { name = catholic_growth duration = 2555 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	#test_end_really_long_wars = {

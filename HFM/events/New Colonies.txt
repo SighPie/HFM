@@ -25,8 +25,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -77,8 +79,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -130,8 +134,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -183,8 +189,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -254,8 +262,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -311,8 +321,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -363,8 +375,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -417,8 +431,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -469,8 +485,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -524,8 +542,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -581,6 +601,8 @@ province_event = {
 			NOT = { capital_scope = { continent = africa } }
 			NOT = { capital_scope = { continent = west_africa } }
 			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -637,8 +659,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -700,8 +724,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -752,8 +778,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -805,8 +833,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -866,8 +896,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -936,8 +968,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -987,8 +1021,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1051,8 +1087,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1109,8 +1147,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1170,8 +1210,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1232,8 +1274,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1283,8 +1327,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1337,8 +1383,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1407,8 +1455,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1468,8 +1518,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1535,8 +1587,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1595,8 +1649,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1653,8 +1709,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1705,8 +1763,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1768,8 +1828,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1829,8 +1891,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1887,8 +1951,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -1945,8 +2011,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2004,8 +2072,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2057,8 +2127,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2110,8 +2182,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2175,8 +2249,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2239,8 +2315,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2294,8 +2372,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2397,8 +2477,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2460,8 +2542,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2530,8 +2614,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2591,8 +2677,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2655,8 +2743,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = sudan_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2711,8 +2801,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2763,8 +2855,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2825,8 +2919,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2885,8 +2981,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2937,8 +3035,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -2991,8 +3091,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3042,8 +3144,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3095,8 +3199,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3154,8 +3260,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3213,8 +3321,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3265,8 +3375,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3318,8 +3430,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3371,8 +3485,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3428,8 +3544,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3489,8 +3607,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3543,8 +3663,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3607,8 +3729,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = zanzibar_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3668,8 +3792,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3726,8 +3852,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3778,8 +3906,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3843,8 +3973,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = mauretania_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -3900,8 +4032,10 @@ province_event = {
 			civilized = yes
 			OR = {
 				NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+				NOT = { capital_scope = { continent = west_africa } }
+				NOT = { capital_scope = { continent = east_africa } }
+				NOT = { capital_scope = { continent = central_africa } }
+				NOT = { capital_scope = { continent = south_west_africa } }
 				tag = MOR
 			}
 		}
@@ -3958,8 +4092,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = ghana_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -4022,8 +4158,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = burkina_faso_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -4077,8 +4215,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = burkina_faso_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -4135,8 +4275,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = uganda_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -4192,8 +4334,10 @@ province_event = {
 			civilized = yes
 			has_global_flag = uganda_organized
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {
@@ -4264,8 +4408,10 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = { capital_scope = { continent = africa } }
-NOT = { capital_scope = { continent = west_africa } }
-NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = west_africa } }
+			NOT = { capital_scope = { continent = east_africa } }
+			NOT = { capital_scope = { continent = central_africa } }
+			NOT = { capital_scope = { continent = south_west_africa } }
 		}
 		OR = {
 			AND = {

@@ -458,12 +458,12 @@ political_reforms = {
 		}
 		culture_voting_only = {
 			rules = { culture_voting = yes }
-			global_assimilation_rate = 0.05
+			global_assimilation_rate = 0.08
 		}
 		all_voting_pops = {
 			rules = { all_voting = yes }
 			non_accepted_pop_militancy_modifier = -0.01
-			global_assimilation_rate = 0.15
+			global_assimilation_rate = 0.2
 			global_immigrant_attract = 0.08
 		}
 	}
@@ -510,6 +510,7 @@ political_reforms = {
 			badboy = 0.01
 			literacy_con_impact = -0.1
 			administrative_multiplier = 6
+			global_pop_militancy_modifier = 0.01
 			allow = {
 				vote_franschise = none_voting
 				NOT = { press_rights = free_press }
@@ -547,7 +548,7 @@ political_reforms = {
 	colonial_policy = {
 		next_step_only = yes
 		settlement = {
-			global_assimilation_rate = 0.01
+			global_assimilation_rate = 0.05
 			global_immigrant_attract = 0.01
 			supply_consumption = 0.05
 			tax_efficiency = -0.03
@@ -590,10 +591,11 @@ political_reforms = {
 	centralization = {
 		totalitarianism = {
 			global_immigrant_attract = -1
-			global_assimilation_rate = 0.01
+			global_assimilation_rate = 0.05
 			tax_efficiency = 0.05
 			mobilisation_size = 0.05
-			cb_generation_speed_modifier = 0.2
+			cb_generation_speed_modifier = 0.25
+			diplomatic_points_modifier = -0.05
 			allow = {
 				has_global_flag = revolution_n_counter_researched
 				OR = {
@@ -1355,10 +1357,12 @@ military_reforms = {
 		
 		no_foreign_training = {
 			core_pop_militancy_modifier = -0.005
+			supply_consumption = -0.05
 		}
 		yes_foreign_training = {
 			#unit stats improve	
 			land_organisation = 0.1
+			min_military_spending = 0.05
 			technology_cost = 8500
 			civilization_progress_modifier = 0.05
 			research_points_on_conquer = 0.25
@@ -1399,6 +1403,7 @@ military_reforms = {
 	foreign_weapons = {
 		no_foreign_weapons = {
 			core_pop_militancy_modifier = -0.005	
+			supply_consumption = -0.05
 		}
 		yes_foreign_weapons = {
 			land_defense_modifier = 0.1
@@ -1529,6 +1534,7 @@ military_reforms = {
 		}
 		yes_army_schools = {
 			land_unit_start_experience = 10
+			min_military_spending = 0.05
 			technology_cost = 8500
 			civilization_progress_modifier = 0.05
 			allow = {
@@ -1546,6 +1552,7 @@ military_reforms = {
 			
 			on_execute = {
 				effect = {
+					activate_technology = army_command_principle
 					random_owned = {
 						limit = { owner = { has_country_modifier = corrupt_army } }
 						owner = { remove_country_modifier = corrupt_army } 
@@ -1748,6 +1755,7 @@ military_reforms = {
 	
 	foreign_artillery = {
 		no_foreign_artillery = {
+			supply_consumption = -0.1
 		}
 		yes_foreign_artillery = {
 			technology_cost = 8500

@@ -150,12 +150,14 @@ political_decisions = {
 					}
 				}
 				AND = {
-					OR = { 
+					OR = {
 						tag = SIE
 						tag = ALS
 						tag = BAN
+						tag = PZN
+						tag = PML
+						tag = SLS
 					}
-					is_culture_group = germanic
 					OR = {
 						vassal_of = GER
 						vassal_of = GCF
@@ -182,6 +184,22 @@ political_decisions = {
 					}
 				}
 				AND = {
+					OR = { 
+						tag = BOH
+						tag = POL
+					}
+					OR = {
+						AND = { 
+							vassal_of = GER
+							GER = { government = fascist_dictatorship }
+						}
+						AND = { 
+							vassal_of = GCF
+							GCF = { government = fascist_dictatorship }
+						}
+					}
+				}
+				AND = {
 					tag = BOS
 					OR = {
 						vassal_of = GER
@@ -203,6 +221,7 @@ political_decisions = {
 						tag = LBN
 						tag = GAB
 						tag = VTU
+						tag = MLI
 						AND = {
 							tag = ALD
 							has_global_flag = berlin_conference
@@ -232,9 +251,9 @@ political_decisions = {
 					OR = {
 						tag = MOZ
 						tag = ANG
+						tag = BRZ
 					}
-					primary_culture = portuguese
-					OR = { 
+					OR = {
 						AND = { 
 							vassal_of = POR
 							POR = {
@@ -347,6 +366,16 @@ political_decisions = {
 				AND = {
 					tag = NOR
 					vassal_of = SWE
+				}
+				
+				###Danish Puppets###
+				AND = {
+					OR = { 
+						tag = SWH
+						tag = SCH
+						tag = HOL
+					}
+					vassal_of = DEN
 				}
 			}
 			NOT = { 

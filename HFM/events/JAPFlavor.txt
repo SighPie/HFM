@@ -830,6 +830,15 @@ country_event = {
 			limit = { substate_of = TKG }
 			country_event = 97631
 		}
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = {
+				machine_parts = 400
+				steel = 600 #was iron
+				cement = 600
+				build_factory_in_capital_state = fabric_factory
+			}
+		}
 	}
 }
 
@@ -2106,6 +2115,11 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 20
+		
+		modifier = {
+			factor = 0.5
+			year = 1855
+		}
 	}
 
 	option = {
@@ -2121,6 +2135,8 @@ country_event = {
 				add_core = THIS
 				secede_province = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1825 }
+				add_province_modifier = { name = baby_boom duration = 1825 }
 			}
 		}
 		random_owned = {
@@ -2133,6 +2149,8 @@ country_event = {
 				life_rating = 10
 				secede_province = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				add_province_modifier = { name = population_resettlement duration = 1825 } 
+				add_province_modifier = { name = baby_boom duration = 1825 }
 			}
 		}
 	}

@@ -1077,3 +1077,61 @@ country_event = {
 	}
 }
 
+#Hesse-Darmstadt Issue, by Hammonia
+country_event = {
+
+	id = 34627
+    title = "EVTNAME34627"
+    desc = "EVTDESC34627"
+    picture = "hesse"
+
+    is_triggered_only = yes
+    fire_only_once = yes
+    
+    option = {
+        name = "EVTOPTA34627" #annex all
+		badboy = 3
+		BAD = { relation = { who = NGF value = -50 } }
+		WUR = { relation = { who = NGF value = -50 } }
+		BAV = { relation = { who = NGF value = -50 } }
+
+		ai_chance = { factor = 0.01 }
+	}
+
+    option = {
+        name = "EVTOPTB34627" #release south of main
+
+
+		2560 = { remove_core = NGF }
+		570 = { remove_core = NGF }
+		2560 = { secede_province = HES }
+		570 = { secede_province = HES }
+
+		HES = {
+			relation = { who = NGF value = 25 }
+			create_alliance = NGF
+		}
+
+		diplomatic_influence = { who = HES value = 400 }
+
+		ai_chance = { factor = 0.98 }
+	}
+
+    option = {
+        name = "EVTOPTC34627" #release all
+
+		2560 = { remove_core = NGF }
+		567 = { remove_core = NGF }
+		570 = { remove_core = NGF }
+		2560 = { secede_province = HES }
+		567 = { secede_province = HES }
+		570 = { secede_province = HES }
+		create_alliance = HES
+		relation = { who = HES value = 200 }
+		diplomatic_influence = { who = HES value = 400 }
+
+		ai_chance = { factor = 0.01 }
+	}
+
+}
+

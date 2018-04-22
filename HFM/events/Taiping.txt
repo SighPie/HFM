@@ -263,21 +263,29 @@ country_event = {
 		
 		XBI = {
 			add_country_modifier = {
-			name = qing_substate_boost
-			duration = 1395
+				name = qing_substate_boost
+				duration = 1395
 			}
+			grain = 250
 		}
 		MCK = {
 			add_country_modifier = {
-			name = qing_substate_boost
-			duration = 1395
+				name = qing_substate_boost
+				duration = 1395
 			}
+			grain = 250
 		}
 
 		release_vassal = LAN
 		leave_alliance = LAN
-		ai_chance = { factor = 100 }
+		
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = { grain = 250 }
+		}
 		grain = 250
+		
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
@@ -1523,6 +1531,8 @@ province_event = {
 			region = CHI_1493
 			region = CHI_1499
 			region = CHI_1579
+			region = CHI_1519
+			region = CHI_1504
 		}
 		is_core = CHI
 		is_primary_culture = no

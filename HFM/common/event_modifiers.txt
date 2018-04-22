@@ -40,10 +40,10 @@ economic_nationalism = {
 }
 
 polish_uprising_mobilization = {
-	pop_militancy_modifier = 0.01
-	mobilisation_size = 0.4
+	pop_militancy_modifier = -0.05
+	mobilisation_size = 0.5
 	prestige = -0.02
-	war_exhaustion = -0.06
+	war_exhaustion = -0.1
 	tax_efficiency = 0.25
 	tariff_efficiency_modifier = 0.25
 	icon = 18
@@ -369,9 +369,9 @@ corrupt_army = {
 }	
 
 fanatic_army = {
-	land_organisation = 0.1
+	land_organisation = 0.15
 	war_exhaustion = -5
-	org_regain = 0.15
+	org_regain = 0.2
 	land_unit_start_experience = 5
 	mobilisation_size = 0.15
 	supply_consumption = -0.1
@@ -558,6 +558,10 @@ rebuilding_city = {
 }
 
 slave_growth = {
+	icon = 17
+}
+
+catholic_growth = {
 	icon = 17
 }
 
@@ -2811,7 +2815,7 @@ military_aid = {
 ###HFM Russia/Balkans Modifiers
 
 russian_army_education = {
-	education_efficiency_modifier = 0.25
+	education_efficiency_modifier = 0.05
 	war_exhaustion = -1.5
 	org_regain = 0.05
 	icon = 5
@@ -2952,11 +2956,12 @@ ever_victorious_army = {
 	land_organisation = 0.1
 	land_unit_start_experience = 5
 	supply_consumption = -0.1
-	war_exhaustion = -1
+	war_exhaustion = -5
 	icon = 15
 }
 
 the_xiang_army = {
+	war_exhaustion = -5
 	org_regain = 0.1
 	land_organisation = 0.05
 	supply_consumption = -0.1
@@ -2967,17 +2972,17 @@ the_xiang_army = {
 the_eight_banners = {
 	land_organisation = -0.05
 	naval_organisation = -0.25
-	administrative_efficiency_modifier = -0.1
+	administrative_efficiency_modifier = -0.05
 	min_military_spending = 0.25
-	tax_efficiency = -0.05
 	pension_level = 0.05
 	min_social_spending = 0.25
 	max_social_spending = 0.50
 	research_points_modifier = -0.15
-	cb_generation_speed_modifier = -1
-	war_exhaustion = -0.25
-	supply_consumption = -0.15
+	cb_generation_speed_modifier = -1.25
+	war_exhaustion = -5
+	supply_consumption = -0.2
 	research_points_on_conquer = -0.5
+	tax_efficiency = -0.01
 	icon = 16
 }
 
@@ -2991,7 +2996,7 @@ taiping_draft = {
 
 taiping_losing_boost = {
 	land_unit_start_experience = 15
-	war_exhaustion = -5
+	war_exhaustion = -15
 	org_regain = 0.1
 	icon = 15
 }
@@ -3055,14 +3060,13 @@ yuan_shikai = {
 rama_iv = {
 	global_pop_consciousness_modifier = -0.1
 	global_pop_militancy_modifier = -0.05
-	research_points_modifier = 0.05
+	research_points_modifier = 0.025
 	icon = 5
 }
 
 rama_v = {
 	global_pop_consciousness_modifier = -0.05
 	global_pop_militancy_modifier = -0.1
-	education_efficiency_modifier = 0.05
 	diplomatic_points_modifier = 0.1 
 	land_organisation = 0.1
 	supply_consumption = -0.05
@@ -3114,6 +3118,7 @@ india_civil_service = {
 	non_accepted_pop_militancy_modifier = -0.02
 	non_accepted_pop_consciousness_modifier = -0.02
 	administrative_efficiency_modifier = 0.05
+	influence_modifier = 0.05
 	icon = 17
 }
 
@@ -3122,7 +3127,7 @@ pax_britannica = {
 	naval_unit_start_experience = 5
 	naval_organisation = 0.05
 	diplomatic_points_modifier = 0.20
-	badboy = -0.02
+	badboy = -0.05
 	influence_modifier = 0.05
 	supply_consumption = 0.05
 	min_military_spending = 0.25
@@ -3141,6 +3146,10 @@ ai_warships_cooldown = {
 	icon = 17
 }
 
+foreign_weapons_imported = {
+	icon = 9
+}
+
 cuza_reforms = {
 	tax_efficiency = 0.05
 	administrative_efficiency_modifier = 0.05
@@ -3157,4 +3166,13 @@ king_cotton = {
 anglification = {
 	assimilation_rate = 1.5
 	icon = 19
+}
+
+white_rajah = {
+	global_pop_consciousness_modifier = -0.05
+	global_pop_militancy_modifier = -0.05
+	diplomatic_points_modifier = 0.05
+	cb_generation_speed_modifier = -1
+	supply_consumption = -0.05
+	icon = 5
 }

@@ -53,6 +53,7 @@ political_decisions = {
 						any_owned_province = { continent = south_west_africa } 
 						any_owned_province = { continent = east_africa } 
 						any_owned_province = { continent = west_africa }
+						any_owned_province = { continent = central_africa }
 					}
 					naval_logistics = 1
 					year = 1885
@@ -64,6 +65,7 @@ political_decisions = {
 						any_owned_province = { continent = south_west_africa } 
 						any_owned_province = { continent = east_africa } 
 						any_owned_province = { continent = west_africa }
+						any_owned_province = { continent = central_africa }
 					}
 					NOT = { any_owned_province = { is_colonial = yes } }
 					raider_group_doctrine = 1
@@ -77,6 +79,7 @@ political_decisions = {
 						any_owned_province = { continent = south_west_africa } 
 						any_owned_province = { continent = east_africa } 
 						any_owned_province = { continent = west_africa }
+						any_owned_province = { continent = central_africa }
 					}
 					NOT = { any_owned_province = { is_colonial = yes } }
 					raider_group_doctrine = 1
@@ -117,6 +120,7 @@ political_decisions = {
 				any_owned_province = { continent = south_west_africa } 
 				any_owned_province = { continent = east_africa } 
 				any_owned_province = { continent = west_africa }
+				any_owned_province = { continent = central_africa }
 			}
 			military_logistics = 1
 		}
@@ -130,6 +134,7 @@ political_decisions = {
 							continent = south_west_africa 
 							continent = east_africa
 							continent = west_africa
+							continent = central_africa
 						}
 					}
 					NOT = {
@@ -147,6 +152,7 @@ political_decisions = {
 						continent = south_west_africa 
 						continent = east_africa
 						continent = west_africa
+						continent = central_africa
 					}
 				}
 				add_province_modifier = {

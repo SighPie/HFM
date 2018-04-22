@@ -26,7 +26,10 @@ nonstate_consciousness = 0
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
 foreign_officers = yes_foreign_officers
+foreign_artillery = yes_foreign_artillery
+monetary_reform = yes_monetary_reform
 flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
 
 # Inventions
 #bottling_process = yes

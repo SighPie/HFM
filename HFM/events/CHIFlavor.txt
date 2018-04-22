@@ -1866,7 +1866,10 @@ country_event = {
 			war_with = ENG
 			truce_with = ENG
 		}
-		ENG = { is_greater_power = yes }
+		ENG = { 
+			is_greater_power = yes 
+			NOT = { badboy = 0.8 }
+		}
 	}
 	
 	mean_time_to_happen = {

@@ -824,6 +824,7 @@ political_decisions = {
 						OR = {
 							continent = africa
 							continent = west_africa
+							continent = central_africa
 							continent = east_africa
 							continent = south_west_africa
 						}

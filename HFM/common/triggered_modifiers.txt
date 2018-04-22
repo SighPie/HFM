@@ -221,6 +221,7 @@ the_british_raj = {
 	core_pop_militancy_modifier = -0.05
 	supply_consumption = 0.35
 	tax_efficiency = -0.1
+	influence_modifier = 0.05
 	administrative_efficiency_modifier = -0.2
 	prestige = 0.03
 	icon = 19
@@ -261,6 +262,7 @@ the_british_raj_ai = {
 	supply_consumption = 0.1
 	tax_efficiency = -0.1
 	administrative_efficiency_modifier = -0.1
+	influence_modifier = 0.2
 	prestige = 0.03
 	icon = 19
 }
@@ -299,6 +301,7 @@ colonial_nation = {
 			OR = {
 				continent = east_africa
 				continent = west_africa
+				continent = central_africa
 				continent = africa
 				continent = indochina
 				continent = east_indies
@@ -634,6 +637,7 @@ help_ai_usa = {
 	icon = 10
 	tax_efficiency = 0.05
 	supply_consumption = -0.15
+	influence_modifier = -0.05
 }
 
 help_ai_turk = {

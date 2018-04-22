@@ -167,6 +167,7 @@ promotion_chance = {
 			or = {
 				continent = africa
 				continent = west_africa
+				continent = central_africa
 				continent = east_africa
 				continent = south_west_africa
 			}
@@ -631,6 +632,7 @@ migration_chance = {
 			culture = russian
 			OR = { 
 				continent = west_africa 
+				continent = central_africa
 				continent = east_africa
 				continent = asia
 				continent = africa
@@ -1138,7 +1140,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = -0.5
+		factor = -0.75
 		THIS = { is_culture_group = east_asian  }
 		country = { is_culture_group = east_asian civilized = yes }
 		country = { NOT = { has_country_flag = preparations_to_kill } }
@@ -1157,7 +1159,7 @@ emigration_chance = {
 	}
 	
 	modifier = {
-		factor = 1.0
+		factor = 1.05
 		THIS = { 
 			is_culture_group = germanic 
 		}
@@ -1402,6 +1404,29 @@ emigration_chance = {
 #general assimilation mtth, same for all pops
 assimilation_chance = {
 	factor = 1
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			is_state_religion = yes
+			AND = {
+				country = {
+					OR = {
+						NOT = { religious_policy = moralism } 
+						citizenship_policy = full_citizenship
+						citizens_rights = all_voting_pops
+					}
+				}
+				is_state_religion = no
+			}
+		}
+		country = { has_country_flag = new_world_nation }
+		OR = {
+			location = { continent = north_america }
+			location = { continent = south_america }
+			location = { continent = australia_new_zealand }
+		}
+	}
 
 	group = {
 		modifier = {
@@ -1535,25 +1560,6 @@ assimilation_chance = {
 	#	is_accepted_culture = yes
 	#}
 	
-	group = {
-		modifier = {
-			factor = 1
-			OR = {
-				is_state_religion = yes
-				AND = {
-					country = { NOT = { religious_policy = moralism } }
-					is_state_religion = no
-				}
-			}
-			country = { has_country_flag = new_world_nation }
-			OR = {
-				location = { continent = north_america }
-				location = { continent = south_america }
-				location = { continent = australia_new_zealand }
-			}
-		}
-	}
-	
 	modifier = {
 		factor = -80
 		country = {
@@ -1632,7 +1638,7 @@ conversion_chance = {
 	}
 	
 	modifier = {
-		factor = 0.2
+		factor = 0.05
 		country = { 
 			civilized = no
 			has_country_flag = missionary_activity

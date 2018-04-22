@@ -1,7 +1,7 @@
 capital = 1394
 primary_culture = malay
 culture = yue
-religion = sunni
+religion = protestant
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
@@ -27,7 +27,10 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
+govt_flag = {
+	government = hms_government
+	flag = democracy
+}
 
 # New Reforms
 conscription = no_draft
@@ -38,8 +41,6 @@ citizens_rights = primary_culture_only
 border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
-
-
 
 ruling_party = SWK_conservative
 upper_house = {

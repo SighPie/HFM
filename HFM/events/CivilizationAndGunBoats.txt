@@ -572,6 +572,11 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -834,6 +839,11 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = east_africa }
 						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -1232,6 +1242,11 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -1492,6 +1507,11 @@ province_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -1744,6 +1764,11 @@ province_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = east_africa }
 						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -2630,6 +2655,11 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -2722,6 +2752,11 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = east_africa }
 						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
 					}
 					AND = {
 						any_owned_province = { continent = asia }
@@ -2936,6 +2971,11 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = east_africa }
 						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
 					}
 					AND = {
 						any_owned_province = { continent = asia }
@@ -3569,6 +3609,11 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -3741,6 +3786,11 @@ country_event = {
 					}
 					AND = {
 						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
+					}
+					AND = {
+						is_greater_power = yes
 						any_owned_province = { continent = asia }
 						THIS = { continent = asia }
 					}
@@ -3842,6 +3892,11 @@ country_event = {
 						is_greater_power = yes
 						any_owned_province = { continent = east_africa }
 						THIS = { continent = east_africa }
+					}
+					AND = {
+						is_greater_power = yes
+						any_owned_province = { continent = central_africa }
+						THIS = { continent = central_africa }
 					}
 					AND = {
 						is_greater_power = yes
@@ -4170,6 +4225,9 @@ country_event = {
 		NOT = { tag = TRA }
 		NOT = { tag = CRL }
 		NOT = { tag = PNJ }
+		NOT = { tag = MNP }
+		NOT = { tag = BUN }
+		NOT = { tag = BLC }
 		NOT = { has_country_flag = no_british_doctrine }
 		OR = {
 			EIC = { ideological_thought = 1 exists = yes }
@@ -4201,7 +4259,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 85
+		months = 600
 		modifier = {
 			factor = 1.5
 			NOT = { average_militancy = 1 }
@@ -4227,6 +4285,16 @@ country_event = {
 			num_of_revolts = 1
 		}
 		modifier = {
+			factor = 0.001
+			tag = NAG
+			year = 1853
+		}
+		modifier = {
+			factor = 0.001
+			tag = AWA
+			year = 1856
+		}
+		modifier = {
 			factor = 0.9
 			NOT = {
 				prestige = 10
@@ -4239,18 +4307,11 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			OR = {
-				tag = BHP
-				AND = {
-					tag = CRL
-					year = 1900
-				}
-				NOT = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
+			factor = 0.01
+			NOT = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
 			}
 		}
 	}

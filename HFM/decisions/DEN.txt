@@ -85,6 +85,45 @@ political_decisions = {
 		}
 	}
 	
+	selling_danish_ghana = {
+	picture = map_africa
+	alert = no
+		potential = {
+			tag = DEN
+			is_vassal = no
+			owns = 1907
+			NOT = { has_country_flag = selling_danish_ghana }
+			year = 1850
+			is_greater_power = no
+		}
+		
+		allow = {
+			war = no
+			state_n_government = 1
+			1908 = {
+				owner = {
+					money = 35001
+					relation = { who = DEN value = 0 }
+					civilized = yes
+					NOT = { ruling_party_ideology = fascist }
+					NOT = { ruling_party_ideology = communist }
+					NOT = { ruling_party_ideology = reactionary }
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = selling_danish_ghana
+			1908 = { owner = { country_event = 36950 } }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 	
 	selling_danish_india = {
 	picture = map_india
@@ -102,6 +141,9 @@ political_decisions = {
 			state_n_government = 1
 			1309 = {
 				owner = {
+					money = 20001
+					civilized = yes
+					capital_scope = { continent = europe }
 					NOT = { ruling_party_ideology = fascist }
 					NOT = { ruling_party_ideology = communist }
 					NOT = { ruling_party_ideology = reactionary }

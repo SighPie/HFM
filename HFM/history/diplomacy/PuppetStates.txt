@@ -22,6 +22,21 @@ substate = {
 	end_date = 1936.1.1
 }
 
+#Central India Agency
+substate = {
+	first = ENG
+	second = BUN
+	start_date = 1815.1.1
+	end_date = 1936.1.1
+}
+
+substate = {
+	first = ENG
+	second = BLC
+	start_date = 1815.1.1
+	end_date = 1936.1.1
+}
+
 #CAN / NZL / AST / MRU / NEW / RHO
 substate = {
 	first = ENG
@@ -214,6 +229,19 @@ vassal = {
 	second = FIN
 	start_date = 1815.1.1
 	end_date = 1863.1.1
+}
+
+vassal = {
+	first = RUS
+	second = SVA
+	start_date = 1815.1.1
+	end_date = 1863.1.1
+}
+vassal = {
+	first = RUS
+	second = MIG
+	start_date = 1815.1.1
+	end_date = 1870.1.1
 }
 
 ##Sokoto - Adamawa Emirate
@@ -444,14 +472,6 @@ vassal = {
 	end_date = 1949.1.1
 }
 
-# United Kingdom-Bundelkhand
-vassal = {
-	first = ENG
-	second = BUN
-	start_date = 1817.1.1
-	end_date = 1949.1.1
-}
-
 # United Kingdom-Gwalior
 vassal = {
 	first = ENG
@@ -569,6 +589,29 @@ vassal = {
 	start_date = 1819.1.1
 	end_date = 1936.1.1
 }
+
+vassal = {
+	first = ENG
+	second = MNP
+	start_date = 1803.1.1
+	end_date = 1949.1.1
+}
+
+vassal = {
+	first = ENG
+	second = REW
+	start_date = 1803.1.1
+	end_date = 1949.1.1
+}
+
+
+vassal = {
+	first = ENG
+	second = CHH
+	start_date = 1803.1.1
+	end_date = 1949.1.1
+}
+
 
 # Dai Nam-Cambodia
 vassal = {

@@ -1083,13 +1083,12 @@ political_decisions = {
 		effect = {
 			set_global_flag = wilhelmshaven_imperial_shipyard_built
 			treasury = -50000
+			3259 = { state_scope = {  any_owned = { naval_base = -6 } } }
 			3259 = { naval_base = 3 }
 			random_owned = {
 				limit = {
 					province_id = 3259 #Wilhelmshaven
-					state_scope = {
-						NOT = { has_building = steamer_shipyard }
-					}
+					state_scope = { NOT = { has_building = steamer_shipyard } }
 				}
 				
 				owner = { 
@@ -1164,6 +1163,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = danzig_imperial_shipyard_built
 			treasury = -50000
+			690 = { state_scope = {  any_owned = { naval_base = -6 } } }
 			690 = { naval_base = 3 }
 			random_owned = {
 				limit = {
@@ -1235,25 +1235,29 @@ political_decisions = {
 			}
 			great_wars_enabled = yes
 			year = 1905
-			owns = 2036
-			owns = 2084
-			owns = 1956
-			owns = 1914
+			any_owned_province = { continent = central_africa }
+			2036 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #East Africa
+			2084 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #South-West Africa
+			1956 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kameroon
 			NOT = { has_country_flag = form_mittelafrika }
 		}
 		
 		allow = {
 			war = no
 			invention = the_dark_continent
-			high_sea_battle_fleet = 1
-			TNZ = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			CGO = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			CNG = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			NMB = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			CMR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			TOG = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			GAB = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
-			CAR = { all_core = { OR = { owned_by = THIS owner = { vassal_of = THIS } } } }
+			steam_turbine_ships = 1
+			2036 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #East Africa
+			2084 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #South-West Africa
+			1956 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kameroon
+			2624 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Congo
+			1984 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kasai
+			1987 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Katanga
+			1990 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kivu
+			1993 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Equateur
+			1972 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Gabon
+			1996 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Congo Orientale
+			1819 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Waddai
+			1824 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Waddai
 		}
 		
 		effect = {
@@ -1264,9 +1268,11 @@ political_decisions = {
 					OR = {
 						continent = africa
 						continent = west_africa
+						continent = central_africa
 						continent = east_africa
 						continent = south_west_africa
 					}
+					NOT = { is_core = EGY }
 				}
 				secede_province = MIT
 			}
@@ -1325,12 +1331,15 @@ political_decisions = {
 					OR = {
 						continent = africa
 						continent = west_africa
+						continent = central_africa
 						continent = east_africa
 						continent = south_west_africa
 					}
+					NOT = { is_core = EGY }
 				}
 				secede_province = MIT
 			}
+			MIT = { prestige = -50 }
 		}
 		
 		ai_will_do = { factor = 1 }

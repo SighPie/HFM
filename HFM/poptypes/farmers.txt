@@ -420,6 +420,7 @@ migration_target = {
 		OR = { 
 			continent = west_africa 
 			continent = east_africa
+			continent = central_africa
 			continent = africa
 			continent = south_west_africa
 		}
@@ -432,6 +433,7 @@ migration_target = {
 		OR = { 
 			continent = west_africa 
 			continent = east_africa
+			continent = central_africa
 			continent = oceania #Near East
 			continent = africa
 			continent = south_west_africa
@@ -440,7 +442,7 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = -0.52
+		factor = -0.02
 		continent = oceania #Near East
 		country = { primary_culture = russian }
 	}
@@ -493,19 +495,16 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 1.5
+		factor = 1.1
 		OR = { 
 			continent = east_africa
 			continent = south_west_africa
-			is_core = TNZ
-			is_core = NMB
-			is_core = AOG
-			is_core = MIT
-			is_core = ELS
+			continent = central_africa
+			state_id = 409
+			state_id = 411
 		}
 		country = { is_culture_group = germanic }
 	}
-	
 	
 	modifier = {
 		factor = -0.5
@@ -558,8 +557,6 @@ migration_target = {
 			is_core = MLY
 			is_core = MLT
 			continent = west_africa
-			continent = east_indies
-			continent = africa
 			is_core = MLW
 			is_core = SUD
 		}
@@ -581,7 +578,9 @@ migration_target = {
 	modifier = {
 		factor = 3.5
 		OR = { 
-			is_core = KNY
+			continent = africa
+			state_id = 2033
+			state_id = 2028
 			is_core = SAF
 			is_core = RHO
 			is_core = CHI
@@ -1077,20 +1076,7 @@ promote_to = {
 			year = 1865
 			country = { primary_culture = russian }
 		}
-		
-		modifier = {
-			factor = 16
-			colonial_policy = settlement
-			location = { 
-				is_colonial = yes 
-				is_core = THIS
-				NOT = { 
-					state_id = 1642
-				}
-			}
-			country = { primary_culture = japanese }
-		}
-	
+
 		group = {
 			modifier = {
 				factor = 2
@@ -1570,6 +1556,7 @@ promote_to = {
 					location = { 
 						is_colonial = yes 
 						OR = { 
+							continent = central_africa
 							continent = west_africa 
 							continent = east_africa
 							continent = asia

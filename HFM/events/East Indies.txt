@@ -29,6 +29,17 @@ country_event = {
 	mean_time_to_happen = {
 		months = 6
 	}
+	
+	immediate = {
+		SWK = {
+			military_reform = yes_foreign_weapons
+			economic_reform = yes_admin_reform
+			add_country_modifier = {
+				name = white_rajah
+				duration = -1
+			}
+		}
+	}
 
 	option = {
 		name = "EVT95250OPTA"
@@ -46,7 +57,7 @@ country_event = {
 		ENG = {
 			diplomatic_influence = {
 				who = SWK
-				value = 400
+				value = 500
 			}
 			diplomatic_influence = {
 				who = BRU
@@ -58,10 +69,6 @@ country_event = {
 			value = 100
 		}
 		create_alliance = SWK
-		SWK = {
-			military_reform = yes_foreign_weapons
-			economic_reform = yes_admin_reform
-		}
 		ai_chance = {
 			factor = 90
 		}
@@ -949,7 +956,7 @@ country_event = {
 		
 		any_owned = {
 			limit = {
-				OR = { 
+				OR = {
 					province_id = 1340
 					province_id = 1338
 					is_core = BUR

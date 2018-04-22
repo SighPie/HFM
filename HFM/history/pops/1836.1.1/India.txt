@@ -7333,7 +7333,7 @@
 		size = 4750
 	}
 
-	serfs = {
+	farmers = {
 		culture = marathi
 		religion = hindu
 		size = 40000

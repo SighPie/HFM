@@ -379,7 +379,7 @@ XIN_reactionary_2;Confucianist Faction;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 XIN_conservative_2;Amban Faction;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 XIN_liberal_2;Reformer Faction;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 KOR;Korea;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-KOR_absolute_monarchy;Kingdom of Joseon;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+KOR_absolute_monarchy;The Kingdom of Joseon;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 KOR_proletarian_dictatorship;DPRK;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 KOR_reactionary;Bandong;;;;;;;;;;;;;;;;;;x;;;;
 KOR_liberal;Taewon'gun;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -396,8 +396,7 @@ MCK_fascist_dictatorship;Manzhouguo;Manchukuo;Manchukuo;;;;;;;;;;;x
 MCK_presidential_dictatorship;Fengtian Clique;;;;;;;;;;;;;x
 MCK_ADJ;Manchu;Mandchou;Manchu;;;;;;;;;;;x
 MCK_presidential_dictatorship_ADJ;Fengtian;;;;;;;;;;;;;x
-BRZ_monarchy;Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
-SIA_absolute_monarchy;Rattanakosin Kingdom;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
+SIA_absolute_monarchy;The Rattanakosin Kingdom;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
 SIA_prussian_constitutionalism;The Kingdom of Siam;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
 SIA_hms_government;The Kingdom of Siam;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
 KML;Kumul Khanate;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
@@ -433,6 +432,8 @@ SBA_ADJ;Porteno;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,
 BRZ_absolute_monarchy;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,
 BRZ_prussian_constitutionalism;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
 BRZ_hms_government;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,
+BRZ_dominion;The Kingdom of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,
+BRZ_colonial_company;Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,
 ARC;Argentina;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
 ARC_democracy;Argentine Confederation;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
 ARC_presidential_dictatorship;Argentine Confederation;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
@@ -970,7 +971,7 @@ CRS_socialist;Fazzione Sucialistu;;;;;;;;;;;;;x
 CRS_communist;Fazzione Cumunistu;;;;;;;;;;;;;x
 CRS_anarcho_liberal;Fazzione Anarchistu;;;;;;;;;;;;;x
 CRS_fascist;Fazzione Fascistu;;;;;;;;;;;;;x
-CSA_democracy;Confederate States of America;;;;;;;;;;;;x
+CSA_democracy;The Confederate States of America;;;;;;;;;;;;x
 CSA_presidential_dictatorship;The Confederate States of America;;;;;;;;;;;;x
 CSA_bourgeois_dictatorship;The Confederate States of America;;;;;;;;;;;;x
 CSA_absolute_monarchy;The Imperial Confederacy;;;;;;;;;;;;x
@@ -1366,10 +1367,10 @@ KAM_anarcho_liberal;The Libertains;Faction radicale;Die radikale Fraktion;;;;;;;
 KAM_socialist;The Socialists;Faction socialiste;Die sozialistische Fraktion;;;;;;;;;;;x
 KAM_communist;The Communists;Faction communiste;Die kommunistische Fraktion;;;;;;;;;;;x
 KAM_fascist;The Nationalists;Faction fasciste;Die faschistische Fraktion;;;;;;;;;;;x
-KHI_absolute_monarchy;Khiva;;;;;;;;;;;;;;;;;;x;;;;
-BUK_absolute_monarchy;Emirate of Bukhara;;;;;;;;;;;;;;;;x;;;;
-KOK_absolute_monarchy;Kokand;;;;;;;;;;;;;;;;;;x;;;;
-KAZ_absolute_monarchy;Kazakh Khanate;;;;;;;;;;;;;x
+KHI_absolute_monarchy;The Khanate of Khiva;;;;;;;;;;;;;;;;;;x;;;;
+BUK_absolute_monarchy;The Emirate of Bukhara;;;;;;;;;;;;;;;;x;;;;
+KOK_absolute_monarchy;The Khanate of Kokand;;;;;;;;;;;;;;;;;;x;;;;
+KAZ_absolute_monarchy;The Kazakh Khanate;;;;;;;;;;;;;x
 KAZ;Kazakhstan;;;;;;;;;;;;;x
 KAZ_ADJ;Kazakh;;;;;;;;;;;;;x
 KAZ_conservative;The Conservatives;Faction royale;Königsfraktion;;;;;;;;;;;x
@@ -1483,8 +1484,6 @@ KRY_anarcho_liberal;The Libertains;Faction radicale;Die radikale Fraktion;;;;;;;
 KRY_socialist;The Socialists;Faction socialiste;Die sozialistische Fraktion;;;;;;;;;;;x
 KRY_communist;The Communists;Faction communiste;Die kommunistische Fraktion;;;;;;;;;;;x
 KRY_fascist;The Nationalists;Faction fasciste;Die faschistische Fraktion;;;;;;;;;;;x
-KWT;Sheikhdom of Kuwait;;;;;;;;;;;x
-KWT_ADJ;Kuwaiti;;;;;;;;;;;x
 KTI;Kutai;;;;;;;;;;;;;x;
 KTI_ADJ;Kutain;;;;;;;;;;;;;x;
 KTI_conservative;Royal Faction;;;;;;;;;;;;x
@@ -1923,11 +1922,11 @@ PNJ_anarcho_liberal;The Radical Party;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 PNJ_socialist;The Socialist Party;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 PNJ_communist;The Communist Party;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 PNJ_fascist;The Fascist Party;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;
-PNJ_absolute_monarchy;Sikh Empire;;;;;;;;;;;;x
-PNJ_prussian_constitutionalism;Sikh Empire;;;;;;;;;;;;x
+PNJ_absolute_monarchy;The Sikh Empire;;;;;;;;;;;;x
+PNJ_prussian_constitutionalism;The Sikh Empire;;;;;;;;;;;;x
 PNJ_absolute_monarchy_ADJ;Sikh;;;;;;;;;;;;x
 PNJ_prussian_constitutionalism_ADJ;Sikh;;;;;;;;;;;;x
-PNJ_hms_government;Sikh Kingdom;;;;;;;;;;;;x
+PNJ_hms_government;The Sikh Kingdom;;;;;;;;;;;;x
 PNJ_hms_government_ADJ;Sikh;;;;;;;;;;;;x
 PNJ_democracy;Khalistan;;;;;;;;;;;;x
 PNJ_democracy_ADJ;Khalistani;;;;;;;;;;;;x

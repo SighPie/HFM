@@ -119,12 +119,17 @@ political_decisions = {
 					limit = { NOT = { is_culture_group = germanic } }
 					militancy = 3
 				}
-				add_province_modifier = {
+				add_country_modifier = {
 					name = drang_nach_osten_country
 					duration = 1825
 				}
 			}
-			random_owned = { limit = { owner = { vote_franschise = none_voting } UBD = { government = colonial_government political_reform = none_voting } } }
+			random_owned = { limit = { owner = { vote_franschise = none_voting } }
+				UBD = { 
+					government = colonial_company 
+					political_reform = none_voting 
+				} 
+			}
 			random_owned = { limit = { owner = { NOT = { vote_franschise = none_voting } } UBD = { government = dominion } } }
 			set_country_flag = incorporate_the_baltic_states
 		}

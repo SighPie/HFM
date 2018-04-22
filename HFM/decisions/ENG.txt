@@ -192,6 +192,7 @@ political_decisions = {
 			NOT = {
 				capital_scope = { continent = africa } 
 				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
 				capital_scope = { continent = east_africa } 
 				capital_scope = { continent = south_west_africa }
 			}
@@ -308,11 +309,13 @@ political_decisions = {
 		potential = {
 			tag = ENG
 			533 = { owned_by = ENG }
+			year = 1881
 			OR = {
 				GER = {
 					exists = yes
 					any_owned_province = {
 						OR = {
+							continent = central_africa
 							continent = east_africa
 							continent = west_africa
 							continent = africa
@@ -328,6 +331,7 @@ political_decisions = {
 					exists = yes
 					any_owned_province = {
 						OR = {
+							continent = central_africa
 							continent = east_africa
 							continent = west_africa
 							continent = africa
@@ -347,10 +351,6 @@ political_decisions = {
 			NOT = { any_greater_power = { war_with = THIS } }
 			NOT = { government = fascist_dictatorship }
 			NOT = { government = proletarian_dictatorship }
-			OR = {
-				invention = the_dark_continent
-				year = 1889
-			}
 			2013 = { empty = no }
 			2015 = { empty = no }
 			OR = {
@@ -598,14 +598,12 @@ political_decisions = {
 					}
 				}
 			}
-			diplomatic_influence = {
-				who = NYE
-				value = 100
-			}
-			relation = {
-				who = NYE
-				value = 100
-			}
+			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 25 } } }
+			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 25 } } }
+			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 25 } } }
+			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 25 } } }
+			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 25 } } }
+			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 25 } } }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1092,6 +1090,13 @@ political_decisions = {
 			1179 = { secede_province = THIS }
 			1180 = { secede_province = THIS }
 			YEM = { tech_school = unciv_tech_school capital = 1178 }
+			
+			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 50 } } }
+			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 50 } } }
+			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 50 } } }
+			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 50 } } }
+			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 50 } } }
+			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 50 } } }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -1464,8 +1469,7 @@ political_decisions = {
 			}
 		}
 	}
-	
-	
+
 	christimas_and_cocos_adminstration = {
 		picture = dreams_of_empire
 		

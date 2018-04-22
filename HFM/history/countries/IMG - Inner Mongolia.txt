@@ -61,11 +61,7 @@ upper_house = {
 consciousness = 2
 nonstate_consciousness = 1
 
-foreign_weapons = yes_foreign_weapons
-land_reform = yes_land_reform
-
 # Technologies
-flintlock_rifles = 1
 
 # Inventions
 

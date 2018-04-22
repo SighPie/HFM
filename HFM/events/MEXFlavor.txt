@@ -787,6 +787,11 @@ country_event = {
 		
 		USA = { country_event = 44826 }
 		
+		random_owned = {
+			limit = { exists = CAL }
+			owner = { end_war = CAL }
+		}
+		
 		ai_chance = {
 			factor = 90
 		}

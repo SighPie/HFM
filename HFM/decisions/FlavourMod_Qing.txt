@@ -801,7 +801,7 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = { owner = { civilized = no ai = yes } }
-				owner = {economic_reform = land_reform }
+				owner = { economic_reform = yes_land_reform }
 			}
 			activate_technology = private_banks
 			activate_technology = no_standard

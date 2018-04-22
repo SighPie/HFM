@@ -164,7 +164,7 @@ country_event = {
 			modifier = { factor = 1.9 capital_scope = { continent = africa } is_greater_power = no }
 			modifier = { factor = 1.9 capital_scope = { continent = west_africa } is_greater_power = no }
 			modifier = { factor = 1.9 capital_scope = { continent = east_africa } is_greater_power = no }
-			
+			modifier = { factor = 1.9 capital_scope = { continent = central_africa } is_greater_power = no }
 		}
 	}
 	
@@ -187,6 +187,7 @@ country_event = {
 			modifier = { factor = 0.25 capital_scope = { continent = africa } is_greater_power = no }
 			modifier = { factor = 0.25 capital_scope = { continent = west_africa } is_greater_power = no }
 			modifier = { factor = 0.25 capital_scope = { continent = east_africa } is_greater_power = no }
+			modifier = { factor = 0.25 capital_scope = { continent = central_africa } is_greater_power = no }
 			modifier = { factor = 0.8 NOT = { rank = 2 } }
 			modifier = { factor = 0 NOT = { military_score = 30 } }
 		}

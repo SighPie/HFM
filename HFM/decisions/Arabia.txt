@@ -788,6 +788,13 @@ political_decisions = {
 			create_vassal = ABU
 			create_alliance = ABU
 			ABU = { political_reform = no_slavery research_points = 3000 }
+			
+			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 25 } } }
+			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 25 } } }
+			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 25 } } }
+			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 25 } } }
+			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 25 } } }
+			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 25 } } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -980,6 +987,13 @@ political_decisions = {
 				months = 120
 				}
 			}
+			
+			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 25 } } }
+			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 25 } } }
+			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 25 } } }
+			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 25 } } }
+			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 25 } } }
+			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 25 } } }
 		}
 		
 			ai_will_do = { 
@@ -1004,7 +1018,7 @@ political_decisions = {
 
 		allow = {
 			war = no
-			money = 1000
+			money = 500
 			OR = {
 				civilized = yes
 				admin_reform = yes_admin_reform
@@ -1015,7 +1029,7 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = dar_es_salaam_built
-			money = -1000
+			money = -500
 			2036 = { any_pop = { militancy = -1 } add_province_modifier = { name = recently_built_city duration = 365 } change_province_name = "Dar Es Salaam" }
 		}
 		ai_will_do = { factor = 1 }

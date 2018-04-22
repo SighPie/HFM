@@ -52,10 +52,10 @@ country_event = {
 				}
 			}
 			random_list = {
+				30 = { add_province_modifier = { name = highlander_raids duration = 10220 } }
 				25 = { add_province_modifier = { name = highlander_raids duration = 9490 } }
 				25 = { add_province_modifier = { name = highlander_raids duration = 8760 } }
-				25 = { add_province_modifier = { name = highlander_raids duration = 8030 } }
-				25 = { add_province_modifier = { name = highlander_raids duration = 7300 } }
+				20 = { add_province_modifier = { name = highlander_raids duration = 8030 } }
 			}
 			any_pop = {
 				limit = { is_primary_culture = no }

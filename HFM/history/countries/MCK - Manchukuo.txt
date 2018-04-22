@@ -51,11 +51,7 @@ upper_house = {
 	communist = 0
 }
 
-land_reform = yes_land_reform
-foreign_weapons = yes_foreign_weapons
-
 # Technologies
-flintlock_rifles = 1
 
 # Starting Consciousness
 consciousness = 0
