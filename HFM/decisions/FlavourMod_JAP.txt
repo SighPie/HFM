@@ -385,4 +385,89 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	establish_karafuto_prefecture = {
+		picture = japanese_sakhalin
+		potential = {
+			primary_culture = japanese
+			is_greater_power = yes
+			revolution_n_counterrevolution = 1
+			OR = { 
+				AND = { 
+					owns = 1087
+					1087 = { NOT = { total_pops = 75000 } is_colonial = no}
+				}
+				AND = { 
+					owns = 1086
+					1086 = { NOT = { culture = japanese } }
+				}
+			}
+			has_country_flag = establish_the_kaitakushi
+		}
+		
+		allow = {
+			colonial_policy = settlement
+			OR = { 
+				AND = { 
+					owns = 1087
+					1087 = { NOT = { total_pops = 75000 } }
+				}
+				AND = { 
+					owns = 1086
+					1086 = { NOT = { culture = japanese } }
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 1087
+					NOT = { total_pops = 55000 }
+				}
+				1087 = {
+					add_province_modifier = { name = population_resettlement duration = 1825 } 
+					add_province_modifier = { name = baby_boom duration = 1825 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					province_id = 1086
+					is_colonial = no
+				}
+				1086 = { secede_province = UTI }
+				THIS = { inherit = UTI }
+			}
+			random_owned = {
+				limit = {
+					province_id = 1086
+					is_colonial = yes
+					owner = { ai = yes }
+				}
+				1086 = {
+					add_province_modifier = { name = population_resettlement duration = 1825 } 
+					add_province_modifier = { name = baby_boom duration = 1825 }
+					state_scope = {
+						any_pop = {
+							limit = { type = bureaucrats }
+							reduce_pop = 0
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					province_id = 1086
+					is_colonial = yes
+					owner = { ai = no }
+				}
+				1086 = {
+					add_province_modifier = { name = population_resettlement duration = 1825 } 
+					add_province_modifier = { name = baby_boom duration = 1825 }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }

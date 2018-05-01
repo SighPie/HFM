@@ -51,7 +51,8 @@ country_event = {
 				is_culture_group = french
 				location = { is_core = THIS }
 			}
-			ideology = { factor = 0.05 value = conservative }
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
 			dominant_issue = { factor = 0.10 value = jingoism }
 		}
 		any_pop = {
@@ -109,7 +110,7 @@ country_event = {
 				}
 			}
 			ideology = { factor = 0.05 value = conservative }
-			ideology = { factor = 0.05 value = reactionary }
+			ideology = { factor = 0.15 value = reactionary }
 		}
 
 		add_country_modifier = {
@@ -177,7 +178,8 @@ country_event = {
 				is_culture_group = french
 				location = { is_core = THIS }
 			}
-			ideology = { factor = 0.05 value = conservative }
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
 			dominant_issue = { factor = 0.10 value = jingoism }
 		}
 		

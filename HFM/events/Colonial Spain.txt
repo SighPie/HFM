@@ -1433,7 +1433,7 @@ country_event = {
 		any_owned = { limit = { province_id = 1973 } secede_province = FROM }
 		ai_chance = { 
 			factor = 70 
-			modifier = { factor = 100 has_global_flag = yes_railroad }
+			modifier = { factor = 100 FROM = { ai = yes } }
 		}
 	}
 	

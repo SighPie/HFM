@@ -628,10 +628,10 @@ political_decisions = {
 			NOT = {
 				has_global_flag = sierra_leone_organized
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1884
 			owns = 1885
@@ -1592,6 +1592,7 @@ political_decisions = {
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1972
+			1976 = { empty = no }
 		}
 		
 		allow = {
@@ -1746,6 +1747,7 @@ political_decisions = {
 				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1977
+			1980 = { empty = no }
 		}
 		
 		allow = {
@@ -2418,7 +2420,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { has_country_flag = jewish_country } } KNY = { religion = jewish set_country_flag = jewish_country } }
 			random_owned = { limit = { owner = { has_country_flag = ibadi_country } } KNY = { religion = ibadi set_country_flag = ibadi_country } }
 			random_owned = { limit = { owner = { has_country_flag = yazidi_country } } KNY = { religion =  yazidi set_country_flag = yazidi_country } }
-			random_owned = { limit = { owner = { primary_culture = british } } KNY = { government = colonial_company } }
+			random_owned = { limit = { owner = { primary_culture = british } } KNY = { civilized = yes government = colonial_company } }
 		}
 	}
 	
@@ -4935,7 +4937,13 @@ political_decisions = {
 		effect = {
 			set_global_flag = somalia_united
 			prestige = 2
-			1870 = { life_rating = 25 }
+			random_owned = {
+				limit = { 
+					province_id = 1870 
+					NOT = { life_rating = 6 }
+				}
+				1870 = { life_rating = 25 }
+			}
 			SOM_1868 = { add_core = SOM }
 			SOM_1872 = { add_core = SOM }
 			HBY = { all_core = { remove_core = HBY } }
@@ -5196,6 +5204,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { has_country_flag = protestant_country } }
 				NMB = { religion = protestant set_country_flag = protestant_country }
+				NMB = { add_accepted_culture = boer }
 			}
 			random_owned = { limit = { owner = { has_country_flag = orthodox_country } } NMB = { religion = orthodox set_country_flag = orthodox_country } }
 			random_owned = { limit = { owner = { has_country_flag = mormon_country } } NMB = { religion = mormon set_country_flag = mormon_country } }
@@ -5274,6 +5283,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { has_country_flag = protestant_country } }
 				NMB = { religion = protestant set_country_flag = protestant_country }
+				NMB = { add_accepted_culture = boer }
 			}
 			random_owned = { limit = { owner = { has_country_flag = orthodox_country } } NMB = { religion = orthodox set_country_flag = orthodox_country } }
 			random_owned = { limit = { owner = { has_country_flag = mormon_country } } NMB = { religion = mormon set_country_flag = mormon_country } }
@@ -6015,57 +6025,60 @@ political_decisions = {
 		picture = form_the_ikhwan
 		potential = {
 			has_global_flag = berlin_conference
+			is_greater_power = yes
 			exists = yes
 			OR = {
 				AND = {
-					owns = 1740
-					1742 = { empty = yes }
+					owns = 1740 #Libya
+					1742 = { empty = yes } #Libya
 				}
 				AND = {
-					owns = 1738
+					owns = 1738 #Libya
 					2585 = { empty = yes }
 				}
 				AND = {
-					owns = 1765
+					owns = 1765 #Egypt
 					1758 = { empty = yes }
 				}
 				AND = {
-					owns = 1835
+					owns = 1835 #Sudan
 					2564 = { empty = yes }
 				}
 				AND = {
-					owns = 1779
+					owns = 1779 #Mauritania
 					1782 = { empty = yes }
 				}
 				AND = {
-					owns = 1803
+					owns = 1803 #Timbuktu
 					2609 = { empty = yes }
 				}
 				AND = {
-					owns = 1811
+					owns = 1811 #Niger
 					1812 = { empty = yes }
 				}
 				AND = {
-					owns = 1818
+					owns = 1818 #Chad
 					1821 = { empty = yes }
 				}
 			}
 		}
 		
 		allow = {
-			war = no
+			NOT = { any_greater_power = { war_with = THIS } }
 			OR = {
 				invention = the_dark_continent
 				AND = {
 					capital_scope = { continent = africa } 
-					 capital_scope = { continent = west_africa } 
-					 capital_scope = { continent = east_africa } 
-					 capital_scope = { continent = south_west_africa }
-					 capital_scope = { continent = central_africa } 
+					capital_scope = { continent = west_africa } 
+					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = south_west_africa }
+					capital_scope = { continent = central_africa } 
 					civilized = yes
 				}
+			}
+			OR = {
 				AND = {
-					owns = 1835
+					owns = 1835 #Sudan Dongola
 					OR = {
 						1758 = { empty = no }
 						1842 = { empty = no }
@@ -6074,14 +6087,14 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						owns = 1742
+						owns = 1742 #Libya
 						owns = 1738
 					}
 					1758 = { empty = no }
 					2585 = { empty = yes }
 				}
 				AND = {
-					owns = 1765
+					owns = 1765 #Egypt
 					1758 = { empty = yes }
 					OR = {
 						2564 = { empty = no }
@@ -6089,9 +6102,25 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 1741
+					owns = 1741 #Libya
 					1742 = { empty = yes }
 					2585 = { empty = no }
+				}
+				AND = {
+					owns = 1779 #Mauritania
+					1782 = { empty = yes }
+				}
+				AND = {
+					owns = 1803 #Timbuktu
+					2609 = { empty = yes }
+				}
+				AND = {
+					owns = 1811 #Niger
+					1812 = { empty = yes }
+				}
+				AND = {
+					owns = 1818 #Chad
+					1821 = { empty = yes }
 				}
 			}
 		}
@@ -6107,9 +6136,9 @@ political_decisions = {
 							AND = {
 								capital_scope = { continent = africa } 
 								capital_scope = { continent = central_africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+								 capital_scope = { continent = west_africa } 
+								 capital_scope = { continent = east_africa } 
+								 capital_scope = { continent = south_west_africa }
 								civilized = yes
 							}
 						}
@@ -6131,9 +6160,9 @@ political_decisions = {
 							AND = {
 								capital_scope = { continent = africa } 
 								capital_scope = { continent = central_africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+								 capital_scope = { continent = west_africa } 
+								 capital_scope = { continent = east_africa } 
+								 capital_scope = { continent = south_west_africa }
 								civilized = yes
 							}
 						}
@@ -6155,9 +6184,9 @@ political_decisions = {
 							AND = {
 								capital_scope = { continent = africa } 
 								capital_scope = { continent = central_africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+								 capital_scope = { continent = west_africa } 
+								 capital_scope = { continent = east_africa } 
+								 capital_scope = { continent = south_west_africa }
 								civilized = yes
 							}
 						}

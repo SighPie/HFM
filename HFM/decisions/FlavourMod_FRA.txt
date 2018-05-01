@@ -64,88 +64,7 @@ political_decisions = {
 
 		ai_will_do = { factor = 1 }
 	}
-	
-	organize_algeria_departments = {
-	picture = organize_french_algeria
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			has_country_flag = 2nd_republic
-			NOT = { has_country_flag = organize_algeria_1848 }
-		}
-		
-		allow = {
-			war = no
-			money = 55001
-			ALD_1704 = { owned_by = THIS }
-			ALD_1708 = { owned_by = THIS }
-			FRA_1700 = { owned_by = THIS }
-			NOT = { exists = ALD }
-		}
-		
-		effect = {
-			FRA = { set_country_flag = organize_algeria_1848 }
-			BOR = { set_country_flag = organize_algeria_1848 }
-			treasury = -55000
-			ALD_1704 = { add_core = THIS }
-			ALD_1708 = { add_core = THIS }
-			FRA_1700 = { add_core = THIS }
-			ALD = { government = colonial_company }
-			
-			any_pop = {
-				limit = { 
-					culture = french
-					location = { is_core = ALD}
-				}
-				ideology = { factor = 0.9 value = conservative }
-			}
-			
-			any_pop = {
-				limit = { 
-					culture = french
-					location = { is_core = ALD}
-					type = bureaucrats
-				}
-				ideology = { factor = 0.7 value = conservative }
-				reduce_pop = 1.5
-			}
-			
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	cremieux_decree = {
-	picture = cremieux_decree
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			has_country_flag = organize_algeria_1848
-			year = 1870
-			ALD_1704 = { owned_by = THIS }
-			ALD_1708 = { owned_by = THIS }
-			FRA_1700 = { owned_by = THIS }
-			NOT = { has_country_flag = cremieux_decree }
-		}
-		
-		allow = {
-			war = no
-			ALD_1704 = { owned_by = THIS }
-			ALD_1708 = { owned_by = THIS }
-			FRA_1700 = { owned_by = THIS }
-		}
-		
-		effect = {
-			FRA = { set_country_flag = cremieux_decree }
-			BOR = { set_country_flag = cremieux_decree }
-			add_accepted_culture = sephardic
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+
 	tonkin_campaign = {
 	picture = tonkin_campaign
 		potential = {
@@ -186,6 +105,11 @@ political_decisions = {
 			is_greater_power = yes
 			capital = 425
 			has_country_flag = 2nd_empire
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
 			has_global_flag = pan_french_nationalism
 			year = 1855
 			exists = LUX
@@ -413,85 +337,7 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
-	integrating_french_algeria = {
-		picture = french_algeria
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			year = 1900
-			ALD = { all_core = { owned_by = THIS } }
-			NOT = { has_country_flag = frenchie_algeria_reclaimed }
-		}
 
-		allow = {
-			war = no
-			is_greater_power = yes
-			OR = {
-				ruling_party_ideology = reactionary
-				ruling_party_ideology = fascist			
-			}
-			colonial_policy = settlement
-		}
-
-		effect = {
-			badboy = 4
-			FRA = { set_country_flag = frenchie_algeria_reclaimed }
-			BOR = { set_country_flag = frenchie_algeria_reclaimed }
-			prestige = 15
-			ALD = { all_core = { add_core = THIS } }
-			scaled_consciousness = {
-				factor = -3
-				ideology = reactionary
-			}
-			scaled_militancy = {
-				factor = -3
-				ideology = reactionary
-			}
-			scaled_consciousness = {
-				factor = -1
-				ideology = conservative
-			}
-			scaled_militancy = {
-				factor = -1
-				ideology = conservative
-			}
-			scaled_consciousness = {
-				factor = 6
-				ideology = liberal
-			}
-			scaled_militancy = {
-				factor = 6
-				ideology = liberal
-			}
-			any_pop = {
-				limit = {
-					OR = {
-						has_pop_culture = maghrebi
-						has_pop_culture = berber
-					}
-				}
-				reduce_pop = 0.4
-				consciousness = 10
-				militancy = 10
-			}
-			any_owned = {
-				limit = {
-					is_core = ALD
-				}
-				add_province_modifier = {
-					name = colonial_recruitment
-					duration = 3650
-				}
-			}		
-		}
-		
-		ai_will_do = { 
-			factor = 1 
-			modifier = { factor = 0 badboy = 0.8 }
-		}
-	}
 
 	walloon_autonomy = {
 		picture = become_wallonia
@@ -882,17 +728,16 @@ political_decisions = {
 			capital = 425
 			ITA = {
 				exists = yes
-				truce_with = THIS
-				owns = 744
+				NOT = { war_with = THIS }
+				owns = 744 #Florence
 			}
-			owns = 465
-			owns = 721
+			owns = 465 #Annecy
+			owns = 721 #Aosta
 			NOT = { has_global_flag = the_treaty_of_milan }
 		}
 		
 		allow = {
-			war = no		
-			truce_with = ITA
+			war = no
 		}
 		
 		effect = {
@@ -911,7 +756,7 @@ political_decisions = {
 		
 		ai_will_do = { 
 			factor = 1 
-			modifier = { factor = 0 badboy = 0.2 }
+			modifier = { factor = 0 badboy = 0.8 }
 		}
 	}
 		
@@ -1225,5 +1070,44 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+	}
+	
+	jules_ferry_laws = {
+		picture = jules_ferry
+		potential = {
+			primary_culture = french
+			is_greater_power = yes
+			capital = 425
+			year = 1870
+			NOT = { school_reforms = good_schools}
+			NOT = { has_country_flag = enacted_french_schooling	 }
+		}
+		
+		allow = {
+			OR = { 
+				biologism = 1
+				revolution_n_counterrevolution = 1
+			}
+			war = no
+		}
+		
+		effect = {
+			FRA = { set_country_flag = enacted_french_schooling }
+			BOR = { set_country_flag = enacted_french_schooling }
+			random_owned = {
+				limit = { owner = { school_reforms = acceptable_schools } }
+				owner = { social_reform = good_schools }
+			}
+			
+			random_owned = {
+				limit = { owner = { school_reforms = low_schools } }
+				owner = { social_reform = acceptable_schools }
+			}
+			
+			random_owned = {
+				limit = { owner = { school_reforms = no_schools } }
+				owner = { social_reform = low_schools }
+			}
+		}
 	}
 }

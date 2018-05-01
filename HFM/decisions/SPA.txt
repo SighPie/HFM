@@ -302,6 +302,7 @@ political_decisions = {
 					factor = -1
 				}
 			}
+			political_reform = unitary
 		}
 		ai_will_do = { factor = 1 }
 	}

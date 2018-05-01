@@ -2734,34 +2734,6 @@ country_event = {
 	}
 }
 
-#Set up Railroading Colonization
-country_event = {
-	id = 99977
-	title = "EVTNAME99977"
-	desc = "EVTDESC99977"
-	picture = "abraham_speech"
-	major = yes
-		
-	trigger = {
-		ai = no
-		NOT = { has_global_flag = railroad_setup }
-	}
-	
-	fire_only_once = yes
-	mean_time_to_happen = { days = 1 }
-	
-	option = {
-		name = "EVT99977OPTA"
-		set_global_flag = yes_railroad
-		set_global_flag = railroad_setup
-	}
-	
-	option = {
-		name = "EVT99977OPTB"
-		set_global_flag = railroad_setup
-	}
-}
-
 #Enable/Disable Splendid Isolation
 country_event = {
 	id = 6016815

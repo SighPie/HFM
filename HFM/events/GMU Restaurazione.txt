@@ -213,7 +213,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 5
+		days = 1
 	}
 
 	option = {
@@ -1587,6 +1587,33 @@ country_event = {
 		any_pop = {
 			limit = { is_culture_group = italian }
 			militancy = -5
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = KUK
+					tag = AUS
+				}
+				truce_with = SAR
+				exists = yes
+			}
+			diplomatic_influence = { who = TUS value = -400 }
+			diplomatic_influence = { who = PAR value = -400 }
+			diplomatic_influence = { who = MOD value = -400 }
+			diplomatic_influence = { who = LUC value = -400 }
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				OR = {
+					tag = TUS
+					tag = PAR
+					tag = MOD
+					tag = LUC
+				}
+			}
+			any_owned = { add_core = SAR secede_province = THIS }
+			annex_to = THIS
 		}
 	}
 }

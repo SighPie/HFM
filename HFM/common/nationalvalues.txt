@@ -38,6 +38,7 @@ nv_autocracy = {
 nv_tradition = {
 	research_points_modifier = -0.1
 	global_pop_militancy_modifier = -0.01
+	global_pop_consciousness_modifier = -0.01
 	social_reform_desire = -0.2
 	issue_change_speed = -0.2
 	ruling_party_support = 0.25

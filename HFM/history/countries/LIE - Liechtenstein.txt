@@ -51,6 +51,10 @@ upper_house = {
 	communist = 0
 }
 
+govt_flag = {
+	government = hms_government
+	flag = theocracy
+}
 
 set_country_flag = existing_country
 set_country_flag = protestant_country

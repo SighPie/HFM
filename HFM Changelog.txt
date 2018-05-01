@@ -1,81 +1,56 @@
 1.28 Changelog
 
-#Bugfixes
-- Fixed some bugs regarding the Baltic integration changes
+#Bug Fixes
+- Fixed a bug with the Oregon Treaty event chain
+- Inner Mongolia and Manchukuo should become become the proper government type if puppeted by Japan
+- Fixed a bug where the Boer Republics weren't getting the Boer Commandos modifier
+- Fixed issue with Fuzhou province having a bugged Liferating
+- Fixed the Peace of Prague decision being unintentionally available to the player
 
 #Europe
-- Sardinia-Piedmont, Two Sicilies and Tuscany will now use different flags when becoming constitutional monarchies
-- Changed some flags for Sardinia, Savoy, Sardinia-Piedmont, Modena, Parma and Lucca
-- Color-Corrected most of the German minors' starting flags
-- Schleswig & Holstein each now use a different flag when independent, they will use their original flags when they're puppets of Denmark
-- Disabling the Microstates now also removes the Catalonia core from the Andorra Province
-- Schleswig-Holstein now starts as an Autonomous Dependency of Denmark
-- Added an event that allows the NGF to release the southern half of Hesse-Darmstadt when the NGF is formed, contributed by Hammonia
-- BYZ can now be formed by default
-- Changed some flags for Congress Poland
-- Added colonial flags for Bohemia and Poland occupied by a fascist Germany (Generalgouvernement & Protektorat Böhmen-Mähren)
-- Changed flags for Pomerelia, Poznan and Silesia, Danzig
-- Added the Georgian Principalities of Svaneti and Mingrelia
-- Andorra will now use the correct flag for the time period
-- Highlander Raids modifier in the caucasus will now will typically last longer
-- Reduced benefits of 'Russian Army Reforms' modifier
-- PROV1057 Kizylyar changed core to Dagestan rather than Chechnya
-- Renamed 'Sardinia-Piedmont' to 'The Kingdom of Sardinia'
+- Added some alternative country colours for Hungary/Germany/Austria/UK/France for different governments
+- Removed the French Growth nerf modifier, as other factors now help France reach it's historical population levels
+- France should be less likely to reject the Pact of Plombiers if it has Napoleon III, but more likely to reject it if it doesn't 
+- Added a decision 'Grondwetsherziening van $YEAR$' for the Netherlands, enacts constitutional reforms.
+- Serbia now starts as an 'Autonomous Dependency' (But still independent) of the Ottomans, in order for it to be a principality, also added a decision to proclaim the Kingdom of Serbia with Rev & Counter Rev or with all of Serbia's cores retaken from the Ottomans
+- Added new country tag 'Genoa', will only be released (& rebels) if Sardinia loses the 1st Italian War of Independence
+- 'The Statuto Albertino' is now more likely to be enacted by Sardinia
+- France now gets more bonuses if it loses the Franco-Prussian War, it'll also get a modifier to give it increased mobilization size
+- If Sardinia wins the 1st Italian War of Independence, it will now annex Parma/Lucca/Modena/Tuscany
 
-#North & South America
-- Added a colonial flag for Portuguese Brazil
-- EXPERIMENTAL: Added a system for catholic populations growth in the USA, similar to slave pop growth in order to better reach the historical catholic population in the US (Eventually will be done for Australia/New Zealand too, as well as a Protestant version for Brazil/Mexico)
--- Added more starting Yankee catholic pops in the USA in regions with Catholic pops, this is meant to counter the fact that assimilation also converts pops to Protestant, so there will be more Catholic Yankee/Dixie Pops
-- Paraguay now starts with 'Totalitarianism'
-- Removed Dutch core in the Caribbean
+#Africa
+- Added new province event 'The Dorsland Trek' - Sends some boers to SW Africa
+- Changed decision picture for Organizing French Algeria
+- Changed the effects of Impi modifier
+- Added a cleanup decision which makes European AI return territory to Egypt if it took any in the Oriental Crisis to prevent bordergore
+- Added province event 'The White Highlands' for any European GP that owns Kenya, gives Colonial Recruitment modifier, but increases militancy for the region
+- Redone how Britain and France took most of West Africa historically, instead of the single decision that makes them get the whole region in one go arbitrarily, FRA & ENG will now have more opportunities to get a foothold, followed by a monopoly in the region.
+- All Africa decisions are disabled at the invention of The Dark Continent, so if you manage to stop the GP's from colonizing till then, they won't get the free decisions.
+-- Added a new decision for France 'Appoint Louis Brière de l'Isle' - Gives free CBS against some West African AIs in Senegal and Western Mali
+-- Re-enabled the 'Conakry Protectorate' decision for France
+-- Added new decision 'The Kutonou Concession' for France, allows them to gain the coastal province of Cotonou
+-- Added new decision 'The Libreville Protectorate' for France - Must have slavery abolished, allows you to get Libreville
+-- Added a new decision 'The Royal Niger Company' - Enables the UK to get a large amount of influence in the Nigeria region, must own Lagos, costs $750,000
+-- Added new decision 'Establish the Niger Coast Protectorate' for the UK - Must have the region under its influence
+-- Added new decision 'Establish the Northern Nigeria Protectorate' for the UK - Must own the southern half of Nigeria
+-- Added new decision 'Claim the Gold Coast' for the UK - Must own Cape Coast, Accra and Sekondi
+-- Disabled the decision that gave France all its uncolonized regions, a new decision 'Occupation of the Congo Basin' has been made to replace the AI-only decision, it is available to whoever successfully colonizes Loango it grants you the regions of Gabon,Congo, Ubangi-Shari & Waddai, the Congo Conference MUST be sucessful in order for the decision to be available.
+- The German Colonial Decisions are now have higher requirements to be enacted
 
-#Changes to Africa
-- Adjusted the continents of several regions
-- Added continent 'Equatorial Africa'
-- Renamed PROV2095 to Dithakong
-- Modified the conditions for forming Mittelafrika
-- Accra now starts as owned by Denmark, the territory can be sold to the owner of Cape Coast in 1850
-- Changed several African flags
-- Added Colonial flag for French Soudan, British Sierra Leone
-
-#Changes to Asia & Oceania
-- Removed reforms for the Chinese substates to match the Qing
-- Changed Sarawak's Flag, changed its religion to Protestant
-- Added a new modifier 'The White Rajahs' for Sarawak
-- Added a decision 'Form the Sarawak Rangers' for Sarawak, gives some military reforms
-- Modified some modifiers that Qing gets
-- Adjusted some pop growth events for New Zealand
-- Hokkaido and Sakhalin now start as colonial provinces
-
-#Changes to India
-- Anglo-Sikkim War - Changed CB to puppet
-- Significantly increased MTTH for the Doctrine of Lapse
-- Manipur now starts as a vassal of the UK
-- Bundelkhand tag changed to two seperate tags, Chhatarpur and Rewah, Bundelkhand can now be formed as the Central India Agency
-- Baluchistan can now be formed by the UK as the Baluchistan Agency
-- Bijapur and Ajmer are now controlled by the EIC
-- Moved provinces of Chitral and Peshawar to Pashtunistan region
-- Added event 'The Bhutan Conflict'
-- Most of the Indian states now start with more reforms
-- Added a decision for the British AI to renew its alliances with its Indian Vassals every year
-- Most of Pakistan has been moved to the Near East Continent
-
-#Changes to Arabia
-- Added a decision for the UK to create a Oman protectorate
-- Taking certain decision will now increase diplomatic influence throughout the Arabian pennisula
-- Renamed Oman to 'Muscat-Oman'
+#Asia
+- Sakoku now gives a large CB Generation speed modifier
+- Changed the way a Taiping victory ends, the Qing will now flee to Formosa if they lose the war.
+- Added new decision - 'Establish the Karafuto Prefecture' for Japan, gives population growth bonus IF the population of Japanese Sakhalin is too low.
 
 #Other Changes
-- Added an alternative system for uncivs to get military reforms, you can purchase military reforms with money and a small amount of research points from great powers as long as they have the required tech for the reforms, only can be used if part of a sphere. Must not have Isolationism
--- Training Methods -> $25,000 & Field Training Invention (Invention)
--- Foreign Officers -> $10,000 & Army Professionalism (Tech)
--- Army Schools -> $25,000 & Army Academic Training (Invention), 5% Literacy
--- Military Constructions -> $45,000 & Field Fortifications (Invention)
--- Foreign Weapons -> $35,000 & Breech-Loaded Rifles (Invention)
--- Foreign Artillery -> $55,000 & Iron-Muzzle Loaded Artillery (Invention)
--- Foreign Ships -> $65,000 & Iron Steamers (Tech)
--- Foreign Shipyards -> $55,000 & Raider Group Doctrine (Tech)
--- Foreign Artillery -> $10,000 & Naval Professionalism (Tech)
-- Adjusted some of the unciv reforms
-- Increased default output of Fruit
-- Artisans now can use Wool to produce fabrics
+- Halved the shared prestige of all Culture Inventions, Reduced Prestige Gain from the first 4 techs of Aesthetics
+- Added numerous inventions from the PDM Death by Imperialism Mod
+- Readded the GMU Archaeology decisions and events
+- Adjusted some pop promotion conditions to prevent colonial states with too few populations from becoming states too quickly
+- Added some buffs to mobilization size for South American AI countries
+- Added some restrictions to the AI passing voting reforms too quickly before the revolts of 1848
+- Pushed back 'The Dark Continent to 1895
+- Accepted pops in Colonial/Overseas provinces should be more conservative, less socialist
+- Upper class Pops (Landowner/Capitalists/Officers) are now much less likely to support communism, slightly less inclined to support socialism
+-- Landowners and Capitalists will always never support communism
+- Universal Voting now reduces miltancy

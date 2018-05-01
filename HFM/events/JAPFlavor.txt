@@ -830,15 +830,6 @@ country_event = {
 			limit = { substate_of = TKG }
 			country_event = 97631
 		}
-		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = {
-				machine_parts = 400
-				steel = 600 #was iron
-				cement = 600
-				build_factory_in_capital_state = fabric_factory
-			}
-		}
 	}
 }
 
@@ -1125,6 +1116,14 @@ country_event = {
 			modifier = {
 				factor = 0.8
 				has_country_flag = tozama_daimyo
+			}
+			modifier = {
+				factor = 0
+				tag = SAT
+			}
+			modifier = {
+				factor = 0
+				tag = CHO
 			}
 		}		
 	}
@@ -1514,10 +1513,9 @@ country_event = {
 				owner = { ai = yes }
 			}
 			owner = {
-				machine_parts = 400
-				steel = 600 #was iron
-				cement = 600
-				build_factory_in_capital_state = fabric_factory
+				machine_parts = 300
+				steel = 400 #was iron
+				cement = 400
 				build_factory_in_capital_state = canned_food_factory
 				build_factory_in_capital_state = liquor_distillery
 			}
@@ -2135,8 +2133,6 @@ country_event = {
 				add_core = THIS
 				secede_province = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
-				add_province_modifier = { name = population_resettlement duration = 1825 }
-				add_province_modifier = { name = baby_boom duration = 1825 }
 			}
 		}
 		random_owned = {
@@ -2149,8 +2145,12 @@ country_event = {
 				life_rating = 10
 				secede_province = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
-				add_province_modifier = { name = population_resettlement duration = 1825 } 
-				add_province_modifier = { name = baby_boom duration = 1825 }
+				add_province_modifier = { name = population_resettlement duration = 720 } 
+				add_province_modifier = { name = baby_boom duration = 720 }
+				any_pop = {
+					limit = { type = bureaucrats }
+					reduce_pop = 0.3
+				}
 			}
 		}
 	}

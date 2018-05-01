@@ -259,7 +259,7 @@ machine_parts_factory = {
 		coal = 5		#11.5  total input+maint = 66
 	}
 	output_goods = machine_parts 
-	value = 2.5		#73
+	value = 3.0		#73
 	bonus = {
 		trigger = { has_building = steel_factory }
 		value = 0.15
@@ -389,7 +389,7 @@ luxury_furniture_factory = {
 steel_factory = {       
 	template = factory_template
 	input_goods = { 
-		iron = 20		#70
+		iron = 18		#70
 		coal = 5		#11.5	total input+maint = 81.5
 	}
 
@@ -580,7 +580,7 @@ dye_factory = {
 		coal = 9   		#20.7	total input+maint = Used to be 24.7 now 30.7
 	}
 	output_goods = dye 
-	value = 3			#Used to be 30 (2.5) now 36
+	value = 3.5			#Used to be 30 (2.5) now 36
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.25
@@ -847,7 +847,7 @@ opium_plantation = {
 orchard = {
 	template = RGO_template_farmers
 	output_goods = fruit 
-	value = 2.7 #2.8
+	value = 3.0 #2.8
 	farm = yes
 }
 
@@ -1047,7 +1047,7 @@ artisan_machine_parts = {
 		coal = 5		#11.5  total input+maint = 66
 	}
 	output_goods = machine_parts 
-	value = 2			#73
+	value = 2.5			#73
 	
 	owner = {
 		poptype = artisans 
@@ -1443,6 +1443,23 @@ artisan_fertilizer = {
 	output_goods = fertilizer 
 	value = 5			#50
 
+	owner = {
+		poptype = artisans 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_fabric_wool = {
+	input_goods = {     
+		wool = 25 #46
+		dye = 2	#24
+	}
+	output_goods = fabric
+	value = 40			#81
 	owner = {
 		poptype = artisans 
 		effect = output

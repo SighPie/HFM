@@ -20,6 +20,7 @@ political_decisions = {
 						in_sphere = PRU
 					}
 				}
+				tag = ARA
 			}
 			OR = {
 				government = democracy
@@ -33,7 +34,6 @@ political_decisions = {
 			NOT = { tag = KOR }
 			NOT = { has_country_flag = clean_up_unciv_monarchy }
 			NOT = { has_country_flag = clean_up_colonial_government }
-			NOT = { year = 1920 }
 		}
 		
 		allow = {
@@ -117,6 +117,9 @@ political_decisions = {
 						tag = MLY
 						tag = NEN
 						tag = TTB
+						tag = GMB
+						tag = SLE
+						tag = SGP
 					}
 					vassal_of = ENG
 				}
@@ -222,6 +225,7 @@ political_decisions = {
 						tag = GAB
 						tag = VTU
 						tag = MLI
+						tag = CGO
 						AND = {
 							tag = ALD
 							has_global_flag = berlin_conference
@@ -295,9 +299,6 @@ political_decisions = {
 				###Japanese Puppets###
 				AND = {
 					OR = { 
-						tag = MAD
-						tag = IMG
-						tag = MCK
 						tag = TAI
 					}
 					vassal_of = JAP
@@ -444,7 +445,7 @@ political_decisions = {
 					clr_country_flag = clean_up_colonial_government
 					set_country_flag = dominion_gov
 					government = dominion 
-				} 
+				}
 			}
 		}
 		
@@ -458,7 +459,12 @@ political_decisions = {
 				government = colonial_company
 				government = dominion
 			}
-			NOT = { tag = EIC }
+			NOT = { 
+				tag = EIC 
+				tag = MCK
+				tag = IMG
+				tag = SER
+			}
 			OR = {
 				NOT = { tag = EGY }
 				AND = {

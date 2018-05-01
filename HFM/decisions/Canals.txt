@@ -81,6 +81,7 @@ political_decisions = {
 				treasury = 75000
 			}
 			1755 = { secede_province = THIS add_core = THIS }
+			random_owned = { limit = { exists = EGY } owner = { diplomatic_influence = { who = EGY value = 25 } } }
 			country_event = 36970
 		}
 		
@@ -206,6 +207,14 @@ political_decisions = {
 			random_country = { limit = { owns = 1755 NOT = { in_sphere = THIS } } THIS = { treasury = -200000 } }
 			1755 = { owner = { country_event = 36980 } }
 			1755 = { secede_province = THIS add_core = THIS }
+			
+			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 25 } } }
+			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 25 } } }
+			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 25 } } }
+			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 25 } } }
+			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 25 } } }
+			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 25 } } }
+			random_owned = { limit = { exists = OMA } owner = { diplomatic_influence = { who = OMA value = 25 } } }
 		}
 		
 		ai_will_do = {

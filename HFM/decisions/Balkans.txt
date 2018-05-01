@@ -2196,8 +2196,8 @@ political_decisions = {
 			treasury = -10000
 			set_country_flag = the_bulgarian_miracle
 			add_country_modifier = { name = total_reform duration = 3650 }
-			any_owned = { limit = { region = TUR_809 NOT = { province_id = 809 } } add_province_modifier = { name = small_baby_boom duration = 2555 } }
-			TUR_810 = { add_province_modifier = { name = small_baby_boom duration = 2555 } }
+			any_owned = { limit = { region = TUR_809 NOT = { province_id = 809 } } add_province_modifier = { name = small_baby_boom duration = 1825 } }
+			TUR_810 = { add_province_modifier = { name = small_baby_boom duration = 1825 } }
 			809 = {
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }

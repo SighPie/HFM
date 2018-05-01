@@ -214,6 +214,7 @@ political_decisions = {
 		picture = qingdao_china
 		potential = {
 			OR = { 
+				tag = NGF
 				tag = GER
 				tag = GCF
 			}

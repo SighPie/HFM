@@ -22,7 +22,6 @@ political_decisions = {
 	viet_remove_sphere = {
 		picture = "reichstag"
 		potential = { 
-			#has_global_flag = yes_railroad
 			ai = yes
 			OR = {
 				tag = DAI
@@ -146,22 +145,62 @@ political_decisions = {
 			tag = ENG
 			ai = yes
 			war = yes
-			EIC = {
-				OR = {
-					vassal_of = ENG
-					substate_of = ENG
+			OR = { 
+				EIC = {
+					OR = {
+						vassal_of = ENG
+						substate_of = ENG
+					}
+					exists = yes
 				}
-				exists = yes
+				RAJ = {
+					OR = {
+						vassal_of = ENG
+						substate_of = ENG
+					}
+					exists = yes
+				}
 			}
 		}
 		
 		allow = { 
 			OR = {
-				any_greater_power = { war_with = ENG NOT = { war_with = EIC } }
-				any_neighbor_country = { war_with = ENG NOT = { war_with = EIC } }
+				AND = { 
+					any_greater_power = { war_with = ENG NOT = { war_with = EIC } }
+					EIC = {
+						OR = {
+							vassal_of = ENG
+							substate_of = ENG
+						}
+						exists = yes
+						war = no
+					}
+				}
+				AND = { 
+					any_neighbor_country = { war_with = ENG NOT = { war_with = EIC } }
+					EIC = {
+						OR = {
+							vassal_of = ENG
+							substate_of = ENG
+						}
+						exists = yes
+						war = no
+					}
+				}
+				AND = { 
+					any_greater_power = { war_with = ENG NOT = { war_with = RAJ } }
+					RAJ = {
+						OR = {
+							vassal_of = ENG
+							substate_of = ENG
+						}
+						exists = yes
+						war = no
+					}
+				}
 				AND = {
 					war = yes
-					EIC = { war = no }
+					EIC = { exists = yes war = no }
 				}
 				MUG = {
 					war_with = ENG
@@ -182,7 +221,6 @@ political_decisions = {
 		potential = {
 			capital_scope = { continent = europe }
 			is_greater_power = yes
-			has_global_flag = yes_railroad
 			has_global_flag = tangier_protocol_succeeded
 			NOT = { primary_culture = french }
 			NOT = { tag = SPA }
@@ -276,7 +314,6 @@ political_decisions = {
 				tag = BOR
 				tag = ENG
 			}
-			has_global_flag = yes_railroad
 			has_global_flag = berlin_conference
 			ai = yes
 			badboy = 0.8
@@ -284,7 +321,6 @@ political_decisions = {
 		}
 		
 		allow = {
-			war = no
 		}
 		
 		effect = {
@@ -483,7 +519,7 @@ political_decisions = {
 						tag = GER
 						tag = GCF
 					}
-					year = 1880
+					year = 1875
 				}
 				AND = {
 					OR = { 
@@ -562,8 +598,11 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
+			NOT = { war_exhaustion = 1 }
 			money = 25000
 			is_disarmed = no
+			NOT = { num_of_revolts = 1 }
 		}
 		
 		effect = {
@@ -722,6 +761,152 @@ political_decisions = {
 		}
 	}
 	
+	ai_give_warships_steamer_secondary_power = {
+		potential = {
+			year = 1837
+			ai = yes
+			is_disarmed = no
+			OR = {
+				tag = NET
+				tag = SAR
+				tag = SWE
+				tag = SPA
+				tag = POR
+				tag = RUS
+				AND = { 
+					tag = ITA
+					is_greater_power = no
+				}
+			}
+			OR = {
+				AND = {
+					NOT = { raider_group_doctrine = 1 }
+					NOT = { total_amount_of_ships = 30 }
+				}
+				#Before 1885
+				AND = {
+					raider_group_doctrine = 1
+					NOT = { steel_steamers = 1 }
+					NOT = { total_amount_of_ships = 55 }
+				}
+				#After 1885
+				AND = {
+					steel_steamers = 1
+					NOT = { total_amount_of_ships = 40 }
+				}
+			}
+			NOT = { has_country_modifier = ai_warships_cooldown }
+		}
+		
+		allow = {
+			money = 3501
+			is_disarmed = no
+			war = no
+			NOT = { war_exhaustion = 1 }
+			NOT = { num_of_revolts = 1 }
+		}
+		
+		effect = {
+		
+			#Before Steamers
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					controlled_by = THIS
+					owner = { NOT = { invention = steamer_transports } }
+				}
+				sub_unit = { type = clipper_transport value = current }
+				sub_unit = { type = clipper_transport value = current }
+				owner = { 
+					treasury = -250 
+					add_country_modifier = {
+						name = ai_warships_cooldown
+						duration = 720
+					}
+				}
+			}
+			
+			
+			#Steamers Before Dreadnoughts
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					controlled_by = THIS
+					owner = { invention = steamer_transports NOT = { invention = ironclads } }
+				}
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = manowar value = current }
+				sub_unit = { type = frigate value = current }
+				owner = { 
+					treasury = -750 
+					add_country_modifier = {
+						name = ai_warships_cooldown
+						duration = 720
+					}
+				}
+			}
+			
+			#Commerce Raiders
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					controlled_by = THIS
+					owner = { invention = commerce_raiders NOT = { invention = protected_cruisers } }
+				}
+				sub_unit = { type = commerce_raider value = current }
+				owner = { treasury = -550 }
+			}
+			
+			#Ironclads
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					controlled_by = THIS
+					owner = { invention = ironclads NOT = { invention = protected_cruisers } }
+				}
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				owner = { 
+					treasury = -1500 
+					add_country_modifier = {
+						name = ai_warships_cooldown
+						duration = 1095
+					}
+				}
+			}
+			
+			#Cruisers
+			random_owned = {
+				limit = { 
+					port = yes
+					is_overseas = no
+					is_colonial = no
+					controlled_by = THIS
+					owner = { invention = protected_cruisers }
+				}
+				sub_unit = { type = cruiser value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				sub_unit = { type = steam_transport value = current }
+				owner = { 
+					treasury = -3500 
+					add_country_modifier = {
+						name = ai_warships_cooldown
+						duration = 1825
+					}
+				}
+			}
+		}
+	}
+	
 	end_war_lan_kor_eng = {
 		potential = {
 			ai = yes
@@ -796,9 +981,9 @@ political_decisions = {
 							
 						}
 						random_list = {
-							15 = { reduce_pop = 1.03 }
-							35 = { reduce_pop = 1.05 }
-							45 = { reduce_pop = 1.06 }
+							15 = { reduce_pop = 1.02 }
+							35 = { reduce_pop = 1.03 }
+							45 = { reduce_pop = 1.04 }
 						}
 					}
 					any_pop = {
@@ -813,9 +998,9 @@ political_decisions = {
 							
 						}
 						random_list = {
-							20 = { reduce_pop = 1.03 }
-							35 = { reduce_pop = 1.02 }
-							40 = { reduce_pop = 1.04 }
+							20 = { reduce_pop = 1.02 }
+							35 = { reduce_pop = 1.01 }
+							40 = { reduce_pop = 1.03 }
 						}
 					}
 					any_pop = {
@@ -859,9 +1044,9 @@ political_decisions = {
 						
 					}
 					random_list = {
-						15 = { reduce_pop = 1.03 }
-						35 = { reduce_pop = 1.05 }
-						45 = { reduce_pop = 1.06 }
+						15 = { reduce_pop = 1.02 }
+						35 = { reduce_pop = 1.03 }
+						45 = { reduce_pop = 1.04 }
 					}
 				}
 				any_pop = {
@@ -876,9 +1061,9 @@ political_decisions = {
 						
 					}
 					random_list = {
-						20 = { reduce_pop = 1.03 }
-						35 = { reduce_pop = 1.02 }
-						40 = { reduce_pop = 1.04 }
+						20 = { reduce_pop = 1.02 }
+						35 = { reduce_pop = 1.01 }
+						40 = { reduce_pop = 1.03 }
 					}
 				}
 				any_pop = {
@@ -892,9 +1077,9 @@ political_decisions = {
 						location = { is_overseas = no }
 					}
 					random_list = {
-						40 = { reduce_pop = 1.03 }
-						30 = { reduce_pop = 1.04 }
-						25 = { reduce_pop = 1.05 }
+						40 = { reduce_pop = 1.02 }
+						30 = { reduce_pop = 1.03 }
+						25 = { reduce_pop = 1.04 }
 					}
 				}
 				random_list = {
@@ -905,6 +1090,44 @@ political_decisions = {
 			}
 		}
 		ai_will_do = { factor = 1 }
+	}
+	
+	russia_ai_return_land = {
+		potential = { 
+			ai = yes
+			OR = { 
+				tag = RUS
+				tag = ENG
+			}
+			truce_with = EGY
+			exists = EGY
+			any_owned_province = {
+				OR = {
+					is_core = EGY 
+					is_core = SUD
+				}
+			}
+			NOT = { 
+				has_country_flag = egy_clean_up 
+				has_global_flag = suez_canal_built
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			badboy = -10
+			any_owned = {
+				limit = { 
+					OR = {
+						is_core = EGY 
+						is_core = SUD
+					}
+				}
+				secede_province = EGY
+			}
+		}
 	}
 	
 	#test_end_really_long_wars = {

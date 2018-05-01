@@ -694,97 +694,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	east_africa_company = {
-		picture = german_east_africa
-		potential = {
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			slavery = no_slavery
-			ZAN = {
-				exists = yes
-				war = no
-				civilized = no
-				owns = 2029 #Mobassa
-				owns = 2036 #Mzizima
-				owns = 2048 #Zanzibar
-			}
-			NOT = { has_country_flag = east_africa_company }
-		}
-		
-		allow = {
-			is_greater_power = yes
-			invention = prophylaxis_against_malaria
-			invention = mission_to_civilize
-			invention = colonial_negotiations
-			has_global_flag = berlin_conference
-		}
-		
-		effect = {
-			set_country_flag = east_africa_company
-			set_country_flag = german_east_africa_company
-			badboy = 3
-			2040 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			2041 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			2047 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			2045 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			ZAN = { country_event = 33031 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	purchase_lindi = {
-		picture = german_east_africa
-		potential = {
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			owns = 2029 #Mobassa
-			owns = 2036 #Mzizima
-			NOT = { owns = 2038 } #Kilwa
-			2038 = {
-				owner = {
-					civilized = yes
-					is_greater_power = no
-					ai = yes
-					capital_scope = { continent = europe }
-				}
-			}
-			has_country_flag = east_africa_company
-			NOT = { has_country_flag = purchase_lindi }
-		}
-		
-		allow = {
-			money = 75100
-			war = no
-		}
-		
-		effect = {
-			set_country_flag = purchase_lindi
-			random_country = {
-				limit = {
-					exists = yes
-					owns = 2038
-				}
-				country_event = 99840
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
 	become_schleswig = {
 		picture = gtfo
 		potential = {
@@ -828,126 +737,7 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	prussian_settlement_commission = {
-		picture = prussian_settlement_commission
-		potential = {
-			is_culture_group = germanic
-			is_greater_power = yes
-			NOT = { tag = KUK }
-			NOT = { tag = DNB }
-			owns = 699
-			owns = 690
-			owns = 682
-			owns = 695
-			year = 1880
-			NOT = { has_country_flag = prussian_settlement_commission }
-		}
-		
-		allow = {
-			revolution_n_counterrevolution = 1
-			war = no
-			money = 150100
-			owns = 699
-			owns = 690
-			owns = 682
-			owns = 695
-			owns = 552
-			OR = {
-				citizens_rights = primary_culture_only
-				citizens_rights = culture_voting_only
-			}
-			NOT = { accepted_culture = polish }
-		}
-		
-		effect = {
-			set_country_flag = prussian_settlement_commission
-			set_global_flag = germanization
-			political_reform = settlement
-			treasury = -150000
-			552 = { #Cottbus
-				add_province_modifier = {
-					name = discriminatory_school_system
-					duration = 7300
-				}
-				add_province_modifier = {
-					name = drang_nach_osten
-					duration = -1
-				}
-			}
-			any_owned = {
-				limit = {
-					OR = {
-						region = PRU_682 #Lower Silesia
-						region = PRU_701 #Posen
-						region = PRU_690 #Westpreußen
-						
-					}
-				}
-				add_province_modifier = {
-					name = drang_nach_osten
-					duration = -1
-				}
-				add_province_modifier = {
-					name = minority_building_restrictions
-					duration = 3650
-				}				
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	german_west_africa = {
-		picture = german_west_africa
-		potential = {
-			has_global_flag = yes_railroad
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			is_greater_power = yes
-			invention = prophylaxis_against_malaria
-			invention = mission_to_civilize
-			invention = colonial_negotiations
-			has_global_flag = berlin_conference
-			NOT = { has_country_flag = german_west_africa }
-			1956 = { empty = yes }
-		}
-		
-		allow = {
-			money = 75100
-			year = 1884
-			war = no
-		}
-		
-		effect = {
-			treasury = -75000
-			set_country_flag = german_west_africa
-			badboy = 2
-			1956 = { 
-				secede_province = THIS 
-				any_pop = { literacy = -0.99 } 
-				change_province_name = "Duala" 
-			}		
-			1957 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1958 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1959 = { secede_province = THIS any_pop = { literacy = -0.99 } change_province_name = "Jaunde"	}
-			1960 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1961 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1962 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1963 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			1964 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+
 	begin_austro_prussian_war = {
 		picture = austro_prussian_war
 		potential = {
@@ -957,10 +747,7 @@ political_decisions = {
 			NOT = { alliance_with = AUS }
 			NOT = { war_exhaustion = 1 }
 			exists = AUS
-			SWH = {
-				exists = yes
-				NOT = { vassal_of = DEN }
-			}
+			369 = { NOT = { owned_by = DEN } }
 			NOT = { truce_with = AUS }
 			NOT = { has_country_flag = brothers_war_winner }
 			NOT = { has_country_flag = begin_austro_prussian_war }
@@ -1220,126 +1007,71 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	form_mittelafrika = {
-		picture = "form_mittelafrika"
-		potential = {
-			is_greater_power = yes
-			OR = {
-				tag = GER
-				tag = GCF
-			}
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			great_wars_enabled = yes
-			year = 1905
-			any_owned_province = { continent = central_africa }
-			2036 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #East Africa
-			2084 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #South-West Africa
-			1956 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kameroon
-			NOT = { has_country_flag = form_mittelafrika }
-		}
 		
-		allow = {
-			war = no
-			invention = the_dark_continent
-			steam_turbine_ships = 1
-			2036 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #East Africa
-			2084 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #South-West Africa
-			1956 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kameroon
-			2624 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Congo
-			1984 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kasai
-			1987 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Katanga
-			1990 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Kivu
-			1993 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Equateur
-			1972 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Gabon
-			1996 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Congo Orientale
-			1819 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Waddai
-			1824 = { OR = { owned_by = THIS owner = { in_sphere = THIS vassal_of = THIS war = no } } } #Waddai
-		}
-		
-		effect = {
-			set_country_flag = form_mittelafrika
-			prestige = 15
-			any_owned = {
-				limit = {
-					OR = {
-						continent = africa
-						continent = west_africa
-						continent = central_africa
-						continent = east_africa
-						continent = south_west_africa
-					}
-					NOT = { is_core = EGY }
-				}
-				secede_province = MIT
-			}
-			create_vassal = MIT
-			diplomatic_influence = {
-				who = MIT
-				value = 400
-			}
-			create_alliance = MIT
-			MIT = { 
-				prestige = -500
-				capital = 2036
-				government = colonial_company
-			}
-			TNZ = { all_core = { add_core = MIT } }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	return_cores_MIT = {
-		picture = return_cores_img
+	prussian_settlement_commission = {
+		picture = prussian_settlement_commission
 		potential = {
 			is_culture_group = germanic
 			is_greater_power = yes
-			is_our_vassal = MIT
-			exists = MIT
-			OR = {
-				KNY = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				ASH = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				BEN = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				CHD = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				NGR = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				NIG = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				TOG = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				MLI = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				ALD = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				IVC = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				MOR = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				BKF = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				GNE = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				SNG = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-				TRZ = { all_core = { OR = { owned_by = THIS owner = { NOT = { tag = MIT } vassal_of = THIS war = no } } } }
-			}
+			NOT = { tag = KUK }
+			NOT = { tag = DNB }
+			owns = 699
+			owns = 690
+			owns = 682
+			owns = 695
+			year = 1880
+			NOT = { has_country_flag = prussian_settlement_commission }
 		}
 		
-		allow = { 
-			war = no 
-			MIT = { war = no } 
-		} 
+		allow = {
+			revolution_n_counterrevolution = 1
+			war = no
+			money = 150100
+			owns = 699
+			owns = 690
+			owns = 682
+			owns = 695
+			owns = 552
+			OR = {
+				citizens_rights = primary_culture_only
+				citizens_rights = culture_voting_only
+			}
+			NOT = { accepted_culture = polish }
+		}
 		
-		effect = {  
-			relation = { who = MIT value = 200 } 
+		effect = {
+			set_country_flag = prussian_settlement_commission
+			set_global_flag = germanization
+			political_reform = settlement
+			treasury = -150000
+			552 = { #Cottbus
+				add_province_modifier = {
+					name = discriminatory_school_system
+					duration = 7300
+				}
+				add_province_modifier = {
+					name = drang_nach_osten
+					duration = -1
+				}
+			}
 			any_owned = {
 				limit = {
 					OR = {
-						continent = africa
-						continent = west_africa
-						continent = central_africa
-						continent = east_africa
-						continent = south_west_africa
+						region = PRU_682 #Lower Silesia
+						region = PRU_701 #Posen
+						region = PRU_690 #Westpreußen
+						
 					}
-					NOT = { is_core = EGY }
 				}
-				secede_province = MIT
+				add_province_modifier = {
+					name = drang_nach_osten
+					duration = -1
+				}
+				add_province_modifier = {
+					name = minority_building_restrictions
+					duration = 3650
+				}				
 			}
-			MIT = { prestige = -50 }
 		}
 		
 		ai_will_do = { factor = 1 }

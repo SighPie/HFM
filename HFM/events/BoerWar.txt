@@ -1269,6 +1269,81 @@ province_event = {
 	}
 }
 
+province_event = {
+	id = 98227
+	title = "EVTNAME98227" #The Dorsland Trek
+	desc = "EVTDESC98227"
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_country_flag = boer_accepted }
+		has_province_modifier = boer_exodus
+		OR = {
+			province_id = 2091
+			province_id = 2092
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+	}
+
+	option = {
+		name = "EVT98225OPTA"
+		remove_province_modifier = boer_exodus
+		any_pop = {
+			limit = { has_pop_culture = boer }
+			random = {
+				chance = 90
+				money = 250
+				ideology = {
+					value = conservative
+					factor = 0.50
+				}
+				move_pop = 2080
+			}
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+
+	option = {
+		name = "EVT98225OPTB"
+		remove_province_modifier = boer_exodus
+		owner = { treasury = -20000 }
+		any_pop = {
+			limit = { has_pop_culture = boer }
+			random = {
+				chance = 50
+				money = 250
+				ideology = {
+					value = conservative
+					factor = 0.50
+				}
+				move_pop = 2080
+			}
+		}
+		any_pop = {
+			limit = { has_pop_culture = boer }
+			consciousness = -3
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				owner = { civilized = no }
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					NOT = { money = 40000 }
+				}
+			}
+		}
+	}
+}
+
 country_event = {
 	id = 98230
 	title = "EVTNAME98230" #Sand River Convention

@@ -355,11 +355,11 @@ AUS_726 = { 726 727 728 2669 } #Lombardia
 
 #AUS_733 = { 733 736 } #Friuli
 
-AUS_729 = { 729 730 731 732 733 737 3262 } #Venetia
+AUS_729 = { 729 730 731 732 733 3262 } #Venetia
 
 AUS_734 = { 734 735 } #South Tirol
 
-AUS_736 = { 769 770 778 736 } #Istria
+AUS_736 = { 769 770 778 736 737 } #Istria
 
 AUS_768 = { 767 768 } #Slovenia
 

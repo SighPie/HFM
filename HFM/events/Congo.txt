@@ -135,7 +135,7 @@ country_event = {
 	
 	option = {
 		name = "EVT955184OPTA"
-		
+		set_global_flag = congo_failed
 	}
 }
 
@@ -205,6 +205,7 @@ country_event = {
 		has_country_flag = congo_master
 		CNG = { exists = yes vassal_of = THIS }
 		NOT = { has_global_flag = congo_free_state_over }
+		year = 1891
 	}
 	
 	mean_time_to_happen = {

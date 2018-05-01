@@ -651,4 +651,84 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	declare_kingdom_of_serbia = {
+		picture = greater_serbia
+		potential = {
+			tag = SER
+			OR = { 
+				government = colonial_company
+				government = dominion
+			}
+			NOT = { has_country_flag = kingdom_of_serbia }
+		}
+		
+		allow = {
+			war = no
+			is_vassal = no
+			OR = {
+				revolution_n_counterrevolution = 1
+				is_greater_power = yes
+				year = 1880
+				AND = {
+					TUR_803 = { owned_by = THIS }
+					TUR_806 = { owned_by = THIS }
+				}
+				TUR_788 = { owned_by = THIS }
+				AND = {
+					TUR_803 = { NOT = { owned_by = TUR } }
+					TUR_806 = { NOT = { owned_by = TUR } }
+				}
+			}
+			NOT = { in_sphere = TUR }
+		}
+		
+		effect = {
+			set_country_flag = kingdom_of_serbia
+			prestige = 15
+			upper_house = {
+				ideology = conservative
+				value = 0.1
+			}
+			any_pop = {
+				limit = { 
+					OR = { 
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				militancy = -2
+				consciousness = -3
+			}
+			
+			random_owned = {
+				limit = { owner = { vote_franschise = none_voting } }
+				owner = { government = absolute_monarchy }
+			}
+			
+			random_owned = {
+				limit = { owner = { NOT = { vote_franschise = none_voting } } }
+				owner = { government = prussian_constitutionalism }
+			}
+			
+			random_owned = {
+				limit = { 
+					owner = {
+						OR = {
+							vote_franschise = universal_weighted_voting
+							vote_franschise = universal_voting
+						}
+						OR = {
+							political_parties = secret_ballots
+							political_parties = non_secret_ballots
+						}
+					} 
+				}
+				owner = { government = hms_government }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+		
 }

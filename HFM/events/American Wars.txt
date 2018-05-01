@@ -921,32 +921,11 @@ country_event = {
 		prestige = -20
 		USA = { country_event = 44155 }
 		relation = { who = USA value = 50 }
-		COL = { all_core = { remove_core = ENG } }
-		USA_78 = {
-			remove_core = ENG
-			remove_core = COL
-			add_core = USA
-		}
-		USA_81 = {
-			remove_core = ENG
-			remove_core = COL
-		}
-		USA_91 = {
-			remove_core = ENG
-			remove_core = COL
-		}
-		114 = {
-			remove_core = COL
-		}
-		111 = {
-			remove_core = COL
-		}
 		any_owned = {
 			limit = { 
 				OR = { 
 					is_core = COL 
 					is_core = USA 
-					region = USA_78
 				}
 			}
 			secede_province = USA
@@ -956,18 +935,15 @@ country_event = {
 		RPL = {
 			any_owned = {
 				limit = { 
-					OR = { 
+					OR = {
 						is_core = COL 
 						is_core = USA 
-						region = USA_78
 					}
 				}
 				secede_province = USA
 				remove_core = RPL
 			}
 		}
-		78 = { secede_province = USA }
-		79 = { secede_province = USA }
 		COL = {
 			primary_culture = yankee
 			remove_accepted_culture = anglo_canadian
@@ -1070,6 +1046,22 @@ country_event = {
 		17 = { remove_core = USA }
 		2629 = { remove_core = USA }
 		18 = { remove_core = USA }
+		COL = { all_core = { remove_core = ENG } }
+		USA_78 = {
+			remove_core = ENG
+			remove_core = COL
+			add_core = USA
+		}
+		USA_81 = {
+			remove_core = ENG
+			remove_core = COL
+		}
+		USA_91 = {
+			remove_core = ENG
+			remove_core = COL
+		}
+		114 = { remove_core = COL }
+		111 = { remove_core = COL }
 		any_pop = {
 			scaled_consciousness = {
 				issue = jingoism

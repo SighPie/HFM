@@ -114,13 +114,14 @@ open_homesteading = {
 	immigrant_attract = 0.5
 	icon = 11
 }
+
 boer_commandos_modifier = {
 	org_regain = 0.1
 	land_organisation = 0.1
 	mobilisation_economy_impact = -0.25
 	land_unit_start_experience = 5
 	supply_consumption = -0.05
-	mobilisation_size = 0.03
+	mobilisation_size = 0.05
 	icon = 15
 }
 
@@ -426,6 +427,7 @@ the_terror = {
 population_resettlement = {
 	immigrant_attract = 5
 	assimilation_rate = 1
+	population_growth = 0.03
 	icon = 19
 }
 
@@ -566,9 +568,10 @@ catholic_growth = {
 }
 
 assegai = {
-	land_defense_modifier = 0.3
-	land_attack_modifier = 0.3
-	land_organisation = 0.3
+	mobilisation_size = 0.35
+	mobilisation_economy_impact = -0.7
+	war_exhaustion = -0.05
+	supply_consumption = -0.1
 	icon = 15
 }
 
@@ -919,7 +922,7 @@ uncivilized_isolationism = {
 	research_points_modifier = -0.3
 	min_tariff = 0.5
 	prestige = -0.01
-	cb_generation_speed_modifier = -0.15
+	cb_generation_speed_modifier = -0.25
 	icon = 10
 }
 
@@ -1011,22 +1014,22 @@ colonial_recruitment = {
 }
 
 small_baby_boom = {
-	population_growth = 0.001
+	population_growth = 0.002
 	icon = 19
 }
 
 baby_boom = {
-	population_growth = 0.005
+	population_growth = 0.006
 	icon = 19
 }
 
 global_baby_boom = {
-	global_population_growth = 0.008
+	global_population_growth = 0.006
 	icon = 17
 }
 
 global_baby_boom_small = {
-	global_population_growth = 0.001
+	global_population_growth = 0.002
 	icon = 17
 }
 
@@ -1528,6 +1531,8 @@ prussian_general_staff = {
 trek_boers = {
 	global_immigrant_attract = 3.1		#410%
 	global_assimilation_rate = 0.01
+	mobilisation_size = 2
+	cb_generation_speed_modifier = -1.5
 	icon = 17
 }
 
@@ -1812,10 +1817,10 @@ dar_al_funun = {
 	icon = 5
 }
 
-french_growth_nerf = {
-	global_population_growth = -0.001
-	icon = 18
-}
+#french_growth_nerf = {
+	#global_population_growth = -0.0001
+	#icon = 18
+#}
 
 ########### New Nations Mod
 
@@ -2084,6 +2089,7 @@ sakoku = {
 	prestige = 0.01
 	global_pop_militancy_modifier = -0.05
 	war_exhaustion = -0.1
+	cb_generation_speed_modifier = -1.5
 	icon = 5
 }
 
@@ -2196,7 +2202,6 @@ disunited_country = {
 	land_organisation = -0.2
 	naval_organisation = -0.2
 	supply_consumption = -0.3
-	global_pop_militancy_modifier = 0.01
 	research_points_modifier = -0.1
 	prestige = -0.7
 	icon = 8
@@ -2206,7 +2211,7 @@ tewodros_ii = {
 	mobilisation_size = 0.1
 	land_unit_start_experience = 10
 	org_regain = 0.05
-	global_pop_militancy_modifier = 0.02
+	global_pop_militancy_modifier = 0.01
 	prestige = -0.5
 	research_points = 0.05
 	icon = 15
@@ -2217,6 +2222,7 @@ yohannes_iv = {
 	land_organisation = 0.05
 	org_regain = 0.1
 	research_points = 0.1
+	global_pop_militancy_modifier = -0.01
 	icon = 15
 }
 
@@ -2304,7 +2310,7 @@ religious_minority_oppression = {
 	icon = 18
 }
 
-###HFM New World Modifiers ###
+###HFM ANZAC & CAN Modifiers ###
 
 gateway_to_australia = {
 	assimilation_rate = 1
@@ -2321,7 +2327,7 @@ australia_goldrush = {
 }
 
 australia_migrations = {
-	population_growth = 0.01
+	population_growth = 0.005
 	immigrant_attract = 3
 	assimilation_rate = 1
 	icon = 9
@@ -2345,6 +2351,8 @@ america_new_world = {
 	global_population_growth = 0.01
 	icon = 17
 }
+
+###HFM USA Modifiers###
 
 california_gold_rush = {
 	immigrant_attract = 3		#300%
@@ -2370,6 +2378,11 @@ manufacturing_belt = {
 	icon = 11
 }
 
+king_cotton = {
+	local_RGO_output = 0.075
+	local_RGO_throughput = 0.075
+	icon = 15
+}
 
 ### Ottomanism
 ottoman_oppression = {
@@ -2789,14 +2802,69 @@ silver_age = {
 	icon = 5
 }
 
+################
+# GOTT MIT UNS #
+################
+
+### Excavations ###
+
+inca_excavations = {
+	prestige = 0.02
+	icon = 5
+}
+
+inca_excavations_interrupted = {
+	prestige = -0.01
+	icon = 6
+}
+
+local_excavations = {
+	icon = 5
+}
+
+maya_excavations = {
+	prestige = 0.01
+	icon = 5
+}
+
+mesopotamian_excavations = {
+	prestige = 0.01
+	icon = 5
+}
+
+mycenaean_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+minoan_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+pompeji_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
 italico_valore = {
 	war_exhaustion = -0.03
 	supply_consumption = -0.3
 	icon = 15
 }
 
-###HFM Modifiers
+red_shirts = {
+	prestige = -0.05
+	ruling_party_support = -0.05
+	mobilisation_size = -0.01
+	global_pop_militancy_modifier = 0.01
+	global_pop_consciousness_modifier = 0.01
+	icon = 18
+}
 
+###HFM Modifiers###
+
+###Dutch###
 kpm_shipping = {
 	local_RGO_output = 0.15
 	farm_rgo_size = 3
@@ -2804,12 +2872,11 @@ kpm_shipping = {
 	icon = 1
 }
 
-military_aid = {
-	org_regain = 0.1
-	land_organisation = 0.05
-	land_defense_modifier = 0.05
-	supply_consumption = -0.05
-	icon = 15
+thorbecke_reforms = {
+	ruling_party_support = 0.05
+	core_pop_militancy_modifier = -0.02
+	core_pop_consciousness_modifier = -0.01
+	icon = 7
 }
 
 ###HFM Russia/Balkans Modifiers
@@ -2839,6 +2906,12 @@ russoification = {
 	icon = 7
 }
 
+cuza_reforms = {
+	tax_efficiency = 0.05
+	administrative_efficiency_modifier = 0.05
+	education_efficiency_modifier = 0.05
+	icon = 1
+}
 
 ###HFM - French Modifiers
 
@@ -2870,6 +2943,15 @@ french_colonial_integration = {
 	assimilation_rate = 0.1
 	immigrant_attract = 3
 	icon = 19
+}
+
+la_tache_noire = {
+	cb_generation_speed_modifier = 0.15
+	leadership_modifier = 0.05
+	min_military_spending = 0.25
+	mobilisation_size = 0.05
+	war_exhaustion = -0.25
+	icon = 11
 }
 
 ###HFM German Modifiers
@@ -2978,7 +3060,7 @@ the_eight_banners = {
 	min_social_spending = 0.25
 	max_social_spending = 0.50
 	research_points_modifier = -0.15
-	cb_generation_speed_modifier = -1.25
+	cb_generation_speed_modifier = -1
 	war_exhaustion = -5
 	supply_consumption = -0.2
 	research_points_on_conquer = -0.5
@@ -3057,10 +3139,12 @@ yuan_shikai = {
 	icon = 17
 }
 
+###HFM Siam Modifiers###
+
 rama_iv = {
 	global_pop_consciousness_modifier = -0.1
 	global_pop_militancy_modifier = -0.05
-	research_points_modifier = 0.025
+	research_points_modifier = 0.01
 	icon = 5
 }
 
@@ -3073,7 +3157,7 @@ rama_v = {
 	icon = 5
 }
 
-#HFM EIC Modifiers
+###HFM EIC Modifiers###
 
 eic_balance = {
 	max_tax = 0.75
@@ -3107,7 +3191,7 @@ sepoy_mutiny = {
 	icon = 16
 }
 
-###HFM UK Modifiers
+###HFM UK Modifiers###
 royal_irish_constabulary = {
 	pop_consciousness_modifier = -0.03
 	pop_militancy_modifier = -0.03
@@ -3142,27 +3226,6 @@ singapore_port = {
 	icon = 11
 }
 
-ai_warships_cooldown = {
-	icon = 17
-}
-
-foreign_weapons_imported = {
-	icon = 9
-}
-
-cuza_reforms = {
-	tax_efficiency = 0.05
-	administrative_efficiency_modifier = 0.05
-	education_efficiency_modifier = 0.05
-	icon = 1
-}
-
-king_cotton = {
-	local_RGO_output = 0.05
-	local_RGO_throughput = 0.05
-	icon = 15
-}
-
 anglification = {
 	assimilation_rate = 1.5
 	icon = 19
@@ -3176,3 +3239,22 @@ white_rajah = {
 	supply_consumption = -0.05
 	icon = 5
 }
+
+###HFM Generic Modifiers###
+
+military_aid = {
+	org_regain = 0.1
+	land_organisation = 0.05
+	land_defense_modifier = 0.05
+	supply_consumption = -0.05
+	icon = 15
+}
+
+ai_warships_cooldown = {
+	icon = 17
+}
+
+foreign_weapons_imported = {
+	icon = 9
+}
+

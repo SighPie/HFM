@@ -302,7 +302,7 @@ country_event = {
 
 	option = {
 		name = "EVT90038OPTA"
-		diplomatic_influence = { who = SAR value = 100 }
+		diplomatic_influence = { who = SAR value = 200 }
 		random_owned = {
 			limit = {
 				owner = {
@@ -651,8 +651,22 @@ country_event = {
 				}
 			}
 		}
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = { badboy = -15 }
+		}
 		ai_chance = {
 			factor = 95
+			
+			modifier = {
+				factor = 2
+				has_country_modifier = louis_napoleon_iii
+			}
+			
+			modifier = {
+				factor = 0.5
+				NOT = { has_country_modifier = louis_napoleon_iii }
+			}
 		}
 	}
 
@@ -673,6 +687,11 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 5
+			
+			modifier = {
+				factor = 10
+				NOT = { has_country_modifier = louis_napoleon_iii }
+			}
 		}
 	}
 }
@@ -877,7 +896,7 @@ country_event = {
 				alliance_with = ITA
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.3
 				primary_culture = french
 				NOT = {
 					465 = { owned_by = ITA }
@@ -936,7 +955,7 @@ country_event = {
 				war_policy = jingoism
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2.5
 				primary_culture = french
 				NOT = {
 					465 = { owned_by = ITA }
@@ -1001,6 +1020,19 @@ country_event = {
 					is_greater_power = yes
 				}
 			}
+			AND = {
+				ai = yes
+				tag = SAR
+				SIC = {
+					ai = yes
+					exists = yes
+				}	
+				PAP = {
+					ai = yes
+					exists = yes
+				}
+				year = 1861
+			}
 		}
 		OR = {
 			has_global_flag = italian_call_to_union
@@ -1057,6 +1089,11 @@ country_event = {
 		modifier = {
 			factor = 0.75
 			exists = GER
+		}
+		modifier = {
+			factor = 0.1
+			tag = SAR
+			ai = yes
 		}
 	}
 
@@ -1138,8 +1175,14 @@ country_event = {
 			}
 			country_event = { id = 96165 days = 20 }
 		}
+		
+		random_owned = { 
+			limit = { owner = { tag = SAR } }
+			SAR = { all_core = { remove_core = SAR } }
+		}
+		
 		ai_chance = {
-			factor = 95
+			factor = 99
 		}
 	}
 	
@@ -1152,14 +1195,7 @@ country_event = {
 			militancy = 6
 		}
 		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					tag = SAR
-					tag = SVY
-				}
-			}
+			factor = 1
 		}
 	}
 }
@@ -1258,6 +1294,8 @@ country_event = {
 		
 	fire_only_once = yes
 	mean_time_to_happen = { months = 4 }
+	
+	immediate = { political_reform = unitary }
 
 	option = {
 		name = "EVTOPTA96173"
@@ -1313,7 +1351,7 @@ country_event = {
 		relation = { who = SYC value = -400 }
 		diplomatic_influence = { who = SYC value = -400 }
 		ai_chance = { factor = 0.98 }
-		}
+	}
 	
 	option = {
 		name = "EVTOPTB96173"
@@ -1343,7 +1381,7 @@ country_event = {
 				defender_goal = { casus_belli = status_quo	}		
 				}
 			}
-			ai_chance = { factor = 0}
+			ai_chance = { factor = 0 }
 		}
 	}
 

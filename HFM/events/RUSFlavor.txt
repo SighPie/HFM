@@ -1226,9 +1226,16 @@ country_event = {
 				1072 = { owned_by = THIS }
 			}
 			1086 = {
+				life_rating = 10
 				secede_province = THIS
 				add_core = THIS
 				any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+				any_pop = {
+					limit = { type = bureaucrats }
+					reduce_pop = 0
+				}
+				add_province_modifier = { name = population_resettlement duration = 720 }
+				add_province_modifier = { name = baby_boom duration = 720 }
 			}
 		}
 	}

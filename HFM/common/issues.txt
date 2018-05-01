@@ -252,7 +252,15 @@ political_reforms = {
 			middle_vote = 0
 			poor_vote = 0
 			global_immigrant_attract = 0.01
-			allow = { NOT = { has_country_flag = theocratic_government } }
+			allow = { 
+				OR = {
+					has_country_flag = liberal_revolution_in_progress
+					has_country_flag = had_liberal_revolution
+					year = 1850
+					ai = no
+				}
+				NOT = { has_country_flag = theocratic_government } 
+			}
 			cb_generation_speed_modifier = 0.1
 		}
 		wealth_weighted_voting = {
@@ -282,9 +290,9 @@ political_reforms = {
 			poor_vote = 1
 			cb_generation_speed_modifier = -0.15
 			global_immigrant_attract = 0.55
+			core_pop_militancy_modifier = -0.01
 		}
 	}
-	
 	
 	upper_house_composition = {
 		party_appointed = {
@@ -560,6 +568,7 @@ political_reforms = {
 			#on_execute = { effect = { country_event = 6016804 } }
 			allow = { colonial_nation = yes }
 		}
+		
 		exploitation = {
 			prestige = 0.1
 			tax_efficiency = 0.01
@@ -571,9 +580,9 @@ political_reforms = {
 		civilizing = {
 			prestige = 0.1
 			global_assimilation_rate = 0.05
-			education_efficiency_modifier = 0.05
+			education_efficiency_modifier = 0.1
 			administrative_multiplier = 1
-			allow = { 
+			allow = {
 				colonial_nation = yes 
 				OR = {
 					has_global_flag = berlin_conference
@@ -949,7 +958,8 @@ economic_reforms = {
 		no_land_reform = {
 			farm_rgo_size = 0.25
 			mine_rgo_size = 0.25
-			core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_land_reform = {
 			technology_cost = 10000
@@ -980,7 +990,8 @@ economic_reforms = {
 	}
 	admin_reform = {
 		no_admin_reform = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_admin_reform = {
 			technology_cost = 12500
@@ -1012,7 +1023,8 @@ economic_reforms = {
 		next_step_only = yes
 		no_finance_reform = {
 			max_loan_modifier = -1.0 # no loan 4 u
-			core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_finance_reform = {
 			technology_cost = 12500
@@ -1130,8 +1142,8 @@ economic_reforms = {
 	
 	education_reform = {
 		no_education_reform = {
-			core_pop_militancy_modifier = -0.005
-	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_education_reform = {
 			education_efficiency_modifier = 0.1
@@ -1163,7 +1175,8 @@ economic_reforms = {
 	
 	research_reform = {
 		no_research_reform = {
-	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		
 		yes_research_reform = {
@@ -1198,8 +1211,8 @@ economic_reforms = {
 	
 	transport_improv = {
 		no_transport_improv = {
-			core_pop_militancy_modifier = -0.005
-	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_transport_improv = {
 			technology_cost = 12500
@@ -1280,8 +1293,8 @@ economic_reforms = {
 	
 	pre_indust = {
 		no_pre_indust = {
-			core_pop_militancy_modifier = -0.005
-	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_pre_indust = {
 			technology_cost = 18000
@@ -1317,8 +1330,8 @@ economic_reforms = {
 	}	
 	industrial_construction = {
 		no_industrial_construction = {
-			core_pop_militancy_modifier = -0.005
-	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_industrial_construction = {
 			technology_cost = 20000
@@ -1356,7 +1369,8 @@ military_reforms = {
 	foreign_training = {
 		
 		no_foreign_training = {
-			core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 			supply_consumption = -0.05
 		}
 		yes_foreign_training = {
@@ -1402,7 +1416,8 @@ military_reforms = {
 	}
 	foreign_weapons = {
 		no_foreign_weapons = {
-			core_pop_militancy_modifier = -0.005	
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 			supply_consumption = -0.05
 		}
 		yes_foreign_weapons = {
@@ -1436,7 +1451,8 @@ military_reforms = {
 	
 	military_constructions = {
 		no_military_constructions = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_military_constructions = {
 			technology_cost = 8500
@@ -1487,7 +1503,8 @@ military_reforms = {
 	}	
 	foreign_officers = {
 		no_foreign_officers = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_foreign_officers = {
 			leadership_modifier = 0.1
@@ -1530,7 +1547,8 @@ military_reforms = {
 	}	
 	army_schools = {
 		no_army_schools = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_army_schools = {
 			land_unit_start_experience = 10
@@ -1577,7 +1595,8 @@ military_reforms = {
 	}	
 	foreign_naval_officers = {
 		no_foreign_naval_officers = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_foreign_naval_officers = {
 			tariff_efficiency_modifier = 0.2
@@ -1621,7 +1640,8 @@ military_reforms = {
 	}
 	naval_schools = {
 		no_naval_schools = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_naval_schools = {
 			naval_unit_start_experience = 10
@@ -1666,7 +1686,8 @@ military_reforms = {
 	}
 	foreign_navies = {
 		no_foreign_navies = {
-				core_pop_militancy_modifier = -0.005
+			core_pop_militancy_modifier = -0.01
+			core_pop_consciousness_modifier = -0.01
 		}
 		yes_foreign_navies = {
 			naval_attack_modifier = 0.2

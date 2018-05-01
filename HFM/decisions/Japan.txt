@@ -1712,19 +1712,53 @@ political_decisions = {
 		}
 		
 		effect = {
+			set_country_flag = establish_the_kaitakushi
 			remove_country_modifier = uncivilized_isolationism
 			1643 = { change_province_name = "Sapporo" life_rating = 25 }
 			1644 = { change_province_name = "Nemuro" life_rating = 25 }
+			random_owned = {
+				limit = { NOT = { exists = EZO } }
+				1642 = { state_scope = { any_owned = { secede_province = UTI } } }
+				THIS = { inherit = UTI }
+			}
+			random_owned = {
+				limit = {
+					province_id = 1087
+					is_colonial = no
+				}
+				1087 = { secede_province = UTI }
+				THIS = { inherit = UTI }
+			}
 			1642 = {
 				state_scope = { 
 					change_region_name = "Hokkaido"
 					any_owned = { 
 						add_province_modifier = { name = population_resettlement duration = 10950 } 
-						add_province_modifier = { name = baby_boom duration = 9125 }
+						add_province_modifier = { name = baby_boom duration = 5475 }
 						add_province_modifier = { name = plantation duration = -1 }
+					}
+					any_pop = {
+						limit = { type = bureaucrats }
+						reduce_pop = 0
 					}
 				}
 			}
+			random_owned = {
+				limit = {
+					province_id = 1087
+					is_colonial = yes
+				}
+				1087 = { 
+					add_province_modifier = { name = population_resettlement duration = 10950 } 
+					add_province_modifier = { name = baby_boom duration = 3650 }
+					add_province_modifier = { name = plantation duration = -1 }
+					any_pop = {
+						limit = { type = bureaucrats }
+						reduce_pop = 0
+					}
+				}
+			}
+			
 		}
 		
 		ai_will_do = { factor = 1 }

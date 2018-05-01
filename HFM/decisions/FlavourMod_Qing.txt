@@ -354,6 +354,15 @@ political_decisions = {
 		effect = {
 			war_exhaustion = -20
 			ENG = { country_event = { id = 99946 days = 1 } }
+			random_country = {
+				limit = {
+					primary_culture = french
+					is_greater_power = yes
+					exists = yes
+					has_country_flag = arrow_incident
+				}
+				country_event = { id = 99946 days = 1 }
+			}
 			set_variable = { which = china_destablization value = 1 }
 			set_global_flag = taiping_intervention 
 		}
@@ -635,7 +644,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			1482 = { naval_base = 3}
+			1482 = { naval_base = 3 }
 			prestige = 5
 			treasury = -75000
 			set_country_flag = fuzhou_aresenal_established 

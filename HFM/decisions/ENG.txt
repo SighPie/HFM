@@ -1185,6 +1185,13 @@ political_decisions = {
 			1388 = { remove_core = JOH add_core = PRK }
 			1389 = { remove_core = JOH add_core = PRK }
 			1391 = { remove_core = JOH add_core = PHG }
+			
+			random_owned = { limit = { exists = PRK } owner = { diplomatic_influence = { who = PRK value = 15 } } }
+			random_owned = { limit = { exists = SWK } owner = { diplomatic_influence = { who = SWK value = 15 } } }
+			random_owned = { limit = { exists = BRU } owner = { diplomatic_influence = { who = BRU value = 15 } } }
+			random_owned = { limit = { exists = SIA } owner = { diplomatic_influence = { who = SIA value = 15 } } }
+			random_owned = { limit = { exists = PHG } owner = { diplomatic_influence = { who = PHG value = 15 } } }
+			random_owned = { limit = { exists = SLG } owner = { diplomatic_influence = { who = SLG value = 15 } } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -1222,6 +1229,13 @@ political_decisions = {
 			PHG = { all_core = { remove_core = JOH } }
 			inherit = PHG
 			badboy = 1
+			
+			random_owned = { limit = { exists = JOH } owner = { diplomatic_influence = { who = JOH value = 15 } } }
+			random_owned = { limit = { exists = SWK } owner = { diplomatic_influence = { who = SWK value = 15 } } }
+			random_owned = { limit = { exists = BRU } owner = { diplomatic_influence = { who = BRU value = 15 } } }
+			random_owned = { limit = { exists = SIA } owner = { diplomatic_influence = { who = SIA value = 15 } } }
+			random_owned = { limit = { exists = PRK } owner = { diplomatic_influence = { who = PRK value = 15 } } }
+			random_owned = { limit = { exists = SLG } owner = { diplomatic_influence = { who = SLG value = 15 } } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -1257,7 +1271,14 @@ political_decisions = {
 			SLG = { civilized = no tech_school = unciv_tech_school }
 			inherit = SLG
 			SLG = { all_core = { remove_core = JOH } }
-				badboy = 1
+			badboy = 1
+			
+			random_owned = { limit = { exists = JOH } owner = { diplomatic_influence = { who = JOH value = 15 } } }
+			random_owned = { limit = { exists = SWK } owner = { diplomatic_influence = { who = SWK value = 15 } } }
+			random_owned = { limit = { exists = BRU } owner = { diplomatic_influence = { who = BRU value = 15 } } }
+			random_owned = { limit = { exists = SIA } owner = { diplomatic_influence = { who = SIA value = 15 } } }
+			random_owned = { limit = { exists = PHG } owner = { diplomatic_influence = { who = PHG value = 15 } } }
+			random_owned = { limit = { exists = PRK } owner = { diplomatic_influence = { who = PRK value = 15 } } }
 			}
 			ai_will_do = { factor = 1 }
 		}
@@ -1294,7 +1315,14 @@ political_decisions = {
 			inherit = PRK
 			PRK = { all_core = { remove_core = JOH } }
 			badboy = 1
-			}
+			
+			random_owned = { limit = { exists = JOH } owner = { diplomatic_influence = { who = JOH value = 15 } } }
+			random_owned = { limit = { exists = SWK } owner = { diplomatic_influence = { who = SWK value = 15 } } }
+			random_owned = { limit = { exists = BRU } owner = { diplomatic_influence = { who = BRU value = 15 } } }
+			random_owned = { limit = { exists = SIA } owner = { diplomatic_influence = { who = SIA value = 15 } } }
+			random_owned = { limit = { exists = PHG } owner = { diplomatic_influence = { who = PHG value = 15 } } }
+			random_owned = { limit = { exists = SLG } owner = { diplomatic_influence = { who = SLG value = 15 } } }
+		}
 			ai_will_do = { factor = 1 }
 		}
 	
@@ -1554,7 +1582,10 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			biologism = 1
+			OR = { 
+				biologism = 1
+				revolution_n_counterrevolution = 1
+			}
 		}
 		
 		effect = {

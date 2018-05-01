@@ -1,8 +1,8 @@
 color = { 147 130 110 }
 fascist_dictatorship = { 40 40 40 }
-#proletarian_dictatorship = { 200 10 10 }
+proletarian_dictatorship = { 225 0 0 }
+democracy = { 232 232 232 }
 graphical_culture = PrussianGC
-
 
 party = {
 	name = "GER_liberal"

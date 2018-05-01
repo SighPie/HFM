@@ -72,6 +72,7 @@ political_decisions = {
 				}
 			}
 			FRA = {
+				NOT = { war_exhaustion = 1 }
 				neighbour = THIS
 				is_greater_power = yes
 				has_country_modifier = louis_napoleon_iii
@@ -139,8 +140,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				is_greater_power = no
-				NOT = { in_sphere = FRA }
+				war_exhaustion = 1
 			}
 		}
 	}
@@ -352,7 +352,10 @@ political_decisions = {
 				tag = SAR
 				tag = SVY
 			}
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+			}
 			OR = {
 				has_country_flag = liberal_revolution_in_progress
 				has_country_flag = liberal_revolution_fired
@@ -360,14 +363,37 @@ political_decisions = {
 			NOT = { has_country_flag = get_your_statuto_albertino_here }
 		}
 
-		allow = { 
-			state_n_government = 1
-			average_militancy = 2
+		allow = {
+			OR = { 
+				average_militancy = 2
+				average_consciousness = 5
+				num_of_revolts = 1
+			}
 		}
 
 		effect = {
-			any_pop = { militancy = -2 }
-			any_pop = { scaled_militancy = { factor = 3 ideology = reactionary  } }
+			any_owned = {
+				limit = { is_colonial = no }
+				remove_province_modifier = liberal_agitation
+				any_pop = {
+					scaled_consciousness = {
+						ideology = liberal
+						factor = -8
+					}
+					scaled_militancy = {
+						ideology = liberal
+						factor = -8
+					}
+					scaled_militancy = {
+						ideology = conservative
+						factor = -6
+					}
+					scaled_militancy = { 
+						ideology = reactionary
+						factor = 3   
+					}
+				}
+			}
 			political_reform = universal_weighted_voting
 			political_reform = proportional_representation
 			political_reform = harassment
@@ -376,11 +402,10 @@ political_decisions = {
 			social_reform = incarceration
 			prestige = 5
 			set_country_flag = get_your_statuto_albertino_here
+			remove_country_modifier = global_liberal_agitation
 		}
 
-		ai_will_do = {
-			factor = 0.9
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	the_case_of_edgardo_mortara = {
@@ -407,6 +432,8 @@ political_decisions = {
 			}
 			set_country_flag = edgardo_mortara
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	the_first_vatican_council = {
@@ -434,6 +461,8 @@ political_decisions = {
 			}
 			set_country_flag = first_vatican_council_held
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	garibaldi_redshirts = {
@@ -470,8 +499,8 @@ political_decisions = {
 					add_province_modifier = {
 						name = nationalist_agitation
 						duration = 100
-						}
 					}
+				}
 				any_pop = {
 					limit = {
 						OR = {
@@ -486,6 +515,11 @@ political_decisions = {
 					who = SAR
 					value = -50
 				}
+				add_country_modifier = {
+					name = red_shirts
+					duration = 720
+				}
+				prestige = -5
 			}
 			casus_belli = { target = PAP type = acquire_state months = 48 }
 			casus_belli = { target = PAP type = conquest months = 48 }
@@ -527,6 +561,7 @@ political_decisions = {
 						is_core = LOM
 						is_core = RMG
 						is_core = SYC
+						is_core = GEN
 					}
 				}
 				add_core = ITA
@@ -544,8 +579,11 @@ political_decisions = {
 				remove_core = RMG
 				remove_core = SYC
 				remove_core = TST
+				remove_core = GEN
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	italia_irredenta = {
@@ -856,6 +894,8 @@ political_decisions = {
 				create_alliance = THIS
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	italian_call_to_union = {
@@ -929,6 +969,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	we_are_italian = {
@@ -986,6 +1028,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 
 	unite_with_tuscany = {

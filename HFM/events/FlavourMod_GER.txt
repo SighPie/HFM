@@ -15,7 +15,6 @@ country_event = {
 	picture = "german_new_guinea_company"
 	
 	trigger = {
-		has_global_flag = yes_railroad
 		OR = {
 			tag = GCF
 			tag = GER
@@ -30,17 +29,30 @@ country_event = {
 		invention = mission_to_civilize
 		invention = colonial_negotiations
 		has_global_flag = berlin_conference
-		year = 1882
+		total_pops = 2000000
+		has_global_flag = berlin_conference
+		is_disarmed = no
+		money = 75001
+		num_of_ports = 3
+		total_amount_of_ships = 35
+		NOT = { any_greater_power = { war_with = THIS } }
+		NOT = { war_policy = pacifism }
+		NOT = { war_exhaustion = 5 }
 		NOT = { has_country_flag = german_new_guinea_company }
+		NOT = { invention = the_dark_continent }
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		months = 36
+		modifier = {
+			factor = 0.5
+			year = 1882
+		}
 	}
 	
 	option = {
 		name = "EVT99906OPTA"
-		treasury = -55000
+		treasury = -75000
 		set_country_flag = german_new_guinea_company
 		badboy = 2	
 		2531 = { secede_province = THIS any_pop = { literacy = -0.99 } }
@@ -288,6 +300,29 @@ country_event = {
 			397 = { remove_core = THIS }
 			secede_province = FROM
 		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.2 value = conservative }
+			ideology = { factor = 0.1 value = reactionary }
+			dominant_issue = { factor = 0.20 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = french
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
+			dominant_issue = { factor = 0.20 value = jingoism }
+		}
 		FROM = {
 			treasury = 100000
 			any_pop = {
@@ -352,6 +387,29 @@ country_event = {
 			}
 			397 = { remove_core = THIS }
 			secede_province = LUX
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+				OR = {
+					type = soldiers
+					type = officers
+				}
+			}
+			ideology = { factor = 0.2 value = conservative }
+			ideology = { factor = 0.1 value = reactionary }
+			dominant_issue = { factor = 0.20 value = jingoism }
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = french
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
+			dominant_issue = { factor = 0.20 value = jingoism }
 		}
 		FROM = {
 			treasury = 100000

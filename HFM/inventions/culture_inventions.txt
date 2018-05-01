@@ -21,7 +21,7 @@ romanticist_literature = {
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 2.5
 	}
 }
 romanticist_art = {
@@ -46,7 +46,7 @@ romanticist_art = {
 		}
 	}
 	effect = {
-		shared_prestige = 5  
+		shared_prestige = 2.5
 	}
 }
 romanticist_music = {
@@ -71,7 +71,7 @@ romanticist_music = {
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 2.5
 	}
 }
 #realism
@@ -97,7 +97,7 @@ realist_literature = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 5 
 	}
 }
 realist_art = {
@@ -122,7 +122,7 @@ realist_art = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 5 
 	}
 }
 realist_music = {
@@ -143,7 +143,7 @@ realist_music = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 5 
 	}
 }
 #impressionism
@@ -165,7 +165,7 @@ impressionist_literature = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 7.5 
 	}
 }
 impressionist_art = {
@@ -186,7 +186,7 @@ impressionist_art = {
 		}
 	}
 	effect = {
-		shared_prestige = 15
+		shared_prestige = 7.5
 	}
 }
 impressionist_music = {
@@ -207,7 +207,7 @@ impressionist_music = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 7.5 
 	}
 }
 #expressionism
@@ -230,7 +230,7 @@ expressionist_literature = {
 			
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 10 
 	}
 }
 expressionist_art = {
@@ -251,7 +251,7 @@ expressionist_art = {
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 10 
 	}
 }
 expressionist_music = {
@@ -272,7 +272,7 @@ expressionist_music = {
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 10 
 	}
 }
 #mass_culture_n_the_avant_garde
@@ -294,7 +294,7 @@ avantgarde_literature = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 avantgarde_art = {
@@ -315,7 +315,7 @@ avantgarde_art = {
 		}
 	}
 	effect = {
-		shared_prestige = 25
+		shared_prestige = 12.5
 	}
 }
 avantgarde_music = {
@@ -336,7 +336,7 @@ avantgarde_music = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 surrealism = {
@@ -354,7 +354,7 @@ surrealism = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 modern_design = {
@@ -372,7 +372,7 @@ modern_design = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 jazz = {
@@ -390,7 +390,7 @@ jazz = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 socialist_realism = {
@@ -412,7 +412,7 @@ socialist_realism = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 #idealism
@@ -431,7 +431,7 @@ neokantian_idealism = {
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 2.5
 	}
 }
 hegelian_idealism = {
@@ -449,7 +449,7 @@ hegelian_idealism = {
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 2.5
 	}
 }
 proto_existentialism = {
@@ -467,7 +467,7 @@ proto_existentialism = {
 		}
 	}
 	effect = {
-		shared_prestige = 5 
+		shared_prestige = 2.5
 	}
 }
 #empiricism
@@ -486,7 +486,7 @@ pragmatism = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 5 
 	}
 }
 i_empiricism = {
@@ -504,7 +504,7 @@ i_empiricism = {
 		}
 	}
 	effect = {
-		shared_prestige = 10 
+		shared_prestige = 5 
 	}
 }
 #analytic_philosophy
@@ -527,7 +527,7 @@ i_analytic_philosophy = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 7.5 
 	}
 }
 modern_logics = {
@@ -545,7 +545,7 @@ modern_logics = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 7.5 
 	}
 }
 logical_positivism = {
@@ -563,7 +563,7 @@ logical_positivism = {
 		}
 	}
 	effect = {
-		shared_prestige = 15 
+		shared_prestige = 7.5 
 	}
 }
 philosophy_of_language = {
@@ -581,7 +581,7 @@ philosophy_of_language = {
 		}
 	}
 	effect = {
-		shared_prestige = 15
+		shared_prestige = 7.5 
 	}
 }
 #phenomenology_n_hermeneutic
@@ -600,7 +600,7 @@ phenomenology = {
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 10 
 	}
 }
 hermeneutics = {
@@ -618,7 +618,7 @@ hermeneutics = {
 		}
 	}
 	effect = {
-		shared_prestige = 20 
+		shared_prestige = 10 
 	}
 }
 #anti__rationalism
@@ -637,7 +637,7 @@ existentialism = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 nihilism_and_the_will = {
@@ -655,7 +655,7 @@ nihilism_and_the_will = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5 
 	}
 }
 futurism = {
@@ -673,7 +673,7 @@ futurism = {
 		}
 	}
 	effect = {
-		shared_prestige = 25 
+		shared_prestige = 12.5  
 	}
 }
 quantum_theory = {
@@ -691,7 +691,7 @@ quantum_theory = {
 		}
 	}
 	effect = {
-		shared_prestige = 25
+		shared_prestige = 12.5 
 	}
 }
 #biologism
@@ -1829,7 +1829,7 @@ the_talkies = {
 		}
 	}
 	effect = {
-		shared_prestige = 20
+		shared_prestige = 10
 		suppression_points_modifier = -0.05
 	}
 	core_pop_consciousness_modifier = 0.01

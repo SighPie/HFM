@@ -1979,13 +1979,7 @@ country_event = {
 		}
 		diplomatic_influence = { who = ASH value = -200 }
 		relation = { who = ASH value = -200 }
-		random_country = {
-			limit = {
-				owns = 1907
-				civilized = yes
-			}
-			1907 = { secede_province = THIS remove_core = FROM }
-		}
+		1907 = { secede_province = THIS remove_core = FROM }
 		ai_chance = {
 			factor = 100
 		}

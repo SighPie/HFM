@@ -1555,11 +1555,42 @@ country_event = {
 		tech_school = army_tech_school
 		political_reform = mandatory_service
 		any_pop = { dominant_issue = { value = jingoism factor = 0.1 } }
-		ai_chance = { factor = 100 }
+		random_owned = { 
+			limit = { owner = { ai = yes } }
+			owner = { 
+				activate_technology = army_professionalism
+				activate_technology = army_decision_making
+				add_country_modifier = {
+					name = la_tache_noire
+					duration = -1
+				}
+			}
 		}
+		random_owned = {
+			limit = { owner = { ai = no } }
+			owner = { 
+				add_country_modifier = {
+					name = la_tache_noire
+					duration = 3650
+				}
+			}
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+				is_culture_group = french
+				location = { is_core = THIS }
+			}
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
+			dominant_issue = { factor = 0.10 value = jingoism }
+		}
+		ai_chance = { factor = 100 }
+	}
 		
 	option = {
 		name = "EVT37239OPTB"
+		prestige = -25
 		any_pop = { dominant_issue = { value = anti_military factor = 0.1 } }
 		ai_chance = { factor = 0 }
 		}
@@ -1633,14 +1664,20 @@ country_event = {
 		is_greater_power = yes
 		capital = 425
 		has_country_flag = faidherbe_ambitions
-		1788 = { owner = { civilized = no ai = yes } }
+		1788 = { owner = { OR = { civilized = no ai = yes primary_culture = french }} }
 		owns = 2573
 		owns = 1783
 		owns = 1784
 		war = no
 	}
 		
-	mean_time_to_happen = { months = 20 }
+	mean_time_to_happen = { 
+		months = 20 
+		modifier = {
+			factor = 0.3
+			year = 1860
+		}
+	}
 	
 	option = {
 		name = "EVT37241OPTA"
@@ -1784,21 +1821,6 @@ country_event = {
 				months = 24
 			}
 		}
-		
-		random_country = {
-			limit = {
-				tag = TRZ
-				exists = yes
-				NOT = { in_sphere = THIS }
-			}
-			leave_alliance = THIS
-			add_casus_belli = {
-				target = THIS
-				type = add_to_sphere
-				months = 24
-			}
-		}
-		
 		ai_chance = {
 			factor = 100
 			modifier = { factor = 0 badboy = 0.9 }

@@ -1022,16 +1022,7 @@ country_event = {
 			annex_to = TPG
 		}
 		
-		any_country = {
-			limit = {
-				tag = ENG
-				war_with = THIS
-			}
-			end_war = THIS
-			country_event = 99968
-		}
-		
-		
+		country_event = 160027
 	}
 }
 
@@ -1920,6 +1911,7 @@ country_event = {
 			}
 		}
 		NOT = {
+			tag = QNG
 			exists = TAI
 			has_global_flag = retreated_to_taiwan
 		}
@@ -2097,5 +2089,109 @@ country_event = {
 			end_war = TAI
 		}
 		change_tag_no_core_switch = TAI
+	}
+}
+
+#Qing Defeat in the Taiping Rebellion
+country_event = {
+	id = 160027
+	title = "EVTNAME160027" #Retreat to Formosa
+	desc = "EVTDESC160027"
+	news = yes
+	news_desc_long = "EVTDESC160026_NEWS_LONG"
+	news_desc_medium = "EVTDESC160026_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC160026_NEWS_SHORT"
+	picture = "panthay_rebellion"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT160026OPTA"
+		clr_country_flag = kuomintang_faction
+		clr_country_flag = neutral_faction
+		clr_country_flag = communist_faction
+		clr_country_flag = beiyang_faction
+		set_global_flag = retreated_to_taiwan
+		1485 = {
+			add_core = QNG
+			add_core = TAI
+			remove_core = FJN
+			secede_province = QNG
+			fort = 3
+		}
+		2562 = {
+			add_core = TAI
+			remove_core = FJN
+			secede_province = QNG
+			fort = 3
+		}
+		2406 = {
+			add_core = TAI
+			remove_core = FJN
+			secede_province = QNG
+			fort = 3
+		}
+		2681 = {
+			add_core = TAI
+			remove_core = FJN
+			secede_province = QNG
+			fort = 3
+		}
+		1616 = {
+			aristocrats = {
+				limit = { has_pop_culture = manchu }
+				money = 2000
+				reduce_pop = 0.8
+				move_pop = 2681
+			}
+			bureaucrats = {
+				limit = { has_pop_culture = manchu  }
+				money = 300
+				reduce_pop = 0.8
+				move_pop = 2681
+			}
+			officers = {
+				limit = { has_pop_culture = manchu  }
+				money = 300
+				reduce_pop = 0.8
+				move_pop = 2681
+			}
+			soldiers = {
+				limit = { has_pop_culture = manchu  }
+				money = 100
+				reduce_pop = 0.8
+				move_pop = 2681
+			}			
+		}
+		QNG = {
+			government = absolute_monarchy
+			ruling_party_ideology = reactionary
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = no_meeting
+			political_reform = state_press
+			political_reform = state_controlled
+			political_reform = underground_parties
+		}
+		QNG = {
+			capital = 2681
+			money = 100000
+			leadership = 40
+			add_accepted_culture = min
+			add_accepted_culture = nanfaren
+			remove_country_modifier = uncivilized_isolationism
+		}
+		
+		random_country = {
+			limit = { 
+				tag = ENG 
+				owns = 1496
+				OR = {
+					war_with = THIS
+					truce_with = THIS
+				}
+			}
+			country_event = 99968
+		}
 	}
 }

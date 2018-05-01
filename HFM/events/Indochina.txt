@@ -483,12 +483,14 @@ country_event = {
 		badboy = 2
 		random_country = {
 			limit = {
+				capital_scope = { continent = indochina }
 				OR = {
 					primary_culture = lao
 					primary_culture = khmer
 					primary_culture = vietnamese
 					AND = {
 						tag = SIA
+						NOT = { civilization_progress = 0.75 }
 						any_owned_province = {
 							OR = {
 								is_core = DAI
@@ -522,12 +524,14 @@ country_event = {
 		}
 		random_country = {
 			limit = {
+				capital_scope = { continent = indochina }
 				OR = {
 					primary_culture = lao
 					primary_culture = khmer
 					is_vassal = no
 					AND = {
 						tag = SIA
+						NOT = { civilization_progress = 0.75 }
 						any_owned_province = {
 							OR = {
 								is_core = DAI
@@ -612,7 +616,7 @@ country_event = {
 		
 		
 		ai_chance = {
-			factor = 90
+			factor = 95
 			modifier = {
 				factor = 0
 				badboy = 0.92
@@ -624,6 +628,7 @@ country_event = {
 		prestige = -5
 		any_neighbor_country = {
 			limit = {
+				capital_scope = { continent = indochina }
 				OR = {
 					primary_culture = lao
 					primary_culture = khmer
@@ -654,7 +659,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			factor = 5
 		}
 	}
 	option = {

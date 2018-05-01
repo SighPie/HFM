@@ -78,7 +78,6 @@ political_decisions = {
 			NOT = { is_canal_enabled = 2 }
 			NOT = { has_global_flag = suez_canal_built }
 			has_global_flag = suez_canal_company_founded
-			has_global_flag = yes_railroad
 			NOT = { has_global_flag = suez_canal_company_founded_backup }
 			is_greater_power = yes
 			interchangeable_parts = 1
@@ -434,67 +433,7 @@ political_decisions = {
 			government = democracy
 		}
 	}
-	
-	zanzibar_protectorate = {
-		picture = zanzibar_protectorate
-		potential = {
-			tag = ENG
-			owns = 2029
-			year = 1896
-			is_greater_power = yes
-			has_country_flag = treaty_of_heligoland_success
-			NOT = { has_country_flag = zanzibar_protectorate }
-		}
-		
-		allow = {
-			war = no
-			ZAN = {
-				vassal_of = THIS
-				ai = yes
-			}
-		}
-		
-		effect = {
-			set_country_flag = zanzibar_protectorate
-			badboy = 1
-			prestige = 5
-			inherit = ZAN
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	british_east_africa = {
-		picture = british_east_africa
-		potential = {
-			tag = ENG
-			owns = 2029
-			has_country_flag = treaty_of_heligoland_success
-			NOT = { has_country_flag = british_east_africa }
-		}
-		
-		allow = {
-			owns = 2029
-			is_greater_power = yes
-		}
-		
-		effect = {
-			set_country_flag = british_east_africa
-			2024 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2027 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2028 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2032 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2031 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2025 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2026 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			2028 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			1870 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			KNY = { government = colonial_company }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}	
-	
+
 	ai_get_british_wyoming = {
 		potential = {
 			tag = ENG

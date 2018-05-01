@@ -59,6 +59,7 @@ SVA		="countries/Svaneti.txt"
 MIG		="countries/Mingrelia.txt"
 CHH		="countries/Chhatarpur.txt"
 REW		="countries/Rewah.txt"
+GEN 	="countries/Genoa.txt"
 
 ###Colonial Spain Countries
 CGC 	= "countries/Colonial Chile.txt"

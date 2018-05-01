@@ -439,6 +439,16 @@ migration_target = {
 		terrain = montane_tundra
 	}
 	
+modifier = {
+		factor = 0.5
+		OR = {
+			continent = west_africa
+			continent = east_africa
+			continent = central_africa
+			continent = south_west_africa
+		}
+	}
+	
 	modifier = {
 		factor = 0.01
 		OR = { 
@@ -456,8 +466,8 @@ migration_target = {
 		is_overseas = yes
 		OR = { 
 			continent = west_africa 
-			continent = central_africa
 			continent = east_africa
+			continent = central_africa
 			continent = oceania #Near East
 			continent = africa
 			continent = south_west_africa
@@ -466,54 +476,22 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = -0.02
-		continent = oceania #Near East
+		factor = 2.5
+		continent = europe
 		country = { primary_culture = russian }
 	}
 	
 	modifier = {
 		factor = 2.5
 		OR = { 
-			is_core = UKR
-			is_core = KAM
-			is_core = CRI
-			is_core = URA
-			is_core = SIB
-			is_core = BYE
-		}
-		country = { primary_culture = russian }
-	}
-	
-	modifier = {
-		factor = 1.5
-		OR = { 
-			is_core = UBD
-			is_core = POL
-			is_core = LIT
-			is_core = TUR
-			is_core = TCA
-			is_core = GEO
-			is_core = AZB
-			is_core = ARM
-			is_core = GLM
-		}
-		country = { primary_culture = russian }
-	}
-	
-	modifier = {
-		factor = 2.5
-		OR = { 
-			is_core = UBD
-			is_core = PZN
-			is_core = PML
-			is_core = SLS
-			is_core = POL
-			is_core = FRA
-			is_core = BOR
-			is_core = SWI
-			is_core = LUX
-			is_core = BAN
-			is_core = SIE
+			state_id = 409
+			state_id = 411
+			state_id = 354
+			state_id = 350
+			state_id = 690
+			state_id = 699
+			state_id = 657
+			state_id = 2533
 		}
 		country = { has_country_flag = prussian_settlement_commission }
 	}
@@ -521,9 +499,11 @@ migration_target = {
 	modifier = {
 		factor = 1.1
 		OR = { 
-			continent = east_africa
+			state_id = 354
+			state_id = 350
+			state_id = 690
+			state_id = 699
 			continent = south_west_africa
-			continent = central_africa
 			state_id = 409
 			state_id = 411
 		}
@@ -549,14 +529,6 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 1.25
-		OR = { 
-			is_core = CHI
-		}
-		country = { primary_culture = japanese }
-	}
-	
-	modifier = {
 		factor = 2.5
 		OR = { 
 			is_core = MEX
@@ -571,18 +543,25 @@ migration_target = {
 		factor = -2.81
 		OR = { 
 			is_core = HND
-			is_core = QUE
-			is_core = BUR
+			continent = indochina
 			is_core = SRI
 			is_core = PRK
 			is_core = PHG
 			is_core = LHJ
-			is_core = NYE
-			is_core = MLY
 			is_core = MLT
+			AND = {
+				continent = oceania #Near East
+				NOT = { state_id = 1755 }
+			}
 			continent = west_africa
+			continent = central_africa
 			is_core = MLW
-			is_core = SUD
+			state_id = 1842
+			state_id = 1836
+			state_id = 1830
+			state_id = 1840
+			state_id = 1844
+			state_id = 2019
 		}
 		country = { primary_culture = british }
 	}
@@ -592,8 +571,9 @@ migration_target = {
 		OR = {
 			continent = australia_new_zealand
 			continent = north_america
-			is_core = IRE
-			is_core = WHA
+			state_id = 254
+			state_id = 263
+			state_id = 273
 			is_core = EGY
 		}
 		country = { primary_culture = british }
@@ -1602,17 +1582,17 @@ ideologies = {
 				is_primary_culture = yes
 			}
 		}
-		
+
 		modifier = {
 			factor = 1.5
-			location = { is_core = ALD }
+			location = { is_overseas = yes is_colonial = no }
 			OR = {
 				is_accepted_culture = yes
 				is_primary_culture = yes
+				has_pop_culture = boer
 			}
-			country = { primary_culture = french }
 		}
-		
+
 		modifier = {
 			factor = 1.5
 			location = { is_core = SAF }
@@ -1628,7 +1608,26 @@ ideologies = {
 				}
 			}
 		}
-		
+
+		modifier = {
+			factor = 1.5
+			location = { 
+				OR = { 
+					continent = central_africa
+					continent = west_africa 
+					continent = east_africa
+					continent = asia
+					continent = africa
+				}
+				is_overseas = yes
+			}
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+			country = {  capital_scope = { continent = europe } }
+		}
+
 		modifier = {
 		factor = 4
 			country = { civilized = yes }
@@ -1775,8 +1774,19 @@ ideologies = {
 				is_primary_culture = yes
 			}
 		}
+
 		modifier = {
-			factor = 0.75
+			factor = 0.8
+			location = { is_overseas = yes is_colonial = no }
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+				has_pop_culture = boer
+			}
+		}
+
+		modifier = {
+			factor = 0.8
 			location = { is_core = SAF }
 			OR = {
 				is_accepted_culture = yes
@@ -1790,23 +1800,24 @@ ideologies = {
 				}
 			}
 		}
+
 		modifier = {
-			factor = 0.75
-			location = { is_overseas = yes }
+			factor = 0.5
+			location = { 
+				OR = { 
+					continent = central_africa
+					continent = west_africa 
+					continent = east_africa
+					continent = asia
+					continent = africa
+				}
+				is_overseas = yes
+			}
 			OR = {
 				is_accepted_culture = yes
 				is_primary_culture = yes
-				has_pop_culture = boer
 			}
-		}
-		modifier = {
-			factor = 0.75
-			location = { is_core = ALD }
-			OR = {
-				is_accepted_culture = yes
-				is_primary_culture = yes
-			}
-			country = { primary_culture = french }
+			country = {  capital_scope = { continent = europe } }
 		}
 		modifier = {
 			factor = 0.5

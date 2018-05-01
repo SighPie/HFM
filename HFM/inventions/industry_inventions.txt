@@ -360,7 +360,7 @@ machine_tools = {
 	}
 	effect = {
 		factory_goods_output = {
-			machine_parts = 0.02 
+			machine_parts = 0.05 
 		}
 		factory_throughput = 0.05		
 	}
@@ -516,6 +516,9 @@ electric_machinery = {
 		factory_cost = 0.05
 		rgo_goods_output = {
 			timber = 0.15
+		}
+		factory_goods_output = {
+			machine_parts = 0.02
 		}
 	}
 }
@@ -1135,7 +1138,7 @@ pressure_chambers_for_thorax_surgery = {
 		}
 	}
 	effect = {
-		shared_prestige = 10
+		shared_prestige = 5
 	}
 }
 #inorganic_chemistry
@@ -1444,6 +1447,7 @@ rayon = {
 		} 
 	}
 }
+
 bakelite = {
 	limit = { synthetic_polymers = 1 }
 	chance = {

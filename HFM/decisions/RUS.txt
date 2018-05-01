@@ -1259,7 +1259,10 @@ political_decisions = {
 				}
 				owns = 1095
 			}
-			has_global_flag = crimea_has_happened
+			OR = {
+				has_global_flag = crimea_has_happened
+				year = 1870
+			}
 		}
 		
 		allow = {
@@ -1542,7 +1545,7 @@ political_decisions = {
 						NOT = { terrain = montane_tundra }
 					}
 				}
-				add_province_modifier = { name = small_baby_boom duration = 4380 }
+				add_province_modifier = { name = small_baby_boom duration = 2920 }
 			}
 		}
 

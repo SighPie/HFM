@@ -417,12 +417,6 @@ country_event = {
 		}
 		
 		ENG = { country_event = 33007 }
-		2034 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2035 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2042 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2043 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2044 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2046 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 		
 		ai_chance = { factor = 100 }
 	}
@@ -995,7 +989,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				has_global_flag = yes_railroad
+				FROM = { ai = yes }
 			}
 		}
 	}

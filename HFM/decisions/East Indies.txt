@@ -638,6 +638,7 @@ political_decisions = {
 		allow = {
 			year = 1888
 			SWK = {
+				has_country_modifier = white_rajah
 				war = no
 				OR = {
 					in_sphere = THIS

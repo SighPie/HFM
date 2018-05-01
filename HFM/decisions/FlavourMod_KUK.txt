@@ -122,7 +122,7 @@ political_decisions = {
 		picture = gtfo
 		potential = {
 			tag = AUS
-			#ai = yes
+			ai = yes
 			PRU = { ai = yes }
 			OR = {
 				SGM = {
@@ -313,4 +313,8 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	#silvesterpatent = {
+	#
+	#}
 }

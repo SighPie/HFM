@@ -1,5 +1,9 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+GEN_ADJ;Genoese;;;;;;;;;;;;x
+GEN;Genoa;;;;;;;;;;;;x
+MRU_colonial_company;The Maritime Dominion;;;;;;;;;;;;;x,
+MRU_dominion;The Maritime Dominion;;;;;;;;;;;;;x,
 BOS_colonial_company;Bosnien-Herzegowina;;;;;;;;;;;;;x,
 BOS_dominion;Bosnien-Herzegowina;;;;;;;;;;;;;x,
 MLI_colonial_company;French Soudan;;;;;;;;;;;;;x,
@@ -217,7 +221,9 @@ PHL_colonial_company;Las Filipinas;;;;;;;;;;;;;x,
 MAD_absolute_monarchy;The Merina Kingdom;;;;;;;;;;;;;x,
 MAD_colonial_company;Protectorat de Madagascar;;;;;;;;;;;;;x,
 KNY_colonial_company;East Africa;;;;;;;;;;;;;x,
+KNY_dominion;The Dominion of East Africa;;;;;;;;;;;;;x,
 NGR_colonial_company;West Africa;;;;;;;;;;;;;x,
+NGR_dominion;West Africa;;;;;;;;;;;;;x,
 IRE_fascist_dictatorship;Eire;;;;;;;;;;;;;x,
 IRE_colonial_company;The Irish Dominion;;;;;;;;;;;;;x,
 IRE_dominion;The Irish Free State;;;;;;;;;;;;;x,

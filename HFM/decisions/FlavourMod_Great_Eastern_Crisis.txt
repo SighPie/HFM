@@ -62,71 +62,21 @@ political_decisions = {
 					AND = { 
 						has_global_flag = treaty_of_paris_russia
 						exists = NGF
-						TUR = { alliance_with = NGF }
+						TUR = { NOT = { alliance_with = NGF } }
 					}
 					AND = { 
 						has_global_flag = treaty_of_paris_russia
 						exists = GER
-						TUR = { alliance_with = GER }
+						TUR = { NOT = { alliance_with = GER } }
 					}
 					AND = {
 						has_global_flag = treaty_of_paris_russia
 						exists = GCF
-						TUR = { alliance_with = GCF }
+						TUR = { NOT = { alliance_with = GCF } }
 					}
 				}
 			}
 		}
-	}
-	
-	the_reichstadt_agreement = {
-		picture = "congress_of_berlin"
-		potential = { 
-			OR = {
-				tag = GER
-				tag = GCF
-				tag = AUS
-				tag = KUK
-				tag = DNB
-			}
-			is_greater_power = yes
-			is_disarmed = no
-			OR = {
-				owns = 771
-				771 = { owner = { vassal_of = THIS } }
-			}
-			OR = {
-				TUR = { owns = 783 }
-				BOS = { vassal_of = TUR }
-			}
-			OR = {
-				AND = { 
-					has_global_flag = constantinople_conference
-					RUS = { NOT = { war_with = TUR } }
-				}
-				has_global_flag = russia_liberate_balkans
-			}
-			NOT = {
-				has_global_flag = the_reichstadt_agreement
-				has_global_flag = great_eastern_crisis_refused
-				has_global_flag = great_eastern_crisis_war_demanded_turks
-			}
-		}
-		
-		allow = {
-			NOT = { 
-				war_with = RUS 
-				truce_with = RUS
-			}
-			military_score = 100
-		}
-		
-		effect = {
-			set_global_flag = the_reichstadt_agreement
-			RUS = { country_event = 99822 }
-		}
-		
-		ai_will_do = { factor = 1 }
 	}
 	
 	eastern_crisis_dismantle_ottomans = {
@@ -205,6 +155,56 @@ political_decisions = {
 				badboy = 0.8
 			}
 		}
+	}
+	
+	the_reichstadt_agreement = {
+		picture = "congress_of_berlin"
+		potential = { 
+			OR = {
+				tag = GER
+				tag = GCF
+				tag = AUS
+				tag = KUK
+				tag = DNB
+			}
+			is_greater_power = yes
+			is_disarmed = no
+			OR = {
+				owns = 771
+				771 = { owner = { vassal_of = THIS } }
+			}
+			OR = {
+				TUR = { owns = 783 }
+				BOS = { vassal_of = TUR }
+			}
+			OR = {
+				AND = { 
+					has_global_flag = constantinople_conference
+					RUS = { NOT = { war_with = TUR } }
+				}
+				has_global_flag = russia_liberate_balkans
+			}
+			NOT = {
+				has_global_flag = the_reichstadt_agreement
+				has_global_flag = great_eastern_crisis_refused
+				has_global_flag = great_eastern_crisis_war_demanded_turks
+			}
+		}
+		
+		allow = {
+			NOT = { 
+				war_with = RUS 
+				truce_with = RUS
+			}
+			military_score = 100
+		}
+		
+		effect = {
+			set_global_flag = the_reichstadt_agreement
+			RUS = { country_event = 99822 }
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	the_treaty_of_san_stefano_const = {

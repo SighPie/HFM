@@ -401,4 +401,81 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	appoint_thorbecke = {
+		picture = thorbecke_reforms
+		potential = {
+			tag = NET
+			NOT = { year = 1860 }
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+			}
+			NOT = {
+				has_country_modifier = thorbecke_reforms 
+				has_country_flag = thorbecke_reforms
+			}
+		}
+
+		allow = {
+			war = no
+			OR = {
+				average_militancy = 3
+				num_of_revolts = 1
+				average_consciousness = 5
+			}
+		}
+		
+		effect = {
+			set_country_flag = thorbecke_reforms
+			prestige = 5
+			add_country_modifier = {
+				name = thorbecke_reforms
+				duration = 7300
+			}
+			random_owned = {
+				limit = {
+					owner = { government = prussian_constitutionalism }
+				}
+				owner = {
+					political_reform = universal_weighted_voting
+					political_reform = yes_meeting
+					political_reform = free_press
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { government = absolute_monarchy }
+				}
+				owner = {
+					government = prussian_constitutionalism
+					political_reform = landed_voting
+					political_reform = yes_meeting
+					political_reform = free_press
+				}
+			}
+			political_reform = open_borders
+			remove_country_modifier = global_liberal_agitation
+			any_owned = {
+				limit = { is_colonial = no }
+				remove_province_modifier = liberal_agitation
+				any_pop = {
+					scaled_militancy = {
+						ideology = liberal
+						factor = -8
+					}
+					scaled_consciousness = {
+						ideology = liberal
+						factor = -8
+					}
+					scaled_militancy = {
+						ideology = conservative
+						factor = -6
+					}
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }

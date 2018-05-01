@@ -46,7 +46,30 @@ political_decisions = {
 # Pompeji #
 ###########
 
+	pompeji_fiorelli = {
+		picture = pompeji_fiorelli
+		potential = {
+			owns = 754
+			NOT = { has_country_flag = fiorelli }
+		}
 
+		allow = {
+			empiricism = 1
+			invention = early_archaeology
+			money = 25000
+		}
+
+		effect = {
+			money = -25000
+			prestige = 10
+			years_of_research = 0.15
+			set_country_flag = fiorelli
+			add_country_modifier = {
+				name = pompeji_excavations
+				duration = -1
+			}
+		}
+	}
 
 ###################
 # Italian islands #
@@ -57,6 +80,7 @@ political_decisions = {
 		potential = {
 			tag = ITA
 			has_unclaimed_cores = no
+			has_global_flag = italian_claimed_venetia
 			NOT = { has_country_flag = italian_islands_claimed }
 		}
 		

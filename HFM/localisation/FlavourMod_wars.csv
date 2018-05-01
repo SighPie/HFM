@@ -1,4 +1,24 @@
 ;;;;;;;;;;;x
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_SOKThe $ORDER$Northern Nigeria Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_ENG_SOK;The $ORDER$Northern Nigeria Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_ENG_BEN;The $ORDER$Benin Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_ENG_BEN;The $ORDER$Benin Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_TOO;The French Conquest of Senegal;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_FRA_TOO;The French Conquest of Senegal;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_HUMILIATE_NAME_WOL_FRA;The French Conquest of Senegal;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_WOL_BOR;The French Conquest of Senegal;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_BAM_FRA;The French Conquest of Soudan;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_BAM_BOR;The French Conquest of Soudan;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_MAS_FRA;The French Conquest of Soudan;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_MAS_BOR;The French Conquest of Soudan;;;;;;;;;;;x,,,
+AGRESSION_WAR_RESTORE_ORDER_NAME_SAR_GEN;The $ORDER$Genoese Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_RESTORE_ORDER_NAME_SAR_GEN;The $ORDER$Genoese Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_DAH;The $ORDER$Franco-Dahomean War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_FRA_DAH;The $ORDER$Franco-Dahomean War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_ADD_SPHERE_NAME_ENG_MNP;British Intervention in Bahrain;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_ADD_SPHERE_NAME_ENG_MNP;British Intervention in Bahrain;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_MNP;The $ORDER$Anglo-Manipur War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -25,10 +45,10 @@ NORMAL_WAR_PROTECTORATE_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 AGRESSION_WAR_PROTECTORATE_NAME_NET_LAN;The Kongsi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_SUD;The Mahdist War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_PROTECTORATE_NAME_BOR_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_PROTECTORATE_NAME_BOR_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-NORMAL_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
-AGRESSION_WAR_PROTECTORATE_NAME_FRA_TUN;French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_BOR_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_BOR_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_TUN;The French Conquest of Tunisia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_ENG_ORA;The Boer War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -57,8 +77,8 @@ AGRESSION_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_NAME_FRA_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 AGRESSION_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
-NORMAL_WAR_TAKE_CORE_NAME_WOL_FRA;French Conquest of Sengal;;;;;;;;;;;x,,,
-NORMAL_WAR_TAKE_CORE_NAME_WOL_BOR;French Conquest of Sengal;;;;;;;;;;;x,,,
+NORMAL_WAR_TAKE_CORE_NAME_WOL_FRA;French Conquest of Senegal;;;;;;;;;;;x,,,
+NORMAL_WAR_TAKE_CORE_NAME_WOL_BOR;French Conquest of Senegal;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_PROTECTORATE_NAME_ENG_BUR;The 3rd Burma War;;;;;;;;;;;;;;;x;;

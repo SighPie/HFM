@@ -83,8 +83,7 @@ political_decisions = {
 					}
 					NOT = { any_owned_province = { is_colonial = yes } }
 					raider_group_doctrine = 1
-					has_global_flag = yes_railroad
-					year = 1880
+					year = 1885
 				}
 			}
 		}

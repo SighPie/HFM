@@ -317,7 +317,6 @@ political_decisions = {
 			random_owned = { limit = { exists = QAT } owner = { diplomatic_influence = { who = QAT value = 50 } } }
 			random_owned = { limit = { exists = ABU } owner = { diplomatic_influence = { who = ABU value = 50 } } }
 			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 50 } } }
-			}
 		}
 	}
 }

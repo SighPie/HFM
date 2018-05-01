@@ -26,6 +26,7 @@ manufacturing_belt_city;The Manufacturing Belt;;;;;;;;;;;;x
 manufacturing_belt;The Manufacturing Belt;;;;;;;;;;;;x
 immigration_boom_baltic;Ostland Migrations;;;;;;;;;;;;x
 war_minister_boulanger;Georges Ernest Boulanger;;;;;;;;;;;;x
+war_minister_boulanger_desc;Georges Ernest Jean-Marie Boulanger was a French general and politician. As War Minister, Boulanger gained a tremendous amount of popularity. He introduced reforms for the benefit of soldiers (such as allowing soldiers to grow beards) and appealed to the French desire for revenge against Imperial Germany—in doing so, he came to be regarded as the man destined to serve that revenge earning is nickname 'Général Revanche';;;;;;;;;;;;x
 boulangisme;Revanche, Revision, Restoration - Boulangisme!;;;;;;;;;;;;x
 boulangisme_desc;Support for the General Georges Boulanger has been rising in the aftermath of his dismissal as Minister of War.;;;;;;;;;;;;x
 hundred_days_reforms;The Hundred Days Reforms;;;;;;;;;;;;x
@@ -202,3 +203,7 @@ foreign_weapons_imported;Foreign Weapons Imported;;;;;;;;;;;;;;;;;;;;x,,,,,
 foreign_weapons_imported_desc;Our country has recently imported foreign weapons and training methods to for our military.;;;;;;;;;;;;;;;;;;;;x,,,,,
 white_rajah;The White Rajahs;;;;;;;;;;;;;;;;;;;;x,,,,,
 white_rajah_desc;The White Rajahs were a dynastic monarchy of the English Brooke family, who founded and ruled the Kingdom of Sarawak, located on the island of Borneo, from 1841 to 1946. \n\nThe first ruler was an Englishman James Brooke. As a reward for helping the Sultanate of Brunei fight piracy and insurgency among the indigenous peoples, he was granted the landmass of Sarawak in 1841 and received independent kingdom status.;;;;;;;;;;;;;;;;;;;;x,,,,,
+test_irregular;Irregulars;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+test_irregular_desc;Allows contruction of Irregulars;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+la_tache_noire;La Tache Noire;;;;;;;;;;;;;;;;;;;;x,,,,,
+la_tache_noire_desc;Due to the loss of Alsace and Lorraine following defeat against her German neighbours, France developed a deep sense of bitterness, hatred and demand for revenge against Germany. Alsace-Lorraine was often depicted on French maps as a black spot on maps following its loss, hence the name "La Tache Noire";;;;;;;;;;;;;;;;;;;;;;;;;;;x

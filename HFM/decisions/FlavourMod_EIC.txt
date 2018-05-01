@@ -76,10 +76,13 @@ political_decisions = {
 			}
 
 			any_pop = {
-				limit = {
-					has_pop_culture = asian_minor
-				}
-				literacy = -0.08
+				limit = { has_pop_religion = animist }
+				literacy = -0.09
+			}
+			
+			any_pop = {
+				limit = { strata = rich }
+				literacy = 0.05
 			}
 			
 			any_country = {
@@ -137,6 +140,7 @@ political_decisions = {
 				military_reform = yes_foreign_officers
 				military_reform = yes_foreign_naval_officers
 			}
+			3263 = { trade_goods = dye }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -650,5 +654,45 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+	}
+	
+	renew_alliance_british_india = {
+		potential = {
+			ai = yes
+			tag = ENG
+			war = no
+			is_greater_power = yes
+			any_owned_province = { is_core = HND }
+			1251 = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
+				}
+			}
+			any_neighbor_country = {
+				ai = yes
+				war = no
+				NOT = { tag = PNJ }
+				capital_scope = { is_core = HND }
+				vassal_of = THIS
+				NOT = { alliance_with = THIS }
+			}
+		}
+		
+		allow = {
+			NOT = { month = 1 }
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					capital_scope = { is_core = HND }
+					vassal_of = THIS
+					NOT = { alliance_with = THIS }
+				}
+				create_alliance = THIS
+				military_access = THIS
+			}
+		}
 	}
 }

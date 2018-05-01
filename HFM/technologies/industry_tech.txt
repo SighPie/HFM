@@ -416,6 +416,10 @@ semi_automatization = {
 		coal = 0.05
 	}
 	
+	factory_goods_output = {
+		machine_parts = 0.05 
+	}
+
 	ai_chance = {
 		factor = 2
 		modifier = {
@@ -580,7 +584,7 @@ mechanized_mining = {
 	activate_building = steel_factory 
 
 	rgo_goods_output = {
-		iron = 0.2
+		iron = 0.25
 	}
 	rgo_goods_output = {
 		coal = 0.4
@@ -659,7 +663,7 @@ puddling = {
 		sulphur = 0.2
 	}
 	rgo_goods_output = {
-		iron = 0.2
+		iron = 0.25
 	}
 	rgo_size = {
 		iron = 0.2
@@ -765,7 +769,7 @@ hot_blast = {
 		coal = 0.5
 	}
 	rgo_goods_output = {
-		iron = 0.2
+		iron = 0.25
 	}
 	rgo_size = {
 		iron = 0.2

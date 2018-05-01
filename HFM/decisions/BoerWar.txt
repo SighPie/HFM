@@ -21,9 +21,9 @@ political_decisions = {
 				}
 				owner = { government = democracy }
 			}
-			small_arms = 50
-			regular_clothes = 50
-			canned_food = 30
+			small_arms = 150
+			regular_clothes = 150
+			canned_food = 150
 			add_country_modifier = {
 				name = trek_boers
 				duration = 730

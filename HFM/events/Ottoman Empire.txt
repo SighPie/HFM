@@ -661,6 +661,15 @@ country_event = {
 		random_country = {
 			limit = { 
 				exists = yes
+				tag = KWT
+				vassal_of = KWT
+			}
+			THIS = { release = KWT }
+		}
+		
+		random_country = {
+			limit = { 
+				exists = yes
 				tag = EGY
 				vassal_of = THIS
 			}
