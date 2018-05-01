@@ -481,13 +481,14 @@ political_decisions = {
 			is_greater_power = yes
 			capital = 425
 			has_global_flag = berlin_conference
+			owns = 1894
+			owns = 1784
+			NOT = { year = 1900 }
 			NOT = { has_global_flag = ai_french_west_africa }
 		}
 		
 		allow = {
 			is_disarmed = no
-			owns = 1894
-			owns = 1784
 			NOT = {
 				war_with = GER
 				war_with = GCF
