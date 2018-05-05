@@ -339,6 +339,7 @@ country_event = {
 		any_country = {
 			limit = {
 				is_culture_group = italian
+				exists = yes
 				OR = {
 					in_sphere = THIS
 					part_of_sphere = no
@@ -1023,6 +1024,7 @@ country_event = {
 			AND = {
 				ai = yes
 				tag = SAR
+				owns = 748
 				SIC = {
 					ai = yes
 					exists = yes
@@ -1031,7 +1033,6 @@ country_event = {
 					ai = yes
 					exists = yes
 				}
-				year = 1861
 			}
 		}
 		OR = {
@@ -1091,7 +1092,7 @@ country_event = {
 			exists = GER
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.01
 			tag = SAR
 			ai = yes
 		}
@@ -1118,6 +1119,11 @@ country_event = {
 		random_owned = { 
 			limit = { owner = { is_culture_group = italian accepted_culture = british } }
 			owner = { remove_accepted_culture = british }
+		}
+		
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = { war_exhaustion = -20 }
 		}
 		
 		change_tag = culture
@@ -1176,8 +1182,8 @@ country_event = {
 			country_event = { id = 96165 days = 20 }
 		}
 		
-		random_owned = { 
-			limit = { owner = { tag = SAR } }
+		random_owned = {
+			limit = { capital = 720 }
 			SAR = { all_core = { remove_core = SAR } }
 		}
 		

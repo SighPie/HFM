@@ -932,6 +932,11 @@ political_decisions = {
 						is_secondary_power = no
 					}
 				}
+				AND = {
+					tag = SAR
+					year = 1855
+					ai = yes
+				}
 			}
 			OR = {
 				is_greater_power = yes

@@ -38,8 +38,7 @@ maritime_customs_service_desc;The Chinese Maritime Customs Service was a governm
 french_colonial_integration;Colonial Policies;;;;;;;;;;;;x,,,,
 french_colonial_integration_desc;Encouraging French people to migrate to our new colonies is vital to consolidating our control of the region.;;;;;;;;;;;;x,,,,
 royal_irish_constabulary;The Royal Irish Constabulary;;;;;;;;;;;;x,,,
-mnc_testing;Microstate;;;;;;;;;;;;x,,,,
-mnc_testing_desc;A smaller population means lesser unrest and more stability! How convenient!.;;;;;;;;;;;;x,,,,
+microstate;Microstate;;;;;;;;;;;;x,,,,
 india_civil_service;Imperial Civil Service;;;;;;;;;;;;x,,,,
 india_civil_service_desc;The ICS was an administrative unit that was responsible for overseeing all government activity in the 250 districts that comprised British India.;;;;;;;;;;;;x,,,,
 the_eight_banners;The Eight Banners;;;;;;;;;;;;x,,,,
@@ -207,3 +206,7 @@ test_irregular;Irregulars;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 test_irregular_desc;Allows contruction of Irregulars;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 la_tache_noire;La Tache Noire;;;;;;;;;;;;;;;;;;;;x,,,,,
 la_tache_noire_desc;Due to the loss of Alsace and Lorraine following defeat against her German neighbours, France developed a deep sense of bitterness, hatred and demand for revenge against Germany. Alsace-Lorraine was often depicted on French maps as a black spot on maps following its loss, hence the name "La Tache Noire";;;;;;;;;;;;;;;;;;;;;;;;;;;x
+red_shirts;The Expedition of the Thousand;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+red_shirts_desc;The revolutionary leader, Giuseppe Garibaldi, has called upon the Italian people to take arms in the name of unification. A volunteer army under Garibaldi's leadership will topple the southern governments and remove the stain of the Bourbon legacy from the peninsula forever.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+troupes_de_marine;Troupes de Marine;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+troupes_de_marine_desc;The colonial expansion of the 19th century saw the extensive use of French sailors and marines serving together in South-East Asia, in the Pacific and West Africa.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,

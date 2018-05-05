@@ -3370,7 +3370,7 @@ army_professionalism = {
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 5
 			is_greater_power = yes
 			any_neighbor_country = {
 				OR = {
@@ -3409,6 +3409,16 @@ army_professionalism = {
 				tech_school = prussian_tech_school
 				tech_school = japanese_tech_school
 			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			colonial_nation = yes
+		}
+		
+		modifier = {
+			factor = 5
+			primary_culture = french
 		}
 	}
 }

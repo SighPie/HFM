@@ -35,7 +35,7 @@ portland_cement = {
 	}
 	effect = {
 		factory_goods_output = {
-			cement = 0.1
+			cement = 0.05
 		}
 	}
 }
@@ -54,14 +54,32 @@ rosendale_cement = {
 }
 
 poudre_b = {
-	limit = { electricity = 1 }
+	limit = { 
+		breech_loaded_rifles = 1
+		organic_chemistry = 1 
+	}
 	news = no
 	chance = {
-		base = 5
+		base = 3
+		modifier = {
+			factor = -10
+			NOT = { year = 1880 }
+		}
 	}
 	effect = {
 		factory_goods_output = { ammunition = 0.03 }
 		rgo_goods_output = { sulphur = 0.03 }
+		infantry = {
+			attack = 0.15
+			defence = 0.15
+		}
+		guard = {
+			attack = 0.15
+			defence = 0.15
+		}
+		army_base = {
+			supply_consumption = 0.05
+		}
 	}
 }
 
@@ -134,6 +152,7 @@ anaesthesia = {
 antitoxins = {
 	limit = {
 		medicine = 1
+		synthetic_polymers = 1
 		has_country_flag = existing_country
 	}
 	news = no

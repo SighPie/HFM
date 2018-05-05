@@ -511,3 +511,59 @@ country_event = {
 		all_core = { add_core = BOR remove_core = FRA }
 	}
 }
+
+
+#France wants to purchase Annam
+country_event = {
+	id = 999600
+	title = "EVTNAME999600"
+	desc = "EVTDESC999600"
+	picture = "administration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT99840OPTA"	
+		treasury = 100000
+		FROM = { 
+			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
+			random_owned = {
+				limit = { owner = { ai = yes NOT = { check_variable = { which = owed_cash_money value = 1 } } } }
+				owner = { set_variable = { which = owed_cash_money value = 100 } }
+			}
+			random_owned = {
+				limit = { owner = { ai = yes check_variable = { which = owed_cash_money value = 9 } } }
+				owner = { change_variable = { which = owed_cash_money value = 100 } }
+			}
+		}
+		random_owned = {
+			limit = { province_id = 1375 }
+			state_scope = { any_owned = { secede_province = FROM } }
+		}
+		
+		random_owned = {
+			limit = { province_id = 1338 }
+			FROM = {
+				any_owned = {
+					limit = { region = SIA_1355 }
+					secede_province = THIS
+				}
+			}
+		}
+		
+		relation = { 
+			who = FROM
+			value = 150
+		}
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT99840OPTB"	
+		relation = {
+			who = FROM 
+			value = -200
+		}
+		ai_chance = { factor = 0 }
+	}
+}

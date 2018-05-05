@@ -73,7 +73,6 @@ country_event = {
 			}
 			add_core = SAF
 			add_core = NAL
-			secede_province = ENG
 		}
 		2112 = {
 			any_pop = {
@@ -82,7 +81,6 @@ country_event = {
 			}
 			add_core = SAF
 			add_core = NAL
-			secede_province = ENG
 		}
 		2087 = { owner = { country_event = 98206 } }
 		ai_chance = {
@@ -100,12 +98,10 @@ country_event = {
 		2111 = {
 			add_core = SAF
 			add_core = NAL
-			secede_province = ENG
 		}
 		2112 = {
 			add_core = SAF
 			add_core = NAL
-			secede_province = ENG
 		}
 		2087 = { owner = { country_event = 98207 } }
 		any_pop = {
@@ -149,8 +145,8 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" }
-		2111 = { change_province_name = "Pietermaritzburg" }
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS  }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		2111 = { state_scope = { change_region_name = "Natal" } }
 		ai_chance = { factor = 100 }
 	}
@@ -174,8 +170,8 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" }
-		2111 = { change_province_name = "Pietermaritzburg" }
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		2111 = {
 			state_scope = {
 				change_region_name = "Natal"
@@ -204,8 +200,8 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" }
-		2111 = { change_province_name = "Pietermaritzburg" }
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		2111 = { state_scope = { change_region_name = "Natal" is_slave = yes } }
 		change_tag_no_core_switch = NAL
 		ai_chance = { factor = 0 }
@@ -253,7 +249,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 75
+			factor = 90
 		}
 	}
 	
@@ -284,7 +280,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 25
+			factor = 10
 		}
 	}
 	
@@ -333,7 +329,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		tag = ENG
+		capital_scope = { continent = europe }
 		war = no
 		owns = 2087
 		NOT = { has_country_flag = boer_accepted }
@@ -341,7 +337,7 @@ country_event = {
 		NAL = {
 			exists = yes
 			war = no
-			vassal_of = ENG
+			vassal_of = THIS
 		}
 	}
 	
@@ -390,7 +386,7 @@ country_event = {
 	option = {
 		name = "EVT98211OPTA"
 		prestige = -5
-		all_core = { remove_core = ENG }
+		all_core = { remove_core = FROM }
 		any_pop = {
 			limit = { has_pop_culture = boer }
 			consciousness = 4
@@ -405,7 +401,7 @@ country_event = {
 	option = {
 		name = "EVT98211OPTB"
 		prestige = 5
-		all_core = { remove_core = ENG }
+		all_core = { remove_core = FROM }
 		relation = { who = FROM value = -50 }
 		any_pop = {
 			limit = { has_pop_culture = zulu }

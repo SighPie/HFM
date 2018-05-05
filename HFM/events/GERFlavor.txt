@@ -369,8 +369,6 @@ country_event = {
 				set_country_flag = germany_gave_colonies
 			}
 		}
-	
-		2081 = { secede_province = THIS add_core = NMB any_pop = { literacy = -0.99 } }
 		
 		#If Zanzibar exists, Germany will release it
 		random_country = {
@@ -800,10 +798,14 @@ country_event = {
 			relation = { who = THIS value = 100 }
 		}
 		ai_chance = {
-			factor = 70
+			factor = 80
 			modifier = {
 				factor = 2
 				tag = KUK
+			}
+			modifier = {
+				factor = 0
+				FROM = { any_owned_province = { is_core = THIS } }
 			}
 		}
 	}
@@ -815,7 +817,7 @@ country_event = {
 			relation = { who = THIS value = -50 }
 		}
 		ai_chance = {
-			factor = 30
+			factor = 20
 			modifier = {
 				factor = 0.5
 				tag = KUK
@@ -825,16 +827,16 @@ country_event = {
 				government = absolute_monarchy
 			}
 			modifier = {
-				factor = 1.5
-				government = hms_government
-			}
-			modifier = {
 				factor = 0.5
 				relation = { who = GER value = 50 }
 			}
 			modifier = {
 				factor = 0
 				alliance_with = GER
+			}
+			modifier = {
+				factor = 2
+				FROM = { any_owned_province = { is_core = THIS } }
 			}
 		}
 	}

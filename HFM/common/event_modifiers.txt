@@ -426,7 +426,7 @@ the_terror = {
 
 population_resettlement = {
 	immigrant_attract = 5
-	assimilation_rate = 1
+	assimilation_rate = 2.5
 	population_growth = 0.03
 	icon = 19
 }
@@ -1523,7 +1523,7 @@ prussian_general_staff = {
 	mobilisation_economy_impact = -0.25
 	land_unit_start_experience = 10
 	supply_consumption = -0.05
-	mobilisation_size = 0.02
+	mobilisation_size = 0.05
 	icon = 15
 }
 
@@ -1622,7 +1622,7 @@ trustee_system = {
 penal_colonies = {
 	core_pop_militancy_modifier = -0.01
 	prestige = 0.01
-	icon = 9
+	icon = 17
 }
 
 ##### Economic Events #####
@@ -1721,15 +1721,15 @@ rebel_cell_discovered = {
 #### FRA - France ####
 the_french_foreign_legion = {
 	prestige = 0.01
-	mobilisation_size = 0.015
+	mobilisation_size = 0.005
 	land_unit_start_experience = 5
-	global_immigrant_attract = 0.1
-	icon = 17
+	global_immigrant_attract = 0.25
+	icon = 15
 }
 
 the_eiffel_tower = {
 	prestige = 0.05
-	icon = 15
+	icon = 7
 }
 
 rhine_crisis = {
@@ -2202,7 +2202,7 @@ disunited_country = {
 	land_organisation = -0.2
 	naval_organisation = -0.2
 	supply_consumption = -0.3
-	research_points_modifier = -0.1
+	research_points_modifier = -0.15
 	prestige = -0.7
 	icon = 8
 }
@@ -2214,6 +2214,8 @@ tewodros_ii = {
 	global_pop_militancy_modifier = 0.01
 	prestige = -0.5
 	research_points = 0.05
+	unciv_economic_modifier = -0.05
+	unciv_military_modifier = -0.15
 	icon = 15
 }
 
@@ -2223,6 +2225,8 @@ yohannes_iv = {
 	org_regain = 0.1
 	research_points = 0.1
 	global_pop_militancy_modifier = -0.01
+	unciv_economic_modifier = -0.05
+	unciv_military_modifier = -0.15
 	icon = 15
 }
 
@@ -2406,6 +2410,13 @@ republican_reforms = {
 	research_points_modifier = 0.10
 	core_pop_militancy_modifier = -0.10
 	icon = 15
+}
+
+abdulmejid_i_reforms = {
+	diplomatic_points_modifier = 0.1
+	suppression_points_modifier = 0.25
+	leadership_modifier = 0.1
+	icon = 17
 }
 
 ### Total War System ###
@@ -2885,6 +2896,7 @@ russian_army_education = {
 	education_efficiency_modifier = 0.05
 	war_exhaustion = -1.5
 	org_regain = 0.05
+	army_tech_research_bonus = 0.05
 	icon = 5
 }
 
@@ -2923,8 +2935,9 @@ notre_dame_afrique = {
 }
 
 war_minister_boulanger = {
-	mobilisation_size = 0.015
+	mobilisation_size = 0.01
 	land_unit_start_experience = 5
+	ruling_party_support = 0.05
 	icon = 17
 }
 
@@ -2954,15 +2967,18 @@ la_tache_noire = {
 	icon = 11
 }
 
+troupes_de_marine = {
+	prestige = 0.01
+	mobilisation_size = 0.005
+	naval_unit_start_experience = 0.05
+	icon = 15
+}
+
+
 ###HFM German Modifiers
 the_reichstag = {
 	prestige = 0.01
 	icon = 15
-}
-
-mnc_testing = {
-	pop_militancy_modifier = -0.2
-	pop_consciousness_modifier = -0.2
 }
 
 immigration_boom_baltic = {
@@ -3201,16 +3217,17 @@ royal_irish_constabulary = {
 india_civil_service = {
 	non_accepted_pop_militancy_modifier = -0.02
 	non_accepted_pop_consciousness_modifier = -0.02
-	administrative_efficiency_modifier = 0.05
+	administrative_efficiency_modifier = 0.025
 	influence_modifier = 0.05
 	icon = 17
 }
 
 pax_britannica = {
 	prestige = 0.01
+	navy_tech_research_bonus = 0.05
 	naval_unit_start_experience = 5
 	naval_organisation = 0.05
-	diplomatic_points_modifier = 0.20
+	diplomatic_points_modifier = 0.5
 	badboy = -0.05
 	influence_modifier = 0.05
 	supply_consumption = 0.05

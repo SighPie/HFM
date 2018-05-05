@@ -126,7 +126,7 @@ education_fully_funded = {
 		OR = {
 			AND = {
 				ai = yes
-				education_spending = 0.74
+				education_spending = 0.5
 			}
 			AND = {
 				ai = no
@@ -448,6 +448,22 @@ small_but_efficient = {
 	supply_consumption = -0.9
 }
 
+microstate = {
+	trigger = {
+		exists = yes
+		capital_scope = { continent = europe }
+		civilized = yes
+		NOT = { number_of_states = 2 }
+		NOT = { num_of_cities = 2 }
+		NOT = { total_pops = 50000 }
+		NOT = { year = 1886 }
+	}
+	icon = 9
+	core_pop_militancy_modifier = -0.2
+	core_pop_consciousness_modifier = -0.2
+	diplomatic_points_modifier = -0.6
+}
+
 sound_dues = {
 	trigger = {
 		capital_scope = { continent = europe }
@@ -592,53 +608,54 @@ new_world_war = {
 	icon = 16
 }
 
-help_ai_arc = {
+help_ai_spain = { #Uncivs
 	trigger = {
-		OR = {
-			owns = 2348
-			owns = 2172
-		}
+		civilized = no
 		ai = yes
+		NOT = { literacy = 0.1 }
+		OR = {
+			is_culture_group = south_asian
+			is_culture_group = southeast_asian
+			is_culture_group = iranian_turanian
+			is_culture_group = arab
+		}
 	}
 	icon = 10
 	tax_efficiency = 0.05
-	education_efficiency_modifier = 0.05
-}
-
-help_ai_spain = {
-	trigger = {
-		OR = {
-			capital = 487
-			capital = 521
-			capital = 2447
-			AND = { 
-				owns = 1649
-				owns = 1657
-			}
-		}
-		OR = { 
-			centralization = regionalism
-			primary_culture = japanese
-		}
-		civilized = yes
-		ai = yes
-	}
-	icon = 10
-	tax_efficiency = 0.05
-	administrative_efficiency_modifier = 0.05
-	education_efficiency_modifier = 0.15
+	education_efficiency_modifier = 0.2
 }
 
 help_ai_russia = {
 	trigger = {
-		owns = 1008
-		centralization = regionalism
+		OR = {
+			owns = 1008 #Russia
+			owns = 876 #Turkey
+			capital = 487 #Spain
+			capital = 521 #Portugal
+			capital = 2447 #Brazil
+			owns = 2379 #Argentina
+			owns = 2172 #Mexico
+			primary_culture = central_american
+			is_culture_group = south_slavic
+			primary_culture = greek
+			is_culture_group = pan_romanian
+			AND = { 
+				owns = 1649
+				owns = 1657
+				OR = {
+					centralization = regionalism
+					primary_culture = japanese
+				}
+			}
+		}
 		ai = yes
 	}
 	icon = 10
 	tax_efficiency = 0.08
+	administrative_efficiency_modifier = 0.03
 	supply_consumption = -0.05
-	education_efficiency_modifier = 0.15
+	education_efficiency_modifier = 0.2
+	war_exhaustion = -0.5
 }
 
 help_ai_usa = {
@@ -651,19 +668,6 @@ help_ai_usa = {
 	tax_efficiency = 0.05
 	supply_consumption = -0.15
 	influence_modifier = -0.05
-}
-
-help_ai_turk = {
-	trigger = {
-		owns = 876
-		centralization = regionalism
-		ai = yes
-	}
-	icon = 10
-	tax_efficiency = 0.03
-	administrative_efficiency_modifier = 0.03
-	supply_consumption = -0.05
-	education_efficiency_modifier = 0.1
 }
 
 yellow_river = {
@@ -687,6 +691,7 @@ poland_not_yet_lost = {
 		is_substate = no
 	}
 	icon = 10
+	prestige = 0.01
 	global_immigrant_attract = 1
 	core_pop_militancy_modifier = -0.01
 }
@@ -808,12 +813,11 @@ free_city = {
 			690 = { owned_by = THIS }
 			633 = { owned_by = THIS }
 		}
-		NOT = { total_pops = 75000 }
+		NOT = { total_pops = 150000 }
 	}
 	icon = 10
 	global_immigrant_attract = 0.8
 	supply_consumption = -0.05
-	
 }
 
 free_state = {
@@ -953,6 +957,7 @@ central_american_ai = {
 	}
 	supply_consumption = -0.2
 	mobilisation_size = 0.2
+	education_efficiency_modifier = 0.05
 	icon = 19
 }
 

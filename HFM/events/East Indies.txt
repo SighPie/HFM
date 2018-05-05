@@ -38,6 +38,7 @@ country_event = {
 				name = white_rajah
 				duration = -1
 			}
+			set_country_flag = missionary_activity
 		}
 	}
 

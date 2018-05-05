@@ -608,7 +608,7 @@
 	artisans = {
 		culture = asian_minor
 		religion = animist
-		size = 525
+		size = 500
 	}
 
 	soldiers = {
@@ -620,9 +620,27 @@
 	farmers = {
 		culture = asian_minor
 		religion = animist
-		size = 3125
+		size = 3000
 	}
 	
+	farmers = {
+		culture = asian_minor
+		religion = protestant
+		size = 125
+	}
+	
+	artisans = {
+		culture = asian_minor
+		religion = protestant
+		size = 25
+	}
+	
+	clergymen = {
+		culture = asian_minor
+		religion = protestant
+		size = 10
+	}
+
 	slaves = {
 		culture = asian_minor
 		religion = animist
@@ -694,7 +712,7 @@
 	artisans = {
 		culture = asian_minor
 		religion = animist
-		size = 350
+		size = 300
 	}
 
 	soldiers = {
@@ -706,13 +724,31 @@
 	farmers = {
 		culture = asian_minor
 		religion = animist
-		size = 3375
+		size = 3000
 	}
 	
 	slaves = {
 		culture = asian_minor
 		religion = animist
 		size = 2000
+	}
+	
+	farmers = {
+		culture = asian_minor
+		religion = protestant
+		size = 375
+	}
+	
+	artisans = {
+		culture = asian_minor
+		religion = protestant
+		size = 50
+	}
+	
+	clergymen = {
+		culture = asian_minor
+		religion = protestant
+		size = 10
 	}
 }
 #Api (56000/14000 POPS)

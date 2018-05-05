@@ -1,56 +1,29 @@
 1.28 Changelog
 
-#Bug Fixes
-- Fixed a bug with the Oregon Treaty event chain
-- Inner Mongolia and Manchukuo should become become the proper government type if puppeted by Japan
-- Fixed a bug where the Boer Republics weren't getting the Boer Commandos modifier
-- Fixed issue with Fuzhou province having a bugged Liferating
-- Fixed the Peace of Prague decision being unintentionally available to the player
+#Africa
+- The Natal events now secede the provinces to whoever owns Cape Town rather than the British
+- Added a decision 'Occupation of the Sierra Leone hinterland' for the British
+- Fixed a bugged decision 'Claim the Gold Coast'
+- Fixed an issue where Germany randomly gets PROV2081 without owning S-W Africa first
+- Adjusted some french overseas pops
 
 #Europe
-- Added some alternative country colours for Hungary/Germany/Austria/UK/France for different governments
-- Removed the French Growth nerf modifier, as other factors now help France reach it's historical population levels
-- France should be less likely to reject the Pact of Plombiers if it has Napoleon III, but more likely to reject it if it doesn't 
-- Added a decision 'Grondwetsherziening van $YEAR$' for the Netherlands, enacts constitutional reforms.
-- Serbia now starts as an 'Autonomous Dependency' (But still independent) of the Ottomans, in order for it to be a principality, also added a decision to proclaim the Kingdom of Serbia with Rev & Counter Rev or with all of Serbia's cores retaken from the Ottomans
-- Added new country tag 'Genoa', will only be released (& rebels) if Sardinia loses the 1st Italian War of Independence
-- 'The Statuto Albertino' is now more likely to be enacted by Sardinia
-- France now gets more bonuses if it loses the Franco-Prussian War, it'll also get a modifier to give it increased mobilization size
-- If Sardinia wins the 1st Italian War of Independence, it will now annex Parma/Lucca/Modena/Tuscany
-
-#Africa
-- Added new province event 'The Dorsland Trek' - Sends some boers to SW Africa
-- Changed decision picture for Organizing French Algeria
-- Changed the effects of Impi modifier
-- Added a cleanup decision which makes European AI return territory to Egypt if it took any in the Oriental Crisis to prevent bordergore
-- Added province event 'The White Highlands' for any European GP that owns Kenya, gives Colonial Recruitment modifier, but increases militancy for the region
-- Redone how Britain and France took most of West Africa historically, instead of the single decision that makes them get the whole region in one go arbitrarily, FRA & ENG will now have more opportunities to get a foothold, followed by a monopoly in the region.
-- All Africa decisions are disabled at the invention of The Dark Continent, so if you manage to stop the GP's from colonizing till then, they won't get the free decisions.
--- Added a new decision for France 'Appoint Louis Brière de l'Isle' - Gives free CBS against some West African AIs in Senegal and Western Mali
--- Re-enabled the 'Conakry Protectorate' decision for France
--- Added new decision 'The Kutonou Concession' for France, allows them to gain the coastal province of Cotonou
--- Added new decision 'The Libreville Protectorate' for France - Must have slavery abolished, allows you to get Libreville
--- Added a new decision 'The Royal Niger Company' - Enables the UK to get a large amount of influence in the Nigeria region, must own Lagos, costs $750,000
--- Added new decision 'Establish the Niger Coast Protectorate' for the UK - Must have the region under its influence
--- Added new decision 'Establish the Northern Nigeria Protectorate' for the UK - Must own the southern half of Nigeria
--- Added new decision 'Claim the Gold Coast' for the UK - Must own Cape Coast, Accra and Sekondi
--- Disabled the decision that gave France all its uncolonized regions, a new decision 'Occupation of the Congo Basin' has been made to replace the AI-only decision, it is available to whoever successfully colonizes Loango it grants you the regions of Gabon,Congo, Ubangi-Shari & Waddai, the Congo Conference MUST be sucessful in order for the decision to be available.
-- The German Colonial Decisions are now have higher requirements to be enacted
+- The French Revolution now selects the Open Border policy
+- Added a decision for France 'Troupes de Marine' - gives a similar bonus to the French Foreign Legion
+- 'The League of the Three Emperors' - changed requirement 'Great Wars Enabled' to Revolution & Counterrevolution
+- Russian Army Reforms now give slightly more bonuses to the AI
+- Added a decision 'Reforms of Abdulmejid I' for the Ottoman Empire, gives some bonus to military techs to stop the Ottoman AI from being so pathetic
+- Added a decision 'Reforms of Abdul Hamid II' for the Ottoman Empire, reverts the Ottoman Empire to Absolute Monarchy, gives some bonus to military techs to stop the Ottoman AI from being so pathetic.
+- Greece now starts with the basic naval techs
+- Re-added Austrian core to Gorz
 
 #Asia
-- Sakoku now gives a large CB Generation speed modifier
-- Changed the way a Taiping victory ends, the Qing will now flee to Formosa if they lose the war.
-- Added new decision - 'Establish the Karafuto Prefecture' for Japan, gives population growth bonus IF the population of Japanese Sakhalin is too low.
+- Added a decision for the owner of Saigon to purchase Annam if another great power owns it
+- Added a decision 'Ethische Politiek' for the Netherlands, lowers militancy in Indonesia, changes colonial policy to civilizing mission
+- Adjusted some pops in Indonesia
 
 #Other Changes
-- Halved the shared prestige of all Culture Inventions, Reduced Prestige Gain from the first 4 techs of Aesthetics
-- Added numerous inventions from the PDM Death by Imperialism Mod
-- Readded the GMU Archaeology decisions and events
-- Adjusted some pop promotion conditions to prevent colonial states with too few populations from becoming states too quickly
-- Added some buffs to mobilization size for South American AI countries
-- Added some restrictions to the AI passing voting reforms too quickly before the revolts of 1848
-- Pushed back 'The Dark Continent to 1895
-- Accepted pops in Colonial/Overseas provinces should be more conservative, less socialist
-- Upper class Pops (Landowner/Capitalists/Officers) are now much less likely to support communism, slightly less inclined to support socialism
--- Landowners and Capitalists will always never support communism
-- Universal Voting now reduces miltancy
+- Added some military inventions 'Gendarmerie', 'Mountain Warfare', 'Barrage Fire', 'Counter-Battery Fire'
+- Added some modifiers to make the AI more willing to take the other Naval techs
+- Most AI uncivs and weaker countries get buffs to make them more competitive
+- Adjusted some of the modifiers of the Colonial Policies

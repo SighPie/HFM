@@ -82,7 +82,7 @@ country_event = {
 			leave_alliance = THIS
 			relation = {
 				who = THIS
-				value = -80
+				value = -150
 			}
 		}
 	}

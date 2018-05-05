@@ -556,8 +556,8 @@ political_reforms = {
 	colonial_policy = {
 		next_step_only = yes
 		settlement = {
-			global_assimilation_rate = 0.05
-			global_immigrant_attract = 0.01
+			global_assimilation_rate = 0.075
+			global_immigrant_attract = 0.015
 			supply_consumption = 0.05
 			tax_efficiency = -0.03
 			non_accepted_pop_consciousness_modifier = 0.05
@@ -571,16 +571,20 @@ political_reforms = {
 		
 		exploitation = {
 			prestige = 0.1
-			tax_efficiency = 0.01
+			tax_efficiency = 0.03
+			supply_consumption = 0.05
 			non_accepted_pop_militancy_modifier = -0.05
+			navy_tech_research_bonus = 0.05
+			suppression_points_modifier = 0.25
 			administrative_multiplier = 1
 			allow = { colonial_nation = yes }
 		}
 				
 		civilizing = {
 			prestige = 0.1
-			global_assimilation_rate = 0.05
+			global_assimilation_rate = 0.1
 			education_efficiency_modifier = 0.1
+			culture_tech_research_bonus = 0.05
 			administrative_multiplier = 1
 			allow = {
 				colonial_nation = yes 
@@ -594,6 +598,9 @@ political_reforms = {
 		
 		no_colonies = {
 			allow = { colonial_nation = no }
+			supply_consumption = -0.05
+			navy_tech_research_bonus = -0.05
+			army_tech_research_bonus = 0.05
 		}
 	}
 	
@@ -605,6 +612,7 @@ political_reforms = {
 			mobilisation_size = 0.05
 			cb_generation_speed_modifier = 0.25
 			diplomatic_points_modifier = -0.05
+			suppression_points_modifier = 0.05
 			allow = {
 				has_global_flag = revolution_n_counter_researched
 				OR = {

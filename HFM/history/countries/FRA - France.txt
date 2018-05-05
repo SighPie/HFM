@@ -84,6 +84,7 @@ high_pressure_steam_engine = 1
 
 # Inventions
 #corvettes = yes
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 3

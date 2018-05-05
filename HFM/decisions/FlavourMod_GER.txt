@@ -775,7 +775,7 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = { 
+				OR = {
 					AND = { 
 						NOT = { year = 1866 }
 						NOT = { exists = ITA }

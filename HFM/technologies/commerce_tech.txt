@@ -338,7 +338,7 @@ early_classical_theory_and_critique = {
 	activate_building = lumber_mill
 	factory_input = -0.01
 	ai_chance = {
-		factor = 1
+		factor = 25
 		modifier = {
 			factor = 1.02
 			tech_school = commerce_tech_school
@@ -353,7 +353,7 @@ early_classical_theory_and_critique = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { literacy = 0.4 }
+			NOT = { literacy = 0.15 }
 		}
 	}
 }
@@ -578,7 +578,7 @@ freedom_of_trade = {
 	rgo_goods_output = { sulphur = 0.1 }
 	
 	ai_chance = {
-		factor = 11
+		factor = 15
 		modifier = {
 			factor = 1.5
 			is_greater_power = yes
@@ -604,8 +604,8 @@ freedom_of_trade = {
 			tech_school = commerce_tech_school
 		}
 		modifier = {
-			factor = 0.25
-			NOT = { literacy = 0.4 }
+			factor = 0.5
+			NOT = { literacy = 0.15 }
 		}
 	}
 }

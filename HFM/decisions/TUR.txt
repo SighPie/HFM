@@ -45,6 +45,12 @@ political_decisions = {
 				owner = { political_reform = no_slavery }
 			}
 			
+			random_owned = { limit = { owner = { conscription = four_year_draft } } owner = { political_reform = mandatory_service } }
+			random_owned = { limit = { owner = { conscription = two_year_draft } } owner = { political_reform = four_year_draft } }
+			random_owned = { limit = { owner = { conscription = one_year_draft } } owner = { political_reform = two_year_draft } }
+			random_owned = { limit = { owner = { conscription = no_draft } } owner = { political_reform = one_year_draft } }
+			
+			
 			any_pop = {
 				limit = { is_primary_culture = no }
 				militancy = -3
@@ -62,6 +68,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	hatt_i_humayun = {
@@ -223,6 +231,8 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	conquer_montenegro = {

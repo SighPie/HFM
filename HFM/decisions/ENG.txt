@@ -316,7 +316,10 @@ political_decisions = {
 					any_owned_province = {
 						OR = {
 							continent = central_africa
-							continent = east_africa
+							AND = {
+								continent = east_africa
+								NOT = { is_core = ETH }
+							}
 							continent = west_africa
 							continent = africa
 						}

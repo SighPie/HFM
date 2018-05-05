@@ -91,6 +91,7 @@ interchangeable_parts = 1
 set_country_flag = is_belgium
 
 #Inventions
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 4

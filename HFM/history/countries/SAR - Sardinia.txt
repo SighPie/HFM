@@ -88,6 +88,7 @@ basic_chemistry = 1
 high_pressure_steam_engine = 1
 
 #Inventions
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 3

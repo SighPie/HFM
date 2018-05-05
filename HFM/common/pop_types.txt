@@ -411,6 +411,25 @@ demotion_chance = {
 	}
 	
 	modifier = {
+		factor = -0.5
+		strata = rich
+		OR = { 
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
+		state_scope = { is_colonial = yes }
+	}
+	
+	modifier = {
+		factor = 0.5
+		strata = rich
+		is_accepted_culture = no
+		is_primary_culture = no
+		state_scope = { is_colonial = yes }
+		country = { colonial_policy = settlement }
+	}
+	
+	modifier = {
 		factor = -100
 		location = { NOT = { controlled_by = owner } }
 	}
@@ -1643,10 +1662,13 @@ conversion_chance = {
 	}
 	
 	modifier = {
-		factor = -0.1
+		factor = -0.15
 		country = { 
 			civilized = no 
-			NOT = { government = theocracy }
+			NOT = { 
+				government = theocracy 
+				has_country_flag = missionary_activity
+			}
 		}
 	}
 	
@@ -1674,7 +1696,7 @@ conversion_chance = {
 	}
 	
 	modifier = {
-		factor = 0.1
+		factor = 0.15
 		country = { colonial_policy = civilizing }
 		state_scope = { is_colonial = yes }
 	}
@@ -1702,6 +1724,7 @@ conversion_chance = {
 			country = { capital_scope = { pop_majority_religion = protestant } }
 			country = { capital_scope = { pop_majority_religion = catholic } }
 			country = { capital_scope = { pop_majority_religion = orthodox } }
+			country = { capital_scope = { is_culture_group = southeast_asian } }
 		}
 		OR = {
 			has_pop_religion = catholic
@@ -1714,6 +1737,19 @@ conversion_chance = {
 		factor = 0.8
 		has_pop_religion = animist
 		location = { continent = africa }
+		country = { civilized = yes }
+	}
+	
+	modifier = {
+		factor = 0.05
+		has_pop_religion = animist
+		location = { 
+			OR = {
+				continent = indochina
+				continent = east_indies
+			} 
+		}
+		state_scope = { is_colonial = yes }
 		country = { civilized = yes }
 	}
 	

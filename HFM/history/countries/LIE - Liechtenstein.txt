@@ -36,9 +36,6 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
-
-decision = LIE_testing
-
 ruling_party = SWI_conservative
 last_election = 1835.1.1
 upper_house = {

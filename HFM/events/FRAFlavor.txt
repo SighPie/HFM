@@ -1694,6 +1694,16 @@ country_event = {
 		}
 		
 		random_country = {
+			limit = { tag = TOO ai = yes civilized = no NOT = { truce_with = THIS } exists = yes num_of_cities = 2 }
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = acquire_core_state state_province_id = 1788 }
+				defender_goal = { casus_belli = conquest_any }
+				call_ally = no
+			}
+		}
+		
+		random_country = {
 			limit = { ai = yes civilized = no owns = 1791 }
 			relation = { who = THIS value = -400 }
 			1791 = { secede_province = THIS }

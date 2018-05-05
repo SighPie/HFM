@@ -231,6 +231,7 @@ political_decisions = {
 					}
 				}	
 			}
+			exists = HDJ
 			NOT = { has_country_flag = reclaim_hejaz }
 		}
 		

@@ -1225,8 +1225,12 @@ soldiers = {
 		}		
 
 		modifier = {
-			factor = 5
-			location = { is_colonial = yes }
+			factor = 10
+			everyday_needs = 0.25
+			location = { 
+				is_colonial = yes 
+				is_core = FRA
+			}
 			OR = {
 				is_accepted_culture = yes
 				is_primary_culture = yes

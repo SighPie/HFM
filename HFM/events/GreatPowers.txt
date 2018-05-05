@@ -2073,6 +2073,24 @@ country_event = {
 			}
 			PNJ = { annex_to = ENG }
 		}
+		
+		#Gaining Chitral from Afghanistan
+		random_owned = {
+			limit = {
+				is_core = CRL
+				owner = {
+					civilized = no
+					tag = AFG
+					truce_with = ENG
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = CRL }
+					secede_province = ENG
+				}
+			}
+		}
 	}
 }
 

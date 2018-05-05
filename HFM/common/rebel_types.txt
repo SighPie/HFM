@@ -30,6 +30,7 @@ reactionary_rebels = {
 		french_bourbon = absolute_monarchy
 		dominion = presidential_dictatorship
 		democracy = presidential_dictatorship
+		federal_democracy = presidential_dictatorship
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
 	}
@@ -203,6 +204,7 @@ reactionary_rebels = {
 					government = prussian_constitutionalism
 					government = absolute_monarchy
 					government = democracy
+					government = federal_democracy
 				}
 			}
 			OR = {

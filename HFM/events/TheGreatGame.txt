@@ -406,252 +406,37 @@ country_event = {
 			government = prussian_constitutionalism
 			government = hms_government
 		}
-		OR = {
-			SIN = {
-				exists = yes
-				civilized = no
-				is_vassal = no
+		AFG = {
+			exists = yes
+			civilized = no
+			is_vassal = no
+			neighbour = ENG
+			neighbour = RUS
+			OR = {
+				NOT = { has_country_flag = border_incident_RUS  }
+				RUS = { ai = yes }
+			}
+			any_owned_province = {
 				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
+					is_core = BUK
+					is_core = KHI
+					is_core = KOK
 				}
 			}
-			KAZ = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			BDK = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			KAL = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			MAK = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			AFG = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				neighbour = ENG
-				neighbour = RUS
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			KAS = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			KOK = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			KHI = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			BUK = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			PNJ = {
-				has_country_flag = ranjit_singh_dead
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
-			}
-			CRL = {
-				exists = yes
-				civilized = no
-				is_vassal = no
-				OR = {
-					NOT = { has_country_flag = border_incident_RUS  }
-					RUS = { ai = yes }
-				}
-				OR = {
-					neighbour = RUS
-					any_neighbor_country = { vassal_of = RUS }
-				}
-				NOT = {
-					has_country_modifier = border_incident
-					in_sphere = THIS
-					truce_with = THIS
-				}
+			NOT = {
+				has_country_modifier = border_incident
+				in_sphere = THIS
+				truce_with = THIS
 			}
 		}
+		nationalism_n_imperialism = 1
 		NOT = {
 			any_greater_power = { war_with = THIS }
 			has_country_flag = no_more_great_game
 			has_country_modifier = punitive_effects
 			war_policy = pacifism
 			has_global_flag = british_dismantled
-			casus_belli = SIN
-			casus_belli = KAL
-			casus_belli = MAK
 			casus_belli = AFG
-			casus_belli = KAS
-			casus_belli = KOK
-			casus_belli = KHI
-			casus_belli = BUK
-			casus_belli = PNJ
-			casus_belli = CRL
-			casus_belli = KAZ
-			casus_belli = BDK
-			war_with = SIN
-			war_with = KAL
-			war_with = MAK
-			war_with = AFG
-			war_with = KAS
-			war_with = KOK
-			war_with = KHI
-			war_with = BUK
-			war_with = CRL
-			war_with = KAZ
-			war_with = BDK
 		}
 	}
 	
@@ -662,11 +447,11 @@ country_event = {
 			ideological_thought = 1
 		}
 		modifier = {
-			factor = 0.7
+			factor = 0.5
 			state_n_government = 1
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.1
 			nationalism_n_imperialism = 1
 		}
 	}
@@ -679,26 +464,10 @@ country_event = {
 				exists = yes
 				civilized = no
 				is_vassal = no
-				OR = {
-					tag = SIN
-					tag = KAL
-					tag = MAK
-					tag = KAS
-					tag = KOK
-					tag = KHI
-					tag = BUK
-					tag = CRL
-					tag = KAZ
-					tag = BDK
-					AND = {
-						tag = AFG
-						neighbour = RUS
-						neighbour = ENG
-					}
-					AND = {
-						tag = PNJ
-						has_country_flag = ranjit_singh_dead
-					}
+				AND = {
+					tag = AFG
+					neighbour = RUS
+					neighbour = ENG
 				}
 				NOT = {
 					has_country_modifier = border_incident
@@ -710,19 +479,17 @@ country_event = {
 					neighbour = RUS
 					any_neighbor_country = { vassal_of = RUS }
 				}
+				THIS = { nationalism_n_imperialism = 1 }
 			}
 			leave_alliance = THIS
 			relation = {
 				who = THIS
 				value = -100
 			}
-			add_casus_belli = {
-				target = THIS
-				type = great_game_cb
-				months = 36
-			}
-			set_country_flag = border_incident_RUS
+			add_casus_belli = { target = THIS type = demand_concession_BC_casus_belli months = 40 }
 		}
+		set_country_flag = border_incident_RUS
+		
 		ai_chance = {
 			factor = 80
 			modifier = {

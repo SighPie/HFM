@@ -132,48 +132,49 @@ political_decisions = {
 			political_reform = appointed
 			political_reform = state_controlled
 			political_reform = underground_parties
+			political_reform = mandatory_service
 			government = absolute_monarchy	
 
 			any_pop = {
 				militancy = -1
 			
-			scaled_militancy  = {
-				ideology = reactionary
-				factor = -3
+				scaled_militancy  = {
+					ideology = reactionary
+					factor = -3
+				}
+				
+				scaled_militancy  = {
+					ideology = conservative
+					factor = -1
+				}
+				
+				scaled_consciousness  = {
+					ideology = conservative
+					factor = -2
+				}
+				
+				scaled_consciousness  = {
+					ideology = reactionary
+					factor = -4
+				}
+				
+				scaled_consciousness  = {
+					ideology = liberal
+					factor = 2
+				}
+				scaled_consciousness  = {
+					ideology = anarcho_liberal
+					factor = 4
+				}
+				scaled_consciousness  = {
+					ideology = socialist
+					factor = 4
+				}
+				scaled_consciousness  = {
+					ideology = communist
+					factor = 6
+				}
 			}
-			
-			scaled_militancy  = {
-				ideology = conservative
-				factor = -1
-			}
-			
-			scaled_consciousness  = {
-				ideology = conservative
-				factor = -2
-			}
-			
-			scaled_consciousness  = {
-				ideology = reactionary
-				factor = -4
-			}
-			
-			scaled_consciousness  = {
-				ideology = liberal
-				factor = 2
-			}
-			scaled_consciousness  = {
-				ideology = anarcho_liberal
-				factor = 4
-			}
-			scaled_consciousness  = {
-				ideology = socialist
-				factor = 4
-			}
-			scaled_consciousness  = {
-				ideology = communist
-				factor = 6
-			}
-		}
 
 			set_country_flag = the_manifesto
 		}

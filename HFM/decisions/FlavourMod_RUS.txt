@@ -25,7 +25,11 @@ political_decisions = {
 				limit = { owner = { ai = yes } }
 				owner = { 
 					activate_technology = muzzle_loaded_rifles
-					activate_technology = experimental_railroad 
+					activate_technology = breech_loaded_rifles
+					activate_technology = experimental_railroad
+					activate_technology = iron_muzzle_loaded_artillery
+					activate_technology = army_professionalism 
+					political_reform = mandatory_service
 					social_reform = low_schools
 				}
 			}
@@ -62,6 +66,7 @@ political_decisions = {
 					activate_technology = raider_group_doctrine 
 					activate_technology = steamers
 					activate_technology = iron_steamers
+					political_reform = mandatory_service
 					treasury = -50000
 				}
 			}

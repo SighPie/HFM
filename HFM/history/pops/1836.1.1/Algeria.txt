@@ -5,7 +5,7 @@
 	aristocrats = {
 		culture = french
 		religion = catholic
-		size = 100
+		size = 500
 	}
 	
 	officers = {
@@ -354,7 +354,7 @@
 	aristocrats = {
 		culture = french
 		religion = catholic
-		size = 50
+		size = 500
 	}
 
 	bureaucrats = {
@@ -384,7 +384,7 @@
 	officers = {
 		culture = french
 		religion = catholic
-		size = 100
+		size = 150
 	}
 
 	farmers = {
@@ -831,6 +831,12 @@
 #Ruled by Aljazair 1836
 #Constantine (176000/44000 POPS)
 1708 = {
+	aristocrats = {
+		culture = french
+		religion = catholic
+		size = 250
+	}
+
 	farmers = {
 		culture = french
 		religion = catholic

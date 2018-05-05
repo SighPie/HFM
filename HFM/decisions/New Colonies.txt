@@ -652,8 +652,8 @@ political_decisions = {
 				add_core = SLE
 				add_province_modifier = { name = colonial_exploitation duration = 1095 }
 			}
-			1885 = { life_rating = 20 }
-			1886 = { life_rating = 20 }
+			1885 = { life_rating = 25 }
+			1886 = { life_rating = 25 }
 			SLE = {
 				primary_culture = THIS
 				add_accepted_culture = western_nigritic

@@ -1139,16 +1139,12 @@ experimental_railroad = {
 	activate_building = railroad
 	
 	ai_chance = {
-		factor = 3
+		factor = 5
 		modifier = {
-			factor = 10
-			OR = {
-				tag = NGF
-				tag = GER
-				tag = PRU
-				tag = AUS
-				tag = KUK
-			}
+			factor = 25
+			is_culture_group = germanic
+			is_greater_power = yes
+			literacy = 0.4
 		}
 		modifier = {
 			factor = 1.1
@@ -1167,13 +1163,13 @@ experimental_railroad = {
 			}
 		}
 		modifier = {
-			factor = 6
+			factor = 15
 			is_greater_power = yes
 			year = 1845
 		}
 		modifier = {
-			factor = 2
-			literacy = 0.4
+			factor = 5
+			literacy = 0.25
 		}
 		modifier = {
 			factor = 1.02
@@ -1191,14 +1187,10 @@ early_railroad = {
 	ai_chance = {
 		factor = 5
 		modifier = {
-			factor = 10
-			OR = {
-				tag = NGF
-				tag = GER
-				tag = PRU
-				tag = AUS
-				tag = KUK
-			}
+			factor = 15
+			is_culture_group = germanic
+			is_greater_power = yes
+			literacy = 0.4
 		}
 		modifier = {
 			factor = 5

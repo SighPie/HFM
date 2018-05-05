@@ -559,3 +559,5 @@ EVTNAME2020041;The Genoese Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC2020041;Genoa had become a part of the Kingdom of Piedmont-Sardinia quite recently only after the defeat of Napoleon in the Congress of Vienna in 1815. The uprising broke out in Genoa after King Vittorio Emanuele II (succeeding his father Carlo Alberto) signed the armistice with the Austrian general Joseph Radetzky.\n\nThe Genoese, reluctant members of the Kingdom of Piedmont-Sardinia, restored an autonomous government in the ancient capital of the Republic of Genoa.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVT2020041OPTA;Bring me Alfonso La Marmora!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVT2020041OPTB;Onwards to Genoa!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME999600;$FROMCOUNTRY_ADJ$ Interests in Annam;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
+EVTDESC999600;$FROM_COUNTRY$ has offered a proposal over our colony of Annam - they are offering a sum of money to acquire the territory from us.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,

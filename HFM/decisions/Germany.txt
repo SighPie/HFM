@@ -684,7 +684,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			great_wars_enabled = yes
+			revolution_n_counterrevolution = 1
 			war = no
 			NOT = { truce_with = AUS }
 			NOT = { war_with = AUS }
@@ -730,7 +730,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			great_wars_enabled = yes
+			revolution_n_counterrevolution = 1
 			war = no
 			NOT = { truce_with = KUK }
 			NOT = { war_with = KUK }

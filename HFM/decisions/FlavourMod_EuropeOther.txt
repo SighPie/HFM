@@ -898,7 +898,7 @@ political_decisions = {
 		potential = {
 			owns = 3251
 			year = 1840
-			3251 = { NOT = { trade_goods = precious_metal } }
+			3251 = { NOT = { trade_goods = precious_goods } }
 			NOT = { has_country_flag = monte_carlo_casino }
 		}
 		

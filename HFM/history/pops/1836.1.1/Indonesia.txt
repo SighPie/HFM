@@ -2805,6 +2805,18 @@
 }
 #Luwuk (100000/25000 POPS)
 1434 = {
+	farmers = {
+		culture = moluccan
+		religion = sunni
+		size = 1000
+	}
+	
+	clergymen = {
+		culture = moluccan
+		religion = sunni
+		size = 250
+	}
+
 	aristocrats = {
 		culture = moluccan
 		religion = animist
@@ -2832,9 +2844,9 @@
 	farmers = {
 		culture = moluccan
 		religion = animist
-		size = 20000
+		size = 19000
 	}
-
+	
 	slaves = {
 		culture = moluccan
 		religion = animist
@@ -3206,19 +3218,19 @@
 	artisans = {
 		culture = moluccan
 		religion = animist
-		size = 600
+		size = 1600
 	}
 
 	soldiers = {
 		culture = moluccan
 		religion = animist
-		size = 100
+		size = 300
 	}
 
 	farmers = {
 		culture = moluccan
 		religion = animist
-		size = 12025
+		size = 42025
 	}
 
 	aristocrats = {
@@ -3236,19 +3248,19 @@
 	artisans = {
 		culture = moluccan
 		religion = sunni
-		size = 1800
+		size = 800
 	}
 
 	soldiers = {
 		culture = moluccan
 		religion = sunni
-		size = 350
+		size = 150
 	}
 
 	farmers = {
 		culture = moluccan
 		religion = sunni
-		size = 34350
+		size = 4350
 	}
 	
 	farmers = {
@@ -3865,7 +3877,13 @@
 	farmers = {
 		culture = melanesian
 		religion = animist
-		size = 7675
+		size = 6000
+	}
+	
+	farmers = {
+		culture = melanesian
+		religion = sunni
+		size = 1675
 	}
 
 	aristocrats = {
