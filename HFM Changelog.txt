@@ -6,6 +6,7 @@
 - Fixed a bugged decision 'Claim the Gold Coast'
 - Fixed an issue where Germany randomly gets PROV2081 without owning S-W Africa first
 - Adjusted some french overseas pops
+- Fixed an issue with British East Africa
 
 #Europe
 - The French Revolution now selects the Open Border policy

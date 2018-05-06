@@ -355,9 +355,8 @@ political_decisions = {
 				has_country_flag = treaty_of_heligoland_success
 				AND = {
 					owns = 2036
-					owns = 2037
-					owns = 2039
-					owns = 2048
+					owns = 2029
+					owns = 2024
 				}
 			}
 			NOT = { has_country_flag = british_east_africa }
@@ -378,7 +377,11 @@ political_decisions = {
 			2025 = { secede_province = ENG any_pop = { literacy = -0.99 } }
 			2026 = { secede_province = ENG any_pop = { literacy = -0.99 } }
 			2028 = { secede_province = ENG any_pop = { literacy = -0.99 } }
-			
+			2019 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+			2020 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+			2021 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+			2022 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+			2023 = { secede_province = THIS any_pop = { literacy = -0.99 } }
 			random_owned = {
 				limit = { NOT = { year = 1890 } }
 				1870 = { secede_province = ENG any_pop = { literacy = -0.99 } }
@@ -417,7 +420,7 @@ political_decisions = {
 			is_greater_power = yes
 			revolution_n_counterrevolution = 1
 			num_of_ports = 5
-			total_amount_of_ships = 30
+			total_amount_of_ships = 85
 			money = 35001
 			owns = 1412
 		}
@@ -452,7 +455,7 @@ political_decisions = {
 			is_greater_power = yes
 			revolution_n_counterrevolution = 1
 			num_of_ports = 5
-			total_amount_of_ships = 55
+			total_amount_of_ships = 85
 			owns = 1884
 			money = 55001
 		}

@@ -440,13 +440,7 @@ country_event = {
 	option = {
 		name = "EVT33007OPTA"
 		prestige = 5
-		set_country_flag = treaty_of_heligoland_success
-		2019 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2020 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2021 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2022 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		2023 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-		
+		set_country_flag = treaty_of_heligoland_success		
 		random_country = {
 			limit = { tag = FROM NOT = { has_country_flag = germany_gave_colonies } }
 			random_owned = {
