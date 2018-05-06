@@ -284,11 +284,40 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	ottoman_national_anthemn = {
+		picture = necip_ahmed_pasha
+		potential = {
+			tag = TUR
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			NOT = { has_country_flag = ottoman_national_anthemn }
+		}
+		
+		allow = {
+			war = no
+			state_n_government = 1
+		}
+		
+		effect = {
+			set_country_flag = ottoman_national_anthemn	
+			plurality = 1
+			any_pop = {
+				limit = { is_primary_culture = yes }
+				consciousness = -1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 	reforms_of_abdul_hamid_ii = {
 		picture = abdul_hamid_ii
 		potential = {
 			tag = TUR
-			#year = 1880
+			year = 1880
 			is_disarmed = no
 			OR = {
 				government = absolute_monarchy

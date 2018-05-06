@@ -468,9 +468,18 @@ political_decisions = {
 	garibaldi_redshirts = {
 	picture = garibaldi_redshirts
 		potential = {
-			tag = SAR
+			OR = {
+				tag = SAR
+				tag = ITA
+			}
+			OR = {
+				NOT = { exists = ITA }
+				AND = {
+					tag = ITA
+					exists = SIC
+				}
+			}
 			NOT = {
-				exists = ITA
 				has_global_flag = garibaldi_redshirts
 				has_global_flag = italian_call_to_union
 			}
@@ -517,7 +526,7 @@ political_decisions = {
 				}
 				add_country_modifier = {
 					name = red_shirts
-					duration = 720
+					duration = 1825
 				}
 				prestige = -5
 			}

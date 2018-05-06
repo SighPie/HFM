@@ -584,7 +584,7 @@ political_decisions = {
 			KTH = { all_core = { add_core = YEM remove_core = KTH } }
 			MHR = { all_core = { add_core = YEM remove_core = MHR } }
 			1412 = { remove_core = NYE }
-			random_owned = { 
+			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
 					any_owned = { limit = { is_core = YEM } secede_province = YEM }
@@ -595,9 +595,13 @@ political_decisions = {
 						capital = 1176
 						money = 10000
 						research_points = 6000
-						government = absolute_monarchy
+						government = colonial_company
 						1412 = { secede_province = THIS }
 						tech_school = unciv_tech_school
+						military_reform = yes_foreign_weapons
+						military_reform = yes_foreign_officers
+						military_reform = yes_foreign_naval_officers
+						military_reform = yes_foreign_artillery
 					}
 				}
 			}

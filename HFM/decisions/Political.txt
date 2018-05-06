@@ -1918,11 +1918,6 @@ political_decisions = {
 					is_capital = yes
 					NOT = { life_rating = 38 }
 				}
-				625 = { #Prague
-					owned_by = THIS
-					is_capital = yes
-					NOT = { life_rating = 38 }
-				}
 				372 = { #Copenhagen
 					owned_by = THIS
 					is_capital = yes
@@ -1982,7 +1977,11 @@ political_decisions = {
 			war = no
 			money = 10000
 			state_n_government = 1
-			central_bank_money_bill_printing = 1
+			OR = { 
+				central_bank_money_bill_printing = 1
+				iron_railroad = 1
+				invention = bessemer_steel
+			}
 			capital_scope = { has_building = railroad }
 		}
 		
@@ -2001,7 +2000,6 @@ political_decisions = {
 						province_id = 771
 						province_id = 768
 						province_id = 633
-						province_id = 625
 						province_id = 372
 						province_id = 375
 						province_id = 387

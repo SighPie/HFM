@@ -1319,46 +1319,46 @@ political_decisions = {
 	}
 
 	
-	invite_greece_to_YUG = {
-		picture = form_yugoslavia
-		potential = {
-			tag = YUG
-			GRE = {
-				exists = yes
-				NOT = {
-					has_country_flag = greece_has_got_a_brand_new_bag
-					has_country_flag = not_join_yugoslavia
-					all_core = { owned_by = GRE }
-				}
-			}
-			NOT = { has_country_flag = invited_greeks_to_YUG }
-		}
+	#invite_greece_to_YUG = {
+		#picture = form_yugoslavia
+		#potential = {
+			#tag = YUG
+			#GRE = {
+				#exists = yes
+				#NOT = {
+					#has_country_flag = greece_has_got_a_brand_new_bag
+					#has_country_flag = not_join_yugoslavia
+					#all_core = { owned_by = GRE }
+				#}
+			#}
+			#NOT = { has_country_flag = invited_greeks_to_YUG }
+		#}
 		
-		allow = {
-			war = no
-			is_greater_power = yes
-			revolution_n_counterrevolution = 1
-			GRE = {
-				war = no
-				neighbour = YUG
-				NOT = { truce_with = THIS }
-				OR = {
-					is_vassal = no
-					vassal_of = THIS
-				}
-				in_sphere = THIS
-			}	
-		}
+		#allow = {
+			#war = no
+			#is_greater_power = yes
+			#revolution_n_counterrevolution = 1
+			#GRE = {
+				#war = no
+				#neighbour = YUG
+				#NOT = { truce_with = THIS }
+				#OR = {
+					#is_vassal = no
+					#vassal_of = THIS
+				#}
+				#in_sphere = THIS
+			#}	
+		#}
 		
-		effect = {
-			set_country_flag = invited_greeks_to_YUG
-			GRE = { country_event = 11120 }
-		}
+		#effect = {
+			#set_country_flag = invited_greeks_to_YUG
+			#GRE = { country_event = 11120 }
+		#}
 		
-		ai_will_do = {
-			factor = 1
-		}
-	}
+		#ai_will_do = {
+			#factor = 1
+		#}
+	#}
 	
 	embrace_bosnians_YUG = {
 		picture = embrace_minority
@@ -1446,48 +1446,48 @@ political_decisions = {
 		}
 	}
 	
-	embrace_greeks_YUG = {
-		picture = embrace_minority
-		potential = {
-			tag = YUG
-			any_owned_province = { culture = greek }
-			NOT = {
-				primary_culture = greek
-				accepted_culture = greek
-			}
-		}
+	#embrace_greeks_YUG = {
+		#picture = embrace_minority
+		#potential = {
+			#tag = YUG
+			#any_owned_province = { culture = greek }
+			#NOT = {
+				#primary_culture = greek
+				#accepted_culture = greek
+			#}
+		#}
 		
-		allow = {
-			prestige = 50
-			revolution_n_counterrevolution = 1
-			social_science = 1
-			psychoanalysis = 1
-			NOT = {
-				any_owned_province = {
-					culture = greek
-					average_militancy = 2
-				}
-			}
-		}
+		#allow = {
+			#prestige = 50
+			#revolution_n_counterrevolution = 1
+			#social_science = 1
+			#psychoanalysis = 1
+			#NOT = {
+				#any_owned_province = {
+					#culture = greek
+					#average_militancy = 2
+				#}
+			#}
+		#}
 		
-		effect = {
-			add_accepted_culture = greek
-			prestige = -25
-			any_pop = {
-				limit = { has_pop_culture = greek }
-				consciousness = -4
-				militancy = -4
-			}
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
-				consciousness = 4
-				militancy = 4
-			}
-		}
-	}
+		#effect = {
+			#add_accepted_culture = greek
+			#prestige = -25
+			#any_pop = {
+				#limit = { has_pop_culture = greek }
+				#consciousness = -4
+				#militancy = -4
+			#}
+			#any_pop = {
+				#limit = {
+					#is_primary_culture = no
+					#is_accepted_culture = no
+				#}
+				#consciousness = 4
+				#militancy = 4
+			#}
+		#}
+	#}
 	
 	embrace_albanians_YUG = {
 		picture = embrace_minority
@@ -1885,56 +1885,43 @@ political_decisions = {
 		}
 	}
 	
-	end_of_yugoslavia_greece = {
-		picture = form_yugoslavia
-		potential = {
-			tag = YUG
-			NOT = {
-				exists = GRE
-				any_owned_province = {
-					NOT = {
-						is_core = GRE
-					}
-				}
-			}
-		}
+	#end_of_yugoslavia_greece = {
+		#picture = form_yugoslavia
+		#potential = {
+			#tag = YUG
+			#NOT = { exists = GRE any_owned_province = { NOT = { is_core = GRE } } }
+		#}
 
-		allow = {
-			war = no
-			NOT = {
-				any_owned_province = {
-					NOT = {
-						is_core = GRE
-					}
-				}
-			}
-		}
+		#allow = {
+			#war = no
+			#NOT = { any_owned_province = { NOT = { is_core = GRE } } }
+		#}
 
-		effect = {
-			random_owned = {
-				limit = { province_id = 809 }
-				owner = { capital = 809 }
-			}
-			prestige = 5
-			primary_culture = greek
-			remove_accepted_culture = croat
-			remove_accepted_culture = slovene
-			remove_accepted_culture = bosniak
-			remove_accepted_culture = albanian
-			remove_accepted_culture = serb
-			remove_accepted_culture = bulgarian
-			all_core = { remove_core = YUG }
-			change_tag = BUL
-			any_pop = {
-				limit = { has_pop_culture = bulgarian }
-				militancy = -4
-			}
-		}
+		#effect = {
+			#random_owned = {
+				#limit = { province_id = 809 }
+				#owner = { capital = 809 }
+			#}
+			#prestige = 5
+			#primary_culture = greek
+			#remove_accepted_culture = croat
+			#remove_accepted_culture = slovene
+			#remove_accepted_culture = bosniak
+			#remove_accepted_culture = albanian
+			#remove_accepted_culture = serb
+			#remove_accepted_culture = bulgarian
+			#all_core = { remove_core = YUG }
+			#change_tag = BUL
+			#any_pop = {
+				#limit = { has_pop_culture = bulgarian }
+				#militancy = -4
+			#}
+		#}
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
+		#ai_will_do = {
+			#factor = 1
+		#}
+	#}
 	
 	bulgaria_in_yugoslavia = {
 		picture = map_balkans
@@ -2186,10 +2173,13 @@ political_decisions = {
 		allow = {
 			war = no
 			invention = manifest_destiny
-			private_bank_money_bill_printing = 1
-			stock_exchange = 1
+			OR = { 
+				private_bank_money_bill_printing = 1
+				stock_exchange = 1
+				nationalism_n_imperialism = 1
+			}
 			809 = { has_building = railroad }
-			money = 10000
+			money = 10001
 		}
 		
 		effect = {
@@ -2201,6 +2191,17 @@ political_decisions = {
 			809 = {
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }
+			}
+			random_owned = {
+				limit = { owner = { ai = yes } }
+				owner = { 
+					activate_technology = muzzle_loaded_rifles
+					activate_technology = military_staff_system
+					activate_technology = iron_muzzle_loaded_artillery
+					activate_technology = army_professionalism 
+					activate_technology = military_plans
+					activate_technology = breech_loaded_rifles
+				}
 			}
 		}
 		ai_will_do = { factor = 1 }

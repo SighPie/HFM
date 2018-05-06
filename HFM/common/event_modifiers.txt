@@ -2390,6 +2390,7 @@ king_cotton = {
 
 ### Ottomanism
 ottoman_oppression = {
+	prestige = -0.15
 	mobilisation_size = -0.02
 	land_organisation = -0.05
 	global_assimilation_rate = -0.2

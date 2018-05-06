@@ -120,6 +120,7 @@ political_decisions = {
 						tag = GMB
 						tag = SLE
 						tag = SGP
+						tag = YEM
 					}
 					vassal_of = ENG
 				}
@@ -346,6 +347,7 @@ political_decisions = {
 						tag = WAL
 						tag = MOL
 						tag = SER
+						tag = CRE
 					}
 					vassal_of = TUR
 				}

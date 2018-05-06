@@ -1183,7 +1183,7 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { capital = 720 }
+			limit = { owner = { capital = 720 } }
 			SAR = { all_core = { remove_core = SAR } }
 		}
 		

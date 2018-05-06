@@ -34,7 +34,7 @@ political_decisions = {
 		allow = {
 			plurality = 40
 			OR = {
-				prestige = 40
+				prestige = 20
 				state_n_government = 1
 			}
 		}
@@ -46,6 +46,7 @@ political_decisions = {
 				limit = { owner = { political_parties = underground_parties } }
 				owner = { political_reform = harassment }
 			}
+			prestige = 5
 			government = prussian_constitutionalism
 			any_pop = { militancy = -2 }
 		}

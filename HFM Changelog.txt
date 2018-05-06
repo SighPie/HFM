@@ -8,6 +8,10 @@
 - Adjusted some french overseas pops
 - Fixed an issue with British East Africa
 
+#Middle East
+- Adjusted some of the Yemeni States flags
+- The Aden Protectorate now turns Yemen into a Autonomous Dependency, will now use the Aden Colony flag, now called 'The Aden Protectorate'
+
 #Europe
 - The French Revolution now selects the Open Border policy
 - Added a decision for France 'Troupes de Marine' - gives a similar bonus to the French Foreign Legion
@@ -17,6 +21,8 @@
 - Added a decision 'Reforms of Abdul Hamid II' for the Ottoman Empire, reverts the Ottoman Empire to Absolute Monarchy, gives some bonus to military techs to stop the Ottoman AI from being so pathetic.
 - Greece now starts with the basic naval techs
 - Re-added Austrian core to Gorz
+- Removed Prague from the Capital Renovation decision, added more ways to enact the decision
+- Added event 'The Cretan Revolt'
 
 #Asia
 - Added a decision for the owner of Saigon to purchase Annam if another great power owns it

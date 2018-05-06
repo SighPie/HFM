@@ -1161,6 +1161,12 @@ country_event = {
 			}
 			secede_province = CRE
 		}
+		CRE = {
+			add_country_modifier = {
+				name = nationalist_balkans
+				duration = -1
+			}
+		}
 	}
 }
 
