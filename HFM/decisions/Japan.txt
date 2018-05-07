@@ -1670,12 +1670,13 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
+		
 	establish_the_kaitakushi = {
 		picture = kaitakushi
 		potential = {
 			primary_culture = japanese
 			1643 = { NOT = { life_rating = 25 } }
+			NOT = { has_country_flag = establish_the_kaitakushi }
 		}
 		
 		allow = {
@@ -1717,40 +1718,28 @@ political_decisions = {
 			1643 = { change_province_name = "Sapporo" life_rating = 25 }
 			1644 = { change_province_name = "Nemuro" life_rating = 25 }
 			random_owned = {
-				limit = { NOT = { exists = EZO } }
+				limit = { NOT = { exists = EZO } owner = { ai = yes } }
 				1642 = { state_scope = { any_owned = { secede_province = UTI } } }
 				THIS = { inherit = UTI }
 			}
 			random_owned = {
 				limit = {
+					owner = { ai = yes }
 					province_id = 1087
 					is_colonial = no
 				}
 				1087 = { secede_province = UTI }
 				THIS = { inherit = UTI }
 			}
-			1642 = {
-				state_scope = { 
-					change_region_name = "Hokkaido"
-					any_owned = { 
-						add_province_modifier = { name = population_resettlement duration = 10950 } 
-						add_province_modifier = { name = baby_boom duration = 5475 }
-						add_province_modifier = { name = plantation duration = -1 }
-					}
-					any_pop = {
-						limit = { type = bureaucrats }
-						reduce_pop = 0
-					}
-				}
-			}
 			random_owned = {
 				limit = {
+					owner = { ai = yes }
 					province_id = 1087
 					is_colonial = yes
 				}
 				1087 = { 
-					add_province_modifier = { name = population_resettlement duration = 10950 } 
-					add_province_modifier = { name = baby_boom duration = 3650 }
+					add_province_modifier = { name = population_resettlement duration = 1825 } 
+					add_province_modifier = { name = baby_boom duration = 1825 }
 					add_province_modifier = { name = plantation duration = -1 }
 					any_pop = {
 						limit = { type = bureaucrats }
@@ -1758,7 +1747,36 @@ political_decisions = {
 					}
 				}
 			}
-			
+			random_owned = {
+				limit = { owner = { ai = yes } }
+				1642 = {
+					state_scope = { 
+						change_region_name = "Hokkaido"
+						any_owned = { 
+							add_province_modifier = { name = population_resettlement duration = 3650 } 
+							add_province_modifier = { name = baby_boom duration = 1825 }
+							add_province_modifier = { name = plantation duration = -1 }
+						}
+						any_pop = {
+							limit = { type = bureaucrats }
+							reduce_pop = 0
+						}
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { ai = no } }
+				1642 = {
+					state_scope = { 
+						change_region_name = "Hokkaido"
+						any_owned = { 
+							add_province_modifier = { name = population_resettlement duration = 3650 } 
+							add_province_modifier = { name = baby_boom duration = 3650 }
+							add_province_modifier = { name = plantation duration = -1 }
+						}
+					}
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

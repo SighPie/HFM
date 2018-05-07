@@ -1,5 +1,8 @@
 1.28 Changelog
 
+#Bugfixes
+- Fixed some issues with Russian and Japanese settlers in Hokkaido and Sakhalin
+
 #Africa
 - The Natal events now secede the provinces to whoever owns Cape Town rather than the British
 - Added a decision 'Occupation of the Sierra Leone hinterland' for the British

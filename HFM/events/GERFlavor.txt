@@ -475,11 +475,13 @@ country_event = {
 			add_core = FROM
 			change_province_name = "Helgoland"
 		}
+		
 		TNZ = { government = colonial_company }
-		random_owned = {
-			limit = { province_id = 2081 2082 = { owned_by = FROM } } 
-			owner = { 2081 = { secede_province = FROM add_core = NMB } }
-		}
+		
+		#random_owned = {
+			#limit = { province_id = 2081 2082 = { owned_by = FROM } } 
+			#owner = { 2081 = { secede_province = FROM add_core = NMB } }
+		#}
 		
 		relation = { who = FROM value = 25 }
 		set_country_flag = has_questioned_heligoland

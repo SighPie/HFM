@@ -284,21 +284,33 @@ political_decisions = {
 				}
 				consciousness = 1
 			}
-			any_pop = {
-				limit = { 
-					culture = british
-					type = bureaucrats
-					location = { is_core = HND }
+			random_owned = {
+				limit = { owner = { NOT = { capital_scope = { continent = europe } } } }
+				owner = {
+					any_pop = {
+						limit = { 
+							culture = british
+							type = bureaucrats
+							location = { is_core = HND }
+						}
+						reduce_pop = 2
+					}
+					any_pop = {
+						limit = { 
+							culture = anglo_indian
+							type = bureaucrats
+							location = { is_core = HND }
+						}
+						reduce_pop = 2.5
+					}
 				}
-				reduce_pop = 2
 			}
 			any_pop = {
 				limit = { 
 					culture = anglo_indian
-					type = bureaucrats
 					location = { is_core = HND }
 				}
-				reduce_pop = 2.5
+				reduce_pop = 1.25
 			}
 		}
 		

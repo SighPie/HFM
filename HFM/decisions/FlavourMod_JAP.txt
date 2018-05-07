@@ -394,7 +394,7 @@ political_decisions = {
 			OR = { 
 				AND = { 
 					owns = 1087
-					1087 = { NOT = { total_pops = 75000 } is_colonial = no}
+					1087 = { NOT = { total_pops = 75000 } is_colonial = no }
 				}
 				AND = { 
 					owns = 1086
@@ -425,8 +425,8 @@ political_decisions = {
 					NOT = { total_pops = 55000 }
 				}
 				1087 = {
-					add_province_modifier = { name = population_resettlement duration = 1825 } 
-					add_province_modifier = { name = baby_boom duration = 1825 }
+					add_province_modifier = { name = population_resettlement duration = 720 } 
+					add_province_modifier = { name = baby_boom duration = 720 }
 				}
 			}
 			
@@ -438,6 +438,8 @@ political_decisions = {
 				1086 = { secede_province = UTI }
 				THIS = { inherit = UTI }
 			}
+
+						
 			random_owned = {
 				limit = {
 					province_id = 1086
@@ -455,16 +457,13 @@ political_decisions = {
 					}
 				}
 			}
+			
 			random_owned = {
 				limit = {
 					province_id = 1086
-					is_colonial = yes
 					owner = { ai = no }
 				}
-				1086 = {
-					add_province_modifier = { name = population_resettlement duration = 1825 } 
-					add_province_modifier = { name = baby_boom duration = 1825 }
-				}
+				1086 = { add_province_modifier = { name = population_resettlement duration = 1095 } }
 			}
 		}
 		

@@ -320,7 +320,10 @@ political_decisions = {
 								continent = east_africa
 								NOT = { is_core = ETH }
 							}
-							continent = west_africa
+							AND = {
+								continent = west_africa
+								NOT = { is_core = CMR }
+							}
 							continent = africa
 						}
 						is_colonial = yes
@@ -335,8 +338,14 @@ political_decisions = {
 					any_owned_province = {
 						OR = {
 							continent = central_africa
-							continent = east_africa
-							continent = west_africa
+							AND = {
+								continent = east_africa
+								NOT = { is_core = ETH }
+							}
+							AND = {
+								continent = west_africa
+								NOT = { is_core = CMR }
+							}
 							continent = africa
 						}
 						is_colonial = yes

@@ -462,7 +462,6 @@ political_decisions = {
 			NOT = { has_global_flag = landship_committee }
 			tag = ENG
 			owns = 284
-			ai = no
 			year = 1900
 			invention = tank_experiments
 			NOT = { 284 = { state_scope = { has_building = barrel_factory } } }
