@@ -655,6 +655,7 @@ help_ai_russia = {
 	administrative_efficiency_modifier = 0.03
 	supply_consumption = -0.05
 	education_efficiency_modifier = 0.2
+	mobilisation_size = 0.01
 	war_exhaustion = -0.5
 }
 
@@ -668,6 +669,7 @@ help_ai_usa = {
 	tax_efficiency = 0.05
 	supply_consumption = -0.15
 	influence_modifier = -0.05
+	mobilisation_size = 0.01
 }
 
 yellow_river = {

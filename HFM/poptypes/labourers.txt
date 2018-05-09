@@ -877,8 +877,8 @@ serfs = {
 			location = { 
 				is_colonial = yes 
 				OR = {
-					is_core = TKG
-					is_core = JAP
+					state_id = 1086
+					state_id = 1643
 				}
 				culture = japanese
 			}

@@ -97,7 +97,7 @@ promotion_chance = {
 	}
 	
 	modifier = {
-		factor = 0.1
+		factor = 0.15
 		OR = {
 			is_primary_culture = yes
 			is_accepted_culture = yes
@@ -107,6 +107,33 @@ promotion_chance = {
 			total_pops = 55000
 		}
 		country = { colonial_policy = settlement }
+	}
+	
+	
+	modifier = {
+		factor = -0.1
+		not = { culture = this }
+	}
+	
+	modifier = {
+		factor = -0.1
+		country = { 
+			OR = {
+				slavery = yes_slavery 
+				slavery = freedom_of_womb
+				debt_law = serfdom
+			}
+		}
+	}
+	
+	modifier = {
+		factor = -0.05
+		state_scope = { is_slave = yes }
+	}
+	
+	modifier = {
+		factor = -100
+		location = { NOT = { controlled_by = owner } }
 	}
 	
 	modifier = {
@@ -195,27 +222,23 @@ promotion_chance = {
 	}
 	
 	modifier = {
-		factor = -0.1
-		not = { culture = this }
-	}
-	
-	modifier = {
-		factor = -0.1
-		country = { 
-			OR = {
-				slavery = yes_slavery 
-				slavery = freedom_of_womb
-				debt_law = serfdom
+		factor = 0.5
+		strata = poor
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
+		location = { 
+			OR = { 
+				state_id = 1086
+				state_id = 1643
 			}
 		}
-	}
-	modifier = {
-		factor = -0.05
-		state_scope = { is_slave = yes }
-	}
-	modifier = {
-		factor = -100
-		location = { NOT = { controlled_by = owner } }
+		state_scope = { 
+			is_colonial = yes 
+			total_pops = 155000
+		}
+		country = { colonial_policy = settlement }
 	}
 	
 	modifier = {
@@ -1622,10 +1645,9 @@ assimilation_chance = {
 	#}
 	
 	modifier = {
-		factor = 0.5
+		factor = 1.0
 		has_pop_culture = ainu
 		country = { primary_culture = japanese }
-		year = 1890
 	}
 	
 	modifier = {
@@ -1788,6 +1810,13 @@ conversion_chance = {
 		state_scope = { is_colonial = yes }
 		country = { civilized = yes }
 	}
+	
+	modifier = {
+		factor = 1.5
+		has_pop_culture = ainu
+		country = { primary_culture = japanese }
+	}
+	
 	
 	modifier = {
 		factor = 0.1

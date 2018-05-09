@@ -401,14 +401,12 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				466 = { 
-					NOT = { is_core = ITA }
-				}
+				466 = { NOT = { is_core = ITA } }
 			}
 			
 			modifier = {
 				factor = 0
-				badboy = 0.5
+				badboy = 0.8
 			}
 		}
 	}

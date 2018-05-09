@@ -1134,6 +1134,46 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	civilize_ai_countries = {
+		picture = "reichstag"
+		potential = { 
+			ai = yes
+			civilized = no
+			year = 1905
+			OR = {
+				tag = ETH
+				NOT = {
+					capital_scope = { continent = africa } 
+					capital_scope = { continent = west_africa } 
+					capital_scope = { continent = central_africa }
+					capital_scope = { continent = east_africa } 
+					capital_scope = { continent = south_west_africa }
+				}
+				AND = {
+					OR = {
+						capital_scope = { continent = africa } 
+						capital_scope = { continent = west_africa } 
+						capital_scope = { continent = central_africa }
+						capital_scope = { continent = east_africa } 
+						capital_scope = { continent = south_west_africa }
+					}
+					is_vassal = yes
+				}
+			}
+			NOT = { has_country_flag = civilize_ai_countries }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			civilized = yes
+			country_event = 90910
+			set_country_flag = civilize_ai_countries
+		}
+	}	
 
 	#test_end_really_long_wars = {
 		#picture = "reichstag"

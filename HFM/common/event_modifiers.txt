@@ -427,7 +427,7 @@ the_terror = {
 population_resettlement = {
 	immigrant_attract = 5
 	assimilation_rate = 2.5
-	population_growth = 0.03
+	population_growth = 0.02
 	icon = 19
 }
 
@@ -1984,7 +1984,7 @@ holy_city = {
 
 ### China ###
 boxer_rebellion = {
-	pop_militancy_modifier = 0.1
+	pop_militancy_modifier = 0.15
 	local_rgo_output = -0.25
 	immigrant_attract = -0.25
 	immigrant_push = 0.75
@@ -2001,7 +2001,7 @@ boxer_presence = {
 }
 
 boxer_agitation = {
-	pop_militancy_modifier = 0.2
+	pop_militancy_modifier = 0.25
 	local_RGO_throughput = -0.25
 	immigrant_attract = -0.25
 	immigrant_push = 0.5
@@ -2034,32 +2034,32 @@ drive_to_reunify = {
 }
 
 the_female_shortage = {
-	global_pop_consciousness_modifier = 0.15
-	global_pop_militancy_modifier = 0.04
+	global_pop_consciousness_modifier = 0.25
+	global_pop_militancy_modifier = 0.1 
 	global_population_growth = -0.001
 	icon = 4
 }
 
 christian_pamphlets = {
-	pop_consciousness_modifier = 0.2
+	pop_consciousness_modifier = 0.3
 	pop_militancy_modifier = 0.1
 	icon = 20
 }
 
 christian_repression = {
 	pop_consciousness_modifier = -0.1
-	pop_militancy_modifier = 0.2
+	pop_militancy_modifier = 0.35
 	icon = 20
 }
 
 anti_manchu_sentiment = {
 	pop_consciousness_modifier = 0.1
-	pop_militancy_modifier = 0.2
+	pop_militancy_modifier = 0.35
 	icon = 18
 }
 
 chinese_floods = {
-	pop_militancy_modifier = 0.05
+	pop_militancy_modifier = 0.1
 	local_RGO_throughput = -0.50
 	immigrant_attract = -0.25
 	immigrant_push = 0.75

@@ -1753,13 +1753,13 @@ political_decisions = {
 					state_scope = { 
 						change_region_name = "Hokkaido"
 						any_owned = { 
-							add_province_modifier = { name = population_resettlement duration = 3650 } 
+							add_province_modifier = { name = population_resettlement duration = 1825 } 
 							add_province_modifier = { name = baby_boom duration = 1825 }
 							add_province_modifier = { name = plantation duration = -1 }
 						}
 						any_pop = {
 							limit = { type = bureaucrats }
-							reduce_pop = 0
+							reduce_pop = 0.1
 						}
 					}
 				}

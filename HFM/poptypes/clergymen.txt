@@ -829,8 +829,8 @@ promote_to =
 			location = { 
 				is_colonial = yes 
 				OR = {
-					is_core = TKG
-					is_core = JAP
+					state_id = 1086
+					state_id = 1643
 				}
 				total_pops = 125000
 				culture = japanese
