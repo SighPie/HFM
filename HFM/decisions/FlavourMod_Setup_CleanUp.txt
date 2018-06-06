@@ -204,9 +204,12 @@ political_decisions = {
 					war = yes
 					EIC = { exists = yes war = no }
 				}
-				MUG = {
-					war_with = ENG
-					NOT = { war_with = EIC }
+				AND = {
+					war_with = MUG
+					EIC = {
+						exists = yes
+						NOT = { war_with = MUG }
+					}
 				}
 			}
 		}
