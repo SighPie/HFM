@@ -280,6 +280,7 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = greek_rename_s_macedonia
+			clr_global_flag = serbian_rename_s_macedonia
 			prestige = 2
 			805 = {
 				change_province_name = "Thessaloníki" 
@@ -298,7 +299,10 @@ political_decisions = {
 		potential = {
 			primary_culture = turkish
 			owns = 821
-			has_global_flag = greek_rename_s_macedonia
+			OR = {
+				has_global_flag = greek_rename_s_macedonia
+				has_global_flag = serbian_rename_s_macedonia
+			}
 		}
 		
 		allow = {
@@ -307,6 +311,7 @@ political_decisions = {
 		
 		effect = {
 			clr_global_flag = greek_rename_s_macedonia
+			clr_global_flag = serbian_rename_s_macedonia
 			805 = {
 				change_province_name = "Selanik" 
 				state_scope = {
@@ -315,6 +320,35 @@ political_decisions = {
 			}
 			820 = { change_province_name = "Gerebena" }
 			821 = { change_province_name = "Vodina" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_s_macedonia = {
+		picture = greater_serbia
+		potential = {
+			primary_culture = serb
+			owns = 821
+			NOT = { has_global_flag = serbian_rename_s_macedonia }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_global_flag = greek_rename_s_macedonia
+			set_global_flag = serbian_rename_s_macedonia
+			prestige = 2
+			805 = {
+				change_province_name = "Solun" 
+				state_scope = {
+					change_region_name = "Primorska Makedonija"
+				}
+			}
+			820 = { change_province_name = "Grevena" }
+			821 = { change_province_name = "Edesa" }
+			822 = { change_province_name = "Hilandar" }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -464,7 +498,7 @@ political_decisions = {
 	}
 	
 	serbian_rename_n_macedonia = {
-		picture = gtfo
+		picture = greater_serbia
 		potential = {
 			primary_culture = serb
 			owns = 806
@@ -482,7 +516,7 @@ political_decisions = {
 			806 = {
 				change_province_name = "Skoplje" 
 				state_scope = {
-					change_region_name = "Vardar Macedonia"
+					change_region_name = "Vardarska Makedonija"
 				}
 			}
 			807 = { change_province_name = "Bitolj" }
@@ -520,6 +554,58 @@ political_decisions = {
 			}
 			807 = { change_province_name = "Manastir" }
 			1780 = { change_province_name = "Debre" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	serbian_rename_albania = {
+		picture = greater_serbia
+		potential = {
+			primary_culture = serb
+			owns = 850
+			NOT = { has_global_flag = serbian_rename_albania }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = serbian_rename_albania
+			850 = {
+				change_province_name = "Skadar" 
+				state_scope = {
+					change_region_name = "Dracki Okrug"
+				}
+			}
+			851 = { change_province_name = "Drac" }
+			prestige = 2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	muslim_rename_albania = {
+		picture = gtfo
+		potential = {
+			NOT = { primary_culture = serb }
+			owns = 850
+			has_global_flag = serbian_rename_albania
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_global_flag = serbian_rename_albania
+			850 = {
+				change_province_name = "Shkoder" 
+				state_scope = {
+					change_region_name = "Albania"
+				}
+			}
+			851 = { change_province_name = "Durres" }
+			prestige = 2
 		}
 		ai_will_do = { factor = 1 }
 	}
