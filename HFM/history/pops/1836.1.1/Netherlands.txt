@@ -1,16 +1,43 @@
 #Holland & Zeeland Region - 1353000
 #Amsterdam (464000/116000 POPS)
 375 = {
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	officers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 300
+	}
+
 	clergymen = {
 		culture = ashkenazi
 		religion = jewish
-		size = 70
+		size = 100
 	}
+
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 6509
+		size = 3000
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 2879
+	}
+	########
 	aristocrats = {
 		culture = dutch
 		religion = protestant
@@ -105,15 +132,36 @@
 		size = 26437
 	}
 	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 3290
-	}
-	artisans = {
 		culture = flemish
 		religion = catholic
 		size = 1034
 	}
+	######Jews
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 2000
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 1090
+	}
+	########
 }
 #Utrecht (152000/38000 POPS)
 377 = {
@@ -184,11 +232,6 @@
 #Limburg-Gelderland Region - 979400
 #Eindhoven (230000/57500 POPS)
 379 = {
-	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 235
-	}
 	aristocrats = {
 		culture = dutch
 		religion = catholic
@@ -197,7 +240,7 @@
 	officers = {
 		culture = dutch
 		religion = catholic
-		size = 28
+		size = 100
 	}
 	bureaucrats = {
 		culture = dutch
@@ -222,22 +265,17 @@
 	soldiers = {
 		culture = dutch
 		religion = protestant
-		size = 94
+		size = 100
 	}
 	farmers = {
 		culture = dutch
 		religion = catholic
 		size = 47000
 	}
-	farmers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 470
-	}
 	clergymen = {
 		culture = flemish
 		religion = catholic
-		size = 47
+		size = 107
 	}
 	artisans = {
 		culture = flemish
@@ -249,6 +287,38 @@
 		religion = catholic
 		size = 2820
 	}
+	
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 205
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 200
+	}
+	########
 }
 #Breda (173200/43300 POPS)
 380 = {
@@ -390,11 +460,6 @@
 }
 #Arnhem (412000/103000 POPS)
 382 = {
-	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 470
-	}
 	aristocrats = {
 		culture = dutch
 		religion = protestant
@@ -428,7 +493,7 @@
 	clergymen = {
 		culture = north_german
 		religion = protestant
-		size = 47
+		size = 100
 	}
 	artisans = {
 		culture = north_german
@@ -440,15 +505,36 @@
 		religion = protestant
 		size = 3008
 	}
+	
+	######Jews
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 105
+	}
+	########
 }
 #Friesland-Groningen Region : 713800
 #Groningen (186600/46650 POPS)
 383 = {
-	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 235
-	}
 	aristocrats = {
 		culture = dutch
 		religion = protestant
@@ -489,11 +575,31 @@
 		religion = protestant
 		size = 33323
 	}
-	labourers = {
+	farmers = {
 		culture = north_german
 		religion = protestant
 		size = 1034
 	}
+	######Jews
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Zwolle (238000/59500 POPS)
 384 = {
@@ -565,6 +671,37 @@
 		religion = protestant
 		size = 41101
 	}
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Assen (80000/20000 POPS)
 386 = {

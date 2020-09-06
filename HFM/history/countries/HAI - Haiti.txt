@@ -4,7 +4,7 @@ culture = afro_caribeno
 religion = catholic
 government = presidential_dictatorship
 plurality = 10
-nationalvalue = nv_autocracy
+nationalvalue = nv_equality
 literacy = 0.02
 non_state_culture_literacy = 0.05
 civilized = yes
@@ -35,7 +35,7 @@ debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
-border_policy = open_borders
+border_policy = quota_immigration
 centralization = unitary
 colonial_policy = no_colonies 
 
@@ -61,6 +61,9 @@ schools = unciv_tech_school
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 #Starting Consciousness
 consciousness = 2
@@ -124,11 +127,10 @@ oob = "HAI_oob.txt"
 	piston_steam_engine = 1
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
-	mechanized_mining = 1
+    hot_blast = 1
 	experimental_railroad = 1
 	basic_chemistry = 1
 	medicine = 1
 
 #Inventions
 }
-

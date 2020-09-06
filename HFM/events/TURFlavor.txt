@@ -69,9 +69,13 @@ country_event = {
 		is_vassal = no
 		has_global_flag = BerlinBaghdadRail
 		OR = {
-			government = absolute_monarchy
 			government = hms_government
-			}
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}
 		NOT = {
 			year = 1910
 			alliance_with = ENG
@@ -118,7 +122,7 @@ country_event = {
 
 country_event = {
 		
-	id = 31102 # Flight to Ankara
+    id = 31102 # Flight to Ankara - candidate for decision
 	
 	trigger = {
 		tag = TUR

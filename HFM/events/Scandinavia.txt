@@ -43,9 +43,12 @@ country_event = {
 				factor = 0.5
 				NOT = {
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 						government = democracy
 					}
 				}
@@ -55,9 +58,12 @@ country_event = {
 				FROM = {
 					NOT = {
 						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
 							government = hms_government
+							government = prussian_constitutionalism
+							government = absolute_monarchy
+							government = absolute_empire
+							government = semi_constitutional_empire
+							government = constitutional_empire
 							government = democracy
 						}
 					}
@@ -203,9 +209,12 @@ country_event = {
 				factor = 0.5
 				NOT = {
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 						government = democracy
 					}
 				}
@@ -215,9 +224,12 @@ country_event = {
 				FROM = {
 					NOT = {
 						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
 							government = hms_government
+							government = prussian_constitutionalism
+							government = absolute_monarchy
+							government = absolute_empire
+							government = semi_constitutional_empire
+							government = constitutional_empire
 							government = democracy
 						}
 					}
@@ -300,9 +312,12 @@ country_event = {
 				factor = 0.5
 				NOT = {
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 						government = democracy
 					}
 				}
@@ -312,9 +327,12 @@ country_event = {
 				FROM = {
 					NOT = {
 						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
 							government = hms_government
+							government = prussian_constitutionalism
+							government = absolute_monarchy
+							government = absolute_empire
+							government = semi_constitutional_empire
+							government = constitutional_empire
 							government = democracy
 						}
 					}

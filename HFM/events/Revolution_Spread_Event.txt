@@ -445,6 +445,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		is_ideology_enabled = fascist
 		is_ideology_enabled = communist
@@ -452,8 +453,10 @@ country_event = {
 			NOT = { 
 				OR = {
 					government = democracy
-					government = hms_government
 					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+					government = hms_government
+					government = constitutional_empire
 				}
 				relation = {
 					who = THIS
@@ -507,8 +510,10 @@ country_event = {
 						NOT = { 
 							OR = {
 								government = democracy
-								government = hms_government
 								government = prussian_constitutionalism
+								government = semi_constitutional_empire
+								government = hms_government
+								government = constitutional_empire
 							}
 							relation = {
 								who = THIS
@@ -528,8 +533,10 @@ country_event = {
 						NOT = { 
 							OR = {
 								government = democracy
-								government = hms_government
 								government = prussian_constitutionalism
+								government = semi_constitutional_empire
+								government = hms_government
+								government = constitutional_empire
 							}
 							relation = {
 								who = THIS

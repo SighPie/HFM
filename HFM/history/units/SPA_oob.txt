@@ -132,64 +132,64 @@ RUS = { value = 0 }
 
 #Army
 army = {
-	name = "Ejército Cristino del Centro"
+	name = "Ejército del Centro"
 	location = 487
 	regiment = {
-		name= "1. Granaderos del Rey"
+		name= "1. Brigada Real de Infantería"
 		type = infantry
 		home = 487
 	}
 
 	regiment = {
-		name= "2. Granaderos del Rey"
+		name= "2. Brigada Real de Infantería"
 		type = infantry
 		home = 489
 	}
 
 	regiment = {
-		name= "3. Guardia Real"
-		type = guard
-		home = 481
-	}
-
-	regiment = {
-		name= "1. Brigada de Infantería 'El Ramillete'"
+		name= "3. Brigada Real de Infantería"
 		type = infantry
 		home = 503
 	}
 
 	regiment = {
-		name= "2. Brigada de Infantería"
+		name= "4. Brigada Real de Infantería"
 		type = infantry
 		home = 509
 	}
 
 	regiment = {
-		name= "3. Brigada de Infantería"
+		name= "5. Brigada Real de Infantería"
 		type = infantry
 		home = 513
 	}
 
 	regiment = {
-		name= "1. Brigada de Ingenieros"
-		type = engineer
+		name= "1. Brigada de Artillería"
+		type = artillery
 		home = 495
+	}
+	
+	regiment = {
+		name= "2. Brigada de Artillería"
+		type = artillery
+		home = 481
 	}
 
 	regiment = {
-		name= "1. Granaderos del Rey"
-		type = cuirassier
+		name= "3. Brigada de Artillería"
+		type = artillery
 		home = 487
 	}
 
 	regiment = {
-		name= "2. Granaderos del Rey"
+		name= "1. Escuadrón de Escolta Real"
 		type = cuirassier
 		home = 489
 	}
 
 	regiment = {
-		name= "3. Granaderos del Rey"
+		name= "2. Escuadrón de Escolta Real"
 		type = cuirassier
 		home = 488
 	}
@@ -200,13 +200,13 @@ army = {
 	location = 498
 	
 	regiment = {
-		name= "4. Brigada de Infantería 'San Jorge'"
+		name= "1. Brigada de Infantería"
 		type = infantry
 		home = 498
 	}
 
 	regiment = {
-		name= "1. Brigada de Artillería"
+		name= "4. Brigada de Artillería"
 		type = artillery
 		home = 476
 	}
@@ -218,13 +218,13 @@ army = {
 	}
 	
 	regiment = {
-		name= "6. Brigada de Infantería 'La Granja'"
+		name= "2. Brigada de Infantería"
 		type = infantry
 		home = 483
 	}
 
 	regiment = {
-		name= "7. Brigada de Infantería"
+		name= "3. Brigada de Infantería"
 		type = infantry
 		home = 497
 	}
@@ -235,32 +235,32 @@ army = {
 	location = 512
 
 	regiment = {
-		name= "8. Brigada de Infantería"
+		name= "4. Brigada de Infantería"
 		type = infantry
 		home = 512
 	}
 
 	regiment = {
-		name= "9. Brigada de Infantería"
+		name= "5. Brigada de Infantería"
 		type = infantry
 		home = 514
 	}
 
 	regiment = {
-		name= "10. Brigada de Infantería"
+		name= "6. Brigada de Infantería"
 		type = infantry
 		home = 510
 	}
 
 	regiment = {
-		name= "11. Brigada de Infantería"
+		name= "7. Brigada de Infantería"
 		type = infantry
 		home = 516
 	}
 	
 	regiment = {
-		name= "12. Brigada de Infantería"
-		type = infantry
+		name= "5. Brigada de Artillería"
+		type = artillery
 		home = 515
 	}
 }
@@ -302,16 +302,34 @@ army = {
 		type = infantry
 		home = 1455
 	}
-}
-
-army = {
-	name = "Ejército de Mindanao"
-	location = 1463
 	
 	regiment = {
 		name = "5. Brigada Colonial"
 		type = infantry
 		home = 1463
+	}
+	
+	regiment = {
+		name = "6. Brigada Colonial"
+		type = infantry
+		home = 1457
+	}
+	
+	regiment = {
+		name = "7. Brigada Colonial"
+		type = infantry
+		home = 1457
+	}
+	
+	regiment = {
+		name = "1. Brigada de Artillería Colonial"
+		type = artillery
+		home = 1456
+	}
+	regiment = {
+		name = "2. Brigada de Artillería Colonial"
+		type = artillery
+		home = 1456
 	}
 }
 

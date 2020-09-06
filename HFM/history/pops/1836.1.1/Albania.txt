@@ -42,8 +42,16 @@
 	farmers = {
 		culture = albanian
 		religion = orthodox
-		size = 6065
+		size = 4065
 	}
+	
+	######Jews
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 850 = {
 	aristocrats = {
@@ -75,7 +83,7 @@
 	aristocrats = {
 		culture = albanian
 		religion = catholic
-		size = 1150
+		size = 350
 	}
 
 	clergymen = {
@@ -165,7 +173,7 @@
 	farmers = {
 		culture = albanian
 		religion = orthodox
-		size = 3232
+		size = 2232
 	}
 }
 853 = {
@@ -192,7 +200,7 @@
 	farmers = {
 		culture = albanian
 		religion = sunni
-		size = 6246
+		size = 9246
 	}
 	soldiers = {
 		culture = albanian
@@ -212,7 +220,7 @@
 	farmers = {
 		culture = albanian
 		religion = orthodox
-		size = 161379
+		size = 3379
 	}
 	soldiers = {
 		culture = greek
@@ -232,6 +240,6 @@
 	farmers = {
 		culture = greek
 		religion = orthodox
-		size = 23799
+		size = 1799
 	}
 }

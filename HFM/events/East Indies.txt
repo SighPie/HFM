@@ -126,7 +126,15 @@ country_event = {
 		NOT = { has_country_modifier = punitive_effects }
 		NOT = { war_policy = pacifism }
 		OR = {
-			ATJ = {
+			KTI = {
+				neighbour = THIS
+				exists = yes
+				NOT = { civilized = yes }
+				NOT = { truce_with = THIS }
+				NOT = { vassal_of = THIS }
+				NOT = { in_sphere = THIS }
+			}
+			BUL = {
 				neighbour = THIS
 				exists = yes
 				NOT = { civilized = yes }
@@ -142,7 +150,7 @@ country_event = {
 				NOT = { vassal_of = THIS }
 				NOT = { in_sphere = THIS }
 			}
-			SLW = {
+			PTK = {
 				neighbour = THIS
 				exists = yes
 				NOT = { civilized = yes }
@@ -150,7 +158,7 @@ country_event = {
 				NOT = { vassal_of = THIS }
 				NOT = { in_sphere = THIS }
 			}
-			BAL = {
+			SBS = {
 				neighbour = THIS
 				exists = yes
 				NOT = { civilized = yes }
@@ -158,7 +166,7 @@ country_event = {
 				NOT = { vassal_of = THIS }
 				NOT = { in_sphere = THIS }
 			}
-			KTI = {
+			STG = {
 				neighbour = THIS
 				exists = yes
 				NOT = { civilized = yes }
@@ -166,21 +174,34 @@ country_event = {
 				NOT = { vassal_of = THIS }
 				NOT = { in_sphere = THIS }
 			}
-			LAN = {
-				neighbour = THIS
-				exists = yes
-				NOT = { civilized = yes }
-				NOT = { truce_with = THIS }
-				NOT = { vassal_of = THIS }
-				NOT = { in_sphere = THIS }
-			}
-			KLM = {
-				neighbour = THIS
-				exists = yes
-				NOT = { civilized = yes }
-				NOT = { truce_with = THIS }
-				NOT = { vassal_of = THIS }
-				NOT = { in_sphere = THIS }
+			AND = {
+				nationalism_n_imperialism = 1
+				OR = {
+					BAL = {
+						neighbour = THIS
+						exists = yes
+						NOT = { civilized = yes }
+						NOT = { truce_with = THIS }
+						NOT = { vassal_of = THIS }
+						NOT = { in_sphere = THIS }
+					}
+					LAN = {
+						neighbour = THIS
+						exists = yes
+						NOT = { civilized = yes }
+						NOT = { truce_with = THIS }
+						NOT = { vassal_of = THIS }
+						NOT = { in_sphere = THIS }
+					}
+					ATJ = {
+						neighbour = THIS
+						exists = yes
+						NOT = { civilized = yes }
+						NOT = { truce_with = THIS }
+						NOT = { vassal_of = THIS }
+						NOT = { in_sphere = THIS }
+					}
+				}
 			}
 		}
 		NOT = {
@@ -190,7 +211,10 @@ country_event = {
 			casus_belli = BAL
 			casus_belli = KTI
 			casus_belli = LAN
-			casus_belli = KLM
+			casus_belli = BUL
+			casus_belli = PTK
+			casus_belli = STG
+			casus_belli = SBS
 		}
 	}
 
@@ -201,7 +225,7 @@ country_event = {
 			nationalism_n_imperialism = 1
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			ai = no
 		}
 	}
@@ -213,13 +237,13 @@ country_event = {
 		random_country = {
 			limit = {
 				OR = {
-					tag = ATJ
 					tag = SAK
-					tag = SLW
-					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -237,13 +261,13 @@ country_event = {
 		random_country = {
 			limit = {
 				OR = {
-					tag = ATJ
 					tag = SAK
 					tag = SLW
-					tag = BAL
 					tag = KTI
-					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -267,7 +291,10 @@ country_event = {
 					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -291,7 +318,10 @@ country_event = {
 					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -315,7 +345,10 @@ country_event = {
 					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -339,7 +372,10 @@ country_event = {
 					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
 				neighbour = THIS
@@ -355,7 +391,7 @@ country_event = {
 			add_casus_belli = { target = NET type = demand_concession_BC_casus_belli months = 24 }
 		}
 		ai_chance = {
-			factor = 90
+			factor = 95
 			modifier = {
 				factor = 0
 				badboy = 0.92
@@ -374,15 +410,18 @@ country_event = {
 					tag = BAL
 					tag = KTI
 					tag = LAN
-					tag = KLM
+					tag = BUL
+					tag = PTK
+					tag = SBS
+					tag = STG
 				}
 				exists = yes
+				NOT = { vassal_of = THIS }
 			}
 			relation = { who = NET value = 25 }
 		}
-		ai_chance = {
-			factor = 10
-		}
+		
+		ai_chance = { factor = 5 }
 	}		
 }
 	
@@ -521,7 +560,7 @@ country_event = {
 			factor = 95
 			modifier = {
 				factor = 0
-				NOT = { money = 50000 }
+				NOT = { money = 25000 }
 			}
 		}
 	}
@@ -535,6 +574,11 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 5
+			
+			modifier = {
+				factor = 0
+				money = 25000
+			}
 		}
 	}	
 }
@@ -619,6 +663,14 @@ province_event = {
 				remove_core = KTI
 				remove_core = SUL
 				remove_core = BRU
+				remove_core = RIA
+				remove_core = PTK
+				remove_core = SBS
+				remove_core = BGN
+				remove_core = STG
+				remove_core = BTN
+				#remove_core = MTN
+				#remove_core = LUW
 			}
 		}
 	}
@@ -694,6 +746,12 @@ province_event = {
 				remove_core = KTI
 				remove_core = SUL
 				remove_core = BRU
+				remove_core = STG
+				remove_core = SBS
+				remove_core = BUL
+				remove_core = BTN
+				remove_core = RIA
+				remove_core = PTK
 			}
 		}
 	}
@@ -769,6 +827,12 @@ province_event = {
 				remove_core = KTI
 				remove_core = SUL
 				remove_core = BRU
+				remove_core = STG
+				remove_core = SBS
+				remove_core = BUL
+				remove_core = BTN
+				remove_core = RIA
+				remove_core = PTK
 			}
 		}
 	}
@@ -895,8 +959,20 @@ country_event = {
 		invention = the_dark_continent
 		SIA = {
 			exists = yes
-			owns = 1391
-			owns = 1389
+			OR = { 
+				1391 = { 
+					OR = {
+						owned_by = SIA
+						owner = { vassal_of = SIA }
+					}
+				}
+				1389 = { 
+					OR = {
+						owned_by = SIA
+						owner = { vassal_of = SIA }
+					}
+				}
+			}
 		}
 		has_global_flag = berlin_conference
 		NOT = { tag = SIA }
@@ -904,6 +980,8 @@ country_event = {
 	
 	fire_only_once = yes
 	mean_time_to_happen = { months = 3 }
+	
+	immediate = { set_global_flag = anglo_siam_treaty_1909 }
 	
 	option = {
 		name = "EVT97122OPTA"
@@ -934,11 +1012,14 @@ country_event = {
 				owner = { NOT = { has_global_flag = malaya_formed } }
 			}
 			owner = {
-				1389 = { secede_province = FROM remove_core = THIS remove_core = JOH add_core = PRK }
+				inherit = PAT
+				1389 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = PRK }
 				1388 = { remove_core = THIS remove_core = JOH add_core = PRK }
-				1391 = { secede_province = FROM remove_core = THIS remove_core = JOH add_core = PHG }
+				8 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = PHG }
+				1391 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = PHG }
 				1390 = { remove_core = THIS }
 				2575 = { remove_core = THIS }
+				
 			}
 		}
 		
@@ -947,9 +1028,11 @@ country_event = {
 				owner = { has_global_flag = malaya_formed }
 			}
 			owner = {
-				1389 = { secede_province = FROM remove_core = THIS remove_core = JOH add_core = MLY }
+				inherit = PAT
+				1389 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = MLY }
 				1388 = { remove_core = THIS remove_core = JOH add_core = MLY }
-				1391 = { secede_province = FROM remove_core = THIS remove_core = JOH add_core = MLY }
+				8 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = PHG }
+				1391 = { secede_province = FROM remove_core = THIS remove_core = JOH remove_core = PAT add_core = MLY }
 				1390 = { remove_core = THIS }
 				2575 = { remove_core = THIS }
 			}
@@ -989,7 +1072,7 @@ country_event = {
 				part_of_sphere = yes
 			}
 			modifier = {
-				factor = 200
+				factor = 2
 				in_sphere = FROM
 			}
 		}
@@ -997,47 +1080,32 @@ country_event = {
 	
 	option = {
 		name = "EVT97123OPTB"
+		inherit = PAT
 		FROM = {
 			diplomatic_influence = { who = THIS value = -400 }
 			relation = { who = THIS value = -150 }
 			leave_alliance = THIS
 			release_vassal = THIS
-			casus_belli = {
-				target = THIS
-				type = demand_concession_BC_casus_belli
-				months = 60
-			}
-			casus_belli = {
-				target = THIS
-				type = acquire_state
-				months = 60
-			}
-			casus_belli = {
-				target = THIS
-				type = cut_down_to_size
-				months = 60
-			}
-			casus_belli = {
-				target = THIS
-				type = humiliate
-				months = 60
-			}
+			casus_belli = { target = THIS type = demand_concession_BC_casus_belli months = 60 }
+			casus_belli = { target = THIS type = acquire_state months = 60 }
+			casus_belli = { target = THIS type = cut_down_to_size months = 60 }
+			casus_belli = { target = THIS type = humiliate months = 60 }
 		}
 		random_owned = {
 			limit = { owner = { is_greater_power = no civilized = no } }
 			FROM = {
 				war = {
-				target = THIS
-				attacker_goal = { casus_belli = acquire_state state_province_id = 1391 }
-				defender_goal = { casus_belli = status_quo }
+					target = THIS
+					attacker_goal = { casus_belli = acquire_state state_province_id = 1391 }
+					defender_goal = { casus_belli = status_quo }
 				}
 			}
 		}
 		ai_chance = {
 			factor = 0.05 
-			modifier = { 
-				factor = 1.5
-				civilized = yes
+				modifier = { 
+					factor = 1.5
+					civilized = yes
 				}
 			}
 		}
@@ -1065,6 +1133,14 @@ country_event = {
 		name = "EVT971204OPTA"
 		prestige = -5
 		1408 = { secede_province = NET remove_core = ATJ }
-		1411 = { secede_province = NET remove_core = ATJ }
+		ATJ = { war_exhaustion = -20 }
+		ENG = { 
+			diplomatic_influence = { who = ATJ value = 400 }
+			relation = { who = ATJ value = 100 }
+		}
+		TUR = {
+			diplomatic_influence = { who = ATJ value = 25 }
+			relation = { who = ATJ value = 100 }
+		}
 	}
 }

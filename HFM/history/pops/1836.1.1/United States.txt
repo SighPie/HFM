@@ -768,7 +768,7 @@
 	farmers = {
 		culture = native_american_minor
 		religion = animist
-		size = 1700
+		size = 2700
 	}
 	farmers = {
 		culture = yankee
@@ -2925,7 +2925,7 @@
 	soldiers = {
 		culture = texan
 		religion = protestant
-		size = 1550
+		size = 2550
 	}
 
 	farmers = {
@@ -3202,7 +3202,7 @@
 	soldiers = {
 		culture = texan
 		religion = protestant
-		size = 1200
+		size = 1500
 	}
 
 	farmers = {
@@ -3766,7 +3766,7 @@
 	clergymen = {
 		culture = dixie
 		religion = protestant
-		size = 75
+		size = 100
 	}
 
 	artisans = {
@@ -3778,7 +3778,7 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 125
+		size = 525
 	}
 
 	farmers = {
@@ -3802,7 +3802,7 @@
 	clergymen = {
 		culture = afro_american
 		religion = protestant
-		size = 15
+		size = 100
 	}
 
 	artisans = {
@@ -3814,7 +3814,7 @@
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 10
+		size = 100
 	}
 
 	slaves = {
@@ -3860,13 +3860,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 150
+		size = 650
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 9150
+		size = 8650
 	}
 
 	clergymen = {
@@ -3910,13 +3910,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 50
+		size = 250
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 3675
+		size = 3275
 	}
 }
 #Fayetteville (16000/4000 POPS)
@@ -3936,13 +3936,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 50
+		size = 250
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 3675
+		size = 3475
 	}
 }
 #Missouri Region (365000)
@@ -4024,7 +4024,7 @@
 	artisans = {
 		culture = dixie
 		religion = protestant
-		size = 675
+		size = 2675
 	}
 
 	soldiers = {
@@ -4036,7 +4036,7 @@
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 15875
+		size = 13875
 	}
 	
 	farmers = {
@@ -4134,13 +4134,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 50
+		size = 200
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 4625
+		size = 4475
 	}
 }
 #Malden (40000/10000 POPS)
@@ -4190,13 +4190,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 75
+		size = 475
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 4500
+		size = 4100
 	}
 
 	clergymen = {
@@ -4294,13 +4294,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 75
+		size = 475
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 5425
+		size = 5025
 	}
 
 	clergymen = {
@@ -5921,13 +5921,13 @@
 	artisans = {
 		culture = irish
 		religion = catholic
-		size = 200
+		size = 350
 	}
 
 	farmers = {
 		culture = irish
 		religion = catholic
-		size = 4600
+		size = 6600
 	}
 }
 #Columbus (268000/67000 POPS)
@@ -6013,13 +6013,13 @@
 	artisans = {
 		culture = irish
 		religion = catholic
-		size = 300
+		size = 500
 	}
 
 	farmers = {
 		culture = irish
 		religion = catholic
-		size = 7425
+		size = 9425
 	}
 }
 #Sandusky (188000/47000 POPS)
@@ -6181,13 +6181,13 @@
 	artisans = {
 		culture = irish
 		religion = catholic
-		size = 300
+		size = 500
 	}
 
 	farmers = {
 		culture = irish
 		religion = catholic
-		size = 7425
+		size = 9425
 	}
 
 	clergymen = {
@@ -6307,13 +6307,13 @@
 	artisans = {
 		culture = irish
 		religion = catholic
-		size = 150
+		size = 250
 	}
 
 	farmers = {
 		culture = irish
 		religion = catholic
-		size = 3675
+		size = 4675
 	}
 
 	aristocrats = {
@@ -6337,13 +6337,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 200
+		size = 2000
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 14125
+		size = 12325
 	}
 
 	clergymen = {
@@ -6417,13 +6417,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 225
+		size = 2225
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 19950
+		size = 17950
 	}
 
 	clergymen = {
@@ -6619,13 +6619,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 225
+		size = 1225
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 12850
+		size = 11850
 	}
 
 	clergymen = {
@@ -6755,13 +6755,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 2000
+		size = 4000
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 66000
+		size = 64000
 	}
 
 	clergymen = {
@@ -6835,13 +6835,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 300
+		size = 1300
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 20300
+		size = 19300
 	}
 
 	clergymen = {
@@ -6915,13 +6915,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 225
+		size = 1225
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 11950
+		size = 10950
 	}
 
 	clergymen = {
@@ -7013,13 +7013,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 200
+		size = 1200
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 14000
+		size = 13000
 	}
 
 	clergymen = {
@@ -7131,13 +7131,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 400
+		size = 1400
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 20050
+		size = 19050
 	}
 
 	clergymen = {
@@ -7187,13 +7187,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 250
+		size = 1250
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 9325
+		size = 8325
 	}
 
 	clergymen = {
@@ -7243,19 +7243,19 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 200
+		size = 1100
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 7675
+		size = 6775
 	}
 
 	clergymen = {
 		culture = afro_american
 		religion = protestant
-		size = 25
+		size = 100
 	}
 
 	artisans = {
@@ -7267,7 +7267,7 @@
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 25
+		size = 100
 	}
 
 	slaves = {
@@ -7399,13 +7399,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 425
+		size = 1425
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 23800
+		size = 22800
 	}
 
 	clergymen = {
@@ -7437,31 +7437,31 @@
 	aristocrats = {
 		culture = dixie
 		religion = catholic
-		size = 15
+		size = 450
 	}
 
 	clergymen = {
 		culture = dixie
 		religion = catholic
-		size = 35
+		size = 100
 	}
 
 	artisans = {
 		culture = dixie
 		religion = catholic
-		size = 100
+		size = 600
 	}
 
 	soldiers = {
 		culture = dixie
 		religion = catholic
-		size = 25
+		size = 1325
 	}
 
 	farmers = {
 		culture = dixie
 		religion = catholic
-		size = 1825
+		size = 12525
 	}
 	
 	aristocrats = {
@@ -7543,7 +7543,7 @@
 	clergymen = {
 		culture = dixie
 		religion = protestant
-		size = 50
+		size = 100
 	}
 
 	artisans = {
@@ -7555,31 +7555,31 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 75
+		size = 375
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 3550
+		size = 3250
 	}
 
 	clergymen = {
 		culture = afro_american
 		religion = protestant
-		size = 10
+		size = 100
 	}
 
 	artisans = {
 		culture = afro_american
 		religion = protestant
-		size = 80
+		size = 100
 	}
 
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 10
+		size = 300
 	}
 
 	slaves = {
@@ -7593,13 +7593,13 @@
 	aristocrats = {
 		culture = dixie
 		religion = catholic
-		size = 5
+		size = 150
 	}
 
 	clergymen = {
 		culture = dixie
 		religion = catholic
-		size = 5
+		size = 100
 	}
 
 	artisans = {
@@ -7635,31 +7635,31 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 125
+		size = 425
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 7350
+		size = 7050
 	}
 
 	clergymen = {
 		culture = afro_american
 		religion = protestant
-		size = 10
+		size = 100
 	}
 
 	artisans = {
 		culture = afro_american
 		religion = protestant
-		size = 80
+		size = 100
 	}
 
 	farmers = {
 		culture = afro_american
 		religion = protestant
-		size = 10
+		size = 100
 	}
 
 	slaves = {
@@ -7673,13 +7673,13 @@
 	aristocrats = {
 		culture = native_american_minor
 		religion = animist
-		size = 25
+		size = 100
 	}
 
 	clergymen = {
 		culture = native_american_minor
 		religion = animist
-		size = 50
+		size = 100
 	}
 
 	artisans = {
@@ -7691,13 +7691,56 @@
 	soldiers = {
 		culture = native_american_minor
 		religion = animist
-		size = 25
+		size = 100
 	}
 
 	farmers = {
 		culture = native_american_minor
 		religion = animist
 		size = 1800
+	}
+	
+	
+	clergymen = {
+		culture = dixie
+		religion = protestant
+		size = 100
+	}
+
+	artisans = {
+		culture = dixie
+		religion = protestant
+		size = 100
+	}
+
+	soldiers = {
+		culture = dixie
+		religion = protestant
+		size = 100
+	}
+
+	farmers = {
+		culture = dixie
+		religion = protestant
+		size = 100
+	}
+
+	clergymen = {
+		culture = afro_american
+		religion = protestant
+		size = 300
+	}
+
+	artisans = {
+		culture = afro_american
+		religion = protestant
+		size = 100
+	}
+
+	slaves = {
+		culture = afro_american
+		religion = protestant
+		size = 200
 	}
 }
 #Georgia Region (628000)
@@ -7737,7 +7780,7 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 550
+		size = 2550
 	}
 	
 	craftsmen = {
@@ -7749,7 +7792,7 @@
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 26775
+		size = 24775
 	}
 
 	clergymen = {
@@ -7829,13 +7872,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 125
+		size = 525
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 6400
+		size = 6000
 	}
 
 	clergymen = {
@@ -7885,13 +7928,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 500
+		size = 2100
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 26425
+		size = 24825
 	}
 
 	clergymen = {
@@ -7941,13 +7984,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 350
+		size = 1350
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 16300
+		size = 15300
 	}
 
 	clergymen = {
@@ -7999,16 +8042,14 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 2000
+		size = 2500
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 21725
+		size = 21225
 	}
-
-
 
 	artisans = {
 		culture = dixie
@@ -8075,13 +8116,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 2000
+		size = 4000
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 36575
+		size = 34575
 	}
 
 	clergymen = {
@@ -8133,13 +8174,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 275
+		size = 1275
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 17400
+		size = 16400
 	}
 
 	clergymen = {
@@ -8201,13 +8242,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 400
+		size = 1400
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 26000
+		size = 25000
 	}
 
 	clergymen = {
@@ -8257,13 +8298,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 350
+		size = 1350
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 17250
+		size = 16250
 	}
 
 	clergymen = {
@@ -8343,13 +8384,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 475
+		size = 2475
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 26375
+		size = 24375
 	}
 
 	clergymen = {
@@ -8429,13 +8470,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 375
+		size = 1375
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 24475
+		size = 23475
 	}
 
 	clergymen = {
@@ -8500,13 +8541,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 400
+		size = 1100
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 10075
+		size = 9375
 	}
 
 	clergymen = {
@@ -8568,13 +8609,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 1600
+		size = 3000
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 41400
+		size = 40000
 	}
 
 	clergymen = {
@@ -8680,13 +8721,13 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 275
+		size = 1275
 	}
 
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 13575
+		size = 12575
 	}
 
 	clergymen = {
@@ -8717,6 +8758,36 @@
 214 = {
 	aristocrats = {
 		culture = dixie
+		religion = protestant
+		size = 125
+	}
+
+	clergymen = {
+		culture = dixie
+		religion = protestant
+		size = 75
+	}
+
+	artisans = {
+		culture = dixie
+		religion = protestant
+		size = 175
+	}
+
+	soldiers = {
+		culture = dixie
+		religion = protestant
+		size = 1075
+	}
+
+	farmers = {
+		culture = dixie
+		religion = protestant
+		size = 2650
+	}
+
+	aristocrats = {
+		culture = dixie
 		religion = catholic
 		size = 225
 	}
@@ -8743,36 +8814,6 @@
 		culture = dixie
 		religion = catholic
 		size = 10000
-	}
-
-	aristocrats = {
-		culture = dixie
-		religion = protestant
-		size = 125
-	}
-
-	clergymen = {
-		culture = dixie
-		religion = protestant
-		size = 75
-	}
-
-	artisans = {
-		culture = dixie
-		religion = protestant
-		size = 175
-	}
-
-	soldiers = {
-		culture = dixie
-		religion = protestant
-		size = 75
-	}
-
-	farmers = {
-		culture = dixie
-		religion = protestant
-		size = 3650
 	}
 
 	clergymen = {
@@ -8991,31 +9032,6 @@
 218 = {
 	aristocrats = {
 		culture = dixie
-		religion = catholic
-		size = 50
-	}
-
-	clergymen = {
-		culture = dixie
-		religion = catholic
-		size = 50
-	}
-
-	artisans = {
-		culture = dixie
-		religion = catholic
-		size = 125
-	}
-
-
-	farmers = {
-		culture = dixie
-		religion = catholic
-		size = 2725
-	}
-	
-	aristocrats = {
-		culture = dixie
 		religion = protestant
 		size = 200
 	}
@@ -9042,6 +9058,31 @@
 		culture = dixie
 		religion = protestant
 		size = 4125
+	}
+
+	aristocrats = {
+		culture = dixie
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = {
+		culture = dixie
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = dixie
+		religion = catholic
+		size = 125
+	}
+
+
+	farmers = {
+		culture = dixie
+		religion = catholic
+		size = 2725
 	}
 	
 	farmers = {
@@ -9221,7 +9262,7 @@
 	soldiers = {
 		culture = dixie
 		religion = protestant
-		size = 150
+		size = 1500
 	}
 
 	farmers = {
@@ -9239,7 +9280,7 @@
 	farmers = {
 		culture = yankee
 		religion = protestant
-		size = 13500
+		size = 12500
 	}
 
 	clergymen = {
@@ -9325,7 +9366,7 @@
 	farmers = {
 		culture = dixie
 		religion = protestant
-		size = 2225
+		size = 2125
 	}
 	
 	farmers = {
@@ -9502,54 +9543,6 @@
 223 = {
 	bureaucrats = {
 		culture = yankee
-		religion = catholic
-		size = 75
-	}
-
-	officers = {
-		culture = yankee
-		religion = catholic
-		size = 75
-	}
-
-	clergymen = {
-		culture = yankee
-		religion = catholic
-		size = 250
-	}
-
-	clerks = {
-		culture = yankee
-		religion = catholic
-		size = 5
-	}
-
-	craftsmen = {
-		culture = yankee
-		religion = catholic
-		size = 100
-	}
-
-	artisans = {
-		culture = yankee
-		religion = catholic
-		size = 2045
-	}
-
-	soldiers = {
-		culture = yankee
-		religion = catholic
-		size = 175
-	}
-
-	farmers = {
-		culture = yankee
-		religion = catholic
-		size = 15400
-	}
-	
-	bureaucrats = {
-		culture = yankee
 		religion = protestant
 		size = 1800
 	}
@@ -9606,6 +9599,54 @@
 		culture = yankee
 		religion = protestant
 		size = 66950
+	}
+
+	bureaucrats = {
+		culture = yankee
+		religion = catholic
+		size = 75
+	}
+
+	officers = {
+		culture = yankee
+		religion = catholic
+		size = 75
+	}
+
+	clergymen = {
+		culture = yankee
+		religion = catholic
+		size = 125
+	}
+
+	clerks = {
+		culture = yankee
+		religion = catholic
+		size = 5
+	}
+
+	craftsmen = {
+		culture = yankee
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = yankee
+		religion = catholic
+		size = 2045
+	}
+
+	soldiers = {
+		culture = yankee
+		religion = catholic
+		size = 175
+	}
+
+	farmers = {
+		culture = yankee
+		religion = catholic
+		size = 15400
 	}
 
 	clergymen = {
@@ -11112,19 +11153,19 @@
 	clergymen = {
 		culture = irish
 		religion = catholic
-		size = 25
+		size = 50
 	}
 
 	artisans = {
 		culture = irish
 		religion = catholic
-		size = 600
+		size = 1100
 	}
 
 	farmers = {
 		culture = irish
 		religion = catholic
-		size = 2950
+		size = 3950
 	}
 }
 #Pittsfield (84000/21000 POPS)

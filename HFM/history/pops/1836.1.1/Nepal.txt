@@ -23,7 +23,7 @@
 	clergymen = {
 		culture = nepali
 		religion = hindu
-		size = 2100
+		size = 1100
 	}
 
 	artisans = {
@@ -163,7 +163,7 @@
 	clergymen = {
 		culture = tibetan
 		religion = gelugpa
-		size = 575
+		size = 375
 	}
 
 	artisans = {

@@ -27,7 +27,10 @@ reactionary_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
-		french_bourbon = absolute_monarchy
+		unciv_absolute_monarchy = absolute_monarchy
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = absolute_empire
+		constitutional_empire = absolute_empire
 		dominion = presidential_dictatorship
 		democracy = presidential_dictatorship
 		federal_democracy = presidential_dictatorship
@@ -64,17 +67,17 @@ reactionary_rebels = {
 		}
 		
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		
@@ -99,6 +102,11 @@ reactionary_rebels = {
 				social_movement = yes
 				political_movement = yes
 			}
+		}
+		
+		modifier = {
+			factor = 0
+			type = slaves
 		}
 		
 		modifier = {
@@ -184,7 +192,12 @@ reactionary_rebels = {
 		}
 		modifier = {
 			factor = 0
-			country = { government = absolute_monarchy }
+			country = { 
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
 		}
 		modifier = {
 			factor = 0.2
@@ -203,6 +216,9 @@ reactionary_rebels = {
 					government = hms_government
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 					government = democracy
 					government = federal_democracy
 				}
@@ -327,9 +343,13 @@ fascist_rebels = {
 		absolute_monarchy = fascist_dictatorship
 		prussian_constitutionalism = fascist_dictatorship
 		hms_government = fascist_dictatorship
-		french_bourbon = fascist_dictatorship
+		absolute_empire = fascist_dictatorship
+		semi_constitutional_empire = fascist_dictatorship
+		constitutional_empire = fascist_dictatorship
+		unciv_absolute_monarchy = fascist_dictatorship
 		dominion = fascist_dictatorship
 		democracy = fascist_dictatorship
+		federal_democracy = fascist_dictatorship
 		theocracy = fascist_dictatorship
 		colonial_company = fascist_dictatorship
 	}
@@ -349,7 +369,7 @@ fascist_rebels = {
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
 	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
-	unit_transfer = yes				# Units remain after enforcing demands.
+	unit_transfer = no				# Units remain after enforcing demands.
 	
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces	
 
@@ -366,15 +386,15 @@ fascist_rebels = {
 			has_unclaimed_cores = yes
 		}		
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -407,6 +427,12 @@ fascist_rebels = {
 				}
 			}	
 		}
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = { civilized = no }
@@ -466,7 +492,6 @@ fascist_rebels = {
 						is_primary_culture = THIS
 						is_accepted_culture = THIS
 					}
-					exists = no
 				}
 			}
 		}
@@ -616,9 +641,13 @@ communist_rebels = {
 		absolute_monarchy = proletarian_dictatorship
 		prussian_constitutionalism = proletarian_dictatorship
 		hms_government = proletarian_dictatorship
-		french_bourbon = proletarian_dictatorship
+		unciv_absolute_monarchy = proletarian_dictatorship
+		absolute_empire = proletarian_dictatorship
+		semi_constitutional_empire = proletarian_dictatorship
+		constitutional_empire = proletarian_dictatorship
 		dominion = proletarian_dictatorship
 		democracy = proletarian_dictatorship
+		federal_democracy = presidential_dictatorship
 		theocracy = proletarian_dictatorship
 		colonial_company = proletarian_dictatorship
 	}
@@ -638,7 +667,7 @@ communist_rebels = {
 	reinforcing = yes				# Does not receive reinforcements
 	general = yes					# Does use generals
 	smart = yes						# Does not assault forts, tactically withdraw from battle, etc.
-	unit_transfer = yes				# Units do not remain after enforcing demands.
+	unit_transfer = no				# Units do not remain after enforcing demands.
 	
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces	
 
@@ -650,15 +679,15 @@ communist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -680,6 +709,12 @@ communist_rebels = {
 			factor = 0
 			country = { civilized = no }
 		}
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			NOT = {
@@ -747,7 +782,6 @@ communist_rebels = {
 						is_primary_culture = THIS
 						is_accepted_culture = THIS
 					}
-					exists = no
 				}
 			}
 		}
@@ -918,9 +952,13 @@ anarcho_liberal_rebels = {
 		absolute_monarchy = bourgeois_dictatorship
 		prussian_constitutionalism = bourgeois_dictatorship
 		hms_government = bourgeois_dictatorship
-		french_bourbon = bourgeois_dictatorship
+		absolute_empire = bourgeois_dictatorship
+		semi_constitutional_empire = bourgeois_dictatorship
+		constitutional_empire = bourgeois_dictatorship
+		unciv_absolute_monarchy = bourgeois_dictatorship
 		dominion = bourgeois_dictatorship
 		democracy = bourgeois_dictatorship
+		federal_democracy = bourgeois_dictatorship
 		theocracy = bourgeois_dictatorship
 		colonial_company = bourgeois_dictatorship
 	}
@@ -953,15 +991,15 @@ anarcho_liberal_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -981,15 +1019,19 @@ anarcho_liberal_rebels = {
 				is_ideology_enabled = anarcho_liberal
 			}
 		}
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = { civilized = no }
 		}
 		modifier = {
 			factor = 0
-			location = {
-				is_colonial = yes
-			}
+			location = { is_colonial = yes }
 		}
 		modifier = {
 			factor = 0
@@ -1007,7 +1049,9 @@ anarcho_liberal_rebels = {
 			country = {
 				OR = {
 					government = democracy
+					government = federal_democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				ruling_party_ideology = anarcho_liberal
 			}
@@ -1017,7 +1061,9 @@ anarcho_liberal_rebels = {
 			country = {
 				OR = {
 					government = democracy
+					government = federal_democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				ruling_party_ideology = liberal
 			}
@@ -1049,7 +1095,9 @@ anarcho_liberal_rebels = {
 			country = {
 				OR = {
 					government = democracy
+					government = federal_democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				OR = { 
 					vote_franschise = universal_weighted_voting
@@ -1078,7 +1126,6 @@ anarcho_liberal_rebels = {
 						is_primary_culture = THIS
 						is_accepted_culture = THIS
 					}
-					exists = no
 				}
 			}
 		}
@@ -1172,7 +1219,7 @@ anarcho_liberal_rebels = {
 		OR = {
 			capital_scope = {
 				controlled_by = REB
-				province_control_days = 120
+				province_control_days = 90
 			}
 			NOT = {
 				any_owned_province = {
@@ -1236,9 +1283,13 @@ nationalist_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
+		unciv_absolute_monarchy = absolute_monarchy
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -1268,15 +1319,15 @@ nationalist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -1317,6 +1368,11 @@ nationalist_rebels = {
 		factor = 3
 		
 		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
+		modifier = {
 			factor = 0.01
 			is_primary_culture = yes
 			location = { is_core = THIS }
@@ -1341,12 +1397,27 @@ nationalist_rebels = {
 			 	}
 		 	}
 		}
-		modifier = {
-			factor = 0
-			NOT = {
-				country = { num_of_cities = 2 }
-			}
-		}
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# location = {
+					# any_core = {
+						# is_cultural_union = no
+						# OR = {
+							# is_primary_culture = THIS
+							# is_accepted_culture = THIS
+						# }
+						# exists = no
+			 		# }
+			 	# }
+		 	# }
+		# }
+		#modifier = {
+		#	factor = 0
+		#	NOT = {
+		#		country = { num_of_cities = 2 }
+		#	}
+		#}
 		modifier = {
 			factor = 1.01
 			pop_majority_ideology = communist
@@ -1418,6 +1489,8 @@ nationalist_rebels = {
 				OR = {
 					government = prussian_constitutionalism
 					government = hms_government
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 		}
@@ -1528,7 +1601,7 @@ nationalist_rebels = {
 					controlled_by_rebels = yes
 					NOT = { owned_by = THIS }
 				}
-				province_control_days = 60
+				province_control_days = 30
 			}
 		}
 	}
@@ -1549,7 +1622,7 @@ pan_nationalist_rebels = {
 	icon = 6
 	
 	break_alliance_on_win = no
-	area = culture_group
+	area = nation
 	
 	# <this is the government in the country> = <this is what the rebels want>
 	government = {
@@ -1560,9 +1633,10 @@ pan_nationalist_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
 		dominion = hms_government
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -1595,17 +1669,17 @@ pan_nationalist_rebels = {
 		}
 		
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -1640,11 +1714,30 @@ pan_nationalist_rebels = {
 		
 		modifier = {
 			factor = 0
+			type = slaves
+		}
+		
+		modifier = {
+			factor = 0
 			country = { civilized = no }
 		}
 		modifier = {
 			factor = 0
 			cultural_union = { civilized = no }
+		}
+		modifier = {
+			factor = 0
+			is_primary_culture = yes
+			country = {
+				has_country_flag = rejected_pan_nationalism
+				OR = {
+					primary_culture = breton
+					primary_culture = occitan
+					primary_culture = picard
+					primary_culture = maltese
+					is_culture_group = american_cultures
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1973,9 +2066,10 @@ carlist_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
-		french_bourbon = absolute_monarchy
+		unciv_absolute_monarchy = absolute_monarchy
 		dominion = absolute_monarchy
 		democracy = absolute_monarchy
+		federal_democracy = absolute_monarchy
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
 	}
@@ -1995,8 +2089,8 @@ carlist_rebels = {
 	reinforcing = yes				
 	general = yes					
 	smart = yes
-	unit_transfer = yes				# Units do not remain after enforcing demands.
-		
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces	
 
 	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
@@ -2007,15 +2101,15 @@ carlist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -2044,6 +2138,11 @@ carlist_rebels = {
 		
 		modifier = {
 			factor = 0
+			type = slaves
+		}
+		
+		modifier = {
+			factor = 0
 			country = { NOT = { tag = SPA } }
 		}
 		modifier = {
@@ -2061,6 +2160,10 @@ carlist_rebels = {
 						government = prussian_constitutionalism
 						government = absolute_monarchy
 						government = democracy
+						government = federal_democracy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -2238,9 +2341,10 @@ christino_rebels = {
 		absolute_monarchy = hms_government
 		prussian_constitutionalism = hms_government
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
 		dominion = hms_government
 		democracy = hms_government
+		federal_democracy = hms_government
 		theocracy = theocracy
 		colonial_company = hms_government
 	}
@@ -2272,15 +2376,15 @@ christino_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 	}
@@ -2288,6 +2392,11 @@ christino_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.1
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
 		
 		modifier = {
 			factor = 0
@@ -2309,6 +2418,9 @@ christino_rebels = {
 						government = hms_government
 						government = prussian_constitutionalism
 						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -2483,9 +2595,10 @@ boxer_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
-		french_bourbon = absolute_monarchy
+		unciv_absolute_monarchy = absolute_monarchy
 		dominion = absolute_monarchy
 		democracy = absolute_monarchy
+		federal_democracy = absolute_monarchy
 		theocracy = theocracy
 		colonial_company = absolute_monarchy
 	}
@@ -2516,15 +2629,15 @@ boxer_rebels = {
 			factor = 0.8
 		}	
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}	
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}	
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -2556,6 +2669,12 @@ boxer_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.1
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = { civilized = yes }
@@ -2581,6 +2700,9 @@ boxer_rebels = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
 					government = hms_government
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2713,6 +2835,9 @@ boxer_rebels = {
 		remove_province_modifier = foreign_trading_post
 		remove_province_modifier = local_opium_habit
 		remove_province_modifier = european_military_mission
+		#any_pop = {
+			#reduce_pop = 0.99
+		#}
 		add_province_modifier = {
 			name = boxer_rebellion
 			duration = 365
@@ -2754,9 +2879,10 @@ red_shirts = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
 		dominion = hms_government
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = democracy
 		colonial_company = hms_government
 	}
@@ -2787,15 +2913,15 @@ red_shirts = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -2811,6 +2937,11 @@ red_shirts = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.2
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
 		
 		modifier = {
 			factor = 0
@@ -2937,7 +3068,7 @@ red_shirts = {
 	siege_won_effect = {
 		add_province_modifier = {
 			name = war_torn
-			duration = 365
+			duration = 90
 		}
 		owner = { war_exhaustion = 2.5 }
 	}
@@ -2997,9 +3128,10 @@ indian_sepoys = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -3031,15 +3163,15 @@ indian_sepoys = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -3051,14 +3183,17 @@ indian_sepoys = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.1
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			OR = {
 				location = { NOT = { is_core = HND } }
-				country = { tag = HND }
-				country = { NOT = { has_country_flag = sepoy_rebellion } }
 				NOT = { is_culture_group = south_asian }
-				country = { has_global_flag = indian_call_to_union }
 			}
 		}
 		modifier = {
@@ -3067,24 +3202,27 @@ indian_sepoys = {
 		}
 		modifier = {
 			factor = 0
+			country = { tag = HND }
+		}
+		modifier = {
+			factor = 0
 			country = {
-				NOT = {
-					OR = {
-						owns = 1236
-						owns = 1251
-						owns = 1304
-						owns = 1297
-						owns = 1247
-						owns = 1291
-						owns = 1227
-					}
-				}
+				is_culture_group = south_asian
+			}
+			HND = { exists = yes }
+		}
+		modifier = {
+			factor = 0
+			country = {
+				has_country_flag = wants_to_unify
 			}
 		}
 		modifier = {
 			factor = 0
-			country = { is_culture_group = south_asian }
-		}		
+			country = {
+				NOT = { has_global_flag = indian_call_to_union }
+			}
+		}
 		modifier = {
 			factor = 1.2
 			pop_majority_ideology = liberal
@@ -3261,9 +3399,10 @@ indian_nationalists = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = federal_democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -3296,15 +3435,15 @@ indian_nationalists = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -3335,6 +3474,12 @@ indian_nationalists = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.1
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			OR = {
@@ -3478,9 +3623,13 @@ liberal_rebels = {
 		absolute_monarchy = hms_government
 		prussian_constitutionalism = hms_government
 		hms_government = democracy
-		french_bourbon = democracy
+		absolute_empire = constitutional_empire
+		semi_constitutional_empire = constitutional_empire
+		constitutional_empire = democracy
+		unciv_absolute_monarchy = democracy
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = federal_democracy
 		theocracy = democracy
 		colonial_company = democracy
 	}
@@ -3512,15 +3661,15 @@ liberal_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -3538,6 +3687,11 @@ liberal_rebels = {
 		factor = 1.02
 		
 		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
+		modifier = {
 			factor = 2
 			location = {
 				has_province_modifier = colorado_sympathies
@@ -3548,12 +3702,10 @@ liberal_rebels = {
 			factor = 0
 			country = { civilized = no }
 		}
-		
 		modifier = {
 			factor = 0
 			social_movement = yes
 		}
-		
 		modifier = {
 			factor = 0.01
 			NOT = {
@@ -3578,7 +3730,10 @@ liberal_rebels = {
 			factor = 0.01
 			country = { 
 				primary_culture = british
-				government = hms_government
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
 			}
 		}
 		modifier = {
@@ -3618,16 +3773,23 @@ liberal_rebels = {
 			factor = 0
 			country = {
 				OR = {
-					government = democracy
-					government = hms_government
+					AND = {
+						government = democracy
+						government = federal_democracy
+						OR = {
+							upper_house_composition = state_equal_weight
+							upper_house_composition = population_equal_weight
+						}
+					}
+					AND = {
+						government = hms_government
+						government = constitutional_empire
+						NOT = { upper_house_composition = party_appointed }
+					}
 				}
 				OR = { 
 					vote_franschise = universal_weighted_voting
 					vote_franschise = universal_voting
-				}
-				OR = {
-					upper_house_composition = state_equal_weight
-					upper_house_composition = population_equal_weight
 				}
 				NOT = { debt_law = serfdom }
 				NOT = { border_policy = closed_borders }
@@ -3641,16 +3803,23 @@ liberal_rebels = {
 			factor = 0.9
 			country = {
 				OR = {
-					government = democracy
-					government = hms_government
+					AND = {
+						government = democracy
+						government = federal_democracy
+						OR = {
+							upper_house_composition = state_equal_weight
+							upper_house_composition = population_equal_weight
+						}
+					}
+					AND = {
+						government = hms_government
+						government = constitutional_empire
+						NOT = { upper_house_composition = party_appointed }
+					}
 				}
 				OR = { 
 					vote_franschise = universal_weighted_voting
 					vote_franschise = universal_voting
-				}
-				OR = {
-					upper_house_composition = state_equal_weight
-					upper_house_composition = population_equal_weight
 				}
 				NOT = { debt_law = serfdom }
 				NOT = { border_policy = closed_borders }
@@ -3691,7 +3860,6 @@ liberal_rebels = {
 						is_primary_culture = THIS
 						is_accepted_culture = THIS
 					}
-					exists = no
 				}
 			}
 		}
@@ -3730,6 +3898,9 @@ liberal_rebels = {
 					government = hms_government
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			pop_majority_ideology = liberal
@@ -3842,6 +4013,7 @@ liberal_rebels = {
 		political_reform = yes_meeting
 		political_reform = free_press
 		political_reform = open_borders
+		
 		random_owned = { limit = { owner = { NOT = { trade_unions = all_trade_unions } } } owner = { political_reform = non_socialist } }
 		random_owned = {
 			limit = { owner = { NOT = { vote_franschise = universal_voting } } }
@@ -3860,11 +4032,39 @@ liberal_rebels = {
 			owner = { political_reform = no_slavery }
 		}
 		random_owned = {
-			limit = { owner = { NOT = { voting_system = proportional_representation tag = USA tag = ENG } } }
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = federal_democracy
+						government = hms_government
+						government = constitutional_empire
+					}
+					NOT = {
+						voting_system = proportional_representation
+						tag = USA
+						tag = ENG
+					}
+				}
+			}
 			owner = { political_reform = proportional_representation }
 		}
 		random_owned = {
-			limit = { owner = { NOT = { upper_house_composition = population_equal_weight tag = USA } } }
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = federal_democracy
+						government = hms_government
+						government = constitutional_empire
+					}
+					NOT = {
+						upper_house_composition = population_equal_weight
+						tag = USA
+						tag = ENG
+					} 
+				} 
+			}
 			owner = { political_reform = population_equal_weight }
 		}
 		random_owned = {
@@ -3927,9 +4127,13 @@ unciv_reactionary_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
-		french_bourbon = absolute_monarchy
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = absolute_empire
+		constitutional_empire = absolute_empire
+		unciv_absolute_monarchy = unciv_absolute_monarchy
 		dominion = absolute_monarchy
 		democracy = absolute_monarchy
+		federal_democracy = absolute_monarchy
 		theocracy = absolute_monarchy
 		colonial_company = colonial_company
 	}
@@ -3954,18 +4158,18 @@ unciv_reactionary_rebels = {
 
 	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the factions strength
 	will_rise = {
-		factor = 0.35
+		factor = 0.5
 		
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -4008,6 +4212,11 @@ unciv_reactionary_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 3
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
 		
 		modifier = {
 			factor = 0
@@ -4166,7 +4375,7 @@ unciv_reactionary_rebels = {
 	siege_won_effect = {
 		add_province_modifier = {
 			name = war_torn
-			duration = 365
+			duration = 30
 		}
 		remove_province_modifier = western_presence
 		remove_province_modifier = foreign_smugglers
@@ -4175,7 +4384,7 @@ unciv_reactionary_rebels = {
 		remove_province_modifier = european_military_mission
 		remove_province_modifier = extraterritoriality_granted
 		rich_strata = {
-			reduce_pop = 0.80
+			reduce_pop = 0.99
 		}
 	}
 
@@ -4199,8 +4408,6 @@ unciv_reactionary_rebels = {
 	demands_enforced_effect = {
 		civilized = no
 		war_exhaustion = 50
-		remove_random_economic_reforms = 1
-		remove_random_military_reforms = 1
 		country_event = 800149
 	}
 }
@@ -4223,9 +4430,13 @@ separatist_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
+		unciv_absolute_monarchy = hms_government
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -4256,15 +4467,15 @@ separatist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 		modifier = {
@@ -4280,6 +4491,12 @@ separatist_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 3
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			is_primary_culture = yes
@@ -4289,12 +4506,12 @@ separatist_rebels = {
 			is_accepted_culture = yes
 		}
 		
-		modifier = {
-			factor = 0
-			NOT = {
-				country = { num_of_cities = 2 }
-			}
-		}
+		#modifier = {
+		#	factor = 0
+		#	NOT = {
+		#		country = { num_of_cities = 2 }
+		#	}
+		#}
 		modifier = {
 			factor = 1.01
 			pop_majority_ideology = communist
@@ -4351,7 +4568,7 @@ separatist_rebels = {
 			}
 		}
 		modifier = {
-			factor = 1.4
+			factor = 1.3
 			country = { any_neighbor_country = { have_core_in = THIS } }
 			location = {
 				any_core = {
@@ -4482,9 +4699,13 @@ socialist_rebels = {
 		absolute_monarchy = democracy
 		prussian_constitutionalism = democracy
 		hms_government = democracy
-		french_bourbon = democracy
+		absolute_empire = democracy
+		semi_constitutional_empire = democracy
+		constitutional_empire = democracy
+		unciv_absolute_monarchy = democracy
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
 	}
@@ -4516,15 +4737,15 @@ socialist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 	}
@@ -4532,6 +4753,12 @@ socialist_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.02
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = { civilized = no }
@@ -4580,7 +4807,9 @@ socialist_rebels = {
 			country = {
 				OR = {
 					government = democracy
+					government = federal_democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				OR = { 
 					vote_franschise = universal_weighted_voting
@@ -4624,16 +4853,23 @@ socialist_rebels = {
 			factor = 0.75
 			country = {
 				OR = {
-					government = democracy
-					government = hms_government
+					AND = {
+						government = democracy
+						government = federal_democracy
+						OR = {
+							upper_house_composition = state_equal_weight
+							upper_house_composition = population_equal_weight
+						}
+					}
+					AND = {
+						government = hms_government
+						government = constitutional_empire
+						NOT = { upper_house_composition = party_appointed }
+					}
 				}
 				OR = { 
 					vote_franschise = universal_weighted_voting
 					vote_franschise = universal_voting
-				}
-				OR = {
-					upper_house_composition = state_equal_weight
-					upper_house_composition = population_equal_weight
 				}
 				OR = {
 					wage_reform = acceptable_minimum_wage
@@ -4676,7 +4912,6 @@ socialist_rebels = {
 						is_primary_culture = THIS
 						is_accepted_culture = THIS
 					}
-					exists = no
 				}
 			}
 		}
@@ -4729,9 +4964,7 @@ socialist_rebels = {
 		}
 		modifier = {
 			factor = 0
-			location = {
-				is_colonial = yes
-			}
+			location = { is_colonial = yes }
 		}		
 	}
  
@@ -4964,9 +5197,13 @@ independence_rebels = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
+		unciv_absolute_monarchy = hms_government
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -4998,15 +5235,15 @@ independence_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 	}
@@ -5014,6 +5251,12 @@ independence_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.2
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = { is_vassal = no }
@@ -5136,9 +5379,13 @@ turkish_nationalist_rebels = {
 		absolute_monarchy = democracy
 		prussian_constitutionalism = democracy
 		hms_government = democracy
-		french_bourbon = democracy
+		absolute_empire = democracy
+		semi_constitutional_empire = democracy
+		constitutional_empire = democracy
+		unciv_absolute_monarchy = democracy
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -5170,15 +5417,15 @@ turkish_nationalist_rebels = {
 			factor = 0.8
 		}
 		modifier = {
-			war_exhaustion = 4
+			war_exhaustion = 40
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 6
+			war_exhaustion = 60
 			factor = 0.95
 		}
 		modifier = {
-			war_exhaustion = 8
+			war_exhaustion = 80
 			factor = 0.95
 		}
 	}
@@ -5186,6 +5433,12 @@ turkish_nationalist_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 3
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = {
@@ -5201,6 +5454,9 @@ turkish_nationalist_rebels = {
 						government = absolute_monarchy
 						government = prussian_constitutionalism
 						government = hms_government
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -5381,9 +5637,13 @@ native_rebels = {
 		absolute_monarchy = democracy
 		prussian_constitutionalism = democracy
 		hms_government = democracy
-		french_bourbon = democracy
+		absolute_empire = democracy
+		semi_constitutional_empire = democracy
+		constitutional_empire = democracy
+		unciv_absolute_monarchy = democracy
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
 	}
@@ -5431,6 +5691,12 @@ native_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 3
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		
 		modifier = {
 			factor = 0
 			country = {
@@ -5568,9 +5834,13 @@ sioux_nation = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
+		unciv_absolute_monarchy = hms_government
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = theocracy
 		colonial_company = democracy
 	}
@@ -5692,9 +5962,13 @@ apache = {
 		absolute_monarchy = absolute_monarchy
 		prussian_constitutionalism = prussian_constitutionalism
 		hms_government = hms_government
-		french_bourbon = hms_government
+		unciv_absolute_monarchy = hms_government
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
 		dominion = democracy
 		democracy = democracy
+		federal_democracy = democracy
 		theocracy = democracy
 		colonial_company = democracy
 	}
@@ -5804,5 +6078,182 @@ apache = {
 	
 	#demands_enforced_effect = {
 	#}
+}
+
+slave_revolt = {
+	icon = 13
+	break_alliance_on_win = no
+	
+	area = nation
+	
+	# <this is the government in the country> = <this is what the rebels want>
+	government = {
+		proletarian_dictatorship = proletarian_dictatorship
+		presidential_dictatorship = presidential_dictatorship
+		bourgeois_dictatorship = bourgeois_dictatorship
+		fascist_dictatorship = fascist_dictatorship
+		absolute_monarchy = absolute_monarchy
+		prussian_constitutionalism = prussian_constitutionalism
+		hms_government = hms_government
+		unciv_absolute_monarchy = unciv_absolute_monarchy
+		absolute_empire = absolute_empire
+		semi_constitutional_empire = semi_constitutional_empire
+		constitutional_empire = constitutional_empire
+		dominion = democracy
+		democracy = democracy
+		federal_democracy = democracy
+		theocracy = democracy
+		colonial_company = democracy
+	}
+
+	defection = none					# Will defect to the "best" alternative.
+	independence = none				# Does not strive for independence
+	defect_delay = 18
+	
+	ideology = liberal
+	
+	allow_all_cultures = yes
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+	
+	resilient = yes					# Disbands on retreat
+	reinforcing = yes				# Does not receive reinforcements
+	general = no					# Does use generals
+	smart = no						# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	
+	occupation_mult = 1.1			# The amount of strength this rebel gains from taking provinces	
+
+	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the factions strength
+
+	will_rise = {
+		factor = 1
+		
+		modifier = {
+			war = yes
+			factor = 0.8
+		}
+		
+		modifier = {
+			war_exhaustion = 40
+			factor = 0.95
+		}
+		
+		modifier = {
+			war_exhaustion = 60
+			factor = 0.95
+		}
+		
+		modifier = {
+			war_exhaustion = 80
+			factor = 0.95
+		}
+		
+	}
+	
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 0.25
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { type = slaves }
+				NOT = { is_culture_group = african_diaspora_cultures }
+			}
+		}
+		modifier = {
+			factor = 0
+			country = {
+				slavery = no_slavery
+			}
+		}	
+	}
+ 
+ 	#This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 5
+		}
+		modifier = {
+			factor = 1.5
+			units_in_province = 1
+			not = { units_in_province = 3 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { has_pop_type = slaves }
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			not = { average_militancy = 4 }
+		}
+		modifier = {
+			factor = 1.5
+			not = { average_militancy = 6 }
+		}
+		modifier = {
+			factor = 1.5
+			not = { average_militancy = 2 }
+		}
+	}
+	
+ 	# Province Scope
+ 	#siege_won_trigger = {
+ 	#}
+	
+	siege_won_effect = {
+		add_province_modifier = {
+			name = war_torn
+			duration = 365
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_culture_group = african_diaspora_cultures
+					type = slaves
+				}
+			}
+			reduce_pop = 0.75
+		}
+		
+		any_pop = {
+			limit = {
+				type = slaves
+				location = { has_pop_type = farmers }
+			}
+			pop_type = farmers
+		}
+		
+		any_pop = {
+			limit = {
+				type = slaves
+				location = { has_pop_type = labourers }
+			}
+			pop_type = labourers
+		}
+		
+	}
+	
+
+	# Country scope
+	demands_enforced_trigger = {
+		capital_scope = {
+			controlled_by = REB
+			province_control_days = 90
+		}				
+	}
+	
+	demands_enforced_effect = {
+		political_reform = no_slavery
+		prestige_factor = -1
+		war_exhaustion = 50
+		add_country_modifier = { name = national_confusion duration = 1095 }
+	}
 }
 

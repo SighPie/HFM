@@ -622,11 +622,7 @@ country_event = {
 		prestige = -10
 		relation = { who = FROM value = -100 }
 		diplomatic_influence = { who = FROM value = -100 }
-		casus_belli = {
-			target = FROM
-			type = cut_down_to_size
-			months = 30
-		}
+		leave_alliance = FROM
 	}
 }
 
@@ -635,7 +631,6 @@ country_event = {
 	title = "EVTNAME80103" #The Amban's Demand - Qing vassals to hand over territory to Russia
 	desc = "EVTDESC80103"
 	picture = "asian_administration"
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -646,8 +641,15 @@ country_event = {
 			limit = { is_core = RUS }
 			secede_province = RUS
 		}
+		any_owned = {
+			limit = { is_core = KAZ }
+			secede_province = RUS
+		}
+		any_owned = {
+			limit = { is_core = KOK }
+			secede_province = RUS
+		}
 		1613 = { add_core = MCK }
-
 		FROM = { any_owned = { limit = { is_core = MCK } add_province_modifier = { name = nationalist_agitation duration = 365 } } }
 		FROM = { any_owned = { limit = { is_core = MCK NOT = { is_core = RUS } } add_core = QNG } }
 		ai_chance = {
@@ -715,7 +717,6 @@ country_event = {
 	news_desc_medium = "EVTDESC80110_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC80110_NEWS_SHORT"
 	picture = "asian_administration"
-	
 	is_triggered_only = yes
 	
 	option = {
@@ -727,7 +728,11 @@ country_event = {
 					vassal_of = THIS
 					substate_of = THIS
 				}
-				any_owned_province = { is_core = RUS }
+				OR = {
+					any_owned_province = { is_core = RUS }
+					any_owned_province = { is_core = KAZ }
+					any_owned_province = { is_core = KOK }
+				}
 			}
 			country_event = 80103
 		}
@@ -735,16 +740,22 @@ country_event = {
 			limit = { is_core = RUS }
 			secede_province = RUS
 		}
+		1080 = { remove_core = MCK }
+		
 		ai_chance = {
 			factor = 85
 			modifier = {
-				factor = 0.5
+				factor = 0.8
 				NOT = { war_exhaustion = 10 }
 				1082 = { owner = { part_of_sphere = no } }
 			}
 			modifier = {
-				factor = 0.75
+				factor = 0.8
 				NOT = { war_exhaustion = 5 }
+			}
+			modifier = {
+				factor = 1.1
+				any_greater_power = { war_with = THIS }
 			}
 		}
 	}
@@ -770,7 +781,7 @@ country_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				factor = 1.1
+				factor = 1.05
 				NOT = { war_exhaustion = 25 }
 				1082 = { owner = { part_of_sphere = no } }
 			}
@@ -942,159 +953,6 @@ country_event = {
 		}
 	}
 }
-
-
-country_event = {
-
-	id = 32512
-	title = "EVTNAME32512" #Intervention in Hungary?
-	desc = "EVTDESC32512"
-	picture = "deliberation"
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = RUS
-		war = no
-		has_global_flag = hungarian_revolution_occurred
-		exists = HUN
-		NOT = { truce_with = HUN }
-		AUS = {
-			NOT = { has_country_flag = austria_let_hungary_go }
-			NOT = { truce_with = RUS }
-			war_with = HUN
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 3
-			num_of_revolts = 1
-		}
-		modifier = {
-			factor = 0.5
-			AUS = {
-				any_owned_province = { controlled_by = HUN }
-			}
-		}
-	}
-
-	option = {
-		name = "EVT32512OPTA"
-		prestige = 5
-		casus_belli = {
-			target = HUN
-			type = cut_down_to_size
-			months = 12
-		}
-		war = {
-			target = HUN
-			attacker_goal = {
-				casus_belli = cut_down_to_size
-			}
-		}
-		military_access = AUS
-		random_owned = {
-			limit = {
-				owner = { ai = yes }
-				AUS = { ai = yes }
-			}
-			owner = {
-				relation = {
-					who = AUS
-					value = 300
-				}
-			}
-		}
-		random_owned = {
-			limit = {
-				OR = {
-					owner = { ai = no }
-					AUS = { ai = no }
-				}
-			}
-			owner = {
-				relation = {
-					who = AUS
-					value = 100
-				}
-			}
-		}
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.5
-				HUN = { national_provinces_occupied = .25 }
-			}
-			modifier = {
-				factor = 0.5
-				NOT = {
-					relation = { who = AUS value = 0 }
-				}
-			}
-		}
-	}
-
-	option = {
-		name = "EVT32512OPTB"
-		any_owned = {
-			limit = {
-				NOT = { has_province_modifier = nationalist_agitation }
-				any_core = {
-					OR = {
-						primary_culture = polish
-						primary_culture = lithuanian
-						primary_culture = estonian
-						primary_culture = latvian
-					}
-					exists = no
-				}
-			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 1095
-			}
-		}
-		any_pop = {
-			limit = {
-				is_primary_culture = no
-				location = {
-					any_core = {
-						NOT = { primary_culture = russian }
-					}
-				}
-			}
-			militancy = 4
-			consciousness = 2
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 4
-				HUN = { national_provinces_occupied = .25 }
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					relation = { who = AUS value = 50 }
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					relation = { who = AUS value = 0 }
-				}
-			}
-			modifier = {
-				factor = 0.25
-				relation = { who = AUS value = 50 }
-			}
-		}
-	}
-}
-
-
 
 #Treaty of Tartu
 country_event = {
@@ -2231,9 +2089,12 @@ country_event = {
 		is_vassal = no
 		war = no
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 	}
 	
@@ -2340,9 +2201,12 @@ country_event = {
 	trigger = {
 		tag = RUS
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 			}
 		year = 1870
 		average_consciousness = 3
@@ -2411,9 +2275,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = come_see_me_grigori
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 			}
 		year = 1900
 	}
@@ -2444,9 +2311,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = grigori_arrived
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 			}
 		NOT = { year = 1930 }
 	}
@@ -2485,9 +2355,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = grigori_will_be_exiled
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 			}
 	}
 
@@ -2516,9 +2389,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = grigori_in_power
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		war = yes
 		war_exhaustion = 5
@@ -2550,9 +2426,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = tsar_in_the_front
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { year = 1930 }
 		war = yes
@@ -2595,9 +2474,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = rasputin_killed_by_nobles
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { year = 1930 }
 	}
@@ -2627,9 +2509,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = rasputin_killed_by_peasants
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		average_militancy = 1
 		NOT = { year = 1930 }
@@ -2673,9 +2558,12 @@ country_event = {
 		tag = RUS
 		has_country_flag = rasputin_survived
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
+			government = absolute_monarchy 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { year = 1930 }
 	}

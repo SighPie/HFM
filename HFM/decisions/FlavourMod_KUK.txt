@@ -1,4 +1,7 @@
 political_decisions = {
+	#####################################################
+	#Infrastructure#
+	#####################################################
 	build_the_northern_railway = { #Vienna-Prague Railway
 		picture = whistlestop_tour
 		potential = {
@@ -9,12 +12,12 @@ political_decisions = {
 			NOT = { has_global_flag = build_the_northern_railway }
 		}
 		allow = {
-			money = 10000
+			money = 25000
 			owns = 625
 		}
 		effect = {
 			set_global_flag = build_the_northern_railway
-			treasury = -10000
+			treasury = -25000
 			703 = { infrastructure = 1 }
 			2584 = { infrastructure = 1 }
 			689 = { infrastructure = 1 }
@@ -25,6 +28,7 @@ political_decisions = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = { factor = 0 NOT = { money = 30000 } }
 		}
 	}
 	
@@ -60,9 +64,77 @@ political_decisions = {
 			736 = { infrastructure = 1 }
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { factor = 1 }
+	}
+	
+	#####################################################
+	#1848 Revolutions#
+	#####################################################
+	
+	abdication_of_ferdinand_i = {
+		picture = ferdinand_i
+		potential = {
+			tag = AUS
+			has_global_flag = hungarian_revolution_occurred
+			war_with = HUN
+			OR = {
+				ai = no
+				war_exhaustion = 10
+			}
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}
+			NOT = { has_global_flag = franz_joseph_i }
+			NOT = { year = 1870 }
 		}
+		
+		allow = { war_with = HUN }
+		
+		effect = {
+			set_global_flag = franz_joseph_i 
+			country_event = 99990
+		}
+		
+		ai_will_do = { factor = 1  }
+	}
+	
+	request_russian_intervention = {
+		picture = military_aid
+		potential = {
+			tag = AUS
+			has_global_flag = franz_joseph_i
+			has_global_flag = hungarian_revolution_occurred
+			war_with = HUN
+			exists = HUN
+			NOT = { has_country_flag = austria_let_hungary_go }
+			NOT = { has_country_flag = called_russian_intervention }
+		}
+		
+		allow = {
+			war_with = HUN
+			NOT = { any_greater_power = { war_with = RUS } }
+			RUS = {
+				OR = {
+					government = absolute_empire
+					government = semi_constitutional_empire
+				}
+				is_greater_power = yes
+				NOT = { truce_with = HUN }
+				NOT = { truce_with = THIS }
+			}
+		}
+		
+		effect = {
+			set_country_flag = called_russian_intervention
+			RUS = { country_event = 32512 }
+		}
+		
+		ai_will_do = { factor = 1 }
 	}
 	
 	embraced_jews_in_austria = {
@@ -81,9 +153,12 @@ political_decisions = {
 			war = no
 			year = 1850
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 		
@@ -117,6 +192,14 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	#silvesterpatent = {
+	#
+	#}
+	
+	#####################################################
+	#The German Confederation#
+	#####################################################
 	
 	peace_of_prague = { #Lets AI Austria Take Sigmaringen if they win brother's war/white peace AI Prussia
 		picture = gtfo
@@ -231,7 +314,6 @@ political_decisions = {
 			inherit = NGF
 			inherit = SGF
 			add_accepted_culture = north_german
-			add_accepted_culture = siebenburger
 			add_accepted_culture = volga_german
 			remove_accepted_culture = hungarian
 			set_global_flag = leipzig_congress
@@ -314,7 +396,36 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	#silvesterpatent = {
-	#
-	#}
+	holy_roman_emperor = {
+		picture = german_confederation
+		potential = {
+			tag = GCF
+			capital = 619
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}	
+			has_global_flag = fantasy_countries_enabled
+		}
+	
+		allow = {
+			is_greater_power = yes
+			rank = 1
+			war = no
+			prestige = 250
+		}
+
+		effect = {
+			prestige = -20
+			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { government = absolute_empire } }
+			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { government = semi_constitutional_empire } }
+			random_owned = { limit = { owner = { government = hms_government } } owner = { government = constitutional_empire } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }

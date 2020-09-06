@@ -684,6 +684,12 @@
 		religion = sunni
 		size = 6425
 	}
+	
+	farmers = {
+		culture = uzbek
+		religion = sunni
+		size = 1725
+	}
 }
 #Mawarannahr Region (180000) #see Uzbekistan.txt, Tajikistan.txt, Kirghizstan.txt for balance of region 
 #under the rule of Bukhara in 1836
@@ -755,4 +761,31 @@
 		size = 6000
 	}
 
+}
+
+#Ayteke Bi  
+3298 = {
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 1025
+	}
+
+	clergymen = {
+		culture = uzbek
+		religion = sunni
+		size = 5
+	}
+
+	farmers = {
+		culture = uzbek
+		religion = sunni
+		size = 350
+	}
 }

@@ -56,5 +56,3 @@ govt_flag = {
 	government = absolute_monarchy
 	flag = theocracy
 }
-
-

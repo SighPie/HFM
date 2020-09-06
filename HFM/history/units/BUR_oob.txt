@@ -8,10 +8,17 @@ ENG = {
 	value = -5		#relation
 }
 
+leader = {
+	name = "Tharrawaddy Min"
+	type = land
+	date = 1836.1.1
+	personality = balanced_p
+	background = armchair_general
+}
 
 army = {
 	name = "Army of Burma"
-	location = 1337
+	location = 1334
 	regiment = {
 		name= "1. Brigade"
 		type = irregular
@@ -69,8 +76,8 @@ army = {
 }
 
 army = {
-	name = "Army of Western Burma"
-	location = 1339
+	name = "Army of South Burma"
+	location = 1333
 	regiment = {
 		name= "10. Brigade"
 		type = irregular
@@ -108,4 +115,3 @@ army = {
 	}
 
 }
-

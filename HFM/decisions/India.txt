@@ -179,9 +179,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = rajputana_formed
 			prestige = 10
-			ENG = { 
-				release = RAJ
-			}
+			ENG = { release = RAJ }
 			change_tag = RAJ
 			ENG_1264 = { add_core = RAJ }
 			random_country = {
@@ -276,12 +274,7 @@ political_decisions = {
         potential = {
 			tag = ENG
 			civilized = yes
-			OR = {
-				NOT = { exists = EIC }
-				EIC = {
-					is_vassal = no
-				}
-			}
+			has_country_flag = gov_india
 			NOT = { has_country_flag = mughal_reborn }
 			NOT = { primary_culture = rajput }
 			NOT = { has_global_flag = rajputana_formed }
@@ -423,7 +416,7 @@ political_decisions = {
 				country_event = 11101
 			}
 			RAJ = { 
-				tech_school = unciv_tech_school 
+				tech_school = developing_tech_school 
 				political_reform = regionalism
 				activate_technology = post_napoleonic_thought
 				activate_technology = flintlock_rifles
@@ -492,7 +485,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = baluchistan_formed
 			prestige = 5
-			ENG = {  release = BLC }
+			ENG = { release = BLC }
 			all_core = { add_core = BLC }
 			1221 = { add_core = BLC } 
 			1222 = { add_core = BLC } 
@@ -510,20 +503,18 @@ political_decisions = {
 	}
 	
 	form_baluchistan_agency = {
-	picture = form_baluchistan
+		picture = form_baluchistan
         potential = {
 			tag = ENG
 			civilized = yes
-			OR = {
-				NOT = { exists = EIC }
-				EIC = { is_vassal = no }
-			}
+			has_country_flag = gov_india
 			NOT = { has_global_flag = baluchistan_formed }
 			OR = {
 				any_owned_province = { region = SIN_1288 }
 				any_owned_province = { region = KAL_1221 }
 				KAL = { in_sphere = THIS }
 				MAK = { in_sphere = THIS }
+				LAS = { in_sphere = THIS }
 			}
 		}
 
@@ -537,13 +528,13 @@ political_decisions = {
 					owner = { vassal_of = THIS }
 				}
 			}
-			1222 = { #Makran
+			1222 = { #Las Bela
 				OR = {
 					owned_by = THIS
 					owner = { vassal_of = THIS }
 				}
 			}
-			1219 = {
+			3258 = { #Las Bela
 				OR = {
 					owned_by = THIS
 					owner = { vassal_of = THIS }
@@ -587,12 +578,37 @@ political_decisions = {
 				}
 				country_event = 11101
 			}
+			random_country = {
+				limit = {
+					tag = LAS
+					exists = yes
+					ai = yes
+				}
+				THIS = { inherit = LAS }
+			}
+			random_country = {
+				limit = {
+					tag = LAS
+					exists = yes
+					ai = no
+				}
+				country_event = 11101
+			}
+			
 			1221 = { secede_province = BLC }
 			1222 = { secede_province = BLC }
+			3258 = { secede_province = BLC }
+			random_owned = { 
+				limit = {
+					province_id = 1144
+					NOT = { is_core = PER }
+				}
+				secede_province = BLC
+			}
 			create_vassal = BLC
 			diplomatic_influence = { who = BLC value = 400 }
 			BLC = { 
-				tech_school = unciv_tech_school 
+				tech_school = developing_tech_school 
 				political_reform = regionalism
 				activate_technology = post_napoleonic_thought
 				activate_technology = flintlock_rifles
@@ -611,6 +627,7 @@ political_decisions = {
 				government = colonial_company
 			}
 		}
+		
 		ai_will_do = { factor = 1 }
 	}
 	
@@ -632,12 +649,6 @@ political_decisions = {
 		allow = {
 			war = no
 			is_greater_power = yes
-			1270 = { #Gwalior
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-				}
-			}
 			1271 = { #Indore
 				OR = {
 					owned_by = THIS
@@ -656,12 +667,6 @@ political_decisions = {
 					owner = { vassal_of = THIS }
 				}
 			}
-			1274 = { #Rewa
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-				}
-			}
 			
 		}
 
@@ -669,14 +674,6 @@ political_decisions = {
 			set_global_flag = formed_central_india_agency
 			prestige = 5
 			badboy = -3
-			random_country = {
-				limit = { tag = GWA exists = yes ai = yes }
-				THIS = { inherit = GWA }
-			}
-			random_country = {
-				limit = { tag = GWA exists = yes ai = no }
-				country_event = 11101
-			}
 			random_country = {
 				limit = { tag = IND exists = yes ai = yes }
 				THIS = { inherit = IND }
@@ -694,34 +691,24 @@ political_decisions = {
 				country_event = 11101
 			}
 			random_country = {
-				limit = { tag = REW exists = yes ai = yes }
-				THIS = { inherit = REW }
+				limit = { tag = BUN exists = yes ai = yes }
+				THIS = { inherit = BUN }
 			}
 			random_country = {
-				limit = { tag = REW exists = yes ai = no }
+				limit = { tag = BUN exists = yes ai = no }
 				country_event = 11101
 			}
-			random_country = {
-				limit = { tag = CHH exists = yes ai = yes }
-				THIS = { inherit = CHH }
-			}
-			random_country = {
-				limit = { tag = CHH exists = yes ai = no }
-				country_event = 11101
-			}
-			1270 = { secede_province = BUN add_core = BUN }
-			1271 = { secede_province = BUN add_core = BUN }
-			1272 = { secede_province = BUN add_core = BUN }
-			1273 = { secede_province = BUN add_core = BUN }
-			1274 = { secede_province = BUN add_core = BUN }
-			1282 = { secede_province = BUN add_core = BUN }
 			create_vassal = BUN
 			diplomatic_influence = { who = BUN value = 400 }
 			BUN = { 
 				add_accepted_culture = marathi
 				political_reform = regionalism
 				capital = 1271
-				tech_school = unciv_tech_school 
+				tech_school = developing_tech_school 
+				civilized = yes
+				military_access = ENG
+				government = colonial_company
+				create_alliance = ENG
 				activate_technology = post_napoleonic_thought
 				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
@@ -731,12 +718,7 @@ political_decisions = {
 				activate_technology = experimental_railroad
 				activate_technology = early_railroad
 				activate_technology = piston_steam_engine
-				activate_technology = freedom_of_trade
-			}
-			BUN = { 
-				civilized = yes
-				military_access = ENG
-				government = colonial_company
+				activate_technology = freedom_of_trade	
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -765,6 +747,9 @@ political_decisions = {
 
 		effect = {
 			set_global_flag = durrani_formed
+			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { government = absolute_empire } }
+			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { government = semi_constitutional_empire } }
+			random_owned = { limit = { owner = { government = hms_government } } owner = { government = constitutional_empire } }
 			prestige = 5
 			all_core = {
 				add_core = DUR
@@ -842,15 +827,20 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = singh
+            remove_country_modifier = uncivilized_isolationism
 			add_country_modifier = {
 				name = western_influences
 				duration = -1
 			}
+            random_owned = {
+                limit = { owner = { NOT = { border_policy = open_borders } } }
+                owner = { political_reform = open_borders }
+            }
 			add_country_modifier = {
 				name = shastar_vidya
 				duration = -1
 			}
-			plurality = 5
+            plurality = 5
 		}
 		ai_will_do = {
 			factor = 1
@@ -1043,10 +1033,11 @@ political_decisions = {
 			OR = { 
 				1236 = { any_neighbor_province = { owned_by = EIC average_militancy = 5 } }
 				1236 = { any_neighbor_province = { owned_by = ENG } }
+				civilized = yes
 			}
 		}
 		
-		effect = {	
+		effect = {
 			set_country_flag = mughal_independence
 			any_pop = { limit = { has_pop_religion = sunni } militancy = -9 }
 			any_pop = { limit = { has_pop_religion = sikh } consciousness = 3 }
@@ -1247,7 +1238,7 @@ political_decisions = {
 			any_owned = { limit = { is_core = PAK } any_pop = { limit = { OR = { has_pop_religion = sunni has_pop_religion = shiite } } militancy = -2 consciousness = 5 } }
 			1223 = { remove_core = CRL }
 			PAK = {
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				all_core = {
 					limit = { NOT = { is_core = KAS } }
 					remove_core = HND
@@ -1332,4 +1323,100 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+
+    create_india = {
+    picture = form_india
+        potential = {
+            NOT = {
+                has_country_flag = post_colonial_country
+                exists = HND
+                has_country_flag = mughal_reborn
+                is_culture_group = south_asian
+                is_culture_group = indo_iranian
+                tag = PAK
+                tag = MUG
+                tag = NEP
+            }
+            owns = 1251
+            owns = 1261
+            owns = 1305
+            owns = 1309
+            owns = 1236
+            owns = 1272
+            owns = 1297
+        }
+
+        allow = {
+            war = no
+            mass_politics = 1
+        }
+
+        effect = {
+            prestige = 5
+
+            HND = {
+                any_pop = { militancy = -6 }
+                tech_school = developing_tech_school
+                set_country_flag = post_colonial_country
+                add_accepted_culture = avadhi
+                add_accepted_culture = marathi
+                add_accepted_culture = rajput
+                add_accepted_culture = bihari
+                add_accepted_culture = bengali
+                add_accepted_culture = kanauji
+                add_accepted_culture = panjabi
+                add_accepted_culture = kashmiri
+                add_accepted_culture = manipuri
+                add_accepted_culture = assamese
+                add_accepted_culture = oriya
+                add_accepted_culture = gujarati
+            }
+            release_vassal = HND
+            create_alliance = HND
+            relation = { who = HND value = 400 }
+            diplomatic_influence = { who = HND value = 400 }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = {
+                    has_global_flag = pakistan_born
+                    year = 1915
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { 1251 = { state_scope = { average_militancy = 7 } } }
+            }
+        }
+    }
+
+    end_sikh_war = {
+        picture = form_india
+        potential = {
+            war_with = PNJ
+            alliance_with = ENG
+            PNJ = {
+                exists = yes
+                war_with = ENG
+            }
+            NOT = {
+                is_culture_group = south_asian
+                is_culture_group = indo_iranian
+                year = 1850
+                tag = PNJ
+                tag = ENG
+            }
+        }
+
+        allow = {
+            war = yes
+        }
+
+        effect = {
+            PNJ = { end_war = THIS }
+        }
+        ai_will_do = { factor = 1 }
+    }
 }

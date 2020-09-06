@@ -64,6 +64,11 @@ nonstate_consciousness = 0
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 oob = "BUR_oob.txt"
 1861.1.1 = {

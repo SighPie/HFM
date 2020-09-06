@@ -97,68 +97,36 @@
 		size = 1800
 	}
 }
-#Yap (2200/550 POPS)
-2519 = {
-	aristocrats = {
-		culture = micronesian
-		religion = animist
-		size = 5
-	}
-
-	clergymen = {
-		culture = micronesian
-		religion = animist
-		size = 10
-	}
-
-	artisans = {
-		culture = micronesian
-		religion = animist
-		size = 25
-	}
-
-	soldiers = {
-		culture = micronesian
-		religion = animist
-		size = 5
-	}
-
-	farmers = {
-		culture = micronesian
-		religion = animist
-		size = 485
-	}
-}
 #Truk (3140/785 POPS)
 2579 = {
 	aristocrats = {
 		culture = micronesian
 		religion = animist
-		size = 15
+		size = 20
 	}
 
 	clergymen = {
 		culture = micronesian
 		religion = animist
-		size = 20
+		size = 30
 	}
 
 	artisans = {
 		culture = micronesian
 		religion = animist
-		size = 40
+		size = 60
 	}
 
 	soldiers = {
 		culture = micronesian
 		religion = animist
-		size = 10
+		size = 15
 	}
 
 	farmers = {
 		culture = micronesian
 		religion = animist
-		size = 700
+		size = 1085
 	}
 }
 #Ponape (2660/665 POPS)

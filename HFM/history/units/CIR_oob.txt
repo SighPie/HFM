@@ -1,4 +1,3 @@
-
 army = {
 	name = "Circassian Army"
 	location = 1051
@@ -43,4 +42,3 @@ army = {
 		personality = resolute
 	}
 }
-

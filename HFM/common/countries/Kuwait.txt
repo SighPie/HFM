@@ -32,7 +32,7 @@ party = {
 }
 
 party = {
-	name = "IRQ_conservative"
+	name = "KWT_conservative"
 	start_date = 1830.1.1
 	end_date = 2000.1.1
 

@@ -1,7 +1,9 @@
 capital = 826
 primary_culture = greek
+culture = british
+culture = north_italian
 religion = orthodox
-government = colonial_company
+government = dominion
 plurality = 10.0
 nationalvalue = nv_productivity
 literacy = 0.08
@@ -12,12 +14,12 @@ prestige = 1
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
+vote_franschise = wealth_voting
 public_meetings = yes_meeting
-press_rights = state_press
+press_rights = censored_press
 trade_unions = no_trade_unions
 voting_system = first_past_the_post
-political_parties = underground_parties
+political_parties = non_secret_ballots
 
 # Social Reforms
 wage_reform = no_minimum_wage
@@ -40,7 +42,7 @@ colonial_policy = no_colonies
 
 set_country_flag = orthodox_country
 
-ruling_party = ION_conservative_2
+ruling_party = ION_conservative
 upper_house = {
 	fascist = 0
 	liberal = 25
@@ -120,7 +122,7 @@ oob = "ION_oob.txt"
 	piston_steam_engine = 1
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
-	mechanized_mining = 1
+    hot_blast = 1
 	experimental_railroad = 1
 	basic_chemistry = 1
 	medicine = 1

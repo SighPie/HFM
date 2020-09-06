@@ -56,4 +56,3 @@ govt_flag = {
 	government = bourgeois_dictatorship
 	flag = theocracy
 }
-

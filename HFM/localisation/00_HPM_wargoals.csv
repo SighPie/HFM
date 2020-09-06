@@ -6,6 +6,17 @@ NORMAL_WAR_NAME_REPARATIONS_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;
 AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;The $ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
 NORMAL_WAR_NAME_REPARATIONS;The $ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+permanent_colonial_claim;Reconquer Colony;;;;;;;;;;;;;x,,,
+permanent_colonial_claim_short;Reconquer Colony;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+permanent_colonial_claim_desc;Acquire a §Ystate§W that is a §Yrightful colony§W of ours according to the Great Powers Conference.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+permanent_colonial_claim_setup;Acquire $STATE$ from $RECIPIENT$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+AGRESSION_WAR_NAME_REPARATIONS_PEU_CHL;$ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_NAME_REPARATIONS_BOL_CHL;$ORDER$War of the Pacific;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_WAR_NAME_REPARATIONS_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_WAR_NAME_REPARATIONS_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+AGRESSION_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_CUT_DOWN_TO_SIZE_WAR_NAME_CHL_PBC;$ORDER$War of the Confederation;;;;;;;;;;;;;;;;;;;;;;;;x
+NORMAL_WAR_NAME_REPARATIONS;$ORDER$$FIRST$-$SECOND$ War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 AGRESSION_WAR_NAME_REPARATIONS;$ORDER$War of $FIRST$ Aggression;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 colonial_conquest;Colonial Conquest;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 colonial_conquest_desc;Acquire an enemy §Ystate§W where we have §Ycolonial claims§W, but this will gives us a random amount of §Rinfamy§W from §R0.5 to 2§W.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
@@ -220,10 +231,14 @@ take_from_sphere_AI;Take from sphere of influence;Prendre ?la sphère d'influence
 take_from_sphere_AI_desc;Remove a country from someone's §YSphere of Influence§W and add it to our own;Supprimer un pays de la §Ysphère d'influence§W de quelqu'un et l'ajouter ?la nôtre;Entfernen Sie ein Land aus einer anderen §YEinflusssphäre§W und fügen Sie es Ihrer eigenen hinzu.;;;;;;;;;;;x,,,
 take_from_sphere_AI_short;Take $THIRD$ from sphere of influence;Prendre $THIRD$ ?la sphère d'influence;$THIRD$ aus Einflusssphäre entfernen;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 take_from_sphere_AI_setup;Take $THIRD$ from $RECIPIENT$'s sphere of influence;Prendre $THIRD$ ?la sphère d'influence de $RECIPIENT$;$THIRD$ aus Einflusssphäre von $RECIPIENT$ entfernen;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
-free_peoples_AI;Free people;Peuple libre;Freies Volk;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
-free_peoples_AI_desc;Liberate a §Ycountry§W from its oppressors;Libérer un §Ypays§W de ses oppresseurs;Befreien Sie ein §YLand§W von seinen Unterdrückern.;;;;;;;;;;;x,,,
+free_peoples_AI;Free People;Peuple libre;Freies Volk;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+free_peoples_AI_desc;Liberate a §Ycountry's§W §Rsingle state§W from its oppressors.;Libérer un §Ypays§W de ses oppresseurs;Befreien Sie ein §YLand§W von seinen Unterdrückern.;;;;;;;;;;;x,,,
 free_peoples_AI_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 free_peoples_AI_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zurück;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+free_peoples;Free People;Peuple libre;Freies Volk;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+free_peoples_AI_desc;Liberate a §Ycountry's§W §Rsingle state§W from its oppressors.;Libérer un §Ypays§W de ses oppresseurs;Befreien Sie ein §YLand§W von seinen Unterdrückern.;;;;;;;;;;;x,,,
+free_peoples_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+free_peoples_setup;Hand $STATE$ back to $THIRD$ from $RECIPIENT$;Prendre $STATE$ ?$RECIPIENT$ pour le rendre ?$THIRD$;Geben Sie $STATE$ an $THIRD$ von $RECIPIENT$ zurück;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 free_allied_cores;Free Allied Cores;Peuple libre;Freies Volk;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 free_allied_cores_desc;Liberate cores belonging to an §Yallied country§W in your sphere;Libérer un §Ypays§W de ses oppresseurs;Befreien Sie ein §YLand§W von seinen Unterdrückern.;;;;;;;;;;;x,,,
 free_allied_cores_short;$THIRD$ acquires $STATE$;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
@@ -252,6 +267,22 @@ unification_humiliate;Assert Hegemony;Imposer l'hégémonie;Vorherrschaft durchset
 unification_humiliate_desc;Remove a country from someone's §YSphere of Influence§W and add it to our own;Supprimer un pays de la §Ysphère d'influence§W de quelqu'un et l'ajouter ?la nôtre;Entfernen Sie ein Land aus einer anderen §YEinflusssphäre§W und fügen Sie es Ihrer eigenen hinzu.;;;;;;;;;;;x,,,
 unification_humiliate_setup;Take $THIRD$ from $RECIPIENT$'s sphere of influence;Prendre $THIRD$ ?la sphère d'influence de $RECIPIENT$;$THIRD$ aus Einflusssphäre von $RECIPIENT$ entfernen;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 unification_humiliate_short;Take $THIRD$ from sphere of influence;Prendre $THIRD$ ?la sphère d'influence;$THIRD$ aus Einflusssphäre entfernen;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+claim_colonial_region;Effective Occupation - Demand State;;;;;;;;;;;;;x,,,
+claim_colonial_region_desc;Force an §Yuncivilized country§W to secede territory that we have claims on according to Article 35 of the West Africa Conference, which delineates the doctrine of effective occupation.;;;;;;;;;;;;;x,,,
+claim_colonial_region_setup;Demand that $RECIPIENT$ secede territory that we have claims on according to Article 35 of the West Africa Conference, which delineates the doctrine of effective occupation.;;;;;;;;;;;;;x,,,
+claim_colonial_region_short;Demand $STATE$;;;;;;;;;;;;;x,,,
+claim_colonial_region_full;Effective Occupation - Annex;;;;;;;;;;;;;x,,,
+claim_colonial_region_full_desc;Force an §Yuncivilized country§W to become a protectorate according to Article 33 of the West Africa Conference, which delineates the doctrine of spheres of influence.;;;;;;;;;;;;;x,,,
+claim_colonial_region_full_setup;Force $RECIPIENT$ to become a protectorate according to Article 33 of the West Africa Conference, which delineates the doctrine of spheres of influence.;;;;;;;;;;;;;x,,,
+claim_colonial_region_full_short;Annex $RECIPIENT$;;;;;;;;;;;;;x,,,
+colonial_conquest;Imperialism - Demand State;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+colonial_conquest_desc;Acquire a §Ystate§W from an §Yuncivilized country§W where we have §Ycolonial claims§W. This will give §R0.5 to 2§W infamy and we will have to §Ywait 1 to 5 years§W before we are able to use Imperialism Casus Bellis again.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+colonial_conquest_setup;Acquire $STATE$ from $RECIPIENT$. This will give §R0.5 to 2§W infamy and we will have to §Ywait 1 to 5 years§W before we are able to use Imperialism Casus Bellis again.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+colonial_conquest_short;Acquire $STATE$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+colonial_conquest_full;Imperialism - Annex;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+colonial_conquest_full_desc;Force an §Yuncivilized country§W that we have §Ycolonial claims§W on to become a protectorate. This will give §R0.5 to 2§W infamy and we will have to §Ywait 5 years§W before we are able to use Imperialism Casus Bellis again.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+colonial_conquest_full_setup;Force $RECIPIENT$ to become a protectorate. This will give §R0.5 to 2§W infamy and we will have to §Ywait 5 years§W before we are able to use Imperialism Casus Bellis again.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+colonial_conquest_full_short;Annex $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
 annex_africa;Scramble for Africa - Demand State;;;;;;;;;;;;;x,,,
 annex_africa_desc;Force an §Yuncivilized country§W to secede territory according to rules set at the Conference of Great Powers;;;;;;;;;;;;;x,,,
 annex_africa_setup;Demand that $RECIPIENT$ secede territory according to rules set at the Conference of Great Powers;;;;;;;;;;;;;x,,,

@@ -298,7 +298,10 @@ country_event = {
 			tag = IBR
 		}
 		year = 1854
-		government = hms_government
+		OR = {
+			government = hms_government
+			government = constitutional_empire
+		}
 		NOT = { year = 1858 }
 		NOT = { money = 30000 }
 	}
@@ -558,7 +561,10 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = SIC
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 			relation = {
 				who = THIS
@@ -574,7 +580,10 @@ country_event = {
 		any_country = {
 			limit = {
 				neighbour = THIS
-				NOT = { government = absolute_monarchy }
+				NOT = { 
+					government = absolute_monarchy 
+					government = absolute_empire
+				}
 			}
 			any_pop = {
 				scaled_militancy = {
@@ -828,9 +837,12 @@ country_event = {
 		tag = SPA
 		NOT = { has_global_flag = carlists_pacified }
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 			government = democracy
 		}
 		NOT = {
@@ -1015,9 +1027,12 @@ province_event = {
 		owner = {
 			tag = SPA
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 				government = democracy
 			}
 		}
@@ -1206,9 +1221,12 @@ province_event = {
 		owner = {
 			tag = SPA
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 				government = democracy
 			}
 			NOT = {
@@ -1572,9 +1590,12 @@ country_event = {
 		tag = SPC
 		NOT = { has_global_flag = carlists_pacified }
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = {
 			any_owned_province = { has_province_modifier = christino_sympathies }
@@ -1724,9 +1745,12 @@ province_event = {
 		owner = {
 			tag = SPC
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 		any_neighbor_province = { has_province_modifier = carlist_sympathies }
@@ -1891,9 +1915,12 @@ province_event = {
 		owner = {
 			tag = SPC
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = {
 				check_variable = {
@@ -2165,8 +2192,10 @@ country_event = {
 		tag = SPA
 		year = 1865
 		OR = {
-			government = hms_government
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
+			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = { has_global_flag = carlists_pacified }
 		OR = {
@@ -2507,9 +2536,12 @@ country_event = {
 		tag = SPA
 		has_country_flag = king_leopold_rules
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			AND = {
@@ -2668,9 +2700,12 @@ country_event = {
 		tag = SPA
 		has_country_flag = king_amadeo_rules
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			average_militancy = 3
@@ -3384,8 +3419,9 @@ country_event = {
 				factor = 0
 				badboy = 0.6
 				OR = {
-					government = democracy
 					government = hms_government
+					government = democracy
+					government = constitutional_empire
 				}
 			}
 		}
@@ -3414,9 +3450,12 @@ country_event = {
 					war = no
 					is_greater_power = yes
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -3428,9 +3467,12 @@ country_event = {
 					war = no
 					is_greater_power = yes
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -3971,9 +4013,12 @@ country_event = {
 		owns = 1689
 		OR = {
 			government = hms_government
-			government = absolute_monarchy
 			government = prussian_constitutionalism
-			}
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}
 		MOR = {
 			NOT = { has_leader = "Sultan Abd al-Rahman" }
 			owns = 1695
@@ -4253,7 +4298,7 @@ country_event = {
 			capital = 1686
 			government = hms_government
 			prestige = -50
-			tech_school =  unciv_tech_school
+			tech_school =  developing_tech_school
 		}
 		FROM = {
 			create_vassal = MOR

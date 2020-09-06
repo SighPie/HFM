@@ -2,6 +2,34 @@ ENG = {
 	value = 50
 }
 
+FDL = {
+	value = -50
+}
+
+KTH = {
+	value = -50
+}
+
+MHR = {
+	value = -50
+}
+
+LHJ = {
+	value = -50
+}
+
+NYE = {
+	value = -150
+}
+
+leader = {
+	name = "Al Saud"
+	type = land
+	date = 1836.1.1
+	personality = deeply_religious
+	background = amateur
+}
+
 army = {
 	name = "Ibn Saud's Army"
 	location = 1157
@@ -21,4 +49,3 @@ army = {
 		home = 1164
 	}
 }
-

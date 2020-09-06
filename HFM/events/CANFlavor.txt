@@ -1,79 +1,79 @@
 #############################################################
-#															#
-#                  	Pre-Independence Events					#
-#															#
+#                                                            #
+#                      Pre-Independence Events                    #
+#                                                            #
 #############################################################
 
 #Rebellions of 1837
 country_event = {
-	id = 44305
-	title = "EVTNAME44305"
-	desc = "EVTDESC44305"
-	news = yes
-	news_title = "EVTNAME44305_NEWS_TITLE"
-	news_desc_long = "EVTDESC44305_NEWS_LONG"
-	news_desc_medium = "EVTDESC44305_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC44305_NEWS_SHORT"
-	picture = "rebellion"
-	
-	trigger = {
-		OR = {
-			tag = ENG
-			tag = ENL
-		}
-		owns = 57
-		NOT = {
-			exists = CAN
-			has_country_flag = rebellion_1837_begun
-			has_country_flag = lord_durhams_report
-		}
-		year = 1837
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	option = {
-		name = "EVT44305OPTA"
-		set_country_flag = rebellion_1837_begun
-		any_pop = {
-			limit = {
-				has_pop_culture = anglo_canadian
-				location = { is_core = CAN }
-			}
-			consciousness = 6
-			militancy = 8
-			ideology = {
-				value = liberal
-				factor = 0.30
-			}
-		}
-		any_pop = {
-			limit = {
-				has_pop_culture = french_canadian
-				location = { is_core = QUE }
-			}
-			consciousness = 6
-			militancy = 8
-			ideology = {
-				value = liberal
-				factor = 0.30
-			}
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = CAN
-					is_core = QUE
-				}
-			}
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 365
-			}
-		}
-	}
+    id = 44305
+    title = "EVTNAME44305"
+    desc = "EVTDESC44305"
+    news = yes
+    news_title = "EVTNAME44305_NEWS_TITLE"
+    news_desc_long = "EVTDESC44305_NEWS_LONG"
+    news_desc_medium = "EVTDESC44305_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC44305_NEWS_SHORT"
+    picture = "rebellion"
+
+    trigger = {
+        OR = {
+            tag = ENG
+            tag = ENL
+        }
+        owns = 57
+        NOT = {
+            exists = CAN
+            has_country_flag = rebellion_1837_begun
+            has_country_flag = lord_durhams_report
+        }
+        year = 1837
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "EVT44305OPTA"
+        set_country_flag = rebellion_1837_begun
+        any_pop = {
+            limit = {
+                has_pop_culture = anglo_canadian
+                location = { is_core = CAN }
+            }
+            consciousness = 6
+            militancy = 8
+            ideology = {
+                value = liberal
+                factor = 0.30
+            }
+        }
+        any_pop = {
+            limit = {
+                has_pop_culture = french_canadian
+                location = { is_core = QUE }
+            }
+            consciousness = 6
+            militancy = 8
+            ideology = {
+                value = liberal
+                factor = 0.30
+            }
+        }
+        any_owned = {
+            limit = {
+                OR = {
+                    is_core = CAN
+                    is_core = QUE
+                }
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 365
+            }
+        }
+    }
 }
 
 #Lord Durham's Report
@@ -92,8 +92,9 @@ country_event = {
 		owns = 65
 		has_country_flag = rebellion_1837_begun
 		OR = {
-			government = democracy
 			government = hms_government
+			government = democracy
+			government = constitutional_empire
 		}
 		NOT = {
 			has_country_flag = lord_durhams_report
@@ -139,6 +140,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 2
+				RPL = { ai = no }
 			}
 		}
 	}
@@ -261,6 +266,10 @@ country_event = {
 			modifier = {
 				factor = 0.75
 				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 2
+				RPL = { ai = no }
 			}
 		}
 	}
@@ -394,21 +403,20 @@ country_event = {
 		}
 		relation = {
 			who = CAN
-			value = 200
+            value = 400
 		}
 		diplomatic_influence = {
 			who = CAN
-			value = 200
+            value = 400
 		}
 		any_pop = {
 			consciousness = 1
 		}
 		ai_chance = {
-			factor = 85
+            factor = 80
 			modifier = {
 				factor = 0
 				OR = {
-					government = proletarian_dictatorship
 					government = bourgeois_dictatorship
 					government = fascist_dictatorship
 					government = presidential_dictatorship
@@ -416,13 +424,20 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 1.5
 				government = democracy
 			}
 			modifier = {
+                factor = 5
+                has_global_flag = berlin_conference
+            }
+            modifier = {
 				factor = 0.75
 				war_policy = jingoism
 			}
@@ -442,12 +457,16 @@ country_event = {
 				factor = 1.2
 				militancy = 5
 			}
-			
+			modifier = {
+				factor = 2
+				RPL = { ai = no }
+			}
 		}	
 	}
 	option = {
 		name = "EVT44315OPTB"
 		set_country_flag = CAN_independence_refused
+        remove_accepted_culture = anglo_canadian
 		any_owned = {
 			limit = { is_core = CAN }
 			add_province_modifier = {
@@ -461,10 +480,13 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 15
+            factor = 20
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -512,6 +534,7 @@ country_event = {
 				remove_core = ENG
 			}
 		}
+        remove_accepted_culture = anglo_canadian
 		release_vassal = CAN
 		CAN = {
 			prestige = -100
@@ -615,7 +638,9 @@ country_event = {
 			who = QUE
 			value = 200
 		}
-		any_pop = { consciousness = 1 }
+        any_pop = {
+            consciousness = 1
+        }
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -629,7 +654,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -681,7 +709,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -854,7 +885,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -906,7 +940,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -1105,7 +1142,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -1157,7 +1197,10 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -1252,6 +1295,7 @@ country_event = {
 		OR = {
 			government = hms_government
 			government = democracy
+			government = constitutional_empire
 		}
 		OR = {
 			any_owned_province = {
@@ -1283,6 +1327,7 @@ country_event = {
 						government = dominion
 						government = hms_government
 						government = democracy
+						government = constitutional_empire
 					}
 				}
 			}
@@ -1399,9 +1444,7 @@ country_event = {
 		name = "EVT44321OPTA"
 		set_country_flag = agreed_ruperts_land
 		prestige = 10
-		FROM = {
-			treasury = -100000
-		}
+		FROM = { treasury = -100000 }
 		#ENG_6 = {
 		#	remove_core = RPL
 		#	add_core = CAN
@@ -1481,7 +1524,14 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+            factor = 95
+            modifier = {
+                factor = 0
+                OR = {
+                    has_country_modifier = in_bankrupcy
+                    has_country_modifier = generalised_debt_default
+                }
+            }
 		}
 	}
 	
@@ -1643,6 +1693,7 @@ country_event = {
 		OR = {
 			government = hms_government
 			government = democracy
+			government = constitutional_empire
 		}
 		has_country_flag = british_columbia_organized
 		any_owned_province = {
@@ -1664,6 +1715,10 @@ country_event = {
 				}
 				AND = {
 					government = democracy
+					relation = { who = THIS value = 100 }
+				}
+				AND = {
+					government = constitutional_empire
 					relation = { who = THIS value = 100 }
 				}
 			}

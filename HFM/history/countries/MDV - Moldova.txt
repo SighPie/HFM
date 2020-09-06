@@ -27,7 +27,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = two_year_draft
 debt_law = peonage
@@ -75,4 +74,3 @@ consciousness = 2
 nonstate_consciousness = 0
 
 oob = "MOL_oob.txt"
-

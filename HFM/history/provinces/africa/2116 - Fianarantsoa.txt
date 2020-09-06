@@ -2,5 +2,5 @@ owner = MAD
 controller = MAD
 add_core = MAD
 terrain = montane_forest
-trade_goods = coal
+trade_goods = tropical_wood
 life_rating = 35

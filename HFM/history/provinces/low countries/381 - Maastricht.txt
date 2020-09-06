@@ -4,6 +4,7 @@ add_core = NET
 add_core = BEL
 trade_goods = coal
 life_rating = 35
+terrain = mining_district
 #state_building = {
 #	level = 1
 #	building = canned_food_factory

@@ -114,6 +114,10 @@ country_event = {
 				factor = 100
 				owner = { tag = D01 }
 			}
+			modifier = {
+				factor = 2.0
+				owner = { civilized = no }
+			}
 		}
 	}
 	
@@ -185,6 +189,10 @@ country_event = {
 					province_id = 129 #Oklahoma
 				}
 			}
+			modifier = {
+				factor = 0.5
+				owner = { civilized = no }
+			}
 		}		
 	}
 }
@@ -219,7 +227,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { tag = FROM }
-		NOT = { has_country_modifier = neutrality }
+		NOT = { has_country_modifier = neutrality_modifier }
 		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 
@@ -259,7 +267,7 @@ country_event = {
 	picture = "Bankruptcy"
 	trigger = {
 		NOT = { tag = FROM }
-		NOT = { has_country_modifier = neutrality }
+		NOT = { has_country_modifier = neutrality_modifier }
 		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 
@@ -303,7 +311,7 @@ country_event = {
 	picture = "stock_crash"
 	trigger = {
 		NOT = { tag = FROM }
-		NOT = { has_country_modifier = neutrality }
+		NOT = { has_country_modifier = neutrality_modifier }
 		NOT = { has_country_flag = bankruptcy_events_disabled }
 	}
 

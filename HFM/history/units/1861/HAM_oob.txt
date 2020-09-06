@@ -1,5 +1,5 @@
 army = {
-	name = "Hamburgische Armee"
+	name = "Hanseatische Bürgergarde"
 	location = 528
 	regiment = {
 		name= "Hamburgische Infanterie-Brigade"

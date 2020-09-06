@@ -32,5 +32,3 @@ regiment = {
 	home = 1900
 	}
 }
-
-

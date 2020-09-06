@@ -46,30 +46,32 @@ army = {
 	name = "Army of the Massina Jihad"
 	location = 1804
 	
-regiment = {
+	regiment = {
 		name= "Massina Cavalry"	
 		type = cavalry
-		home = 1804	}
+		home = 1804	
+	}
 
 
-regiment = {
+	regiment = {
 		name= "1st Massina Jihadis"
 		type = irregular
-	home = 1804
+		home = 1804
 	}
 
 
-regiment = {
+	regiment = {
 		name= "2nd Massina Jihadis"
 		type = irregular
-	home = 1799
+		home = 1803
 	}
 
 
-regiment = {
+	regiment = {
 		name= "3rd Massina Jihadis"
 		type = irregular
-	home = 1906	}
+		home = 1803	
+	}
 }
 
 

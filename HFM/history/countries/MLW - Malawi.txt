@@ -3,7 +3,7 @@ primary_culture = chewa
 culture = lomwe
 culture = lunda
 culture = yao
-religion = protestant
+religion = animist
 government = democracy
 plurality = 0.0
 nationalvalue = nv_order
@@ -38,9 +38,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
-set_country_flag = protestant_country
-
-set_country_flag = post_colonial_country
+set_country_flag = animist_country
 
 ruling_party = MLW_reactionary
 upper_house = {

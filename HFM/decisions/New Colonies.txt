@@ -60,7 +60,7 @@ political_decisions = {
 			
 			ARO = {
 				government = presidential_dictatorship
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				nationalvalue = nv_tradition
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -84,7 +84,7 @@ political_decisions = {
 			NGR = {
 				primary_culture = THIS
 				add_accepted_culture = yoruba
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -322,7 +322,7 @@ political_decisions = {
 			TOG = {
 				primary_culture = THIS
 				add_accepted_culture = ewe
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -493,7 +493,7 @@ political_decisions = {
 			IVC = {
 				primary_culture = THIS
 				add_accepted_culture = dyula
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -657,7 +657,7 @@ political_decisions = {
 			SLE = {
 				primary_culture = THIS
 				add_accepted_culture = western_nigritic
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -812,7 +812,7 @@ political_decisions = {
 			GNE = {
 				primary_culture = THIS
 				add_accepted_culture = mande
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -867,10 +867,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -944,10 +944,10 @@ political_decisions = {
 			NOT = {
 				has_global_flag = senegal_organized
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1790
 		}
@@ -978,7 +978,7 @@ political_decisions = {
 			SNG = {
 				primary_culture = THIS
 				add_accepted_culture = wolof
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 			}
 		}
@@ -996,10 +996,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -1041,10 +1041,10 @@ political_decisions = {
 			NOT = {
 				has_global_flag = niger_organized
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1808
 			1812 = { empty = no }
@@ -1078,7 +1078,7 @@ political_decisions = {
 			NIG = {
 				primary_culture = THIS
 				add_accepted_culture = hausa
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -1133,10 +1133,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -1219,10 +1219,10 @@ political_decisions = {
 			NOT = {
 				has_global_flag = chad_organized
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 			owns = 1818
 		}
@@ -1256,14 +1256,21 @@ political_decisions = {
 						region = ENG_1818
 						region = ENG_1825
 					}
-					NOT = { terrain = desert }
+					NOT = { 
+						terrain = desert 
+						life_rating = 32
+					}
 				}
-				life_rating = 25
+				life_rating = 17
+				remove_core = BRM
+				remove_core = ADW
+				remove_core = KBO
+				remove_core = WAD
 			}
 			CHD = {
 				primary_culture = THIS
 				add_accepted_culture = sara
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -1317,10 +1324,10 @@ political_decisions = {
 			}
 			NOT = {
 				capital_scope = { continent = africa } 
- capital_scope = { continent = west_africa } 
- capital_scope = { continent = central_africa } 
- capital_scope = { continent = east_africa } 
- capital_scope = { continent = south_west_africa }
+				capital_scope = { continent = west_africa } 
+				capital_scope = { continent = central_africa } 
+				capital_scope = { continent = east_africa } 
+				capital_scope = { continent = south_west_africa }
 			}
 		}
 		
@@ -1441,7 +1448,7 @@ political_decisions = {
 			}
 			CMR = {
 				primary_culture = THIS
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				add_accepted_culture = forest_bantu
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
@@ -1614,7 +1621,7 @@ political_decisions = {
 			GAB = {
 				primary_culture = THIS
 				add_accepted_culture = fang
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -1772,7 +1779,7 @@ political_decisions = {
 			any_owned = { limit = { is_core = CGO } remove_core = LOA }
 			CGO = {
 				primary_culture = THIS
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				add_accepted_culture = bakongo
 				clr_country_flag = sunni_country
@@ -1971,7 +1978,7 @@ political_decisions = {
 			}
 			CNG = {
 				primary_culture = THIS
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -2180,7 +2187,7 @@ political_decisions = {
 			ZAM = {
 				primary_culture = THIS
 				add_accepted_culture = lunda
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				all_core = { remove_core = LUN remove_core = KZB }
 				clr_country_flag = sunni_country
@@ -2377,7 +2384,7 @@ political_decisions = {
 			KNY = {
 				primary_culture = THIS
 				add_accepted_culture = kikuyu
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -2571,7 +2578,7 @@ political_decisions = {
 			TNZ = {
 				primary_culture = THIS
 				add_accepted_culture = swahili
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -2756,7 +2763,7 @@ political_decisions = {
 			MLI = {
 				primary_culture = THIS
 				add_accepted_culture = fulbe
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -2931,7 +2938,7 @@ political_decisions = {
 				remove_core = CYR
 				add_province_modifier = { name = colonial_exploitation duration = 1095 }
 			}
-			LBY = { tech_school = unciv_tech_school }
+			LBY = { tech_school = developing_tech_school }
 			random_owned = { limit = { owner = { is_culture_group = italian } } LBY = { government = colonial_company } }
 		}
 	}
@@ -2971,7 +2978,7 @@ political_decisions = {
 				remove_core = CYR
 				add_province_modifier = { name = colonial_exploitation duration = 1095 }
 			}
-			LBY = { tech_school = unciv_tech_school }
+			LBY = { tech_school = developing_tech_school }
 		}
 	}
 
@@ -3016,7 +3023,7 @@ political_decisions = {
 			CAR = {
 				primary_culture = THIS
 				add_accepted_culture = ubangian
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -3189,7 +3196,7 @@ political_decisions = {
 			MLW = {
 				primary_culture = THIS
 				add_accepted_culture = chewa
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				capital = 2067
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
@@ -3349,7 +3356,7 @@ political_decisions = {
 			}
 			GMB = {
 				primary_culture = THIS
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -3494,7 +3501,7 @@ political_decisions = {
 			ANG = {
 				primary_culture = THIS
 				add_accepted_culture = bakongo
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -3667,7 +3674,7 @@ political_decisions = {
 			MOZ = {
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				add_accepted_culture = shona
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -3766,12 +3773,14 @@ political_decisions = {
 				limit = { province_id = 2052 owner = { tag = POR } }
 				change_province_name = "Malvérnia"
 			}
-			
+			random_owned = {
+				limit = { province_id = 2050 owner = { tag = POR } }
+				change_province_name = "Manjacaze"
+			}
 			random_owned = {
 				limit = { province_id = 2049 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
 				change_province_name = "Lourenço Marques"
 			}
-			
 			random_owned = {
 				limit = { province_id = 2051 owner = { tag = POR NOT = { has_country_flag = reconquest_of_lourenco_marques } } }
 				2051 = { state_scope = { change_region_name = "Lourenço Marques" } }
@@ -3901,7 +3910,7 @@ political_decisions = {
 				add_province_modifier = { name = colonial_exploitation duration = 1095 }
 			}
 			ALD = {
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				government = democracy
 				political_reform = landed_voting
 				capital = 1700
@@ -3952,7 +3961,7 @@ political_decisions = {
 				add_accepted_culture = baganda
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -4106,7 +4115,7 @@ political_decisions = {
 				add_accepted_culture = tswana
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -4258,7 +4267,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 			}
 		}
 	}
@@ -4305,7 +4314,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 			}
 		}
 	}
@@ -4346,7 +4355,7 @@ political_decisions = {
 				political_reform = landed_voting
 				primary_culture = THIS
 				add_accepted_culture = akan
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -4503,7 +4512,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				primary_culture = THIS
 				add_accepted_culture = mossi
 				clr_country_flag = sunni_country
@@ -4661,7 +4670,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 			}
 		}
 	}
@@ -4702,7 +4711,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				primary_culture = THIS
 				add_accepted_culture = fon
 				capital = 1919
@@ -4826,7 +4835,6 @@ political_decisions = {
 		}
 	}
 	
-	
 	organize_indonesia = {
 		picture = map_east_indies
 		potential = {
@@ -4837,13 +4845,13 @@ political_decisions = {
 				has_global_flag = indonesia_formed
 				is_culture_group = southeast_asian
 			}
-			state_n_government = 1
+			nationalism_n_imperialism = 1
 			owns = 1413
 		}
 		
 		allow = {
 			war = no
-			revolution_n_counterrevolution = 1
+			invention = the_dark_continent
 			owns = 1413
 		}
 		
@@ -4891,16 +4899,26 @@ political_decisions = {
 				remove_core = SUL
 				remove_core = BRU
 				remove_core = PPG
+				remove_core = RIA
+				remove_core = PTK
+				remove_core = SBS
+				remove_core = BGN
+				#remove_core = MTN
+				#remove_core = LUW
+				remove_core = BTN
+				remove_core = STG
 			}
 			
 			INO = {
 				set_country_flag = post_colonial_country
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 			}
 			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = malay } } INO = { add_accepted_culture = malay } }
 			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = moluccan } } INO = { add_accepted_culture = moluccan } }
-			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = asian_minor } } INO = { add_accepted_culture = asian_minor } }
 			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = yue } } INO = { add_accepted_culture = yue } }
+			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = hakka } } INO = { add_accepted_culture = hakka } }
+			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = dayak } } INO = { add_accepted_culture = dayak } }
+			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = sumatran } } INO = { add_accepted_culture = sumatran } }
 			random_owned = { limit = { is_core = INO any_pop = { has_pop_culture = melanesian } } INO = { add_accepted_culture = melanesian } }
 			random_owned = { limit = { owner = { primary_culture = dutch } } INO = { add_accepted_culture = dutch government = colonial_company } }
 		}
@@ -4955,7 +4973,7 @@ political_decisions = {
 			1867 = { add_core = SOM }
 			2031 = { add_core = SOM }
 			2032 = { add_core = SOM }
-			SOM = { tech_school = unciv_tech_school nationalvalue = nv_tradition }
+			SOM = { tech_school = developing_tech_school nationalvalue = nv_tradition }
 		}
 	}
 	
@@ -4990,7 +5008,7 @@ political_decisions = {
 				add_core = TMR
 			}
 			TMR = {
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				nationalvalue = nv_autocracy
 				religion = catholic set_country_flag = catholic_country
 				primary_culture = THIS
@@ -5174,7 +5192,7 @@ political_decisions = {
 				primary_culture = THIS
 				add_accepted_culture = khoisan
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -5334,7 +5352,7 @@ political_decisions = {
 			prestige = 3
 			set_global_flag = lebanon_organized
 			set_country_flag = lebanon_organizer
-			LBN = { tech_school = unciv_tech_school }
+			LBN = { tech_school = developing_tech_school }
 			random_owned = {
 				limit = {
 					owner = {
@@ -5537,7 +5555,7 @@ political_decisions = {
 				add_accepted_culture = western_nigritic
 				government = democracy
 				political_reform = landed_voting
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -5702,7 +5720,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
 				add_accepted_culture = malagasy
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -5857,7 +5875,7 @@ political_decisions = {
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
 				add_accepted_culture = shona
-				tech_school = unciv_tech_school
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -6087,8 +6105,8 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						owns = 1742 #Libya
-						owns = 1738
+						owns = 1742 #Wath
+						owns = 1738 #Al Jaghbub
 					}
 					1758 = { empty = no }
 					2585 = { empty = yes }
@@ -6102,9 +6120,8 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 1741 #Libya
-					1742 = { empty = yes }
-					2585 = { empty = no }
+					owns = 1741 #Murzuk
+					1742 = { empty = yes } #Wath
 				}
 				AND = {
 					owns = 1779 #Mauritania
@@ -6120,7 +6137,7 @@ political_decisions = {
 				}
 				AND = {
 					owns = 1818 #Chad
-					1821 = { empty = yes }
+					1826 = { empty = yes }
 				}
 			}
 		}
@@ -6130,7 +6147,7 @@ political_decisions = {
 				limit = {
 					owner = {
 						owns = 1818
-						1821 = { empty = yes }
+						1826 = { empty = yes }
 						OR = {
 							invention = the_dark_continent
 							AND = {
@@ -6144,10 +6161,10 @@ political_decisions = {
 						}
 					}
 				}
-				1821 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
-				1824 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
-				1825 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1826 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				#1821 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
+				#1824 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
+				#1825 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1826 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6168,10 +6185,9 @@ political_decisions = {
 						}
 					}
 				}
-				1812 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1813 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1814 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1817 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1812 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1813 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1814 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6192,8 +6208,8 @@ political_decisions = {
 						}
 					}
 				}
-				2609 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1807 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				2609 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1807 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6214,8 +6230,8 @@ political_decisions = {
 						}
 					}
 				}
-				1782 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1782 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
+				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6226,7 +6242,7 @@ political_decisions = {
 						NOT = { has_global_flag = libya_organized }
 					}
 				}
-				1742 = { secede_province = THIS add_core = TRI any_pop = { literacy = -0.99 } }
+				1742 = { secede_province = THIS add_core = TRI any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6237,7 +6253,7 @@ political_decisions = {
 						has_global_flag = libya_organized
 					}
 				}
-				1742 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
+				1742 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			
@@ -6249,7 +6265,7 @@ political_decisions = {
 						NOT = { has_global_flag = libya_organized }
 					}
 				}
-				2585 = { secede_province = THIS add_core = CYR any_pop = { literacy = -0.99 } }
+				2585 = { secede_province = THIS add_core = CYR any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6260,7 +6276,7 @@ political_decisions = {
 						has_global_flag = libya_organized
 					}
 				}
-				2585 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
+				2585 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6278,7 +6294,7 @@ political_decisions = {
 						1758 = { empty = yes }
 					}
 				}
-				1758 = { secede_province = THIS add_core = EGY any_pop = { literacy = -0.99 } }
+				1758 = { secede_province = THIS add_core = EGY life_rating = 5 any_pop = { literacy = -0.99 } }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6288,7 +6304,7 @@ political_decisions = {
 						2564 = { empty = yes }
 					}
 				}
-				2564 = { secede_province = THIS add_core = SUD any_pop = { literacy = -0.99 } }
+				2564 = { secede_province = THIS add_core = SUD life_rating = 5 any_pop = { literacy = -0.99 } }
 				owner = { prestige = 1 }
 			}
 			random_owned = {
@@ -6299,6 +6315,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { 1835 = { owned_by = THIS is_core = THIS } } }
 				2564 = { add_core = THIS }
+				1817 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 5 }
 				owner = { prestige = 1 }
 			}
 		}

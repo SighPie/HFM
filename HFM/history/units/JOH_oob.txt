@@ -1,27 +1,23 @@
 ENG = {
-	value = -200
+	value = 50
 }
 
 army = {
 	name = "Army of the Sultan of Johore"
-	location = 1390
+	location = 1385
 	regiment = {
-		name= "1.Johore State Troops"
+		name= "Johore State Troops"
 		type = irregular
 		home = 1385
 	}
 
-	regiment = {
-		name= "2.Johore State Troops"
-		type = irregular
-		home = 1387
-	}
-
-	regiment = {
-		name= "3.Johore State Troops"
-		type = irregular
-		home = 2575
-	}
-
 }
 
+leader = {
+	name = "Sultan Ali Iskandar"
+	date = 1824.1.1
+	type = land
+	personality = gutsy
+	background = aristocrat
+	prestige = 0.0
+}

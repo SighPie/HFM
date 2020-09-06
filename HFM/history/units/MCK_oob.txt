@@ -70,7 +70,7 @@ army = {
 
 army = {
 	name = "Yellow Banner"
-	location = 1613
+	location = 1480
 
 	regiment = {
 		name= "1st Jirim Jalan"

@@ -5,4 +5,4 @@ colonial = 2
 add_core = MTC
 trade_goods = timber
 terrain = plains
-life_rating = 30
+life_rating = 31

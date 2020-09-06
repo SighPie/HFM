@@ -1,7 +1,7 @@
 capital = 1321
 primary_culture = sinhala
 religion = theravada
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.02
@@ -25,8 +25,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
-
 # New Reforms
 conscription = no_draft
 debt_law = peonage
@@ -37,7 +35,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
-
+schools = unciv_tech_school
 set_country_flag = theravada_country
 
 ruling_party = SRI_conservative
@@ -54,3 +52,6 @@ upper_house = {
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes

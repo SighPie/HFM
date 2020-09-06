@@ -50,7 +50,6 @@ upper_house = {
 set_country_flag = existing_country
 set_country_flag = catholic_country
 set_country_flag = micro_nation
-decision = LIE_testing
 
 #Technologies
 introspectionism = 1

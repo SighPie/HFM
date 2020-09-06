@@ -1,4 +1,4 @@
 trade_goods = grain
-terrain = montane_forest
+terrain = dry_mountains
 life_rating = 10
 colonial = 1

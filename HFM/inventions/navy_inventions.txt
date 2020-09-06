@@ -7,6 +7,18 @@ modern_sail_ships = {
 			factor = 10
 			alphabetic_flag_signaling = 1
 		}
+		modifier = {
+			factor = -20
+			NOT = { invention = big_sail_ships }
+		}
+		modifier = {
+			factor = -20
+			NOT = { invention = sail_ships_transport }
+		}
+		modifier = {
+			factor = -20
+			NOT = { invention = big_sail_support }
+		}
 	}
 	effect = {
 		clipper_transport = { maximum_speed = 1 }
@@ -23,6 +35,35 @@ modern_sail_ships = {
 	}
 }
 
+big_sail_ships = {
+	limit = { post_nelsonian_thought = 1 }
+	chance = {
+		base = 50
+	}
+	effect = {
+		activate_unit = manowar 
+	}
+}
+
+sail_ships_transport = {
+	limit = { post_nelsonian_thought = 1 }
+	chance = {
+		base = 50
+	}
+	effect = {
+		activate_unit = clipper_transport 
+	}
+}
+
+big_sail_support = {
+	limit = { post_nelsonian_thought = 1 }
+	chance = {
+		base = 50
+	}
+	effect = {
+		activate_unit = frigate
+	}
+}
 
 #torpedo attacks
 torpedo_attacks = {
@@ -456,7 +497,7 @@ steamer_automatic_construction_plants = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			steamer_convoy = 0.20
+			steamer_convoy = 0.10
 		}
 	}
 }
@@ -471,6 +512,23 @@ steamer_transports = {
 		modifier = {
 			factor = 1
 			hot_blast = 1
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = steamer_transports }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = steamer_transports }
+		}
+		modifier = {
+			factor = 10
+			year = 1850
+		}
+		modifier = {
+			factor = 10
+			iron_steamers = 1
 		}
 	}
 	effect = {
@@ -488,6 +546,23 @@ commerce_raiders = {
 		modifier = {
 			factor = 3
 			raider_group_doctrine = 1
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = steamer_transports }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = steamer_transports }
+		}
+		modifier = {
+			factor = 10
+			year = 1850
+		}
+		modifier = {
+			factor = 10
+			iron_steamers = 1
 		}
 	}
 	effect = {
@@ -533,6 +608,27 @@ ironclads = {
 			factor = 2
 			invention = torpedo_boats
 		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = ironclads }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = ironclads }
+		}
+		modifier = {
+			factor = 10
+			year = 1865
+		}
+		modifier = {
+			factor = 10
+			year = 1875
+		}
+		modifier = {
+			factor = 10
+			steel_steamers = 1
+		}
 	}
 	effect = {
 		activate_unit = ironclad  
@@ -553,6 +649,27 @@ monitors = {
 			factor = 2
 			invention = torpedo_boats
 		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = monitors }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = monitors }
+		}
+		modifier = {
+			factor = 10
+			year = 1865
+		}
+		modifier = {
+			factor = 10
+			year = 1875
+		}
+		modifier = {
+			factor = 10
+			steel_steamers = 1
+		}
 	}
 	effect = {
 		activate_unit = monitor 
@@ -569,7 +686,28 @@ torpedo_boats = {
 		modifier = {
 			factor = 2
 			invention = monitors
-		}		
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = torpedo_boats }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = torpedo_boats }
+		}
+		modifier = {
+			factor = 10
+			year = 1865
+		}
+		modifier = {
+			factor = 10
+			year = 1875
+		}
+		modifier = {
+			factor = 10
+			steel_steamers = 1
+		}
 	}
 	effect = {
 		commerce_raider = {
@@ -593,6 +731,27 @@ protected_cruisers = {
 		modifier = {
 			factor = 2
 			bessemer_process = 1
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = protected_cruisers }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = protected_cruisers }
+		}
+		modifier = {
+			factor = 10
+			year = 1890
+		}
+		modifier = {
+			factor = 10
+			year = 1905
+		}
+		modifier = {
+			factor = 10
+			steam_turbine_ships = 1
 		}
 	}
 	effect = {
@@ -642,6 +801,27 @@ pre_dreadnought = {
 			factor = 1
 			main_armament = 1
 		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = pre_dreadnought }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = pre_dreadnought }
+		}
+		modifier = {
+			factor = 10
+			year = 1890
+		}
+		modifier = {
+			factor = 10
+			year = 1905
+		}
+		modifier = {
+			factor = 10
+			steam_turbine_ships = 1
+		}
 	}
 	effect = {
 		ironclad = {
@@ -667,6 +847,19 @@ dreadnoughts = {
 		modifier = {
 			factor = 2
 			naval_logistics = 1
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = { invention = dreadnoughts }
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = dreadnoughts }
+		}
+		modifier = {
+			factor = 2
+			oil_driven_ships = 1
 		}
 	}
 	effect = {

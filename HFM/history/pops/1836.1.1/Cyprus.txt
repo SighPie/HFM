@@ -199,3 +199,42 @@
 	}
 
 }
+#SBA (44000/11000 POPS)
+2690 = {
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 25
+	}
+	
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 250
+	}
+	
+	soldiers = {
+		culture = greek
+		religion = orthodox
+		size = 50
+	}
+
+	clergymen = {
+		culture = greek
+		religion = orthodox
+		size = 75
+	}
+
+	artisans = {
+		culture = greek
+		religion = orthodox
+		size = 200
+	}
+
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 1425
+	}
+
+}

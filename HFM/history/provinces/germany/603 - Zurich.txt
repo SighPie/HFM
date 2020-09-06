@@ -3,7 +3,7 @@ controller = SWI
 add_core = SWI
 trade_goods = iron
 life_rating = 34
-terrain = zurich
+#terrain = zurich
 fort = 1
 
 party_loyalty = {
@@ -17,7 +17,7 @@ party_loyalty = {
 
 state_building = {
 	level = 1
-	building = fabric_factory
+	building = artillery_factory
 	upgrade = yes
 }
 state_building = {

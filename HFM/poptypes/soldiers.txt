@@ -43,25 +43,28 @@ everyday_needs = {
 	tea = 4
 	coal = 1
 	liquor = 2
+	#wine = 0.5
 	regular_clothes = 2
 	furniture = 2
-	coffee = 1
+	coffee = 2
 	tobacco = 1
 	ammunition = 0.5 #0
 	small_arms = 0.35 #0
 }
 
 #Total cash needed: 136.78 - Vanilla value: 125.995
-luxury_needs = {	
+luxury_needs = {
 	regular_clothes = 3
 	furniture = 3
-	liquor = 1.5
+	liquor = 0.5
+	wine = 0.5
 	paper = 1.0
 	telephones = 1.0
 	automobiles = 0.5
 	radio = 1.0
 	fuel = 0.1
 	#dye = 0.5
+	artillery = 0.05
 }
 
 
@@ -125,7 +128,7 @@ country_migration_target = {
 	}
 	
 	modifier = {
-		factor = 2.81
+		factor = 4.01
 		OR = {
 			##is_culture_group = THIS
 			AND = {
@@ -175,11 +178,19 @@ country_migration_target = {
 				}
 				NOT = { continent = asia }
 			}
+			AND = {
+				THIS = { is_culture_group = italian }
+				OR = { 
+					is_culture_group = pan_swiss
+					primary_culture = french
+					is_culture_group = italian
+				}	
+			}
 		}
 	}
 	
 	modifier = {
-		factor = 4.0
+		factor = 3.55
 		number_of_states = 2
 		war = no
 		has_country_flag = new_world_nation
@@ -194,19 +205,21 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
+			government = constitutional_empire
 			government = dominion
 			government = colonial_company
 		}
 	}
 	
 	modifier = {
-		factor = 3.1
+		factor = 3.7
 		NOT = { total_pops = 500000 }
 		NOT = { number_of_states = 2 }
 		has_country_flag = new_world_nation
 		OR = {
-			continent = north_america
-			continent = south_america
+			capital_scope = { is_colonial = no continent = north_america }
+			capital_scope = { is_colonial = no continent = south_america }
+			capital_scope = { is_colonial = no continent = australia_new_zealand }
 			primary_culture = australian
 			primary_culture = neo_zelandais
 			primary_culture = french_australian
@@ -215,6 +228,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
+			government = constitutional_empire
 			government = dominion
 			government = colonial_company
 		}
@@ -352,7 +366,7 @@ migration_target = {
 	}
 		
 	modifier = {
-		factor = 0.8
+		factor = 0.5
 		terrain = steppe
 	}
 
@@ -362,13 +376,22 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 0.8
-		terrain = dryhills
+		factor = 0.6
+		OR = {
+			terrain = dryhills
+			terrain = dry_mountains
+		}
 	}
 	
 	modifier = {
 		factor = 0.5
-		terrain = jungle
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+			terrain = jungle_farmland
+			terrain = jungle_hills
+			terrain = jungle_mountains
+		}
 	}
 	
 	modifier = {
@@ -388,12 +411,12 @@ migration_target = {
 	
 	modifier = {
 		factor = 0.5
-		terrain = semidesert
-	}
-	
-	modifier = {
-		factor = 0.5
-		terrain = boreal
+		OR = { 
+			terrain = semidesert
+			terrain = semi_desert_mountains
+			terrain = new_world_semidesert
+			terrain = coastal_desert
+		}
 	}
 
 	modifier = {
@@ -412,22 +435,49 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 0.01
-		terrain = desert
-		continent = africa
+		factor = 0
+		OR = {
+			terrain = desert
+			terrain = semidesert
+		}
+		OR = { 
+			continent = west_africa 
+			continent = east_africa
+			continent = central_africa
+			continent = asia
+			continent = africa
+			continent = oceania
+		}
+	}
+	
+	modifier = {
+		factor = 0
+		OR = {
+			terrain = arctic
+			terrain = boreal
+			terrain = montane_tundra
+		}
+		NOT = { life_rating = 20 }
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			terrain = arctic
+			terrain = boreal
+		}
+		life_rating = 20
 	}
 	
 	modifier = {
 		factor = 0.05
-		terrain = arctic
+		OR = {
+			terrain = montane_tundra
+			terrain = himalayan_mountains
+		}
 	}
 	
 	modifier = {
-		factor = 0.05
-		terrain = montane_tundra
-	}
-	
-modifier = {
 		factor = 0.5
 		OR = {
 			continent = west_africa
@@ -668,9 +718,13 @@ modifier = {
 			terrain = desert
 			terrain = arctic
 			terrain = semidesert
+			terrain = semi_desert_mountains
+			terrain = new_world_semidesert
+			terrain = coastal_desert
 			terrain = boreal
 			terrain = small_island
 			terrain = montane_tundra
+			terrain = himalayan_mountains
 			terrain = coral_island
 		}
 	}
@@ -6414,7 +6468,12 @@ all_voting_pops = {
 
 		modifier = {
 			factor = 0.5
-			country = { government = hms_government }
+			country = { 
+				OR = {
+					government = hms_government 
+					government = constitutional_empire
+				}
+			}
 		}
 		
 		modifier = {
@@ -6484,7 +6543,12 @@ all_voting_pops = {
 
 		modifier = {
 			factor = 0.5
-			country = { government = hms_government }
+			country = { 
+				OR = {
+					government = hms_government 
+					government = constitutional_empire
+				}
+			}
 		}
 		
 		modifier = {

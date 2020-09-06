@@ -7,9 +7,7 @@ political_decisions = {
 				is_greater_power = yes
 				civilized = yes
 			}
-			NOT = {
-				has_country_flag = western_calendar
-			}
+			NOT = { has_country_flag = western_calendar }
 		}
 		
 		allow = {
@@ -41,9 +39,7 @@ political_decisions = {
 				is_greater_power = yes
 				civilized = yes
 			}
-			NOT = {
-				has_country_flag = christianity_ban_repealed
-			}
+			NOT = { has_country_flag = christianity_ban_repealed }
 		}
 		
 		allow = {
@@ -54,22 +50,12 @@ political_decisions = {
 		
 		effect = {
 			any_greater_power = {
-				limit = {
-					NOT = {
-						tag = TUR
-					}
-				}
-				relation = {
-					who = THIS
-					value = 50
-				}
+				limit = { NOT = { tag = TUR } }
+				relation = { who = THIS value = 50 }
 			}
 			any_pop = {
 				limit = { is_primary_culture = yes }
-				scaled_militancy = {
-					ideology = reactionary
-					factor = 1
-				}
+				scaled_militancy = { ideology = reactionary factor = 1 }
 			}
 			set_country_flag = christianity_ban_repealed
 		}
@@ -85,9 +71,7 @@ political_decisions = {
 				is_greater_power = yes
 				civilized = yes
 			}
-			NOT = {
-				has_country_flag = technical_fine_arts_school
-			}
+			NOT = { has_country_flag = technical_fine_arts_school }
 		}
 		allow = {
 			year = 1875
@@ -106,7 +90,6 @@ political_decisions = {
 
 	sino_japanese_war = {
 		picture = "sino_japanese_war"
-		
 		potential = {
 			tag = JAP
 			year = 1890
@@ -130,9 +113,7 @@ political_decisions = {
 			NOT = { has_country_flag = taiwan_line_of_advantage }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 	
 		effect = {
 			set_country_flag = taiwan_line_of_advantage
@@ -155,9 +136,7 @@ political_decisions = {
 			NOT = { has_country_flag = japan_fruits }
 		}
 		
-		allow = {
-			war = no
-		}
+		allow = { war = no }
 	
 		effect = {
 			set_country_flag = japan_fruits
@@ -295,7 +274,7 @@ political_decisions = {
 				secede_province = MCK
 			}
 			MCK = {
-				government = hms_government
+				government = absolute_empire
 				civilized = yes
 			}
 			set_country_flag = mck_organized

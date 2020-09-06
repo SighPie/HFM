@@ -1,15 +1,15 @@
 capital = 619
 primary_culture = south_german
-culture = siebenburger
+culture = north_german
 religion = catholic
-government = absolute_monarchy
+government = absolute_empire
 plurality = 10.0
 nationalvalue = nv_autocracy
 literacy = 0.45
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 70
+prestige = 100
 
 # Political reforms
 slavery = no_slavery
@@ -42,6 +42,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = catholic_country
+set_country_flag = serfdom_not_abolished
 
 decision = AUS_setup_1836
 decision = slovene_rename_aus
@@ -64,6 +65,12 @@ decision = slavonia_rename_aus
 decision = dalmatia_rename_aus
 decision = german_lombardy
 decision = german_veneto
+decision = bukovina_rename_aus
+decision = burgenland_rename
+
+govt_flag = { government = hms_government flag = theocracy }
+govt_flag = { government = prussian_constitutionalism flag = theocracy }
+govt_flag = { government = absolute_monarchy flag = theocracy }
 
 ruling_party = AUS_conservative
 upper_house = {
@@ -99,7 +106,7 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 
 #Inventions
@@ -180,8 +187,8 @@ oob = "AUS_oob.txt"
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
 	hot_blast = 1
+    regenerative_furnaces = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

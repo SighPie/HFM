@@ -9,7 +9,7 @@ army = {
 		name= "The Sultan's Elite"
 		type = irregular
 		home = 1165
-		}
+	}
 }
 
 leader = {
@@ -18,4 +18,4 @@ leader = {
 	date = 1836.1.1
 		background = aristocrat
 		personality = spirited
-	}
+}

@@ -1,3 +1,4 @@
+#Merged
 country_event = {
 
 	id = 36700
@@ -252,9 +253,9 @@ country_event = {
 }
 
 #########################################################
-#														#
-#      			Treaty of London Events					#
-#														#
+#                                                        #
+#                  Treaty of London Events                    #
+#                                                        #
 #########################################################
 
 country_event = {
@@ -296,10 +297,11 @@ country_event = {
 	
 	option = {
 		name = "EVT36709OPTB"
-		badboy = 2
+		badboy = 4
+		prestige = -5
 		ENG = {
 			diplomatic_influence = { who = THIS value = -100 }
-			relation = { who = THIS value = -100 }
+			relation = { who = THIS value = -150 }
 		}
 		any_greater_power = {
 			limit = {
@@ -374,10 +376,10 @@ country_event = {
 	option = {
 		name = "EVT36710OPTB"
 		badboy = 2
-		#random_owned = {
-			#limit = { LUX = { exists = no } }
-			#398 = { remove_core = LUX }
-		#}
+        random_owned = {
+            limit = { LUX = { exists = no } }
+            398 = { remove_core = LUX }
+        }
 		NET = {
 			relation = { who = THIS value = -200 }
 			diplomatic_influence = { who = THIS value = -200 }

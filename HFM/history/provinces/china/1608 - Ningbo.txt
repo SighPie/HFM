@@ -3,4 +3,6 @@ controller = QNG
 add_core = CHI
 trade_goods = cotton
 life_rating = 32
-terrain = ningbo
+naval_base = 1
+#terrain = ningbo
+terrain = floodplain_farmland

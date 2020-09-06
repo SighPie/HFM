@@ -3,4 +3,4 @@ controller = RPL
 add_core = RPL
 colonial = 2
 trade_goods = coal
-life_rating = 30
+life_rating = 31

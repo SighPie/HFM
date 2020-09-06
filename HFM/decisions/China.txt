@@ -26,7 +26,10 @@ political_decisions = {
 		picture = clear_out_the_manchu_elite
 		potential = {
 			tag = QNG
-			government = absolute_monarchy
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+			}
 			is_greater_power = no
 			civilized = no
 			has_global_flag = taiping_has_happened
@@ -1661,7 +1664,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	abolish_forced_work = {
+	abolish_forced_work = { #Revise
 	alert = no
 	picture = form_china
 		potential = {
@@ -1684,6 +1687,62 @@ political_decisions = {
 			any_pop = { militancy = 2 consciousness = 4 }
 			random_owned = { limit = { owner = { NOT = { slavery = no_slavery } } } owner = { political_reform = no_slavery } }
 			random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage country_event = 6016804 } }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	claim_tsushima = { #Move to its own file later
+	picture = tsushima_japan
+		potential = {
+			tag = KOR
+			civilized = yes
+			OR = {
+				NOT = {
+					owns = 2589
+					has_country_flag = korean_irredentism
+				}
+				AND = {
+					owns = 2589
+					NOT = { has_country_flag = tsushima_renamed }
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			is_disarmed = no
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+				government = fascist_dictatorship
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = { NOT = { has_country_flag = korean_irredentism } }
+				}
+				owner = {
+					badboy = 2
+					2589 = { add_core = KOR }
+				}
+			}
+			set_country_flag = korean_irredentism
+			prestige = 3
+			random_owned = {
+				limit = { province_id = 2589 }
+				change_province_name = "Daemado"
+				owner = { set_country_flag = tsushima_renamed }
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

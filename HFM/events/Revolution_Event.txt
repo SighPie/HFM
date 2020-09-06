@@ -98,6 +98,7 @@ country_event = {
 				neighbour = THIS
 				NOT = {
 					government = absolute_monarchy
+					government = absolute_empire
 					government = presidential_dictatorship
 				}
 			}
@@ -305,6 +306,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 					government = proletarian_dictatorship
 				}
 				NOT = {
@@ -331,6 +333,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -360,6 +363,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 					government = proletarian_dictatorship
 				}
 				is_greater_power = no
@@ -382,6 +386,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				NOT = { 
@@ -997,6 +1002,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { 
 					has_country_flag = former_sphere_leader
@@ -1021,6 +1027,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 			}
@@ -1056,6 +1063,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -1090,6 +1098,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { has_country_flag = former_overlord }
 			}			
@@ -1106,6 +1115,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 					has_country_flag = former_overlord
 				}
@@ -1308,6 +1318,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { 
 					has_country_flag = former_sphere_leader
@@ -1332,6 +1343,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 						government = proletarian_dictatorship
 						ruling_party_ideology = socialist
 					}
@@ -1365,6 +1377,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -1396,6 +1409,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { has_country_flag = former_overlord }
 				ruling_party_ideology = socialist
@@ -1412,6 +1426,7 @@ country_event = {
 						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 					has_country_flag = former_overlord
 				}
@@ -2349,6 +2364,8 @@ country_event = {
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
+					government = absolute_empire
+					government = semi_constitutional_empire
 					government = proletarian_dictatorship
 					government = presidential_dictatorship
 					government = bourgeois_dictatorship
@@ -2424,6 +2441,8 @@ country_event = {
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
+					government = absolute_empire
+					government = semi_constitutional_empire
 					government = proletarian_dictatorship
 					government = presidential_dictatorship
 					government = bourgeois_dictatorship
@@ -2503,6 +2522,8 @@ country_event = {
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
+					government = absolute_empire
+					government = semi_constitutional_empire
 					government = proletarian_dictatorship
 					government = presidential_dictatorship
 					government = bourgeois_dictatorship
@@ -2618,6 +2639,8 @@ country_event = {
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
+					government = absolute_empire
+					government = semi_constitutional_empire
 					government = proletarian_dictatorship
 					government = presidential_dictatorship
 					government = bourgeois_dictatorship
@@ -2719,6 +2742,8 @@ country_event = {
 				OR = {
 					government = absolute_monarchy
 					government = prussian_constitutionalism
+					government = absolute_empire
+					government = semi_constitutional_empire
 					government = proletarian_dictatorship
 					government = presidential_dictatorship
 					government = bourgeois_dictatorship

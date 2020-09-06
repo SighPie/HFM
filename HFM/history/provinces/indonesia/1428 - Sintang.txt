@@ -1,5 +1,6 @@
-owner = KLM
-controller = KLM
-add_core = KLM
-trade_goods = coffee
-life_rating = 15
+owner = STG
+controller = STG
+add_core = STG
+trade_goods = fruit
+life_rating = 31
+terrain = jungle_farmland

@@ -337,7 +337,7 @@ country_event = {
 			end_military_access = THIS
 			country_event = 97083
 		}
-		add_country_modifier = { name = small_country_draft duration = 730 }
+        add_country_modifier = { name = small_country_draft duration = 180 }
 		
 		ai_chance = { factor = 100 }
 	}
@@ -374,6 +374,16 @@ country_event = {
 	
 	option = {
 		name = "EVT97082OPTA"
+        any_country = {
+            limit = {
+                NOT = { war_with = THIS }
+                OR = {
+                    is_sphere_leader_of = CHL
+                    is_sphere_leader_of = THIS
+                }
+            }
+            country_event = { id = 97084 days = 2 }
+        }
 		war = {
 			target = FROM
 			attacker_goal = {
@@ -408,4 +418,60 @@ country_event = {
 			modifier = { factor = 3 war = yes }
 		}
 	}
+}
+
+#The War of the Pacific - Sphere owner declares neutrality?
+country_event = {
+    id = 97084
+    title = "EVTNAME97084"
+    desc = "EVTDESC97084"
+    picture = "sinking_of_the_esmeralda"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT97084OPTA" #We will not intervene
+        random_owned = {
+            limit = {
+                owner = { war_with = FROM }
+            }
+            owner = { end_war = FROM }
+        }
+        random_owned = {
+            limit = {
+                owner = { alliance_with = FROM }
+            }
+            owner = { leave_alliance = FROM }
+        }
+        random_owned = {
+            limit = {
+                owner = { war_with = CHL }
+            }
+            owner = { end_war = CHL }
+        }
+        random_owned = {
+            limit = {
+                owner = { alliance_with = CHL }
+            }
+            owner = { leave_alliance = CHL }
+        }
+        diplomatic_influence = { who = CHL value = -200 }
+        diplomatic_influence = { who = FROM value = -200 }
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0.25
+                is_sphere_leader_of = CHL
+                relation = { who = FROM value = 150 }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT97084OPTB"
+        ai_chance = {
+            factor = 10
+            modifier = { factor = 0 war = yes }
+        }
+    }
 }

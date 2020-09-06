@@ -1,3 +1,4 @@
+PER = { value = 200 }
 GAZ = {
 	truce_until = 1841.1.1
 	value = 125
@@ -283,4 +284,3 @@ leader = {
 	background = madman
 	prestige = 0.0
 }
-

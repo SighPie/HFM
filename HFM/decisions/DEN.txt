@@ -3,17 +3,16 @@ political_decisions = {
 		picture = danmarks_riges_grundlov
 		potential = {
 			tag = DEN
-			government = absolute_monarchy
-			NOT = {
-				has_country_flag = danish_constitutionalism
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
 			}
+			NOT = { has_country_flag = danish_constitutionalism }
 		}
 		
 		allow = {
 			state_n_government = 1
-			NOT = {
-				average_militancy = 3
-			}
+			NOT = { average_militancy = 3 }
 		}
 		
 		effect = {
@@ -36,9 +35,12 @@ political_decisions = {
 				is_vassal = no
 			}
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = {
 				has_country_flag = annex_schleswig_holstein
@@ -234,5 +236,72 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+	}
+	
+	copenhagen_convention = {
+		picture = sound_dues
+		potential = {
+			372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+			NOT = {
+				has_global_flag = sound_dues_abolished
+				has_global_flag = sound_dues_resisted
+				has_global_flag = copenhagen_convention_called
+				tag = TUR
+				check_variable = { which = owed_cash_money value = 1 }
+			}
+		}
+
+		allow = {
+			war = no
+			raider_group_doctrine = 1
+			OR = {
+				money = 100000
+				ai = yes
+			}
+		}
+
+		effect = {
+			set_global_flag = copenhagen_convention_called
+			372 = { owner = { country_event = { id = 810003 days = 7 } } }
+			set_variable = { which = owed_cash_money value = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	abolish_sound_dues = {
+		picture = sound_dues
+		potential = {
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+			372 = { trade_goods = precious_goods NOT = { owned_by = THIS } }
+			has_global_flag = sound_dues_resisted
+		}
+
+		allow = {
+			OR = {
+				AND = {
+					is_canal_enabled = 1
+					owns = 369
+				}
+				372 = { owner = { is_disarmed = yes truce_with = THIS } }
+			}
+		}
+
+		effect = {
+			prestige = 30
+			372 = { trade_goods = grain remove_province_modifier = sound_dues_toll }
+			DEN = { prestige = -40 }
+			set_global_flag = sound_dues_abolished
+			clr_global_flag = sound_dues_resisted
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }

@@ -3,7 +3,7 @@ primary_culture = finnish
 culture = swedish
 culture = sami
 religion = protestant
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.5
 nationalvalue = nv_productivity
 literacy = 0.5
@@ -55,7 +55,7 @@ upper_house = {
 }
 
 decision = FIN_1836_setup
-
+decision = findland_rename
 oob = "FIN_oob.txt"
 
 # Technologies
@@ -79,7 +79,6 @@ no_standard = 1
 early_classical_theory_and_critique = 1
 guild_based_production = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 piston_steam_engine = 1
-

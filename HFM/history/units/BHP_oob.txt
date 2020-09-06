@@ -19,4 +19,3 @@ leader = {
 	background = aristocrat
 	personality = inspiring
 }
-

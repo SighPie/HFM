@@ -18,6 +18,9 @@ country_event = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 	}
 
@@ -98,6 +101,10 @@ country_event = {
 		name = "EVT97050OPTA"
 		set_country_flag = fight_the_PBC
 		leave_alliance = PBC
+        add_country_modifier = {
+            name = caudillo_leaders
+            duration = 545
+        }
 		1714 = { add_core = ARC }
 		2370 = { add_core = ARC }
 		2315 = { add_core = ARC }
@@ -590,9 +597,13 @@ country_event = {
 	
 	option = {
 		name = "EVTOPT97076A" #We will settle the Amazon.
-		prestige = 5
+        prestige = 16
 		treasury = -25000
-		2549 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+        2549 = {
+            secede_province = THIS
+            any_pop = { literacy = -0.99 }
+            life_rating = 6
+        }
 		ai_chance = {
 			factor = 90
 		}
@@ -893,7 +904,30 @@ country_event = {
 		name = "EVT46610102OPTA" #We agree
 		badboy = -2
 		treasury = 30000
-		FROM = { set_variable = { which = owed_cash_money value = 60 } }
+        FROM = {
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 60000 }
+                        check_variable = { which = owed_cash_money value = 9 }
+                    }
+                }
+                owner = { change_variable = { which = owed_cash_money value = 60 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 60000 }
+                        NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                    }
+                }
+                owner = { set_variable = { which = owed_cash_money value = 60 } }
+            }
+            random_owned = {
+                limit = { owner = { money = 60000 } }
+                owner = { treasury = -60000 }
+            }
+        }
 		random_owned = {
 			limit = {
 				owner = {
@@ -1025,4 +1059,3 @@ country_event = {
 		}
 	}
 }
-	

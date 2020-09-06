@@ -21,7 +21,7 @@ political_decisions = {
 				remove_core = SDB
 			}
 			add_country_modifier = {
-				name = neutrality
+				name = neutrality_modifier
 				duration = -1
 			}
 			political_reform = federalism

@@ -12,7 +12,7 @@ literacy = 0.6
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 100
+prestige = 130
 
 
 # Political reforms
@@ -33,7 +33,6 @@ health_care = no_health_care
 unemployment_subsidies = trinket_subsidies
 pensions = no_pensions 
 school_reforms = low_schools
-
 
 #New Reforms
 conscription = one_year_draft
@@ -56,6 +55,7 @@ army_command_principle = 1
 post_nelsonian_thought = 1
 clipper_design = 1
 steamers = 1
+naval_plans = 1
 naval_design_bureaus = 1
 alphabetic_flag_signaling = 1
 the_command_principle = 1
@@ -71,12 +71,13 @@ enlightenment_thought = 1
 introspectionism = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 experimental_railroad = 1
 basic_chemistry = 1
 interchangeable_parts = 1
 battleship_column_doctrine = 1
 naval_professionalism = 1
+fire_control_systems = 1
 stock_exchange = 1
 ad_hoc_money_bill_printing = 1
 late_classical_theory = 1
@@ -115,7 +116,7 @@ govt_flag = {
 
 foreign_investment = {
 	BEL = 20000
-	POR = 40000
+	POR = 60000
 	DEN = 2000
 	EIC = 20000
 }
@@ -226,10 +227,9 @@ school_reforms = low_schools
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
+    regenerative_furnaces = 1
 	hot_blast = 1
-	puddling = 1
-	bessemer_process = 1
+    drilling_and_blasting = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

@@ -29,7 +29,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = two_year_draft
 debt_law = debtors_prisons
@@ -78,9 +77,12 @@ early_classical_theory_and_critique = 1
 freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
-mechanical_production = 1
-mechanized_mining = 1
-basic_chemistry = 1
+#mechanical_production = 1
+hot_blast = 1
+#basic_chemistry = 1
+stock_exchange = 1
+ad_hoc_money_bill_printing = 1
+late_classical_theory = 1
 
 #Inventions
 #corvettes = yes
@@ -164,8 +166,8 @@ school_reforms = low_schools
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
 	interchangeable_parts = 1
-	mechanized_mining = 1
 	hot_blast = 1
+    regenerative_furnaces = 1
 	experimental_railroad = 1
 	basic_chemistry = 1
 	medicine = 1

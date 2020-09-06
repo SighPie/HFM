@@ -27,7 +27,10 @@ political_decisions = {
 		picture = hellenic_parliament
 		potential = {
 			tag = GRE
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
 			NOT = { has_country_flag = voule_ton_ellinon }
 		}
 	
@@ -117,14 +120,20 @@ political_decisions = {
 			is_greater_power = yes
 			all_core = { owned_by = THIS }
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 		
 		effect = {
 			change_tag = BYZ
+			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { government = absolute_empire } }
+			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { government = semi_constitutional_empire } }
+			random_owned = { limit = { owner = { government = hms_government } } owner = { government = constitutional_empire } }
 			capital = 860
 			any_owned = {
 				limit = {
@@ -205,6 +214,10 @@ political_decisions = {
 					ai = yes
 					THIS = { ai = yes }
 				}
+                THIS = {
+                    remove_accepted_culture = north_italian
+                    remove_accepted_culture = british
+                }
 				inherit = THIS
 			}
 			random_country = {
@@ -216,6 +229,8 @@ political_decisions = {
 				any_owned = { secede_province = THIS }
 				THIS = {
 					remove_accepted_culture = turkish
+                    remove_accepted_culture = north_italian
+                    remove_accepted_culture = british
 					random_owned = {
 						limit = { province_id = 834 }
 						owner = { capital = 834 }
@@ -256,12 +271,15 @@ political_decisions = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				GRE = {
 					NOT = {
 						government = democracy
-						government = hms_government
 						government = prussian_constitutionalism
+						government = semi_constitutional_empire
+						government = hms_government
+						government = constitutional_empire
 					}
 				}
 			}
@@ -276,15 +294,106 @@ political_decisions = {
 				factor = 0
 				GRE = {
 					NOT = {
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
 						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 		}
 	}
+	
+	ionian_lose_accepted_cultures = {
+        potential = {
+            ai = yes
+            is_cultural_union = no
+            OR = {
+                ION = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                    OR = {
+                        any_owned_province = { NOT = { is_core = ION } }
+                        exists = no
+                    }
+                }
+                GRE = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                }
+                HAW = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    accepted_culture = yankee
+                    OR = {
+                        any_owned_province = { NOT = { is_core = HAW } }
+                        NOT = { pop_majority_culture = polynesian }
+                        exists = no
+                    }
+                }
+            }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            any_country = {
+                limit = {
+                    tag = ION
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                    OR = {
+                        any_owned_province = { NOT = { is_core = ION } }
+                        exists = no
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = british
+                remove_accepted_culture = north_italian
+            }
+
+            any_country = {
+                limit = {
+                    tag = GRE
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = british
+                remove_accepted_culture = north_italian
+            }
+
+            any_country = {
+                limit = {
+                    tag = HAW
+                    accepted_culture = yankee
+                    OR = {
+                        any_owned_province = { NOT = { is_core = HAW } }
+                        NOT = { pop_majority_culture = polynesian }
+                        exists = no
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = yankee
+            }
+        }
+    }
 	
 	grecofication = {
 		picture = megali_idea
@@ -420,7 +529,7 @@ political_decisions = {
 			###THRACE###
 			random_owned = {
 				limit = { province_id = 828 }
-				828 = { change_province_name = "Adrianople" }
+				828 = { change_province_name = "Adrianoupolis" }
 				owner = { set_country_flag = grecofication_edirne }
 			}
 			random_owned = {

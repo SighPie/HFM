@@ -1,5 +1,6 @@
-add_core = RUS
-add_core = YAK
-trade_goods = grain
-terrain = boreal
-life_rating = 10
+owner = PER
+controller = PER
+add_core = PER
+trade_goods = tobacco
+life_rating = 35
+terrain = dryhills

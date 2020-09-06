@@ -1,10 +1,11 @@
 capital = 658
 primary_culture = polynesian
+culture = yankee
 religion = protestant
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.03
+literacy = 0.01
 non_state_culture_literacy = 0.01
 
 slavery = no_slavery
@@ -55,6 +56,9 @@ nonstate_consciousness = 0
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 oob = "HAW_oob.txt"
 1861.1.1 = {

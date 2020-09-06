@@ -2,7 +2,10 @@ political_decisions = {
 	fatherland_volunteers = {
 		potential = {
 			tag = BRZ
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 			NOT = {
 				has_country_flag = pedro_said_it_best
 			}
@@ -31,6 +34,9 @@ political_decisions = {
 				government = hms_government
 				government = prussian_constitutionalism
 				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = { slavery = no_slavery }
 		}
@@ -237,6 +243,7 @@ political_decisions = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 			money = 60000
 		}
@@ -320,17 +327,40 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			invention = manifest_destiny
-			NOT = { rebel_power_fraction = 50 }
 			NOT = { num_of_revolts = 1 }
 			NOT = { any_owned_province = { country_units_in_province = REB } }
-			OR = {
-				money = 10000
-				ai = yes
+            NOT = {
+                any_owned_province = {
+                    pop_majority_culture = mayan
+                    average_militancy = 3
+                }
 			}
 		}
 		
 		effect = {
-			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -10000 } }
+
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 20000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
+            owner = { change_variable = { which = owed_cash_money value = 20 } }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 20000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 20 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 20000 } }
+            owner = { treasury = -20000 }
+        }
 			
 			random_owned = {
 				limit = { YUC = { all_core = { owned_by = THIS is_core = THIS } } }
@@ -461,7 +491,7 @@ political_decisions = {
 	
 	
 	treaty_of_bogota = {
-		picture = colombia_map
+        picture = map_colombia
 		potential = {
 			tag = BRZ
 			NOT = { has_country_flag = treaty_of_bogota }
@@ -536,22 +566,43 @@ political_decisions = {
 	spu_applies_for_statehood = {
 		potential = {
 			tag = SPU
+                OR = {
+                    AND = {
 			neighbour = PEU
+                        PEU = { war = no }
+                        OR = {
+                            vassal_of = PEU
+                            is_vassal = no
+                        }
+                    }
+                    AND = {
+                        neighbour = PBC
+                        PBC = { war = no }
+                        PEU = { exists = no }
+                        vassal_of = PBC
+                    }
+                }
 			exists = yes
 			ai = yes
 		}
 		
 		allow = {
 			war = no
+        }
+
+        effect = {
+            neutrality = yes
+            random_country = {
+                limit = {
+                    neighbour = THIS
+                    war = no
 			OR = {
-				vassal_of = PEU
-				is_vassal = no
+                        tag = PEU
+                        tag = PBC
+                    }
 			}
-			PEU = { war = no }
+                inherit = THIS
 		}
-		
-		effect = {
-			annex_to = PEU
 		}
 		
 		ai_will_do = { factor = 1 }

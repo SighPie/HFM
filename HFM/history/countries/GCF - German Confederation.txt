@@ -1,7 +1,6 @@
 capital = 619
 primary_culture = south_german
 culture = north_german
-culture = siebenburger
 culture = volga_german
 religion = catholic
 government = absolute_monarchy
@@ -42,6 +41,9 @@ centralization = federalism
 colonial_policy = no_colonies 
 
 set_country_flag = catholic_country
+govt_flag = { government = absolute_empire flag = theocracy }
+govt_flag = { government = semi_constitutional_empire flag = theocracy }
+govt_flag = { government = constitutional_empire flag = theocracy }
 
 ruling_party = GER_conservative
 upper_house = {

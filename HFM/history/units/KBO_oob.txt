@@ -22,15 +22,25 @@ army = {
 	name = "Army of the Kanem-Bornu Empire"
 	location = 1951
 
-regiment = {
-		name= "1st Bornu Warriors"	
-	type = irregular
-	home = 1951
+	regiment = {
+		name= "1. Bornu Warriors"	
+		type = irregular
+		home = 1951
 	}
-regiment = {
-		name= "2nd Bornu Warriors"	
-	type = irregular
-	home = 1952
+	regiment = {
+		name= "2. Bornu Warriors"	
+		type = irregular
+		home = 1952
+	}
+	regiment = {
+		name= "3. Bornu Warriors"	
+		type = irregular
+		home = 1953
+	}
+	regiment = {
+		name= "4. Bornu Warriors"	
+		type = irregular
+		home = 1953
 	}
 }
 

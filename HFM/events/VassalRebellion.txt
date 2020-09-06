@@ -180,7 +180,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 			modifier = {
 				factor = 1.5
@@ -242,7 +245,10 @@ country_event = {
 			factor = 70
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 			modifier = {
 				factor = 0.5
@@ -375,7 +381,10 @@ country_event = {
 			factor = 95
 			modifier = {
 				factor = 1.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 			modifier = {
 				factor = 0.5
@@ -460,7 +469,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 			modifier = {
 				factor = 1.5
@@ -689,6 +701,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				FROM = {
 					overlord = {
@@ -789,6 +802,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { ruling_party_ideology = communist }
 				FROM = {
@@ -800,6 +814,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = { ruling_party_ideology = fascist }
 				FROM = {
@@ -814,6 +829,8 @@ country_event = {
 						OR = {
 							government = democracy
 							government = hms_government
+							government = semi_constitutional_empire
+							government = constitutional_empire
 						}
 					}
 				}		

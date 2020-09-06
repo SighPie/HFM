@@ -135,6 +135,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		ARC = {
 			government = presidential_dictatorship

@@ -27,7 +27,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = no_draft
 debt_law = peonage
@@ -55,6 +54,8 @@ upper_house = {
 
 foreign_weapons = yes_foreign_weapons
 education_reform = yes_education_reform
+monetary_reform = yes_monetary_reform
+
 # Technologies
 flintlock_rifles = 1
 

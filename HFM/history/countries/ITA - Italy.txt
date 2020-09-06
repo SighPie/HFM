@@ -29,8 +29,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
-
-
 # New Reforms
 conscription = two_year_draft
 debt_law = peonage
@@ -117,9 +115,8 @@ upper_house = {
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
+    regenerative_furnaces = 1
 	hot_blast = 1
-	puddling = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

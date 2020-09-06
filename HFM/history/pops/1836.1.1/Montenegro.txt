@@ -2,46 +2,41 @@
 #under the rule of Ottoman Empire in 1836  
 #Ulcinj (36000/9000 POPS) 
 800 = {
-	clergymen = {
-		culture = montenegrin
-		religion = orthodox
-		size = 50
+
+	soldiers = {
+		culture = serb
+		religion = sunni
+		size = 300
 	}
-	
-	bureaucrats = {
-		culture = montenegrin
+
+	clergymen = {
+		culture = serb
 		religion = orthodox
-		size = 20
+		size = 100
 	}
 
 	artisans = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 400
 	}
 
 	farmers = {
-		culture = montenegrin
-		religion = orthodox
-		size = 16550
-	}
-	
-	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 6000
+		size = 7350
 	}
 
 	clergymen = {
 		culture = albanian
 		religion = sunni
-		size = 25
+		size = 100
 	}
 
 	artisans = {
 		culture = albanian
 		religion = sunni
-		size = 50
+		size = 100
 	}
 
 	soldiers = {
@@ -53,25 +48,38 @@
 	serfs = {
 		culture = albanian
 		religion = sunni
-		size = 1825
+		size = 725
 	}
 }
 #Niksic (52000/13000 POPS) 
 2569 = {
-	clergymen = {
-		culture = montenegrin
+	
+	aristocrats = {
+		culture = serb
 		religion = orthodox
 		size = 100
 	}
 	
-	bureaucrats = {
-		culture = montenegrin
+	officers = {
+		culture = serb
 		religion = orthodox
-		size = 50
+		size = 100
+	}
+	
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 100
+	}
+	
+	clergymen = {
+		culture = serb
+		religion = orthodox
+		size = 100
 	}
 
 	artisans = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 500
 	}
@@ -79,19 +87,13 @@
 	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 1000
-	}
-	
-	farmers = {
-		culture = montenegrin
-		religion = orthodox
-		size = 1000
+		size = 4000
 	}
 
 	serfs = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
-		size = 9400
+		size = 7100
 	}
 
 	aristocrats = {
@@ -99,17 +101,23 @@
 		religion = sunni
 		size = 250
 	}
+	
+	officers = {
+		culture = bosniak
+		religion = sunni
+		size = 100
+	}
 
 	clergymen = {
 		culture = bosniak
 		religion = sunni
-		size = 25
+		size = 100
 	}
 
 	artisans = {
 		culture = bosniak
 		religion = sunni
-		size = 75
+		size = 100
 	}
 
 	soldiers = {
@@ -121,58 +129,52 @@
 	farmers = {
 		culture = bosniak
 		religion = sunni
-		size = 5825
+		size = 5725
 	}
 }
 #under the rule of Montenegro in 1836  
 #Cetinje (104000/26000 POPS) 
 2583 = {
 	aristocrats = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 100
 	}
 	
 	bureaucrats = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 100
 	}
 
 	officers = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 25
 	}
 
 	clergymen = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 275
 	}
 
 	artisans = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 1300
 	}
 
 	soldiers = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
-		size = 1100
+		size = 3000
 	}
 
 	farmers = {
-		culture = montenegrin
-		religion = orthodox
-		size = 22375
-	}
-	
-	farmers = {
 		culture = serb
 		religion = orthodox
-		size = 1000
+		size = 21375
 	}
 	
 	farmers = {
@@ -193,13 +195,13 @@
 	}
 
 	clergymen = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
-		size = 75
+		size = 100
 	}
 
 	artisans = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 250
 	}
@@ -211,7 +213,7 @@
 	}
 
 	serfs = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 5175
 	}
@@ -245,13 +247,7 @@
 		religion = sunni
 		size = 3000
 	}
-	
-	farmers = {
-		culture = serb
-		religion = orthodox
-		size = 650
-	}
-	
+
 	farmers = {
 		culture = gypsy
 		religion = sunni
@@ -265,7 +261,7 @@
 	aristocrats = {
 		culture = croat
 		religion = catholic
-		size = 50
+		size = 100
 	}
 	
 	officers = {
@@ -277,7 +273,7 @@
 	clergymen = {
 		culture = croat
 		religion = catholic
-		size = 50
+		size = 100
 	}
 
 	artisans = {
@@ -289,7 +285,7 @@
 	soldiers = {
 		culture = croat
 		religion = catholic
-		size = 50
+		size = 100
 	}
 
 	farmers = {
@@ -317,25 +313,25 @@
 	}
 
 	clergymen = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 100
 	}
 
 	artisans = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 550
 	}
 
 	soldiers = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 125
 	}
 
 	farmers = {
-		culture = montenegrin
+		culture = serb
 		religion = orthodox
 		size = 10225
 	}
@@ -349,7 +345,7 @@
 	aristocrats = {
 		culture = north_italian
 		religion = catholic
-		size = 50
+		size = 100
 	}
 	
 	officers = {
@@ -361,7 +357,7 @@
 	clergymen = {
 		culture = north_italian
 		religion = catholic
-		size = 50
+		size = 100
 	}
 
 	artisans = {

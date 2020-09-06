@@ -2,7 +2,7 @@ color = { 209 196 68 }
 graphical_culture = ChineseGC
 
 party = {
-	name = "YNN_reactionary_2"
+	name = "IMG_reactionary_2"
 	start_date = 1830.1.1
 	end_date = 2000.2.2
 
@@ -32,7 +32,7 @@ party = {
 }
 
 party = {
-	name = "YNN_liberal_2"
+	name = "IMG_liberal_2"
 	start_date = 1830.1.1
 	end_date = 1870.2.2
 
@@ -62,7 +62,7 @@ party = {
 }
 
 party = {
-	name = "YNN_conservative_2"
+	name = "IMG_conservative_2"
 	start_date = 1830.1.1
 	end_date = 1870.2.2
 

@@ -51,13 +51,19 @@ upper_house = {
 
 
 foreign_weapons = yes_foreign_weapons
+monetary_reform = yes_monetary_reform
 
 # Technologies
 flintlock_rifles = 1
 
 # Inventions
-##bottling_process = yes
+#bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 3
@@ -83,7 +89,6 @@ oob = "DAI_oob.txt"
 	post_napoleonic_thought = 1
 
 	# Inventions
-##bottling_process = yes
-modern_winemaking = yes
+#bottling_process = yes
 
 }

@@ -1,9 +1,9 @@
-capital = 1707
+capital = 1713
 primary_culture = maghrebi
 culture = berber
 culture = tuareg
 religion = sunni
-government = absolute_monarchy
+government = unciv_absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
@@ -37,7 +37,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 
-ruling_party = ALD_conservative
+ruling_party = ALD_reactionary
 upper_house = {
 	fascist = 0
 	liberal = 12
@@ -52,11 +52,21 @@ set_country_flag = sunni_country
 
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
+admin_reform = yes_admin_reform
+military_constructions = yes_military_constructions
 
 # Technologies
+military_staff_system = 1
+post_napoleonic_thought = 1
+bronze_muzzle_loaded_artillery = 1
 flintlock_rifles = 1
 
-# Inventions
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

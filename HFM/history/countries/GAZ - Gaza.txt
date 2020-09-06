@@ -1,7 +1,6 @@
-capital = 2058
+capital = 2050
 primary_culture = nguni
 culture = tonga
-culture = sena
 culture = southern_bantu
 religion = animist
 government = absolute_monarchy

@@ -62,7 +62,9 @@ political_decisions = {
 			is_greater_power = yes
 			OR = {
 				government = prussian_constitutionalism
+				government = semi_constitutional_empire
 				government = hms_government
+				government = constitutional_empire
 			}
 			OR = {
 				EGY = {
@@ -190,12 +192,12 @@ political_decisions = {
 		potential = {
 			tag = EGY
 			civilized = no
-			year = 1851
 			NOT = { has_country_flag = establish_the_egyptian_railways }
 		}
 		
 		allow = {
 			war = no
+			year = 1851
 			money = 155100
 		}
 		
@@ -218,18 +220,9 @@ political_decisions = {
 		potential = {
 			war = no
 			has_global_flag = oriental_crisis
-			OR = { 
-				AND = { 
-					tag = EGY
-					has_global_flag = abandoned_holy_land
-				}
-				AND = {
-					tag = TUR
-					OR = { 
-						EGY = { has_country_flag = surrendered_to_OE }
-						owns = 913
-					}
-				}	
+			AND = { 
+				tag = EGY
+				has_global_flag = abandoned_holy_land
 			}
 			exists = HDJ
 			NOT = { has_country_flag = reclaim_hejaz }
@@ -243,6 +236,11 @@ political_decisions = {
 				exists = yes
 				is_vassal = no
 				neighbour = THIS
+				OR = { 
+					part_of_sphere = no
+					in_sphere = THIS
+				}
+				truce_with = THIS
 			}
 		}
 		

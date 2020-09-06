@@ -25,25 +25,16 @@ political_decisions = {
 		}
 		allow = {
 			money = 10000
-			NOT = { sphere_owner = { alliance_with = THIS } }
-			
+			sphere_owner = { war = no }
 			OR = {
-				any_greater_power = { 
-					war_with = THIS
-				}
-				TUR = {
-					war_with = THIS
-				}
-				AUS = {
-					war_with = THIS
-				}
+				any_greater_power = { war_with = THIS }
+				TUR = { war_with = THIS }
+				AUS = { war_with = THIS }
 			}
 		}
 		
 		effect = {
-			sphere_owner = {
-				country_event = { id=99920 days=7 }
-			}
+			sphere_owner = { country_event = { id=99920 days=7 } }
 			prestige = -5
 			set_country_flag = requested_military_aid
 		}
@@ -62,6 +53,7 @@ political_decisions = {
 					is_greater_power = no
 					civilized = yes
 					OR = {
+						government = constitutional_empire
 						government = hms_government
 						government = democracy
 					}
@@ -79,6 +71,7 @@ political_decisions = {
 				NOT = { truce_with = THIS }
 			}
 			OR = {
+				government = constitutional_empire
 				government = hms_government
 				government = democracy
 			}

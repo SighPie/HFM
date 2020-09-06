@@ -126,33 +126,39 @@
 #Chitral (160000/40000 POPS)
 1223 = {
 	aristocrats = {
-		culture = pashtun
+		culture = kashmiri
 		religion = sunni
 		size = 500
 	}
 
 	clergymen = {
-		culture = pashtun
+		culture = kashmiri
 		religion = sunni
 		size = 500
 	}
 
 	artisans = {
-		culture = pashtun
+		culture = kashmiri
 		religion = sunni
 		size = 2000
 	}
 
 	soldiers = {
-		culture = pashtun
+		culture = kashmiri
 		religion = sunni
 		size = 5000
 	}
 
 	farmers = {
+		culture = kashmiri
+		religion = sunni
+		size = 36000
+	}
+	
+	farmers = {
 		culture = pashtun
 		religion = sunni
-		size = 37000
+		size = 1000
 	}
 
 }
@@ -274,17 +280,17 @@
 	soldiers = {
 		culture = baluchi
 		religion = sunni
-		size = 5000
+		size = 4500
 	}
 
 	farmers = {
 		culture = baluchi
 		religion = sunni
-		size = 18925
+		size = 38925
 	}
 
 	slaves = {
-		culture = kilombero #african_minor
+		culture = lacustrine_bantu #african_minor
 		religion = animist
 		size = 4000
 	}
@@ -335,9 +341,59 @@
 	}
 
 	slaves = {
-		culture = kilombero #african_minor
+		culture = lacustrine_bantu #african_minor
 		religion = animist
 		size = 5000
+	}
+}
+#Kech (124000/31000 POPS)
+3258 = {
+	aristocrats = {
+		culture = baluchi
+		religion = sunni
+		size = 150
+	}
+
+	bureaucrats = {
+		culture = baluchi
+		religion = sunni
+		size = 25
+	}
+
+	officers = {
+		culture = baluchi
+		religion = sunni
+		size = 25
+	}
+
+	clergymen = {
+		culture = baluchi
+		religion = sunni
+		size = 200
+	}
+
+	artisans = {
+		culture = baluchi
+		religion = sunni
+		size = 1000
+	}
+
+	soldiers = {
+		culture = baluchi
+		religion = sunni
+		size = 1000
+	}
+
+	farmers = {
+		culture = baluchi
+		religion = sunni
+		size = 25800
+	}
+
+	slaves = {
+		culture = lacustrine_bantu #african_minor
+		religion = animist
+		size = 2000
 	}
 }
 #Kashmir Region (1208000)
@@ -595,6 +651,21 @@
 	}
 
 }
+#Aksai Chin
+3299 = {
+	farmers = {
+		culture = kashmiri
+		religion = sunni
+		size = 250
+	}
+
+	farmers = {
+		culture = tibetan
+		religion = mahayana
+		size = 450
+	}
+}
+
 #Panjab Region (9430000)
 #Under rule of Panjab 1836 (8856000)
 #Lahore (2644000/661000 POPS)
@@ -748,7 +819,7 @@
 	soldiers = {
 		culture = panjabi
 		religion = sikh
-		size = 200
+		size = 1200
 	}
 
 	farmers = {
@@ -778,7 +849,7 @@
 	soldiers = {
 		culture = panjabi
 		religion = sunni
-		size = 1500
+		size = 2500
 	}
 
 	farmers = {
@@ -1056,7 +1127,7 @@
 	soldiers = {
 		culture = panjabi
 		religion = sikh
-		size = 50
+		size = 1150
 	}
 
 	farmers = {
@@ -4362,7 +4433,7 @@
 	farmers = {
 		culture = rajput
 		religion = hindu
-		size = 215050
+		size = 206050
 	}
 
 	clergymen = {
@@ -7333,7 +7404,7 @@
 		size = 4750
 	}
 
-	farmers = {
+	serfs = {
 		culture = marathi
 		religion = hindu
 		size = 40000
@@ -7560,7 +7631,7 @@
 	farmers = {
 		culture = marathi
 		religion = catholic
-		size = 33725
+		size = 46725
 	}
 
 	clergymen = {
@@ -7590,7 +7661,7 @@
 	slaves = {
 		culture = marathi
 		religion = hindu
-		size = 10000
+		size = 5000
 	}
 
 }
@@ -9196,19 +9267,19 @@
 	}
 	
 	farmers = {
-		culture = asian_minor
-		religion = gelugpa
+		culture = nepali
+		religion = hindu
 		size = 2000
 	}
 	
 	farmers = {
-		culture = asian_minor
-		religion = animist
+		culture = nepali
+		religion = hindu
 		size = 365
 	}
 	
 	farmers = {
-		culture = asian_minor
+		culture = nepali
 		religion = hindu
 		size = 1000
 	}

@@ -38,5 +38,3 @@ regiment = {
 	home = 1881
 	}
 }
-
-

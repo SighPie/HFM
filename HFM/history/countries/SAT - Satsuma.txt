@@ -26,14 +26,13 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
-border_policy = open_borders
+border_policy = closed_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
@@ -59,14 +58,19 @@ foreign_artillery = yes_foreign_artillery
 army_schools = yes_army_schools
 land_reform = yes_land_reform
 education_reform = yes_education_reform
-finance_reform = yes_finance_reform
+monetary_reform = yes_monetary_reform
 
 # Technologies
 flintlock_rifles = 1
 
 # Inventions
-##bottling_process = yes
+small_arms_production = yes
+ammunition_production = yes
+#bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0
@@ -92,7 +96,6 @@ flintlock_rifles = 1
 post_nelsonian_thought = 1
 
 # Inventions
-##bottling_process = yes
-modern_winemaking = yes
+#bottling_process = yes
 
 }

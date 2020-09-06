@@ -3,7 +3,7 @@ controller = ENG
 add_core = GUY
 trade_goods = fruit
 terrain = plains
-life_rating = 32
+life_rating = 35
 colonial = 2
 naval_base = 1
 1861.1.1 = { railroad = 1 }

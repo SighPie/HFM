@@ -1,8 +1,9 @@
-owner = ALD
+owner = FRA
 controller = ALD
 add_core = ALD
 trade_goods = grain
 life_rating = 35
+terrain = dry_mountains
 1861.1.1 = {
 	owner = FRA
 	controller = FRA

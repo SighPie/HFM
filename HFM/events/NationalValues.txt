@@ -440,6 +440,7 @@ country_event = {
 			government = proletarian_dictatorship
 			government = bourgeois_dictatorship
 			government = absolute_monarchy
+			government = absolute_empire
 		}
 	}
 	

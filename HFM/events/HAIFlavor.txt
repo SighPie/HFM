@@ -62,7 +62,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA45101"
-		government = absolute_monarchy
+		government = absolute_empire
 		ruling_party_ideology = reactionary
 		political_reform = none_voting
 		political_reform = party_appointed
@@ -70,6 +70,16 @@ country_event = {
 		political_reform = state_press
 		political_reform = state_controlled
 		political_reform = underground_parties
+		
+		clr_country_flag = election_started
+		clr_country_flag = conservative_party_in_power
+		clr_country_flag = liberal_party_in_power
+		clr_country_flag = reactionary_party_in_power
+		clr_country_flag = socialist_party_in_power
+		clr_country_flag = communist_party_in_power
+		clr_country_flag = fascist_party_in_power
+		clr_country_flag = anarcho_liberal_party_in_power
+		
 		prestige = -5
 		country_event = 800050
 	}
@@ -118,49 +128,52 @@ country_event = {
 	}
 }
 
+###Haiti Loses their cores
+country_event = {
 
-#country_event = {
-#
-#	id = 45103
-#
-#	title = "EVTNAME45103"
-#	desc = "EVTDESC45103"
-#	picture = "dominican_revolution"
-#
-#	fire_only_once = yes
-#	
-#	trigger = {
-#		tag = DOM
-#		owns = 2214
-#		owns = 2216
-#		exists = yes
-#		2214 = { is_core = HAI }
-#		2216 = { is_core = HAI }
-#		war = no
-#		year = 1836
-#	}
-#	
-#	mean_time_to_happen = { months = 8 }
-#		
-#			
-#	option = {
-#		name = "EVT45103OPTA"
-#		prestige = 5
-#		relation = {
-#			who = HAI
-#			value = -100
-#			}
-#		any_owned = { limit = { is_core = DOM }
-#		remove_core = HAI
-#		remove_province_modifier = nationalist_agitation
-#		HAI = { remove_accepted_culture = caribeno }
-#		any_pop = {
-#			militancy = -9
-#			consciousness = -9
-#			}
-#		}
-#	}
-#}
+	id = 45103
+
+	title = "EVTNAME45103"
+	desc = "EVTDESC45103"
+	picture = "dominican_revolution"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DOM
+		exists = yes
+		2214 = { is_core = HAI owned_by = THIS }
+		2216 = { is_core = HAI owned_by = THIS }
+		war = no
+		NOT = { truce_with = HAI }
+	}
+	
+	mean_time_to_happen = { months = 48 }
+		
+			
+	option = {
+		name = "EVT45103OPTA"
+		remove_accepted_culture = afro_caribeno
+		add_casus_belli = {
+			target = HAI
+			type = conquest
+			months = 24
+		}
+		relation = {
+			who = HAI
+			value = -25
+		}
+		any_owned = {
+			limit = { is_core = DOM }
+			remove_core = HAI
+			remove_province_modifier = nationalist_agitation
+			any_pop = {
+				militancy = -9
+				consciousness = -9
+			}
+		}
+	}
+}
 
 country_event = {
 
@@ -220,7 +233,9 @@ country_event = {
 			secede_province = DOM
 		}
 		DOM = {
-			define_general = { name = "Pedro Santana" personality = implacable background = nationalist } }
+			define_general = { name = "Pedro Santana" personality = implacable background = nationalist }
+			add_accepted_culture = afro_caribeno
+		}
 		relation = { who = DOM value = -400 }
 		war = {
 			target = DOM
@@ -228,7 +243,6 @@ country_event = {
 			defender_goal = { casus_belli = status_quo }
 		}
 		change_tag_no_core_switch = DOM
-		
 		ai_chance = { factor = 0 }
 	}
 }

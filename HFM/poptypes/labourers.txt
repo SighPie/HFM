@@ -118,7 +118,7 @@ country_migration_target = {
 	}
 	
 	modifier = {
-		factor = 2.81
+		factor = 4.01
 		OR = {
 			##is_culture_group = THIS
 			AND = {
@@ -168,11 +168,19 @@ country_migration_target = {
 				}
 				NOT = { continent = asia }
 			}
+			AND = {
+				THIS = { is_culture_group = italian }
+				OR = { 
+					is_culture_group = pan_swiss
+					primary_culture = french
+					is_culture_group = italian
+				}	
+			}
 		}
 	}
 	
 	modifier = {
-		factor = 4.0
+		factor = 3.55
 		number_of_states = 2
 		has_country_flag = new_world_nation
 		OR = {
@@ -186,6 +194,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
+			government = constitutional_empire
 			government = dominion
 			government = colonial_company
 		}
@@ -207,6 +216,7 @@ country_migration_target = {
 			government = democracy
 			government = presidential_dictatorship
 			government = hms_government
+			government = constitutional_empire
 			government = dominion
 			government = colonial_company
 		}
@@ -347,7 +357,7 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 0.8
+		factor = 0.5
 		terrain = steppe
 	}
 	
@@ -357,13 +367,22 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 0.8
-		terrain = dryhills
+		factor = 0.6
+		OR = {
+			terrain = dryhills
+			terrain = dry_mountains
+		}
 	}
 	
 	modifier = {
 		factor = 0.5
-		terrain = jungle
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+			terrain = jungle_farmland
+			terrain = jungle_hills
+			terrain = jungle_mountains
+		}
 	}
 	
 	modifier = {
@@ -383,12 +402,12 @@ migration_target = {
 	
 	modifier = {
 		factor = 0.5
-		terrain = semidesert
-	}
-	
-	modifier = {
-		factor = 0.5
-		terrain = boreal
+		OR = { 
+			terrain = semidesert
+			terrain = semi_desert_mountains
+			terrain = new_world_semidesert
+			terrain = coastal_desert
+		}
 	}
 
 	modifier = {
@@ -407,22 +426,49 @@ migration_target = {
 	}
 	
 	modifier = {
-		factor = 0.01
-		terrain = desert
-		continent = africa
+		factor = 0
+		OR = {
+			terrain = desert
+			terrain = semidesert
+		}
+		OR = { 
+			continent = west_africa 
+			continent = east_africa
+			continent = central_africa
+			continent = asia
+			continent = africa
+			continent = oceania
+		}
+	}
+	
+	modifier = {
+		factor = 0
+		OR = {
+			terrain = arctic
+			terrain = boreal
+			terrain = montane_tundra
+		}
+		NOT = { life_rating = 20 }
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			terrain = arctic
+			terrain = boreal
+		}
+		life_rating = 20
 	}
 	
 	modifier = {
 		factor = 0.05
-		terrain = arctic
+		OR = {
+			terrain = montane_tundra
+			terrain = himalayan_mountains
+		}
 	}
 	
 	modifier = {
-		factor = 0.05
-		terrain = montane_tundra
-	}
-	
-modifier = {
 		factor = 0.5
 		OR = {
 			continent = west_africa
@@ -663,9 +709,13 @@ modifier = {
 			terrain = desert
 			terrain = arctic
 			terrain = semidesert
+			terrain = semi_desert_mountains
+			terrain = new_world_semidesert
+			terrain = coastal_desert
 			terrain = boreal
 			terrain = small_island
 			terrain = montane_tundra
+			terrain = himalayan_mountains
 			terrain = coral_island
 		}
 	}
@@ -830,62 +880,6 @@ serfs = {
 			NOT = { is_primary_culture = yes }
 		}	
 		
-		modifier = {
-			factor = 8
-			colonial_policy = settlement
-			location = { life_rating = 25 }
-			state_scope = { total_pops = 135000 }
-		}
-		
-		modifier = {
-			factor = -12
-			colonial_policy = settlement
-			location = { life_rating = 25 }
-			state_scope = { NOT = { total_pops = 55000 } }
-		}
-		
-		modifier = {
-			factor = 12
-			colonial_policy = settlement
-			location = { 
-				is_colonial = yes 
-				NOT = { is_core = RUS }
-				NOT = { is_core = CRI }
-				culture = russian
-				total_pops = 50000
-			}
-			country = { primary_culture = russian }
-		}
-		
-		modifier = {
-			factor = 20
-			colonial_policy = settlement
-			location = { 
-				is_colonial = yes 
-				NOT = { is_core = RUS }
-				NOT = { is_core = CRI }
-				total_pops = 125000
-				culture = russian
-			}
-			year = 1865
-			country = { primary_culture = russian }
-		}
-		
-		modifier = {
-			factor = 24
-			colonial_policy = settlement
-			location = { 
-				is_colonial = yes 
-				OR = {
-					state_id = 1086
-					state_id = 1643
-				}
-				culture = japanese
-			}
-			state_scope = { total_pops = 150000 }
-			country = { primary_culture = japanese }
-		}
-		
 		group = {
 			modifier = {
 				factor =  0.25
@@ -998,7 +992,45 @@ serfs = {
 				state_scope = { bureaucrats = 0.040 }
 			}
 		}
-	
+		
+		modifier = {
+			factor = -100 
+			state_scope = { 
+				is_colonial = yes 
+				NOT = { total_pops = 80000 }
+			}	
+			country = { NOT = { has_country_flag = berlin_conference } }
+		}
+		
+		modifier = {
+			factor = 8
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			location = { 
+				OR = {
+					is_primary_culture = yes 
+					is_accepted_culture = yes
+				}
+				total_pops = 50000
+			}
+			colonial_policy = settlement
+			location = { life_rating = 25 }
+			state_scope = { total_pops = 135000 }
+		}
+		
+		modifier = {
+			factor = -12
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			colonial_policy = settlement
+			location = { life_rating = 25 }
+			state_scope = { NOT = { total_pops = 55000 } }
+		}
+		
 		modifier = {
 			factor = 4
 			health_care = trinket_health_care
@@ -1076,7 +1108,7 @@ serfs = {
 			factor = 16
 			wage_reform = good_minimum_wage
 		}
-		
+
 		group = {
 			modifier = {
 				factor = 2
@@ -1126,6 +1158,22 @@ serfs = {
 				country = { ai = yes }
 			}
 		}
+		
+		modifier = {
+			factor = 24
+			colonial_policy = settlement
+			location = { 
+				is_colonial = yes 
+				OR = {
+					state_id = 1086
+					state_id = 1643
+				}
+				culture = japanese
+			}
+			state_scope = { total_pops = 150000 }
+			country = { primary_culture = japanese }
+		}
+				
 	}
 	soldiers =
 	{
@@ -1241,6 +1289,22 @@ serfs = {
 				soldiers = 0.05
 			}
 		}
+		
+		modifier = {
+			factor = 5
+			NOT = { soldiers = 0.05 }
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			country = { 
+				OR = {
+					war_policy = jingoism
+					war_policy = pro_military
+				}
+			}
+		}
+		
 		modifier = {
 			factor = -100
 			soldiers = 0.008
@@ -1973,6 +2037,7 @@ ideologies = {
 			factor = 0.9
 			poor_strata_militancy = 9
 		}
+		
 	}
 
 	socialist = {
@@ -2139,6 +2204,14 @@ ideologies = {
 			factor = 1.05
 			consciousness = 7
 		}
+		modifier = {
+			factor = 0.8
+			nationalvalue = nv_order
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+		}
 	}
 
 	communist = {
@@ -2270,6 +2343,14 @@ ideologies = {
 				is_primary_culture = yes
 				NOT = { has_pop_religion = animist }
 				literacy = 0.6
+			}
+		}
+		modifier = {
+			factor = 0.8
+			nationalvalue = nv_order
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
 			}
 		}
 	}
@@ -6936,7 +7017,12 @@ rehabilitation = {
 
 		modifier = {
 			factor = 0.5
-			country = { government = hms_government }
+			country = { 
+				OR = {
+					government = hms_government 
+					government = constitutional_empire
+				}
+			}
 		}
 		
 		modifier = {
@@ -7006,7 +7092,12 @@ rehabilitation = {
 
 		modifier = {
 			factor = 0.5
-			country = { government = hms_government }
+			country = { 
+				OR = {
+					government = hms_government 
+					government = constitutional_empire
+				}
+			}
 		}
 		
 		modifier = {

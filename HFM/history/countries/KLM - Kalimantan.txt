@@ -1,6 +1,5 @@
 capital = 1423
 primary_culture = malay
-culture = asian_minor
 religion = sunni
 government = absolute_monarchy
 plurality = 0.0

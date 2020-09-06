@@ -87,10 +87,15 @@ political_decisions = {
 		
 		allow = {
 			war = no
+            is_mobilised = no
 			prestige = 50
 			nationalism_n_imperialism = 1
 		PRG = {
 				OR = {
+                    exists = no
+                    is_mobilised = no
+                }
+                OR = {
 					in_sphere = THIS
 					vassal_of = THIS
 					all_core = {
@@ -104,6 +109,10 @@ political_decisions = {
 			}
 			URU = {
 				OR = {
+                    exists = no
+                    is_mobilised = no
+                }
+                OR = {
 					in_sphere = THIS
 					vassal_of = THIS
 					all_core = {
@@ -118,6 +127,8 @@ political_decisions = {
 		OR = {
 			ARG = {
 			exists = yes
+                is_mobilised = no
+                war = no
 				OR = {
 					in_sphere = THIS
 					vassal_of = THIS
@@ -133,6 +144,8 @@ political_decisions = {
 			
 			ARC = {
 			exists = yes
+                is_mobilised = no
+                war = no
 				OR = {
 					in_sphere = THIS
 					vassal_of = THIS

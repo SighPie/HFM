@@ -201,7 +201,7 @@
 	farmers = {
 		culture = malagasy
 		religion = animist
-		size = 17300
+		size = 27300
 	}
 }
 #Toamasina (116000/29000 POPS)
@@ -481,7 +481,7 @@
 	slaves = {
 		culture = malagasy #african_minor
 		religion = animist
-		size = 10550
+		size = 5550
 	}
 
 	aristocrats = {
@@ -511,7 +511,7 @@
 	farmers = {
 		culture = malagasy
 		religion = animist
-		size = 18225
+		size = 44225
 	}
 }
 #Toliara (172000/43000 POPS)
@@ -549,7 +549,7 @@
 	slaves = {
 		culture = malagasy #african_minor
 		religion = animist
-		size = 10000
+		size = 5000
 	}
 
 	aristocrats = {
@@ -579,7 +579,7 @@
 	farmers = {
 		culture = malagasy
 		religion = animist
-		size = 23975
+		size = 52975
 	}
 
 }

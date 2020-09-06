@@ -2,4 +2,4 @@ owner = CLM
 controller = CLM
 add_core = CLM
 trade_goods = fish
-life_rating = 33
+life_rating = 35

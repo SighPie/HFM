@@ -1620,16 +1620,58 @@ country_event = {
 		name = "EVTOPTA16454" #Alright, let's buy everything
 		FROM = { treasury = 100000 any_pop = { militancy = 2 consciousness = 3 } }
 		
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
 		random_owned = {
-			limit = { owner = { ai = yes } }
+            limit = {
+                owner = {
+                    NOT = { money = 100000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
 			owner = { change_variable = { which = owed_cash_money value = 100 } } 
 		}
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 100000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 100 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 100000 } }
+            owner = { treasury = -100000 }
+        }
 		
 		102 = { add_core = THIS add_core = CAL remove_core = MEX }
 		2662 = { add_core = THIS add_core = CAL remove_core = MEX }
 		2139 = { add_core = THIS add_core = CAL remove_core = MEX }
 		2138 = { add_core = THIS add_core = CAL remove_core = MEX }
+        random_owned = {
+            limit = {
+                province_id = 100
+                is_core = CSA
+            }
+            102 = { add_core = CSA }
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 2148
+                is_core = CSA
+            }
+            2662 = { add_core = CSA }
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 90
+                is_core = CSA
+            }
+            2139 = { add_core = CSA }
+            2138 = { add_core = CSA }
+        }
+
 		FROM = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 		random_owned = { limit = { owner = { NOT = { slavery = no_slavery } } } MEX_2138 = { is_slave = yes } }
 		relation = { who = FROM value = 150 }
@@ -1659,13 +1701,49 @@ country_event = {
 	option = {
 		name = "EVTOPTB16454" #We don't have the money, buy only the historical stuff
 		FROM = { treasury = 50000 any_pop = { militancy = 1 consciousness = 1 } }
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -50000 } }
+
 		random_owned = {
-			limit = { owner = { ai = yes } }
+            limit = {
+                owner = {
+                    NOT = { money = 50000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
 			owner = { change_variable = { which = owed_cash_money value = 50 } } 
 		}
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 50000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 50 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 50000 } }
+            owner = { treasury = -50000 }
+        }
+
 		102 = { add_core = THIS secede_province = THIS remove_core = MEX }
 		2662 = { add_core = THIS secede_province = THIS remove_core = MEX }
+
+        random_owned = {
+            limit = {
+                province_id = 100
+                is_core = CSA
+            }
+            102 = { add_core = CSA }
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 2148
+                is_core = CSA
+            }
+            2662 = { add_core = CSA }
+        }
+
 		relation = { who = FROM value = 50 }
 		ai_chance = {
 			factor = 80
@@ -1693,13 +1771,48 @@ country_event = {
 	option = {
 		name = "EVTOPTA16455" #Done
 		FROM = { treasury = 50000 any_pop = { militancy = 1 consciousness = 1 } }
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -50000 } }
+
 		random_owned = {
-			limit = { owner = { ai = yes } }
+            limit = {
+                owner = {
+                    NOT = { money = 50000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
 			owner = { change_variable = { which = owed_cash_money value = 50 } } 
 		}
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 50000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 50 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 50000 } }
+            owner = { treasury = -50000 }
+        }
 		102 = { add_core = THIS secede_province = THIS remove_core = MEX }
 		2662 = { add_core = THIS secede_province = THIS remove_core = MEX }
+
+        random_owned = {
+            limit = {
+                province_id = 100
+                is_core = CSA
+            }
+            102 = { add_core = CSA }
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 2148
+                is_core = CSA
+            }
+            2662 = { add_core = CSA }
+        }
+
 		relation = { who = FROM value = 150 }
 		ai_chance = {
 			factor = 100
@@ -1730,6 +1843,23 @@ country_event = {
 		prestige = -5
 		102 = { add_core = THIS }
 		2662 = { add_core = THIS }
+
+        random_owned = {
+            limit = {
+                province_id = 100
+                is_core = CSA
+            }
+            102 = { add_core = CSA }
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 2148
+                is_core = CSA
+            }
+            2662 = { add_core = CSA }
+        }
+
 		relation = { who = FROM value = -100 }
 		diplomatic_influence = { who = FROM value = -200 }
 		ai_chance = {
@@ -1743,7 +1873,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB16456" #Let it go
-		relation = { who = FROM value = -10 }
+        relation = { who = FROM value = -25 }
 		ai_chance = {
 			factor = 5
 			modifier = {	
@@ -1756,13 +1886,32 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC16456" #Pay reparations
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -10000 } }
+        badboy = -1
+
 		random_owned = {
-			limit = { owner = { ai = yes } }
+            limit = {
+                owner = {
+                    NOT = { money = 10000 }
+                    check_variable = { which = owed_cash_money value = 9 }
+                }
+            }
 			owner = { change_variable = { which = owed_cash_money value = 10 } } 
 		}
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { money = 10000 }
+                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                }
+            }
+            owner = { set_variable = { which = owed_cash_money value = 10 } }
+        }
+        random_owned = {
+            limit = { owner = { money = 10000 } }
+            owner = { treasury = -10000 }
+        }
 		FROM = { treasury = 10000 }
-		relation = { who = FROM value = -10 }
+        relation = { who = FROM value = 50 }
 		ai_chance = {
 			factor = 5
 			modifier = {	
@@ -2147,3 +2296,135 @@ country_event = {
 	}
 }
 
+#Back to Africa Act
+province_event = {
+    id = 16460
+    title = "EVTNAME16460"
+    desc = "EVTDESC16460"
+
+    trigger = {
+        NOT = { continent = africa }
+        is_core = THIS
+        any_pop = { is_culture_group = african_diaspora_cultures }
+        owner = { has_country_modifier = forceful_back_to_africa }
+    }
+
+    allow_multiple_instances = no
+
+    mean_time_to_happen = {
+        months = 1400
+
+        modifier = {
+            factor = 0.5
+            NOT = { any_neighbor_province = { any_pop = { is_culture_group = african_diaspora_cultures } } }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB16460"
+        random_pop = {
+            limit = {
+                type = slaves
+                is_culture_group = african_diaspora_cultures
+            }
+            random_list = {
+                50 = { move_pop = 1887 }
+                50 = { move_pop = 1888 }
+            }
+        }
+
+        random_pop = {
+            limit = {
+                NOT = { type = slaves }
+                is_culture_group = african_diaspora_cultures
+            }
+            random = {
+                chance = 50
+                move_pop = 1887
+            }
+        }
+
+        random_pop = {
+            limit = {
+                NOT = { type = slaves }
+                is_culture_group = african_diaspora_cultures
+            }
+            random = {
+                chance = 50
+                move_pop = 1887
+            }
+        }
+
+        random_pop = {
+            limit = {
+                NOT = { type = slaves }
+                is_culture_group = african_diaspora_cultures
+            }
+            random = {
+                chance = 50
+                move_pop = 1888
+            }
+        }
+
+        random_pop = {
+            limit = {
+                NOT = { type = slaves }
+                is_culture_group = african_diaspora_cultures
+            }
+            random = {
+                chance = 50
+                move_pop = 1888
+            }
+        }
+
+        owner = {
+            random_owned = {
+                limit = {
+                    province_id = 1887
+                    state_scope = { is_slave = no }
+                    has_pop_type = slaves
+                }
+                any_pop = { limit = { type = slaves } pop_type = farmers }
+            }
+
+            random_owned = {
+                limit = {
+                    province_id = 1888
+                    state_scope = { is_slave = no }
+                    has_pop_type = slaves
+                }
+                any_pop = { limit = { type = slaves } pop_type = farmers }
+            }
+        }
+    }
+}
+
+#No More Africans
+country_event = {
+    id = 16461
+    title = "EVTNAME16461"
+    desc = "EVTDESC16461"
+    picture = "american_colonization_society"
+
+    trigger = {
+        has_country_modifier = forceful_back_to_africa
+        NOT = {
+            any_owned_province = {
+                is_core = THIS
+                any_pop = { is_culture_group = african_diaspora_cultures }
+            }
+        }
+    }
+
+    allow_multiple_instances = no
+
+    mean_time_to_happen = {
+        months = 1500
+    }
+
+    option = {
+        name = "EVTOPTB16461"
+        remove_country_modifier = forceful_back_to_africa
+        add_country_modifier = { name = law_changed_by_force duration = 1825 }
+    }
+}

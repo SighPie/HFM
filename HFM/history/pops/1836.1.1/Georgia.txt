@@ -353,7 +353,13 @@
 	serfs = {
 		culture = georgian
 		religion = orthodox
-		size = 3625
+		size = 1625
+	}
+
+	farmers = {
+		culture = georgian
+		religion = orthodox
+		size = 3475
 	}
 
 	aristocrats = {

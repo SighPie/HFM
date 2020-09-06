@@ -1,3 +1,8 @@
-trade_goods = fish
-life_rating = 10
-terrain = small_island
+owner = KUN
+controller = KUN
+add_core = KUN
+add_core = AFG
+add_core = KHR
+trade_goods = grain
+life_rating = 35
+terrain = dryhills

@@ -1,5 +1,6 @@
 capital = 1277
 primary_culture = marathi
+culture = avadhi
 religion = hindu
 government = absolute_monarchy
 plurality = 0.0
@@ -60,6 +61,9 @@ flintlock_rifles = 1
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0
@@ -79,6 +83,5 @@ oob = "NAG_oob.txt"
 
 	# Inventions
 #bottling_process = yes
-modern_winemaking = yes
 
 }

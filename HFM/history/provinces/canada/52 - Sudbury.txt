@@ -2,5 +2,5 @@ owner = ENG
 controller = ENG
 add_core = CAN
 trade_goods = iron
-life_rating = 30
+life_rating = 31
 colonial = 2

@@ -35,7 +35,7 @@
 	clergymen = {
 		culture = croat
 		religion = catholic
-		size = 75  
+		size = 100  
 	}
 
 	artisans = {
@@ -47,7 +47,7 @@
 	soldiers = {
 		culture = croat
 		religion = catholic
-		size = 50 
+		size = 100 
 	}
 
 	farmers = {
@@ -65,7 +65,7 @@
 	clergymen = {
 		culture = south_german
 		religion = catholic
-		size = 50   
+		size = 100   
 	}
 
 	artisans = {
@@ -77,7 +77,7 @@
 	soldiers = {
 		culture = south_german
 		religion = catholic
-		size = 75     
+		size = 100     
 	}
 
 	farmers = {
@@ -106,13 +106,13 @@
 		size = 300 
 	}
 
-	serfs = {
+	farmers = {
 		culture = serb
 		religion = orthodox
 		size = 23325
 	}
 	
-	farmers = {
+	serfs = {
 		culture = serb
 		religion = catholic
 		size = 1000
@@ -279,7 +279,7 @@
 	clergymen = {
 		culture = croat
 		religion = catholic
-		size = 75  
+		size = 100  
 	}
 
 	artisans = {
@@ -291,7 +291,7 @@
 	soldiers = {
 		culture = croat
 		religion = catholic
-		size = 50 
+		size = 100 
 	}
 
 	serfs = {
@@ -303,7 +303,7 @@
 	clergymen = {
 		culture = slovak
 		religion = catholic
-		size = 75 
+		size = 100 
 	}
 
 	artisans = {
@@ -353,6 +353,44 @@
 		religion = catholic
 		size = 20375 
 	}
+	
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	officers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 200
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 200
+	}
+	########
 }
 #Serbia Region (180310) - 721.240 people
 #under the rule of Serbia in 1836
@@ -405,6 +443,32 @@
 		religion = orthodox
 		size = 4500
 	}
+	
+	######Jews
+	soldiers = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = sephardic
+		religion = jewish
+		size = 300
+	}
+	
+	farmers = {
+		culture = sephardic
+		religion = jewish
+		size = 200
+	}
+	########
 }
 #Bor (220400/55000 POPS)
 795 = {
@@ -1119,4 +1183,144 @@
 		size = 7450
 	}
 
+}
+
+#Bosilegrad
+3290 = {
+
+	soldiers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 500
+	}
+
+	clergymen = {
+		culture = bulgarian
+		religion = orthodox
+		size = 50
+	}
+
+	artisans = {
+		culture = bulgarian
+		religion = orthodox
+		size = 550
+	}
+
+	farmers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 25000
+	}
+	
+	soldiers = {
+		culture = serb
+		religion = orthodox
+		size = 50
+	}
+
+	clergymen = {
+		culture = serb
+		religion = orthodox
+		size = 50
+	}
+
+	artisans = {
+		culture = serb
+		religion = orthodox
+		size = 100
+	}
+
+	farmers = {
+		culture = serb
+		religion = orthodox
+		size = 1300
+	}
+
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 200
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 50
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 1250
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 50
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 2250
+	}
+}
+
+#Strumica
+3291 = {
+
+	soldiers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 500
+	}
+
+	clergymen = {
+		culture = bulgarian
+		religion = orthodox
+		size = 50
+	}
+
+	artisans = {
+		culture = bulgarian
+		religion = orthodox
+		size = 500
+	}
+
+	farmers = {
+		culture = bulgarian
+		religion = orthodox
+		size = 17500
+	}
+	
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 150
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 50
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 500
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 50
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 1200
+	}
 }

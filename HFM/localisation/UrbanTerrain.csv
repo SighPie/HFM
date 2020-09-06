@@ -1,5 +1,12 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
-canton;Farmlands;;;;;;;;x
+dry_mountains;Dry Mountains;;;;;;;;;;;x
+himalayan_mountains;Himalayan Mountains;;;;;;;;;;;x
+semi_desert_mountains;Semi-Desert Mountains;;;;;;;;;x
+floodplain_farmland;Floodplain Farmlands;;;;;;;;;;x
+jungle_farmland;Jungle Farmlands;;;;;;;;;;x
+jungle_hills;Jungle Hills;;;;;;;;;;x
+jungle_mountains;Jungle Mountains;;;;;;;;;;x
+canton;Floodplain Farmlands;;;;;;;;x
 annecy;Montane Grassland;;;;;;;;x
 kassel;Grassland;;;;;;;;x
 nagasaki;Grassland;;;;;;;;x
@@ -39,7 +46,7 @@ naples;Grassland;;;;;;;;x
 bern;Montane Grassland;;;;;;;;x
 pest;Farmlands;;;;;;;;x
 bukarest;Grassland;;;;;;;;x
-cairo;Farmlands;;;;;;;;x
+cairo;Floodplain Farmlands;;;;;;;;x
 prague;Farmlands;;;;;;;;x
 cologne;Grassland;;;;;;;;x
 mexicocity;Grassland Hills;;;;;;;;x
@@ -98,7 +105,7 @@ leipzig;Grassland;;;;;;;;x
 breslau;Grassland;;;;;;;;x
 #andorra;Montane Grassland;;;;;;;;x
 seville;Grassland;;;;;;;;x
-fez;Montane Grassland;;;;;;;;x
+fez;Dry Mountains;;;;;;;;x
 gibraltar;The Rock;;;;;;;;x
 ceuta;Urban;;;;;;;;x
 #melilla;Urban;;;;;;;;x
@@ -150,16 +157,16 @@ lapaz;Montane Grassland;;;;;;;;x
 havana;Grassland Hills;;;;;;;;x
 capetown;Grassland Hills;;;;;;;;x
 zanzibar;Grassland;;;;;;;;x
-calcutta;Farmlands;;;;;;;;x
+calcutta;Floodplain Farmlands;;;;;;;;x
 pondicherry;Grassland;;;;;;;;x
-bombay;Farmlands;;;;;;;;x
+bombay;Floodplain Farmlands;;;;;;;;x
 delhi;Forest;;;;;;;;x
 madras;Grassland Hills;;;;;;;;x
 goa;Grassland;;;;;;;;x
-lahore;Grassland;;;;;;;;x
-bangkok;Jungle;;;;;;;;x
+lahore;Floodplain Farmlands;;;;;;;;x
+bangkok;Floodplain Farmlands;;;;;;;;x
 saigon;Grassland Hills;;;;;;;;x
-hue;Grassland;;;;;;;;x
+hue;Floodplain Farmlands;;;;;;;;x
 singapore;Grassland;;;;;;;;x
 batavia;Grassland;;;;;;;;x
 sydney;Grassland Hills;;;;;;;;x
@@ -177,8 +184,8 @@ portarthur;Grassland;;;;;;;;x
 kyoto;Grassland Hills;;;;;;;;x
 tashkent;Grassland;;;;;;;;x
 samarkand;Dry Grassland Hills;;;;;;;;x
-isfahan;Montane Grassland;;;;;;;;x
-alexandria;Farmlands;;;;;;;;x
+isfahan;Semi-Desert Mountains;;;;;;;;x
+alexandria;Floodplain Farmlands;;;;;;;;x
 tirana;Grassland Hills;;;;;;;;x
 ljubljana;Grassland Hills;;;;;;;;x
 bratislava;Grassland Hills;;;;;;;;x
@@ -188,7 +195,7 @@ malta;Island;;;;;;;;x
 tunis;Grassland;;;;;;;;x
 florence;Grassland;;;;;;;;x
 danzig;Farmlands;;;;;;;;x
-nanjing;Farmlands;;;;;;;;x
+nanjing;Floodplain Farmlands;;;;;;;;x
 mukden;Grassland;;;;;;;;x
 yokohama;Grassland;;;;;;;;x
 kobe;Forest;;;;;;;;x
@@ -198,7 +205,7 @@ xian;Forest;;;;;;;;x
 pyongyang;Grassland;;;;;;;;x
 pusan;Grassland;;;;;;;;x
 mecca;Semidesert;;;;;;;;x
-aden;Montane Grassland;;;;;;;;x
+aden;Semi-Desert Mountains;;;;;;;;x
 #muscat;Urban;;;;;;;;x
 monaco;Urban;;;;;;;;x
 lodz;Forest;;;;;;;;x

@@ -3,5 +3,5 @@ controller = RPL
 add_core = RPL
 trade_goods = iron
 terrain = new_world_boreal
-life_rating = 30
+life_rating = 31
 colonial = 2

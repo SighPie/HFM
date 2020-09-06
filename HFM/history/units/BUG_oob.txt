@@ -35,4 +35,3 @@ regiment = {
 	type = irregular
 	home = 2020	}
 }
-

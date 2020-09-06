@@ -2,8 +2,8 @@ capital = 1178
 primary_culture = mashriqi
 culture = bedouin
 religion = shiite
-government = absolute_monarchy
-plurality = 0.0
+government = theocracy
+plurality = 5.0
 nationalvalue = nv_tradition
 literacy = 0.03
 non_state_culture_literacy = 0.01
@@ -49,11 +49,7 @@ upper_house = {
 	communist = 0
 }
 
-govt_flag = {
-	government = absolute_monarchy
-	flag = fascist_dictatorship
-}
-
+set_country_flag = theocratic_government
 set_country_flag = shiite_country
 foreign_weapons = yes_foreign_weapons
 
@@ -61,6 +57,11 @@ foreign_weapons = yes_foreign_weapons
 flintlock_rifles = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

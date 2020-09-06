@@ -3,7 +3,7 @@ primary_culture = persian
 culture = azerbaijani
 culture = hazara
 religion = shiite
-government = absolute_monarchy
+government = absolute_empire
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.03
@@ -35,7 +35,7 @@ penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
-centralization = unitary
+centralization = regionalism
 colonial_policy = no_colonies 
 
 ruling_party = PER_conservative
@@ -54,10 +54,10 @@ set_country_flag = shiite_country
 
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
-land_reform = yes_land_reform
+monetary_reform = yes_monetary_reform
 
 govt_flag = {
-	government = absolute_monarchy
+	government = absolute_empire
 	flag = theocracy
 }
 
@@ -66,6 +66,11 @@ flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

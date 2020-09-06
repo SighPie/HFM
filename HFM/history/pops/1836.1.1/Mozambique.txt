@@ -3,6 +3,110 @@
 #Maputo (244000/61000)
 2049 = {
 	aristocrats = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = portuguese
+		religion = catholic
+		size = 125
+	}
+
+	soldiers = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = portuguese
+		religion = catholic
+		size = 200
+	}
+	
+	aristocrats = {
+		culture = nguni
+		religion = animist
+		size = 400
+	}
+
+	clergymen = {
+		culture = nguni
+		religion = animist
+		size = 350
+	}
+
+	artisans = {
+		culture = nguni
+		religion = animist
+		size = 1600
+	}
+
+	soldiers = {
+		culture = nguni
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = nguni
+		religion = animist
+		size = 22250
+	}
+
+	slaves = {
+		culture = nguni
+		religion = animist
+		size = 3000
+	}
+
+	aristocrats = {
+		culture = tonga
+		religion = animist
+		size = 250
+	}
+
+	clergymen = {
+		culture = tonga
+		religion = animist
+		size = 225
+	}
+
+	artisans = {
+		culture = tonga
+		religion = animist
+		size = 1750
+	}
+
+	soldiers = {
+		culture = tonga
+		religion = animist
+		size = 250
+	}
+
+	farmers = {
+		culture = tonga
+		religion = animist
+		size = 11525
+	}
+
+	slaves = {
+		culture = tonga
+		religion = animist
+		size = 2000
+	}
+}
+#Chaimate (280000/70000 POPS)
+2050 = {
+	aristocrats = {
 		culture = nguni
 		religion = animist
 		size = 2400
@@ -29,81 +133,7 @@
 	farmers = {
 		culture = nguni
 		religion = animist
-		size = 42250
-	}
-
-	slaves = {
-		culture = nguni
-		religion = animist
-		size = 3000
-	}
-
-	aristocrats = {
-		culture = tonga
-		religion = animist
-		size = 1250
-	}
-
-	clergymen = {
-		culture = tonga
-		religion = animist
-		size = 225
-	}
-
-	artisans = {
-		culture = tonga
-		religion = animist
-		size = 1750
-	}
-
-	soldiers = {
-		culture = tonga
-		religion = animist
-		size = 250
-	}
-
-	farmers = {
-		culture = tonga
-		religion = animist
-		size = 21525
-	}
-
-	slaves = {
-		culture = tonga
-		religion = animist
-		size = 3000
-	}
-}
-#Chaimate (280000/70000 POPS)
-2050 = {
-	aristocrats = {
-		culture = nguni
-		religion = animist
-		size = 400
-	}
-
-	clergymen = {
-		culture = nguni
-		religion = animist
-		size = 350
-	}
-
-	artisans = {
-		culture = nguni
-		religion = animist
-		size = 1600
-	}
-
-	soldiers = {
-		culture = nguni
-		religion = animist
-		size = 400
-	}
-
-	farmers = {
-		culture = nguni
-		religion = animist
-		size = 23250
+		size = 53250
 	}
 
 	slaves = {
@@ -115,7 +145,7 @@
 	aristocrats = {
 		culture = tonga
 		religion = animist
-		size = 300
+		size = 1300
 	}
 
 	clergymen = {
@@ -139,13 +169,13 @@
 	farmers = {
 		culture = tonga
 		religion = animist
-		size = 19075
+		size = 39075
 	}
 
 	slaves = {
 		culture = tonga
 		religion = animist
-		size = 16000
+		size = 17000
 	}
 }
 #Inhambane (176000/44000 POPS)
@@ -177,7 +207,7 @@
 	farmers = {
 		culture = nguni
 		religion = animist
-		size = 25975
+		size = 15975
 	}
 
 	slaves = {
@@ -213,7 +243,7 @@
 	farmers = {
 		culture = tonga
 		religion = animist
-		size = 30600
+		size = 20600
 	}
 
 	slaves = {
@@ -787,6 +817,36 @@
 #Sofala (144000/36000 POPS)
 2057 = {
 	aristocrats = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = portuguese
+		religion = catholic
+		size = 125
+	}
+
+	soldiers = {
+		culture = portuguese
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = portuguese
+		religion = catholic
+		size = 200
+	}
+
+	aristocrats = {
 		culture = shona
 		religion = animist
 		size = 100
@@ -986,37 +1046,37 @@
 	}
 
 	aristocrats = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	clergymen = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	artisans = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 1050
 	}
 
 	soldiers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 250
 	}
 
 	farmers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 13300
 	}
 
 	slaves = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 6000
 	}
@@ -1025,67 +1085,67 @@
 #Angoche (128000/32000 POPS)
 2061 = {
 	aristocrats = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 600
 	}
 
 	clergymen = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 100
 	}
 
 	artisans = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 700
 	}
 
 	soldiers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	farmers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 32900
 	}
 
 	slaves = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 2000
 	}
 
 	aristocrats = {
-		culture = makua
+		culture = southern_bantu
 		religion = sunni
 		size = 150
 	}
 
 	clergymen = {
-		culture = makua
+		culture = southern_bantu
 		religion = sunni
 		size = 150
 	}
 
 	artisans = {
-		culture = makua
+		culture = southern_bantu
 		religion = sunni
 		size = 750
 	}
 
 	soldiers = {
-		culture = makua
+		culture = southern_bantu
 		religion = sunni
 		size = 200
 	}
 
 	farmers = {
-		culture = makua
+		culture = southern_bantu
 		religion = sunni
 		size = 12750
 	}
@@ -1117,37 +1177,37 @@
 #Ibo (208000/52000 POPS)
 2063 = {
 	aristocrats = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 500
 	}
 
 	clergymen = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 500
 	}
 
 	artisans = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 2500
 	}
 
 	soldiers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 500
 	}
 
 	farmers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 50000
 	}
 
 	slaves = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 2000
 	}
@@ -1215,37 +1275,37 @@
 	}
 
 	aristocrats = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	clergymen = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	artisans = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 900
 	}
 
 	soldiers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 200
 	}
 
 	farmers = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 40500
 	}
 
 	slaves = {
-		culture = makua
+		culture = southern_bantu
 		religion = animist
 		size = 1000
 	}

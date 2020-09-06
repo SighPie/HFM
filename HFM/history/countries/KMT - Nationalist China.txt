@@ -28,7 +28,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = four_year_draft
 debt_law = peonage
@@ -54,8 +53,11 @@ upper_house = {
 }
 
 # Inventions
-##bottling_process = yes
+#bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 foreign_weapons = yes_foreign_weapons
 

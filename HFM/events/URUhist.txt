@@ -23,6 +23,7 @@ country_event = {
 					ideology = { factor = -0.4 value = reactionary }
 				}
 			}
+
 			any_owned = {
 				limit = { NOT = { province_id = 2344 } }
 				any_pop = {

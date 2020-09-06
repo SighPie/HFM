@@ -1,13 +1,10 @@
 capital = 2036
 primary_culture = swahili
-culture = kilombero
-culture = unyamwezi
 culture = yao
 culture = nyasa
-culture = sukuma
 culture = maasai
-culture = makua
 culture = luo
+culture = southern_bantu
 culture = lacustrine_bantu
 religion = protestant
 government = democracy
@@ -45,6 +42,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = protestant_country
+
 set_country_flag = post_colonial_country
 
 ruling_party = TNZ_communist
@@ -57,4 +55,3 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-

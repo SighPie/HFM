@@ -80,9 +80,12 @@ country_event = {
 			ai = yes
 			average_militancy = 6
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			} 
 		}
 	}
@@ -158,17 +161,17 @@ country_event = {
 		tag = PER
 		year = 1848
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
-			}
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
+	}
 	
 	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "EVT900020OPTA"
@@ -602,6 +605,10 @@ country_event = {
 		prestige_factor = -0.25
 		1204 = { secede_province = FROM remove_core = THIS }
 		random_owned = { limit = { province_id = 686 } secede_province = FROM remove_core = THIS }
+		686 = { remove_core = KHR }
+		1116 = { remove_core = TKM }
+		1150 = { remove_core = TKM }
+		1147 = { remove_core = TKM }
 		relation = { who = FROM value = 100 }
 		any_pop = { limit = { is_primary_culture = yes } militancy = 1 }
 		FROM = {

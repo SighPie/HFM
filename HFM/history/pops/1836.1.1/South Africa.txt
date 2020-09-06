@@ -411,7 +411,7 @@
 	farmers = {
 		culture = griqua
 		religion = protestant
-		size = 500
+		size = 1000
 	}
 
 
@@ -430,7 +430,7 @@
 	farmers = {
 		culture = khoisan
 		religion = animist
-		size = 2890
+		size = 8890
 	}
 
 	clergymen = {
@@ -871,7 +871,7 @@
 	farmers = {
 		culture = british
 		religion = protestant
-		size = 1450
+		size = 450
 	}
 
 	aristocrats = {
@@ -1055,7 +1055,7 @@
 	farmers = {
 		culture = british
 		religion = protestant
-		size = 6825
+		size = 825
 	}
 
 	farmers = {
@@ -1139,7 +1139,7 @@
 	farmers = {
 		culture = xhosa
 		religion = animist
-		size = 3700
+		size = 5700
 	}
 
 	aristocrats = {
@@ -1193,7 +1193,7 @@
 	farmers = {
 		culture = khoisan
 		religion = animist
-		size = 3750
+		size = 5750
 	}
 }
 #uncolonized/ruled by the Xhosa 1836
@@ -2556,72 +2556,4 @@
 		size = 2450
 	}
 
-}
-
-3273 = {
-	aristocrats = {
-		culture = southern_bantu
-		religion = animist
-		size = 100
-	}
-
-	clergymen = {
-		culture = southern_bantu
-		religion = animist
-		size = 100
-	}
-
-	artisans = {
-		culture = southern_bantu
-		religion = animist
-		size = 150
-	}
-
-	soldiers = {
-		culture = southern_bantu
-		religion = animist
-		size = 100
-	}
-
-	farmers = {
-		culture = southern_bantu
-		religion = animist
-		size = 2700
-	}
-
-	aristocrats = {
-		culture = nguni
-		religion = animist
-		size = 100
-	}
-
-	clergymen = {
-		culture = nguni
-		religion = animist
-		size = 100
-	}
-	
-	slaves = {
-		culture = southern_bantu
-		religion = animist
-		size = 1350
-	}
-
-	artisans = {
-		culture = nguni
-		religion = animist
-		size = 175
-	}
-
-	soldiers = {
-		culture = nguni
-		religion = animist
-		size = 100
-	}
-
-	farmers = {
-		culture = nguni
-		religion = animist
-		size = 1750
-	}
 }

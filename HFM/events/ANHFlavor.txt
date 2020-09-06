@@ -16,10 +16,14 @@ country_event = {
 			}
 		war = no
 		OR = {
-			government = absolute_monarchy 
 			government = hms_government
-			} 
-		}
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		} 
+	}
  
 	mean_time_to_happen =  {
 		months = 8

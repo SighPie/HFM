@@ -60,15 +60,22 @@ govt_flag = {
 }
 
 set_country_flag = sunni_country
-
+set_country_flag = exempt_from_vassal_contribution
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
+monetary_reform = yes_monetary_reform
 
 # Technologies
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 
 # Starting Consciousness

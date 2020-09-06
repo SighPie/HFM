@@ -18,16 +18,16 @@ political_decisions = {
 			}
 			
 			OR = {
-				2391 = { empty = yes }
-				2392 = { empty = yes }
+				2391 = { empty = yes } #Neuquen
+				2392 = { empty = yes } #Viedma
 				2394 = { empty = yes }
 				2353 = { empty = yes }
 				2393 = { empty = yes }
 				2395 = { empty = yes }
 				}
-		OR = {
-			owns = 2350 #azul
-			owns = 2381 #rio cuarto
+			OR = {
+				owns = 2350 #azul
+				owns = 2381 #rio cuarto
 			}
 			NOT = { has_country_flag = conquest_of_the_desert }
 		}
@@ -109,9 +109,9 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					2394 = { empty = yes }
-					2392 = { empty = no }
-					2391 = { empty = no }
+					2394 = { empty = yes } #Bariloche
+					2392 = { empty = no } #Viedma
+					2391 = { empty = no } #Neuquen
 				}
 				2394 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 			}
@@ -520,6 +520,24 @@ political_decisions = {
 			2366 = { add_core = THIS }
 			2367 = { add_core = THIS }
 			2554 = { add_core = THIS }
+			any_country = {
+				limit = { vassal_of = THIS }
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 2362
+							province_id = 2377
+							province_id = 2364
+							province_id = 2365
+							province_id = 2372
+							province_id = 2366
+							province_id = 2367
+							province_id = 2554
+						}
+					}
+					secede_province = THIS
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}

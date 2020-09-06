@@ -1,3 +1,4 @@
+#Merged
 ##############Caucasian War Events
 
 country_event = {
@@ -39,6 +40,42 @@ country_event = {
 			}
 			militancy = 9
 		}
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
 		any_owned = {
 			limit = {
 				OR = {
@@ -52,10 +89,10 @@ country_event = {
 				}
 			}
 			random_list = {
-				30 = { add_province_modifier = { name = highlander_raids duration = 10220 } }
 				25 = { add_province_modifier = { name = highlander_raids duration = 9490 } }
 				25 = { add_province_modifier = { name = highlander_raids duration = 8760 } }
-				20 = { add_province_modifier = { name = highlander_raids duration = 8030 } }
+                25 = { add_province_modifier = { name = highlander_raids duration = 8030 } }
+                25 = { add_province_modifier = { name = highlander_raids duration = 7300 } }
 			}
 			any_pop = {
 				limit = { is_primary_culture = no }
@@ -84,11 +121,47 @@ country_event = {
 		NOT = { government = democracy }
 	}
 	
-	mean_time_to_happen = { days = 1 }
+    mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = "EVT325104OPTA"
 		badboy = 1
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
 		any_pop = {
 			limit = {
 				is_state_religion = no
@@ -152,26 +225,23 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = { days = 1 }
+    mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = "EVT325105OPTA"
 		set_global_flag = 2nd_caucasian_war
-		any_owned = { 
+		any_owned = {
 			limit = {
 				NOT = { is_core = RUS }
 				is_core = CIR
 				pop_majority_culture = circassian
 			}
-		secede_province = CIR
+			secede_province = CIR
 		}
 		CIR = { all_core = { add_core = RUS } }
 		DAG = { all_core = { add_core = RUS } }
 		CHY = { all_core = { add_core = RUS } }
-		relation = {
-			who = CIR
-			value = -400
-		}
+		relation = { who = CIR value = -400 }
 		war = {
 			target = CIR
 			attacker_goal = { casus_belli = annex_core_country }
@@ -184,11 +254,12 @@ country_event = {
 			modifier = {
 				factor = 60
 				OR = {
-					government = democracy
 					government = hms_government
-					}
+					government = democracy
+					government = constitutional_empire
 				}
 			}
+		}
 	}
 	
 	option = {
@@ -216,9 +287,10 @@ country_event = {
 			modifier = {
 				factor = 40
 				OR = {
-					government = democracy
 					government = hms_government
-					}
+					government = democracy
+					government = constitutional_empire
+				}
 				}
 			}
 		}
@@ -335,9 +407,10 @@ country_event = {
 			modifier = {
 				factor = 0.05
 				OR = {
-					government = democracy
 					government = hms_government
-					}
+					government = democracy
+					government = constitutional_empire
+				}
 				}
 			}
 		}
@@ -371,6 +444,42 @@ country_event = {
 	option = {
 		name = "EVT325107OPTA"
 		set_global_flag = dagestani_caucasian_war_ended
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
+        random_pop = {
+            limit = {
+                is_state_religion = no
+                OR = {
+                    has_pop_culture = circassian
+                    has_pop_culture = chechen
+                }
+                location = {
+                    OR = {
+                        is_core = CIR
+                        is_core = DAG
+                        is_core = CHY
+                    }
+                }
+                NOT = { type = farmers }
+            }
+            move_pop = 908
+        }
 		any_pop = {
 			limit = {
 				has_pop_religion = sunni
@@ -401,64 +510,64 @@ country_event = {
 
 #Imam Not Captured
 country_event = {
-	id = 325108
-	title = "EVTNAME325108"
-	desc = "EVTDESC325108"
-	picture = "shamil_before_attack"
-		
-	trigger = {
-		tag = RUS
-		DAG = { exists = no }
-		owns = 1052
-		owns = 1053
-		owns = 1057
-		owns = 1055
-		has_country_flag = imam_shamil_raid
-		NOT = { has_global_flag = dagestani_caucasian_war_ended }
-		NOT = { has_country_flag = give_up_caucasus }
-		1052 = { NOT = { has_province_modifier = highlander_raids } }
-	}
-	
-	fire_only_once = yes
-	
-	mean_time_to_happen = { days = 1 }
-	
-	option = {
-		name = "EVT325108OPTA"
-		any_owned = {
-			limit = {
-				OR = {
-				is_core = DAG
-				is_core = CHY
-				}
-			}
-		
-		random_list = {
-					25 = {
-				add_province_modifier = {
-					name = highlander_raids
-					duration = 6205
-					}
-				}
-				25 = {
-				add_province_modifier = {
-					name = highlander_raids
-					duration = 5475
-					}
-				}
-				25 = {
-				add_province_modifier = {
-					name = highlander_raids
-					duration = 4380
-					}
-				}
-				25 = {
-				add_province_modifier = {
-					name = highlander_raids
-					duration = 3650
-						}
-					}
-				}
-			} 
-		}
-	}
+    id = 325108
+    title = "EVTNAME325108"
+    desc = "EVTDESC325108"
+    picture = "shamil_before_attack"
+
+    trigger = {
+        tag = RUS
+        DAG = { exists = no }
+        owns = 1052
+        owns = 1053
+        owns = 1057
+        owns = 1055
+        has_country_flag = imam_shamil_raid
+        NOT = { has_global_flag = dagestani_caucasian_war_ended }
+        NOT = { has_country_flag = give_up_caucasus }
+        1052 = { NOT = { has_province_modifier = highlander_raids } }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = { months = 1 }
+
+    option = {
+        name = "EVT325108OPTA"
+        any_owned = {
+            limit = {
+                OR = {
+                is_core = DAG
+                is_core = CHY
+                }
+            }
+
+        random_list = {
+                    25 = {
+                add_province_modifier = {
+                    name = highlander_raids
+                    duration = 6205
+                    }
+                }
+                25 = {
+                add_province_modifier = {
+                    name = highlander_raids
+                    duration = 5475
+                    }
+                }
+                25 = {
+                add_province_modifier = {
+                    name = highlander_raids
+                    duration = 4380
+                    }
+                }
+                25 = {
+                add_province_modifier = {
+                    name = highlander_raids
+                    duration = 3650
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,5 +1,68 @@
 political_decisions = {
 
+    abolish_umar_pact = {
+        picture = pact_of_umar_picture
+        potential = {
+            has_country_flag = umar_pact
+            OR = {
+                has_country_flag = sunni_country
+                has_country_flag = shiite_country
+                has_country_flag = ibadi_country
+            }
+        }
+
+        allow = {
+            state_n_government = 1
+        }
+
+        effect = {
+            badboy = 5
+            remove_country_modifier = jizya
+            clr_country_flag = umar_pact
+            any_pop = {
+                limit = { is_state_religion = no }
+                militancy = 3
+                consciousness = 6
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = {
+                        has_country_flag = sunni_country
+                        has_country_flag = shiite_country
+                        has_country_flag = ibadi_country
+                    }
+                }
+                relation = { who = THIS value = -50 }
+            }
+            any_country = {
+                limit = {
+                    exists = yes
+                    has_country_flag = umar_pact
+                    OR = {
+                        has_country_flag = sunni_country
+                        has_country_flag = shiite_country
+                        has_country_flag = ibadi_country
+                    }
+                }
+                relation = { who = THIS value = -25 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = { has_country_modifier = malevolent_ai }
+            }
+
+            modifier = {
+                factor = 0
+                badboy = 0.5
+            }
+        }
+    }
+
 	mobilize_tribesmen = {
 		picture = form_the_ikhwan
 		potential = {
@@ -71,6 +134,8 @@ political_decisions = {
 		effect = {
 			set_country_flag = secularized_muslim_society
 			prestige_factor = -0.2
+            remove_country_modifier = jizya
+            clr_country_flag = umar_pact
 			any_pop = {
 				limit = { is_state_religion = yes }
 					consciousness = 3
@@ -109,6 +174,10 @@ political_decisions = {
 					moralism = 7
 				}
 			}
+            modifier = {
+                factor = 0
+                NOT = { has_country_modifier = benefactor_ai }
+            }
 		}
 	}
 
@@ -161,6 +230,8 @@ political_decisions = {
 			set_country_flag = claimed_nejd
 			NEJ_1157 = { add_core = HAL }
 			NEJ_1156 = { add_core = HAL }
+            1163 = { add_core = HAL }
+            1164 = { add_core = HAL }
 			any_country = {
 				limit = {
 					civilized = no
@@ -420,6 +491,7 @@ political_decisions = {
 		
 		allow = {
 			revolution_n_counterrevolution = 1
+            TUR = { NOT = { rank = 1 } }
 			war_with = TUR
 		}
 		
@@ -427,9 +499,7 @@ political_decisions = {
 			set_global_flag = arab_nationalism_encouraged
 			set_country_flag = friend_of_the_arabs
 			TUR = { country_event = 96100 }
-			TUR = {
-				release = HDJ
-			}
+			TUR = { release = HDJ }
 			any_country = {
 				limit = {
 					tag = HDJ
@@ -438,14 +508,8 @@ political_decisions = {
 				}
 				create_alliance = THIS
 				military_access = THIS
-				relation = {
-					who = THIS
-					value = 200
-				}
-				diplomatic_influence = {
-					who = THIS
-					value = 400
-				}
+				relation = { who = THIS value = 200 }
+				diplomatic_influence = { who = THIS value = 400 }
 			}
 		}
 	}
@@ -458,7 +522,10 @@ political_decisions = {
 		}
 		
 		allow = {
-			government = absolute_monarchy
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+			}
 		}
 		
 		effect = {
@@ -494,7 +561,10 @@ political_decisions = {
 		}
 
 		allow = {
-			government = absolute_monarchy
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+			}
 		}
 
 		effect = {
@@ -532,25 +602,31 @@ political_decisions = {
 	the_holy_city = {
 	picture = the_holy_city
 		potential = {
+            OR = {
+                has_country_flag = sunni_country
+                has_country_flag = shiite_country
+                has_country_flag = ibadi_country
+            }
 			1151 = {
+                owned_by = THIS
 				NOT = { has_province_modifier = holy_city }
-			}
-			OR = {
-				is_culture_group = arab	
-				is_culture_group = turko_semitic
 			}
 		}
 		
 		allow = {
-			owns = 1151
+            1151 = {
+                owned_by = THIS
+                NOT = { has_province_modifier = holy_city }
+            }
 		}
 		
 		effect = {
-			1151 = {
-				add_province_modifier = {
-					name = holy_city
-					duration = -1
+            random_owned = {
+                limit = {
+                    province_id = 1151
+                    NOT = { has_province_modifier = holy_city }
 				}
+                add_province_modifier = { name = holy_city duration = -1 }
 			}
 		}
 		ai_will_do = {
@@ -561,19 +637,26 @@ political_decisions = {
 	claim_arabian_peninsula = {
 		picture = map_arabia
 		potential = {
-
 			tag = ARA
-			NOT = { has_country_flag = claim_arabian_peninsula }
+            NOT = {
+                has_country_flag = claim_arabian_peninsula
+                has_country_flag = created_externally
+            }
 		}
 
 		allow = {
 			war = no
-			is_vassal = no
-			civilized = yes
-			prestige = 20
 			nationalism_n_imperialism = 1
+            romanticism = 1
+            is_greater_power = yes
+            OR = {
+                government = fascist_dictatorship
+                AND = {
+                    government = absolute_monarchy
 			war_policy = jingoism
 		}
+            }
+        }
 
 		effect = {
 			set_country_flag = claim_arabian_peninsula
@@ -626,97 +709,6 @@ political_decisions = {
 		}
 	}
 	
-	integrate_bahrain_trucial_states = {
-		picture = bahrain_trade
-		
-		potential = {
-			is_greater_power = yes
-			is_sphere_leader_of = ABU
-			ABU = {
-				exists = yes
-				NOT = { owns = 1162 }
-			}
-			BHR = { exists = yes ai = yes }
-			NOT = { has_country_flag = trucial_states_integration_bahrain }
-		}
-
-		allow = {
-			war = no
-			1162 = {
-				owner = { war = no }
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-		}
-
-		effect = {
-			set_country_flag = trucial_states_integration_bahrain
-			ABU = { inherit = BHR }
-			relation = { who = ABU value = 50 }
-			diplomatic_influence = { who = ABU value = 25 }
-			any_country = {
-				limit = {
-					exists = no
-					civilized = no
-					OR = {
-						tag = BHR
-						tag = QAT
-					}
-				}
-			tech_school = unciv_tech_school
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
-	integrate_qatar_trucial_states = {
-		picture = doha_city
-		potential = {
-			is_greater_power = yes
-			is_sphere_leader_of = ABU
-			ABU = {
-				exists = yes
-				NOT = { owns = 1165 }
-			}
-			QAT = { exists = yes ai = yes }
-			NOT = { has_country_flag = trucial_states_integration_qatar }
-		}
-
-		allow = {
-			war = no
-			1165 = {
-				owner = { war = no }
-				OR = {
-					owned_by = THIS
-					owner = { in_sphere = THIS }
-				}
-			}
-		}
-
-		effect = {
-			set_country_flag = trucial_states_integration_qatar
-			ABU = { inherit = QAT }
-			relation = { who = ABU value = 50 }
-			diplomatic_influence = { who = ABU value = 25 }
-			any_country = {
-				limit = {
-					exists = no
-					civilized = no
-					OR = {
-						tag = BHR
-						tag = QAT
-					}
-				}
-			tech_school = unciv_tech_school
-			}
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-	
 	claim_bahrain_qatar_peninsula = {
 		picture = bahrain_trade
 		potential = {
@@ -732,16 +724,20 @@ political_decisions = {
 				tag = ARA
 				tag = OMA
 			}
-			NOT = { has_country_flag = claimed_the_persian_gulf }
-			NOT = { owns = 1165 }
-			NOT = { owns = 1162 }
-			NOT = { 1165 = { is_core = THIS } }
-			NOT = { 1162 = { is_core = THIS } }
+            is_canal_enabled = 2
+            revolution_n_counterrevolution = 1
+            NOT = {
+                has_country_flag = claimed_the_persian_gulf
+                 owns = 1165
+                 owns = 1162
+                 1165 = { is_core = THIS }
+                 1162 = { is_core = THIS }
+            }
 		}
 
 		allow = {
 			war = no
-			revolution_n_counterrevolution = 1
+            mass_politics = 1
 			is_greater_power = yes
 			OR = {
 				owns = 1164
@@ -752,7 +748,7 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = claimed_the_persian_gulf
-			badboy = 2
+            badboy = 5
 			1165 = { add_core = THIS } 
 			1162 = { add_core = THIS }
 			}
@@ -808,17 +804,17 @@ political_decisions = {
 			civilized = yes
 			OR = {
 			any_neighbor_country = {
-				OR = {
-					tag = LHJ
-					tag = FDL
-					tag = KTH
-					tag = MHR
+					OR = {
+						tag = LHJ
+						tag = FDL
+						tag = KTH
+						tag = MHR
+					}
 				}
-			}
-			is_sphere_leader_of = LHJ
-			is_sphere_leader_of = FDL
-			is_sphere_leader_of = KTH
-			is_sphere_leader_of = MHR
+				is_sphere_leader_of = LHJ
+				is_sphere_leader_of = FDL
+				is_sphere_leader_of = KTH
+				is_sphere_leader_of = MHR
 			}
 		}
 		
@@ -828,10 +824,9 @@ political_decisions = {
 		}
 		
 		effect = {
-			badboy = 2
+			badboy = 6
 			set_country_flag = claimed_yemen
 			set_global_flag = claimed_yemen
-
 			diplomatic_influence = { who = LHJ value = -400 }
 			diplomatic_influence = { who = FDL value = -400 }
 			diplomatic_influence = { who = KTH value = -400 }
@@ -839,18 +834,20 @@ political_decisions = {
 			diplomatic_influence = { who = YEM value = -400 }
 			diplomatic_influence = { who = NYE value = -400 }
 			
-			random_country = {
-				limit = {
-					exists = yes
-					tag = LHJ
-				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_NI_casus_belli
-				months = 120
+			random_owned = {
+				limit = { owner = { ai = yes } }
+				owner = {
+					random_country = {
+						limit = {
+							exists = yes
+							tag = NEJ
+							ai = yes
+						}
+						leave_alliance = LHJ
+						leave_alliance = MHR
+						leave_alliance = FDL
+						leave_alliance = KTH
+					}
 				}
 			}
 			
@@ -859,13 +856,30 @@ political_decisions = {
 					exists = yes
 					tag = LHJ
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_BC_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 120 }
+				war = {
+					target = LHJ
+					attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli }
+					call_ally = no
+				}
+			}
+			
+			random_country = {
+				limit = {
+					exists = yes
+					tag = LHJ
+				}
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 120 }
+				war = {
+					target = LHJ
+					attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+					call_ally = no
 				}
 			}
 			
@@ -874,13 +888,16 @@ political_decisions = {
 					exists = yes
 					tag = FDL
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_NI_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = FDL
+						attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -889,13 +906,16 @@ political_decisions = {
 					exists = yes
 					tag = FDL
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_BC_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = FDL
+						attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -904,13 +924,16 @@ political_decisions = {
 					exists = yes
 					tag = KTH
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_NI_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = KTH
+						attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -919,13 +942,16 @@ political_decisions = {
 					exists = yes
 					tag = KTH
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_BC_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = KTH
+						attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -934,13 +960,16 @@ political_decisions = {
 					exists = yes
 					tag = MHR
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_NI_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = MHR
+						attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -949,28 +978,16 @@ political_decisions = {
 					exists = yes
 					tag = MHR
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_BC_casus_belli
-				months = 120
-				}
-			}
-			
-		random_country = {
-				limit = {
-					exists = yes
-					tag = YEM
-				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_NI_casus_belli
-				months = 120
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 120 }
+				THIS = {
+					war = {
+						target = MHR
+						attacker_goal = { casus_belli = establish_protectorate_BC_casus_belli }
+						call_ally = no
+					}
 				}
 			}
 			
@@ -979,16 +996,22 @@ political_decisions = {
 					exists = yes
 					tag = YEM
 				}
-			relation = { who = THIS value = -400 }
-			leave_alliance = THIS
-			end_military_access = THIS
-			add_casus_belli = {
-				target = THIS
-				type = establish_protectorate_BC_casus_belli
-				months = 120
-				}
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 120 }
 			}
 			
+			random_country = {
+				limit = {
+					exists = yes
+					tag = YEM
+				}
+				relation = { who = THIS value = -400 }
+				leave_alliance = THIS
+				end_military_access = THIS
+				add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 120 }
+			}
 			random_owned = { limit = { exists = NEJ } owner = { diplomatic_influence = { who = NEJ value = 25 } } }
 			random_owned = { limit = { exists = HAL } owner = { diplomatic_influence = { who = HAL value = 25 } } }
 			random_owned = { limit = { exists = BHR } owner = { diplomatic_influence = { who = BHR value = 25 } } }
@@ -997,11 +1020,17 @@ political_decisions = {
 			random_owned = { limit = { exists = KWT } owner = { diplomatic_influence = { who = KWT value = 25 } } }
 		}
 		
-			ai_will_do = { 
-				factor = 1 
-				modifier = { factor = 0 badboy = 0.8 }
+		ai_will_do = {
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				OR = {
+					badboy = 0.8
+					war_exhaustion = 1
+				}
 			}
 		}
+	}
 		
 	found_dar_es_salaam = {
 		picture = tanzania_shop

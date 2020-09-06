@@ -8,22 +8,25 @@ KBO = {
 
 
 army = {
-	name = "Army of the Adamawa Emirate"
-	location = 1964	
-regiment = {
+	name = "Army of the Emir of Adamawa"
+	location = 1950
+	regiment = {
 		name= "Emir's Cavalry"	
-	type = cavalry
-		home = 1964	}
+		type = cavalry
+		home = 1950	
+	}
 
-
-regiment = {
+	regiment = {
 		name= "1st Fulbe Warriors"
 		type = irregular
-	home = 1964	}
-regiment = {
+		home = 1819	
+	}
+	
+	regiment = {
 		name= "2nd Fulbe Warriors"
 		type = irregular
-	home = 1964	}
+		home = 1819	
+	}
 }
 
 

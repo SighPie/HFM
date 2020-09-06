@@ -2,4 +2,4 @@ owner = MEX
 controller = MEX
 add_core = MEX
 trade_goods = coffee
-life_rating = 30
+life_rating = 34

@@ -1,5 +1,5 @@
 add_core = BRD
-trade_goods = cotton
-terrain = montane_forest
+trade_goods = fruit
+terrain = jungle_mountains
 life_rating = 10
 colonial = 1

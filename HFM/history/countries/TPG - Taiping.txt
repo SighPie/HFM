@@ -55,11 +55,17 @@ upper_house = {
 
 set_country_flag = protestant_country
 set_country_flag = theocratic_government
+monetary_reform = yes_monetary_reform
 
 
 # Inventions
-##bottling_process = yes
+#bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

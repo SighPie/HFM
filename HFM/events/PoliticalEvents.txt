@@ -1564,8 +1564,11 @@ country_event = {
 	
 	trigger = {
 		voting_system = first_past_the_post
-		NOT = { tag = ENG }
 		civilized = yes
+        NOT = {
+            tag = USA
+            tag = ENG
+        }
 	}
 	
 	mean_time_to_happen = {
@@ -1702,7 +1705,7 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 50
-			modifier = { tag = ENG factor = 100 }
+            modifier = { factor = 100 tag = ENG  }
 		}
 	}
 	
@@ -1715,7 +1718,13 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 45
-			modifier = { tag = ENG factor = 100 }
+            modifier = {
+                factor = 0
+                OR = {
+                    tag = ENG
+                    tag = USA
+                }
+            }
 		}
 	}
 	
@@ -3650,9 +3659,10 @@ country_event = {
 			any_owned_province = { has_pop_type = capitalists }
 			any_owned_province = { has_pop_type = aristocrats }
 		}
+        NOT = { has_country_flag = rich_loving_communists }
 	}
 	
-	mean_time_to_happen = { days = 5 }
+    mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "EVTOPTA4431"
@@ -3682,7 +3692,7 @@ country_event = {
 				}
 			}
 			nationalize = yes
-			ai_chance = { factor = 80 }
+            ai_chance = { factor = 70 }
 	}
 	
 	option = {
@@ -3695,6 +3705,18 @@ country_event = {
 			nationalize = yes
 			ai_chance = { factor = 20 }
 	}
+
+    option = {
+        name = "EVTOPTC4431"
+        set_country_flag = rich_loving_communists
+        any_pop = {
+            scaled_militancy = {
+                ideology = communist
+                factor = 7
+            }
+        }
+        ai_chance = { factor = 10 }
+    }
 }
 
 #Genocide - Set Up

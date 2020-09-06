@@ -116,12 +116,6 @@
 		size = 730
 	}
 
-	soldiers = {
-		culture = lunda
-		religion = animist
-		size = 550
-	}
-
 	farmers = {
 		culture = lunda
 		religion = animist
@@ -147,15 +141,21 @@
 	}
 
 	soldiers = {
-		culture = kuba
+		culture = lunda
 		religion = animist
 		size = 3000
 	}
 
 	soldiers = {
-		culture = kuba
+		culture = lunda
 		religion = animist
 		size = 1675
+	}
+	
+	soldiers = {
+		culture = kuba
+		religion = animist
+		size = 550
 	}
 
 	farmers = {
@@ -233,7 +233,7 @@
 	}
 
 	slaves = {
-		culture = kavango
+		culture = south_forest_bantu
 		religion = animist
 		size = 17300
 	}
@@ -332,19 +332,13 @@
 	clergymen = {
 		culture = lunda
 		religion = animist
-		size = 3575
+		size = 2575
 	}
 
 	artisans = {
 		culture = lunda
 		religion = animist
 		size = 10000
-	}
-	
-	artisans = {
-		culture = lunda
-		religion = animist
-		size = 4390
 	}
 
 	soldiers = {
@@ -362,7 +356,7 @@
 	farmers = {
 		culture = lunda
 		religion = animist
-		size = 307180
+		size = 157180
 	}
 
 	aristocrats = {
@@ -392,13 +386,81 @@
 	farmers = {
 		culture = south_forest_bantu
 		religion = animist
-		size = 83450
+		size = 63450
 	}
 
 	slaves = {
 		culture = chokwe
 		religion = animist
-		size = 33000
+		size = 23000
+	}
+}
+#Lubumbashi (4888400/1222100 POPS)
+3296 = {
+	bureaucrats = {
+		culture = lunda
+		religion = animist
+		size = 25
+	}
+
+	officers = {
+		culture = lunda
+		religion = animist
+		size = 190
+	}
+
+	clergymen = {
+		culture = lunda
+		religion = animist
+		size = 1000
+	}
+
+	artisans = {
+		culture = lunda
+		religion = animist
+		size = 4390
+	}
+
+	soldiers = {
+		culture = lunda
+		religion = animist
+		size = 3000
+	}
+
+	farmers = {
+		culture = lunda
+		religion = animist
+		size = 100000
+	}
+
+	clergymen = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 460
+	}
+
+	artisans = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 2380
+	}
+
+	soldiers = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 1375
+	}
+
+	farmers = {
+		culture = south_forest_bantu
+		religion = animist
+		size = 20000
+	}
+
+	slaves = {
+		culture = chokwe
+		religion = animist
+		size = 10000
 	}
 }
 #under the rule of Luba in 1836
@@ -431,7 +493,7 @@
 	farmers = {
 		culture = lunda
 		religion = animist
-		size = 65475
+		size = 115475
 	}
 
 	aristocrats = {

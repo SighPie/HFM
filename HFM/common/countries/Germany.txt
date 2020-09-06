@@ -1,8 +1,9 @@
 color = { 147 130 110 }
 fascist_dictatorship = { 40 40 40 }
 proletarian_dictatorship = { 225 0 0 }
-democracy = { 232 232 232 }
+democracy = { 204 204 204 }
 graphical_culture = PrussianGC
+
 
 party = {
 	name = "GER_liberal"
@@ -200,13 +201,13 @@ party = {
 }
 
 unit_names = {
-	dreadnought = {		
-		"SMS Ersatz Gneisenau "	"SMS Ersatz Scharnhorst "	"SMS Ersatz Yorck "	"SMS Fürst Bismarck"	"SMS Graf Spee"	"SMS Mackensen "	"SMS Prinz Eitel Friedrich "	"SMS Baden"	"SMS Bayern"	"SMS Derfflinger"	"SMS Friedrich der Grosse"	"SMS Goeben"	"SMS Grosser Kurfürst"	"SMS Helgoland"	"SMS Hindenburg"	"SMS Kaiser"	"SMS Kaiserin"	"SMS König Albert"	"SMS König"	"SMS Kronprinz"	"SMS Lützow"	"SMS Markgraf"	"SMS Moltke"	"SMS Nassau"	"SMS Oldenburg"	"SMS Ostfriesland"	"SMS Posen"	"SMS Prinzregent Luitpold"	"SMS Rheinland"	"SMS Sachsen"	"SMS Seydlitz"	"SMS Thüringen"	"SMS Von der Tann"	"SMS Westfalen"	"SMS Württemberg"	"SMS Von der Tann "	"SMS Baden"																																																
-	}	
-
+	dreadnought = {
+		Baden Bayern Derfflinger "Friedrich der Grosse" Goeben "Grosser Kurfürst" Helgoland Hindenburg Kaiser Kaiserin König "König Albert" Kronprinz Lützow Mackensen Markgraf Moltke Nassau Oldenburg Ostfriesland Posen "Prinzregent Luitpold" Rheinland Sachsen Seydlitz Thüringen "Von der Tann" Westfalen Württemberg
+	}
+	
 	battleship = {
-		"SMS Brandenburg" "SMS Kurfürst Friedrich Wilhelm" "SMS Wörth" "SMS Weissenburg" "SMS 	Kaiser Friedrich III" "SMS Kaiser Wilhelm II" "SMS Kaiser Karl der Grosse" "SMS Kaiser Barbarossa" "SMS Wettin" "SMS Wittelsbach" "SMS Braunschweig" "SMS Mecklenburg" "SMS Schwaben" "SMS Zähringen" "SMS Elsass" "SMS Hessen" "SMS Deutschland" "SMS Lothringen" "SMS Hannover" "SMS Pommern" "SMS Schlesien" "SMS Schleswig-Holstein"
-	}	
+		Brandenburg "Kurfürst Friedrich Wilhelm" Weissenburg Wörth "Kaiser Friedrich III" "Kaiser Wilhelm II" "Kaiser Wilhelm Der Grosse" "Kaiser Karl Der Grosse" "Kaiser Barbarossa" Wittelsbach Wettin Zähringen Schwaben Mecklenburg Braunschweig Elsass Hessen Preussen Lothringen Deutschland Pommern Hannover Schlesien Schleswig-Holstein
+	}
 	
 	ironclad = {
 		Arminius Bremen Carola Charlotte Frankfurt "Friedrich Carl" "Friedrich der Grosse" "Grosser Kurfürst" Hamburg Hansa Kaiser "König Wilhelm" Kronprinz Leipzig Lübeck Marie Medusa Möwe Moltke Nixe Oldenburg Olga Otter Pfeil Preussen "Preussischer Adler" "Prinz Adalbert" Sophie

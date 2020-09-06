@@ -1,7 +1,9 @@
 Flavours Mod Modifiers;;;;;;;;;;;;;;;;;;;;;;;x
+casino;Monte Carlo Casino;;;;;;;;;;;;;;;;;;;;;;;x
 pax_britannica;Pax Britannica;;;;;;;;;;;;;;;;;;;;;;;x
 notre_dame_afrique;Notre Dame d'Afrique;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
 kpm_shipping;Koninklijke Paketvaart Maatschappij;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
+bpm_oil;Bataafse Petroleum Maatschappij;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
 the_reichstag;The Reichstag;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
 russian_army_education;Dmitry Milyutin's Army Reform;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
 russian_army_education_desc;As part of Dmitry Milyutin's Army Reforms, the system of military education was reformed, and elementary education was made available to all draftees.;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
@@ -210,3 +212,21 @@ red_shirts;The Expedition of the Thousand;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 red_shirts_desc;The revolutionary leader, Giuseppe Garibaldi, has called upon the Italian people to take arms in the name of unification. A volunteer army under Garibaldi's leadership will topple the southern governments and remove the stain of the Bourbon legacy from the peninsula forever.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 troupes_de_marine;Troupes de Marine;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 troupes_de_marine_desc;The colonial expansion of the 19th century saw the extensive use of French sailors and marines serving together in South-East Asia, in the Pacific and West Africa.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+terrarium;Terrarium;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
+terrarium_desc;A terrarium is usually a sealable glass container containing soil and plants, and can be opened for maintenance to access the plants inside. However, terraria can also be open to the atmosphere rather than being sealed. Terraria are often kept as decorative or ornamental items. Closed terraria create a unique environment for plant growth, as the transparent walls allow for both heat and light to enter the terrarium. The sealed container combined with the heat entering the terrarium allows for the creation of a small scale water cycle. This happens because moisture from both the soil and plants evaporates in the elevated temperatures inside the terrarium. This water vapour then condenses on the walls of the container, and eventually falls back to the plants and soil below. This contributes to creating an ideal environment for growing plants due to the constant supply of water, thereby preventing the plants from becoming over dry. In addition to this, the light that passes through the transparent material of the terrarium allows for the plants within to photosynthesize, a very important aspect of plant growth.;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
+berlin_conference;The West Africa Conference;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+world_fair_planner;The World Fair;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+oregon_treaty;The Oregon Treaty;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+beiyang_fleet_established;The Beiyang Fleet;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+qinghai_revolt_dungan;Dungan Revolt in Qinghai;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+massacres_of_badr_khan;The Massacres of Badr Khan;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+the_new_army_established;The New Army;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
+army_build_time_removed;Emergency Mobilization;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
+army_build_time_removed_desc;Our nation is currently in a state of emergency, all efforts must be placed into re-building and rearming our armies.;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
+army_build_time_reverted;The End of Emergency Mobilization;;;;;;;;;;;;x,,,,,,,,,,,,,,,,
+army_build_time_reverted_desc;The state of emergency has ended, peace has returned.;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,	
+emergency_draft;Emergency Draft;;;;;;;;;;;;x,,,,
+emergency_draft_desc;Our nation is in dire status, our enemies seek to wipe our fatherland from the face of the map, our people must fight to the last man to ensure our freedom.;;;;;;;;;;;;x,,,,
+katorga;Katorga;;;;;;;;;;;;x,,,,
+tiandihui;Secret Societies;;;;;;;;;;;;x,,,,
+slaver_port;The Arab Slave Trade;;;;;;;;;;;;x,,,,

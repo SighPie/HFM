@@ -6,7 +6,7 @@ culture = ugrian
 culture = volga_german
 culture = alaskan
 religion = orthodox
-government = absolute_monarchy
+government = absolute_empire
 plurality = 5.0
 nationalvalue = nv_autocracy
 literacy = 0.04
@@ -16,7 +16,7 @@ civilized = yes
 set_country_flag = serfdom_not_abolished
 
 #GreaterPowers = prestige
-prestige = 80
+prestige = 120
 
 # Political reforms
 slavery = no_slavery
@@ -64,6 +64,7 @@ decision = RUS_setup_1836
 decision = mazovia_rename_russian
 decision = west_galicia_rename_russian
 decision = lithuania_rename
+decision = bessarabia_rename_rus
 decision = latvia_rename
 
 # Technologies
@@ -87,9 +88,10 @@ no_standard = 1
 early_classical_theory_and_critique = 1
 guild_based_production = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 piston_steam_engine = 1
+#hot_blast = 1
 
 #Inventions
 #corvettes = yes
@@ -117,7 +119,7 @@ oob = "RUS_oob.txt"
 	set_country_flag = peking_convention
 	set_country_flag = shimoda_treaty
 	set_global_flag = 2nd_caucasian_war
-	decision = russian_vladivostok
+    decision = russian_vladivostok
 	ruling_party = RUS_reactionary
 	plurality = 60
 	literacy = 0.15
@@ -170,8 +172,8 @@ oob = "RUS_oob.txt"
 	piston_steam_engine = 1
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
-	mechanized_mining = 1
 	hot_blast = 1
+    regenerative_furnaces = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	basic_chemistry = 1

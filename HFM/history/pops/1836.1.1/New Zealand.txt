@@ -69,6 +69,12 @@
 		size = 1000
 	}
 	
+	farmers = {
+		culture = british
+		religion = protestant
+		size = 100
+	}
+	
 }
 
 #New Plymouth (8000/2000 POPS)
@@ -422,6 +428,6 @@
 	farmers = {
 		culture = maori
 		religion = animist
-		size = 1675
+		size = 2675
 	}
 }

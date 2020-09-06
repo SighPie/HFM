@@ -34,5 +34,3 @@ regiment = {
 	type = irregular
 	home = 1977	}
 }
-
-

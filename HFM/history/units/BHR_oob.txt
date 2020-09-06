@@ -17,5 +17,4 @@ leader = {
 	date = 1836.1.1
 		background = aristocrat
 		personality = skilled
-	}
-
+}

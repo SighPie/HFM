@@ -11,7 +11,7 @@ TOO = {
 }
 
 DAM = {
-	value = 10
+	value = 100
 }
 
 DND = {
@@ -54,6 +54,14 @@ CLA = {
 	value = -15
 }
 
+ADW = {
+	value = 100
+}
+
+#BUS = {
+#	value = 100
+#}
+
 USA = {
 	value = -200
 }
@@ -84,33 +92,6 @@ army = {
 		home = 1947
 	}
 
-}
-
-army = {
-	name = "Army of the Emir of Adamawa"
-	location = 1950
-	regiment = {
-		name= "4. Fulbe"
-		type = cavalry
-		home = 1950
-	}
-
-	regiment = {
-		name= "5. Fulbe"
-		type = irregular
-		home = 1942
-	}
-}
-
-army = {
-	name = "Army of the Emir of Ilorin"
-	location = 1927
-	regiment = {
-		name= "1. Yoruba"
-		type = cavalry
-		home = 1927
-	}
-
 	regiment = {
 		name= "6. Fulbe"
 		type = irregular
@@ -124,4 +105,17 @@ army = {
 	}
 
 }
+
+army = {
+	name = "Army of the Emir of Ilorin"
+	location = 1927
+	regiment = {
+		name= "1. Yoruba"
+		type = cavalry
+		home = 1927
+	}
+}
+
+
+
 

@@ -735,9 +735,8 @@ social_darwinism = {
 		war_exhaustion = -0.05
 	}
 }
-#social_science
 sociology = {
-	limit = { social_science = 1 }
+	limit = { biologism = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -752,24 +751,8 @@ sociology = {
 	}
 	core_pop_consciousness_modifier = 0.01
 }
-social_psychology = {
-	limit = { social_science = 1 }
-	news = no
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			experimental_psychology = 1
-		}
-		modifier = {
-			factor = 2
-			behaviorism = 1
-		}
-	}
-	core_pop_consciousness_modifier = 0.01
-}
 political_science = {
-	limit = { social_science = 1 }
+	limit = { biologism = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -784,6 +767,23 @@ political_science = {
 		modifier = {
 			factor = 1
 			naval_directionism = 1
+		}
+	}
+	core_pop_consciousness_modifier = 0.01
+}
+#social_science
+social_psychology = {
+	limit = { social_science = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			experimental_psychology = 1
+		}
+		modifier = {
+			factor = 2
+			behaviorism = 1
 		}
 	}
 	core_pop_consciousness_modifier = 0.01
@@ -872,7 +872,10 @@ constitutionalism = {
 		base = 3
 		modifier = {
 			factor = 2
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 		modifier = {
 			factor = 1
@@ -974,7 +977,10 @@ authoritarianism = {
 			OR = {
 				ruling_party_ideology = reactionary
 				AND = {
-					government = absolute_monarchy
+					OR = { 
+						government = absolute_monarchy
+						government = absolute_empire
+					}	
 					ruling_party_ideology = conservative
 					}
 				}
@@ -994,17 +1000,26 @@ hierarchical_order = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}			
 	}
 	chance = {
 		base = 1
 		modifier = {
 			factor = 3
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
 		}
 		modifier = {
 			factor = 2
-			government = prussian_constitutionalism
+			OR = { 
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}	
 		}
 	}
 	core_pop_militancy_modifier = -0.01
@@ -1031,11 +1046,17 @@ traditionalism = {
 		}
 		modifier = {
 			factor = 2
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
 		}
 		modifier = {
 			factor = 1
-			government = prussian_constitutionalism
+			OR = { 
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}	
 		}
 	}
 	core_pop_consciousness_modifier = -0.01
@@ -1765,9 +1786,9 @@ the_police_state = {
 		suppression_points_modifier = 0.25
 	}
 }
-#behaviorism
+#psychoanalysis
 mass_advertising = {
-	limit = { behaviorism = 1 }
+	limit = { psychoanalysis = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -1781,7 +1802,10 @@ mass_advertising = {
 		}
 		modifier = {
 			factor = 1
-			government = hms_government
+			OR = { 
+				government = hms_government
+				government = constitutional_empire
+			}	
 		}
 	}
 	effect = {
@@ -1791,7 +1815,7 @@ mass_advertising = {
 	core_pop_consciousness_modifier = 0.01
 }
 national_radio_networks = {
-	limit = { behaviorism = 1 }
+	limit = { psychoanalysis = 1 }
 	news = no
 	chance = {
 		base = 3
@@ -1815,7 +1839,7 @@ national_radio_networks = {
 	core_pop_consciousness_modifier = 0.01
 }
 the_talkies = {
-	limit = { behaviorism = 1 }
+	limit = { psychoanalysis = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -1829,7 +1853,7 @@ the_talkies = {
 		}
 	}
 	effect = {
-		shared_prestige = 10
+		shared_prestige = 20
 		suppression_points_modifier = -0.05
 	}
 	core_pop_consciousness_modifier = 0.01

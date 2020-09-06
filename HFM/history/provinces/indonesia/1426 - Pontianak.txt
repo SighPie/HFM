@@ -1,6 +1,5 @@
-owner = LAN
-controller = LAN
-add_core = KLM
-add_core = LAN
+owner = PTK
+controller = PTK
+add_core = PTK
 trade_goods = grain
-life_rating = 32
+life_rating = 34

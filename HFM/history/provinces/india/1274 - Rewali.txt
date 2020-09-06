@@ -1,6 +1,5 @@
-owner = REW
-controller = REW
-add_core = REW
+owner = BUN
+controller = BUN
 add_core = BUN
 add_core = MUG
 add_core = HND

@@ -1,4 +1,3 @@
-
 political_decisions = {
 
 	become_saudi_arabia = {
@@ -17,16 +16,43 @@ political_decisions = {
 			OR = {
 				has_global_flag = house_of_rashid_exiled
 				is_sphere_leader_of = HAL
-				HAL = { all_core = { owned_by = THIS } }
+                HAL = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            empty = yes
+                        }
+                    }
+                    war = no
+                    is_mobilised = no
+                }
 			}
 			OR = {
 				has_global_flag = house_of_saud_exiled
 				is_sphere_leader_of = NEJ
-				NEJ = { all_core = { owned_by = THIS } }
+                NEJ = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            empty = yes
+                        }
+                    }
+                    war = no
+                    is_mobilised = no
+                }
 			}
 			OR = {
 				is_sphere_leader_of = HDJ
-				HDJ = { all_core = { owned_by = THIS } }
+                HDJ = {
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            empty = yes
+                        }
+                    }
+                    war = no
+                    is_mobilised = no
+                }
 			}
 		}
 	
@@ -37,6 +63,8 @@ political_decisions = {
 			NEJ_1157 = { add_core = ARA } #Riyadh
 			NEJ_1156 = { add_core = ARA } #Kaf
 			HDJ_1151 = { add_core = ARA } #Hedjaz
+            1163 = { add_core = ARA }
+            1164 = { add_core = ARA }
 			random_country = {
 				limit = {
 					tag = NEJ
@@ -132,17 +160,59 @@ political_decisions = {
 			revolution_n_counterrevolution = 1
 			OR = {
 				has_global_flag = house_of_rashid_exiled
-				AND = { is_sphere_leader_of = HAL ai = yes }
-				HAL = { all_core = { OR = { owned_by = THIS owner = { ai = yes in_sphere = THIS } } } }
+                AND = {
+                    is_sphere_leader_of = HAL
+                    ai = yes
+                }
+                HAL = {
+                    all_core = {
+                        OR = {
+                            empty = yes
+                            owned_by = THIS
+                            owner = {
+                                ai = yes
+                                in_sphere = THIS
+                            }
+                        }
+                    }
+                }
 			}
 			OR = {
 				has_global_flag = house_of_saud_exiled
-				AND = { is_sphere_leader_of = NEJ ai = yes }
-				NEJ = { all_core = { OR = { owned_by = THIS owner = { ai = yes in_sphere = THIS } } } }
+                AND = {
+                    is_sphere_leader_of = NEJ
+                    ai = yes
+                }
+                NEJ = {
+                    all_core = {
+                        OR = {
+                            empty = yes
+                            owned_by = THIS
+                            owner = {
+                                ai = yes
+                                in_sphere = THIS
+                            }
+                        }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    is_sphere_leader_of = HDJ
+                    ai = yes
 			}
+                HDJ = {
+                    all_core = {
 			OR = {
-				AND = { is_sphere_leader_of = HDJ ai = yes }
-				HDJ = { all_core = { OR = { owned_by = THIS owner = { ai = yes in_sphere = THIS } } } }
+                            empty = yes
+                            owned_by = THIS
+                            owner = {
+                                ai = yes
+                                in_sphere = THIS
+                            }
+                        }
+                    }
+                }
 			}
 		}
 	
@@ -151,24 +221,204 @@ political_decisions = {
 			NEJ_1157 = { add_core = ARA } #Riyadh
 			NEJ_1156 = { add_core = ARA } #Kaf
 			HDJ_1151 = { add_core = ARA } #Hedjaz
-			#any_owned = {
-				#limit = {
-					#OR = {
-						#is_core = OMA
-						#is_core = ABU
-						#is_core = NYE
-						#is_core = LHJ
-						#is_core = FDL
-						#is_core = KTH
-						#is_core = MHR
-						#is_core = YEM
-						#is_core = BHR
-						#is_core = QAT
-					#}
-					#NOT = { is_core = ZAN }
-				#}
-				#add_core = ARA
-			#}
+            1163 = { add_core = ARA }
+            1164 = { add_core = ARA }
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    land_reform = yes_land_reform
+                }
+                ARA = { economic_reform = yes_land_reform }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    admin_reform = yes_admin_reform
+                }
+                ARA = { economic_reform = yes_admin_reform }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    finance_reform = yes_finance_reform
+                }
+                ARA = { economic_reform = yes_finance_reform }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    finance_reform = finance_reform_two
+                }
+                ARA = { economic_reform = finance_reform_two }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    monetary_reform = yes_monetary_reform
+                }
+                ARA = { economic_reform = yes_monetary_reform }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    monetary_reform = yes_monetary_reform
+                }
+                ARA = { economic_reform = monetary_reform_two activate_technology = no_standard }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    education_reform = yes_education_reform
+                }
+                ARA = { economic_reform = yes_education_reform }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    research_reform = yes_research_reform
+                }
+                ARA = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_training = yes_foreign_training
+                }
+                ARA = { military_reform = yes_foreign_training }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_weapons = yes_foreign_weapons
+                }
+                ARA = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_officers = yes_foreign_officers
+                }
+                ARA = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    army_schools = yes_army_schools
+                }
+                ARA = { military_reform = yes_army_schools }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_naval_officers = yes_foreign_naval_officers
+                }
+                ARA = { military_reform = yes_foreign_naval_officers }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    naval_schools = yes_naval_schools
+                }
+                ARA = { military_reform = yes_naval_schools }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_navies = yes_foreign_navies
+                }
+                ARA = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers set_country_flag = using_foreign_ships }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    western_shipyards = yes_western_shipyards
+                }
+                ARA = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = no
+                    foreign_artillery = yes_foreign_artillery
+                }
+                ARA = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+            }
+
+            random_country = {
+                limit = {
+                    tag = NEJ
+                    civilized = yes
+                }
+                ARA = { civilized = yes }
+            }
+
+            random_owned = {
+                limit = { owner = { civilized = no slavery = yes_slavery } }
+                ARA = { political_reform = yes_slavery }
+            }
+
+            random_owned = {
+                limit = { owner = { civilized = no slavery = freedom_of_womb } }
+                ARA = { political_reform = freedom_of_womb }
+            }
+
+            random_owned = {
+                limit = { owner = { civilized = no slavery = no_slavery } }
+                ARA = { political_reform = no_slavery }
+            }
+
+            any_owned = {
+                limit = {
+                    NOT = { is_core = ZAN }
+                    continent = oceania
+                    OR = {
+                        is_core = OMA
+                        is_core = ABU
+                        is_core = NYE
+                        is_core = LHJ
+                        is_core = FDL
+                        is_core = KTH
+                        is_core = MHR
+                        is_core = YEM
+                        is_core = BHR
+                        is_core = QAT
+                    }
+                }
+                add_core = ARA
+            }
+
 			any_country = {
 				limit = {
 					exists = yes
@@ -180,6 +430,7 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
+
 			any_owned = {
 				remove_core = NEJ
 				remove_core = HDJ
@@ -198,7 +449,7 @@ political_decisions = {
 			release_vassal = ARA
 			relation = { who = ARA value = 50 }
 			diplomatic_influence = { who = ARA value = 200 }
-			ARA = { tech_school = unciv_tech_school }
+			ARA = { tech_school = developing_tech_school }
 			
 			1163 = { remove_core = TUR }
 			1164 = { remove_core = TUR }
@@ -460,19 +711,20 @@ political_decisions = {
 		potential = {
 			ai = yes
 			OR = {
-				1162 = {
+				1162 = { #Bahrain
 					NOT = { trade_goods = precious_goods }
 					NOT = { has_province_modifier = pearl_season }
 				}
-				1165 = {
+				1167 = { #Abu Dhabi
 					NOT = { trade_goods = precious_goods }
 					NOT = { has_province_modifier = pearl_season }
 				}
-				1167 = {
+				1165 = { #Doha
 					NOT = { trade_goods = precious_goods }
 					NOT = { has_province_modifier = pearl_season }
 				}
-				2664 = {
+
+				2664 = { #Khasab
 					NOT = { trade_goods = precious_goods }
 					NOT = { has_province_modifier = pearl_season }
 				}
@@ -482,6 +734,7 @@ political_decisions = {
 		allow = {
 			month = 4
 			NOT = { month = 6 }
+			NOT = { year = 1909 }
 		}
 		
 		

@@ -39,7 +39,6 @@ COB = {
 FRM = {
 	value = 225
 	level = 2
-	influence_value = 100
 	military_access = yes
 }
 HAM = {
@@ -49,8 +48,8 @@ HAM = {
 	military_access = yes
 }
 HAN = {
-	value = 125
-	level = 2
+	value = 0
+	level = 1
 	military_access = yes
 }
 HEK = {
@@ -83,10 +82,8 @@ MEC = {
 	military_access = yes
 }
 MEI = {
-	value = 225
-	level = 5
-	influence_value = 100
-	military_access = yes
+	value = 50
+	level = 1
 }
 NAS = {
 	value = 125
@@ -96,18 +93,18 @@ NAS = {
 OLD = {
 	value = 225
 	level = 3
-	influence_value = 50
+	influence_value = 25
 	military_access = yes
 }
 SAX = {
 	value = 50
-	level = 3
+	level = 1
 	military_access = yes
 }
 WEI = {
-	value = 225
-	level = 5
-	influence_value = 100
+	value = 50
+	level = 2
+	influence_value = 25
 	military_access = yes
 }
 BAV = {
@@ -129,20 +126,18 @@ WUR = {
 	military_access = yes
 }
 SCL = {
-	value = 125
-	level = 3
+	value = 50
+	level = 1
 	influence_value = 25
-	military_access = yes
 }
 REU = {
 	value = 125
-	level = 2
+	level = 1
 	military_access = yes
 }
 SWG = {
 	value = 225
-	level = 5
-	influence_value = 100
+	level = 3
 	military_access = yes
 }
 
@@ -174,7 +169,7 @@ ENG = { value = 25 }
 FRA = { value = -50 }
 AUS = { value = 150 }
 USA = { value = 25 }
-RUS = { value = 150 }
+RUS = { value = 80 }
 TUR = { value = 25 }
 SPA = { value = 0 }
 
@@ -573,7 +568,7 @@ leader = {
 	date = 1836.1.1
 	background = school_of_firepower
 	personality = implacable
-	prestige = 1.0
+	prestige = 0.75
 	}
 	
 leader = {

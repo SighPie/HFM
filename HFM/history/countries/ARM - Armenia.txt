@@ -1,6 +1,6 @@
 capital = 1098
 primary_culture = armenian
-religion = orthodox
+religion = coptic
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_order
@@ -26,7 +26,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
-
 #New Reforms
 conscription = four_year_draft
 debt_law = peonage
@@ -37,7 +36,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
-set_country_flag = orthodox_country
+set_country_flag = coptic_country
 
 ruling_party = ARM_conservative
 upper_house = {

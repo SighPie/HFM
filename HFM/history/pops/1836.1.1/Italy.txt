@@ -41,7 +41,7 @@
 	craftsmen = {
 		culture = north_italian
 		religion = catholic
-		size = 9000
+		size = 11000
 	}
 
 	artisans = {
@@ -67,24 +67,45 @@
 		religion = catholic
 		size = 199900
 	}
-
-	clergymen = {
-		culture = north_italian
-		religion = jewish
-		size = 100
-	}
-
-	artisans = {
-		culture = north_italian
-		religion = jewish
-		size = 1990
-	}
 	
 	farmers = {
 		culture = arpitan
 		religion = catholic
 		size = 11600
 	}
+
+
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	artisans = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Aosta (156000/39000 POPS)
 721 = {
@@ -270,17 +291,31 @@
 		size = 140000
 	}
 
-	clergymen = {
-		culture = north_italian
+	######Jews
+	soldiers = {
+		culture = ashkenazi
 		religion = jewish
-		size = 5
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = ashkenazi
 		religion = jewish
-		size = 195
+		size = 100
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Savona (316000/79000 POPS)
 725 = {
@@ -378,17 +413,37 @@
 		size = 275925
 	}
 
-	clergymen = {
-		culture = north_italian
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
 		religion = jewish
-		size = 5
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = ashkenazi
 		religion = jewish
-		size = 95
+		size = 100
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Bergamo (472000/118000 POPS)
 727 = {
@@ -524,17 +579,37 @@
 		size = 60925
 	}
 
-	clergymen = {
-		culture = north_italian
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
 		religion = jewish
-		size = 10
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = ashkenazi
 		religion = jewish
-		size = 490
+		size = 100
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Verona (516000/129000 POPS)
 730 = {
@@ -1220,17 +1295,37 @@
 		size = 149900
 	}
 
-	clergymen = {
-		culture = north_italian
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
 		religion = jewish
-		size = 10
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = ashkenazi
 		religion = jewish
-		size = 490
+		size = 100
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	########
 }
 #Leghorn (380000/95000 POPS)
 745 = {
@@ -1270,17 +1365,31 @@
 		size = 84600
 	}
 
-	clergymen = {
-		culture = north_italian
+	######Jews
+	soldiers = {
+		culture = ashkenazi
 		religion = jewish
-		size = 25
+		size = 100
+	}
+
+	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = north_italian
+		culture = ashkenazi
 		religion = jewish
-		size = 1225
+		size = 550
 	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 500
+	}
+	########
 }
 #Siena (380000/95000 POPS)
 747 = {
@@ -1461,17 +1570,37 @@
 		size = 230750
 	}
 
-	clergymen = {
-		culture = south_italian
+	######Jews
+	aristocrats = {
+		culture = sephardic
 		religion = jewish
-		size = 25
+		size = 100
+	}
+
+	soldiers = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+
+	clergymen = {
+		culture = sephardic
+		religion = jewish
+		size = 100
 	}
 
 	artisans = {
-		culture = south_italian
+		culture = sephardic
 		religion = jewish
-		size = 1375
+		size = 600
 	}
+	
+	farmers = {
+		culture = sephardic
+		religion = jewish
+		size = 500
+	}
+	########
 }
 #Viterbo (180000/45000 POPS)
 750 = {

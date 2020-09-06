@@ -371,6 +371,7 @@ political_decisions = {
 			citizens_rights = primary_culture_only
 			NOT = { government = democracy }
 			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 			war_policy = jingoism
 			citizenship_policy = residency
 			experimental_psychology = 1

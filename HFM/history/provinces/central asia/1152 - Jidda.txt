@@ -2,4 +2,4 @@ owner = HDJ
 controller = HDJ
 add_core = HDJ
 trade_goods = grain
-life_rating = 35
+life_rating = 32

@@ -8,6 +8,7 @@ plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
 non_state_culture_literacy = 0.01
+is_releasable_vassal = no
 
 slavery = no_slavery
 upper_house_composition = appointed
@@ -63,6 +64,13 @@ flintlock_rifles = 1
 consciousness = 0
 nonstate_consciousness = 0
 
+modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
+
 
 
 1861.1.1 = {
@@ -80,5 +88,8 @@ nonstate_consciousness = 0
 	# Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 }

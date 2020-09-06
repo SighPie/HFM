@@ -503,6 +503,7 @@ province_event = {
 			is_greater_power = yes
 		}
 		is_colonial = yes
+		is_overseas = yes
 		NOT = {
 			life_rating = 25
 			has_global_flag = botanical_expedition_in_progress
@@ -1514,7 +1515,7 @@ country_event = {
 				badboy = 0.88
 				war_exhaustion = 10
 				war_policy = pacifism
-				has_country_modifier = neutrality
+				has_country_modifier = neutrality_modifier
 				has_country_flag = in_great_war
 				has_country_modifier = no_more_war
 				any_owned_province = { is_core = THIS }
@@ -1524,7 +1525,7 @@ country_event = {
 			badboy = 0.92
 			war_exhaustion = 10
 			war_policy = pacifism
-			has_country_modifier = neutrality
+			has_country_modifier = neutrality_modifier
 			has_country_flag = in_great_war
 			has_country_modifier = no_more_war
 		}
@@ -1787,6 +1788,14 @@ country_event = {
 				political_reform = state_press
 				political_reform = state_controlled
 				political_reform = underground_parties
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
 				
 				add_country_modifier = {
 					name = national_confusion
@@ -1818,6 +1827,15 @@ country_event = {
 				social_reform = good_health_care
 				nationalize = yes
 				
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+		
 				add_country_modifier = {
 					name = national_confusion
 					duration = 365
@@ -1848,6 +1866,15 @@ country_event = {
 				social_reform = no_pensions
 				social_reform = no_health_care
 				
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+				
 				add_country_modifier = {
 					name = national_confusion
 					duration = 365
@@ -1860,6 +1887,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				owner = {
@@ -1867,15 +1895,22 @@ country_event = {
 					OR = {
 						government = absolute_monarchy
 						government = prussian_constitutionalism
+						government = absolute_empire
+						government = semi_constitutional_empire
 					}
 				}
 			}
 			owner = {
-				government = hms_government
 				random_owned = {
-					limit = {
-						owner = { NOT = { vote_franschise = universal_voting } }
-					}
+					limit = { owner = { OR = { government = prussian_constitutionalism government = absolute_monarchy } } }
+					owner = { government = hms_government }
+				}
+				random_owned = {
+					limit = { owner = { OR = { government = semi_constitutional_empire government = absolute_empire } } }
+					owner = { government = constitutional_empire }
+				}
+				random_owned = {
+					limit = { owner = { NOT = { vote_franschise = universal_voting } } }
 					owner = { political_reform = universal_weighted_voting }
 				}
 				random_owned = {
@@ -1910,6 +1945,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				owner = {
@@ -1961,12 +1997,16 @@ country_event = {
 					OR = {
 						government = absolute_monarchy
 						government = prussian_constitutionalism
+						government = absolute_empire
+						government = semi_constitutional_empire
 					}
 				}
 				owner = {
 					civilized = yes
 					NOT = { government = absolute_monarchy }
 					NOT = { government = prussian_constitutionalism }
+					NOT = { government = absolute_empire }
+					NOT = { government = semi_constitutional_empire }
 				}
 			}
 			owner = {
@@ -1975,6 +2015,15 @@ country_event = {
 				political_reform = none_voting
 				political_reform = appointed
 				political_reform = underground_parties
+				
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
 				
 				add_country_modifier = {
 					name = national_confusion
@@ -1999,11 +2048,27 @@ country_event = {
 				political_reform = state_press
 				political_reform = underground_parties
 				
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+				
 				add_country_modifier = {
 					name = national_confusion
 					duration = 365
 				}
 			}
+		}
+		random_owned = {
+			limit = {
+				FROM = { is_greater_power = yes }
+				owner = { civilized = no }
+			}
+			owner = { military_reform = yes_foreign_naval_officers }
 		}
 		random_country = {
 			limit = {
@@ -2073,7 +2138,6 @@ country_event = {
 			}
 			PNJ = { annex_to = ENG }
 		}
-		
 		#Gaining Chitral from Afghanistan
 		random_owned = {
 			limit = {
@@ -2091,6 +2155,104 @@ country_event = {
 				}
 			}
 		}
+		#Free any Russian Slaves
+		random_owned = {
+			limit = {
+				OR = {
+					is_core = KAZ
+					is_core = BUK
+					is_core = KOK
+					is_core = KHI
+				}
+				owner = {
+					civilized = no
+					OR = {
+						tag = BUK
+						tag = KHI
+						tag = KOK
+						tag = KAZ
+					}
+					truce_with = RUS
+				}
+			}
+			owner = { any_owned = { state_scope = { is_slave = no } } }
+		}
+		#Bukhara
+		random_owned = {
+			limit = {
+				is_core = BUK
+				owner = {
+					civilized = no
+					tag = BUK
+					truce_with = RUS
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { province_id = 1199 }
+					secede_province = RUS
+				}
+			}
+		}
+		#Kokand
+		random_owned = {
+			limit = {
+				is_core = KOK
+				owner = {
+					civilized = no
+					tag = KOK
+					truce_with = RUS
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { 
+						OR = {
+							province_id = 1203
+							province_id = 1201
+							province_id = 1195
+							is_core = KAZ
+							is_core = TAJ
+						}
+					}
+					secede_province = RUS
+				}
+			}
+		}
+		#Badakshan
+		random_owned = {
+			limit = {
+				is_core = BDK
+				owner = {
+					civilized = no
+					tag = BDK
+					truce_with = RUS
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = BDK }
+					secede_province = RUS
+				}
+			}
+		}
+		#Return any non-Afghan cores
+		random_owned = {
+			limit = {
+				is_core = AFG
+				owner = {
+					civilized = no
+					tag = AFG
+					truce_with = ENG
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = BUK }
+					secede_province = BUK
+				}
+			}
+		}
 	}
 }
 
@@ -2101,7 +2263,7 @@ country_event = {
 	picture = "deliberation"
 	
 	trigger = {
-		has_country_modifier = neutrality
+		has_country_modifier = neutrality_modifier
 		NOT = {
 			badboy = 1
 			is_greater_power = yes
@@ -2134,7 +2296,7 @@ country_event = {
 		name = "EVT81002212OPTB"
 		set_country_flag = abandoned_neutrality
 		prestige = -20
-		remove_country_modifier = neutrality
+		remove_country_modifier = neutrality_modifier
 		ai_chance = {
 			factor = 0
 		}
@@ -2304,7 +2466,7 @@ country_event = {
 		}
 		random_country = {
 			limit = { exists = yes tag = MOR }
-			government = hms_government
+			government = colonial_company
 			civilized = yes
 			THIS = { create_vassal = MOR relation = { who = MOR value = 200 } }
 		}
@@ -2523,13 +2685,32 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA810004" #We will pay our part
-		prestige = 30
-		diplomatic_influence = { who = FROM value = 50 }
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
+		prestige = 2
+		
 		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = { change_variable = { which = owed_cash_money value = 100 } } 
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
+			owner = { change_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
+			owner = { treasury = -100000 }
+		}
+		
+		diplomatic_influence = { who = FROM value = 50 }
 		
 		random_country = {
 			limit = {
@@ -2579,18 +2760,35 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB810004" #We will pay everything
-		prestige = 100
+		prestige = 5
 		diplomatic_influence = { who = FROM value = 200 }
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -300000 } }
 		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = { change_variable = { which = owed_cash_money value = 300 } } 
+			limit = {
+				owner = {
+					NOT = { money = 300000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 300 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 300000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
+			owner = { change_variable = { which = owed_cash_money value = 300 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 300000 } }
+			owner = { treasury = -300000 }
 		}
 		ai_chance = {
 			factor = 30
 			modifier = {
 				factor = 0
-				NOT = { money = 200000 }
+				NOT = { money = 300000 }
 			}
 		}
 	}
@@ -2607,29 +2805,36 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA810005" #We will pay our part
-		prestige = 30
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
+		prestige = 2
 		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = { change_variable = { which = owed_cash_money value = 100 } } 
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
+			owner = { change_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
+			owner = { treasury = -100000 }
+		}
+		
 		random_list = {
 			50 = { FROM = { country_event = { id = 810008 days = 7 } } }
 			50 = { FROM = { country_event = { id = 810008 days = 8 } } }
 		}
 		
 		ai_chance = { factor = 90 }
-	}
-	
-	option = {
-		name = "EVTOPTB810005" #We will pay in installments
-		prestige = 20
-		set_variable = { which = owed_cash_money value = 100 }
-		random_list = {
-			50 = { FROM = { country_event = { id = 810008 days = 7 } } }
-			50 = { FROM = { country_event = { id = 810008 days = 8 } } }
-		}
-		ai_chance = { factor = 0 }
 	}
 	
 	option = {
@@ -2663,29 +2868,31 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA810006" #We will pay their part
-		prestige = 30
-		casus_belli = { target = FROM type = war_reparations months = 48 } relation = { who = FROM value = -150 }
-		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
-		random_owned = {
-			limit = { owner = { ai = yes } }
-			owner = { change_variable = { which = owed_cash_money value = 100 } } 
-		}
-		ai_chance = { factor = 100 }
-	}
-	
-	option = {
-		name = "EVTOPTB810006" #We will pay their part in installments
-		prestige = 20
+		prestige = 3
 		casus_belli = { target = FROM type = war_reparations months = 48 } relation = { who = FROM value = -150 }
 		random_owned = {
-			limit = { owner = { NOT = { check_variable = { which = owed_cash_money value = 1 } } } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
 			owner = { set_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { check_variable = { which = owed_cash_money value = 9 } } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
-		ai_chance = { factor = 0 }
+		random_owned = {
+			limit = { owner = { money = 100000 } }
+			owner = { treasury = -100000 }
+		}
+		ai_chance = { factor = 100 }
 	}
 	
 	option = {
@@ -2707,10 +2914,15 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA810007" #We will pay their part
+		name = "EVTOPTA810007"
 		relation = { who = FROM value = -300 }
 		diplomatic_influence = { who = FROM value = -300 }
 		casus_belli = { target = FROM type = cut_down_to_size months = 36 }
+		war = { 
+			target = FROM
+			attacker_goal = { casus_belli = cut_down_to_size }
+			call_ally = yes
+		}
 		any_country = {
 			limit = {
 				is_vassal = no
@@ -2729,11 +2941,18 @@ country_event = {
 						is_greater_power = yes
 					}
 				}
+				NOT = { alliance_with = FROM }
 			}
 			relation = { who = FROM value = -300 }
 			diplomatic_influence = { who = FROM value = -300 }
 			casus_belli = { target = FROM type = cut_down_to_size months = 36 }
+			war = { 
+				target = FROM
+				attacker_goal = { casus_belli = cut_down_to_size }
+				call_ally = yes
+			}
 		}
+		
 		ai_chance = { factor = 100 }
 	}
 }

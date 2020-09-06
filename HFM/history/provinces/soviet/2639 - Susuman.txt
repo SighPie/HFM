@@ -1,7 +1,7 @@
-owner = RUS
-controller = RUS
-add_core = RUS
-add_core = KAM
-trade_goods = fish
+owner = AZH
+controller = AZH
+add_core = AZH
+add_core = HAL
+trade_goods = wool
 life_rating = 20
-colonial = 2
+terrain = desert

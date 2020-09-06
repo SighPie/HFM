@@ -1,7 +1,7 @@
 capital = 935
 primary_culture = bedouin
 religion = sunni
-government = absolute_monarchy
+government = colonial_company
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.28
@@ -36,7 +36,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 
-ruling_party = IRQ_conservative
+ruling_party = KWT_conservative
 last_election = 1834.1.1
 upper_house = {
 	fascist = 0
@@ -49,10 +49,16 @@ upper_house = {
 }
 
 set_country_flag = sunni_country
-#schools = unciv_tech_school
+schools = unciv_tech_school
 
 foreign_artillery = yes_foreign_artillery
 foreign_weapons = yes_foreign_weapons
+
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Technologies
 flintlock_rifles = 1

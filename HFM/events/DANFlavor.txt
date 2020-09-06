@@ -499,53 +499,47 @@ country_event = {
 }
 
 country_event = {
-
 	id = 36208
+	title = "EVTNAME36208"
+	desc = "EVTDESC36208"
+	picture = "Alberti"
+
 	trigger = {
 		tag = DEN 
 		year = 1908
 		war = no
 		OR = {
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
-			}
+		}
 		NOT = {
 			year = 1912
 			has_country_flag = AlberiniAffair
-			}
 		}
+	}
  
 	mean_time_to_happen =  {
 		months = 8
-
 		modifier = {
 			factor = 0.75 #increase likelihood to happen
 			year = 1909
 		}
-
-
 		modifier = {
 			factor = 0.95 #increase likelihood to happen
 			year = 1910
 		}
-
 		modifier = {
 			factor = 0.95 #increase likelihood to happen
 			year = 1911
 		}
 	}
 
-	title = "EVTNAME36208"
-	desc = "EVTDESC36208"
-	picture = "Alberti"
-
 	option = {
 		name = "EVTOPTA36207" 
 		set_country_flag = AlberiniAffair
 		election = yes
-		any_pop = {
-			consciousness = 2
-		}
+		any_pop = { consciousness = 2 }
 	}
 }
 
@@ -666,6 +660,9 @@ country_event = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = {
 			year = 1888
@@ -719,6 +716,9 @@ country_event = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = {
 			year = 1895
@@ -762,7 +762,10 @@ country_event = {
 		tag = DEN 
 		year = 1884
 		ruling_party_ideology = conservative
-		government = hms_government
+		OR = {
+			government = hms_government
+			government = constitutional_empire
+		}
 		NOT = {
 			year = 1888
 			has_country_flag = EstrupAssassination
@@ -974,6 +977,7 @@ country_event = {
 		OR = {
 			government = hms_government
 			government = democracy
+			government = constitutional_empire
 		}
 		NOT = {
 			year = 1875

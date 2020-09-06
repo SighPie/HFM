@@ -39,6 +39,8 @@ colonial_policy = no_colonies
 set_country_flag = catholic_country
 set_country_flag = existing_country
 set_country_flag = new_world_nation
+govt_flag = { government = dominion flag = hms_government }
+govt_flag = { government = colonial_company flag = hms_government }
 
 ruling_party = CUB_conservative_3
 upper_house = {
@@ -50,4 +52,3 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-

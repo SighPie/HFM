@@ -411,6 +411,12 @@
 	aristocrats = {
 		culture = bedouin
 		religion = ibadi
+		size = 30
+	}
+	
+	bureaucrats = {
+		culture = bedouin
+		religion = ibadi
 		size = 5
 	}
 

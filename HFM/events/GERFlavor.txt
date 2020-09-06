@@ -276,9 +276,12 @@ country_event = {
 			owns = 926 #Baghdad
 			is_vassal = no
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = {
 				alliance_with = ENG
@@ -820,7 +823,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.75
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -1092,17 +1098,7 @@ country_event = {
 	desc = "EVTDESC33037"
 	picture = "rhineland"
 	major = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		primary_culture = french
-		is_greater_power = yes
-		capital = 425
-		has_country_flag = crisis_on_the_rhine
-	}
-	
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	
 	option = {
 		name = "EVT33037OPTA"
@@ -1157,7 +1153,7 @@ country_event = {
 			relation = { who = THIS value = -150 }
 		}
 		ai_chance = {
-			factor = 0.15
+			factor = 0.1
 			modifier = {
 				factor = 0
 				has_recently_lost_war = yes
@@ -1196,7 +1192,7 @@ country_event = {
 			}
 			relation = { who = THIS value = 50 }
 		}
-		ai_chance = { factor = 0.85 }
+		ai_chance = { factor = 0.9 }
 	}
 }
 
@@ -1472,6 +1468,20 @@ country_event = {
 			}
 		}
 		ai_chance = { factor = 0.80 }
+	}
+}
+
+#Leipzig Congress
+country_event = {
+	id = 72752
+	title = "EVTTITLE72752"
+	desc = EVTDESC72752
+	major = yes
+	is_triggered_only = yes
+	 
+	option = { 
+		name = "EVT72752OPTA"
+		relation = { who = FROM value = -100 }
 	}
 }
 

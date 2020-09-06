@@ -5,4 +5,4 @@ add_core = MTC
 colonial = 2
 trade_goods = timber
 terrain = new_world_boreal
-life_rating = 30
+life_rating = 31

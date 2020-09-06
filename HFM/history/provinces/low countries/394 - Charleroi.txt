@@ -5,6 +5,17 @@ add_core = NET
 add_core = WLL
 trade_goods = coal
 life_rating = 35
+terrain = mining_district
+state_building = {
+	level = 2
+	building = liquor_distillery
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = cement_factory
+	upgrade = yes
+}
 state_building = {
 	level = 2
 	building = steel_factory
@@ -12,22 +23,12 @@ state_building = {
 }
 state_building = {
 	level = 1
-	building = ammunition_factory
+	building = machine_parts_factory
 	upgrade = yes
 }
 state_building = {
 	level = 1
 	building = small_arms_factory
-	upgrade = yes
-}
-state_building = {
-	level = 3
-	building = liquor_distillery
-	upgrade = yes
-}
-state_building = {
-	level = 1
-	building = glass_factory
 	upgrade = yes
 }
 1861.1.1 = { 

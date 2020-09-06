@@ -3,7 +3,7 @@ controller = ENG
 add_core = ENG
 trade_goods = grain
 life_rating = 45
-terrain = london
+#terrain = london
 fort = 1
 party_loyalty = {
 	ideology = liberal
@@ -20,7 +20,7 @@ state_building = {
 }
 state_building = {
 	level = 1
-	building = paper_mill
+	building = machine_parts_factory
 	upgrade = yes
 }
 state_building = {

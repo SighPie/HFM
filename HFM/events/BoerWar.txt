@@ -1,3 +1,4 @@
+#HFM
 #################################################################
 #																#
 #                  Establishment of Natal						#
@@ -129,11 +130,17 @@ country_event = {
 	option = {
 		name = "EVT98206OPTA"
 		prestige = 5
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		release_vassal = NAL
 		relation = { who = ZUL value = -100 }
 		relation = { who = NAL value = -100 }
 		diplomatic_influence = { who = NAL value = 100 }
-		NAL = { prestige = -30 add_country_modifier = { name = unrecognized_country duration = 1825 } }
+		NAL = { 
+			prestige = -30 
+			add_country_modifier = { name = unrecognized_country duration = 1825 } 
+			government = democracy
+		}
 		any_pop = {
 			limit = {
 				has_pop_culture = boer
@@ -145,8 +152,7 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" secede_province = THIS  }
-		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
+		
 		2111 = { state_scope = { change_region_name = "Natal" } }
 		ai_chance = { factor = 100 }
 	}
@@ -155,10 +161,16 @@ country_event = {
 		name = "EVT98206OPTB"
 		prestige = -5
 		badboy = -2
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		release = NAL
 		relation = { who = NAL value = 50 }
 		diplomatic_influence = { who = NAL value = 200 }
-		NAL = { prestige = -30 add_country_modifier = { name = unrecognized_country duration = 1825 } }
+		NAL = { 
+			prestige = -30 
+			add_country_modifier = { name = unrecognized_country duration = 1825 } 
+			government = democracy
+		}
 		any_pop = {
 			limit = {
 				has_pop_culture = boer
@@ -170,8 +182,6 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
-		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		2111 = {
 			state_scope = {
 				change_region_name = "Natal"
@@ -185,10 +195,15 @@ country_event = {
 		name = "EVT98207OPTC"
 		prestige = -5
 		badboy = -2
+		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
+		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		release = NAL
 		relation = { who = NAL value = 50 }
 		diplomatic_influence = { who = NAL value = 200 }
-		NAL = { prestige = -30 }
+		NAL = { 
+			prestige = -30 
+			government = democracy
+		}
 		any_pop = {
 			limit = {
 				has_pop_culture = boer
@@ -200,8 +215,6 @@ country_event = {
 			money = 250
 			move_pop = 2111
 		}
-		2112 = { change_province_name = "Ladysmith" secede_province = THIS }
-		2111 = { change_province_name = "Pietermaritzburg" secede_province = THIS }
 		2111 = { state_scope = { change_region_name = "Natal" is_slave = yes } }
 		change_tag_no_core_switch = NAL
 		ai_chance = { factor = 0 }
@@ -538,7 +551,7 @@ country_event = {
 				empty = yes
 				owner = {
 					civilized = no
-					war = no
+					NOT = { war_with = THIS }
 				}
 				owned_by = THIS
 			}
@@ -910,12 +923,6 @@ country_event = {
 			#change_province_name = "Hoedspruit"
 			#secede_province = THIS
 			remove_core = GAZ
-			add_core = TRN
-			add_core = SAF
-		}
-		3273 = {
-			change_province_name = "Hoedspruit"
-			secede_province = THIS
 			add_core = TRN
 			add_core = SAF
 		}
@@ -2429,8 +2436,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				2092 = { empty = no }
-				2093 = { empty = no }
-				2558 = { empty = no }
+				2093 = { empty = yes }
+				2558 = { empty = yes }
 				2088 = { empty = yes }
 			}
 			2088 = {
@@ -2443,7 +2450,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				2092 = { empty = no }
-				2093 = { empty = no }
+				2088 = { empty = no }
+				2093 = { empty = yes }
 				2558 = { empty = yes }
 			}
 			2558 = {
@@ -2457,6 +2465,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				2092 = { empty = no }
+				2558 = { empty = no }
 				2093 = { empty = yes }
 			}
 			2093 = {

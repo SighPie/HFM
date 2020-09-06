@@ -3,6 +3,10 @@ political_decisions = {
 	organize_colonial_armies = {
 		picture = begin_line_of_advantage
 		potential = {
+			OR = {
+				has_country_flag = government_decisions_on
+				ai = yes
+			}
 			civilized = yes
 			colonial_nation = yes
 			any_owned_province = { is_colonial = yes is_overseas = yes }
@@ -43,6 +47,8 @@ political_decisions = {
 			NOT = { has_country_modifier = warship_commissioned }
 			any_owned_province = { has_building = naval_base is_core = THIS }
 			war = no
+            flintlock_rifles = 1
+            post_nelsonian_thought = 1
 			OR = {
 				ai = no
 				NOT = { total_amount_of_ships = 3 }
@@ -115,7 +121,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					ai = no
-					steamer_convoy = 24
+                    steamer_convoy = 45
 					artillery = 10
 					canned_food = 10
 				}
@@ -138,7 +144,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = no } }
 				owner = {
-					steamer_convoy = -24
+                    steamer_convoy = -45
 					artillery = -10
 					canned_food = -10
 				}
@@ -146,7 +152,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
-					set_variable = { which = owed_steamers value = 20 }
+                    set_variable = { which = owed_steamers value = 45 }
 					set_variable = { which = owed_artillery value = 10 }
 					set_variable = { which = owed_canned_food value = 10 }
 				}
@@ -181,10 +187,15 @@ political_decisions = {
 			OR = {
 				market_determined_exchange_rates = 1
 				AND = {
+                    year = 1880
 					economic_policy = planned_economy
 					modern_central_bank_system = 1
 					investment_banks = 1
 				}
+                AND = {
+                    year = 1905
+                    business_regulations = 1
+                }
 			}
 		}
 		
@@ -216,10 +227,15 @@ political_decisions = {
 			OR = {
 				market_determined_exchange_rates = 1
 				AND = {
+                    year = 1880
 					economic_policy = planned_economy
 					modern_central_bank_system = 1
 					investment_banks = 1
 				}
+                AND = {
+                    year = 1905
+                    business_regulations = 1
+                }
 			}
 		}
 		
@@ -248,10 +264,15 @@ political_decisions = {
 			OR = {
 				market_determined_exchange_rates = 1
 				AND = {
+                    year = 1880
 					economic_policy = planned_economy
 					modern_central_bank_system = 1
 					investment_banks = 1
 				}
+                AND = {
+                    year = 1905
+                    business_regulations = 1
+                }
 			}
 		}
 		
@@ -278,10 +299,15 @@ political_decisions = {
 			OR = {
 				market_determined_exchange_rates = 1
 				AND = {
+                    year = 1880
 					economic_policy = planned_economy
 					modern_central_bank_system = 1
 					investment_banks = 1
 				}
+                AND = {
+                    year = 1905
+                    business_regulations = 1
+                }
 			}
 		}
 		
@@ -295,7 +321,7 @@ political_decisions = {
 	}
 	
 	commodity_production_in_philippines = {
-		picture = map_phillipines
+        picture = map_philippines
 		potential = {
 			owns = 2565
 			owns = 1457
@@ -309,10 +335,15 @@ political_decisions = {
 			OR = {
 				market_determined_exchange_rates = 1
 				AND = {
+                    year = 1880
 					economic_policy = planned_economy
 					modern_central_bank_system = 1
 					investment_banks = 1
 				}
+                AND = {
+                    year = 1905
+                    business_regulations = 1
+                }
 			}
 		}
 		
@@ -857,7 +888,7 @@ political_decisions = {
 		picture = begin_line_of_advantage
 		potential = {
 			civilized = no
-			tech_school = unciv_tech_school
+			tech_school = developing_tech_school
 		}
 		
 		allow = {

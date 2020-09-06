@@ -63,6 +63,17 @@ rancho = {
 		}
 		NOT = {	has_global_flag = rancho }
 		year = 1836
+        any_owned_province = {
+            OR = {
+                province_id = 84
+                province_id = 85
+                province_id = 86
+                province_id = 87
+                province_id = 88
+                province_id = 89
+                province_id = 90
+            }
+        }
 	}
 		
 	allow = {
@@ -86,11 +97,7 @@ rancho = {
 				province_id = 90
 				}
 			}
-		add_province_modifier = { 
-			name = rancho 
-			duration = 1825
-			#Five years
-			}
+        add_province_modifier = {  name = rancho  duration = 1825 }
 		}
 	}
 	

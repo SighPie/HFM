@@ -175,9 +175,7 @@ country_event = {
 	option = {
 		name = "EVT99911OPTB"
 		prestige = -10
-		poor_strata = { militancy = 0.5 }
-		middle_strata = { militancy = 0.5 }
-		rich_strata = { militancy = 0.5 }
+		any_pop = { militancy = 3 }
 		treasury = -1000
 		ENG = { country_event = { id=99910 days=15 } }
 		ai_chance = { factor = 0.95 }

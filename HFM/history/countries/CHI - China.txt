@@ -36,7 +36,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 #New Reforms
 conscription = two_year_draft
 debt_law = serfdom
@@ -65,6 +64,9 @@ upper_house = {
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

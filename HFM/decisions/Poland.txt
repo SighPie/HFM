@@ -253,50 +253,59 @@ political_decisions = {
 
 		potential = {
 			primary_culture = polish
-			NOT = { owns = 706 }
-			NOT = { tag = PLC }
+            NOT = {
+                has_country_flag = unite_with_poland
+                has_country_flag = post_colonial_country
+                tag = POL
+                tag = CPL
+                tag = PLC
+            }
 			any_neighbor_country = {
-				owns = 706
+                is_vassal = no
 				OR = {
 					tag = POL
 					tag = CPL
 				}
 			}
-			NOT = { has_country_flag = unite_with_poland }
-			NOT = { has_country_flag = post_colonial_country }
 		}
 
 		allow = {
 			war = no
 			OR = {
+                AND = {
+                    neighbour = POL
+                    CPL = { exists = no }
+                    relation = { who = POL value = 50 }
+                    OR = {
 				is_vassal = no
-				overlord = { primary_culture = polish owns = 706 }
+                        vassal_of = POL
 			}
 			OR = {
-				AND = {
-					OR = {
+                        NOT = { part_of_sphere = yes }
+                        in_sphere = POL
 						sphere_owner = { is_sphere_leader_of = POL }
-						part_of_sphere = no
 					}
 					POL = {
-						exists = yes
-						owns = 706
-						neighbour = THIS
+                        is_vassal = no
 						war = no
-						is_vassal = no
 					}
 				}
 				AND = {
+                    neighbour = CPL
+                    POL = { exists = no }
+                    relation = { who = CPL value = 50 }
+                    OR = {
+                        is_vassal = no
+                        vassal_of = CPL
+                    }
 					OR = {
+                        NOT = { part_of_sphere = yes }
+                        in_sphere = CPL
 						sphere_owner = { is_sphere_leader_of = CPL }
-						NOT = { part_of_sphere = yes }
 					}
 					CPL = {
-						exists = yes
-						owns = 706
-						neighbour = THIS
+                        is_vassal = no
 						war = no
-						is_vassal = no
 					}
 				}
 			}
@@ -319,8 +328,9 @@ political_decisions = {
 						tag = POL
 						tag = CPL
 					}
+                    neighbour = THIS
+                    is_vassal = no
 					exists = yes
-					owns = 706
 					ai = yes
 					THIS = { ai = yes }
 				}
@@ -329,8 +339,9 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = POL
+                    neighbour = THIS
+                    is_vassal = no
 					exists = yes
-					owns = 706
 					ai = yes
 					THIS = { ai = no }
 				}
@@ -346,8 +357,9 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = CPL
+                    neighbour = THIS
+                    is_vassal = no
 					exists = yes
-					owns = 706
 					ai = yes
 					THIS = { ai = no }
 				}
@@ -366,8 +378,9 @@ political_decisions = {
 						tag = POL
 						tag = CPL
 					}
+                    neighbour = THIS
+                    is_vassal = no
 					exists = yes
-					owns = 706
 					ai = no
 				}
 				country_event = 60130
@@ -378,53 +391,30 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				government = fascist_dictatorship
+                has_country_flag = fascist_gov
 				POL = {
-					NOT = { government = fascist_dictatorship }
+                    exists = yes
+                    NOT = { has_country_flag = fascist_gov }
+                    neighbour = THIS
 				}
+                CPL = {
+                    exists = yes
+                    NOT = { has_country_flag = fascist_gov }
+                    neighbour = THIS
+			}
 			}
 			modifier = {
 				factor = 0
-				NOT = { government = fascist_dictatorship }
-				POL = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				NOT = { government = proletarian_dictatorship }
-				POL = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = democracy
-					government = hms_government
-				}
+                has_country_flag = communist_gov
 				POL = {
-					NOT = {
-						government = democracy
-						government = hms_government
+                    exists = yes
+                    NOT = { has_country_flag = communist_gov }
+                    neighbour = THIS
 					}
-				}
-			}
-			modifier = {
-				factor = 0
-				POL = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-				NOT = {
-					government = democracy
-					government = hms_government
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = presidential_dictatorship
-					government = bourgeois_dictatorship
-					government = absolute_monarchy
+                CPL = {
+                    exists = yes
+                    NOT = { has_country_flag = communist_gov }
+                    neighbour = THIS
 				}
 			}
 		}
@@ -452,7 +442,10 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = galicia_annex_krakow
-			all_core = { remove_core = THIS }
+            all_core = {
+                remove_core = THIS
+                add_core = GLM
+            }
 			random_country = {
 				limit = {
 					tag = GLM
@@ -558,6 +551,7 @@ political_decisions = {
 			any_neighbor_country = { has_country_flag = through_january_uprising }
 			has_country_modifier = polish_uprising_mobilization
 		}
+
 		allow = {
 			war = no
 			any_neighbor_country = {

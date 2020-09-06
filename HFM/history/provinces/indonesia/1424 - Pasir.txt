@@ -1,6 +1,6 @@
-owner = NET
-controller = NET
-add_core = KLM
+owner = KTI
+controller = KTI
+add_core = KTI
 trade_goods = sulphur
 life_rating = 38
-colonial = 2
+terrain = jungle_hills

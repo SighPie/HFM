@@ -27,8 +27,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
-
 #New Reforms
 conscription = two_year_draft
 debt_law = peonage
@@ -59,14 +57,20 @@ army_schools = yes_army_schools
 foreign_artillery = yes_foreign_artillery
 land_reform = yes_land_reform
 education_reform = yes_education_reform
-finance_reform = yes_finance_reform
+monetary_reform = yes_monetary_reform
 
 # Technologies
 flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
 #bottling_process = yes
 modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

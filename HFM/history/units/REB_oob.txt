@@ -231,4 +231,3 @@ regiment = {
 		home = 2344
 	}
 }
-

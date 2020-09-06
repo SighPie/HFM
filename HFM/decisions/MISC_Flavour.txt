@@ -1,4 +1,3 @@
-
 political_decisions = {
 
 	organize_central_asia = {
@@ -49,11 +48,11 @@ political_decisions = {
 			1190 = { add_core = KYR }
 			1203 = { add_core = KYR }
 			
-			KAZ = { tech_school = unciv_tech_school }
-			UZB = { tech_school = unciv_tech_school }
-			KYR = { tech_school = unciv_tech_school }
-			TAJ = { tech_school = unciv_tech_school }
-			TKM = { tech_school = unciv_tech_school }
+			KAZ = { tech_school = developing_tech_school }
+			UZB = { tech_school = developing_tech_school }
+			KYR = { tech_school = developing_tech_school }
+			TAJ = { tech_school = developing_tech_school }
+			TKM = { tech_school = developing_tech_school }
 			
 		}
 
@@ -202,7 +201,6 @@ political_decisions = {
 	build_neuschwanstein = {
 		picture = neuschwanstein
 		potential = {
-			year = 1886
 			OR = { 
 				AND = { 
 					tag = BAV
@@ -215,9 +213,12 @@ political_decisions = {
 				}
 			}
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = { has_global_flag = neuschwanstein_built }
 		}
@@ -227,12 +228,15 @@ political_decisions = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
+			money = 15000
+			year = 1886
 			romanticism = 1
 		}
 		
 		effect = {
-			treasury = -30000 #It costed 6.2 million marks but I have no idea how that translates into game money.
-			prestige = 15
+			treasury = -80000 #It costed 6.2 million marks but I have no idea how that translates into game money.
+			prestige = 20
+			plurality = 5
 			set_global_flag = neuschwanstein_built
 		}
 			

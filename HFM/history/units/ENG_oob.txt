@@ -1,7 +1,7 @@
 #Sphere of Influence
 #GPs
 FRA = { value = 25 }
-RUS = { value = -75 }
+RUS = { value = -100 }
 AUS = { value = -75 }
 USA = { value = 50 }
 PRU = { value = 25 }
@@ -41,6 +41,24 @@ PHG = {
 	influence_value = 50
 }
 
+#KEL = {
+#	value = 150
+#	level = 4
+#	influence_value = 50
+#}
+
+#TER = {
+#	value = 150
+#	level = 4
+#	influence_value = 50
+#}
+
+#KED = {
+#	value = 150
+#	level = 4
+#	influence_value = 50
+#}
+
 BUR = {
 	value = 125
 	level = 5
@@ -57,7 +75,7 @@ SIA = {
 	influence_value = 0
 }
 NEP = {
-	value = 100
+	value = -25
 	level = 5
 }
 
@@ -70,6 +88,30 @@ QNG ={
 	level = 0
 	influence_value = 0
 }
+
+SIN ={
+	value = -100
+	level = 0
+	influence_value = 0
+}
+
+MAK ={
+	value = -100
+	level = 0
+	influence_value = 0
+}
+
+KAL ={
+	value = -100
+	level = 0
+	influence_value = 0
+}
+
+ATJ = {
+	value = 50
+	level = 3
+}
+
 NYE ={
 	value = -10
 	level = 0
@@ -117,7 +159,7 @@ BHR = {
 ABU = {
 	value = 50
 	level = 5
-	influence_value = 0
+	influence_value = 50
 }
 OMA = {
 	value = 100
@@ -198,10 +240,20 @@ VNZ = {
 	level = 3		#3=cordial, 4 = friendly, 5 sphere
 	influence_value = 0
 }
+URU = {
+	value = 125		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
 MSK = {
 	value = 150
 	level = 5
 	influence_value = 100
+}
+JAM = {
+	value = 150
+	level = 5
+	influence_value = 25
 }
 
 #Other
@@ -252,12 +304,7 @@ BHO = {
 	level = 5
 	influence_value = 0
 }
-REW = {
-	value = 125
-	level = 5
-	influence_value = 0
-}
-CHH = {
+BUN = {
 	value = 125
 	level = 5
 	influence_value = 0
@@ -755,7 +802,7 @@ army = {
 
 army = {
 	name = "The South Africa Garrison"
-	location = 2087
+	location = 2098
 	
 	regiment = {
 		name= "The East Yorkshire Regiment"
@@ -766,7 +813,7 @@ army = {
 	regiment = {
 		name= "The Port Elizabeth Regiment"
 		type = infantry
-		home = 2096
+		home = 289
 	}
 
 	regiment = {
@@ -778,7 +825,7 @@ army = {
 	regiment = {
 		name= "The Cape Town Rifles"
 		type = infantry
-		home = 270
+		home = 2087
 	}
 
 	regiment = {

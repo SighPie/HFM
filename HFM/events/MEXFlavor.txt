@@ -20,6 +20,7 @@ country_event = {
 			year = 1913
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 			poor_strata_everyday_needs = 0.75 #will not fire if poor are getting 75%+ everyday needs
 		}
 	}
@@ -105,6 +106,7 @@ country_event = {
 			year = 1914
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 			poor_strata_everyday_needs = 0.95 #will not fire if poor are getting 95%+ everyday needs
 		}
 	}
@@ -163,6 +165,7 @@ country_event = {
 			year = 1915
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 	}
  
@@ -209,6 +212,7 @@ country_event = {
 		NOT = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 			year = 1915
 		}
 	}
@@ -583,6 +587,7 @@ country_event = {
 			exists = YUC
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		any_owned_province = { is_core = YUC }
 		year = 1841
@@ -917,7 +922,10 @@ country_event = {
 
 	trigger = {
 		tag = MEX
-		government = hms_government
+		OR = {
+			government = hms_government
+			government = constitutional_empire
+		}
 		has_country_flag = we_have_tried_this_once
 		2172 = { controlled_by_rebels = yes }
 		NOT = { year = 1880 }
@@ -1104,13 +1112,12 @@ country_event = {
 	news_desc_short = "EVTDESC44807_NEWS_SHORT"
 	picture = "surrender_of_santanna"
 	major = yes
-	
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVT44841OPTA"
 		war_exhaustion = 20
-		prestige = -20
+		prestige = -25
 		end_war = TEX
 		TEX = {
 			any_owned = {

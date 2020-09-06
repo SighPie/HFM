@@ -30,4 +30,3 @@ army = {
 		type = irregular
 		home = 2034	}
 }
-

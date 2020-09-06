@@ -1,7 +1,7 @@
 capital = 536
 primary_culture = north_german
 religion = protestant
-government = absolute_monarchy
+government = prussian_constitutionalism
 plurality = 25.0
 nationalvalue = nv_order
 literacy = 0.8
@@ -11,7 +11,7 @@ prestige = 5
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
-vote_franschise = none_voting
+vote_franschise = landed_voting
 public_meetings = yes_meeting
 press_rights = state_press
 trade_unions = no_trade_unions
@@ -74,7 +74,7 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 
 #Inventions
@@ -114,10 +114,9 @@ oob = "BRA_oob.txt"
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
+    regenerative_furnaces = 1
 	hot_blast = 1
-	puddling = 1
-	bessemer_process = 1
+    drilling_and_blasting = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1
@@ -135,7 +134,7 @@ oob = "BRA_oob.txt"
 #Inventions
 	john_ramsay_mcculloch = yes
 	nassau_william_sr = yes
-	james_mill = yes
+    #james_mill = yes
 	ammunition_production = yes
 	small_arms_production = yes
 	explosives_production = yes

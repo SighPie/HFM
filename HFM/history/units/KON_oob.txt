@@ -45,5 +45,3 @@ regiment = {
 	home = 2001
 	}
 }
-
-

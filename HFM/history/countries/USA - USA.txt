@@ -12,7 +12,7 @@ non_state_culture_literacy = 0.1
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 20
+prestige = 50
 
 # Political reforms
 slavery = yes_slavery
@@ -44,6 +44,7 @@ centralization = regionalism
 colonial_policy = settlement
 
 set_country_flag = protestant_country
+set_country_flag = new_world_nation
 
 ruling_party = USA_conservative
 last_election = 1832.5.3
@@ -56,8 +57,6 @@ upper_house = {
 	socialist = 0
 	communist = 0
 }
-
-set_country_flag = new_world_nation
 
 # Technologies
 post_napoleonic_thought = 1
@@ -84,7 +83,7 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 battleship_column_doctrine = 1
 experimental_railroad = 1
@@ -97,6 +96,7 @@ steamers = 1
 traditionalism = yes
 political_religion = yes
 paternalism = yes
+cotton_gin = yes
 
 
 # Starting Consciousness
@@ -106,6 +106,10 @@ schools = commerce_tech_school
 decision = USA_1836_setup
 
 oob = "USA_oob.txt"
+
+foreign_investment = {
+	HAW = 5000
+}
 
 1838.1.1 = {
 decision = trail_of_tears
@@ -226,10 +230,9 @@ school_reforms = low_schools
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
+    regenerative_furnaces = 1
 	hot_blast = 1
-	puddling = 1
-	bessemer_process = 1
+    drilling_and_blasting = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

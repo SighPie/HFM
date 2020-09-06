@@ -1,6 +1,5 @@
 capital = 2049
 primary_culture = shona
-culture = makua
 culture = yao
 culture = tonga
 culture = nguni

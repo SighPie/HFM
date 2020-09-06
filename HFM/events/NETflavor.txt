@@ -18,7 +18,7 @@ country_event = {
 	option = {
 		name = "EVT952500OPTA"		
 		NET = { inherit = THIS }
-		ai_chance = { factor = 95 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -29,9 +29,10 @@ country_event = {
 		NET = { release_vassal = JAV }
 		NET = { relation = { who = THIS value = -400 } }
 		NET = { diplomatic_influence = { who = THIS value = -400 } }
-		ai_chance = { factor = 0.05 }
-		}
+		
+		ai_chance = { factor = 0 }
 	}
+}
 	
 country_event = {
 	id = 952501
@@ -57,6 +58,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
+
 #The Jambi War
 country_event = {
 	id = 952502
@@ -72,15 +74,24 @@ country_event = {
 			owns = 1413
 			owns = 1399
 		}
+		war = no
+		is_disarmed = no
 	}
 	
 	fire_only_once = yes
 	
-	mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = {
+		months = 36
+		modifier = { 
+			factor = 0.35
+			year = 1860
+		}
+	}
 
 	option = {
 		name = "EVT952502OPTA"
 		set_country_flag = conquest_of_jambi
+		badboy = 1.5
 		leave_alliance = DJA
 		release_vassal = DJA
 		DJA = { end_military_access = THIS }
@@ -90,6 +101,60 @@ country_event = {
 			target = DJA
 			type = establish_protectorate_NI_casus_belli
 			months = 64
+		}
+		war = { 
+			target = DJA 
+			attacker_goal = { casus_belli = establish_protectorate_NI_casus_belli } 
+			defender_goal = { casus_belli = annex_core_country } 
+		}
+	}
+}
+
+#The Jambi Uprising
+country_event = {
+	id = 9525021
+	title = "EVTNAME9525021" 
+	desc = "EVTDESC9525021"
+	picture = "jambi_uprising"
+	fire_only_once = yes
+	
+	trigger = {
+		DJA = { exists = no }
+		tag = NET
+		revolution_n_counterrevolution = 1
+		year = 1880
+		OR = {
+			owns = 1413
+			owns = 1399
+		}
+		war = no
+		is_disarmed = no
+		has_country_flag = conquest_of_jambi
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = { 
+			factor = 0.35
+			year = 1885
+		}
+	}
+
+	option = {
+		name = "EVT9525021OPTA"
+		prestige = -5
+		badboy = 1.5
+		1399 = {
+			any_pop = {
+				limit = { has_pop_culture = malay }
+				militancy = 8
+				consciousness = 7
+			}
+			
+			add_province_modifier = {
+				name = patriot_uprising
+				duration = 180
+			}
 		}
 	}
 }

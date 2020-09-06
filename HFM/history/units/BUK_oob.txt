@@ -1,11 +1,6 @@
-KOK = {
-	value = 100
-}
-
-PER = {
-	value = 50
-}
-
+KOK = { value = 120 }
+PER = { value = 50 }
+BDK = { value = -200 }
 
 
 army = {

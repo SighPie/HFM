@@ -3,188 +3,268 @@
 #
 # Effects are fully scriptable here.
 
-trinket_health_care_fully_funded = {
+permanent_occupation = {
 	trigger = {
+		ai = no
 		exists = yes
-		health_care = trinket_health_care
-		administration_spending = 0.2
+		war = yes
+		military_score = 1
+		war_countries = {
+			#NOT = { any_greater_power = { alliance_with = THIS } 
+			OR = {
+				AND = {
+					NOT = { has_country_flag = in_great_war }
+					national_provinces_occupied = 0.75
+					OR = {
+						capital_scope = {
+							controlled_by = THIS
+							province_control_days = 1825 #5 years
+						}
+						any_owned_province = {
+							controlled_by = THIS
+							province_control_days = 3650 #10 years
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = in_great_war }
+					national_provinces_occupied = 0.85
+					OR = {
+						capital_scope = {
+							controlled_by = THIS
+							province_control_days = 1095 #3 years
+						}
+						any_owned_province = {
+							controlled_by = THIS
+							province_control_days = 1825 #5 years
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = in_great_war }
+					national_provinces_occupied = 0.9
+					OR = {
+						capital_scope = {
+							controlled_by = THIS
+							province_control_days = 730 #2 years
+						}
+						any_owned_province = {
+							controlled_by = THIS
+							province_control_days = 1095 #3 years
+						}
+					}
+				}
+				AND = {
+					NOT = { has_country_flag = in_great_war }
+					national_provinces_occupied = 1
+					OR = {
+						capital_scope = {
+							controlled_by = THIS
+							province_control_days = 365 #1 years
+						}
+						any_owned_province = {
+							controlled_by = THIS
+							province_control_days = 1095 #10 years
+						}
+					}
+				}
+				AND = {
+					has_country_flag = in_great_war
+					national_provinces_occupied = 0.8
+					capital_scope = {
+						controlled_by  = THIS
+						province_control_days = 2555  #7 years
+					}
+				}
+			}
+		}
 	}
-	global_population_growth = 0.001
+	badboy = 0.23
 	icon = 19
+}
+
+trinket_health_care_fully_funded = {
+    trigger = {
+        exists = yes
+        health_care = trinket_health_care
+        administration_spending = 0.2
+    }
+    global_population_growth = 0.001
+    icon = 19
 }
 
 low_health_care_fully_funded = {
-	trigger = {
-		exists = yes
-		health_care = low_health_care
-		OR = {
-			AND = {
-				ai = yes
-				administration_spending = 0.25
-			}
-			AND = {
-				ai = no
-				administration_spending = 0.3
-			}
-		}
-	}
-	global_population_growth = 0.001
-	icon = 19
+    trigger = {
+        exists = yes
+        health_care = low_health_care
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.25
+            }
+            AND = {
+                ai = no
+                administration_spending = 0.3
+            }
+        }
+    }
+    global_population_growth = 0.001
+    icon = 19
 }
 
 acceptable_health_care_fully_funded = {
-	trigger = {
-		exists = yes
-		health_care = acceptable_health_care
-		OR = {
-			AND = {
-				ai = yes
-				administration_spending = 0.3
-			}
-			AND = {
-				ai = no
-				administration_spending = 0.4
-			}
-		}
-	}
-	global_population_growth = 0.001
-	icon = 19
+    trigger = {
+        exists = yes
+        health_care = acceptable_health_care
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.3
+            }
+            AND = {
+                ai = no
+                administration_spending = 0.4
+            }
+        }
+    }
+    global_population_growth = 0.001
+    icon = 19
 }
 
 good_health_care_fully_funded = {
-	trigger = {
-		exists = yes
-		health_care = good_health_care
-		OR = {
-			AND = {
-				ai = yes
-				administration_spending = 0.3
-			}
-			AND = {
-				ai = no
-				administration_spending = 0.5
-			}
-		}
-	}
-	global_population_growth = 0.002
-	icon = 19
+    trigger = {
+        exists = yes
+        health_care = good_health_care
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.3
+            }
+            AND = {
+                ai = no
+                administration_spending = 0.5
+            }
+        }
+    }
+    global_population_growth = 0.001
+    icon = 19
 }
 
 health_care_fully_funded = {
-	trigger = {
-		exists = yes
-		health_care = good_health_care
-		OR = {
-			AND = {
-				ai = yes
-				administration_spending = 0.74
-			}
-			AND = {
-				ai = no
-				administration_spending = 0.99
-			}
-		}
-	}
-	global_population_growth = 0.002
-	icon = 19
+    trigger = {
+        exists = yes
+        health_care = good_health_care
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.74
+            }
+            AND = {
+                ai = no
+                administration_spending = 0.99
+            }
+        }
+    }
+    global_population_growth = 0.001
+    icon = 19
 }
 
 low_schools_fully_funded = {
-	trigger = {
-		exists = yes
-		school_reforms = low_schools
-		education_spending = 0.3
-	}
-	education_efficiency_modifier = 0.05
-	icon = 19
+    trigger = {
+        exists = yes
+        school_reforms = low_schools
+        education_spending = 0.3
+    }
+    education_efficiency_modifier = 0.05
+    icon = 19
 }
 
 acceptable_schools_fully_funded = {
-	trigger = {
-		exists = yes
-		school_reforms = acceptable_schools
-		education_spending = 0.4
-	}
-	education_efficiency_modifier = 0.075
-	icon = 19
+    trigger = {
+        exists = yes
+        school_reforms = acceptable_schools
+        education_spending = 0.4
+    }
+    education_efficiency_modifier = 0.075
+    icon = 19
 }
 
 good_schools_fully_funded = {
-	trigger = {
-		exists = yes
-		school_reforms = good_schools
-		education_spending = 0.5
-	}
-	education_efficiency_modifier = 0.1
-	icon = 19
+    trigger = {
+        exists = yes
+        school_reforms = good_schools
+        education_spending = 0.5
+    }
+    education_efficiency_modifier = 0.1
+    icon = 19
 }
 
 education_fully_funded = {
-	trigger = {
-		exists = yes
-		school_reforms = good_schools
-		OR = {
-			AND = {
-				ai = yes
-				education_spending = 0.5
-			}
-			AND = {
-				ai = no
-				education_spending = 0.99
-			}
-		}
-	}
-	education_efficiency_modifier = 0.1
-	icon = 19
+    trigger = {
+        exists = yes
+        school_reforms = good_schools
+        OR = {
+            AND = {
+                ai = yes
+                education_spending = 0.5
+            }
+            AND = {
+                ai = no
+                education_spending = 0.99
+            }
+        }
+    }
+    education_efficiency_modifier = 0.1
+    icon = 19
 }
 
 neglected_education = {
-	trigger = {
-		exists = yes
-		civilized = yes
-		ai = no
-		number_of_states = 2
-		total_pops = 1000000
-		OR = {
-			AND = {
-				literacy = 0.75
-				NOT = { education_spending = 0.3 }
-			}
-			AND = {
-				literacy = 0.5
-				NOT = { education_spending = 0.2 }
-			}
-			AND = {
-				literacy = 0.25
-				NOT = { education_spending = 0.1 }
-			}
-		}
-	}
-	education_efficiency_modifier = -1
-	icon = 19
+    trigger = {
+        exists = yes
+        civilized = yes
+        ai = no
+        number_of_states = 2
+        total_pops = 1000000
+        OR = {
+            AND = {
+                literacy = 0.75
+                NOT = { education_spending = 0.3 }
+            }
+            AND = {
+                literacy = 0.5
+                NOT = { education_spending = 0.2 }
+            }
+            AND = {
+                literacy = 0.25
+                NOT = { education_spending = 0.1 }
+            }
+        }
+    }
+    education_efficiency_modifier = -1
+    icon = 19
 }
 
 islamic_law_triggered = {
-	trigger = {
-		exists = yes
-		civilized = yes
-		OR = {
-			has_country_flag = sunni_country
-			has_country_flag = shiite_country
-			has_country_flag = ibadi_country
-		}
-		NOT = { has_country_flag = secularized_muslim_society }
-		NOT = { has_country_flag = dynamic_tag }
-		NOT = { has_country_flag = post_colonial_country }
-		NOT = { religious_policy = pro_atheism }
-	}
-	research_points_modifier = -0.05
-	education_efficiency_modifier = -0.15
-	literacy_con_impact = -0.5
-	issue_change_speed = -0.5
-	suppression_points_modifier = 0.5
-	tax_efficiency = 0.05
-	icon = 5
+    trigger = {
+        exists = yes
+        civilized = yes
+        OR = {
+            has_country_flag = sunni_country
+            has_country_flag = shiite_country
+            has_country_flag = ibadi_country
+        }
+        NOT = { has_country_flag = secularized_muslim_society }
+        NOT = { has_country_flag = dynamic_tag }
+        NOT = { has_country_flag = post_colonial_country }
+        NOT = { religious_policy = pro_atheism }
+    }
+    research_points_modifier = -0.05
+    education_efficiency_modifier = -0.15
+    literacy_con_impact = -0.5
+    issue_change_speed = -0.5
+    suppression_points_modifier = 0.5
+    tax_efficiency = 0.05
+    icon = 5
 }
 
 the_british_raj = {
@@ -197,26 +277,29 @@ the_british_raj = {
 			government = hms_government
 			government = fascist_dictatorship
 			government = democracy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { is_culture_group = indo_iranian }
-		NOT = { is_culture_group = south_asian }
-		1227 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-		1236 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-		1251 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-		1297 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-	}
+        NOT = { is_culture_group = south_asian }
+        1227 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+        1236 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+        1251 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+        1297 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+    }
 	research_points = 0.5
 	core_pop_militancy_modifier = -0.05
 	supply_consumption = 0.35
@@ -237,6 +320,9 @@ the_british_raj_ai = {
 			government = hms_government
 			government = fascist_dictatorship
 			government = democracy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { is_culture_group = indo_iranian }
 		NOT = { is_culture_group = south_asian }
@@ -286,7 +372,7 @@ greater_germany = {
 	}
 	core_pop_militancy_modifier = -0.05
 	supply_consumption = 0.35
-	tax_efficiency = -0.1
+	tax_efficiency = -0.05
 	administrative_efficiency_modifier = -0.2
 	prestige = 0.03
 	icon = 19
@@ -302,10 +388,10 @@ colonial_nation = {
 				continent = east_africa
 				continent = west_africa
 				continent = central_africa
+				continent = south_west_africa
 				continent = africa
 				continent = indochina
 				continent = east_indies
-				continent = south_west_africa
 				continent = polynesia
 				continent = australia_new_zealand
 			}
@@ -324,47 +410,64 @@ colonial_nation = {
 }
 
 dutch_east_india = {
-	trigger = {
-		exists = yes
-		capital_scope = { continent = europe }
-		1413 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-		1418 = {
-			is_colonial = yes
-			owned_by = THIS
-		}
-	}
-	prestige = 0.01
-	icon = 19
+    trigger = {
+        exists = yes
+        capital_scope = { continent = europe }
+        1413 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+        1418 = {
+            is_colonial = yes
+            owned_by = THIS
+        }
+    }
+    prestige = 0.01
+    icon = 19
 }
 
 vassal_nation = {
-	trigger = {
-		exists = yes
-		is_vassal = yes
-		is_substate = no
-	}
-	icon = 10
-	prestige = -2
+    trigger = {
+        exists = yes
+        is_vassal = yes
+        is_substate = no
+    }
+    icon = 10
+    prestige = -1
 }
 
 substate_nation = {
-	trigger = {
-		exists = yes
-		is_substate = yes
-		civilized = yes
-	}
-	
-	prestige = -2
-	max_loan_modifier = -1.0
-	min_tax = 0.4
-	max_military_spending = -0.25
-	min_tariff = 1.2
-	tax_efficiency = 0.5
-	
-	icon = 10
+    trigger = {
+        exists = yes
+        is_substate = yes
+        civilized = yes
+        ai = yes
+    }
+
+    prestige = -1
+    max_loan_modifier = -1.0
+    min_tax = 0.25
+    max_military_spending = -0.25
+    min_tariff = 1.2
+    tax_efficiency = 0.3
+
+    icon = 10
+}
+
+substate_nation_player = {
+    trigger = {
+        exists = yes
+        is_substate = yes
+        civilized = yes
+        ai = no
+    }
+
+    prestige = -0.25
+    max_loan_modifier = -1.0
+    max_military_spending = -0.25
+    tax_efficiency = 0.3
+
+    icon = 10
 }
 
 chinese_substate = {
@@ -375,7 +478,12 @@ chinese_substate = {
 		}
 		civilized = no
 		exists = yes
-		QNG = {	government = absolute_monarchy }
+		QNG = {
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
+		}
 		is_culture_group = east_asian
 	}
 	icon = 10
@@ -384,61 +492,62 @@ chinese_substate = {
 }
 
 own_kiel_canal = {
-	trigger = {
-		exists = yes
-		owns = 369
-		civilized = yes
-		is_canal_enabled = 1
-	}
-	icon = 9
-	tariff_efficiency_modifier = 0.05
+    trigger = {
+        exists = yes
+        owns = 369
+        civilized = yes
+        is_canal_enabled = 1
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.05
 }
 
 own_suez_canal = {
-	trigger = {
-		exists = yes
-		owns = 1755
-		civilized = yes
-		is_canal_enabled = 2
-	}
-	icon = 9
-	tariff_efficiency_modifier = 0.1
-	import_cost = -0.2
-	prestige = 0.01
+    trigger = {
+        exists = yes
+        owns = 1755
+        civilized = yes
+        is_canal_enabled = 2
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.1
+    import_cost = -0.2
+    prestige = 0.01
 }
 
 own_panama_canal = {
-	trigger = {
-		exists = yes
-		owns = 1723
-		civilized = yes
-		is_canal_enabled = 3
-	}
-	icon = 9
-	tariff_efficiency_modifier = 0.2
-	import_cost = -0.25
-	prestige = 0.02
+    trigger = {
+        exists = yes
+        owns = 1723
+        civilized = yes
+        is_canal_enabled = 3
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.2
+    import_cost = -0.25
+    prestige = 0.02
 }
 
 small_but_efficient = {
-	trigger = {
-		exists = yes
-		capital_scope = { continent = europe }
-		civilized = yes
-		NOT = { number_of_states = 4 }
-		NOT = { num_of_cities = 8 }
-		NOT = { total_pops = 500000 }
-		NOT = { money = 1000000 }
-		NOT = { year = 1886 }
-		OR = {
-			NOT = { 
-				is_culture_group = south_slavic
-				is_culture_group = pan_romanian
-				is_culture_group = levantine
-			}
-			NOT = { num_of_cities = 4 }
-		}
-	}
+    trigger = {
+        exists = yes
+        capital_scope = { continent = europe }
+        civilized = yes
+        NOT = { number_of_states = 4 }
+        NOT = { num_of_cities = 8 }
+        NOT = { total_pops = 500000 }
+        NOT = { money = 1000000 }
+        NOT = { year = 1886 }
+        OR = {
+            NOT = {
+                is_culture_group = south_slavic
+                is_culture_group = pan_romanian
+                is_culture_group = levantine
+            }
+            NOT = { num_of_cities = 4 }
+        }
+    }
+
 	
 	icon = 9
 	tax_efficiency = 0.4
@@ -465,26 +574,26 @@ microstate = {
 }
 
 sound_dues = {
-	trigger = {
-		capital_scope = { continent = europe }
-		exists = yes
-		civilized = yes
-		total_num_of_ports = 1
-		NOT = { has_global_flag = sound_dues_abolished }
-		NOT = { owns = 372 }
-		OR = {
-			is_culture_group = scandinavian
-			is_culture_group = british
-			is_culture_group = french
-			is_culture_group = beneluxian
-			primary_culture = north_german
-			primary_culture = russian
-		}
-	}
-	
-	icon = 9
-	tariff_efficiency_modifier = -0.05
-	import_cost = 0.05
+    trigger = {
+        capital_scope = { continent = europe }
+        exists = yes
+        civilized = yes
+        total_num_of_ports = 1
+        NOT = { has_global_flag = sound_dues_abolished }
+        NOT = { owns = 372 }
+        OR = {
+            is_culture_group = scandinavian
+            is_culture_group = british
+            is_culture_group = french
+            is_culture_group = beneluxian
+            primary_culture = north_german
+            primary_culture = russian
+        }
+    }
+
+    icon = 9
+    tariff_efficiency_modifier = -0.05
+    import_cost = 0.05
 }
 
 landlocked_nation = {
@@ -498,7 +607,7 @@ landlocked_nation = {
 			primary_culture = swiss_german
 			primary_culture = siebenburger
 			primary_culture = dutch
-			is_culture_group = polish_culture_group
+			primary_culutre = polish
 		}
 	}
 
@@ -518,7 +627,7 @@ landlocked_nation_import = {
 			primary_culture = swiss_german
 			primary_culture = siebenburger
 			primary_culture = dutch
-			is_culture_group = polish_culture_group
+			primary_culutre = polish
 		}
 	}
 	import_cost = 0.5
@@ -526,42 +635,42 @@ landlocked_nation_import = {
 }
 
 social_reformed_nation = {
-		trigger = {
-			exists = yes
-			wage_reform = good_minimum_wage
-			work_hours = eight_hours
-			safety_regulations = good_safety
-			unemployment_subsidies = good_subsidies
-			pensions = good_pensions
-			health_care = good_health_care
-			school_reforms = good_schools
-			penal_system = rehabilitation
-		}
-		
-	social_reform_desire = -0.3
-	icon = 13
+        trigger = {
+            exists = yes
+            wage_reform = good_minimum_wage
+            work_hours = eight_hours
+            safety_regulations = good_safety
+            unemployment_subsidies = good_subsidies
+            pensions = good_pensions
+            health_care = good_health_care
+            school_reforms = good_schools
+            penal_system = rehabilitation
+        }
+
+    social_reform_desire = -0.3
+    icon = 13
 }
 
 educational_spen = {
-		trigger = {
-			ai = yes
-			exists = yes
-			administration_spending = 0.35
-		}
+        trigger = {
+            ai = yes
+            exists = yes
+            administration_spending = 0.74
+        }
 
-	education_efficiency_modifier = 0.3
-	icon = 16
+    education_efficiency_modifier = 0.3
+    icon = 16
 }
 
 admin_spen = {
-		trigger = {
-			ai = yes
-			exists = yes
-			administration_spending = 0.74
-		}
+        trigger = {
+            ai = yes
+            exists = yes
+            administration_spending = 0.74
+        }
 
-	administrative_efficiency_modifier = 0.3
-	icon = 16
+    administrative_efficiency_modifier = 0.3
+    icon = 16
 }
 
 hormuz_strait = {
@@ -594,19 +703,35 @@ malacca_strait = {
 }
 
 new_world_war = {
-	trigger = {
-		war = yes
-		exists = yes
-		OR = {
-			capital_scope = { continent = north_america }
-			capital_scope = { continent = south_america }
-			capital_scope = { continent = australia_new_zealand }
-		}
-	}
+    trigger = {
+        war = yes
+        exists = yes
+        OR = {
+            capital_scope = { continent = north_america }
+            capital_scope = { continent = south_america }
+            capital_scope = { continent = australia_new_zealand }
+        }
+    }
 
-	global_immigrant_attract = -0.8
-	icon = 16
+    global_immigrant_attract = -1.3
+    icon = 16
 }
+
+ryotwari = {
+    trigger = {
+        exists = yes
+        OR = {
+            is_culture_group = south_asian
+            is_culture_group = indo_iranian
+        }
+        is_vassal = yes
+    }
+
+    tax_efficiency = 0.25
+    administrative_efficiency_modifier = 0.25
+    icon = 16
+}
+
 
 help_ai_spain = { #Uncivs
 	trigger = {
@@ -623,6 +748,8 @@ help_ai_spain = { #Uncivs
 	icon = 10
 	tax_efficiency = 0.05
 	education_efficiency_modifier = 0.2
+	supply_consumption = -0.05
+	min_military_spending = 0.3
 }
 
 help_ai_russia = {
@@ -653,10 +780,10 @@ help_ai_russia = {
 	icon = 10
 	tax_efficiency = 0.08
 	administrative_efficiency_modifier = 0.03
-	supply_consumption = -0.05
 	education_efficiency_modifier = 0.2
 	mobilisation_size = 0.01
 	war_exhaustion = -0.5
+	min_military_spending = 0.3
 }
 
 help_ai_usa = {
@@ -667,7 +794,7 @@ help_ai_usa = {
 	}
 	icon = 10
 	tax_efficiency = 0.05
-	supply_consumption = -0.15
+	supply_consumption = -0.05
 	influence_modifier = -0.05
 	mobilisation_size = 0.01
 }
@@ -694,7 +821,7 @@ poland_not_yet_lost = {
 	}
 	icon = 10
 	prestige = 0.01
-	global_immigrant_attract = 1
+	global_immigrant_attract = 0.5
 	core_pop_militancy_modifier = -0.01
 }
 
@@ -727,7 +854,6 @@ bread_basket = {
 	}
 	icon = 10
 	war_exhaustion = -0.5
-	supply_consumption = -0.1
 }
 
 stop_it_mec = {
@@ -818,8 +944,7 @@ free_city = {
 		NOT = { total_pops = 150000 }
 	}
 	icon = 10
-	global_immigrant_attract = 0.8
-	supply_consumption = -0.05
+	global_immigrant_attract = 1.5
 }
 
 free_state = {
@@ -934,6 +1059,8 @@ help_ai_secondary_power = {
 		exists = yes
 		is_secondary_power = yes
 		ai = yes
+		war = yes
+		NOT = { money = 350000 }
 	}
 	supply_consumption = -0.1
 	icon = 19
@@ -957,7 +1084,7 @@ central_american_ai = {
 			capital = 2339
 		}
 	}
-	supply_consumption = -0.2
+	supply_consumption = -0.05
 	mobilisation_size = 0.2
 	education_efficiency_modifier = 0.05
 	icon = 19
@@ -982,7 +1109,7 @@ south_american_ai = {
 			primary_culture = mexican
 		}
 	}
-	supply_consumption = -0.2
+	supply_consumption = -0.05
 	mobilisation_size = 0.05
 	icon = 19
 }
@@ -1005,7 +1132,20 @@ south_american_ai_ii = {
 			primary_culture = mexican
 		}
 	}
-	supply_consumption = -0.2
+	supply_consumption = -0.05
 	mobilisation_size = 0.03
 	icon = 19
+}
+
+ai_spend_more_cash = {
+	trigger = { 
+		exists = yes
+		ai = yes
+		money = 3000000
+	}
+	
+	max_tax = 0.1
+	max_tariff = -0.75
+	min_social_spending = 1.0
+	min_military_spending = 1.0
 }

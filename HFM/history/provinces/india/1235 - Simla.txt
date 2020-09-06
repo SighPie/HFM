@@ -7,3 +7,4 @@ add_core = HND
 trade_goods = wool
 life_rating = 32
 colonial = 2
+terrain = montane_forest

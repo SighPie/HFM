@@ -29,8 +29,8 @@ political_decisions = {
 			TUR = {
 				any_pop = {
 					limit = { is_state_religion = no }
-					consciousness = 1.2
-					militancy = 0.6
+					consciousness = 0.8
+					militancy = 0.4
 					money = -1000
 				}
 				add_country_modifier = { name = religious_minority_oppression duration = 365 }
@@ -210,9 +210,11 @@ political_decisions = {
 		}
 		
 		allow = {
+			NOT = { has_country_modifier = law_changed_by_force }
 		}
 		
 		effect = {
+			add_country_modifier = { name = law_changed_by_force duration = 365 }
 			random_owned = {
 				limit = {
 					owner = {
@@ -269,9 +271,9 @@ political_decisions = {
 			OR = {
 				AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
 				AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
-				AND = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
-				AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
-				AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+				AND = { OR = { government = absolute_monarchy government = absolute_empire government = unciv_absolute_monarchy } NOT = { has_country_flag = absolute_monarchy_gov } }
+				AND = { OR = { government = prussian_constitutionalism government = semi_constitutional_empire } NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+				AND = { OR = { government = hms_government government = constitutional_empire } NOT = { has_country_flag = constitutional_monarchy_gov } }
 				AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
 				AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
@@ -284,9 +286,9 @@ political_decisions = {
 					OR = {
 						AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
 						AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
-						AND = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
-						AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
-						AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+						AND = { OR = { government = absolute_monarchy government = absolute_empire government = unciv_absolute_monarchy } NOT = { has_country_flag = absolute_monarchy_gov } }
+						AND = { OR = { government = prussian_constitutionalism government = semi_constitutional_empire } NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+						AND = { OR = { government = hms_government government = constitutional_empire } NOT = { has_country_flag = constitutional_monarchy_gov } }
 						AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
 						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
@@ -316,9 +318,9 @@ political_decisions = {
 			clr_country_flag = dominion_gov
 			random_owned = { limit = { owner = { government = theocracy } } owner = { set_country_flag = theocratic_government } }
 			random_owned = { limit = { owner = { government = proletarian_dictatorship } } owner = { set_country_flag = communist_gov } }
-			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { set_country_flag = absolute_monarchy_gov } }
-			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { set_country_flag = semi_constitutional_monarchy_gov } }
-			random_owned = { limit = { owner = { government = hms_government } } owner = { set_country_flag = constitutional_monarchy_gov } }
+			random_owned = { limit = { owner = { OR = { government = absolute_monarchy government = absolute_empire government = unciv_absolute_monarchy } } } owner = { set_country_flag = absolute_monarchy_gov } }
+			random_owned = { limit = { owner = { OR = { government = prussian_constitutionalism government = semi_constitutional_empire } } } owner = { set_country_flag = semi_constitutional_monarchy_gov } }
+			random_owned = { limit = { owner = { OR = { government = hms_government government = constitutional_empire } } } owner = { set_country_flag = constitutional_monarchy_gov } }
 			random_owned = { limit = { owner = { government = democracy } } owner = { set_country_flag = democracy_gov } }
 			random_owned = { limit = { owner = { government = presidential_dictatorship } } owner = { set_country_flag = presidential_dictatorship_gov } }
 			random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { set_country_flag = fascist_gov } }
@@ -367,7 +369,7 @@ political_decisions = {
 				set_country_flag = communist_gov
 			}
 			any_neighbor_country = {
-				limit = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+				limit = { OR = { government = absolute_monarchy government = absolute_empire government = unciv_absolute_monarchy } NOT = { has_country_flag = absolute_monarchy_gov } }
 				clr_country_flag = theocratic_government
 				clr_country_flag = communist_gov
 				#clr_country_flag = absolute_monarchy_gov
@@ -383,7 +385,7 @@ political_decisions = {
 				set_country_flag = absolute_monarchy_gov
 			}
 			any_neighbor_country = {
-				limit = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+				limit = { OR = { government = prussian_constitutionalism government = semi_constitutional_empire } NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
 				clr_country_flag = theocratic_government
 				clr_country_flag = communist_gov
 				clr_country_flag = absolute_monarchy_gov
@@ -399,7 +401,7 @@ political_decisions = {
 				set_country_flag = semi_constitutional_monarchy_gov
 			}
 			any_neighbor_country = {
-				limit = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+				limit = { OR = { government = hms_government government = constitutional_empire } NOT = { has_country_flag = constitutional_monarchy_gov } }
 				clr_country_flag = theocratic_government
 				clr_country_flag = communist_gov
 				clr_country_flag = absolute_monarchy_gov

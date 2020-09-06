@@ -25,8 +25,11 @@ early_archaeology = {
 }
 
 modern_archaeology = {
-	limit = { analytic_philosophy = 1 
-                  invention = early_archaeology }
+	limit = { 
+		analytic_philosophy = 1 
+		invention = early_archaeology 
+	}
+	
 	chance = {
 		base = 1
 		modifier = {

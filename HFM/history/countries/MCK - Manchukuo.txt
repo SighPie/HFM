@@ -33,13 +33,13 @@ debt_law = peonage
 penal_system = capital_punishment
 child_labor = child_labor_legal
 citizens_rights = primary_culture_only
-border_policy = open_borders
+border_policy = closed_borders
 centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = mahayana_country
 
-ruling_party = MCK_conservative
+ruling_party = MCK_conservative_2
 last_election = 1834.1.1
 upper_house = {
 	fascist = 0
@@ -51,7 +51,18 @@ upper_house = {
 	communist = 0
 }
 
+land_reform = yes_land_reform
+foreign_weapons = yes_foreign_weapons
+
 # Technologies
+flintlock_rifles = 1
+
+modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0
@@ -74,4 +85,3 @@ oob = "MCK_oob.txt"
 # Inventions
 
 }
-

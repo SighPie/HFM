@@ -1,8 +1,5 @@
 ### Events 201000-201070 ### Koldewey ### by Marco Dandolo ###
-
-
 # Events 201000-19/37-39/70 THAT BELONGS IN A MUSEUM! (general)
-
 # Events 201000-02 Mayan and Incan ruins discovered (triggers decision)
 # Events 201003-06 Archaeological access to Maya ruins
 # Events 201007-09 Archaeological access to Peru
@@ -14,25 +11,19 @@
 # Event  201019    Famous archaeologist
 # Events 201037-39 Sensation aftermath
 # Event  201070    Aftermath for Agamemnon's mask (APD)
-
 # Events 201020-36/40-69 Excavations
-
 # { UPDATED OLD EGYPTIAN EXCEVATION-EVENTS! }
 # Event  201020    New egyptian excevation-event
 # Events 201021-32 Mayan excavations
 # Events 201033-36 Mesopotamian excavations
 # Events 201040-69 Incan excavations    
 
-
-
 #############################
 # THAT BELONGS IN A MUSEUM! #
 #############################
 
 ## Panama Canal build - Mysterious ruins
-
 country_event = {
-
 	id = 201000
 	title = "EVTNAME201000"
 	desc = "EVTDESC201000"
@@ -71,9 +62,7 @@ country_event = {
 }
 
 ## Panama Canal build - Mysterious ruins (others)
-
 country_event = {
-
 	id = 201001
 	title = "EVTNAME201000"
 	desc = "EVTDESC201000"
@@ -87,9 +76,7 @@ country_event = {
 }
 
 ## Machu Picchu (others)
-
 country_event = {
-
 	id = 201002
 	title = "EVTNAME201002"
 	desc = "EVTDESC201002"
@@ -104,9 +91,7 @@ country_event = {
 ###################################
 
 ## Guatemala questioned
-
 country_event = {
-
 	id = 201003
 	title = "EVTNAME201003"
 	desc = "EVTDESC201003"
@@ -114,27 +99,24 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPT201003"
+		name = "EVTOPT201003OPTA"
 		plurality = 1
 		money = 10000
 		FROM = { country_event = 201004 }
+		
 		ai_chance = {
 			factor = 60
 			modifier = {
 				factor = 1.5
-                                FROM = { owns = 1723 }
+                FROM = { owns = 1723 }
 			}
 			modifier = {
 				factor = 1.5
-				FROM = {
-					prestige = 100
-				}
+				FROM = { prestige = 100 }
 			}
 			modifier = {
 				factor = 1.5
-				FROM = {
-					is_greater_power = yes
-				}
+				FROM = { is_greater_power = yes }
 			}
 			modifier = {
 				factor = 1.5
@@ -151,6 +133,7 @@ country_event = {
 		name = "EVTOPT201003OPTB"
 		prestige = 5
 		FROM = { country_event = 201005 }
+		
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -173,7 +156,6 @@ country_event = {
 				factor = 1.5
 				has_country_modifier = egyptian_excavations 
 			}
-
 			modifier = {
 				factor = 1.6
 				FROM = { prestige = 300 }
@@ -195,9 +177,7 @@ country_event = {
 }
 
 ### Guatemala gives access
-
 country_event = {
-
 	id = 201004
 	title = "EVTNAME201004"
 	desc = "EVTDESC201004"
@@ -207,20 +187,13 @@ country_event = {
 	option = {
 		name = "EVTOPTSPLENDID"
 		money = -10000
-		add_country_modifier = {
-			name = maya_excavations
-			duration = -1
-		}
-		relation = {
-			who = FROM
-			value = 25
-		}
+		add_country_modifier = { name = maya_excavations duration = -1 }
+		relation = { who = FROM value = 25 }
 		prestige = 5
 	}
 }
 
 ### Guatemala refuses
-
 country_event = {
 	id = 201005
 	title = "EVTNAME201005"
@@ -230,12 +203,10 @@ country_event = {
 	
 	option = {
 		name = "EVT201005OPTA"
-		relation = {
-			who = FROM
-			value = -10
-		}
+		relation = { who = FROM value = -10 }
 		prestige = -5
 		set_country_flag = maya_refused
+		
 		ai_chance = { factor = 50 }
 	}
 
@@ -243,11 +214,9 @@ country_event = {
 		name = "EVT201005OPTB"
 		money = -50000
 		prestige = -10
-		add_country_modifier = {
-			name = maya_excavations
-			duration = -1
-		}
+		add_country_modifier = { name = maya_excavations duration = -1 }
 		2189 = { owner = { country_event = 201006 } }
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -266,7 +235,6 @@ country_event = {
 }
 
 ### Guatemala bribed
-
 country_event = {
 	id = 201006
 	title = "EVTNAME201006"
@@ -278,10 +246,7 @@ country_event = {
 		name = "EVT201006OPT"
         prestige = 10
         money = 50000
-		relation = {
-			who = FROM
-			value = 10
-		}
+		relation = { who = FROM value = 10 }
 	}
 }
 
@@ -290,9 +255,7 @@ country_event = {
 ###################################
 
 ### Peru questioned
-
 country_event = {
-
 	id = 201007
 	title = "EVTNAME201007"
 	desc = "EVTDESC201007"
@@ -303,6 +266,7 @@ country_event = {
 		name = "EVT201007OPTA"
 		money = 10000
 		FROM = { country_event = 201008 }
+		
 		ai_chance = {
 			factor = 75
 			modifier = {
@@ -328,6 +292,7 @@ country_event = {
 		name = "EVT201007OPTB"
 		prestige = 5
 		FROM = { country_event = 201009 }
+		
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -346,10 +311,8 @@ country_event = {
 	}
 }
 
-### Peru gives access
-
+### Peru Gives Access
 country_event = {
-
 	id = 201008
 	title = "EVTNAME201008"
 	desc = "EVTDESC201008"
@@ -359,21 +322,13 @@ country_event = {
 	option = {
 		name = "EVT201008OPT"
 		money = -10000
-		add_country_modifier = {
-			name = inca_excavations
-			duration = -1
-		}
-		relation = {
-			who = FROM
-			value = 10
-		}
+		add_country_modifier = { name = inca_excavations duration = -1 }
+		relation = { who = FROM value = 10 }
 	}
 }
 
-### Peru refuses
-
+### Peru Refuses
 country_event = {
-
 	id = 201009
 	title = "EVTNAME201009"
 	desc = "EVTDESC201009"
@@ -382,10 +337,7 @@ country_event = {
 	
 	option = {
 		name = "EVT201009OPT"
-		relation = {
-			who = FROM
-			value = -10
-		}
+		relation = { who = FROM value = -10 }
 		prestige = -5
 		set_country_flag = inca_refused
 	}
@@ -396,9 +348,7 @@ country_event = {
 ###################################
 
 ### OE questioned
-
 country_event = {
-
 	id = 201010
 	title = "EVTNAME201010"
 	desc = "EVTDESC201010"
@@ -406,17 +356,16 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "If they want dirt, give them dirt."
+		name = "EVT201010OPTA"
 		money = 15000
 		set_global_flag = mesopotamian_excavation_rights
 		FROM = { country_event = 201011 }
+		
 		ai_chance = {
 			factor = 20
 			modifier = {
 				factor = 1.5
-				FROM = {
-					ai = no
-				}
+				FROM = { ai = no }
 			}
 			modifier = {
 				factor = 0.1
@@ -424,21 +373,17 @@ country_event = {
 			}
 			modifier = {
 				factor = 3
-				FROM = {
-					prestige = 300
-				}
+				FROM = { prestige = 300 }
 			}
 			modifier = {
 				factor = 1.5
-				FROM = {
-					is_greater_power = yes
-				}
+				FROM = { is_greater_power = yes }
 			}
 		}
 	}
 	
 	option = {
-		name = "I've got a jar of dirt, I've got a jar of dirt!"
+		name = "EVT201010OPTB"
 		prestige = 5
 		FROM = { country_event = 201012 }
 	}
@@ -446,26 +391,17 @@ country_event = {
 
 # OE Allows
 country_event = {
-
 	id = 201011
-
 	title = "EVTNAME201011"
 	desc = "EVTDESC201011"
 	picture = "Mesopotamia"
-	
 	is_triggered_only = yes
 	
 	option = {
 		name = "EVTOPTSPLENDID"
 		money = -15000
-		add_country_modifier = {
-			name = mesopotamian_excavations
-			duration = -1
-		}
-		relation = {
-			who = FROM
-			value = 20
-		}
+		add_country_modifier = { name = mesopotamian_excavations duration = -1 }
+		relation = { who = FROM value = 20 }
 		set_global_flag = mesopotamian_excavation_rights
 		prestige = 5
 	}
@@ -473,20 +409,15 @@ country_event = {
 
 # OE Refuses
 country_event = {
-
 	id = 201012
-
 	title = "EVTNAME201012"
 	desc = "EVTDESC201012"
 	picture = "Mesopotamia"
 	is_triggered_only = yes
 	
 	option = {
-		name = "That's rather unfortunate."
-		relation = {
-			who = FROM
-			value = -20
-		}
+		name = "EVT201012OPTA"
+		relation = { who = FROM value = -20 }
 		prestige = -5
 		set_country_flag = mesopotamian_refused
 	}
@@ -497,9 +428,7 @@ country_event = {
 #######################
 
 ### Exhibition
-
 country_event = {
-
 	id = 201013
 	title = "EVTNAME201013"
 	desc = "EVTDESC201013"
@@ -536,7 +465,7 @@ country_event = {
 				factor = 0.8
 				has_country_modifier = mesopotamian_excavations
 			}
-                modifier = {
+			modifier = {
 				factor = 0.8
 				has_country_modifier = inca_excavations
 			}
@@ -552,26 +481,28 @@ country_event = {
 				factor = 0.8
 				has_country_modifier = minoan_excavations
 			}
-                modifier = {
+			modifier = {
 				factor = 0.8
 				has_country_modifier = pompeji_excavations
 			}
-                modifier = {
+			modifier = {
 				factor = 0.7
 				has_country_flag = archaeological_society
 			}
 	}
 
 	option = {
-		name = "Archaeology is an amazing science." 
+		name = "EVT201013OPTA" 
 		plurality = 1
 		prestige = 10
 		years_of_research = 0.15
 		set_country_flag = had_arch_exhibition
+		
+		ai_chance = { factor = 50 }
 	}
 	
 	option = {
-		name = "We shall showcase our exhibition to the world!" 
+		name = "EVT201013OPTB" 
 		set_country_flag = had_arch_exhibition
 		plurality = 1
 		prestige = 35
@@ -586,34 +517,29 @@ country_event = {
 			}
 			country_event = 201014
 		}
-	}	
+		
+		ai_chance = { factor = 50 }
+	}
 }
 
 # Invitation
 country_event = {
-
 	id = 201014
 	title = "EVTNAME201014"
 	desc = "EVTDESC201014"
 	picture = "Archaeological_exhibition"
-	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Why don't we have something like this?"
-		relation = {
-			who = FROM
-			value = 15
-		}
+		name = "EVT201014OPTA"
+		relation = { who = FROM value = 15 }
 		prestige = -5
 		set_country_flag = blamed_by_other_archaeologists
 	}
 }
 
 ### Blamed and without archaeology
-
 country_event = {
-
 	id = 201015
 	title = "EVTNAME201015"
 	desc = "EVTDESC201015"
@@ -637,12 +563,10 @@ country_event = {
 		NOT = { invention = early_archaeology }
 	}
  
-	mean_time_to_happen =  {
-		months = 3
-	}
+	mean_time_to_happen =  { months = 3 }
 
 	option = {
-		name = "What a splendid idea!" 
+		name = "EVT201015OPTA" 
 		money = -75000
 		prestige = 2
 		set_country_flag = local_excavation
@@ -655,19 +579,16 @@ country_event = {
 		}
 	}
 	option = {
-		name = "What a waste of money." 
+		name = "EVT201015OPTB" 
 		set_country_flag = local_excavation
 		prestige = -1
-		ai_chance = {
-			factor = 25
-		}
+		
+		ai_chance = { factor = 25 }
 	}	
 }
 
 ### Local excavation success
-
 country_event = {
-
 	id = 201017
 	title = "EVTNAME201017"
 	desc = "EVTDESC201017"
@@ -679,17 +600,11 @@ country_event = {
 		has_country_flag = local_excavation
 	}
  
-	mean_time_to_happen =  {
-		months = 60
-
-	}
+	mean_time_to_happen =  { months = 60 }
 	
 	option = {
-		name = "Our efforts have not gone to waste" 
-		add_country_modifier = {
-			name = local_excavations
-			duration = -1
-		}
+		name = "EVT201017OPTA" 
+		add_country_modifier = { name = local_excavations duration = -1 }
 		prestige = 3
 		years_of_research = 0.01
 		set_country_flag = local_excavation_end
@@ -697,9 +612,7 @@ country_event = {
 }
 
 ### Archaeological society
-
 country_event = {
-
 	id = 201018
 	title = "EVTNAME201018"
 	desc = "EVTDESC201018"
@@ -749,9 +662,7 @@ country_event = {
 }
 
 ### Famous Archaeologist
-
 country_event = {
-
 	id = 201019
 	title = "EVTNAME201019"
 	desc = "EVTDESC201019"
@@ -794,14 +705,14 @@ country_event = {
 	}
 
 	option = {
-		name = "He serves as an example of the $COUNTRY_ADJ$ scientific society." 
+		name = "EVT201019OPTA" 
 		years_of_research = 0.05
 		set_country_flag = famous_archaeologist
 
 	}
 
 	option = {
-		name = "He serves as an example of the $COUNTRY_ADJ$ people." 
+		name = "EVT201019OPTB" 
 		prestige = 15
 		set_country_flag = famous_archaeologist
 	}
@@ -812,9 +723,7 @@ country_event = {
 #####################
 
 #Tutankhamun
-
 country_event = {
-
 	id = 201037
 	title = "EVTNAME201037"
 	desc = "EVTDESC201037"
@@ -847,9 +756,7 @@ country_event = {
 }
 
 #El Mirador
-
 country_event = {
-
 	id = 201038
 	title = "EVTNAME201038"
 	desc = "EVTDESC201037"
@@ -882,9 +789,7 @@ country_event = {
 }
 
 #Tower of Babylon
-
 country_event = {
-
 	id = 201039
 	title = "EVTNAME201039"
 	desc = "EVTDESC201037"
@@ -917,9 +822,7 @@ country_event = {
 }
 
 #Agamemnon's Mask
-
 country_event = {
-
 	id = 201070
 	title = "EVTNAME201070"
 	desc = "EVTDESC201037"
@@ -973,32 +876,30 @@ country_event = {
 	desc = "EVTDESC201021"
 	picture = "Maya_stele"
 
-	trigger = {
-		has_country_modifier = maya_excavations
-	}
+	trigger = { has_country_modifier = maya_excavations }
 
 	mean_time_to_happen = {
 		months = 350
 		modifier = {
-			factor = 0.9
+			factor = 0.5
 			invention = modern_archaeology
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+			has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
-		name = "That belongs in a museum!"
+		name = "EVT201021OPTA"
 		prestige = 5
 		years_of_research = 0.05
 	}
@@ -1013,25 +914,25 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                NOT = { tag = FRA }
-                NOT = { has_country_flag = belloq_wins }
-                NOT = { has_country_flag = belloq_loses }
-                NOT = { has_country_flag = pyramid_found }
+		NOT = { primary_culture = french }
+		NOT = { has_country_flag = belloq_wins }
+		NOT = { has_country_flag = belloq_loses }
+		NOT = { has_country_flag = pyramid_found }
 	}
 
 	mean_time_to_happen = {
 		months = 500
-                modifier = {
-			factor = 0.9
-                        has_country_flag = museum_build
+		modifier = {
+			factor = 0.5
+			has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.8
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.7
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 		modifier = {
 			factor = 0.6
@@ -1040,9 +941,9 @@ country_event = {
 	}
 
 	option = {
-		name = "I will go first. *drags a fedora deep in his face*"
+		name = "EVTOPTSPLENDID"
 		years_of_research = 0.15
-                set_country_flag = pyramid_found
+		set_country_flag = pyramid_found
 	}
 }
 
@@ -1055,33 +956,33 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                tag = FRA
+        primary_culture = french
 	}
 
 	mean_time_to_happen = {
 		months = 600
 		modifier = {
-			factor = 0.9
+			factor = 0.5
 			invention = modern_archaeology
 		}
-                modifier = {
+			modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+			has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
-		name = "So once again, Jones, what was briefly yours is now mine."
+		name = "EVT201023OPTA"
 		years_of_research = 0.15
-                prestige = 15
+		prestige = 15
 	}
 }
 
@@ -1094,35 +995,37 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = maya_excavations
-                NOT = { tag = FRA }
-                OR = { has_country_flag = belloq_wins
-                       has_country_flag = belloq_loses }
+		NOT = { primary_culture = french }
+		OR = { 
+			has_country_flag = belloq_wins
+			has_country_flag = belloq_loses 
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 600
 		modifier = {
-			factor = 0.9
+			factor = 0.5
 			invention = modern_archaeology
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+			has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
-		name = "Enough pyramid-adventures for me!"
+		name = "EVT201024OPTA"
 		years_of_research = 0.15
-                prestige = 15
+		prestige = 15
 	}
 }
 
@@ -1133,9 +1036,7 @@ country_event = {
 	desc = "EVTDESC201025"
 	picture = "lost_world"
 
-	trigger = {
-		has_country_modifier = maya_excavations
-	}
+	trigger = { has_country_modifier = maya_excavations }
 
 	mean_time_to_happen = {
 		months = 350
@@ -1143,25 +1044,25 @@ country_event = {
 			factor = 1.2
 			invention = modern_archaeology
 		}
-                modifier = {
+		modifier = {
 			factor = 1.3
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 1.4
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 	}
 
 	option = {
-		name = "That was clearly a great adventure. These scientists are heroes!"
-                money = -10000
-                prestige = -5
+		name = "EVT201025OPTA"
+		money = -10000
+		prestige = -5
 		years_of_research = 0.05                
 	}
 	option = {
-		name = "Dinosaurs? Hidden valley? Are you kidding me?!"
-                prestige = 5
+		name = "EVT201025OPTB"
+		prestige = 5
 		years_of_research = -0.05
 	}
 }
@@ -1172,12 +1073,11 @@ country_event = {
 	title = "EVTNAME201026"
 	desc = "EVTDESC201026"
 	picture = "Mirador"
-
+	fire_only_once = yes
+	
 	trigger = {
 		has_country_modifier = maya_excavations
-		NOT = {
-			has_global_flag = mirador_found
-		}
+		NOT = { has_global_flag = mirador_found }
 	}
 
 	mean_time_to_happen = {
@@ -1186,48 +1086,46 @@ country_event = {
 			factor = 0.9
 			invention = modern_archaeology
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = mesopotamian_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = inca_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = mycenaean_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
 			has_country_modifier = minoan_excavations
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = had_arch_exhibition
+			has_country_flag = had_arch_exhibition
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = museum_build
+			has_country_flag = museum_build
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = archaeological_society
+			has_country_flag = archaeological_society
 		}
-                modifier = {
+		modifier = {
 			factor = 0.9
-                        has_country_flag = famous_archaeologist
+			has_country_flag = famous_archaeologist
 		}
 	}
 
-	fire_only_once = yes
-
 	option = {
-		name = "And neither Nazis nor Communists nearby who could interfere..."
+		name = "EVT201026OPTA"
 		prestige = 50
 		years_of_research = 0.5
 		set_global_flag = mirador_found
-                country_event = 201038
+		country_event = 201038
 	}
 }
 
@@ -1244,16 +1142,14 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_found
-                NOT = { has_country_flag = pyramid_riddle }
+		NOT = { has_country_flag = pyramid_riddle }
 	}
 
-	mean_time_to_happen = {
-		days = 3
-	}
+	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "Stockpile the most useless stuff in the world? What?"
-                set_country_flag = pyramid_riddle
+		name = "EVT201027OPTA"
+		set_country_flag = pyramid_riddle
 	}
 }
 
@@ -1265,26 +1161,25 @@ country_event = {
 	picture = "Maya_pyramid"
 
 	trigger = {
-                has_country_flag = pyramid_riddle 
-                fertilizer = 1
-                NOT = { has_country_flag = pyramid_riddle_solved_artefact_scene }
-                NOT = { has_country_flag = pyramid_riddle_solved_escape }
+		has_country_flag = pyramid_riddle 
+		fertilizer = 1
+		NOT = { has_country_flag = pyramid_riddle_solved_artefact_scene }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape }
 	}
 
-	mean_time_to_happen = {
-		days = 3
-	}
+	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "Gently... carefully... I'll do it..."
-                set_country_flag = pyramid_riddle_solved_artefact_scene
-                prestige = 1
-                fertilizer = -1
+		name = "EVT201028OPTA"
+		set_country_flag = pyramid_riddle_solved_artefact_scene
+		prestige = 1
+		fertilizer = -1
 	}
+	
 	option = {
-		name = "I know this scene - it never works out. Grab the damn artefact and RUN!"
-                set_country_flag = pyramid_riddle_solved_escape
-                prestige = -1
+		name = "EVT201028OPTB"
+		set_country_flag = pyramid_riddle_solved_escape
+		prestige = -1
 	}
 }
 
@@ -1297,16 +1192,14 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_artefact_scene
-                NOT = { has_country_flag = pyramid_riddle_solved_escape_1 }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape_1 }
 	}
 
-	mean_time_to_happen = {
-		days = 3
-	}
+	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "RUN!"
-                set_country_flag = pyramid_riddle_solved_escape_1
+		name = "EVT201029OPTA"
+		set_country_flag = pyramid_riddle_solved_escape_1
 	}
 }
 
@@ -1319,16 +1212,14 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_escape
-                NOT = { has_country_flag = pyramid_riddle_solved_escape_2 }
+		NOT = { has_country_flag = pyramid_riddle_solved_escape_2 }
 	}
 
-	mean_time_to_happen = {
-		days = 3
-	}
+	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "I had seen this coming, damn!"
-                set_country_flag = pyramid_riddle_solved_escape_2
+		name = "EVT201030OPTA"
+		set_country_flag = pyramid_riddle_solved_escape_2
 	}
 }
 
@@ -1341,19 +1232,20 @@ country_event = {
 
 	trigger = {
 		has_country_flag = pyramid_riddle_solved_escape_1
-                NOT = { has_country_flag = belloq_wins }
+		NOT = { has_country_flag = belloq_wins }
 	}
 
-	mean_time_to_happen = {
-		days = 3
-	}
+	mean_time_to_happen = { days = 3 }
 
 	option = {
-		name = "Damn you, Belloq!"
-                set_country_flag = belloq_wins
-                prestige = -10
+		name = "EVT201031OPTA"
+		set_country_flag = belloq_wins
+		prestige = -10
 		remove_country_modifier = maya_excavations
-                FRA = { country_event = 201023 }
+		random_country = {
+			limit = { primary_culture = french capital = 425 }
+			country_event = 201023
+		}
 	}
 }
 

@@ -59,11 +59,18 @@ govt_flag = {
 
 foreign_training = yes_foreign_training
 foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
 army_schools = yes_army_schools
 
 # Technologies
 military_staff_system = 1
 flintlock_rifles = 1
+
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Inventions
 

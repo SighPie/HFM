@@ -1,7 +1,7 @@
 capital = 1616
 primary_culture = manchu
 religion = mahayana
-government = absolute_monarchy
+government = absolute_empire
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.05
@@ -51,16 +51,18 @@ upper_house = {
 }
 
 decision = QNG_setup
-decision = unciv_balance_qng
 
 # Technologies
+monetary_reform = yes_monetary_reform
 
 # Technologies
 
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
-qing_grain = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

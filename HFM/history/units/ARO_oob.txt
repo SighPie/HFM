@@ -48,5 +48,3 @@ regiment = {
 	home = 1933
 	}
 }
-
-

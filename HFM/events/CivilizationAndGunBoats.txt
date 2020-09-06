@@ -951,6 +951,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -1000,6 +1001,8 @@ country_event = {
 				OR = {	
 					government = colonial_company
 					government = absolute_monarchy
+					government = absolute_empire
+					government = unciv_absolute_monarchy
 					government = proletarian_dictatorship
 					government = fascist_dictatorship
 					government = bourgeois_dictatorship
@@ -1823,7 +1826,8 @@ country_event = {
 	trigger = {
 		NOT = { 
 			tag = EIC 
- has_country_flag = spectator
+			tag = QNG
+			has_country_flag = spectator
 		}
 		any_owned_province = {
 			has_province_modifier = local_opium_habit
@@ -1853,10 +1857,6 @@ country_event = {
 			NOT = {
 				average_militancy = 3
 			}
-		}
-		modifier = {
-			factor = 0.8
-			has_country_modifier = lin_zexu
 		}
 	}
 	
@@ -1976,7 +1976,11 @@ country_event = {
 			has_pop_type = aristocrats
 			has_province_modifier = western_presence
 		}
-		government = absolute_monarchy
+		OR = {
+			government = absolute_monarchy
+			government = absolute_empire
+			government = unciv_absolute_monarchy
+		}
 		civilized = no
 		NOT = { has_country_flag = gave_up_2nd_opium }
 	}
@@ -2268,7 +2272,7 @@ country_event = {
 	}
 }
 
-#Foreign governant - The king and I
+#Foreign government - The king and I
 country_event = {
 	id = 13120
 	title = "EVTNAME13120"
@@ -2289,6 +2293,9 @@ country_event = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			slavery = yes_slavery
@@ -2842,6 +2849,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2876,6 +2884,8 @@ country_event = {
 				factor = 0.5
 				OR = {
 					government = absolute_monarchy
+					government = absolute_empire
+					government = unciv_absolute_monarchy
 					government = proletarian_dictatorship
 					government = fascist_dictatorship
 					government = bourgeois_dictatorship
@@ -4212,22 +4222,25 @@ country_event = {
 			vassal_of = ENG
 		}
 		ai = yes
-		NOT = { tag = PAK }
-		NOT = { tag = MUG }
-		NOT = { tag = RAJ }
-		NOT = { tag = HYD }
-		NOT = { tag = KAS }
-		NOT = { tag = GWA }
-		NOT = { tag = MYS }
-		NOT = { tag = AFG }
-		NOT = { tag = KAL }
-		NOT = { tag = MAK }
-		NOT = { tag = TRA }
-		NOT = { tag = CRL }
-		NOT = { tag = PNJ }
-		NOT = { tag = MNP }
-		NOT = { tag = BUN }
-		NOT = { tag = BLC }
+		NOT = { 
+			tag = PAK 
+			tag = MUG
+			tag = RAJ 
+			tag = HYD
+			tag = KAS
+			tag = GWA
+			tag = MYS
+			tag = AFG
+			tag = KAL
+			tag = MAK
+			tag = TRA
+			tag = CRL
+			tag = PNJ
+			tag = MNP
+			tag = BUN
+			tag = BLC
+			tag = HND
+		}
 		NOT = { has_country_flag = no_british_doctrine }
 		OR = {
 			EIC = { ideological_thought = 1 exists = yes }
@@ -4256,6 +4269,7 @@ country_event = {
 			primary_culture = telegu
 			tag = CRL
 		}
+		civilized = no
 	}
 	
 	mean_time_to_happen = {
@@ -4309,16 +4323,19 @@ country_event = {
 		modifier = {
 			factor = 0.01
 			NOT = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 	}
 	
 	option = {
 		name = "EVTOPTA13357"
-		tech_school = unciv_tech_school
+		tech_school = developing_tech_school
 		set_country_flag = no_british_doctrine
 		any_pop = {
 			limit = { is_primary_culture = yes }
@@ -4924,7 +4941,7 @@ country_event = {
 		}
 		any_owned = { limit = { region = FRA_1907 } secede_province = ASH }
 		ASH = {
-			government = absolute_monarchy
+			government = absolute_empire
 			primary_culture = akan
 			civilized = no
 			treasury = 5000

@@ -5,7 +5,7 @@ add_core = SLS
 add_core = GER
 trade_goods = grain
 life_rating = 40
-terrain = breslau
+#terrain = breslau
 state_building = {
 	level = 1
 	building = explosives_factory
@@ -14,11 +14,6 @@ state_building = {
 state_building = {
 	level = 1
 	building = artillery_factory
-	upgrade = yes
-}
-state_building = {
-	level = 1
-	building = steel_factory
 	upgrade = yes
 }
 1861.1.1 = {

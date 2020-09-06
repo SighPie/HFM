@@ -1,6 +1,6 @@
-owner = MAK
-controller = MAK
-add_core = MAK
+owner = LAS
+controller = LAS
+add_core = LAS
 add_core = BLC
 add_core = HND
 trade_goods = fish

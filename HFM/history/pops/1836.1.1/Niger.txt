@@ -501,31 +501,31 @@
 	aristocrats = {
 		culture = tuareg
 		religion = sunni
-		size = 500
+		size = 575
 	}
 
 	clergymen = {
 		culture = tuareg
 		religion = sunni
-		size = 300
+		size = 350
 	}
 
 	artisans = {
 		culture = tuareg
 		religion = sunni
-		size = 1100
+		size = 1500
 	}
 
 	soldiers = {
 		culture = tuareg
 		religion = sunni
-		size = 1100
+		size = 1150
 	}
 
 	farmers = {
 		culture = tuareg
 		religion = sunni
-		size = 15000
+		size = 18625
 	}
 
 	aristocrats = {
@@ -564,38 +564,7 @@
 		size = 2000
 	}
 }
-#Arlit (16000/4000 POPS)
-1813 = {
-	aristocrats = {
-		culture = tuareg
-		religion = sunni
-		size = 75
-	}
 
-	clergymen = {
-		culture = tuareg
-		religion = sunni
-		size = 50
-	}
-
-	artisans = {
-		culture = tuareg
-		religion = sunni
-		size = 200
-	}
-
-	soldiers = {
-		culture = tuareg
-		religion = sunni
-		size = 50
-	}
-
-	farmers = {
-		culture = tuareg
-		religion = sunni
-		size = 3625
-	}
-}
 #Madama (44000/11000 POPS)
 1814 = {
 	aristocrats = {
@@ -838,73 +807,4 @@
 		religion = sunni
 		size = 8000
 	}
-}
-#Bilma (36000/9000 POPS)
-1817 = {
-	aristocrats = {
-		culture = tuareg
-		religion = sunni
-		size = 125
-	}
-
-	clergymen = {
-		culture = tuareg
-		religion = sunni
-		size = 75
-	}
-
-	artisans = {
-		culture = tuareg
-		religion = sunni
-		size = 350
-	}
-
-	soldiers = {
-		culture = tuareg
-		religion = sunni
-		size = 75
-	}
-
-	farmers = {
-		culture = tuareg
-		religion = sunni
-		size = 6375
-	}
-
-	aristocrats = {
-		culture = teda
-		religion = sunni
-		size = 25
-	}
-
-	clergymen = {
-		culture = teda
-		religion = sunni
-		size = 50
-	}
-
-	artisans = {
-		culture = teda
-		religion = sunni
-		size = 100
-	}
-
-	soldiers = {
-		culture = teda
-		religion = sunni
-		size = 25
-	}
-
-	farmers = {
-		culture = teda
-		religion = sunni
-		size = 800
-	}
-
-	slaves = {
-		culture = baguirmi
-		religion = animist
-		size = 1000
-	}
-
 }

@@ -5,19 +5,19 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 270
+		size = 570
 	}
 
 	bureaucrats = {
 		culture = bedouin
 		religion = sunni
-		size = 90
+		size = 25
 	}
 
 	officers = {
 		culture = bedouin
 		religion = sunni
-		size = 50
+		size = 25
 	}
 
 	clergymen = {
@@ -41,7 +41,7 @@
 	farmers = {
 		culture = bedouin
 		religion = sunni
-		size = 16700
+		size = 16300
 	}
 
 	slaves = {
@@ -55,7 +55,19 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 200
+		size = 600
+	}
+	
+	bureaucrats = {
+		culture = bedouin
+		religion = sunni
+		size = 25
+	}
+
+	officers = {
+		culture = bedouin
+		religion = sunni
+		size = 25
 	}
 
 	clergymen = {
@@ -67,7 +79,7 @@
 	artisans = {
 		culture = bedouin
 		religion = sunni
-		size = 600
+		size = 550
 	}
 
 	soldiers = {
@@ -79,7 +91,7 @@
 	farmers = {
 		culture = bedouin
 		religion = sunni
-		size = 10300
+		size = 10000
 	}
 
 	slaves = {
@@ -93,13 +105,19 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 550
+		size = 600
 	}
 
 	bureaucrats = {
 		culture = bedouin
 		religion = sunni
-		size = 90
+		size = 25
+	}
+
+	officers = {
+		culture = bedouin
+		religion = sunni
+		size = 25
 	}
 
 	clergymen = {
@@ -111,7 +129,7 @@
 	artisans = {
 		culture = bedouin
 		religion = sunni
-		size = 1900
+		size = 3900
 	}
 
 	soldiers = {
@@ -129,13 +147,13 @@
 	farmers = {
 		culture = bedouin
 		religion = sunni
-		size = 27050
+		size = 25050
 	}
 
 	slaves = {
 		culture = kefficho
 		religion = animist
-		size = 5000
+		size = 2000
 	}
 }
 #under the rule of Oman in 1836  
@@ -409,22 +427,23 @@
 }
 #Aden (40000/10000 POPS)   
 1412 = {
-	aristocrats = {
-		culture = british
-		religion = protestant
-		size = 50
-	}
-	
-	soldiers = {
-		culture = british
-		religion = protestant
-		size = 150
-	}
 
 	aristocrats = {
 		culture = mashriqi
 		religion = sunni
-		size = 150
+		size = 436
+	}
+	
+	bureaucrats = {
+		culture = bedouin
+		religion = sunni
+		size = 25
+	}
+
+	officers = {
+		culture = bedouin
+		religion = sunni
+		size = 25
 	}
 
 	clergymen = {
@@ -454,13 +473,13 @@
 	aristocrats = {
 		culture = mashriqi
 		religion = shiite
-		size = 100
+		size = 200
 	}
 
 	clergymen = {
 		culture = mashriqi
 		religion = shiite
-		size = 150
+		size = 100
 	}
 
 	artisans = {
@@ -517,4 +536,31 @@
 		size = 1800
 	}
 
+}
+
+#Seiyun
+3273 = {
+	aristocrats = {
+		culture = bedouin
+		religion = sunni
+		size = 10
+	}
+
+	clergymen = {
+		culture = bedouin
+		religion = sunni
+		size = 100
+	}
+
+	artisans = {
+		culture = bedouin
+		religion = sunni
+		size = 200
+	}
+	
+	farmers = {
+		culture = bedouin
+		religion = sunni
+		size = 3300
+	}
 }

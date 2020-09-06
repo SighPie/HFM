@@ -1,4 +1,4 @@
-trade_goods = tobacco
-terrain = montane_forest
+trade_goods = fruit
+terrain = dry_mountains
 colonial = 1
 life_rating = 10

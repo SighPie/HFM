@@ -1,7 +1,4 @@
-owner = RUS
-controller = RUS
-add_core = RUS
-add_core = SIB
-trade_goods = coal
-life_rating = 15
-colonial = 2
+add_core = KHI
+trade_goods = grain
+life_rating = 20
+terrain = desert

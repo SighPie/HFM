@@ -581,6 +581,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			OR = {
@@ -597,6 +598,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 			NOT = {
 				OR = {
@@ -644,6 +646,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = {
 					OR = {
@@ -690,6 +693,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		is_vassal = no
 		NOT = {
@@ -706,6 +710,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 			NOT = {
 				OR = {
@@ -751,6 +756,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = {
 					OR = {
@@ -1216,6 +1222,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		is_greater_power = yes
 		is_ideology_enabled = fascist
@@ -1224,6 +1231,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 			NOT = {
 				tag = THIS
@@ -1278,6 +1286,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				NOT = {
 					OR = {
@@ -1819,6 +1828,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			ruling_party_ideology = communist
@@ -2015,6 +2025,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				OR = {
@@ -2201,6 +2212,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				OR = {
@@ -2687,6 +2699,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			ruling_party_ideology = communist
@@ -2826,6 +2839,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				OR = {

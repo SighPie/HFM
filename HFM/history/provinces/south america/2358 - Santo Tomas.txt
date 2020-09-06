@@ -5,8 +5,8 @@ controller = CRT
 add_core = CRT
 add_core = ARC
 
-trade_goods = fruit
-life_rating = 31
+trade_goods = tobacco
+life_rating = 34
 1861.1.1 = { 
 	railroad = 1 
 	naval_base = 2

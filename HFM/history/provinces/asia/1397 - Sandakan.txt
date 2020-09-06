@@ -3,4 +3,5 @@ controller = SUL
 add_core = SUL
 add_core = KTI
 trade_goods = grain
+terrain = jungle_farmland
 life_rating = 31

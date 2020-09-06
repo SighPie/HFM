@@ -6,6 +6,7 @@ EIC_absolute_monarchy_ADJ;Imperial;;;;;;;;;;;;x
 EIC_prussian_constitutionalism_ADJ;Imperial;;;;;;;;;;;;x
 EIC_hms_government_ADJ;Imperial;;;;;;;;;;;;x
 EIC_ADJ;Company;;;;;;;;;;;;x
+EIC_colonial_company_ADJ;British;;;;;;;;;;;;x
 EIC_reactionary;Court of Directors;;;;;;;;;;;;x
 UTI;Territory Exchange;;;;;;;;;;;;x
 EVTNAME9990001;Territorial Integration;;;;;;;;;;;;x
@@ -22,8 +23,8 @@ EVTDESC9990008;Parliament is understandably displeased with our recent change in
 EVTNAME9990009;A New Toy;;;;;;;;;;;;x
 EVTDESC9990009;A Ship has arrived in Calcutta today carrying some delightful fruits of British ingenuity, we must put it to use straight away.;;;;;;;;;;;;x
 government_of_india_act;The Government of India Act;;;;;;;;;;;;x
-government_of_india_act_title;The Government of India Act ($YEAR$);;;;;;;;;;;;x
-government_of_india_act_desc;The recent rebellion in India has exposed structural weaknesses and inefficiencies in Company rule, for the good of the Indians and Empire we must liquidate the East India Company and bring their holdings under Crown rule. \n\n We hold ourselves bound to the natives of our Indian territories by the same obligation of duty which bind us to all our other subjects.;;;;;;;;;;;;x
+government_of_india_act_title;The Government of India Act;;;;;;;;;;;;x
+government_of_india_act_desc;Uprisings in India have shown the inherent structural weaknesses and inefficiencies of Company rule, for the good of the Indians and of the Empire we must liquidate the East India Company and bring their holdings under Crown rule. \n\n We hold ourselves bound to the natives of our Indian territories by the same obligation of duty which bind us to all our other subjects.;;;;;;;;;;;;x
 colonial_company;Autonomous Dependency;;;;;;;;;;;;x
 colonial_company_ruler;Governor;;;;;;;;;;;;x
 EIC_reactionary;Company Court of Directors;;;;;;;;;;;;x

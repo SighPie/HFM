@@ -4,4 +4,5 @@ add_core = MCK
 add_core = CHI
 trade_goods = timber
 life_rating = 32
-terrain = portarthur
+naval_base = 1
+#terrain = portarthur

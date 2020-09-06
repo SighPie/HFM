@@ -7,7 +7,13 @@ country_event = {
 	picture = "Mining"
 	
 	trigger = {
-		any_owned_province = { state_scope = { has_pop_type = capitalists any_owned_province = { produces = coal } is_colonial = no } }
+        any_state = {
+            is_colonial = no
+            any_owned_province = {
+                has_pop_type = capitalists
+                produces = coal
+            }
+        }
 	}
 	
 	mean_time_to_happen = {
@@ -61,13 +67,18 @@ country_event = {
 	picture = "Mining"
 	
 	trigger = {
-		any_owned_province = { produces = coal is_colonial = no }
+        any_owned_province = {
+            produces = coal
+            is_colonial = no
+        }
 		plurality = 30
 		civilized = yes
 		OR = {
 			government = hms_government
 			government = prussian_constitutionalism
 			government = democracy
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		child_labor = child_labor_legal
 		OR = {

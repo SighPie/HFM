@@ -280,25 +280,25 @@
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 125
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 750
 	}
 
 	soldiers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 100
 	}
 
 	farmers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 11025
 	}
@@ -339,33 +339,33 @@
 	}
 
 	aristocrats = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 75
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 50
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 300
 	}
 
 	soldiers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 75
 	}
 
 	farmers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
-		size = 5500
+		size = 10500
 	}
 
 	clergymen = {
@@ -389,7 +389,7 @@
 	farmers = {
 		culture = asian_minor
 		religion = animist
-		size = 9375
+		size = 4375
 	}
 }
 #Iloilo (312000/78000 POPS)
@@ -425,25 +425,25 @@
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 75
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 500
 	}
 
 	soldiers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 100
 	}
 
 	slaves = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 9325
 	}
@@ -543,19 +543,19 @@
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 50
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 500
 	}
 
 	slaves = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 7375
 	}
@@ -614,31 +614,31 @@
 	}
 
 	aristocrats = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 100
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 100
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 600
 	}
 
 	soldiers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 100
 	}
 
 	farmers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 11100
 	}
@@ -683,31 +683,31 @@
 #Zamboanga (300000/75000 POPS)
 1462 = {
 	aristocrats = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 600
 	}
 
 	clergymen = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 500
 	}
 
 	artisans = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 2500
 	}
 
 	soldiers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 500
 	}
 
 	farmers = {
-		culture = filipino
+		culture = moro
 		religion = sunni
 		size = 44900
 	}

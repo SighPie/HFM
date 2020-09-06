@@ -118,11 +118,31 @@ CIR = {
 	level = 1
 	influence_value = 1
 }
+KAZ = {
+	value = -100
+	level = 0
+	influence_value = 0
+}
+KOK = {
+	value = -100
+	level = 0
+	influence_value = 0
+}
+BUK = {
+	value = -100
+	level = 0
+	influence_value = 0
+}
+KHI = {
+	value = -100
+	level = 0
+	influence_value = 0
+}
 
 #Other GP's
 #GPs
-ENG = { value = -75 }
-FRA = { value = 25 }
+ENG = { value = -100 }
+FRA = { value = -100 }
 AUS = { value = 50 }
 USA = { value = 25 }
 PRU = { value = 80 }

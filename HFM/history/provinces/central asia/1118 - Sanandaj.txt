@@ -1,7 +1,6 @@
-owner = RDL
-controller = RDL
+owner = PER
+controller = PER
 add_core = PER
-add_core = RDL
 add_core = KDS
 trade_goods = wool
 life_rating = 35

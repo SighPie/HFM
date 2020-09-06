@@ -9,7 +9,9 @@ political_decisions = {
 			}
 			OR = {
 				government = prussian_constitutionalism
+				government = semi_constitutional_empire
 				government = hms_government
+				government = constitutional_empire
 			}
 			NOT = { has_country_flag = guardia_civil_established }
 		}
@@ -73,7 +75,10 @@ political_decisions = {
 		potential = {
 			tag = SPA
 			has_country_flag = king_alfonso_rules
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 			NOT = { has_country_flag = spanish_restoration }
 		}
 		
@@ -127,6 +132,8 @@ political_decisions = {
 			457 = { add_core = THIS } 
 			464 = { add_core = THIS }
 			517 = { add_core = THIS }
+			476 = { add_core = GLC }
+			474 = { add_core = GLC }
 			casus_belli = {
 				target = POR
 				type = conquest_any
@@ -188,6 +195,7 @@ political_decisions = {
 					OR = {
 						has_pop_culture = basque
 						has_pop_culture = catalan
+						has_pop_culture = galician
 					}
 				}
 				consciousness = 9
@@ -218,9 +226,12 @@ political_decisions = {
 				tag = IBR
 			}
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			owns = 1689
 			NOT = { has_country_flag = moroccan_question }
@@ -260,9 +271,12 @@ political_decisions = {
 				tag = IBR
 			}
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 				government = presidential_dictatorship
 				government = fascist_dictatorship
 				government = proletarian_dictatorship
@@ -303,13 +317,14 @@ political_decisions = {
 				}
 			}
 			political_reform = unitary
+			GLC = { all_core = { remove_core = GLC } }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	
 	
 	effective_occupation_western_sahara = {
-	picture = map_africa
+    picture = map_morocco
 		potential = {
 			owns = 2136
 			OR = {
@@ -319,6 +334,7 @@ political_decisions = {
 			1773 = { empty = yes }
 			1774 = { empty = yes }
 			1696 = { empty = yes }
+			1694 = { owner = { NOT = { tag = ARU } } }
 			has_global_flag = berlin_conference
 		}
 		
@@ -421,10 +437,12 @@ political_decisions = {
 						owner = {
 							in_sphere = THIS
 							war = no
+                            is_mobilised = no
 						}
 						owner = {
 							vassal_of = THIS
 							war = no
+                            is_mobilised = no
 						}
 					}
 				}
@@ -436,10 +454,12 @@ political_decisions = {
 						owner = {
 							in_sphere = THIS
 							war = no
+                            is_mobilised = no
 						}
 						owner = {
 							vassal_of = THIS
 							war = no
+                            is_mobilised = no
 						}
 					}
 				}
@@ -853,6 +873,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+    #Equatorial Guinea Treaty
 	treaty_of_bata = {
 		picture = fernando_po
 		potential = {

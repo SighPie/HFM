@@ -1,5 +1,171 @@
 ;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;x;;;;
 ;;;;;;x;;;;
+SXI_colonial_company;Shaan-Gan;;;;;;;;;;;;x
+RGA_liberal_2;Républicains modérés;;;;;;;;;;;;x
+RGA_conservative_2;Front Algérie Française;;;;;;;;;;;;x
+RGA_socialist;Section Algérie de l'Internationale ouvrière;;;;;;;;;;;;x
+RGA_reactionary_2;Action Algérie;;;;;;;;;;;;x
+RGA_anarcho_liberal;Parti radical;;;;;;;;;;;;x
+RGA_communist;Parti Communiste Algérien;;;;;;;;;;;;x
+RGA_fascist;Organisation Armée Secrète;;;;;;;;;;;;x
+RGA_democracy;Algerie;;;;;;;;;;;;;x,
+RGA_democracy_ADJ;French;;;;;;;;;;;;;x,
+RGA_colonial_company;Algerie;;;;;;;;;;;;;x,
+RGA_colonial_company_ADJ;French;;;;;;;;;;;;;x,
+RGA_dominion;Algerie;;;;;;;;;;;;;x,
+RGA_dominion_ADJ;French;;;;;;;;;;;;;x,
+RGA_fascist_dictatorship;The Free Republic of Algerie;;;;;;;;;;;;;x,
+RGA_fascist_dictatorship_ADJ;French;;;;;;;;;;;;;x,
+RGA;Algiers;;;;;;;;;;;;;x,
+RGA_ADJ;Algerian;;;;;;;;;;;;;x,
+WES_colonial_company;Westfalen;;;;;;;;;;;;;x,
+WES_dominion;Westfalen;;;;;;;;;;;;;x,
+WES_colonial_company;Westfalen;;;;;;;;;;;;;x,
+WES_dominion;Westfalen;;;;;;;;;;;;;x,
+ALD_unciv_absolute_monarchy;Abdelkader Emirate;;;;;;;;;;;;;x,
+WES_colonial_company;Westfalen;;;;;;;;;;;;;x,
+WES_dominion;Westfalen;;;;;;;;;;;;;x,
+RHI_colonial_company;Rheinland;;;;;;;;;;;;;x,
+RHI_dominion;Rheinland;;;;;;;;;;;;;x,
+TUG;Touggourt;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+TUG_ADJ;Touggourt;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+ABA;Beni Abbas;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+ABA_ADJ;Mokrani;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+GNG_theocracy;Tian Di Hui;;;;;;;;;;;;;;;;;;;;;;;;x
+BUS;Ilorin;;;;;;;;;;;;;;;;;;;;;;;;x
+BUS_ADJ;Ilorin ;;;;;;;;;;;;;;;;;;;;;;;;x
+YEK;Yeke;;;;;;;;;;;;;;;;;;;;;;;;x
+YEK_ADJ;Garanganze;;;;;;;;;;;;;;;;;;;;;;;;x
+SPA_absolute_empire;The Spanish Empire;;;;;;;;;;;;;x
+SPA_semi_constitutional_empire;The Spanish Empire;;;;;;;;;;;;;x
+SPA_constitutional_empire;The Spanish Empire;;;;;;;;;;;;;x
+MOR_colonial_company;Tangier International Zone;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MOR_conservative;Sulalat al-Alawiyyin al-Filaliyn;;;;;;;;;;;;;x
+MOR_reactionary;Sulalat al-Alawiyyin al-Filaliyn;;;;;;;;;;;;;x
+MEX_absolute_empire;The Mexican Empire;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,
+MEX_semi_constitutional_empire;The Mexican Empire;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
+MEX_constitutional_empire;The Mexican Empire;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,
+BRZ_absolute_empire;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,
+BRZ_semi_constitutional_empire;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,
+BRZ_constitutional_empire;The Empire of Brazil;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;X,,,,,,,,,
+PNJ_absolute_empire;The Sikh Empire;;;;;;;;;;;;;x
+PNJ_semi_constitutional_empire;The Sikh Empire;;;;;;;;;;;;;x
+PNJ_constitutional_empire;The Sikh Empire;;;;;;;;;;;;;x
+QNG_absolute_empire;The Qing Empire;;;;;;;;;;;;;x
+QNG_semi_constitutional_empire;The Qing Empire;;;;;;;;;;;;;x
+QNG_constitutional_empire;The Qing Empire;;;;;;;;;;;;;x
+TUR_absolute_empire;The Ottoman Empire;;;;;;;;;;;;;x,
+TUR_semi_constitutional_empire;The Ottoman Empire;;;;;;;;;;;;;x,
+TUR_constitutional_empire;The Ottoman Empire;;;;;;;;;;;;;x,
+TUR_absolute_empire_ADJ;Ottoman;;;;;;;;;;;;;;;;;;;;;;;;x
+TUR_semi_constitutional_empire_ADJ;Ottoman;;;;;;;;;;;;;;;;;;;;;;;;x
+TUR_constitutional_empire_ADJ;Ottoman;;;;;;;;;;;;;;;;;;;;;;;;x
+unciv_absolute_monarchy;Absoute Monarchy;;;;;;;;;;;;x
+unciv_absolute_monarchy_ruler;Emir;;;;;;;;;;;;x
+absolute_empire;Empire;;;;;;;;;;;;x
+absolute_empire_ruler;Emperor;;;;;;;;;;;;x
+semi_constitutional_empire;Semi-Constitutional Empire;;;;;;;;;;;;x
+semi_constitutional_empire_ruler;Emperor;;;;;;;;;;;;x
+constitutional_empire;Constitutional Empire;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+constitutional_empire_ruler;Emperor;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+TRE_colonial_company;Freistadt Triest;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+TRE_dominion;Freistadt Triest;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+TUN_conservative;Bey Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ORI_absolute_monarchy;Kalahandi;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KAS_conservative;Dogra Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+NEP_conservative;Rana Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+SIK_conservative;Chogyal Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+CAM_conservative;Norodom Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MLD_conservative;Huraa Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BHU_conservative;Wangchuck Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+CRL_conservative;Katoor Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+AWA_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ASM_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+TRA_conservative;Kupaka Swaroopam;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MNP_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MYS_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ORI_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BAS_conservative;Bhanj Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+NAG_conservative;Bhonsle Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MAH_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+HYD_conservative;Asaf Jah Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BUN_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+IND_conservative;Maharaja's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BHO_conservative;Begum's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KUT_conservative;Jadeja Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BER_conservative;Gaekwad Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+GWA_conservative;Scindia Dynasty;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MEW_conservative;Rajput Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+JOD_conservative;Rajput Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+JAI_conservative;Rajput Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BIK_conservative;Rajput Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+JAS_conservative;Rajput Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BHP_conservative;Nawab's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+SIN_conservative;Emir's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+QAT_conservative;Al-Thani;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KWT_conservative;Al-Subah;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MAK_conservative;Khan's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KAL_conservative;Khan's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KOK_conservative;Khan's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KHI_conservative_1;Khan's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KAZ_conservative;Greater Zhuz;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+AFG_conservative;Amir's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BUK_conservative;Amir's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+HRT_conservative;Amir's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+URM;Urmia;;;;;;;;;;x;;;
+URM_ADJ;Urmia;;;;;;;;;;x;;;
+HEJ_conservative;Al-Hashimiyun;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+YEM_conservative;Imam's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+YEM_reactionary;Zaidiyyah Council;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+OMA_conservative;Al-Said;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KWT_conservative;Amir's Faction;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+DAI_conservative;Nhà Nguyen;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+DAI_liberal;Nhà Nguyen;;;;;;;;;;;;;x;;;;;;;;;;;;;;
+MLD_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+ATJ_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+KTI_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BAL_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+BRU_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+JAV_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+JOH_conservative;Sultan's Faction;Faction Sultan;Sultan Fraktion;;;;;;;;;;;;x;;;;;;;;;;;;;;
+AZH;Anazzah;;;;;;;;;;x;;;
+AZH_ADJ;Ruwallah;;;;;;;;;;x;;;
+ZFN_ADJ;Kurdish;;;;;;;;;;;;x;
+ZFN;Za'faranlu;;;;;;;;;;;;;x;
+KHR_ADJ;Khorasani;Khorasani;Khorasani;;;;;;;;;;;x;
+KHR;Khorasan;Khorasan;Khorasan;;;;;;;;;;;x;
+KHZ_ADJ;Arab;Arabistani;Arabistani;;;;;;;;;;;x;
+KHZ;Arabistan;Arabistan;Arabistan;;;;;;;;;;;x;
+LAS;Las Bela;;;;;;;;;;;;;;;;;;;;;;;;x
+LAS_ADJ;Balochi;;;;;;;;;;;;;;;;;;;;;;;;x
+LUW;Luwu;;;;;;;;;;;;;;;;;;;;;;;;x
+LUW_ADJ;Luwu;;;;;;;;;;;;;;;;;;;;;;;;x
+KEL;Kelantan;;;;;;;;;;;;;;;;;;;;;;;;x
+KEL_ADJ;Kelantanese;;;;;;;;;;;;;;;;;;;;;;;;x
+BTN;Buton;;;;;;;;;;;;;;;;;;;;;;;;x
+BTN_ADJ;Butonese;;;;;;;;;;;;;;;;;;;;;;;;x
+KUN;Kunduz;;;;;;;;;;;;;;;;;;;;;;;;x
+KUN_ADJ;Kunduz;;;;;;;;;;;;;;;;;;;;;;;;x
+AKH_absolute_monarchy;Bukei Khanate;;;;;;;;;;;;x;;;;;;;;;;;;;;
+RIA;Riau-Lingga;;;;;;;;;;;;;x
+RIA_ADJ;Riau;;;;;;;;;;;;;x
+MTN;Matan;;;;;;;;;;;;;x
+MTN_ADJ;Matan;;;;;;;;;;;;;x
+SBS;Sambas;;;;;;;;;;;;;x
+SBS_ADJ;Sambas;;;;;;;;;;;;;x
+PTK;Pontianak;;;;;;;;;;;;;x
+PTK_ADJ;Pontianak;;;;;;;;;;;;;x
+BGN_ADJ;Bulungan;;;;;;;;;;;;x
+BGN;Bulungan;;;;;;;;;;;;x
+PAT_ADJ;Patani;;;;;;;;;;;;x
+PAT;Patani;;;;;;;;;;;;x
+STG_ADJ;Sintang;;;;;;;;;;;;x
+STG;Sintang;;;;;;;;;;;;x
+TER_ADJ;Terengganuan;;;;;;;;;;;;x
+TER;Terengganu;;;;;;;;;;;;x
+KED_ADJ;Kedahan;;;;;;;;;;;;x
+KED;Kedah;;;;;;;;;;;;x
+SHA_absolute_monarchy;Chiang Mai;;;;;;;;;;;;;x,
 YEM_colonial_company;The Aden Protectorate;;;;;;;;;;;;;x,
 YEM_dominion;The Aden Protectorate;;;;;;;;;;;;;x,
 GEN_ADJ;Genoese;;;;;;;;;;;;x
@@ -13,13 +179,9 @@ MLI_dominion;French Soudan;;;;;;;;;;;;;x,
 OMA_absolute_monarchy;Muscat-Oman;;;;;;;;;;;;x
 OMA_prussian_constitutionalism;Muscat-Oman;;;;;;;;;;;;x
 OMA_hms_government;Muscat-Oman;;;;;;;;;;;;;x,
-SAR_absolute_monarchy;The Kingdom of Sardinia;;;;;;;;;;;;x
-SAR_prussian_constitutionalism;The Kingdom of Sardinia;;;;;;;;;;;;x
-SAR_hms_government;The Kingdom of Sardinia;;;;;;;;;;;;;x,
-CHH_ADJ;Ponwar;;;;;;;;;;;;x
-CHH;Chhatarpur;;;;;;;;;;;;x
-REW_ADJ;Rewah;;;;;;;;;;;;x
-REW;Rewah;;;;;;;;;;;;x
+SAR_absolute_monarchy;Sardinia-Piedmont;;;;;;;;;;;;x
+SAR_prussian_constitutionalism;Sardinia-Piedmont;;;;;;;;;;;;x
+SAR_hms_government;Sardinia-Piedmont;;;;;;;;;;;;;x,
 BUN_colonial_company;The Central India Agency;;;;;;;;;;;;;x,
 BUN_dominion;The Central India Agency;;;;;;;;;;;;;x,
 BLC_colonial_company;The Baluchistan Agency;;;;;;;;;;;;;x,
@@ -33,7 +195,7 @@ SVA;Svaneti;;;;;;;;;;;;x
 SLS_colonial_company;Schlesien;;;;;;;;;;;;;x,
 SLS_dominion;Schlesien;;;;;;;;;;;;;x,
 PML_colonial_company;Westpreußen;;;;;;;;;;;;;x,
-PML_dominion;Westpreußen;;;;;;;;;;;;;x,
+PML_dominion;Westpreu?en;;;;;;;;;;;;;x,
 PZN_colonial_company;Posen;;;;;;;;;;;;;x,
 PZN_dominion;Posen;;;;;;;;;;;;;x,
 POL_colonial_company;Generalgouvernement;;;;;;;;;;;;;x,
@@ -46,7 +208,7 @@ HOL_colonial_company;Holsten;;;;;;;;;;;;;x,
 HOL_dominion;Holsten;;;;;;;;;;;;;x,
 SWH_colonial_company;Slesvig-Holsten;;;;;;;;;;;;;x,
 SWH_dominion;Slesvig-Holsten;;;;;;;;;;;;;x,
-BEL_conservative;Parti catholique;Katholieke Partij;Katholieke Partij;;Katholieke Partij;;;;;;;;;x;;;;
+BEL_conservative;Parti Catholique;Katholieke Partij;Katholieke Partij;;Katholieke Partij;;;;;;;;;x;;;;
 AUS_conservative;Metternich's Faction;Faction de Metternich;Metternich-Fraktion;;Facci? de Metternich;;;;;;;;;x;;;;
 AUS_conservative_2;Kolovrat's Faction;Faction de Kolovrat;Kolovrat-Fraktion;;Facci? de Kolovrat;;;;;;;;;x;;;;
 AUS_reactionary;Neo-absolutists;N?-absolutistes;Neo-Absolutisten;;Neoabsolutistas;;;;;;;;;x;;;;
@@ -57,7 +219,7 @@ AUS_conservative_4;The Iron Ring;Iron Ring;The Iron Ring;;El Anillo de Hierro;;;
 AUS_socialist_2;Socialists;Socialistes;Socialists;;Socialistas;;;;;;;;;x;;;;
 AUS_reactionary_2;Christlichsoziale Partei;Radicaux allemands;German Radicals;;Radicales alemanes;;;;;;;;;x;;;;
 AUS_conservative_5;Sozialdemokratische Partei Österreichs;Conservateurs;Conservatives;;Conservadores;;;;;;;;;x;;;;
-AUS_liberal_2;Föderalistische;Grands propri?aires f??alistes;Federalist Great Proprietors;;Grandes Pro
+AUS_liberal_2;F?deralistische;Grands propri?aires f??alistes;Federalist Great Proprietors;;Grandes Pro;;;;;;;;;x;;;;
 MLW_dominion;Nyasaland;;;;;;;;;;;;x
 MLW_colonial_company;Nyasaland;;;;;;;;;;;;;x,
 NAL_dominion;Natal;;;;;;;;;;;;x
@@ -106,8 +268,6 @@ CAN_prussian_constitutionalism;The Dominion of Canada;;;;;;;;;;;;x
 CAN_hms_government;The Dominion of Canada;;;;;;;;;;;;;x,
 VTU_colonial_company;New Hebrides;;;;;;;;;;;;x
 VTU_dominion;New Hebrides;;;;;;;;;;;;x
-SER_colonial_company;The Principality of Serbia;;;;;;;;;;;;x
-SER_dominion;The Principality of Serbia;;;;;;;;;;;;x
 IOT_absolute_monarchy;British Indian Ocean Territory;;;;;;;;;;;;x
 IOT_prussian_constitutionalism;British Indian Ocean Territory;;;;;;;;;;;;x
 IOT_dominion;British Indian Ocean Territory;;;;;;;;;;;;x
@@ -142,9 +302,9 @@ HGL_ADJ;German;;;;;;;;;x;;;;;;;;
 HGL;Heligoland;;;;;;;;;x;;;;;;;;
 MSK_ADJ;Miskito;;;;;;;;;x;;;;;;;;
 MSK;Miskito Coast;;;;;;;;;x;;;;;;;;
-MSK_absolute_monarchy;The Mosquito Kingdom;;;;;;;;;x;;;;;;;;
-MSK_prussian_constitutionalism;The Mosquito Kingdom;;;;;;;;;;;;;x
-MSK_hms_government;The Mosquito Kingdom;;;;;;;;;;;;;x,
+MSK_absolute_monarchy;Mosquito Kingdom;;;;;;;;;x;;;;;;;;
+MSK_prussian_constitutionalism;Mosquito Kingdom;;;;;;;;;;;;;x
+MSK_hms_government;Mosquito Kingdom;;;;;;;;;;;;;x,
 MSK_colonial_company;Reserva Mosquitia;;;;;;;;;;;;;x,
 MSK_dominion;Reserva Mosquitia;;;;;;;;;;;;;x,
 BLZ_colonial_company;British Honduras;;;;;;;;;;;;;x,
@@ -154,16 +314,24 @@ MGL_theocracy;Bogd Khaanate;;;;;;;;;;;;;x,
 MGL_proletarian_dictatorship;Mongolian People's Republic;;;;;;;;;;;;;x,
 ALS_colonial_company;Elsass-Lothringen;;;;;;;;;;;;;x,
 ALS_dominion;Elsass-Lothringen;;;;;;;;;;;;;x,
-MCK_absolute_monarchy;Manchukuo;;;;;;;;;x;;;;;;;;
-MCK_prussian_constitutionalism;Manchukuo;;;;;;;;;;;;;x
-MCK_hms_government;Manchukuo;;;;;;;;;;;;;x,
-MCK_colonial_company;Guandong;;;;;;;;;;;;;x,
+MCK_absolute_empire;The Empire of Manchuria;;;;;;;;;x;;;;;;;;
+MCK_semi_constitutional_empire;The Empire of Manchuria;;;;;;;;;;;;;x
+MCK_constitutional_empire;The Empire of Manchuria;;;;;;;;;;;;;x
+MCK_liberal_2;Dongsansheng Zongdu;;;;;;;;;;;;;x
+MCK_conservative_2;Dongsansheng Zongdu;;;;;;;;;;;;;x
+MCK_reactionary_2;Dongsansheng Zongdu;;;;;;;;;;;;;x
+MCK_absolute_monarchy;Manchuria;;;;;;;;;x;;;;;;;;
+MCK_prussian_constitutionalism;Manchuria;;;;;;;;;;;;;x
+MCK_hms_government;Manchuria;;;;;;;;;;;;;x,
+MCK_colonial_company;Dong Sansheng;;;;;;;;;;;;;x,
+MCK_colonial_company_ADJ;Qing;;;;;;;;;;;;;x
+XIN_colonial_company_ADJ;Qing;;;;;;;;;;;;;x
 TST;Alto Adige;;;;;;;;;x;;;;;;;;
 TST_colonial_company;Südtirol;;;;;;;;;;;;;;x
-LOM_colonial_company;Lombardo–Venetien;;;;;;;;;;;;;;x
-LOM_dominion;Lombardo–Venetien;;;;;;;;;;;;;;x
-HQJ_ADJ;Chinese;;;;;;;;;x;;;;;;;;
-HQJ;Heiqi Jun;;;;;;;;;x;;;;;;;;
+LOM_colonial_company;Lombardo-Venetien;;;;;;;;;;;;;;x
+LOM_dominion;Lombardo-Venetien;;;;;;;;;;;;;;x
+HQJ_ADJ;Black Flag;;;;;;;;;x;;;;;;;;
+HQJ;Hei Qi Jun;;;;;;;;;x;;;;;;;;
 HQJ_conservative;Liu Yongfu;;;;;;;;;;;;;x,
 BUR_conservative;Konbaung Dynasty;;;;;;;;;;;;;x,
 SIA_reactionary;Kong Thap Bok Thai;;;;;;;;;;;;;x,
@@ -183,17 +351,17 @@ BOR_ADJ;French;French;French;;French;;;;;;;;;x;;;;
 EGY_absolute_monarchy;The Sultanate of Egypt;;;;;;;;;;;;;;x
 EGY_prussian_constitutionalism;The Egyptian Kingdom;;;;;;;;;;;;;x
 EGY_hms_government;The Egyptian Kingdom;;;;;;;;;;;;;x,
-EGY_colonial_company;The Khedivate of Egypt;;;;;;;;;;;;;;x
-KWT;The Sheikhdom of Kuwait;;;;;;;;;;;x
+KWT;Kuwait;;;;;;;;;;;x
 KWT_ADJ;Kuwaiti;;;;;;;;;;;x
 SYR_dominion;Grand Liban;;;;;;;;;;;;;;x
 SYR_colonial_company;Grand Liban;;;;;;;;;;;;;;x
 SYR_dominion;Syrie;;;;;;;;;;;;;;x
 SYR_colonial_company;Syrie;;;;;;;;;;;;;;x
-HDJ_colonial_company;Hejaz Vilayet;;;;;;;;;;;;;;x
-HDJ_absolute_monarchy;Hejaz;;;;;;;;;;;;;;x
-HDJ_prussian_constitutionalism;Hejaz;;;;;;;;;;;;;x,
-HDJ_hms_government;Hejaz;;;;;;;;;;;;;x,
+HDJ_colonial_company;Sharifate of Mecca;;;;;;;;;;;;;;x
+HDJ_dominion;Sharifate of Mecca;;;;;;;;;;;;;;x
+HDJ_absolute_monarchy;Hashemite Kingdom of Hejaz;;;;;;;;;;;;;;x
+HDJ_prussian_constitutionalism;Hashemite Kingdom of Hejaz;;;;;;;;;;;;;x,
+HDJ_hms_government;Hashemite Kingdom of Hejaz;;;;;;;;;;;;;x,
 CAL;The California Republic;;;;;;;;;;;;;x
 BAN_colonial_company;Freistaat Banat;;;;;;;;;;;;;x
 BAN_dominion;Freistaat Banat;;;;;;;;;;;;;x
@@ -204,9 +372,10 @@ SIE_dominion_ADJ;Siebenbürger;;;;;;;;;;;;;x
 SIE_reactionary;Sachsen Landtag;;;;;;;;;;;;;x,
 SIE_conservative;Unio Trium Nationum;;;;;;;;;;;;;x,
 LBY_colonial_company;Libia;;;;;;;;;;;;;x,
-ETH_absolute_monarchy;Abyssinia;;;;;;;;;;;;;x,
+ETH_absolute_empire;Abyssinia;;;;;;;;;;;;;x
+ETH_semi_constitutional_empire;Abyssinia;;;;;;;;;;;;;x
+ETH_constitutional_empire;Abyssinia;;;;;;;;;;;;;x
 ETH_colonial_company;Africa Orientale;;;;;;;;;;;;;x,
-BUR_absolute_monarchy;The Konbaung Dynasty;;;;;;;;;;;;;x,
 IVC_colonial_company;Cote d'Ivoire;;;;;;;;;;;;;x,
 IVC_dominion;Cote d'Ivoire;;;;;;;;;;;;;x,
 CAR_colonial_company;Afrique Equatoriale;;;;;;;;;;;;;x,
@@ -218,9 +387,9 @@ TAI_colonial_company;Takasago;;;;;;;;;;;;;x,
 TAI_dominion;Takasago;;;;;;;;;;;;;x,
 SAF_hms_government;The Union of South Africa;;;;;;;;;;;;;x,
 SAF_colonial_company;The Cape Colony;;;;;;;;;;;;;x,
-SAF_dominon;The Cape Colony;;;;;;;;;;;;;x,
-PHL_colonial_company;Las Filipinas;;;;;;;;;;;;;x,
-MAD_absolute_monarchy;The Merina Kingdom;;;;;;;;;;;;;x,
+SAF_dominon;The Union of South Africa;;;;;;;;;;;;;x,
+PHL_colonial_company;Indias Orientales;;;;;;;;;;;;;x,
+MAD_absolute_monarchy;Imerina;;;;;;;;;;;;;x,
 MAD_colonial_company;Protectorat de Madagascar;;;;;;;;;;;;;x,
 KNY_colonial_company;East Africa;;;;;;;;;;;;;x,
 KNY_dominion;The Dominion of East Africa;;;;;;;;;;;;;x,
@@ -233,11 +402,11 @@ UBD_absolute_monarchy;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_prussian_constitutionalism;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_hms_government;The United Baltic Duchy;;;;;;;;;;;;;;;;;;;;;;x;;;;
 UBD_democracy;The Baltic Union;;;;;;;;;;;;;x,
-UBD_colonial_company;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
-UBD_dominon;Baltiyskiy Guberniya;;;;;;;;;;;;;x,
+UBD_colonial_company;Baltiskaya Gubernia;;;;;;;;;;;;;x,
+UBD_dominon;Baltiskaya Gubernia;;;;;;;;;;;;;x,
 HND_colonial_company;The Raj;;;;;;;;;;;;x,
 HND_dominon;The Dominion of India;;;;;;;;;;;;x,
-TCA_colonial_company;Kavkaz Namestnik;;;;;;;;;;;;;x,
+TCA_colonial_company;Kavkazkoe Namestnichestvo;;;;;;;;;;;;;x,
 DAI_colonial_company;Indochine;;;;;;;;;;;;;x
 INO_colonial_company;Oost-Indie;;;;;;;;;;;;;x
 LSK_colonial_company;Alyaska;;;;;;;;;;;;;x
@@ -247,12 +416,13 @@ CMR_colonial_company;Kamerun;;;;;;;;;;;;;x
 ALD_colonial_company;Algerie;;;;;;;;;;;;;x
 ALD_dominion;Algerie;;;;;;;;;;;;;x
 COL_hms_government;The Dominion of Columbia;;;;;;;;;;;;;x
-NMB_colonial_company;Südwestafrika;;;;;;;;;;;;;x
-NMB_dominon;Südwestafrika;;;;;;;;;;;;;x
+NMB_colonial_company;S?dwestafrika;;;;;;;;;;;;;x
+NMB_dominon;S?dwestafrika;;;;;;;;;;;;;x
 TNZ_colonial_company;Ostafrika;;;;;;;;;;;;;x
 TNZ_dominion;Ostafrika;;;;;;;;;;;;;x
-AUS_absolute_monarchy;The Austrian Empire;;;;;;;;;;;;;x
-AUS_prussian_constitutionalism;The Austrian Empire;;;;;;;;;;;;;x
+AUS_absolute_empire;The Austrian Empire;;;;;;;;;;;;;x
+AUS_semi_constitutional_empire;The Austrian Empire;;;;;;;;;;;;;x
+AUS_constitutional_empire;The Austrian Empire;;;;;;;;;;;;;x
 MML;Memelland;;;;;;;;;;;;;x
 MML_ADJ;Memeler;;;;;;;;;x
 LAU;Saxe-Lauenburg;;;;;;;;;;;;;x
@@ -285,7 +455,7 @@ SMR_fascist;Partito Fascista Sammarinese;;;;;;;;;;;;;x
 PAP_ADJ_theocracy;Papal;;;;;;;;;;;;;x
 SMR;San Marino;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 SMR_ADJ;Sammarinese;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-MON_theocracy;The Prince-Bishopric of Montenegro;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+MON_theocracy;Bishopric-Montenegro;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 KUK_democracy;The Austro-Hungarian Confederation;;;;;;;;;;x
 KUK_democracy_ADJ;Austro-Hungarian;Danubien;Donau-;;danubiana;;;;;;;;;x
 VLG;Volgaland;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -306,6 +476,9 @@ VLG_reactionary;Royalist Faction;;;;;;;;;;;;;;;;;;;;;;x;;;;
 RUS_absolute_monarchy;The Russian Empire;;;;;;;;;;;;;x,
 RUS_prussian_constitutionalism;The Russian Empire;;;;;;;;;;;;;x,
 RUS_hms_government;The Russian Empire;;;;;;;;;;;;;x,
+RUS_absolute_empire;The Russian Empire;;;;;;;;;;;;;x,
+RUS_semi_constitutional_empire;The Russian Empire;;;;;;;;;;;;;x,
+RUS_constitutional_empire;The Russian Empire;;;;;;;;;;;;;x,
 RUS_democracy;The Russian Federative Republic;;;;;;;;;;;;;x,
 ITA_absolute_monarchy;The Kingdom of Italy;;;;;;;;;;;;x,
 ITA_prussian_constitutionalism;The Kingdom of Italy;;;;;;;;;;;x,
@@ -326,10 +499,13 @@ VLP_ADJ;Spanish;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
 VOP_colonial_company;Virreinato del Peru;;;;;;;;;;;;;x,
 VOP;Peru;;;;;;;;;;;;;x,
 VOP_ADJ;Spanish;;;;;;;;;;;;;;;;;;;;;;x;;;;;;
-LOM_presidential_dictatorship;The Provisional Government of Milan;;;;;;;;;;;;;x,
+LOM_presidential_dictatorship;Milan;;;;;;;;;;;;;x,
 LOM_presidential_dictatorship_ADJ;Milanese;Milanese;Milanese;;;;;;;;;;;x,
-LOM_democracy;The Provisional Government of Milan;;;;;;;;;;;;;x,
+LOM_democracy;Milan;;;;;;;;;;;;;x,
 LOM_democracy_ADJ;Milanese;Milanese;Milanese;;;;;;;;;;;x,
+JAP_absolute_empire;The Empire of Japan;;;;;;;;;;;;;x,
+JAP_semi_constitutional_empire;The Empire of Japan;;;;;;;;;;;;;x,
+JAP_constitutional_empire;The Empire of Japan;;;;;;;;;;;;;x,
 JAP_absolute_monarchy;Imperial Japan;;;;;;;;;;;;x,
 JAP_prussian_constitutionalism;The Empire of Japan;;;;;;;;;;;;x,
 JAP_hms_government;The Empire of Japan;;;;;;;;;;;;x,
@@ -342,10 +518,15 @@ FRA_presidential_dictatorship;The French Republic;;;;;;;;;;;;;x,
 FRA_bourgeois_dictatorship;The French Republic;;;;;;;;;;;;;x,
 FRA_fascist_dictatorship;The French State;;;;;;;;;;;;;x,
 FRA_democracy;The French Republic;;;;;;;;;;;;;x,
-FRA_absolute_monarchy;The French Empire;;;;;;;;;;;;;x,
-FRA_prussian_constitutionalism;The French Empire;;;;;;;;;;;;;x,
-FRA_hms_government;The French Empire;;;;;;;;;;;;;x,
-FRA_french_bourbon;The Kingdom of France;;;;;;;;;;;;;x,
+FRA_absolute_empire;The French Empire;;;;;;;;;;;;;x,
+FRA_semi_constitutional_empire;The French Empire;;;;;;;;;;;;;x,
+FRA_constitutional_empire;The French Empire;;;;;;;;;;;;;x,
+FRA_absolute_monarchy;The Kingdom of France;;;;;;;;;;;;;x,
+FRA_prussian_constitutionalism;The Kingdom of France;;;;;;;;;;;;;x,
+FRA_hms_government;The Kingdom of France;;;;;;;;;;;;;x,
+GER_absolute_empire;The German Empire;;;;;;;;;;;;;x,
+GER_semi_constitutional_empire;The German Empire;;;;;;;;;;;;;x,
+GER_constitutional_empire;The German Empire;;;;;;;;;;;;;x,
 GER_absolute_monarchy;The German Empire;;;;;;;;;;;;;x,
 GER_prussian_constitutionalism;The German Empire;;;;;;;;;;;;;x,
 GER_hms_government;The German Empire;;;;;;;;;;;;;x,
@@ -386,6 +567,12 @@ NIA_conservative;Zhang Lexing Faction;;;;;;;;;;;;x
 IMG;Mengjiang;;;;;;;;;;;;;x
 IMG_colonial_company;Nei Menggu;;;;;;;;;;;;;x
 IMG_ADJ;Mongolian;;;;;;;;;;;;;x
+IMG_liberal_2;Amban's Faction;Parti libéral;Liberale Partei;;;;;;;;;;;x
+IMG_conservative_2;Amban's Faction;Faction Kuomintang;Guomintang-Fraktion;;;;;;;;;;;x
+IMG_reactionary_2;Amban's Faction;Faction Kuomintang;Guomintang-Fraktion;;;;;;;;;;;x
+MGL_liberal;Amban's Faction;Parti libéral;Liberale Partei;;;;;;;;;;;x
+MGL_conservative;Amban's Faction;Faction Kuomintang;Guomintang-Fraktion;;;;;;;;;;;x
+MGL_reactionary;Amban's Faction;Faction Kuomintang;Guomintang-Fraktion;;;;;;;;;;;x
 MIT;Mittelafrika;;;;;;;;;;;;;;x
 MIT_ADJ;German;;;;;;;;;;;;;;x
 MIT_colonial_company;Freistaat Mittelafrika;;;;;;;;;;;;;;x
@@ -409,12 +596,12 @@ ATB;Saxe-Altenburg;;;;;;;;;;;;;x,
 ATB_ADJ;Saxon;Saxon;Saxon;;;;;;;;;;;x,
 MNC_ADJ;Monegasc;Monegasc;Monegasc;;;;;;;;;;;x;
 MNC;Monaco;Monaco;Monaco;;;;;;;;;;;x;
-MNC_conservative_92;Conservatives;Conservatives;Conservatives;;;;;;;;;;;x;
+MNC_conservative_92;House of Grimaldi;Conservatives;Conservatives;;;;;;;;;;;x;
 MNC_liberal_79;Liberals;Liberals;Liberals;;;;;;;;;;;x;
 MNC_liberal_87;National Liberals;National Liberals;National Liberals;;;;;;;;;;;x;
 MNC_socialist_85;Socialists;Socialists;Socialists;;;;;;;;;;;x;
 MNC_socialist_99;National Socialists;National Socialists;National Socialists;;;;;;;;;;;x;
-MNC_reactionary_84;Monarchy Leadership;Monarchy Leadership;Monarchy Leadership;;;;;;;;;;;x;
+MNC_reactionary_84;House of Grimaldi;Monarchy Leadership;Monarchy Leadership;;;;;;;;;;;x;
 MNC_anarcho_liberal_93;Radical Liberals;Radical Liberals;Radical Liberals;;;;;;;;;;;x;
 MNC_communist_86;Communists;Communists;Communists;;;;;;;;;;;x;
 MNC_fascist_72;Fascists;Fascists;Fascists;;;;;;;;;;;x;
@@ -442,3 +629,6 @@ GCF_fascist_dictatorship;The German Reich;;;;;;;;;;;;;x,
 GCF_absolute_monarchy;The German Confederation;;;;;;;;;;;;;x,
 GCF_prussian_constitutionalism;The German Confederation;;;;;;;;;;;;;x,
 GCF_hms_government;The German Confederation;;;;;;;;;;;;;x,
+GCF_absolute_empire;The Holy Roman Empire;;;;;;;;;;;;;x,
+GCF_semi_constitutional_empire;The German Confederation;;;;;;;;;;;;;x,
+GCF_constitutional_empire;The German Confederation;;;;;;;;;;;;;x,

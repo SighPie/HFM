@@ -58,6 +58,11 @@ nonstate_consciousness = 0
 
 
 foreign_weapons = yes_foreign_weapons
+# Technologies
 flintlock_rifles = 1
+
+# Inventions
+small_arms_production = yes
+ammunition_production = yes
 
 oob = "MKN_oob.txt"

@@ -28,7 +28,6 @@ unemployment_subsidies = low_subsidies
 pensions = good_pensions 
 school_reforms = no_schools
 
-
 #New Reforms
 conscription = four_year_draft
 debt_law = debtors_prisons

@@ -584,3 +584,36 @@ country_event = {
 		}
 	}
 }
+
+#The Treaty of Erzurum
+country_event = {
+	id = 89000
+	title = "EVTNAME89000" 
+	desc = "EVTDESC89000"
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "EVT89000OPTA"
+		badboy = -2
+		prestige = 5
+		relation = { who = FROM value = 50 }
+		1132 = { remove_core = TUR }
+		1131 = { remove_core = TUR }
+		925 = { remove_core = PER }
+		
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVT89000OPTB"
+		badboy = 2
+		relation = { who = TUR value = -200 }
+		leave_alliance = TUR
+		1131 = { add_core = TUR }
+		1132 = { add_core = TUR }
+		1132 = { add_core = TUR }
+		ai_chance = { factor = 0 }
+	}
+}
+

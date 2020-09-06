@@ -121,7 +121,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -232,7 +237,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -342,7 +352,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -452,7 +467,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -558,7 +578,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -649,7 +674,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -740,7 +770,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+				government = hms_government
+				government = constitutional_empire
+			} 
+			}
 		}
 		modifier = {
 			factor = 0.8

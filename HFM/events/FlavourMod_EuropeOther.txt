@@ -17,19 +17,31 @@ country_event = {
 	
 	trigger = {
 		tag = SWI
-		year = 1847
+		year = 1845
 		ruling_party_ideology = liberal
 		NOT = { has_country_flag = sonderbund }
 	}
 	
 	mean_time_to_happen = {
-		months = 5
+		months = 48
+		modifier = {
+			factor = 0.8
+			year = 1846
+		}
+		modifier = {
+			factor = 0.35
+			year = 1847
+		}
+		modifier = {
+			factor = 0.2
+			year = 1848
+		}
 	}
 	
 	option = {
 		name = "EVT99800OPTA"
 		prestige = -10
-		remove_country_modifier = neutrality
+		remove_country_modifier = neutrality_modifier
 		3250 = { add_core = SDB secede_province = SDB }
 		609 = { add_core = SDB secede_province = SDB }
 		3272 = { add_core = SDB secede_province = SDB }
@@ -119,7 +131,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -169,7 +184,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}
 			}
 			modifier = {
 				factor = 1.5

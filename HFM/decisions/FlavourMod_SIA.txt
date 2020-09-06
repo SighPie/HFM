@@ -1,5 +1,4 @@
 political_decisions = {
-		
 	bowring_treaty = {
 		picture = john_bowring
 		potential = {
@@ -36,24 +35,20 @@ political_decisions = {
 		potential = {
 			tag = SIA
 			civilized = no
-			year = 1851
-			has_country_modifier = western_influences
 			NOT = { has_country_flag = enact_rama_iv_reforms }
 		}
 		allow = {
 			war = no
 			ruling_party_ideology = conservative
+			year = 1851
 		}
 		
 		effect = {
 			set_country_flag = enact_rama_iv_reforms
 			prestige = 5
 			economic_reform = yes_education_reform
-			add_country_modifier = {
-				name = rama_v
-				duration = 14600
-			}
-			
+			remove_country_modifier = western_influences
+			add_country_modifier = { name = rama_v duration = 14600 }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -64,7 +59,6 @@ political_decisions = {
 		potential = {
 			tag = SIA
 			civilized = no
-			year = 1868
 			has_country_flag = enact_rama_iv_reforms 
 			NOT = { 
 				has_country_modifier = rama_iv
@@ -72,6 +66,7 @@ political_decisions = {
 			}
 		}
 		allow = {
+			year = 1868
 			war = no
 			ruling_party_ideology = conservative
 		}
@@ -123,8 +118,9 @@ political_decisions = {
 			OR = { 
 				government = absolute_monarchy
 				government = prussian_constitutionalism
+				government = absolute_empire
+				government = semi_constitutional_empire
 			}
-			year = 1900
 			NOT = { has_country_flag = thai_constitution }
 		}
 		
@@ -144,33 +140,25 @@ political_decisions = {
 			prestige = 10
 			political_reform = wealth_weighted_voting
 			random_owned = {
-				limit = {
-					owner = { political_parties = underground_parties }
-				}
-				owner = {
-					political_reform = harassment
-				}
+				limit = { owner = { political_parties = underground_parties } }
+				owner = { political_reform = harassment }
 			}
-			
 			random_owned = {
-				limit = {
-					owner = { upper_house_composition = party_appointed }
-				}
-				owner = {
-					political_reform = appointed
-				}
+				limit = { owner = { upper_house_composition = party_appointed } }
+				owner = { political_reform = appointed }
 			}
-			
 			random_owned = {
-				limit = {
-					owner = { debt_law = serfdom }
-				}
-				owner = {
-					political_reform = debtors_prisons
-				}
+				limit = { owner = { debt_law = serfdom } }
+				owner = { political_reform = debtors_prisons }
 			}
-			
-			government = prussian_constitutionalism
+			random_owned = {
+				limit = { owner = { government = absolute_monarchy } }
+				owner = { government = prussian_constitutionalism }
+			}
+			random_owned = {
+				limit = { owner = { government = absolute_empire } }
+				owner = { government = semi_constitutional_empire }
+			}
 			any_pop = { militancy = -2 }
 		}
 		
@@ -213,5 +201,94 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+	}
+	
+	an_elephant_for_america = {
+		picture = an_elephant_for_america
+		potential = {
+			tag = SIA
+			exists = USA
+			NOT = { has_country_flag = sent_an_elephant_to_america }
+		}
+		allow = {
+			relation = { who = USA value = 0 }
+			year = 1861
+		}
+		effect = {
+			prestige = 5
+			USA = { country_event = { id=13350 days=0 } }
+			set_country_flag = sent_an_elephant_to_america
+		}
+	}
+	
+	champassak_integration_act = {
+		picture = form_laos
+		potential = {
+			tag = SIA
+			CHK = { exists = yes vassal_of = SIA }
+			NOT = { has_country_flag = champassak_integrated }
+		}
+		allow = {
+			war = no
+			civilized = yes
+			is_our_vassal = CHK
+			CHK = { OR = { NOT = { part_of_sphere = yes } in_sphere = THIS } }
+		}
+		
+		effect = {
+			badboy = 1
+			inherit = CHK
+			set_country_flag = champassak_integrated
+		}
+	}
+	
+	chiang_mai_integration_act = {
+		picture = form_laos
+		potential = {
+			tag = SIA
+			SHA = { exists = yes vassal_of = SIA }
+			NOT = { has_country_flag = chiang_mai_integration }
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				civilized = yes
+				1389 = { 
+					owner = { 
+						NOT = { tag = THIS }
+						NOT = { vassal_of = THIS }
+					}
+				}
+			}
+			is_our_vassal = SHA
+		}
+		
+		effect = {
+			badboy = 1
+			inherit = SHA
+			set_country_flag = chiang_mai_integration
+		}
+	}
+	
+	pattani_integration_act = {
+		picture = map_east_indies
+		potential = {
+			tag = SIA
+			PAT = { exists = yes vassal_of = SIA }
+			NOT = { has_country_flag = pattani_integration_act }
+		}
+		allow = {
+			war = no
+			civilized = yes
+			is_our_vassal = PAT
+			PAT = { OR = { NOT = { part_of_sphere = yes } in_sphere = THIS } }
+		}
+		
+		effect = {
+			badboy = 1
+			inherit = PAT
+			set_country_flag = pattani_integration_act
+		}
 	}
 }

@@ -177,7 +177,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 2
-			owner = { government = hms_government }
+			owner = {
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 
@@ -335,7 +340,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -500,7 +508,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -603,7 +616,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -767,7 +783,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -871,7 +892,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -1019,9 +1043,15 @@ province_event = {
 			factor = 2
 			owner = { government = democracy }
 		}
+		
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -1125,7 +1155,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -1273,7 +1306,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -1376,7 +1414,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -1525,7 +1566,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -1629,7 +1675,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -1777,7 +1826,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { government = hms_government }
+			owner = { 
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 		}
 	}
 	
@@ -1881,7 +1935,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2005,7 +2062,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2133,7 +2193,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2259,7 +2322,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2385,7 +2451,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2496,7 +2565,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 
@@ -2607,7 +2679,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 		}
 	}
 

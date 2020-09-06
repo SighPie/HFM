@@ -28,12 +28,19 @@ foreign_weapons = yes_foreign_weapons
 foreign_officers = yes_foreign_officers
 foreign_artillery = yes_foreign_artillery
 monetary_reform = yes_monetary_reform
+education_reform = yes_education_reform
+
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 oob = "PAN_oob.txt"
 1861.1.1 = {

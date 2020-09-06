@@ -435,11 +435,14 @@ country_event = {
 			civilized = yes
 			year = 1905
 		}
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
+		OR = { 
 			government = hms_government
-		}
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}	
 		has_global_flag = the_new_army
 		NOT = { has_country_flag = tongmenghui }
 	}
@@ -577,6 +580,7 @@ province_event = {
 		NOT = { has_province_modifier = peasant_revolt }
 		NOT = { owner = { government = hms_government } }
 		NOT = { owner = { government = democracy } }
+		NOT = { owner = { government = constitutional_empire } }
 		OR = {
 			liberal = 10
 			socialist = 10
@@ -588,11 +592,14 @@ province_event = {
 			has_country_flag = tongmenghui
 			NOT = { has_global_flag = warlord_era_has_begun }
 			war = no
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
+			OR = { 
 				government = hms_government
-			}
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 			NOT = { has_country_flag = revolutionary_uprising_qing }
 		}
 	}
@@ -774,6 +781,15 @@ country_event = {
 			name = global_baby_boom
 			duration = 1065
 		}
+		MCK = { add_country_modifier = { name = global_baby_boom duration = 720 } }
+		YNN = { add_country_modifier = { name = global_baby_boom duration = 720 } }
+		IMG = { add_country_modifier = { name = global_baby_boom duration = 720 } }
+		SZC = { add_country_modifier = { name = global_baby_boom duration = 720 } }
+		GUI = { add_country_modifier = { name = global_baby_boom duration = 720 } }
+		XBI = { add_country_modifier = { name = global_baby_boom duration = 365 } }
+		XIN = { add_country_modifier = { name = global_baby_boom duration = 365 } }
+		KML = { add_country_modifier = { name = global_baby_boom duration = 180 } }
+		TIB = { add_country_modifier = { name = global_baby_boom duration = 180 } }
 		remove_country_modifier = western_influences
 		add_country_modifier = {
 			name = uncivilized_isolationism
@@ -1160,38 +1176,17 @@ country_event = {
 #																												#
 #################################################################################################################
 
+#Opium Smuggling in China
 country_event = {
 	id = 1316080
 	title = "EVTNAME1316080"
 	desc = "EVTDESC1316080"
 	picture = "Opium"
-	
-	fire_only_once = yes
-
-	trigger = {
-		tag = QNG
-		civilized = no
-		1493 = { owned_by = THIS }
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-		modifier = {
-			factor = 0.5
-			year = 1838
-		}
-		modifier = {
-			factor = 0.5
-			year = 1839
-		}
-		modifier = {
-			factor = 0.1
-			year = 1840
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA13050"
+		name = "EVTOPT1316080"
+		prestige = -10
 		any_owned = {
 			limit = {
 				OR = { 
@@ -1206,9 +1201,11 @@ country_event = {
 			}
 			add_province_modifier = { name = local_opium_habit duration = -1 }
 		}
-		GUI = { any_owned = { add_province_modifier = { name = local_opium_habit duration = -1 } } }
+		CHI_1601 = { add_province_modifier = { name = local_opium_habit duration = -1 } }
+		CHI_1505 = { add_province_modifier = { name = local_opium_habit duration = -1 } }
 		1496 = { add_province_modifier = { name = "foreign_smugglers" duration = -1 } }
 		set_variable = { which = china_destablization value = 1 }
+		set_country_flag = opium_addiction
 	}
 }
 #First Opium War Events
@@ -1255,6 +1252,10 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
+			factor = 0.35
+			has_country_flag = appoint_lin_zexu
+		}
+		modifier = {
 			factor = 0.8
 			year = 1838
 		}
@@ -1276,9 +1277,7 @@ country_event = {
 		}
 	}
 
-	immediate = {
-		set_global_flag = kowloon_incident
-	}
+	immediate = { set_global_flag = kowloon_incident }
 	
 	option = {
 		name = "EVT1316081OPTA"
@@ -1297,6 +1296,7 @@ country_event = {
 			limit = { is_primary_culture = no }
 			militancy = 3
 		}
+		prestige = -15
 		set_variable = { which = china_destablization value = 1 }
 		ai_chance = { factor = 5 }
 	}
@@ -3109,6 +3109,7 @@ country_event = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 			NOT = { prestige = 200 }
@@ -3193,6 +3194,7 @@ country_event = {
 				government = proletarian_dictatorship
 				government = fascist_dictatorship
 				government = absolute_monarchy
+				government = absolute_empire
 			}
 		}
 		modifier = {
@@ -3201,6 +3203,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 		}
 		modifier = {
@@ -5475,6 +5478,107 @@ country_event = {
 		clr_country_flag = neutral_faction
 		clr_country_flag = communist_faction
 		clr_country_flag = beiyang_faction
+
+        random_owned = {
+            limit = { owner = { civilized = no land_reform = yes_land_reform } }
+            TAI = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no admin_reform = yes_admin_reform } }
+            TAI = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no finance_reform = yes_finance_reform } }
+            TAI = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no finance_reform = finance_reform_two } }
+            TAI = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no monetary_reform = yes_monetary_reform } }
+            TAI = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no monetary_reform = monetary_reform_two } }
+            TAI = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no education_reform = yes_education_reform } }
+            TAI = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no research_reform = yes_research_reform } }
+            TAI = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_training = yes_foreign_training } }
+            TAI = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_weapons = yes_foreign_weapons } }
+            TAI = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_officers = yes_foreign_officers } }
+            TAI = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no army_schools = yes_army_schools } }
+            TAI = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_naval_officers = yes_foreign_naval_officers } }
+            TAI = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no naval_schools = yes_naval_schools } }
+            TAI = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_navies = yes_foreign_navies } }
+            TAI = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no western_shipyards = yes_western_shipyards } }
+            TAI = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no foreign_artillery = yes_foreign_artillery } }
+            TAI = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no slavery = yes_slavery } }
+            TAI = { political_reform = yes_slavery }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no slavery = freedom_of_womb } }
+            TAI = { political_reform = freedom_of_womb }
+        }
+
+        random_owned = {
+            limit = { owner = { civilized = no slavery = no_slavery } }
+            TAI = { political_reform = no_slavery }
+        }
+
 		1485 = {
 			add_core = KMT
 			fort = 3

@@ -44,6 +44,8 @@ country_event = {
 			}
 		}
 		FROM = { country_event = 97606 }
+		
+		ai_chance = { factor = 85 }
 	}
 	
 	option = {
@@ -62,6 +64,8 @@ country_event = {
 			months = 12
 		}
 		FROM = { country_event = 97607 }
+		
+		ai_chance = { factor = 15 }
 	}
 }
 
@@ -469,9 +473,12 @@ country_event = {
 		tag = TKG
 		year = 1858
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { has_global_flag = yoshinobu_shogun }
 		NOT = { has_global_flag = iemochi_shogun }
@@ -789,9 +796,12 @@ country_event = {
 		tag = TKG
 		year = 1860
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			has_country_modifier = kobu_gattai
@@ -826,6 +836,13 @@ country_event = {
 		name = "EVT97630OPTA"
 		set_country_flag = emperor_meiji
 		remove_country_modifier = kobu_gattai
+		JAP = { all_core = { add_core = TKG } }
+		SAT = { all_core = { add_core = TKG } }
+		CHO = { all_core = { add_core = TKG } }
+		SEN = { all_core = { add_core = TKG } }
+		YZW = { all_core = { add_core = TKG } }
+		TOS = { all_core = { add_core = TKG } }
+		KAG = { all_core = { add_core = TKG } }
 		any_country = {
 			limit = { substate_of = TKG }
 			country_event = 97631
@@ -858,9 +875,12 @@ country_event = {
 	trigger = {
 		tag = TKG
 		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
 			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			has_country_flag = caved_to_commodore_perry
@@ -1383,6 +1403,7 @@ country_event = {
 		}
 		JAP = {
 			political_reform = regionalism
+			government = absolute_empire
 		}
 		any_country = {
 			limit = {
@@ -1817,7 +1838,9 @@ country_event = {
 		war = no
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 		}
 		OR = {
 			liberal = 10
@@ -1936,6 +1959,8 @@ country_event = {
 		OR = {
 			government = absolute_monarchy
 			government = prussian_constitutionalism
+			government = absolute_empire
+			government = semi_constitutional_empire
 		}
 		has_country_flag = han_system_abolished
 		owns = 1662
@@ -1950,7 +1975,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			government = prussian_constitutionalism
+			OR = {
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}
 		}
 	}
 	

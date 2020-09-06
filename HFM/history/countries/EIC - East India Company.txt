@@ -6,8 +6,7 @@ plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.6
 civilized = no
-prestige = 40
-
+prestige = 0
 
 # Political reforms
 slavery = no_slavery
@@ -30,6 +29,8 @@ school_reforms = no_schools
 
 
 set_country_flag = protestant_country
+set_country_flag = exempt_from_vassal_contribution
+set_country_flag = the_east_india_company_flag
 
 #New Reforms
 conscription = no_draft
@@ -53,6 +54,8 @@ naval_schools = yes_naval_schools
 admin_reform = yes_admin_reform
 finance_reform = yes_finance_reform
 transport_improv = yes_transport_improv
+military_constructions = yes_military_constructions
+foreign_training = yes_foreign_training
 
 ruling_party = EIC_reactionary
 upper_house = {
@@ -65,6 +68,7 @@ upper_house = {
 	communist = 0
 }
 
+schools = unciv_tech_school
 oob = "EIC_oob.txt"
 
 # Technologies
@@ -91,10 +95,10 @@ enlightenment_thought = 1
 introspectionism = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
 experimental_railroad = 1
 basic_chemistry = 1
 interchangeable_parts = 1
+hot_blast = 1
 puddling = 1
 battleship_column_doctrine = 1
 naval_professionalism = 1
@@ -109,6 +113,11 @@ high_pressure_steam_engine = 1
 commerce_raiders = yes
 precision_work = yes
 # Inventions
+#bottling_process = yes
+modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 decision = literacy_EIC
 decision = eic_effects

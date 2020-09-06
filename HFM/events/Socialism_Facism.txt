@@ -26,10 +26,13 @@ province_event = {
 		NOT = { has_province_modifier = labor_union }
 		owner = {
 			OR = {
-				government = prussian_constitutionalism
 				government = democracy
 				government = hms_government
+				government = prussian_constitutionalism
 				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -229,10 +232,13 @@ country_event = {
 		civilized = yes
 		socialist = 5
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			trade_unions = non_socialist
@@ -398,10 +404,13 @@ province_event = {
 		socialist = 10
 		owner = {
 			OR = {
-				government = prussian_constitutionalism
 				government = democracy
 				government = hms_government
+				government = prussian_constitutionalism
 				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -602,10 +611,13 @@ country_event = {
 		civilized = yes
 		socialist = 15
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			trade_unions = non_socialist
@@ -757,10 +769,13 @@ province_event = {
 		socialist = 10
 		owner = {
 			OR = {
-				government = prussian_constitutionalism
 				government = democracy
 				government = hms_government
+				government = prussian_constitutionalism
 				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -989,10 +1004,13 @@ country_event = {
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			trade_unions = non_socialist
@@ -1139,10 +1157,13 @@ country_event = {
 		year = 1886
 		socialist = 10
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		public_meetings = yes_meeting
 		NOT = {
@@ -1288,10 +1309,13 @@ country_event = {
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		press_rights = free_press
 	}
@@ -1422,10 +1446,13 @@ country_event = {
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			OR = {
@@ -1625,10 +1652,13 @@ country_event = {
 		civilized = yes
 		socialist = 5
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_state = {
 			has_building = factory
@@ -1808,10 +1838,13 @@ country_event = {
 		NOT = { fascist = 5 }
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {			
 			any_core = {
@@ -1986,10 +2019,13 @@ country_event = {
 		public_meetings = yes_meeting
 		NOT = { has_country_flag = paramilitaries_outlawed }
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {			
 			any_core = {
@@ -2164,10 +2200,13 @@ country_event = {
 		is_ideology_enabled = fascist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			is_colonial = no
@@ -2342,10 +2381,13 @@ country_event = {
 		civilized = yes
 		fascist = 30
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		NOT = { has_country_flag = march_on_capital }
 	}
@@ -2511,10 +2553,13 @@ country_event = {
 		civilized = yes
 		war = no
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {		
 			any_core = {
@@ -2699,10 +2744,13 @@ country_event = {
 		civilized = yes
 		press_rights = free_press
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {		
 			any_core = {
@@ -2857,10 +2905,13 @@ country_event = {
 		is_ideology_enabled = fascist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			has_province_modifier = black_shirts
@@ -3022,10 +3073,13 @@ country_event = {
 		civilized = yes
 		fascist = 10
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {			
 			any_core = {
@@ -3204,10 +3258,13 @@ country_event = {
 		civilized = yes
 		fascist = 10
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			has_province_modifier = black_shirts
@@ -3371,10 +3428,13 @@ country_event = {
 		is_ideology_enabled = fascist
 		civilized = yes
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			is_colonial = no
@@ -3554,10 +3614,13 @@ country_event = {
 		civilized = yes
 		NOT = { trade_unions = no_trade_unions }
 		OR = {
-			government = prussian_constitutionalism
 			government = democracy
 			government = hms_government
+			government = prussian_constitutionalism
 			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		any_owned_province = {
 			is_colonial = no
@@ -3948,7 +4011,10 @@ country_event = {
 			factor = 75
 			modifier = {
 				factor = 0.5
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}			
 			}
 		}		
 	}
@@ -3971,6 +4037,9 @@ country_event = {
 		OR = {
 			government = absolute_monarchy
 			government = prussian_constitutionalism
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = theocracy
 			government = presidential_dictatorship
 			government = bourgeois_dictatorship
 		}
@@ -4032,11 +4101,17 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.75
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
 		}
 		modifier = {
 			factor = 1.25
-			government = prussian_constitutionalism
+			OR = {
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+			}
 		}
 		
 		modifier = {

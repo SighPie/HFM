@@ -1,4 +1,4 @@
-trade_goods = tobacco
+trade_goods = grain
 terrain = savanna
 colonial = 1
 life_rating = 10

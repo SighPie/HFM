@@ -1,8 +1,8 @@
 owner = MAS
 controller = MAS
-add_core = SEG
 add_core = MAS
 add_core = DND
+add_core = MOS
 trade_goods = wool
 terrain = semidesert
 life_rating = 35

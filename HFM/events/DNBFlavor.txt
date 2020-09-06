@@ -2293,7 +2293,6 @@ country_event = {
 		set_global_flag = danubian_federation_ended
 		prestige = -30
 		primary_culture = south_german
-		add_accepted_culture = siebenburger
 		remove_accepted_culture = hungarian
 		remove_accepted_culture = slovak
 		remove_accepted_culture = slovene
@@ -2352,6 +2351,8 @@ country_event = {
 					government = democracy
 					government = hms_government
 					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2434,6 +2435,8 @@ country_event = {
 			government = democracy
 			government = hms_government
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		OR = {
 			average_militancy = 4
@@ -2753,6 +2756,7 @@ country_event = {
 					NOT = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 			}

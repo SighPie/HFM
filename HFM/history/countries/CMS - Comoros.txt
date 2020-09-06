@@ -1,5 +1,5 @@
 capital = 2123
-primary_culture = kilombero
+primary_culture = lacustrine_bantu
 religion = sunni
 government = democracy
 plurality = 0.0

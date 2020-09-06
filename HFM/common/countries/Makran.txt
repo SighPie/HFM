@@ -2,7 +2,7 @@ color = { 219  146  162 }
 graphical_culture = IndianGC
 
 party = {
-	name = "MAK_conservative"
+	name = "KAL_conservative"
 	start_date = 1800.1.1
 	end_date = 2000.1.1
 

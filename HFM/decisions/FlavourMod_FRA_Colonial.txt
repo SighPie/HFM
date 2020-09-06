@@ -144,6 +144,16 @@ political_decisions = {
 					secede_province = THIS
 				}
 			}
+			MTC = { all_core = { remove_core = ENG } }
+			23 = { remove_core = ENG }
+			31 = { remove_core = ENG }
+			2597 = { remove_core = ENG }
+			18 = { remove_core = ENG }
+			2629 = { remove_core = ENG }
+			7 = { remove_core = ENG }
+			2598 = { remove_core = ENG }
+			11 = { remove_core = ENG }
+			2569 = { remove_core = ENG }
 			RPL = { annex_to = THIS }
 			any_owned = { limit = { OR = { province_id = 74 province_id = 75 } } secede_province = ENG }
 		}
@@ -166,6 +176,14 @@ political_decisions = {
 				exists = FCA
 				has_country_flag = acadia_organized 
 			}
+			OR = { 
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 		}
 		
 		allow = {
@@ -271,7 +289,7 @@ political_decisions = {
 				ACA = { all_core = { add_core = FCA remove_core = ACA } }
 			}
 			###Set Acadia Flag Based on whether Bourbon/Napoleonic###
-			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } } }
+			random_owned = { limit = { owner = { tag = FRA } ACA = { government = hms_government } } }
 			random_owned = { limit = { owner = { tag = BOR } } ACA = { government = colonial_company } }
 			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
 			FRA = { set_country_flag = acadia_organized }
@@ -293,6 +311,14 @@ political_decisions = {
 				exists = ULA
 				exists = FCA
 			}
+			OR = { 
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 			has_country_flag = quebec_regained
 			NOT = { has_country_flag = canada_organized }
 		}
@@ -401,7 +427,7 @@ political_decisions = {
 				}
 			}
 			###Set Canada Flag Based on whether Bourbon/Napoleonic###
-			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ACA = { government = hms_government } } }
+			random_owned = { limit = { owner = { tag = FRA } ACA = { government = hms_government } } }
 			random_owned = { limit = { owner = { tag = BOR } } FCA = { government = colonial_company } }
 			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
 			FRA = { set_country_flag = canada_organized }
@@ -652,6 +678,14 @@ political_decisions = {
 			capital = 425
 			has_country_flag = quebec_regained
 			has_global_flag = treaty_of_new_york
+			OR = { 
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 			NOT = { 
 				has_country_flag = louisiana_organized 
 				exists = ULA
@@ -901,7 +935,7 @@ political_decisions = {
 			any_pop = { limit = { location = { province_id = 146 } type = soldiers } pop_type = farmers }
 			any_pop = { limit = { culture = louisianan } reduce_pop = 2 }
 			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
-			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } ULA = { government = hms_government } } }
+			random_owned = { limit = { owner = { tag = FRA } ULA = { government = hms_government } } }
 			random_owned = { limit = { owner = { tag = BOR } } ULA = { government = colonial_company } }
 			
 			FRA = { set_country_flag = louisiana_organized }
@@ -921,6 +955,14 @@ political_decisions = {
 				NZL = { all_core = { owned_by = THIS } }
 				NZF = { all_core = { owned_by = THIS } }
 			}
+			OR = { 
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 			NOT = { has_global_flag = french_nzl }
 		}
 		
@@ -1192,7 +1234,7 @@ political_decisions = {
 				pop_type = farmers
 			}
 			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
-			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } NZF = { government = hms_government } } }
+			random_owned = { limit = { owner = { tag = FRA } NZF = { government = hms_government } } }
 			random_owned = { limit = { owner = { tag = BOR } } NZF = { government = colonial_company } }
 			
 			set_global_flag = french_nzl
@@ -1201,7 +1243,7 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	organize_australia = {
+	organize_australia = { #You have to conquer these lands yourself, there is no event for you to seize Australia
 		picture = "dreams_of_empire"
 		potential = {
 			primary_culture = french
@@ -1213,6 +1255,14 @@ political_decisions = {
 			owns = 2505
 			owns = 2497
 			owns = 2494
+			OR = { 
+				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
+			}	
 			NOT = { has_country_flag = australia_organized }
 		}
 		allow = {
@@ -1439,63 +1489,13 @@ political_decisions = {
 			FRA = { set_country_flag = australia_organized }
 			BOR = { set_country_flag = australia_organized }
 			random_owned = { limit = { owner = { NOT = { colonial_policy = settlement } } } owner = { political_reform = settlement } }
-			random_owned = { limit = { owner = { tag = FRA OR = { government = hms_government government = absolute_monarchy government = prussian_constitutionalism } } FAS = { government = hms_government } } }
+			random_owned = { limit = { owner = { tag = FRA } FAS = { government = hms_government } } }
 			random_owned = { limit = { owner = { tag = BOR } } FAS = { government = colonial_company } }
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
-	
-	organize_algeria_fra = {
-		picture = "organize_french_algeria"
-		potential = {
-			primary_culture = french
-			is_greater_power = yes
-			capital = 425
-			NOT = {
-				exists = ALD
-				has_global_flag = algeria_organized
-				capital_scope = { continent = africa } 
-				capital_scope = { continent = west_africa } 
-				capital_scope = { continent = central_africa } 
-				capital_scope = { continent = east_africa } 
-				capital_scope = { continent = south_west_africa }
-			}
-			owns = 1700
-			owns = 1721
-		}
-		
-		allow = {
-			war = no
-			revolution_n_counterrevolution = 1
-			owns = 1700
-			owns = 1721
-		}
-		
-		effect = {
-			set_global_flag = algeria_organized
-			prestige = 3
-			any_owned = {
-				limit = { is_core = ALD }
-				add_province_modifier = { name = colonial_exploitation duration = 1095 }
-			}
-			ALD = {
-				tech_school = unciv_tech_school
-				government = colonial_company
-				political_reform = landed_voting
-				capital = 1700
-				primary_culture = french
-				add_accepted_culture = maghrebi
-			}
-			1700 = { 
-				change_province_name = "Alger" 
-				state_scope = { change_region_name = "Alger" }
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+
 	louisiana_rename = {
 		picture = new_france_louisiana
 		potential = {

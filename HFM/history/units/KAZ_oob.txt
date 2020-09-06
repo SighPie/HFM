@@ -15,4 +15,3 @@ leader = {
 	background = aristocrat
 	personality = mediocre
 	}
-	

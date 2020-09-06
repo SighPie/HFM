@@ -58,6 +58,10 @@ foreign_artillery = yes_foreign_artillery
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 
+# Inventions
+small_arms_production = yes
+ammunition_production = yes
+
 upper_house = {
 	fascist = 0
 	liberal = 20

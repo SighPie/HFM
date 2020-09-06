@@ -4,7 +4,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = machu_picchu_discovered }
 			NOT = { has_country_flag = looking_for_machu_picchu }
-			year = 1890
+			invention = modern_archaeology
 			NOT = { year = 1915 }
 			OR = {
 				rank = 3
@@ -54,7 +54,7 @@ political_decisions = {
 	search_for_aegean_civilizations = {
 		picture = priams_treasure
 		potential = {
-			year = 1850
+			invention = early_archaeology
 			NOT = { year = 1880 }
 			NOT = { has_global_flag = troy_discovered }
 			NOT = { has_country_flag = search_for_the_aegean_civilizations }
@@ -105,8 +105,8 @@ political_decisions = {
 	mycenaean_excavations = {
 		picture = "mycenaean_excavations"
 		potential = {
+			invention = early_archaeology
 			is_greater_power = yes
-			revolution_n_counterrevolution = 1
 			NOT = { owns = 840 }
 			NOT = {
 				has_global_flag = agamemnon_found
@@ -116,6 +116,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			analytic_philosophy = 1
 			functionalism = 1
 			invention = early_archaeology
 			prestige = 100

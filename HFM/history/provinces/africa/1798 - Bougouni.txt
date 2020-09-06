@@ -1,6 +1,6 @@
-owner = MAS
-controller = MAS
+owner = KNG
+controller = KNG
 add_core = SEG
-add_core = MAS
-trade_goods = cattle
+add_core = KNG
+trade_goods = grain
 life_rating = 35

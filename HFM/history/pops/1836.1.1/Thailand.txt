@@ -427,7 +427,7 @@
 	farmers = {
 		culture = yue
 		religion = mahayana
-		size = 3825
+		size = 4825
 	}
 
 	aristocrats = {
@@ -489,7 +489,7 @@
 	farmers = {
 		culture = thai
 		religion = theravada
-		size = 33150
+		size = 30150
 	}
 
 	aristocrats = {
@@ -507,7 +507,7 @@
 	artisans = {
 		culture = yue
 		religion = mahayana
-		size = 1500
+		size = 1800
 	}
 
 	soldiers = {
@@ -520,6 +520,36 @@
 		culture = yue
 		religion = mahayana
 		size = 5225
+	}
+	
+	aristocrats = {
+		culture = karen
+		religion = mahayana
+		size = 125
+	}
+
+	clergymen = {
+		culture = karen
+		religion = mahayana
+		size = 75
+	}
+
+	artisans = {
+		culture = karen
+		religion = mahayana
+		size = 1500
+	}
+
+	soldiers = {
+		culture = karen
+		religion = mahayana
+		size = 75
+	}
+
+	farmers = {
+		culture = karen
+		religion = mahayana
+		size = 7225
 	}
 }
 #Nakhon Si Thammanet (196000/49000 POPS)
@@ -1111,13 +1141,13 @@
 	soldiers = {
 		culture = yue
 		religion = mahayana
-		size = 25
+		size = 100
 	}
 
 	farmers = {
 		culture = yue
 		religion = mahayana
-		size = 1275
+		size = 3275
 	}
 
 }

@@ -5,13 +5,13 @@ political_decisions = {
 		potential = {
 				tag = PRG
 				government = presidential_dictatorship
-				year = 1838
 				NOT = { has_country_flag = misiones_occupied }
 				NOT = { year = 1860 }
 				NOT = { owns = 2554 }
 					}
 					
 		allow = {
+			year = 1838
 			war = no
 			ARC = { war = yes }
 		}
@@ -37,7 +37,6 @@ political_decisions = {
 		potential = {
 				tag = PRG
 				is_vassal = no
-				year = 1842
 				NOT = { year = 1860 }
 				NOT = { has_country_flag = paraguay_declared_independence }
 			}
@@ -46,6 +45,7 @@ political_decisions = {
 			owns = 2337
 			owns = 2339
 			is_vassal = no
+			year = 1842
 			war = no
 			NOT = { has_country_modifier = francia_utopia }
 			NOT = { has_country_modifier = national_confusion }

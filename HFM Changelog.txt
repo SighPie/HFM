@@ -1,39 +1,64 @@
 1.28 Changelog
 
+#Major Stuff
+- Adapted the Dutch Improvement Mod by Crownsteeler
+- Updated to latest HPM version
+
 #Bugfixes
 - Fixed some issues with Russian and Japanese settlers in Hokkaido and Sakhalin
 
 #Africa
 - The Natal events now secede the provinces to whoever owns Cape Town rather than the British
-- Added a decision 'Occupation of the Sierra Leone hinterland' for the British
+- Decision: Added a decision 'Occupation of the Sierra Leone hinterland' for the British
 - Fixed a bugged decision 'Claim the Gold Coast'
 - Fixed an issue where Germany randomly gets PROV2081 without owning S-W Africa first
 - Adjusted some french overseas pops
 - Fixed an issue with British East Africa
+
+##Algeria
+- Country: Added the Regency of Algiers
+- Country: Algeria now starts as the Adekadler Emirate
+- Country: Added Ait Abbas
+- Country: Added Touggourt
+- Events: Added event 'The Treaty of Tafna'
+- Events: Added event 'The Iron Gates'
+- Events: Added event 'Adekadler Surrenders'
+- Events: Added event 'The Kabylie Revolt'
+- Events: Added event 'The Siege of Constantine'
 
 #Middle East
 - Adjusted some of the Yemeni States flags
 - The Aden Protectorate now turns Yemen into a Autonomous Dependency, will now use the Aden Colony flag, now called 'The Aden Protectorate'
 
 #Europe
-- The French Revolution now selects the Open Border policy
-- Added a decision for France 'Troupes de Marine' - gives a similar bonus to the French Foreign Legion
-- 'The League of the Three Emperors' - changed requirement 'Great Wars Enabled' to Revolution & Counterrevolution
-- Russian Army Reforms now give slightly more bonuses to the AI
-- Added a decision 'Reforms of Abdulmejid I' for the Ottoman Empire, gives some bonus to military techs to stop the Ottoman AI from being so pathetic
-- Added a decision 'Reforms of Abdul Hamid II' for the Ottoman Empire, reverts the Ottoman Empire to Absolute Monarchy, gives some bonus to military techs to stop the Ottoman AI from being so pathetic.
-- Greece now starts with the basic naval techs
-- Re-added Austrian core to Gorz
-- Removed Prague from the Capital Renovation decision, added more ways to enact the decision
-- Added event 'The Cretan Revolt'
+- Event: The French Revolution now selects the Open Border policy
+- Decision: Added a decision for France 'Troupes de Marine' - gives a similar bonus to the French Foreign Legion
+- Decision: 'The League of the Three Emperors' - changed requirement 'Great Wars Enabled' to Revolution & Counterrevolution
+- Decision: Russian Army Reforms now give slightly more bonuses to the AI
+- Decision: Added a decision 'Reforms of Abdulmejid I' for the Ottoman Empire, gives some bonus to military techs to stop the Ottoman AI from being so pathetic
+- Decision: Added a decision 'Reforms of Abdul Hamid II' for the Ottoman Empire, reverts the Ottoman Empire to Absolute Monarchy, gives some bonus to military techs to stop the Ottoman AI from being so pathetic.
+- Province: Re-added Austrian core to Gorz
+- Decision: Removed Prague from the Capital Renovation decision, added more ways to enact the decision
+- Event: Added event 'The Cretan Revolt'
+- Event: Louis Napoleon's coup will now enact universal sufferage
+- Event: Improved several event pictures for the San Marco & Roman revolts
+- Country: Made Krakow a puppet of Austria
+- Country: Greece now starts with the basic naval techs
+- Cultures: Removed Siebenburgen, Added North German as an accepted culture of Austria
 
 #Asia
-- Added a decision for the owner of Saigon to purchase Annam if another great power owns it
-- Added a decision 'Ethische Politiek' for the Netherlands, lowers militancy in Indonesia, changes colonial policy to civilizing mission
-- Adjusted some pops in Indonesia
+- Decision: Added a decision for the owner of Saigon to purchase Annam if another great power owns it
+- Country: Guangdong, Fujian and Guangxi are no longer releasable vassals
+- Pops: Adjusted some pops in Indonesia
+
+##Japan
+- Modifiers: Added new modifier 'The Han System' for the Tokugawa Shogunate and all Japanese minors, reduces admin efficiency and forces the government to pay a pension
+- Country: Renamed Shogunate Japan to 'The Tokugawa Shogunate'
 
 #Other Changes
-- Added some military inventions 'Gendarmerie', 'Mountain Warfare', 'Barrage Fire', 'Counter-Battery Fire'
-- Added some modifiers to make the AI more willing to take the other Naval techs
-- Most AI uncivs and weaker countries get buffs to make them more competitive
-- Adjusted some of the modifiers of the Colonial Policies
+- Invention: Added some military inventions 'Gendarmerie', 'Mountain Warfare', 'Barrage Fire', 'Counter-Battery Fire'
+- Technology: Added some modifiers to make the AI more willing to take the other Naval techs
+- Modifiers: Most AI uncivs and weaker countries get buffs to make them more competitive
+- Modifiers: Adjusted some of the modifiers of the Colonial Policies
+- Invention: Flintlock Rifles - Increased the attack bonus given to Irregulars & Cavalry
+- Defines: EXPERIMENTAL - Reduced effectiveness of gas attacks

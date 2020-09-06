@@ -39,25 +39,25 @@
 	}
 
 	artisans = {
-		culture = afro_antillean
+		culture = kreol
 		religion = catholic
 		size = 150
 	}
 
 	clergymen = {
-		culture = afro_antillean
+		culture = kreol
 		religion = catholic
 		size = 25
 	}
 
 	soldiers = {
-		culture = afro_antillean
+		culture = kreol
 		religion = catholic
 		size = 50
 	}
 
 	farmers = {
-		culture = afro_antillean
+		culture = kreol
 		religion = catholic
 		size = 425
 	}
@@ -130,4 +130,9 @@
 		size = 680
 	}
 
+	slaves = {
+		culture = afro_antillean
+		religion = catholic
+		size = 250
+	}
 }

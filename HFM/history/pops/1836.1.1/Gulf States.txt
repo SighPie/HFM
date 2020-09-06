@@ -5,7 +5,19 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 50
+		size = 200
+	}
+	
+	bureaucrats = {
+		culture = bedouin
+		religion = sunni
+		size = 10
+	}
+	
+	officers = {
+		culture = bedouin
+		religion = sunni
+		size = 10
 	}
 
 	clergymen = {
@@ -23,13 +35,13 @@
 	soldiers = {
 		culture = bedouin
 		religion = sunni
-		size = 25
+		size = 100
 	}
 
 	farmers = {
 		culture = bedouin
 		religion = sunni
-		size = 2725
+		size = 3725
 	}
 }
 #Bahrain Region (28000) #see Saudi Arabia.txt for balance of region  
@@ -39,7 +51,7 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 125
+		size = 150
 	}
 
 	bureaucrats = {
@@ -125,7 +137,19 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 25
+		size = 70
+	}
+	
+	bureaucrats = {
+		culture = bedouin
+		religion = sunni
+		size = 10
+	}
+	
+	officers = {
+		culture = bedouin
+		religion = sunni
+		size = 10
 	}
 
 	clergymen = {
@@ -165,7 +189,7 @@
 	aristocrats = {
 		culture = bedouin
 		religion = sunni
-		size = 125
+		size = 225
 	}
 
 	bureaucrats = {
@@ -248,4 +272,36 @@
 		size = 300
 	}
 
+}
+#Liwa
+12 = {
+	aristocrats = {
+		culture = bedouin
+		religion = sunni
+		size = 5
+	}
+
+	clergymen = {
+		culture = bedouin
+		religion = sunni
+		size = 15
+	}
+
+	artisans = {
+		culture = bedouin
+		religion = sunni
+		size = 50
+	}
+
+	soldiers = {
+		culture = bedouin
+		religion = sunni
+		size = 10
+	}
+
+	farmers = {
+		culture = bedouin
+		religion = sunni
+		size = 925
+	}
 }

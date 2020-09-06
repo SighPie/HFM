@@ -8,17 +8,23 @@ political_decisions = {
 				FRA = {
 					exists = yes
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 				BOR = {
 					exists = yes
 					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
 						government = hms_government
+						government = prussian_constitutionalism
+						government = absolute_monarchy
+						government = absolute_empire
+						government = semi_constitutional_empire
+						government = constitutional_empire
 					}
 				}
 			}
@@ -33,11 +39,24 @@ political_decisions = {
 		}
 		
 		effect = {
-			government = hms_government
+            government = constitutional_empire
+            election = yes
+            random_owned = {
+                limit = { owner = { has_country_modifier = santa_ana_rule } }
+                owner = { remove_country_modifier = santa_ana_rule }
+            }
 			any_pop = {
 				scaled_militancy = {
 					ideology = liberal
 					factor = 8
+				}
+                scaled_militancy = {
+                    ideology = socialist
+                    factor = 8
+                }
+                scaled_militancy = {
+                    ideology = conservative
+                    factor = 6
 				}
 			}
 			random_country = {
@@ -89,6 +108,7 @@ political_decisions = {
 						war_exhaustion = 0.65
 					}
 					ai = yes
+                    is_sphere_leader_of = MEX
 					war = no
 					truce_with = MEX
 					has_recently_lost_war = no

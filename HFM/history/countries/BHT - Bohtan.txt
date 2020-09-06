@@ -26,7 +26,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = two_year_draft
 debt_law = serfdom
@@ -57,7 +56,12 @@ nonstate_consciousness = 0
 
 
 foreign_weapons = yes_foreign_weapons
+# Technologies
 flintlock_rifles = 1
+
+# Inventions
+small_arms_production = yes
+ammunition_production = yes
 
 oob = "BHT_oob.txt"
 

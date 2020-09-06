@@ -113,11 +113,31 @@ political_decisions = {
 	 	}
 	 
 	 	effect = {
-			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -50000 } }
+
 			random_owned = {
-				limit = { owner = { ai = yes } }
+                limit = {
+                    owner = {
+                        NOT = { money = 50000 }
+                        check_variable = { which = owed_cash_money value = 9 }
+                    }
+                }
+                owner = { change_variable = { which = owed_cash_money value = 50 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 50000 }
+                        NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                    }
+                }
 				owner = { set_variable = { which = owed_cash_money value = 50 } } 
 			}
+            random_owned = {
+                limit = { owner = { money = 50000 } }
+                owner = { treasury = -50000 }
+            }
+
+
 			set_country_flag = law_of_return_issued
 			random_owned = {
 				limit = { owner = { tag = ISR } }
@@ -174,4 +194,3 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 }
-

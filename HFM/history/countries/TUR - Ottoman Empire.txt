@@ -1,7 +1,7 @@
 capital = 860
 primary_culture = turkish
 religion = sunni
-government = absolute_monarchy
+government = absolute_empire
 plurality = 5.0
 nationalvalue = nv_autocracy
 literacy = 0.03
@@ -9,7 +9,7 @@ non_state_culture_literacy = 0.01
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 15
+prestige = 70
 
 # Political reforms
 slavery = yes_slavery
@@ -31,7 +31,7 @@ pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
-conscription = mandatory_service
+conscription = no_draft
 debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legal
@@ -69,11 +69,9 @@ flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 army_command_principle = 1
 post_nelsonian_thought = 1
-the_command_principle = 1
 private_banks = 1
 no_standard = 1
 guild_based_production = 1
-classicism_n_early_romanticism = 1
 late_enlightenment_philosophy = 1
 enlightenment_thought = 1
 piston_steam_engine = 1
@@ -138,7 +136,7 @@ ruling_party = TUR_conservative
 	piston_steam_engine = 1
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
-	mechanized_mining = 1
+    hot_blast = 1
 	experimental_railroad = 1
 	basic_chemistry = 1
 	medicine = 1

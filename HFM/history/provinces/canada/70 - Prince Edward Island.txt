@@ -3,5 +3,5 @@ controller = ENG
 add_core = ACA
 add_core = MRU
 trade_goods = fish
-life_rating = 30
+life_rating = 31
 colonial = 2

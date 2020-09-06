@@ -1,3 +1,4 @@
+#Mostly Merged
 #A House Divided - Set Up
 country_event = {
 	id = 16000
@@ -76,11 +77,7 @@ country_event = {
 			}
 			secede_province = CSA
 		}
-		diplomatic_influence = {
-			who = CSA
-			value = -400
-		}			
-
+		diplomatic_influence = { who = CSA value = -400 }			
 		war = {
 			target = CSA
 			attacker_goal = { casus_belli = civil_war }
@@ -114,10 +111,7 @@ country_event = {
 			}
 			secede_province = CSA
 		}
-		diplomatic_influence = {
-			who = CSA
-			value = -400
-		}			
+		diplomatic_influence = { who = CSA value = -400 }			
 		release_vassal = CSA
 		change_tag_no_core_switch = CSA
 		
@@ -216,11 +210,12 @@ country_event = {
 	
 	trigger = {
 		tag = USA
-		slavery = yes_slavery
-		NOT = {
-			has_country_flag = john_browns_raid
-			has_global_flag = american_civil_war_has_happened
+        OR = {
+			slavery = yes_slavery
+            slavery = freedom_of_womb
 		}
+        NOT = { has_country_flag = john_browns_raid }
+        NOT = { has_global_flag = american_civil_war_has_happened }
 		any_state = {
 			is_slave = no
 			average_consciousness = 6
@@ -327,14 +322,8 @@ country_event = {
 				factor = 0.05
 			}
 		}
-		
 		remove_country_modifier = the_slavery_debate
-		
-		add_country_modifier = {
-				name = no_more_war
-				duration = 150
-		}
-		
+		add_country_modifier = { name = no_more_war duration = 150 }
 		any_owned = {
 			limit = {
 				is_core = CSA
@@ -355,31 +344,26 @@ country_event = {
 			}
 			secede_province = CSA
 		}
-		
-		relation = {
-			who = CSA
-			value = 200
-		}
-		diplomatic_influence = {
-			who = CSA
-			value = 400
-		}			
+		relation = { who = CSA value = 200 }
+		diplomatic_influence = { who = CSA value = 400 }			
 		military_access = CSA
 		create_alliance = CSA
 		badboy = -1
 		
 		CSA = {
+			set_country_flag = state_of_emergency_country
 			ruling_party_ideology = conservative
 			political_reform = mandatory_service
 			political_reform = culture_voting_only
 			capital = 60
 			leadership = 80
-			treasury = 40000
+			treasury = 100000
 			small_arms = 300
 			cotton = 100
 			ammunition = 200
 			canned_food = 200
 			artillery = 100
+			regular_clothes = 100
 			wine = 200
 			liquor = 200
 			any_pop = { limit = { has_pop_culture = dixie } militancy = -9 }
@@ -390,16 +374,47 @@ country_event = {
 				}
 				pop_type = soldiers
 			}
-			add_country_modifier = {
-				name = no_more_war
-				duration = 150
-			}
+			add_country_modifier = { name = no_more_war duration = 150 }
 		}
 		capital = 2146
 		country_event = {id=16000 days = 150}
-		ai_chance = {
-			factor = 100
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+# Ending the ACW
+country_event = {
+	id = 16002
+	title = "HFM_END_OF_ACW_TITLE"
+	desc = "HFM_END_OF_ACW_DESC"
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		NOT = { exists = CSA }
+		has_global_flag = american_civil_war_has_happened
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	immediate = {
+		CSA = { clr_country_flag = state_of_emergency_country }
+		USA = { clr_country_flag = state_of_emergency_country }
+	}
+	
+	option = {
+		name = "EVTOPT16002"
+		any_pop = {
+			limit = { location = { is_core = THIS } }
+			consciousness = -1
+			militancy = -1
+			dominant_issue = { value = pacifism factor = 0.05 }
+			dominant_issue = { value = anti_military  factor = 0.1 }
 		}
+		war_exhaustion = 15
 	}
 }
 
@@ -418,11 +433,12 @@ country_event = {
 	
 	trigger = {
 		tag = USA
+        OR = {
 		slavery = yes_slavery
-		NOT = {
-			has_country_flag = dred_scott_decision
-			has_global_flag = american_civil_war_has_happened
+            slavery = freedom_of_womb
 		}
+        NOT = { has_country_flag = dred_scott_decision }
+        NOT = { has_global_flag = american_civil_war_has_happened }
 		any_state = {
 			is_slave = yes
 			average_consciousness = 5
@@ -3291,6 +3307,7 @@ country_event = {
 		tag = USA
 		slavery = yes_slavery
 		has_country_flag = kansas_nebraska_act_acting
+        NOT = { has_country_flag = bleeding_kansas }
 		any_state = {
 			is_colonial = yes
 			any_owned_province = { continent = north_america }
@@ -3331,7 +3348,16 @@ country_event = {
 				is_colonial = yes
 				any_owned_province = { continent = north_america }
 				NOT = { any_owned_province = { has_province_modifier = border_ruffians } }
-				any_owned_province = { any_neighbor_province = { state_scope = { OR = { is_slave = no is_colonial = yes } } } }
+                any_owned_province = {
+                    any_neighbor_province = {
+                        state_scope = {
+                            OR = {
+                                is_slave = no
+                                is_colonial = yes
+                            }
+                        }
+                    }
+                }
 			}
 			any_owned = { add_province_modifier = { name = border_ruffians duration = 365 } }
 			any_pop = { dominant_issue = { value = yes_slavery factor = 0.1 } }
@@ -3400,8 +3426,16 @@ province_event = {
 			tag = USA
 			slavery = yes_slavery
 		}
-		has_province_modifier = border_ruffians
-		has_province_modifier = free_staters
+        OR = {
+            AND = {
+				has_province_modifier = border_ruffians
+                any_neighbor_province = { state_scope = { any_owned_province = { has_province_modifier = free_staters } } }
+            }
+            AND = {
+				has_province_modifier = free_staters
+                any_neighbor_province = { state_scope = { any_owned_province = { has_province_modifier = border_ruffians } } }
+            }
+        }
 		NOT = { has_global_flag = american_civil_war_has_happened }
 		owner = { NOT = { has_country_flag = bleeding_kansas } }
 	}
@@ -3424,17 +3458,45 @@ province_event = {
 			year = 1855
 			NOT = { year = 1860 }
 		}
+        modifier = {
+            factor = 0.25
+            region = USA_126
+        }
 	}
 	
 	option = {
 		name = "EVTOPTA16200"
+        state_scope = {
+            any_pop = { reduce_pop = 0.99 }
 		remove_province_modifier = border_ruffians
 		remove_province_modifier = free_staters
-		state_scope = { any_pop = { reduce_pop = 0.99 } add_province_modifier = { name = bleeding_state duration = 1095 } }
+            add_province_modifier = { name = bleeding_state duration = 1095 }
+            is_slave = no
+        }
 		owner = {
 			set_country_flag = bleeding_kansas
 			any_pop = { consciousness = 0.5 }
 		}
+        ai_chance = {
+            factor = 90
+        }
+    }
+    option = {
+        name = "EVTOPTB16200"
+        state_scope = {
+            any_pop = { reduce_pop = 0.99 }
+            remove_province_modifier = border_ruffians
+            remove_province_modifier = free_staters
+            add_province_modifier = { name = bleeding_state duration = 1095 }
+            is_slave = yes
+        }
+        owner = {
+            set_country_flag = bleeding_kansas
+            any_pop = { consciousness = 0.5 }
+        }
+        ai_chance = {
+            factor = 10
+        }
 	}
 }
 
@@ -3678,25 +3740,22 @@ province_event = {
 		owner = {
 			tag = USA
 			slavery = yes_slavery
-			state_n_government = 1
+            has_country_modifier = the_slavery_debate
 			NOT = { has_global_flag = american_civil_war_has_happened }
 		}
 		state_scope = { is_slave = yes }
 		OR = {
-			average_consciousness = 6
-			AND = {
-				owner = { ruling_party_ideology = liberal }
-				average_consciousness = 3
+            yes_slavery = 10
+            freedom_of_womb = 10
 			}
-			AND = {
-				owner = { upper_house = { ideology = liberal value = 0.4 } }
-				average_consciousness = 3
-			}
+        OR = {
+            yes_slavery = 20
+            freedom_of_womb = 20
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+        months = 12
 		modifier = {
 			factor = 0.5
 			yes_slavery = 15
@@ -3836,11 +3895,25 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA16400"
-		FROM = {
-			all_core = {
-				add_core = USA
+        random_country = {
+            limit = {
+                tag = FROM
+                primary_culture = texan
 			}
+            any_owned = { add_core = USA }
 		}
+        random_country = {
+            limit = {
+                tag = FROM
+                NOT = { primary_culture = texan }
+            }
+            all_core = { add_core = USA }
+        }
+        # FROM = {
+            # all_core = {
+                # add_core = USA
+            # }
+        # }
 		
 		inherit = FROM
 		random_owned = {
@@ -4160,6 +4233,7 @@ country_event = {
 		name = "EVTOPTA1305" #Keep Afro-American as accepted, CSA cores stay, assimilation of Dixie stops
 		prestige = 10
 		add_accepted_culture = dixie
+        add_accepted_culture = afro_american
 		any_pop = {
 			limit = { has_pop_culture = dixie }
 			consciousness = 2

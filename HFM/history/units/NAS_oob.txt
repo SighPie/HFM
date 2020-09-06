@@ -30,4 +30,3 @@ leader = {
 	background = aristocrat
 	prestige = 0.2
 }
-

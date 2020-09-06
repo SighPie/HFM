@@ -341,12 +341,6 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 10000
-	}
-
-	artisans = {
-		culture = south_german
-		religion = catholic
 		size = 7500
 	}
 
@@ -404,17 +398,49 @@
 		size = 980
 	}
 
+	######Jews
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	officers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	soldiers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
 	clergymen = {
 		culture = ashkenazi
 		religion = jewish
-		size = 25 
+		size = 100
 	}
 
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 2595
+		size = 12595
 	}
+	
+	artisans = {
+		culture = south_german
+		religion = catholic
+		size = 10000
+	}
+	
+	farmers = {
+		culture = ashkenazi
+		religion = jewish
+		size = 5300
+	}
+	########
 }
 #Sankt Polten (88000/22000 POPS)
 620 = {
@@ -642,3 +668,61 @@
 		size = 5625
 	}
 }
+
+#Kanaltal
+3288 = {
+	aristocrats = {
+		culture = south_german
+		religion = catholic
+		size = 15 
+	}
+
+	clergymen = {
+		culture = south_german
+		religion = catholic
+		size = 15 
+	}
+
+	artisans = {
+		culture = south_german
+		religion = catholic
+		size = 25
+	}
+
+	soldiers = {
+		culture = south_german
+		religion = catholic
+		size = 50
+	}
+
+	farmers = {
+		culture = south_german
+		religion = catholic
+		size = 3500
+	}
+
+	clergymen = {
+		culture = slovene
+		religion = catholic
+		size = 10 
+	}
+
+	artisans = {
+		culture = slovene
+		religion = catholic
+		size = 5
+	}
+
+	soldiers = {
+		culture = slovene
+		religion = catholic
+		size = 15
+	}
+
+	farmers = {
+		culture = slovene
+		religion = catholic
+		size = 2000 
+	}
+}
+

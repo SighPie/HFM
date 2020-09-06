@@ -66,5 +66,3 @@ leader = {
 	background = school_of_the_bayonet
 	personality = impetuous
 }
-
-

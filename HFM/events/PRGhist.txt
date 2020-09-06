@@ -3,56 +3,46 @@ country_event = {
 	title = "EVTNAME4661010" #Paraguay declares independence
 	desc = "EVTDESC4661010"
 	picture = "paraguay_independence"
-	
+
 	is_triggered_only = yes
 	
-	
+
 	option = {
 		name = "EVT4661010PTA" #Recognize Paraguay
 		badboy = -1
-		relation = {
-			who = FROM
-			value = 50
-			}
+		relation = { who = FROM value = 50 }
 		ai_chance = { factor = 0.9 }
-		}
+	}
 		
 	option = {
 		name = "EVT4661010PTB" #Don't Recognize it
 		badboy = 10
-		relation = {
-			who = PRG
-			value = -200
-				}
-			casus_belli = {
-				target = PRG
-				type = make_puppet
-				months = 12
-				}
+		relation = { who = PRG value = -200 }
+		casus_belli = { target = PRG type = make_puppet months = 12 }
+		
 		ai_chance = {
 			factor = 0.05
 			modifier = {
 				factor = 0.05
 				war_policy = jingoism
-				}
 			}
 		}
 	}
+    }
 
 country_event = {
 	id = 700000
 	title = "EVTNAME700000" #Death of Francia
 	desc = "EVTDESC700000"
 	picture = "graspar_francia"
-	
 	fire_only_once = yes
 	
 	trigger = {
-	tag = PRG
-	year = 1840
-	has_country_modifier = francia_utopia
-	NOT = { year = 1860 }
-		}
+		tag = PRG
+		year = 1840
+		has_country_modifier = francia_utopia
+		NOT = { year = 1860 }
+	}
 		
 	mean_time_to_happen = { months = 5 }
 	
@@ -65,12 +55,9 @@ country_event = {
 		canned_food = 10
 		wine = 20
 		liquor = 20
-		add_country_modifier = {
-			name = national_confusion
-			duration = 200
-			}
-		}
+		add_country_modifier = { name = national_confusion duration = 200 }
 	}
+}
 	
 country_event = {
 	id = 700001
@@ -650,6 +637,7 @@ country_event = {
 	option = {
 		name = "EVTOPT700014A"
 		remove_country_modifier = solano_lopez_industrialization
+        2341 = { trade_goods = cotton }
 		small_arms = 20
 		ammunition = 40
 		canned_food = 40
@@ -726,4 +714,4 @@ country_event = {
 		any_neighbor_country = { relation = { who = THIS value = -400 } }
 		ai_chance = { factor = 0 }
 		}
-	}
+    }

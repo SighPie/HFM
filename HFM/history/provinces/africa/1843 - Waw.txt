@@ -1,4 +1,5 @@
+owner = DAR
+controller = DAR
 add_core = DAR
 trade_goods = grain
-life_rating = 10
-colonial = 2
+life_rating = 35

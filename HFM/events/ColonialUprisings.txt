@@ -1892,9 +1892,12 @@ country_event = {
 		colonial_nation = yes
 		civilized = yes
 		OR = {
+			government = dominion
 			government = hms_government
 			government = democracy
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
+			government = constitutional_empire
 		}
 		liberal = 0.2
 	}

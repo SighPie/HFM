@@ -66,5 +66,3 @@ type = irregular
 	home = 1921
 	}
 }
-
-

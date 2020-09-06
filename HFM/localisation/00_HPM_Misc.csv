@@ -1,4 +1,15 @@
 ;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+oceanic;Pacific Islander;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
+levantine;Greco-Caucasian;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
+turko_semitic;Turkic;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
+polish_culture_group;Western Slavic;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
+BRIGADES_COMPARE_GREATER;Brigades comparison factor of two countries is at least §Y$VAL$§!\n;;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
+BRIGADES_COMPARE_SMALLER;Brigades comparison factor of two countries is less than §Y$VAL$§!\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;
+jewish_group;Jewish;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+muslim;Muslim;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+christian;Christian;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+eastern;Eastern Religions;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+pagan;Pagans;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 jefferson_method_desc;The Jefferson Method is a highest averages method for allocating seats, and is thus a type of party-list proportional representation. Proportional representation systems aim to allocate seats to parties approximately in proportion to the number of votes received. For example, if a party wins one-third of the votes then it should gain about one-third of the seats. In general, exact proportionality is not possible because these divisions produce fractional numbers of seats. As a result, several methods have been devised which ensure that the parties' seat allocations, which are of course whole numbers, are as proportional as possible. In comparison with the Sainte-Lague method, §Ythe Jefferson Method slightly favours large parties and coalitions over scattered small parties§W.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 precious_goods;Precious Goods;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 precious_goods_RGO_SIZE;Precious Goods Market Size;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -43,14 +54,14 @@ social_policy;Welfare Policy;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 colonial_spending_policy;Colonial;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 colonial_spending_policy_l;Colonial;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 colonial_spending_policy_desc;The government has a colonial policy towards its subjects and has no intention of spending any money on their welfare.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-no_state_interference;Opposed;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-no_state_interference_l;Opposed;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+no_state_interference;Opposed to Welfare;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+no_state_interference_l;Opposed to Welfare;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 no_state_interference_desc;The government feels that welfare expenditures are unnecessary and that individuals should look after themselves.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 no_position_set;No Official Policy;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-no_position_set_l;No Official Policy;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;
+no_position_set_l;No Official Welfare Policy;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;
 no_position_set_desc;There's no official position on welfare policy and how much should the government spend on it, the amount being largely left for the ruler to decide.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;
 populist_welfare;Paternalistic;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-populist_welfare_l;Paternalistic;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+populist_welfare_l;Paternalistic Welfare;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 populist_welfare_desc;The welfare system in this government has a paternalistic characteristic, with a minimum amount set to be spent in support of this oftentimes populist policy.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;
 welfare_state;Full Welfare State;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 welfare_state_l;Full Welfare State;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -134,7 +145,7 @@ HAVE_LESS_NATIONAL_PROVINCES_OCCUPIED_THAN;The percentage of occupied national p
 yes_to_congo;Voted Yes in the Congo Question;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 NEED_POSITIVE_WARSCORE;The war is not going well enough. §RIn wars were you are not the war leader, contribution is calculated individually. Even though the total warscore might be positive, what allows you to add or not war goals is your individual warscore - your individual contribution - in this war.§W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 WARGOAL_LACK_JINGO;We require $REQUIRED$ support for jingoism in our country, but have only $VALUE$. Jingoism represents the Ruler or the Upper House will to extend the war. The higher the jingoism, the more the chances that the necessary actors have the will and/or support to extend the war.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;; 
-berlin_conference;Berlin Conference;;;;;;;;;;;;;;;;;;;;;x
+berlin_conference;The Berlin Conference;;;;;;;;;;;;;;;;;;;;;x
 enforce_conference_decision;Enforce Deliberation;;;;;;;;;;;;;;;x;;;;
 enforce_conference_decision_desc;Force a §Ycountry§W to abide to the §YGreat Powers§W deliberation.;;;;;;;;;;;;;;;;x
 enforce_conference_decision_short;Abide to the §YGreat Powers§W deliberation.;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -238,7 +249,7 @@ fabric_factory;Textile Mill;;;;;;;;;;;;;;;;;;x;;;;
 fabric_factory_desc;Fabric is a tightly woven textile made in a Textile Mill which is, among other things, used to produce sails for ships as well as clothing. With the Cartwright Loom, the Spinning Mule and the Boulton & Watt steam engine, the pieces were in place to build a mechanized textile industry. From this point there were no new inventions, but a continuous improvement in technology as the mill-owner strove to reduce cost and improve quality. Developments in the transport infrastructure facilitated the import of raw materials and export of finished cloth, diminishing costs and increasing profits.;;;;;;;;;;;;;;;;;;x;;;;
 cement_factory_desc;In 1824 Joseph Aspdin, a British bricklayer turned builder, patented a chemical process for making portland cement which was an important advance in the building trades. This process involves sintering a mixture of clay and limestone to about 1,400°C (2,552°F), then grinding it into a fine powder which is then mixed with water, sand and gravel to produce concrete. Concrete is used to build factories, forts, shipyards, buildings, sewage systems and tunnels. Its use quickly became widespread in civil and military construction.;;;;;;;;;;;;;;;;;;;x;;;;
 glass_factory_desc;A new method of producing glass, known as the cylinder process, was developed in Europe during the early 19th century. In 1832, this process was used by the Chance Brothers to create sheet glass. This advancement allowed for larger panes of glass to be created without interruption, thus freeing up the space planning in interiors as well as the fenestration of buildings. The other glass-making method is glassblowing which produces bottles and other containers. Glass is used for a variety of appliances like bottles, windows, bowls, vases, lamps, jars, vacuum tubes and light bulbs.;;;;;;;;;;;;;;;;;;;x;;;;
-fertilizer_factory_desc;In this factory fertilizer is created out of guano, sulphur or bone meal. The most common way to create fertilizer is the Birkeland?Eyde process. This process was used to fix atmospheric nitrogen (N2) into nitric acid (HNO3), one of several chemical processes generally referred to as nitrogen fixation. The resultant nitric acid was then used as a source of nitrate (NO3-) for the fertilizers. These fertilizers are used to increase the productivity of farms or the chemical components are further refined to make explosives.;;;;;;;;;;;;;;;;;;;;;;;x
+fertilizer_factory_desc;In this factory fertilizer is created out of guano, sulphur or bone meal. The most common way to create fertilizer is the Birkeland–Eyde process. This process was used to fix atmospheric nitrogen (N2) into nitric acid (HNO3), one of several chemical processes generally referred to as nitrogen fixation. The resultant nitric acid was then used as a source of nitrate (NO3-) for the fertilizers. These fertilizers are used to increase the productivity of farms or the chemical components are further refined to make explosives.;;;;;;;;;;;;;;;;;;;;;;;x
 MODIFIER_CB_GENERATION_SPEED_MODIFIER;Casus Belli Acquisition Speed;;;;;;;;;;;;;;;;;;;;;;;x
 MODIFIER_MOBILIZATION_IMPACT;Mobilization Impact;;;;;;;;;;;;;;;;;;;x
 GREAT_WARS_ENABLED_DESC;Great Wars are discovered.\n;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -316,11 +327,11 @@ MONEY_EFFECT;Funds §R$VALUE$§W¤§W.\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 theocracy_ruler;Your Holiness;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 proletarian_dictatorship_ruler;Chairman;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 presidential_dictatorship_ruler;President;;;;;;;;;;;;;;;;;;;x;;;;
-bourgeois_dictatorship_ruler;Board Director;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+bourgeois_dictatorship_ruler;President;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 fascist_dictatorship_ruler;Supreme Leader;;;;;;;;;;;;;;;;;;x;;;;
-absolute_monarchy_ruler;King;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-prussian_constitutionalism_ruler;King;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-hms_government_ruler;King;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+absolute_monarchy_ruler;Your Majesty;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+prussian_constitutionalism_ruler;Your Majesty;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+hms_government_ruler;Prime Minister;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 democracy_ruler;President;;;;;;;;;;;;;;;;;;;x;;;;
 islamic_fundamentalists_title;Islamic Fundamentalists;;;;;;;;;;;;x,,,
 islamic_fundamentalists_name;Islamic Fundamentalists;;;;;;;;;;;;x,,,
@@ -399,8 +410,8 @@ no_education_reform_desc;Our country doesn't have schools and education is large
 yes_education_reform_desc;A basic organized education system is now present in our country;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 transport_improv;Transportation System;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 transport_improv_l;Transportation System;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-no_transport_improv;Not Improved;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-yes_transport_improv;Improved;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+no_transport_improv;Non-Existent;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+yes_transport_improv;Experimental;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 no_transport_improv_desc;The transportation system is primitive.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 yes_transport_improv_desc;The transportation system is being modernized. At least in the capital.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 pre_indust;Early Industrialisation;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -427,12 +438,12 @@ no_army_schools;Ad Hoc;;;;;;;;;;;;;;;;;;;;;;;x
 yes_army_schools;Army Schools;;;;;;;;;;;;;;;;;;;;;;;x
 no_army_schools_desc;We learn on the field of battle.;;;;;;;;;;;;;;;;;;;;;;;x
 yes_army_schools_desc;Officers are trained in professional army academies before leading men into battle.;;;;;;;;;;;;;;;;;;;;;;;x
-foreign_naval_officers;Naval Officers;;;;;;;;;;;;;;;;;;;;;;;x
-foreign_naval_officers_l;Naval Officers;;;;;;;;;;;;;;;;;;;;;;;x
-no_foreign_naval_officers;Local Naval Officers;;;;;;;;;;;;;;;;;;;;;;;x
-yes_foreign_naval_officers;Foreign Naval Officers;;;;;;;;;;;;;;;;;;;;;;;x
-no_foreign_naval_officers_desc;Local officers command our ships.;;;;;;;;;;;;;;;;;;;;;;;x
-yes_foreign_naval_officers_desc;Foreign officers advise our captains.;;;;;;;;;;;;;;;;;;;;;;;x
+foreign_naval_officers;Foreign Resident;;;;;;;;;;;;;;;;;;;;;;;x
+foreign_naval_officers_l;Foreign Resident Minister;;;;;;;;;;;;;;;;;;;;;;;x
+no_foreign_naval_officers;No Foreign Resident;;;;;;;;;;;;;;;;;;;;;;;x
+yes_foreign_naval_officers;Foreign Resident;;;;;;;;;;;;;;;;;;;;;;;x
+no_foreign_naval_officers_desc;There are no foreign military officers residing in our country;;;;;;;;;;;;;;;;;;;;;;;x
+yes_foreign_naval_officers_desc;There are foreign military officers residing in our country and advising on political matters.;;;;;;;;;;;;;;;;;;;;;;;x
 naval_schools;Naval Training;;;;;;;;;;;;;;;;;;;;;;;x
 naval_schools_l;Naval Training;;;;;;;;;;;;;;;;;;;;;;;x
 no_naval_schools;Ad Hoc;;;;;;;;;;;;;;;;;;;;;;;x
@@ -732,7 +743,7 @@ breton;Breton;;;;;;;;;;;;x
 pan_albanian;Albanian;;;;;;;;;;;;x
 occitan;Occitan;Occitain;Occitanisch;;;;;;;;;;;x
 picard;Picard;;;;;;;;;;;;x
-western_slavic;Western Slavic;;;;;;;;;;;;;;;;;;;;x
+western_slavic;Lusatian;;;;;;;;;;;;;;;;;;;;x
 anglo_african;Anglo African;;;;;;;;;;;;x
 jewish_cultures;Jewish Cultures;;;;;;;;;;;;x
 itsekari;Ijaw;;;;;;;;;;;;x
@@ -754,6 +765,10 @@ christino_rebels_title;Christino;;;;;;;;;;;;x,,
 christino_rebels_name;Christinos;;;;;;;;;;;;x,,
 christino_rebels_desc;These rebels support the royal line of Ferdinand VII, and consider the current king to be a pretender. They intend to reinstall the rightful queen, and restore the liberal reforms enacted by the previous royal line.;;;;;;;;;;;;x
 christino_rebels_army;Christinos;;;;;;;;;;;;x,,
+slave_revolt_title;Slaves;;;;;;;;;;;;x,,
+slave_revolt_name;Slave Revolt;;;;;;;;;;;;x,,
+slave_revolt_desc;These slaves are mounting an armed uprising. They will shed blood and free slaves wherever they go, until the country is freed from the institution of slavery.;;;;;;;;;;;;x
+slave_revolt_army;Escaped Slaves;;;;;;;;;;;;x,,
 independence_rebels_title;Independence;;;;;;;;;;;;x,,
 independence_rebels_name;$CULTURE$ Nationalists;;;;;;;;;;;;x,,
 independence_rebels_desc;These rebels seek to free the country from its vassal status.;;;;;;;;;;;;x,,

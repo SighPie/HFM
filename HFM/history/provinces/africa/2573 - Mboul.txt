@@ -1,7 +1,8 @@
 owner = WOL
 controller = WOL
 add_core = WOL
-trade_goods = grain
+add_core = TOO
+trade_goods = fish
 terrain = semidesert
 life_rating = 35
 1861.1.1 = {

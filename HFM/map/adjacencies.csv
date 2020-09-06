@@ -112,6 +112,7 @@ From;To;Type;Through;Data;Comment
 1667;1659;land;2843;0;Setto Strait
 1411;1408;sea;2803;0;Gunungsitoli Strait
 1404;1399;land;2813;0;Palak Panang Strait
+1404;2637;land;2813;0;Palak Panang Strait
 1402;1398;sea;2814;0;Tanjungpinang Strait
 1458;1455;land;2848;0;Mindoro Strait
 1458;1459;sea;2848;0;Mindoro Strait
@@ -154,6 +155,7 @@ From;To;Type;Through;Data;Comment
 #
 1326;1589;impassable;0;0;scary mountain
 1326;1592;impassable;0;0;scary mountain
+1224;1592;impassable;0;0;scary mountain
 1328;1589;impassable;0;0;scary mountain
 1329;1589;impassable;0;0;scary mountain
 1329;1590;impassable;0;0;scary mountain
@@ -162,18 +164,20 @@ From;To;Type;Through;Data;Comment
 1258;1593;impassable;0;0;scary mountain
 1260;1593;impassable;0;0;scary mountain
 1259;1593;impassable;0;0;scary mountain
+1233;1592;impassable;0;0;scary mountain
 1238;1592;impassable;0;0;scary mountain
 1244;1592;impassable;0;0;scary mountain
 1235;1592;impassable;0;0;scary mountain
 1226;1592;impassable;0;0;scary mountain
+3299;1592;impassable;0;0;scary mountain
 1327;1592;impassable;0;0;scary mountain
 1328;1592;impassable;0;0;scary mountain
 1225;1594;impassable;0;0;scary mountain
-1226;1594;impassable;0;0;scary mountain
+3299;1594;impassable;0;0;scary mountain
 1210;1594;impassable;0;0;scary mountain
 1208;1594;impassable;0;0;scary mountain
-1226;1598;impassable;0;0;scary mountain
-1226;1591;impassable;0;0;scary mountain
+3299;1598;impassable;0;0;scary mountain
+3299;1591;impassable;0;0;scary mountain
 
 #Alps
 

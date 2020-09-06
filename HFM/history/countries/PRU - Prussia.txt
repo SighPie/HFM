@@ -13,7 +13,7 @@ is_releasable_vassal = no
 
 
 #GreaterPowers = prestige
-prestige = 50
+prestige = 80
 
 # Political reforms
 slavery = no_slavery
@@ -45,6 +45,8 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = protestant_country
+set_country_flag = claiming_neuchatel
+set_country_flag = prussian_germany
 
 decision = literacy_PRU
 decision = silesia_rename_german
@@ -83,14 +85,12 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 army_professionalism = 1
 interchangeable_parts = 1
 romanticism = 1
-#hot_blast = 1
 high_pressure_steam_engine = 1
-
 
 #Inventions
 
@@ -106,7 +106,7 @@ foreign_investment = {
 	OLD = 20000
 	MEC = 17500
 	SAX = 7500
-	HAN = 15000
+	BRA = 15000
 	UBD = 10000
 }
 
@@ -197,10 +197,9 @@ school_reforms = acceptable_schools
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
+    regenerative_furnaces = 1
 	hot_blast = 1
-	puddling = 1
-	bessemer_process = 1
+    drilling_and_blasting = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

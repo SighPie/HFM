@@ -1,7 +1,6 @@
-owner = NET
-controller = NET
-add_core = SAK
+owner = RIA
+controller = RIA
+add_core = RIA
 trade_goods = fish
 terrain = small_island
 life_rating = 31
-colonial = 2

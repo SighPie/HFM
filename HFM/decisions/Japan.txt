@@ -33,7 +33,7 @@ political_decisions = {
 			war = no
 			OR = {
 				nationalism_n_imperialism = 1
-				weapon_platforms = 1
+				iron_steamers = 1
 				is_sphere_leader_of = TKG
 			}
 		}
@@ -181,9 +181,12 @@ political_decisions = {
 		potential = {
 			tag = TKG
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			OR = {
 				has_global_flag = iemochi_shogun
@@ -240,9 +243,12 @@ political_decisions = {
 		potential = {
 			primary_culture = japanese
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = {
 				has_global_flag = boshin_war
@@ -471,7 +477,10 @@ political_decisions = {
 		potential = {
 			tag = JAP
 			civilized = yes
-			government = absolute_monarchy
+			OR = { 
+				government = absolute_monarchy
+				government = absolute_empire
+			}	
 			has_country_modifier = fukoku_kyohei
 			NOT = { has_country_flag = enacted_meiji_constitution }
 		}
@@ -528,7 +537,7 @@ political_decisions = {
 					build_factory_in_capital_state = liquor_distillery
 					activate_technology = high_pressure_steam_engine
 					activate_technology = freedom_of_trade
-					activate_technology = puddling
+					activate_technology = mechanized_mining
 				}
 			}
 			
@@ -971,9 +980,12 @@ political_decisions = {
 		potential = {
 			tag = TKG
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			OR = {
 				SEN = { exists = yes }
@@ -1120,7 +1132,10 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				government = absolute_monarchy
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
 			}
 		}
 	}
@@ -1409,11 +1424,13 @@ political_decisions = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				JAP = {
 					NOT = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 			}
@@ -1423,11 +1440,13 @@ political_decisions = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				NOT = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 			modifier = {
@@ -1862,11 +1881,16 @@ political_decisions = {
 	shinbutsu_bunri = {
 	picture = shinbutsu_bunri
 		potential = {
+			is_vassal = no
 			OR = {
 				tag = JAP
 				tag = TKG
+				AND = {
+					primary_culture = japanese
+					has_country_flag = mahayana_country
+				}
 			}
-			NOT = { has_country_flag = shinbutsu_bunri_declared }
+			NOT = { has_country_flag = shinto_country }
 		}
 		
 		allow = {
@@ -1885,12 +1909,74 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = shinbutsu_bunri_declared
 			any_pop = { limit = { has_pop_religion = mahayana } consciousness = 1 }
 			any_pop = { limit = { has_pop_religion = shinto } militancy = -1 }
+			set_country_flag = shinto_country
+			clr_country_flag = mahayana_country
 			religion = shinto
 		}
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	meiji_daijokan_ordinances = {
+	picture = japan_land_tax_reform
+		potential = {
+			OR = {
+				owns = 1657
+				owns = 1675
+				owns = 1649
+				owns = 1640
+				owns = 1668
+			}
+			NOT = { has_global_flag = japan_industrialized }
+		}
+		
+		allow = {
+			war = no
+			civilized = yes
+			owns = 1657
+			owns = 1675
+			owns = 1649
+			owns = 1640
+			owns = 1668
+		}
+		
+		effect = {
+			set_global_flag = japan_industrialized
+			#
+			1679 = { trade_goods = iron }
+			1663 = { trade_goods = tobacco }
+			1664 = { trade_goods = coal }
+			1661 = { trade_goods = coal }
+			#1660 = { trade_goods = tea }
+			#
+			1638 = { trade_goods = cotton }
+			#
+			1666 = { trade_goods = timber }
+			1667 = { trade_goods = tobacco }
+			#
+			1675 = { trade_goods = silk }
+			1648 = { trade_goods = tea }
+			1647 = { trade_goods = fish }
+			#
+			1657 = { trade_goods = tea }
+			1655 = { trade_goods = tea }
+			#
+			1673 = { trade_goods = silk }
+			1671 = { trade_goods = iron }
+			#
+			1670 = { trade_goods = sulphur }
+			1672 = { trade_goods = iron }
+			#
+			1642 = { trade_goods = iron }
+			#
+			1652 = { trade_goods = silk }
+			1674 = { trade_goods = tobacco }
+			1649 = { trade_goods = grain }
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 }

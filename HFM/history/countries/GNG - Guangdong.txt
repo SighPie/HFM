@@ -8,6 +8,7 @@ plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01
 non_state_culture_literacy = 0.01
+is_releasable_vassal = no
 
 # Political reforms
 slavery = no_slavery
@@ -40,6 +41,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = mahayana_country
+govt_flag = { government = presidential_dictatorship flag = fascist_dictatorship }
 
 ruling_party = GNG_conservative
 upper_house = {
@@ -52,19 +54,19 @@ upper_house = {
 	communist = 0
 }
 
-govt_flag = {
-	government = presidential_dictatorship
-	flag = theocracy
-}
-
 foreign_weapons = yes_foreign_weapons
 
 # Technologies
 flintlock_rifles = 1
 
 # Inventions
-##bottling_process = yes
+#bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 3

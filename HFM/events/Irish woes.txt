@@ -1,5 +1,102 @@
-#Irish Potato Blight
+#Failed Harvest of 1845
+country_event = {
+	id = 1010010
+	title = "EVTNAME1010010" 
+	desc = "EVTDESC1010010"
+	picture = "famine"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		has_country_flag = great_irish_famine
+		NOT = { 
+			year = 1855 
+			has_country_flag = corn_laws_repealed_flag 
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVT1010011OPTB"
+		prestige = -10
+		treasury = -75000
+		upper_house = { ideology = liberal value = 0.1 }
+		any_pop = {
+			limit = { location = { is_core = ENG is_overseas = no } }
+			scaled_consciousness = { issue = laissez_faire factor = 3 }
+			scaled_militancy = { ideology = reactionary factor = 3 }
+			scaled_consciousness = { factor = 1 ideology = liberal }
+			scaled_consciousness = { factor = 1 ideology = anarcho_liberal }
+		}
+		any_pop = {
+			limit = { location = { is_core = ENG NOT = { is_core = IRE } is_overseas = no } strata = poor }
+			militancy = 3
+		}
+		any_owned = {
+			limit = {
+				is_core = ENG
+				NOT = { is_core = IRE }
+				NOT = { is_colonial = yes }
+				NOT = { is_overseas = yes }
+				trade_goods = grain
+			}
+			add_province_modifier = { name = famine duration = 45 }
+		}
 
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.5
+				economic_policy = laissez_faire
+			}
+			modifier = {
+				factor = 0
+				NOT = { money = 75000 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA211402"
+		prestige = -10
+		upper_house = { ideology = liberal value = 0.1 }
+		any_pop = {
+			limit = { location = { is_core = ENG is_overseas = no } }
+			scaled_consciousness = { issue = laissez_faire factor = -3 }
+			scaled_militancy = { ideology = reactionary factor = -3 }
+			scaled_consciousness = { factor = 2 ideology = liberal }
+			scaled_consciousness = { factor = 2 ideology = anarcho_liberal }
+		}
+		any_pop = {
+			limit = { location = { is_core = ENG NOT = { is_core = IRE } is_overseas = no } strata = poor }
+			militancy = 4
+		}
+		any_owned = {
+			limit = {
+				is_core = ENG
+				NOT = { is_core = IRE }
+				NOT = { is_colonial = yes }
+				NOT = { is_overseas = yes }
+				trade_goods = grain
+			}	
+			add_province_modifier = { name = famine duration = 90 }
+		}
+		
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 2
+				economic_policy = laissez_faire
+			}
+		}
+	}
+}
+
+
+
+#Irish Potato Blight
 country_event = {
 	id = 1010011
 	title = "EVTNAME1010011" #The Great Irish Famine
@@ -425,11 +522,27 @@ country_event = {
 	picture = "irish_republican_brotherhood"
 	
 	trigger = {
-		any_owned_province = {
-			is_core = IRE
-			culture = irish
-			NOT = { has_province_modifier = irish_republicans }
-			NOT = { has_province_modifier = irish_unionists }
+		OR = {
+			AND = {
+				any_owned_province = {
+					is_core = IRE
+					culture = irish
+					NOT = { has_province_modifier = irish_republicans }
+					NOT = { has_province_modifier = irish_unionists }
+					pop_militancy = 2
+				}
+				NOT = { has_country_flag = help_for_the_irish }
+			}
+			AND = {
+				any_owned_province = {
+					is_core = IRE
+					culture = irish
+					NOT = { has_province_modifier = irish_republicans }
+					NOT = { has_province_modifier = irish_unionists }
+					pop_militancy = 5
+				}
+				has_country_flag = help_for_the_irish
+			}
 		}
 		OR = {
 			AND = {
@@ -467,7 +580,10 @@ country_event = {
 	option = {
 		name = "EVT1010020OPTA"
 		set_country_flag = irish_republican_brotherhood
-		remove_accepted_culture = irish
+		random_owned = { 
+			limit = { owner = { NOT = { has_country_flag = help_for_the_irish } } }
+			owner = { remove_accepted_culture = irish }
+		}
 		set_variable = {
 			which = irish_republican_provinces
 			value = 1
@@ -814,8 +930,10 @@ country_event = {
 		has_country_flag = easter_rising
 		OR = {
 			government = democracy
-			government = hms_government
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
+			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			tag = IRE
@@ -1058,6 +1176,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			has_country_flag = parnell_discouraged
@@ -1178,8 +1297,10 @@ country_event = {
 		}
 		OR = {
 			government = democracy
-			government = hms_government
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
+			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = { exists = IRE }
 	}

@@ -122,5 +122,3 @@ leader = {
 	personality = harsh
 	prestige = 0.1
 	}
-	
-	

@@ -3,4 +3,6 @@ controller = QNG
 add_core = CHI
 trade_goods = tea
 life_rating = 32
-terrain = shanghai
+naval_base = 1
+terrain = plains
+#terrain = shanghai

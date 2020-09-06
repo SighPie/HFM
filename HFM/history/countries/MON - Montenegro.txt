@@ -1,5 +1,5 @@
 capital = 2583
-primary_culture = montenegrin
+primary_culture = serb
 religion = orthodox
 government = theocracy
 plurality = 25.0
@@ -77,6 +77,7 @@ nonstate_consciousness = 0
 
 set_country_flag = theocratic_government
 
+
 oob = "MON_oob.txt"
 1861.1.1 = {
 	oob = "/1861/MON_oob.txt"
@@ -120,7 +121,7 @@ oob = "MON_oob.txt"
 	piston_steam_engine = 1
 	high_pressure_steam_engine = 1
 	mechanical_production = 1
-	mechanized_mining = 1
+    hot_blast = 1
 	experimental_railroad = 1
 	basic_chemistry = 1
 	medicine = 1

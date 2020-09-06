@@ -19,7 +19,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -120,7 +122,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -229,7 +233,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -332,7 +338,9 @@ country_event = {
 		civilized = yes
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -433,7 +441,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -539,7 +549,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -612,6 +624,9 @@ country_event = {
 		any_pop = {
 			consciousness = 0.5
 		}
+        ai_chance = {
+            factor = 34
+        }
 	}
 	
 	option = {
@@ -622,6 +637,9 @@ country_event = {
 				factor = 0.05
 			}
 		}
+        ai_chance = {
+            factor = 33
+        }
 	}
 	
 	option = {
@@ -631,6 +649,20 @@ country_event = {
 			militancy = 4
 			consciousness = 2
 		}
+        ai_chance = {
+            factor = 33
+
+            modifier = {
+                factor = 0
+                NOT = {
+                    OR = {
+                        ruling_party_ideology = reactionary
+                        ruling_party_ideology = fascist
+                        ruling_party_ideology = communist
+                    }
+                }
+            }
+        }
 	}
 }
 
@@ -647,7 +679,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -755,7 +789,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -869,7 +905,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -978,7 +1016,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1084,7 +1124,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1196,7 +1238,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1298,7 +1342,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1399,7 +1445,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1505,7 +1553,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1621,7 +1671,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1734,7 +1786,9 @@ country_event = {
 		literacy = 0.7
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}
@@ -1838,7 +1892,9 @@ country_event = {
 		civilized = yes
 		OR = {
 			government = prussian_constitutionalism
+			government = semi_constitutional_empire
 			government = hms_government
+			government = constitutional_empire
 			government = democracy
 			# All forms of government that have elections
 		}

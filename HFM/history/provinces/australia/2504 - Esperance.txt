@@ -3,5 +3,5 @@ controller = ENG
 add_core = AST
 trade_goods = fruit
 terrain = dryhills
-life_rating = 30
+life_rating = 32
 colonial = 2

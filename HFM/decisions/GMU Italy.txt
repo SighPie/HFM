@@ -79,12 +79,12 @@ political_decisions = {
 		picture = "italian_islands"
 		potential = {
 			tag = ITA
-			has_unclaimed_cores = no
 			has_global_flag = italian_claimed_venetia
 			NOT = { has_country_flag = italian_islands_claimed }
 		}
 		
 		allow = {
+			has_unclaimed_cores = no
 			is_greater_power = yes			
 			ITA = { all_core = { owned_by = THIS } }
 			revolution_n_counterrevolution = 1
@@ -134,36 +134,35 @@ political_decisions = {
 		picture = "encourage_italian_aircraft"
 		potential = {
 			tag = ITA
-			year = 1919
+			year = 1900
 			NOT = { has_country_flag = porco_rosso }
 		}
 		
 		allow = {
 			aeronautics = 1
 			industrial_score = 50
-			any_owned_province = {
-				state_scope = {
-					has_building = aeroplane_factory
-				}
-			}
+			any_owned_province = { state_scope = { has_building = aeroplane_factory } }
              OR = { 
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = conservative
-					ruling_party_ideology = fascist
-					ruling_party_ideology = communist
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = conservative
+				ruling_party_ideology = fascist
+				ruling_party_ideology = communist
 			}
 		}
 		
 		effect = {
 			set_country_flag = porco_rosso
 			prestige = 5
-			any_pop = {
-				militancy = -1
-			}
+			any_pop = { militancy = -1 }
 		}
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 0 
+				NOT = { year = 1919 }
+			}
 		}
 	}
 	
@@ -278,9 +277,12 @@ political_decisions = {
 			tag = VEN
 			 is_vassal = no
 			 OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 
@@ -393,8 +395,10 @@ political_decisions = {
 				is_greater_power = yes
 				OR = {
 					government = democracy
-					government = hms_government
 					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}

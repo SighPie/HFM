@@ -1,3 +1,4 @@
+#No Issues
 #Mzilikazi of Matabele flees to Matabeland
 country_event = {
 	id = 95517
@@ -108,7 +109,6 @@ country_event = { #The Mfecane
 		2108 = { life_rating = 15 }
 		2109 = { life_rating = 20 }
 		2110 = { life_rating = 20 }
-		3273 = { life_rating = 15 }
 		random_list = {
 			33 = { 
 				any_pop = { limit = { NOT = { OR = { has_pop_culture = boer has_pop_culture = nguni } } } reduce_pop = 0.3 }
@@ -135,40 +135,113 @@ country_event = {
 	picture = "toucouleur"
 	
 	trigger = {
-		tag = SEG
+		civilized = no
+		capital_scope = { continent = west_africa }
 		war = no
 		year = 1845
 		owns = 1800
 		OR = {
-			NOT = { military_score = 3 }
+			NOT = { military_score = 5 }
 			war_exhaustion = 50
+			ai = yes
 		}
 		NOT = { year = 1890 }
-		ai = yes
+		NOT = { 
+			tag = TOU 
+			exists = TOU
+		}
 	}
 	
 	fire_only_once = yes
 	
-	mean_time_to_happen = { months = 10 }
+	mean_time_to_happen = { 
+		months = 10 
+		
+		modifier = {
+			factor = 0.5
+			year = 1848
+		}
+	}
 	
 	option = {
 		name = "EVT95520OPTA"
-		primary_culture = fulbe
-		add_accepted_culture = bambara
-		add_accepted_culture = songhai
-		add_accepted_culture = tuareg
-		#add_accepted_culture = african_minor
+		any_owned = {
+			limit = {
+				OR = {
+					region = FRA_1801
+					region = FRA_1883
+					region = FRA_1798
+					pop_majority_culture = fulbe
+				}
+			}
+			any_pop = { 
+				limit = { has_pop_culture = fulbe type = soldiers }
+				reduce_pop = 2.5
+			}
+			secede_province = TOU
+		}
+		random_country = {
+			limit = {
+				tag = SEG
+				ai = yes
+				owns = 1794
+			}
+			annex_to = TOU
+		}
+		TOU = {
+			define_general = {
+				name = "Umar Tall"
+				personality = implacable
+				background = natural_born_leader
+			}		
+			set_country_flag = state_of_emergency_country
+		}
 		all_core = { add_core = TOU }
 		SEG = { all_core = { add_core = TOU } }
 		DND = { all_core = { add_core = TOU } }
 		MAS = { all_core = { add_core = TOU } }
-		SEG = { all_core = { remove_core = SEG } }
-		change_tag = TOU
-		capital = 1800
-		define_general = {
-			name = "Umar Tall"
-			personality = implacable
-			background = natural_born_leader
+		
+		TOU = {
+			casus_belli = {
+				target = THIS
+				type = conquest
+				months = 60
+			}
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = conquest }
+			}
 		}
+		
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVT95520OPTB"
+		any_owned = {
+			limit = {
+				OR = {
+					region = FRA_1801
+					region = FRA_1883
+					pop_majority_culture = fulbe
+				}
+			}
+			secede_province = TOU
+		}
+		TOU = {
+			define_general = {
+				name = "Umar Tall"
+				personality = implacable
+				background = natural_born_leader
+			}		
+		}
+		all_core = { add_core = TOU }
+		SEG = { all_core = { add_core = TOU } }
+		DND = { all_core = { add_core = TOU } }
+		MAS = { all_core = { add_core = TOU } }		
+		change_tag_no_core_switch = TOU
+		
+		ai_chance = { factor = 0 }
 	}
 }

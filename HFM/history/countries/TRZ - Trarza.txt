@@ -1,4 +1,4 @@
-capital = 1775
+capital = 1776
 primary_culture = maures
 culture = berber
 culture = bedouin
@@ -67,4 +67,3 @@ oob = "TRZ_oob.txt"
 1861.1.1 = {
 	oob = "/1861/TRZ_oob.txt"
 }
-

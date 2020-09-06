@@ -4,6 +4,10 @@ political_decisions = {
 		alert = no 
 		potential = {
 			OR = {
+                has_country_flag = government_decisions_on
+                ai = yes
+            }
+            OR = {
 				num_of_vassals_no_substates = 1
 				is_greater_power = yes
 			}
@@ -15,6 +19,7 @@ political_decisions = {
 		}
 		allow = { civilized = yes ai = no }
 		effect = { set_country_flag = return_cores_decision } 
+		ai_will_do = { factor = 0 }
 	}
 	return_core_off = { 
 		picture = return_cores_img
@@ -25,11 +30,16 @@ political_decisions = {
 		}
 		allow = { ai = no }
 		effect = { clr_country_flag = return_cores_decision } 
+		ai_will_do = { factor = 0 }
 	}
 	return_core_disabled = {
 		picture = return_cores_img
 		alert = no
 		potential = { 
+            OR = {
+                has_country_flag = government_decisions_on
+                ai = yes
+            }
 			has_country_flag = return_cores_decision 
 			NOT = { has_country_flag = return_core_disabled }
 		}

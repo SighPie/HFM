@@ -1,5 +1,5 @@
 color = { 235 254 174 }
-#color = { 144 80 155}
+colonial_company = { 229 196 68 }
 graphical_culture = Generic
 
 party = {

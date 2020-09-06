@@ -2,7 +2,7 @@ color = { 141  27  61 }
 graphical_culture = MiddleEasternGC
 
 party = {
-	name = "BHR_conservative"
+	name = "QAT_conservative"
 	start_date = 1800.1.1
 	end_date = 2000.1.1
 

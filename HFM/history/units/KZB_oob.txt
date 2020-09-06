@@ -45,5 +45,3 @@ regiment = {
 		name= "2nd Kazembe Warriors"
 		type = irregular	home = 1987	}
 }
-
-

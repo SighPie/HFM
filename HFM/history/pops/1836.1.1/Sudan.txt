@@ -1032,6 +1032,39 @@
 	}
 }
 
+#1817
+1817 = {
+	clergymen = {
+		culture = bedouin
+		religion = sunni
+		size = 50
+	}
+
+	artisans = {
+		culture = bedouin
+		religion = sunni
+		size = 100
+	}
+
+	soldiers = {
+		culture = bedouin
+		religion = sunni
+		size = 25
+	}
+
+	farmers = {
+		culture = bedouin
+		religion = sunni
+		size = 500
+	}
+	
+	farmers = {
+		culture = fur
+		religion = sunni
+		size = 500
+	}
+}
+
 #Taoudenni - Now Bayuda (8000/2000 POPS)
 1806 = {
 	aristocrats = {

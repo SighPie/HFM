@@ -1,7 +1,4 @@
-owner = DAM
-controller = DAM
-add_core = DAM
-add_core = DND
-trade_goods = grain
+trade_goods = wool
 life_rating = 32
 terrain = semidesert
+colonial = 1

@@ -73,7 +73,11 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+				government = dominion
+			}
 		}
 	}
 	
@@ -211,6 +215,7 @@ country_event = {
 			NOT = { terrain = arctic }
 			NOT = { terrain = desert }
 		}
+		year = 1870
 	}
 	
 	mean_time_to_happen = {
@@ -476,7 +481,13 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.7
-			terrain = jungle
+			OR = {
+				terrain = jungle
+				terrain = new_world_jungle
+				terrain = jungle_farmland
+				terrain = jungle_hills
+				terrain = jungle_mountains
+			}
 		}
 		modifier = {
 			factor = 0.9

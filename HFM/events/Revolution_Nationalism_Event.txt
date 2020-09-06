@@ -56,6 +56,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 		}
 		modifier = {
@@ -383,6 +384,7 @@ province_event = {
 			}
 		}
 		NOT = { has_province_modifier = colonial_chaos }
+        NOT = { has_province_modifier = partisan_occupation }
 	}
 	
 	mean_time_to_happen = {

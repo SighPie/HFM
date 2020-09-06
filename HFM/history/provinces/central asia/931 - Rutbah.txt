@@ -1,6 +1,11 @@
-owner = TUR
-controller = TUR
-add_core = TUR
+owner = AZH
+controller = AZH
+add_core = AZH
 add_core = IRQ
 trade_goods = sulphur
-life_rating = 10
+life_rating = 20
+1861.1.1 = {
+	controller = TUR 
+	owner = TUR
+	colonial = 1
+}

@@ -1213,6 +1213,7 @@ country_event = {
 		OR = {
 			government = democracy 
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			has_country_flag = transvaal_civil_war_happened
@@ -1221,6 +1222,7 @@ country_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = constitutional_empire
 			}
 		}
 	}
@@ -2557,9 +2559,12 @@ country_event = {
 					war_policy = pacifism
 				}
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
+					government = absolute_monarchy 
+					government = prussian_constitutionalism 
+					government = hms_government 
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			country_event = 6052 #Kruger telegram
@@ -2574,9 +2579,12 @@ country_event = {
 					war_policy = pacifism
 				}
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
+					government = absolute_monarchy 
+					government = prussian_constitutionalism 
+					government = hms_government 
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			country_event = 6052 #Kruger telegram
@@ -2620,9 +2628,12 @@ country_event = {
 					war_policy = pacifism
 				}
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
+					government = absolute_monarchy 
+					government = prussian_constitutionalism 
+					government = hms_government 
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			country_event = 6052 #Kruger telegram
@@ -2637,9 +2648,12 @@ country_event = {
 					war_policy = pacifism
 				}
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
+					government = absolute_monarchy 
+					government = prussian_constitutionalism 
+					government = hms_government 
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			country_event = 6052 #Kruger telegram

@@ -1,7 +1,6 @@
-owner = EGY
-controller = EGY
-add_core = EGY
-add_core = TUR
+owner = AZH
+controller = AZH
+add_core = AZH
 add_core = SYR
 trade_goods = grain
 life_rating = 10

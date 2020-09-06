@@ -71,3 +71,24 @@
 	}
 
 }
+
+#Môle St-Nicolas
+3284 = {
+	clergymen = {
+		culture = afro_antillean
+		religion = catholic
+		size = 75
+	}
+	
+	farmers = {
+		culture = afro_antillean
+		religion = catholic
+		size = 5500
+	}
+	
+	artisans = {
+		culture = afro_antillean
+		religion = catholic
+		size = 550
+	}
+}

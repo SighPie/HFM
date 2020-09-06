@@ -1,4 +1,3 @@
-
 army = {
 	name = "Imam's Army"
 	location = 1053
@@ -43,5 +42,3 @@ leader = {
 	prestige = 0.9
 	}
 }
-
-

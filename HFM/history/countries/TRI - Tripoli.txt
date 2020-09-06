@@ -55,7 +55,14 @@ set_country_flag = sunni_country
 foreign_weapons = yes_foreign_weapons
 
 # Technologies
+military_staff_system = 1
 flintlock_rifles = 1
+
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Inventions
 

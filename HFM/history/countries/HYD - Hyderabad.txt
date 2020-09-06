@@ -28,7 +28,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = no_draft
 debt_law = serfdom
@@ -60,6 +59,15 @@ flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
 
 # Inventions
+small_arms_production = yes
+ammunition_production = yes
+
+# Inventions
+#bottling_process = yes
+modern_winemaking = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

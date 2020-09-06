@@ -145,56 +145,6 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	anglo_afghan_war = {
-		picture = george_eden
-		potential = {
-			NOT = { war_exhaustion = 1 }
-			OR = {
-				AND = {
-					tag = EIC
-					is_substate = yes
-				}
-				AND = {
-					tag = ENG
-					owns = 1251
-					EIC = { exists = no }
-				}
-			}
-			AFG = {
-				exists = yes
-				is_vassal = no
-				NOT = { vassal_of = ENG }
-			}
-			NOT = { year = 1855 }
-			NOT = { has_country_flag = anglo_afghan_war }
-		}
-
-		allow = {
-			ENG = { 
-				war = no
-				NOT = { truce_with = AFG }
-			}
-			AFG = {
-				OR = { 
-					neighbour = EIC
-					neighbour = ENG
-				}
-				NOT = { 
-					relation = { who = ENG value = 150 } 
-					alliance_with = ENG
-				}
-				any_neighbor_country = { vassal_of = ENG }
-			}
-		}
-
-		effect = {
-			set_country_flag = anglo_afghan_war
-			ENG = { country_event = 99100 }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
 	india_penal_code = {
 		picture = "india_penal_code"
 		potential = { 
@@ -399,9 +349,12 @@ political_decisions = {
 			tag = EIC
 			is_vassal = no
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			NOT = { has_country_flag = attract_british_settlers }
 		}
@@ -456,9 +409,12 @@ political_decisions = {
 			tag = EIC
 			is_vassal = no
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 			exists = SWK
 			NOT = { has_country_flag = sarawak_treaty }
@@ -506,7 +462,7 @@ political_decisions = {
 		potential = {
 			tag = EIC
 			ai = yes
-			money = 250000
+			money = 100001
 			ENG = { NOT = { money = 50000 } }
 		}
 		
@@ -514,9 +470,9 @@ political_decisions = {
 		}
 		
 		effect = {
-			treasury = -200000
+			treasury = -100000
 			ENG = {
-				treasury = 200000
+				treasury = 100000
 			}
 		}
 		
@@ -545,7 +501,7 @@ political_decisions = {
 			money = 100001
 			is_greater_power = yes
 			integral_rail_system = 1
-			bessemer_process = 1
+			regenerative_furnaces = 1
 		}
 
 		effect = {
@@ -615,6 +571,7 @@ political_decisions = {
 		picture = anglification
 		potential = {
 			tag = EIC
+			exists = yes
 			ai = yes
 			OR = { 
 				has_global_flag = sepoy_rebellion

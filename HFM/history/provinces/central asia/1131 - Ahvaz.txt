@@ -1,6 +1,7 @@
-owner = PER
-controller = PER
-add_core = PER
+owner = KHZ
+controller = KHZ
+add_core = KHZ
 add_core = IRQ
 trade_goods = grain
 life_rating = 35
+terrain = semidesert

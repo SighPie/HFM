@@ -45,7 +45,7 @@ govt_flag = {
 
 set_country_flag = mahayana_country
 
-ruling_party = YNN_reactionary_2
+ruling_party = IMG_reactionary_2
 last_election = 1834.1.1
 upper_house = {
 	fascist = 0

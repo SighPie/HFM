@@ -71,7 +71,7 @@
 	farmers = {
 		culture = caribeno
 		religion = catholic
-		size = 28625
+		size = 41625
 	}
 
 	artisans = {
@@ -95,7 +95,7 @@
 	slaves = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 38000
+		size = 25000
 	}
 }
 #Jagua (252000/63000 POPS)
@@ -115,7 +115,7 @@
 	artisans = {
 		culture = caribeno
 		religion = catholic
-		size = 1200
+		size = 2200
 	}
 
 	soldiers = {
@@ -127,13 +127,13 @@
 	farmers = {
 		culture = caribeno
 		religion = catholic
-		size = 21575
+		size = 30575
 	}
 
 	artisans = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 2000
+		size = 1000
 	}
 
 	soldiers = {
@@ -145,13 +145,13 @@
 	farmers = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 11850
+		size = 2850
 	}
 
 	slaves = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 25000
+		size = 26000
 	}
 }
 #Camaguey (168000/42000 POPS)
@@ -183,7 +183,7 @@
 	farmers = {
 		culture = caribeno
 		religion = catholic
-		size = 8500
+		size = 17500
 	}
 
 	artisans = {
@@ -207,7 +207,7 @@
 	slaves = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 25000
+		size = 16000
 	}
 }
 #Santiago de Cuba (128000/32000 POPS)
@@ -227,7 +227,7 @@
 	artisans = {
 		culture = caribeno
 		religion = catholic
-		size = 3500
+		size = 4500
 	}
 
 	soldiers = {
@@ -239,13 +239,13 @@
 	farmers = {
 		culture = caribeno
 		religion = catholic
-		size = 8975
+		size = 9975
 	}
 
 	artisans = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 1500
+		size = 500
 	}
 
 	soldiers = {
@@ -257,7 +257,7 @@
 	farmers = {
 		culture = afro_caribeno
 		religion = catholic
-		size = 3300
+		size = 2300
 	}
 
 	slaves = {

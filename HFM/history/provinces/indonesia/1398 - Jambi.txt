@@ -1,6 +1,6 @@
-owner = NET
-controller = NET
+owner = DJA
+controller = DJA
 add_core = DJA
 trade_goods = grain
 life_rating = 31
-colonial = 2
+terrain = jungle_mountains

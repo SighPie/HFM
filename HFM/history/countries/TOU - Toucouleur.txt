@@ -1,10 +1,9 @@
 capital = 1800
 primary_culture = fulbe
-culture = bambara
 culture = songhai
 culture = tuareg
 religion = sunni
-government = absolute_monarchy
+government = theocracy
 plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.01

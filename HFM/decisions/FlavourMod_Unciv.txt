@@ -2,9 +2,14 @@ political_decisions = {
 	foreign_advisors = {
 		picture = foreign_consul
 		potential = { 
-			war = no
 			civilized = no
-			part_of_sphere = yes
+			OR = {
+				part_of_sphere = yes
+				AND = {
+					is_vassal = yes
+					overlord = { civilized = yes }
+				}
+			}
 			NOT = {
 				has_country_modifier = foreign_weapons_imported
 				has_country_modifier = uncivilized_isolationism
@@ -19,19 +24,30 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
 			OR = {
 				AND = { 
-					sphere_owner = { invention = field_training }
+					OR = {
+						sphere_owner = { invention = field_training }
+						overlord = { invention = field_training }
+					}
 					money = 25001
 					foreign_training = no_foreign_training
 				}
 				AND = { 
 					sphere_owner = { army_professionalism = 1 }
+					OR = {
+						sphere_owner = { army_professionalism = 1 }
+						overlord = {  army_professionalism = 1 }
+					}
 					money = 10001
 					foreign_officers = no_foreign_officers
 				}
 				AND = { 
-					sphere_owner = { invention = army_academic_training }
+					OR = {
+						sphere_owner = { invention = army_academic_training }
+						overlord = { invention = army_academic_training }
+					}
 					money = 25001
 					literacy = 0.05
 					army_schools = no_army_schools
@@ -41,10 +57,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = foreign_weapons_imported
-				duration = 365
-			}
+			add_country_modifier = { name = foreign_weapons_imported duration = 365 }
 			random_country = {
 				limit = { is_sphere_leader_of = THIS }
 				relation = { who = THIS value = 100 }
@@ -57,7 +70,10 @@ political_decisions = {
 					owner = { 
 						money = 25001
 						foreign_training = no_foreign_training 
-						sphere_owner = { invention = field_training }
+						OR = {
+							sphere_owner = { invention = field_training }
+							overlord = { invention = field_training }
+						}
 					}
 				}
 				owner = {
@@ -65,18 +81,9 @@ political_decisions = {
 					treasury = -25000
 					country_event = 90959
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}					
 					research_points = -2000
 				}
@@ -88,7 +95,10 @@ political_decisions = {
 					owner = { 
 						money = 10001
 						foreign_officers = no_foreign_officers
-						sphere_owner = { army_professionalism = 1 }
+						OR = {
+							sphere_owner = { army_professionalism = 1 }
+							overlord = { army_professionalism = 1 }
+						}
 					}
 				}
 				owner = {
@@ -98,18 +108,9 @@ political_decisions = {
 					activate_technology = military_staff_system
 					country_event = 90959
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -1000
 				}
@@ -122,7 +123,10 @@ political_decisions = {
 						money = 25001
 						army_schools = no_army_schools
 						literacy = 0.05
-						sphere_owner = { invention = army_academic_training }
+						OR = {
+							sphere_owner = { invention = army_academic_training }
+							overlord = { invention = army_academic_training }
+						}
 					}
 				}
 				owner = {
@@ -134,18 +138,9 @@ political_decisions = {
 						owner = { remove_country_modifier = corrupt_army } 
 					}
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -3000
 				}
@@ -158,9 +153,14 @@ political_decisions = {
 	import_foreign_weapons = {
 		picture = begin_line_of_advantage
 		potential = { 
-			war = no
 			civilized = no
-			part_of_sphere = yes
+			OR = {
+				part_of_sphere = yes
+				AND = {
+					is_vassal = yes
+					overlord = { civilized = yes }
+				}
+			}
 			NOT = {
 				has_country_modifier = foreign_weapons_imported
 				has_country_modifier = uncivilized_isolationism
@@ -175,19 +175,29 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
 			OR = {
 				AND = { 
-					sphere_owner = { invention = breech_loaded_rifle_armament }
+					OR = {
+						sphere_owner = { invention = breech_loaded_rifle_armament }
+						overlord = { invention = breech_loaded_rifle_armament }
+					}
 					money = 35001
 					foreign_weapons = no_foreign_weapons
 				}
 				AND = { 
-					sphere_owner = { iron_muzzle_loaded_artillery = 1 }
+					OR = {
+						sphere_owner = { iron_muzzle_loaded_artillery = 1 }
+						overlord = { iron_muzzle_loaded_artillery = 1 }
+					}
 					money = 55001
 					foreign_artillery = no_foreign_artillery
 				}
 				AND = { 
-					sphere_owner = { invention = field_fortifications }
+					OR = {
+						sphere_owner = { invention = field_fortifications }
+						overlord = { invention = field_fortifications }
+					}
 					money = 45001
 					military_constructions = no_military_constructions
 				}
@@ -196,10 +206,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = foreign_weapons_imported
-				duration = 365
-			}
+			add_country_modifier = { name = foreign_weapons_imported duration = 365 }
 			random_country = {
 				limit = { is_sphere_leader_of = THIS }
 				relation = { who = THIS value = 100 }
@@ -211,7 +218,10 @@ political_decisions = {
 					owner = { 
 						money = 35001
 						foreign_weapons = no_foreign_weapons
-						sphere_owner = { invention = breech_loaded_rifle_armament }
+						OR = {
+							sphere_owner = { invention = breech_loaded_rifle_armament }
+							overlord = { invention = breech_loaded_rifle_armament }
+						}
 					} 
 				}
 				owner = {
@@ -221,18 +231,9 @@ political_decisions = {
 					activate_technology = muzzle_loaded_rifles
 					set_country_flag = using_foreign_weapons
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -1000
 				}
@@ -244,30 +245,22 @@ political_decisions = {
 					owner = { 
 						money = 55001
 						foreign_artillery = no_foreign_artillery
-						sphere_owner = { iron_muzzle_loaded_artillery = 1 }
+						OR = {
+							sphere_owner = { iron_muzzle_loaded_artillery = 1  }
+							overlord = { iron_muzzle_loaded_artillery = 1  }
+						}
 					} 
 				}
 				owner = {
 					military_reform = yes_foreign_artillery 
 					treasury = -75000
-					
 					activate_technology = bronze_muzzle_loaded_artillery
 					activate_technology = iron_muzzle_loaded_artillery
 					set_country_flag = using_foreign_artillery
-					
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -1000
 				}
@@ -279,7 +272,10 @@ political_decisions = {
 					owner = { 
 						money = 45001
 						military_constructions = no_military_constructions 
-						sphere_owner = { invention = field_fortifications }
+						OR = {
+							sphere_owner = { invention = field_fortifications }
+							overlord = { invention = field_fortifications }
+						}
 					} 
 				}
 				owner = {
@@ -291,18 +287,9 @@ political_decisions = {
 						limit_to_world_greatest_level = yes
 					}
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -3000
 				}
@@ -315,9 +302,14 @@ political_decisions = {
 	import_naval_technology = {
 		picture = ironclad_commissions
 		potential = { 
-			war = no
 			civilized = no
-			part_of_sphere = yes
+			OR = {
+				part_of_sphere = yes
+				AND = {
+					is_vassal = yes
+					overlord = { civilized = yes }
+				}
+			}
 			any_owned_province = { has_building = naval_base }
 			NOT = {
 				has_country_modifier = foreign_weapons_imported
@@ -333,21 +325,30 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
 			OR = {
 				AND = {
-					sphere_owner = { iron_steamers = 1 }
+					OR = {
+						sphere_owner = { iron_steamers = 1 }
+						overlord = { iron_steamers = 1 }
+					}
 					money = 65001
 					foreign_navies = no_foreign_navies
 				}
 				
 				AND = { 
-					sphere_owner = { raider_group_doctrine = 1 }
-					
+					OR = {
+						sphere_owner = { raider_group_doctrine = 1 }
+						overlord = { raider_group_doctrine = 1 }
+					}
 					money = 55001
 					western_shipyards = no_western_shipyards
 				}
 				AND = { 
-					sphere_owner = { naval_professionalism = 1 }
+					OR = {
+						sphere_owner = { naval_professionalism = 1 }
+						overlord = { naval_professionalism = 1 }
+					}
 					money = 10001
 					foreign_naval_officers = no_foreign_naval_officers
 				}
@@ -372,30 +373,22 @@ political_decisions = {
 					owner = { 
 						money = 65001
 						foreign_navies = no_foreign_navies
-						sphere_owner = { iron_steamers = 1 }
+						OR = {
+							sphere_owner = { iron_steamers = 1 }
+							overlord = { iron_steamers = 1 }
+						}
 					} 
 				}
 				owner = {
 					military_reform = yes_foreign_navies
 					treasury = -65000
-					
 					activate_technology = clipper_design
 					activate_technology = steamers
 					set_country_flag = using_foreign_ships
-					
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -3000
 				}
@@ -407,29 +400,21 @@ political_decisions = {
 					owner = { 
 						money = 55001
 						western_shipyards = no_western_shipyards
-						sphere_owner = { raider_group_doctrine = 1 }
+						OR = {
+							sphere_owner = { raider_group_doctrine = 1 }
+							overlord = { raider_group_doctrine = 1 }
+						}
 					} 
 				}
 				owner = {
 					military_reform = yes_western_shipyards
 					treasury = -55000
-					
 					activate_technology = post_nelsonian_thought
 					set_country_flag = using_foreign_shipyards
-					
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -3000
 				}
@@ -441,27 +426,20 @@ political_decisions = {
 					owner = { 
 						money = 10001
 						foreign_naval_officers = no_foreign_naval_officers
-						sphere_owner = { naval_professionalism = 1 }
+						OR = {
+							sphere_owner = { naval_professionalism = 1 }
+							overlord = { naval_professionalism = 1 }
+						}
 					} 
 				}
 				owner = {
 					military_reform = yes_foreign_naval_officers
 					treasury = -10000
-					
 					country_event = 90959
 					any_pop = {
-						scaled_militancy = {
-							ideology = liberal
-							factor = 0.25
-						}
-						scaled_militancy = {
-							ideology = conservative
-							factor = 0.5
-						}
-						scaled_militancy = {
-							ideology = reactionary
-							factor = 1.5
-						}
+						scaled_militancy = { ideology = liberal factor = 0.25 }
+						scaled_militancy = { ideology = conservative factor = 0.5 }
+						scaled_militancy = { ideology = reactionary factor = 1.5 }
 					}
 					research_points = -1000
 				}
@@ -607,10 +585,7 @@ political_decisions = {
 			NOT = { has_country_flag = sarawak_rangers }
 		}
 		
-		allow = {
-			foreign_weapons = yes_foreign_weapons
-			government = absolute_monarchy
-		}
+		allow = { foreign_weapons = yes_foreign_weapons }
 		
 		effect = {
 			military_reform = yes_foreign_artillery

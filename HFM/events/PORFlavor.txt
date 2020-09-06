@@ -14,7 +14,10 @@ country_event = {
 
 	trigger = {
 		tag = POR
-		government = hms_government
+		OR = {
+			government = hms_government
+			government = constitutional_empire
+		}
 		has_global_flag = liberal_revolution_somewhere
 		NOT = { ruling_party_ideology = reactionary }
 		NOT = {
@@ -80,7 +83,10 @@ province_event = {
 		owner = {
 			tag = POR
 			has_country_flag = maria_de_fonte_revolution
-			government = hms_government
+			OR = {
+				government = hms_government
+				government = constitutional_empire
+			}
 			NOT = { ruling_party_ideology = reactionary }
 		}
 		is_capital = no
@@ -132,7 +138,10 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { government = hms_government }
+			NOT = { 
+				government = hms_government 
+				government = constitutional_empire
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -176,7 +185,10 @@ country_event = {
 		tag = POR
 		has_country_flag = maria_de_fonte_revolution
 		any_owned_province = { has_province_modifier = peasant_revolt }
-		government = hms_government
+		OR = {
+			government = hms_government
+			government = constitutional_empire
+		}
 		NOT = { ruling_party_ideology = reactionary }
 	}
 
@@ -203,6 +215,14 @@ country_event = {
 		political_reform = appointed
 		political_reform = harassment
 		government = prussian_constitutionalism
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        set_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
 		
 		add_country_modifier = {
 			name = national_confusion
@@ -293,7 +313,7 @@ country_event = {
 				2008 = { empty = no }
 				2010 = { empty = no }
 				2011 = { empty = yes }
-				2010 = { owned_by = THIS }
+				2009 = { owned_by = THIS }
 			}
 			owner = { prestige = 2 }
 			2011 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
@@ -406,6 +426,11 @@ country_event = {
 			2056 = { empty = yes } #Zumbo
 			2054 = { empty = yes } #Tete
 			2581 = { empty = yes } #Mataka
+			2054 = { empty = yes } #Tete
+			2056 = { empty = yes } #Zumbo
+			2065 = { empty = yes } #Milange
+			2064 = { empty = yes } #Nampula
+			2063 = { empty = yes } #Ibo
 		}
 	}
 
@@ -426,7 +451,7 @@ country_event = {
 				2055 = { owned_by = THIS }
 			}
 			owner = { prestige = 2 }
-			2056 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+			2056 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
 		}
 		random_owned = {
 			limit = {
@@ -438,7 +463,7 @@ country_event = {
 				2054 = { owned_by = THIS }
 			}
 			owner = { prestige = 2 }
-			2055 = { secede_province = POR }
+			2055 = { secede_province = THIS }
 		}
 		random_owned = {
 			limit = {
@@ -449,7 +474,7 @@ country_event = {
 				2058 = { owned_by = THIS }
 			}
 			owner = { prestige = 2 }
-			2054 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+			2054 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
 		}
 		random_owned = {
 			limit = {
@@ -462,7 +487,7 @@ country_event = {
 				}
 			}
 			owner = { prestige = 2 }
-			2058 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+			2058 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 		}
 		random_owned = {
 			limit = {
@@ -474,7 +499,7 @@ country_event = {
 				}
 			}
 			owner = { prestige = 2 }
-			2052 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
+			2052 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 		}
 		random_owned = {
 			limit = {
@@ -485,7 +510,31 @@ country_event = {
 				}
 			}
 			owner = { prestige = 2 }
-			2581 = { secede_province = POR any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 20 }
+			2581 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 20 }
+		}
+		random_owned = {
+			limit = {
+				2063 = { empty = yes }
+				2064 = { owned_by = THIS }
+			}
+			owner = { prestige = 2 }
+			2063 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+		}
+		random_owned = {
+			limit = {
+				2065 = { empty = yes }
+				2059 = { owned_by = THIS }
+			}
+			owner = { prestige = 2 }
+			2065 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
+		}
+		random_owned = {
+			limit = {
+				2065 = { empty = yes }
+				2061 = { owned_by = THIS }
+			}
+			owner = { prestige = 2 }
+			2064 = { secede_province = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } life_rating = 25 }
 		}
 	}
 }
@@ -709,11 +758,14 @@ country_event = {
 	trigger = {
 		tag = POR
 		year = 1905
-			OR = {
-		government = hms_government
-		government = prussian_constitutionalism
-		government = absolute_monarchy
-				}
+		OR = { 
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = absolute_empire
+			government = semi_constitutional_empire
+			government = constitutional_empire
+		}	
 		NOT = {
 			has_country_flag = regicide_king_carlos
 			year = 1915
@@ -831,6 +883,15 @@ country_event = {
 		political_reform = non_socialist
 		political_reform = gerrymandering
 		political_reform = no_slavery
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+
 		random_owned = {
 			limit = { owner = { NOT = { child_labor = child_labor_illegal } } }
 			owner = { social_reform = child_labor_restricted }
@@ -912,6 +973,7 @@ country_event = {
 		}
 		ai_chance = { factor = 100 }
 	}
+	
 	option = {
 		name = "EVT49514OPTB"
 		prestige = -5
@@ -929,7 +991,7 @@ country_event = {
 	
 	trigger = {
 		tag = POR
-		year = 1850
+		year = 1845
 		2049 = { owner = { civilized = no ai = yes war = no } }
 		2050 = { owner = { civilized = no ai = yes war = no } }
 	}
@@ -947,11 +1009,11 @@ country_event = {
 			any_pop = { reduce_pop = 0.9 }
 			change_province_name = "Lourenço Marques"
 		}
-		2050 = {
+		2051 = {
 			secede_province = THIS
-			change_province_name = "Manjacaze"
+			change_province_name = "Terra de Boa Gente"
+			state_scope = { change_region_name = "Lourenço Marques" } 
 		}
-		2051 = { state_scope = { change_region_name = "Lourenço Marques" } }
 	}
 }
 

@@ -1,4 +1,11 @@
 #Relations
+NEJ = {
+	value = -150
+}
+
+HAL = {
+	value = -50
+}
 
 FDL = {
 	value = -200		#relation
@@ -6,6 +13,10 @@ FDL = {
 
 MHR = {
 	value = -200		#relation
+}
+
+NYE = {
+	value = -50
 }
 
 LHJ = {
@@ -16,9 +27,16 @@ ENG = {
 	value = 0		#relation
 }
 
+leader = {
+	name = "Ghalib ibn Muhsin al-Kathir"
+	type = land
+	date = 1836.1.1
+	personality = stalwart
+	background = aristocrat
+}
 
 army = {
-	name = "Sultan Army"
+	name = "Sultan's Army"
 	location = 1173
 	regiment = {
 		name= "1. Brigade"
@@ -26,5 +44,3 @@ army = {
 		home = 1173
 	}
 }
-
-

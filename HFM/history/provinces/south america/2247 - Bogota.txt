@@ -2,5 +2,5 @@ owner = CLM
 controller = CLM
 add_core = CLM
 trade_goods = cattle
-life_rating = 35
-terrain = bogota
+life_rating = 39
+#terrain = bogota

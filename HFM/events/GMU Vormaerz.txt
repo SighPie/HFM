@@ -1,9 +1,6 @@
 ### Events 200007-200052 ### Vormaerz ### by Marco Dandolo ###
-
 # Events 200007-13 Goettinger Seven
-
-#Vormaerz in general
-
+##Vormaerz in general##
 # Event  200014    Introduction
 # Event  200015    Kneeling controversy (BAV)
 # Events 200016-18 Free press events (BAD)
@@ -15,9 +12,7 @@
 # Event  200033    Goethedenkmal
 # Event  200034    Kurhessischer Verfassungskonflikt
 # Event  200035    Kosmos (Humboldt)
-
 # Events 200036-45 Composers
-
 # Event  200036    Schumann
 # Event  200037    Mendelssohn
 # Event  200038    Liszt
@@ -28,119 +23,70 @@
 # Event  200043    Richard Strauss
 # Event  200044    Anton Bruckner
 # Event  200045    Schönberg
-
-#Other Vormaerz events
-
+##Other Vormaerz events##
 # Event  200046    Mondnacht
 # Event  200047    Spitzweg
 # Event  200048    Brentano
 # Event  200049-52 The Weavers
 
-
-
 ########################
 # The Goettinger Seven #
 ########################
 
-
-#Revocation of the constitution
+#Revocation of the Constitution
 country_event = {
-
 	id = 200007
-
 	title = "EVTNAME200007" 
 	desc = "EVTDESC200007"
 	picture = "queenvictoria"
+	fire_only_once = yes
+	major = yes
 
 	trigger = {
 		NOT = { vassal_of = ENG }
 		tag = HAN
-                owns = 537
+        owns = 537
 		NOT = {
 			has_country_flag = han_constitution_revoked
 			has_country_flag = han_constitution_approved
 		}
 	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		days = 5
-	}
+	
+	mean_time_to_happen = { days = 5 }
 
 	option = {
-		name = "Suspend the constitution, it does not meet the kingdoms needs."
+		name = "EVTOPTA200007"
 		set_country_flag = han_constitution_revoked
 		prestige = 10
 		government = absolute_monarchy
 		political_reform = none_voting
-			any_pop = {
-				scaled_consciousness = {
-					ideology = liberal
-					factor = 1.5
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = -2
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = reactionary
-					factor = -3
-				}
-			}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
+		any_pop = { scaled_militancy = { ideology = conservative factor = -2 } }
+		any_pop = { scaled_militancy = { ideology = reactionary factor = -3 } }
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = reactionary
-				factor = 0.05
-			}
-                 }
-		ai_chance = {
-			factor = 99
-			}
+			limit = { is_culture_group = germanic }
+			ideology = { value = reactionary factor = 0.05 }
+		}
+		ai_chance = { factor = 100 }
 
 	}
 
 	option = {
-		name = "The monarch does not stay above the law."
+		name = "EVTOPTB200007"
 		set_country_flag = han_constitution_approved
+		nationalvalue = nv_order
 		prestige = -20
-			any_pop = {
-				scaled_consciousness = {
-					ideology = liberal
-					factor = -3
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = 8
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = reactionary
-					factor = 10
-				}
-			}
-		ai_chance = {
-			factor = 1
-			}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = -3 } }
+		any_pop = { scaled_militancy = { ideology = conservative factor = 8 } }
+		any_pop = { scaled_militancy = { ideology = reactionary factor = 10 } }
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
-
 #The Goettinger Seven
 country_event = {
-
 	id = 200008
-
 	title = "EVTNAME200008"
 	desc = "EVTDESC200008"
 	picture = "diesieben"
@@ -148,281 +94,145 @@ country_event = {
 
 	trigger = {
 		tag = HAN
-			has_country_flag = han_constitution_revoked
+		has_country_flag = han_constitution_revoked
 		NOT = { has_global_flag = die_goettinger_sieben }
 		NOT = { has_global_flag = die_goettinger_sieben_approve }
-
-
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "How dare they? They should be removed from their positions and be banished!"
+		name = "EVTOPTA200008"
 		prestige = 5
 		set_global_flag = die_goettinger_sieben
 		set_country_flag = goettinger_sieben_bad
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-                 }
-			any_pop = {
-				scaled_consciousness = {
-					ideology = liberal
-					factor = 2
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = 1.5
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = reactionary
-					factor = -1
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = -1
-				}
-			}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
+			limit = { is_culture_group = germanic }
+			ideology = { value = liberal factor = 0.01 } }
+			any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
+			any_pop = { scaled_militancy = { ideology = liberal factor = 1.5 } }
+			any_pop = { scaled_militancy = { ideology = reactionary factor = -1 } }
+			any_pop = { scaled_militancy = { ideology = conservative factor = -1 } }
+			middle_strata = { ideology = { value = liberal factor = 0.02 }
 		}
 		ENG = { country_event = 200010 }
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200009
 		}
-		ai_chance = {
-			factor = 99
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
-		name = "They are right. We should strive for a more liberal society."
+		name = "EVTOPTB200008"
 		set_country_flag = die_goettinger_sieben_approve
+		nationalvalue = nv_liberty
 		government = prussian_constitutionalism
 		political_reform = free_press
-                vote_franschise = wealth_voting
+		vote_franschise = wealth_voting
 		prestige = -50
-			any_pop = {
-				limit = {
-					is_culture_group = germanic
-				}
-				ideology = {
-					value = liberal
-					factor = 0.05
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = liberal
-					factor = -2
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = conservative
-					factor = 8
-				}
-			}
-			any_pop = {
-				scaled_militancy = {
-					ideology = reactionary
-					factor = 10
-				}
-			}
-
-		ai_chance = {
-			factor = 1		
+		any_pop = { 
+			limit = { is_culture_group = germanic } 
+			ideology = { value = liberal factor = 0.05 } 
 		}
+		any_pop = { scaled_militancy = { ideology = liberal factor = -2 } }
+		any_pop = { scaled_militancy = { ideology = conservative factor = 8 } }
+		any_pop = { scaled_militancy = { ideology = reactionary factor = 10 } }
+
+		ai_chance = { factor = 0 }
 	}
 }
 
-#The cause in the german states
+#The Cause in the German States
 country_event = {
-
 	id = 200009
-
 	title = "EVTNAME200009"
 	desc = "EVTDESC200009"
 	picture = "diesieben"
-
 	is_triggered_only = yes
 
 	option = {
-		name = "Even if liberalism is a thread, the king has gone too far."
+		name = "EVTOPTA200009"
 		set_country_flag = goettinger_sieben_good
 		plurality = 2
-                relation = {
-	                     who = FROM
-	                     value = -5
-                }
+        relation = { who = FROM  value = -25 }
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-                 }
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
+			limit = { is_culture_group = germanic }
+			ideology = { value = liberal factor = 0.01 }
 		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 1.5
-			}
-		}
+		middle_strata = { ideology = { value = liberal factor = 0.01 } }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 1.5 } }
 
 		ai_chance = {
 			factor = 75
-		        modifier = {
-			            factor = 0
-			            tag = AUS
-		                   }
+			modifier = {
+				factor = 0
+				tag = AUS
+		   }
 		}
-
 	}
 
 	option = {
-		name = "Oh, these academics. Have they nothing else to do?"
+		name = "EVTOPTB200009"
 		set_country_flag = goettinger_sieben_bad
-		prestige = 6
-                relation = {
-	                     who = FROM
-	                     value = 5
-                }
+		prestige = 5
+         relation = { who = FROM value = 25 }
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-                 }
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-		}
-		any_pop = {
-				scaled_consciousness = {
-					ideology = liberal
-					factor = 2
-				}
-		}
+			limit = { is_culture_group = germanic }
+			ideology = { value = liberal factor = 0.01 }
+		 }
+		middle_strata = { ideology = { value = liberal factor = 0.01 } }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
 
-		ai_chance = {
-			factor = 25
-						
-		}
+		ai_chance = { factor = 25 }
 	}
 }
 
-#Britain reacts
+#Britain Reacts
 country_event = {
-
 	id = 200010
-
 	title = "EVTNAME200010"
 	desc = "EVTDESC200010"
 	picture = "diesieben"
-
 	is_triggered_only = yes
 
 	option = {
-		name = "Naturally. A country, which leaves the British sphere, becomes a victim of barbarity."
+		name = "EVTOPTA200010"
 		set_country_flag = goettinger_sieben_good
 		prestige = 1
-		relation = {
-			 who = FROM
-			 value = -25
-		}
-
-
+		relation = { who = FROM  value = -25 }
 	}
 }
 
 #Student Propaganda
 country_event = {
-
 	id = 200011
-
 	title = "EVTNAME200011"
 	desc = "EVTDESC200011"
 	picture = "Revolution"
 
 	trigger = {
-                    NOT = { has_country_flag = goettingen_student_propaganda }
-                    NOT = { has_country_flag = liberal_revolution_fired }
-                            has_country_flag = goettinger_sieben_bad
-
-
+		NOT = { has_country_flag = goettingen_student_propaganda }
+		NOT = { has_country_flag = liberal_revolution_fired }
+		has_country_flag = goettinger_sieben_bad
 	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 2
-	}
+	
+	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "Stop this nonsense! Will this never end?"
+		name = "EVTOPTA200011"
 		set_country_flag = goettingen_student_propaganda
-		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-                 }
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
 	}
 }
 
-#Dahlmann&others
+#Dahlmann & Others
 country_event = {
-
 	id = 200012
-
 	title = "EVTNAME200012"
 	desc = "EVTDESC200012"
 	picture = "diesieben"
@@ -479,44 +289,33 @@ country_event = {
 	}
 
 	option = {
-		name = "They are welcome."
+		name = "EVTOPTA200012"
 		set_global_flag = goettingen_seven_here
-                prestige = 20
-		plurality = 10
+		prestige = 5
+		plurality = 1
+		relation = { who = HAN value = -50 }
+		random_owned = { limit = { owner = { is_greater_power = yes } } owner = { diplomatic_influence = { who = HAN value = -100 } } }
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-			ideology = {
-				value = liberal
-				factor = 0.03
-			}
-                 }
-
+			limit = { is_culture_group = germanic }
+			ideology = { value = liberal factor = 0.01 }
+		}
 	}
 
 	option = {
-		name = "Thank you, we have got enough strange academics here."
-                set_country_flag = no_goettingen_seven_here
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 2
-			}
-		}
-
+		name = "EVTOPTB200012"
+		set_country_flag = no_goettingen_seven_here
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
 	}
 }
 
 #Aftermath
 country_event = {
-
 	id = 200013
-
 	title = "EVTNAME200013"
 	desc = "EVTDESC200013"
 	picture = "diesieben"
-
+	fire_only_once = yes
+	
 	trigger = {
 	   NOT = { has_country_flag = die_goettinger_sieben_honoured }
 	   has_global_flag = die_goettinger_sieben
@@ -529,6 +328,7 @@ country_event = {
 	   OR = { 
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 	   }
 	   OR = { 
 			ruling_party_ideology = conservative
@@ -538,28 +338,20 @@ country_event = {
 
 	}
 
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Honour to whom honour is due."
 		set_country_flag = die_goettinger_sieben_honoured
-                plurality = 5
-                prestige = 20
+		plurality = 5
+		prestige = 10
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
-                        militancy = -0.5
-                    consciousness = -0.5
-                 }
+			limit = { is_culture_group = germanic }
+			militancy = -0.5
+			consciousness = -0.5
+		 }
 	}
 }
-
-
 
 ##################################################
 # These Events deal with the Vormaerz in general #
@@ -567,7 +359,6 @@ country_event = {
 
 #Introduction
 country_event = {
-
 	id = 200014
 	title = "EVTNAME200014"
 	desc = "EVTDESC200014"
@@ -578,65 +369,54 @@ country_event = {
 		is_culture_group = germanic
 		NOT = { has_country_flag = liberal_revolution_fired }
 		NOT = { has_country_flag = vormaerz }
-
 	}
  
-	mean_time_to_happen =  {
-		days = 1
-
-	}	
+	mean_time_to_happen =  { days = 1 }	
 
 	option = {
-		name = "At least, they are allowed to think..." 
+		name = "EVTOPTA200014" 
 		set_country_flag = vormaerz
 	}	
 }
 
 #Kneeling controversy (BAV)
 country_event = {
-
 	id = 200015
 	title = "EVTNAME200015"
 	desc = "EVTDESC200015"
 	picture = "bayern"
-
+	fire_only_once = yes
+	
 	trigger = {
 		tag = BAV
 		year = 1838 
 		NOT = { year = 1845 }
 	}
-
-	fire_only_once = yes
  
-	mean_time_to_happen =  {
-		months = 6
-
-	}
+	mean_time_to_happen =  { months = 6 }
 
 	option = {
-		name = "On the knee!" 
+		name = "EVTOPTA200015" 
 		prestige = 2
 		any_pop = {
 			limit = { has_pop_religion = protestant }
 			consciousness = 1
 			militancy = 0.5
 		}
-		ai_chance = {
-			factor = 100
-			}
+		
+		ai_chance = { factor = 100 }
 	}	
 
 	option = {
-		name = "And what is with our protestant subjects?"
+		name = "EVTOPTB200015"
 		prestige = -2 
 		any_pop = {
 			limit = { has_pop_religion = catholic }
 			consciousness = 1
 			militancy = 0.5
 		}
-		ai_chance = {
-			factor = 0
-		}
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -645,11 +425,13 @@ country_event = {
 #################
 
 #Era Blittersdorf (BAD)
-
 country_event = {
-
 	id = 200016
-
+	title = "EVTNAME200016"
+	desc = "EVTDESC200016"
+	picture = "meeting3"
+	fire_only_once = yes
+	
 	trigger = {
 		tag = BAD
 		year = 1838 
@@ -660,66 +442,36 @@ country_event = {
 		}
 	}
 
-	fire_only_once = yes
- 
-	mean_time_to_happen =  {
-		days = 10
-
-	}
-
-	title = "EVTNAME200016"
-	desc = "EVTDESC200016"
-	picture = "meeting3"
+	mean_time_to_happen =  { days = 10 }
 
 	option = {
-		name = "He is a monarchist. That is good for Baden." 
+		name = "EVTOPTA200016" 
 		prestige = 2
 		any_pop = {
 			limit = { type = bureaucrats }
 			consciousness = 2
 			militancy = 1
 		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 	}	
 }
 
 #Free Press in Baden (AUS/PRU)
-
 country_event = {
-
 	id = 200017
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200017"
 	desc = "EVTDESC200017"
 	picture = "news"
 
 	option = {
-		name = "That is against our interests!" 
+		name = "EVTOPTA200017" 
 		prestige = 5
 		set_country_flag = against_baden_press
-		relation = {
-				 who = FROM
-				 value = -50
-		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
-		any_pop = {
-			scaled_militancy = {
-				ideology = liberal
-				factor = 0.25
-			}
-		}
+		relation = {  who = FROM value = -50 }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
+		any_pop = { scaled_militancy = { ideology = liberal factor = 0.5 } }
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -736,19 +488,18 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = absolute_monarchy
-                        }
-                }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
+		}
 	}	
 
 	option = {
-		name = "They have every right to do what they want." 
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = -0.5
-			}
-		}
+		name = "EVTOPTB200017" 
+		any_pop = { scaled_consciousness = { ideology = liberal factor = -0.5 } }
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -757,22 +508,30 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.6
-				government = prussian_constitutionalism
-                        }
+				OR = {
+					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 1.7
-				government = hms_government
-                        }
-                }
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
+		}
 	}
 }
 
 #Response to Baden
-
 country_event = {
-
 	id = 200018
-
+	title = "EVTNAME200018"
+	desc = "EVTDESC200018"
+	picture = "news"
+	fire_only_once = yes
+	
 	trigger = {
 		tag = BAD
 		has_country_flag = free_press_in_baden
@@ -780,108 +539,70 @@ country_event = {
 		AUS = { has_country_flag = against_baden_press }
 	}
 
-	fire_only_once = yes
- 
-	mean_time_to_happen =  {
-		days = 7
-
-	}
-
-	title = "EVTNAME200018"
-	desc = "EVTDESC200018"
-	picture = "news"
+	mean_time_to_happen =  { days = 7 }
 
 	option = {
-		name = "We shall exercise our sovereignty." 
+		name = "EVTOPTA200018" 
 		prestige = 2
-		relation = {
-				 who = AUS
-				 value = -50
-		}
-		relation = {
-				 who = PRU
-				 value = -50
-		}
-		ai_chance = {
-			factor = 60
-		}
+		relation = { who = AUS  value = -50 }
+		relation = {  who = PRU  value = -50 }
+		AUS = { diplomatic_influence = { who = THIS value = -50 } }
+		PRU = { diplomatic_influence = { who = THIS value = -50 } }
+
+		ai_chance = { factor = 60 }
 	}
+	
 	option = {
-		name = "Revoke the reform." 
+		name = "EVTOPTB200018" 
 		prestige = -2
-		relation = {
-				 who = AUS
-				 value = 150
-		}
-		relation = {
-				 who = PRU
-				 value = 150
-		}
+		relation = { who = AUS  value = 150 }
+		relation = {  who = PRU value = 150 }
 		political_reform = censored_press
-		any_pop = {
-			scaled_militancy = {
-				ideology = liberal
-				factor = 1
-			}
-		}
-		ai_chance = {
-			factor = 40
-		}
+		any_pop = { scaled_militancy = { ideology = liberal factor = 1 } }
+		
+		ai_chance = { factor = 40 }
 	}	
 }
 
 #Grimm Woerterbuch
-
 country_event = {
-
 	id = 200019
-
+	title = "EVTNAME200019"
+	desc = "EVTDESC200019"
+	picture = "dergrimm"
+	fire_only_once = yes
+	
 	trigger = {
 		owns = 559
 		year = 1854
 	}
 
-	fire_only_once = yes
- 
-	mean_time_to_happen =  {
-		months = 2
-
-	}
-
-	title = "EVTNAME200019"
-	desc = "EVTDESC200019"
-	picture = "dergrimm"
+	mean_time_to_happen =  { months = 2 }
 
 	option = {
-		name = "This should be published in every German state." 
+		name = "EVTOPTA200019" 
 		prestige = 2
 		plurality = 1
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200020
 		}
-	}	
+	}
 }
 
-#Grimm Woerterbuch2
-
+#Grimm Woerterbuch II
 country_event = {
-
 	id = 200020
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200019"
 	desc = "EVTDESC200019"
 	picture = "dergrimm"
 
 	option = {
-		name = "I hoped they made a new fairy tale book instead of this..." 
+		name = "EVTOPTA200020" 
 		prestige = 2
 		plurality = 1
 	}	
@@ -892,55 +613,36 @@ country_event = {
 ############################
 
 #Deutschland, ein Wintermaerchen (publishing)
-
 country_event = {
-
 	id = 200021
-
+	title = "EVTNAME200021"
+	desc = "EVTDESC200021"
+	picture = "Heine"
+	fire_only_once = yes
+	
 	trigger = {
 		owns = 528
 		year = 1844
 	}
 
-	fire_only_once = yes
- 
-	mean_time_to_happen =  {
-		months = 2
-
-	}
-
-	title = "EVTNAME200021"
-	desc = "EVTDESC200021"
-	picture = "Heine"
+	mean_time_to_happen =  { months = 2 }
 
 	option = {
-		name = "It should be published."
+		name = "EVTOPTA200021"
 		set_global_flag = heines_wintermaerchen 
-		prestige = 2
-		plurality = 2
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
+		prestige = -5
+		rich_strata = { ideology = { value = liberal factor = 0.01 } }
+		middle_strata = { ideology = { value = liberal factor = 0.01 } }
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200022
 		}
+		
 		ai_chance = {
-			factor = 70
+			factor = 75
 			modifier = {
 				factor = 2
 				ruling_party_ideology = liberal
@@ -952,28 +654,34 @@ country_event = {
 			modifier = {
 				factor = 2
 				government = democracy
-                        }
+			}
 			modifier = {
 				factor = 1.5
-				government = hms_government
-                        }
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 0.5
-				government = absolute_monarchy
-                        }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
 			modifier = {
 				factor = 2
 				tag = HAM
-                        }
-                }
+			}
+		}
 	}
 
 	option = {
-		name = "Stop him!" 
-		prestige = -10
+		name = "EVTOPTB200021" 
+		prestige = 5
 
 		ai_chance = {
-			factor = 70
+			factor = 25
 			modifier = {
 				factor = 0.1
 				ruling_party_ideology = liberal
@@ -988,45 +696,46 @@ country_event = {
                         }
 			modifier = {
 				factor = 0.5
-				government = hms_government
-                        }
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 1.5
-				government = prussian_constitutionalism
-                        }
+				OR = {
+					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 2
-				government = absolute_monarchy
-                        }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
 			modifier = {
 				factor = 2
 				tag = PRU
-                        }
-                }
+			}
+		}
 	}	
 }
 
 #Deutschland, ein Wintermaerchen (published)
-
 country_event = {
-
 	id = 200022
-
-	is_triggered_only = yes
-
 	title = "EVTNAME200021"
 	desc = "EVTDESC200021"
 	picture = "heine"
+	is_triggered_only = yes
 
 	option = {
-		name = "Literature? It's disgusting! Ban and confiscate it!" 
-		prestige = 2
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
+		name = "EVTOPTA200022" 
+		prestige = 1
+		any_pop = { scaled_militancy = { ideology = liberal factor = 1 } }
+		
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -1047,31 +756,22 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.4
-				government = absolute_monarchy
-                        }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
 			modifier = {
 				factor = 1.4
 				press_rights = state_press
-                        }
-                }
+			}
+		}
 	}	
 
 	option = {
-		name = "Well, I like Heine. Even though he is from Düsseldorf." 
-		prestige = 2
-		plurality = 2
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-		}
+		name = "EVTOPTB200022" 
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 1.5 } }
+		
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -1080,34 +780,42 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = prussian_constitutionalism
-                        }
+				OR = {
+					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 2
-				government = hms_government
-                        }
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 3
 				government = democracy
-                        }
+			}
 			modifier = {
 				factor = 1.5
 				press_rights = censored_press
-                        }
+			}
 			modifier = {
 				factor = 4
 				press_rights = free_press
-                        }
-                }
+			}
+		}
 	}	
 }
 
 #Deutschland, ein Wintermaerchen (Cologne cathedral)
-
 country_event = {
-
 	id = 200023
-
+	title = "EVTNAME200023"
+	desc = "EVTDESC200023"
+	picture = "db_beginn"
+	fire_only_once = yes
+	
 	trigger = {
 		has_global_flag = heines_wintermaerchen 
 		has_country_flag = dombau_beginn
@@ -1115,18 +823,10 @@ country_event = {
  		NOT = { has_global_flag = cologne_cathedral_build }               
 	}
 
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 2
-	}
-
-	title = "EVTNAME200023"
-	desc = "EVTDESC200023"
-	picture = "db_beginn"
-
+	mean_time_to_happen = { months = 2 }
+	
 	option = {
-		name = "He is from Düsseldorf. Any questions?" 
+		name = "EVTOPTA200023" 
 		prestige = -2
 		set_country_flag = heines_mocking
 	}
@@ -1136,23 +836,20 @@ country_event = {
 # Beethoven festival #
 ######################
 
-#Beethovenfest response
-
+#Beethovenfest Response
 country_event = {
-
 	id = 200024
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200006"
 	desc = "EVTDESC200006"
 	picture = "Beethoven"
 
 	option = {
-		name = "An invitation? For me? How unexpected!" 
+		name = "EVTOPTA200024" 
 		set_country_flag = beethovenfest
 		prestige = 2
 		relation = { who = FROM value = 25 }
+		
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -1179,9 +876,10 @@ country_event = {
 	}
 
 	option = {
-		name = "Classical music is overrated..."
+		name = "EVTOPTB200024"
 		prestige = 4
 		relation = { who = FROM value = -25 }
+		
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -1192,12 +890,14 @@ country_event = {
 	}
 }
 
-#Beethovenfest main
-
+#Beethovenfest Main
 country_event = {
-
 	id = 200025
-
+	title = "EVTNAME200025"
+	desc = "EVTDESC200025"
+	picture = "Beethoven"
+	fire_only_once = yes
+	
 	trigger = {
 		owns = 575 
 		has_country_flag = beethovenfest
@@ -1209,18 +909,10 @@ country_event = {
 		BAV = { has_country_flag = beethovenfest }        
 	}
 
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	title = "EVTNAME200025"
-	desc = "EVTDESC200025"
-	picture = "Beethoven"
+	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "I found it rather amusing."
+		name = "EVTOPTA200025"
 		prestige = 2
 		random_owned = {
 			limit = { exists = FRA }
@@ -1244,62 +936,49 @@ country_event = {
 }
 
 #Beethovenfest France
-
 country_event = {
-
 	id = 200026
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200025"
 	desc = "EVTDESC200025"
 	picture = "Beethoven"
 
 	option = {
-		name = "The next time we stay at home. Stupid germans..."
+		name = "EVTOPTA200026"
 		prestige = -2
-		relation = {  who = FROM  value = -25 }
+		relation = {  who = FROM value = -25 }
 	}
 }
 
 #Beethovenfest ENG
-
 country_event = {
-
 	id = 200027
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200025"
 	desc = "EVTDESC200025"
 	picture = "Beethoven"
 
 	option = {
-		name = "Alexander von Humboldt is a gentleman."
-		relation = { who = FROM  value = 5 }
+		name = "EVTOPTA200027"
+		relation = { who = FROM  value = 25 }
 	}
 }
 
 #Beethovenfest BAV
-
 country_event = {
-
 	id = 200028
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200025"
 	desc = "EVTDESC200025"
 	picture = "Beethoven"
 
 	option = {
-		name = "Lola, what have you done...?"
+		name = "EVTOPTA200028"
 		prestige = -1
 	}
 }
 
 # Germanistentag 1846 Frankfurt
-
 country_event = {
 	id = 200029
 	title = "EVTNAME200029"
@@ -1317,15 +996,10 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 	
 	option = {
-		name = "Germany is a land of culture."
+		name = "EVTOPTA200029"
 		prestige = 2
 		plurality = 1
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 		any_country = {
 			limit = {
 				is_culture_group = germanic
@@ -1337,39 +1011,23 @@ country_event = {
 }
 
 # Germanistentag 1846 Frankfurt for others
-
 country_event = {
-
 	id = 200030
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200029"
 	desc = "EVTDESC200029"
 	picture = "Frankfurt"
 
 	option = {
-		name = "They are academics, but not politicians."
+		name = "EVTOPTA200030"
 		prestige = 1
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
+		rich_strata = { ideology = { value = liberal factor = 0.01 } }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 	}
 }
 
 # Germanistentag 1847 Lubeck
-
 country_event = {
-
 	id = 200031
 	title = "EVTNAME200031"
 	desc = "EVTDESC200031"
@@ -1383,33 +1041,15 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
 	mean_time_to_happen = { months = 2 }
 
-	
-
 	option = {
-		name = "Germany is a land of culture."
+		name = "EVTOPTA200031"
 		prestige = 2
 		plurality = 1
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-		}
-		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 0.5
-			    }
-		}
+		rich_strata = { ideology = { value = liberal factor = 0.01 } }
+		middle_strata = { ideology = { value = liberal factor = 0.02 } }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 		any_country = {
 			limit = {
 				is_culture_group = germanic
@@ -1421,68 +1061,39 @@ country_event = {
 }
 
 # Germanistentag 1847 Lubeck for others
-
 country_event = {
-
 	id = 200032
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200031"
 	desc = "EVTDESC200031"
 	picture = "Lubeck"
 
 	option = {
-		name = "They are academics, but not politicians."
+		name = "EVTOPTA200030"
 		prestige = 1
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.02
-			}
-		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
+		rich_strata = { ideology = { value = liberal factor = 0.01 } }
+		middle_strata = { ideology = { value = liberal factor = 0.02 } }
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 	}
 }
 
 # Goethedenkmal
-
 country_event = {
-
 	id = 200033
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200033"
 	desc = "EVTDESC200033"
 	picture = "Frankfurt"
 
 	option = {
-		name = "Goethe was a great man."
+		name = "EVTOPTA200033"
 		prestige = 1
 		plurality = 1
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = 0.5
-			}
-		}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 0.5 } }
 	}
 }
 
 # Kurhessischer Verfassungskonflikt
-
 country_event = {
 	id = 200034
 	title = "EVTNAME200034"
@@ -1504,42 +1115,27 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Revoke this useless piece of paper!"
+		name = "EVTOPTA200034"
 		prestige = 5
 		government = absolute_monarchy
 		political_reform = none_voting
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		any_pop = {
-			scaled_militancy = {
-				ideology = liberal
-				factor = 6
-			}
-		}
+		rich_strata = { ideology = { value = liberal factor = 0.01 } }
+		middle_strata = { ideology = { value = liberal factor = 0.01 } }
+		any_pop = { scaled_militancy = { ideology = liberal factor = 6 } }
 		
 		ai_chance = { factor = 1 }
 	}
 	
 	option = {
-		name = "The constitution remains."
+		name = "EVTOPTB200034"
 		prestige = -2
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Kosmos (Humboldt)
-
 country_event = {
-
 	id = 200035
 	title = "EVTNAME200035"
 	desc = "EVTDESC200035"
@@ -1549,29 +1145,29 @@ country_event = {
 		year = 1845
 		owns = 549
 	}
+	
 	fire_only_once = yes 
 	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "Humboldt? We shall invite him to a cup of tea."
+		name = "EVTOPTA200035"
 		prestige = 2
-		plurality = 2
+		plurality = 1
 		years_of_research = 0.10
 	}
 }
-
-
 
 #############################################################
 # Composers in Austria and Germany (historically 1836-1920) #
 #############################################################
 
 # Schumann
-
 country_event = {
-
 	id = 200036
-
+	title = "EVTNAME200036"
+	desc = "EVTDESC200036"
+	picture = "schumann"
+	
 	trigger = {       
 		year = 1851
 		NOT = { year = 1857 }
@@ -1581,27 +1177,21 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 2
-	}
-
-	title = "EVTNAME200036"
-	desc = "EVTDESC200036"
-	picture = "schumann"
+	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "It was a good idea to rebuild it, wasn't it?"
+		name = "EVTOPTA200036"
 		prestige = 10
 	}
 }
 
 # Mendelssohn
-
 country_event = {
-
 	id = 200037
-
+	title = "EVTNAME200037"
+	desc = "EVTDESC200037"
+	picture = "mendelssohn"
+	
 	trigger = {       
 		year = 1845
 		NOT = { year = 1848 }
@@ -1610,143 +1200,115 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	title = "EVTNAME200037"
-	desc = "EVTDESC200037"
-	picture = "mendelssohn"
+	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Da capo!"
+		name = "EVTOPTA200037"
 		prestige = 5
 	}
 }
 
 # Liszt
-
 country_event = {
-
 	id = 200038
-
-	trigger = {       
-                        year = 1851
-                        NOT = { year = 1864 }
-                        owns = 561
-                        romanticism = 1
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
 	title = "EVTNAME200038"
 	desc = "EVTDESC200038"
 	picture = "liszt"
+	
+	trigger = {       
+		year = 1851
+		NOT = { year = 1864 }
+		owns = 561
+		romanticism = 1
+	}
+
+	fire_only_once = yes
+	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "I'm listening to Liszt."
+		name = "EVTOPTA200038"
 		prestige = 5
-        }
+	}
 }
 
 # Brahms
-
 country_event = {
-
 	id = 200039
-
-	trigger = {       
-                        year = 1868
-                        NOT = { year = 1897 }
-                        owns = 619
-                        romanticism = 1
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
 	title = "EVTNAME200039"
 	desc = "EVTDESC200039"
 	picture = "Brahms"
-
-	option = {
-		name = "Dance my little Hungarians, dance!"
-		prestige = 5
-        }
-}
-
-# Schubert
-
-country_event = {
-
-	id = 200040
-
+	
 	trigger = {       
-                        year = 1865
-                        NOT = { year = 1867 }
-                        owns = 619
-                        romanticism = 1
+		year = 1868
+		NOT = { year = 1897 }
+		owns = 619
+		romanticism = 1
 	}
 
 	fire_only_once = yes
+	mean_time_to_happen = { months = 3 }
 
-	mean_time_to_happen = {
-		months = 3
+	option = {
+		name = "EVTOPTA200039"
+		prestige = 4
 	}
+}
 
+# Schubert
+country_event = {
+	id = 200040
 	title = "EVTNAME200040"
 	desc = "EVTDESC200040"
 	picture = "Unvollendete"
+	
+	trigger = {       
+		year = 1865
+		NOT = { year = 1867 }
+		owns = 619
+		romanticism = 1
+	}
+
+	fire_only_once = yes
+	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "I don't understand this excitement. This piece isn't even finished!"
+		name = "EVTOPTA200040"
 		prestige = 4
 	}
 }
 
 # Johann Strauss
-
 country_event = {
-
 	id = 200041
-
+	title = "EVTNAME200041"
+	desc = "EVTDESC200041"
+	picture = "Johann_Strauss"
+	
 	trigger = {       
-                        year = 1874
-                        NOT = { year = 1900 }
-                        owns = 619
-                        romanticism = 1
+		year = 1874
+		NOT = { year = 1900 }
+		owns = 619
+		romanticism = 1
 	}
 
 	fire_only_once = yes
-
 	mean_time_to_happen = {
 		months = 3
 	}
 
-	title = "EVTNAME200041"
-	desc = "EVTDESC200041"
-	picture = "Johann_Strauss"
-
 	option = {
-		name = "That's Viennese blood."
+		name = "EVTOPTA200041"
 		prestige = 4
 	}
 }
 
 # Mahler
-
 country_event = {
-
 	id = 200042
-
+	title = "EVTNAME200042"
+	desc = "EVTDESC200042"
+	picture = "Mahler"
+	
 	trigger = {       
 		year = 1897
 		NOT = { year = 1911 }
@@ -1755,27 +1317,21 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	title = "EVTNAME200042"
-	desc = "EVTDESC200042"
-	picture = "Mahler"
+	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "Another composer. Vienna is the musical heart of Europe."
-		prestige = 7
+		name = "EVTOPTA200042"
+		prestige = 5
 	}
 }
 
 # Richard Strauss
-
 country_event = {
-
 	id = 200043
-
+	title = "EVTNAME200043"
+	desc = "EVTDESC200043"
+	picture = "Richard_Strauss"
+	
 	trigger = {       
 		year = 1909
 		owns = 558
@@ -1783,27 +1339,21 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	title = "EVTNAME200043"
-	desc = "EVTDESC200043"
-	picture = "Richard_Strauss"
+	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "I miss Beethoven..." 
-		prestige = 7
+		name = "EVTOPTA200043" 
+		prestige = 5
 	}
 }
 
 # Bruckner
-
 country_event = {
-
 	id = 200044
-
+	title = "EVTNAME200044"
+	desc = "EVTDESC200044"
+	picture = "Bruckner"
+	
 	trigger = {       
 		year = 1896
 		NOT = { year = 1898 }
@@ -1812,27 +1362,21 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	title = "EVTNAME200044"
-	desc = "EVTDESC200044"
-	picture = "Bruckner"
+	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Poor man. We should remember him."
-		prestige = 7
+		name = "EVTOPTA200044"
+		prestige = 5
 	}
 }
 
 # Schönberg
-
 country_event = {
-
 	id = 200045
-
+	title = "EVTNAME200045"
+	desc = "EVTDESC200045"
+	picture = "Schoenberg"
+	
 	trigger = {       
 		year = 1920
 		owns = 619
@@ -1840,35 +1384,25 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	title = "EVTNAME200045"
-	desc = "EVTDESC200045"
-	picture = "Schoenberg"
+	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Stop it! STOP IT! My ears!"
+		name = "EVTOPTA200045"
 		prestige = 5
 	}
 }
-
-
-
 
 ######################################
 # Romantic culture and Weberaufstand #
 ######################################
 
-
 # Mondnacht
-
 country_event = {
-
 	id = 200046
-
+	title = "EVTNAME200046"
+	desc = "EVTDESC200046"
+	picture = "Mondnacht"
+	
 	trigger = {       
 		year = 1837
 		NOT = { year = 1848 }
@@ -1880,22 +1414,14 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	title = "EVTNAME200046"
-	desc = "EVTDESC200046"
-	picture = "Mondnacht"
+	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "So, instead of searching political freedom, germans are distracted by silly poems? Amazing."
+		name = "EVTOPTA200046"
 		prestige = 5
 		set_country_flag = mondnacht
 		any_pop = {
-			limit = {
-				is_culture_group = germanic
-			}
+			limit = { is_culture_group = germanic }
 			militancy = -1
 			consciousness = -1
 		}
@@ -1903,11 +1429,12 @@ country_event = {
 }
 
 # Spitzweg
-
 country_event = {
-
 	id = 200047
-
+	title = "EVTNAME200047"
+	desc = "EVTDESC200047"
+	picture = "Spitzweg"
+	
 	trigger = {       
 		year = 1839
 		NOT = { year = 1886 }
@@ -1919,39 +1446,23 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	title = "EVTNAME200047"
-	desc = "EVTDESC200047"
-	picture = "Spitzweg"
+	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "Ahahah, a funny painter. But, wait, 'satiric magazines'? Satiric against whom?"
+		name = "EVTOPTA200047"
 		prestige = 2
 		set_country_flag = spitzweg
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
+		middle_strata = { ideology = { value = liberal factor = 0.01 } }
 	}
 }
 
 # Brentano
-
 country_event = {
-
 	id = 200048
-
+	title = "EVTNAME200048"
+	desc = "EVTDESC200048"
+	picture = "Brentano"
+	
 	trigger = {       
 		year = 1838
 		NOT = { year = 1843 }
@@ -1960,28 +1471,17 @@ country_event = {
 		invention = romanticist_literature
 	}
 
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	title = "EVTNAME200048"
-	desc = "EVTDESC200048"
-	picture = "Brentano"
-
+	mean_time_to_happen = { months = 6 }
+	
 	option = {
-		name = "Go back to sleep, Michel..."
+		name = "EVTOPTA200048"
 		prestige = 3
 		set_country_flag = brentano
 		any_pop = {
 			limit = { has_pop_religion = catholic }
 			consciousness = -1
 		}
-		any_pop = {
-			scaled_consciousness = {
-				ideology = liberal
-				factor = -0.5
-			}
-		}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = -0.5 } }
 	}
 }
 
@@ -1989,10 +1489,8 @@ country_event = {
 # THE WEAVERS #
 ###############
 
-# Weaver begin
-
+#Weaver Begin
 province_event = {
-
 	id = 200049
 	title = "EVTNAME200049"
 	desc = "EVTDESC200049"
@@ -2000,18 +1498,19 @@ province_event = {
 
 	trigger = {
 		year = 1840
+		is_core = SLS
 		NOT = { year = 1848 }
 		owner = {
 			has_country_flag = liberal_revolution_in_progress
 			is_culture_group = germanic
-			government = absolute_monarchy
+			OR = {
+				government = absolute_empire
+				government = semi_constitutional_empire
+			}
 			NOT = { press_rights = free_press }
 			NOT = { has_country_flag = no_weber_aufstand }
 			NOT = { has_country_flag = weber_aufstand }
 			NOT = { has_global_flag = weber_aufstand }
-		}
-		state_scope = {
-			has_building = factory
 		}
 	}
 
@@ -2023,15 +1522,11 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.9
-			}
+			NOT = { poor_strata_life_needs = 0.9 }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = {
-				poor_strata_everyday_needs = 0.9
-			}
+			NOT = { poor_strata_everyday_needs = 0.9 }
 		}
 		modifier = {
 			factor = 0.9
@@ -2039,128 +1534,73 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			NOT = {
-				average_militancy = 3
-			}
+			NOT = { average_militancy = 3 }
 		}
 	}
 
 	option = {
-		name = "Send the troops."
-		poor_strata = {
-			militancy = 6
-		}
+		name = "EVTOPTA200049"
+		poor_strata = { militancy = 3 }
 		owner = {
 			prestige = 1
 			set_country_flag = weber_aufstand
 		}
-		ai_chance = {
-			factor = 100
-			}
+		
+		ai_chance = { factor = 100 }
 	}
 	option = {
-		name = "Negotiate."
-                		any_pop = {
-			consciousness = 3
-		}
+		name = "EVTOPTB200049"
+		any_pop = { consciousness = 3 }
 		owner = {
 			prestige = -2
-                        set_country_flag = no_weber_aufstand
+			set_country_flag = no_weber_aufstand
 		}
-		ai_chance = {
-			factor = 0
-			}
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
-# Weaver rebellion
-
+#Weaver rebellion
 country_event = {
-
 	id = 200050
-
-	trigger = {
-
-			has_country_flag = weber_aufstand
-	}
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		days = 7
-	}
-
 	title = "EVTNAME200050"
 	desc = "EVTDESC200050"
 	picture = "Weberaufstand"
-        major = yes
+	major = yes
+	
+	trigger = {  has_country_flag = weber_aufstand }
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 7 }
 
 	option = {
-		name = "They deserved it!"
-                set_global_flag = weber_aufstand
+		name = "EVTOPTA200050"
+		set_global_flag = weber_aufstand
 		prestige = -2
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 0.5
-			    }
-		}
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 2 } }
 		any_country = {
 			limit = {
 				is_culture_group = germanic
-				NOT = {
-					tag = THIS
-				}
+				NOT = { tag = THIS }
 			}
 			country_event = 200051
 		}
 	}
 }
 
-# Weaver rebellion 2
-
+#Weaver Rebellion II
 country_event = {
-
 	id = 200051
-
 	is_triggered_only = yes
-
 	title = "EVTNAME200050"
 	desc = "EVTDESC200051"
 	picture = "Weberaufstand"
 
 	option = {
-		name = "They deserved it!"
-		rich_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		middle_strata = {
-			ideology = {
-				value = liberal
-				factor = 0.01
-			}
-		}
-		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = 0.25
-			    }
-		}
+		name = "EVTOPTA200050"
+		prestige = 1
+		any_pop = { scaled_consciousness = { ideology = liberal factor = 1 } }
+		
 		ai_chance = {
 			factor = 60
 			modifier = {
@@ -2173,19 +1613,19 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = absolute_monarchy
-                        }
-                }
-         }
-	option = {
-		name = "Reigning only by force is barbarity."
-		prestige = -1
-		any_pop = {
-			    scaled_consciousness = {
-					ideology = liberal
-					factor = -0.5
-			    }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
 		}
+	}
+	
+	option = {
+		name = "EVTOPTB200050"
+		prestige = -1
+		any_pop = { scaled_consciousness = { ideology = liberal factor = -1 } }
+		
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -2199,29 +1639,35 @@ country_event = {
 			modifier = {
 				factor = 2
 				government = democracy
-                        }
+			}
 			modifier = {
 				factor = 1.5
-				government = hms_government
-                        }
+				OR = {
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 1.1
-				government = prussian_constitutionalism
-                        }
+				OR = {
+					government = prussian_constitutionalism
+					government = semi_constitutional_empire
+				}
+			}
 			modifier = {
 				factor = 0.5
-				government = absolute_monarchy
-                        }
-                }
+				OR = { 
+					government = absolute_monarchy
+					government = absolute_empire
+				}	
+			}
+		}
 	}
 }
 
-# Gerhard Hauptmann
-
+#Gerhard Hauptmann
 country_event = {
-
 	id = 200052
-
 	title = "EVTNAME200052" # Aftermath
 	desc = "EVTDESC200052"
 	picture = "Weberaufstand"
@@ -2245,20 +1691,12 @@ country_event = {
 	}
 
 	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 9
-	}
+	mean_time_to_happen = { months = 9 }
 
 	option = {
-		name = "In Germany, even a gory tragedy becomes cultural heritage."
+		name = "EVTOPTA200052"
 		plurality = 1
 		prestige = 5
-		any_pop = {
-			scaled_consciousness = {
-				ideology = socialist
-				factor = 0.5
-			}
-		}
+		any_pop = { scaled_consciousness = { ideology = socialist factor = 0.5 } }
 	}
 }

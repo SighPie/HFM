@@ -43,6 +43,7 @@ set_country_flag = catholic_country
 set_country_flag = new_world_nation
 set_country_flag = existing_country
 set_country_flag = unreleasable_country
+set_country_flag = exempt_from_vassal_contribution
 
 ruling_party = NWZ_conservative
 upper_house = {

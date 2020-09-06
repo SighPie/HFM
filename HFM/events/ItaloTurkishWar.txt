@@ -223,7 +223,7 @@ country_event = {
 		random_country = { limit = { exists = no tag = CYR } all_core = { remove_core = CYR } }
 		random_country = { limit = { exists = no tag = TRI } all_core = { remove_core = TRI } }
 		ITA = { diplomatic_influence = { who = LBY value = 300 } relation = { who = LBY value = 200 } }
-		LBY = { tech_school = unciv_tech_school }
+		LBY = { tech_school = developing_tech_school }
 	}
 }
 

@@ -12,23 +12,46 @@ political_decisions = {
 		}
 
 		allow = {
-			nationalism_n_imperialism = 1
-			is_vassal = no
-			war = no
+			OR = {
+				nationalism_n_imperialism = 1
+				is_vassal = no
+				AND = {
+					TUR = { is_greater_power = no }
+					WAL = {
+						NOT = {
+							neighbour = TUR
+							any_neighbor_country = { vassal_of = TUR }
+						}
+					}
+					MOL = {
+						NOT = {
+							neighbour = TUR
+							any_neighbor_country = { vassal_of = TUR }
+						}
+					}
+					MOL = { NOT = { neighbour = TUR } }
+				}
+			}
 			WAL = {
 				war = no
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
 					government = hms_government
+					government = prussian_constitutionalism
+					government = absolute_monarchy
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 			MOL = {
 				war = no
 				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
 					government = hms_government
+					government = prussian_constitutionalism
+					government = absolute_monarchy
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
 				}
 			}
 		}
@@ -82,6 +105,17 @@ political_decisions = {
 			random_country = { limit = { tag = MOL exists = no } all_core = { remove_core = MOL } }
 			random_country = { limit = { tag = WAL exists = no } all_core = { remove_core = WAL } }
 			random_owned = { limit = { owner = { accepted_culture = ukrainian } } owner = { remove_accepted_culture = ukrainian } }
+			random_owned = {
+				limit = { owner = { NOT = { neighbour = TUR } } }
+				TUR = {
+					release_vassal = THIS
+					casus_belli = {
+						target = ROM
+						type = make_puppet
+						months = 24
+					}
+				}
+			}
 		}
 
 		ai_will_do = { factor = 1 }
@@ -91,12 +125,13 @@ political_decisions = {
 		potential = {
 			NOT = { tag = URP }
 			NOT = {
+				exists = URP
 				exists = ROM
 				is_culture_group = pan_romanian
 				AND = {
 					tag = TUR
 					any_owned_province = { is_core = ROM }
-					}
+				}
 			}
 			OR = {
 				any_owned_province = {
@@ -143,13 +178,12 @@ political_decisions = {
 			}		
 			any_country = {
 				limit = {
-					OR = {
-						tag = WAL
-						tag = MOL
-						tag = SIE
-					}
+					primary_culture = romanian
 					ai = yes
-					in_sphere = THIS
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
 				}
 				annex_to = THIS
 			}
@@ -185,7 +219,15 @@ political_decisions = {
 					value = -50
 				}
 			}
-			ROM = { any_owned = { limit = { is_core = ROM } remove_core = WAL remove_core = MOL } }
+			ROM = {
+				any_owned = {
+					limit = { is_core = ROM } 
+					remove_core = WAL
+					remove_core = MOL
+					remove_core = MDV
+					remove_core = BKV
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -207,6 +249,7 @@ political_decisions = {
 			is_culture_group = pan_romanian
 			exists = ROM
 			NOT = {
+				has_country_flag = ghost_country
 				has_country_flag = unite_with_romania
 				tag = ROM
 				tag = MDV
@@ -216,6 +259,7 @@ political_decisions = {
 
 		allow = {
 			war = no
+			NOT = { is_mobilised = yes }
 			OR = {
 				is_vassal = no
 				overlord = { is_our_vassal = ROM }
@@ -293,6 +337,8 @@ political_decisions = {
 				OR = {
 					AND = {
 						exists = yes
+						war = no
+						is_mobilised = no
 						OR = {
 							is_vassal = no
 							vassal_of = THIS
@@ -305,6 +351,10 @@ political_decisions = {
 						}
 					}
 					all_core = {
+						owner = {
+							war = no
+							is_mobilised = no
+						}
 						OR = {
 							owned_by = THIS
 							owner = { in_sphere = THIS }
@@ -370,7 +420,7 @@ political_decisions = {
 			random_country = { 
 				limit = { is_culture_group = czecho_slovak_culture_group part_of_sphere = no is_vassal = no }
 				country_event = 98650
-				}
+			}
 		}
 
 		ai_will_do = {
@@ -536,11 +586,13 @@ political_decisions = {
 				OR = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 				CRO = {
 					NOT = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 			}
@@ -550,11 +602,13 @@ political_decisions = {
 					OR = {
 						government = democracy
 						government = hms_government
+						government = constitutional_empire
 					}
 				}
 				NOT = {
 					government = democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 			modifier = {
@@ -646,7 +700,6 @@ political_decisions = {
 					add_accepted_culture = serb
 					add_accepted_culture = croat
 					add_accepted_culture = slovene
-					add_accepted_culture = montenegrin
 				}
 			}
 			change_tag = YUG
@@ -758,9 +811,6 @@ political_decisions = {
 			BOS = { all_core = { add_core = YUG } }
 			SLO = { all_core = { add_core = YUG } }
 			TUR_853 = { add_core = YUG }
-			YUG = {
-				add_accepted_culture = montenegrin
-			}
 			any_country = {
 				limit = {
 					OR = {
@@ -855,9 +905,19 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			OR = {
-				ALB = { vassal_of = THIS }
-				ALB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS war = no } } } }
+			ALB = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								war = no
+							}
+						} 
+					}
+				}
 			}
 		}
 		
@@ -869,6 +929,7 @@ political_decisions = {
 			any_country = {
 				limit = {
 					in_sphere = THIS
+					NOT = { tag = YUG }
 					war = no
 					any_owned_province = { is_core = ALB }
 				}
@@ -877,6 +938,7 @@ political_decisions = {
 			any_country = {
 				limit = {
 					vassal_of = THIS
+					NOT = { tag = YUG }
 					war = no
 					any_owned_province = { is_core = ALB }
 				}
@@ -2176,7 +2238,6 @@ political_decisions = {
 			OR = { 
 				private_bank_money_bill_printing = 1
 				stock_exchange = 1
-				nationalism_n_imperialism = 1
 			}
 			809 = { has_building = railroad }
 			money = 10001
@@ -2186,8 +2247,8 @@ political_decisions = {
 			treasury = -10000
 			set_country_flag = the_bulgarian_miracle
 			add_country_modifier = { name = total_reform duration = 3650 }
-			any_owned = { limit = { region = TUR_809 NOT = { province_id = 809 } } add_province_modifier = { name = small_baby_boom duration = 1825 } }
-			TUR_810 = { add_province_modifier = { name = small_baby_boom duration = 1825 } }
+			any_owned = { limit = { region = TUR_809 NOT = { province_id = 809 } } add_province_modifier = { name = small_baby_boom duration = 2555 } }
+			TUR_810 = { add_province_modifier = { name = small_baby_boom duration = 2555 } }
 			809 = {
 				life_rating = 5
 				add_province_modifier = { name = recently_built_city duration = 1825 }
@@ -2229,6 +2290,34 @@ political_decisions = {
 			MON = { all_core = { remove_core = CRO } }
 			MON = { all_core = { remove_core = DLM } }
 			MON = { all_core = { remove_core = KUK } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	move_capital_to_belgrade = {
+		picture = belgrade_view
+		potential = {
+			tag = SER
+			owns = 794
+			NOT = { capital = 794 }
+		}
+		
+		allow = {
+			war = no
+			NOT = { in_sphere = TUR }
+			state_n_government = 1
+		}
+		
+		effect = {
+			capital = 794
+			prestige = 1
+			random_owned = {
+				limit = {
+					province_id = 794
+					NOT = { life_rating = 36 }
+				}
+				life_rating = 1
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}

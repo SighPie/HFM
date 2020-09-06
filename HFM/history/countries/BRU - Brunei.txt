@@ -1,5 +1,6 @@
 capital = 1393
 primary_culture = malay
+culture = dayak
 culture = yue
 religion = sunni
 government = absolute_monarchy

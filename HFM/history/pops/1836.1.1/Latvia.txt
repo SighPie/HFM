@@ -103,6 +103,12 @@
 		religion = orthodox
 		size = 150
 	}
+	
+	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	clergymen = {
 		culture = ashkenazi

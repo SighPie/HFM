@@ -3,17 +3,17 @@ primary_culture = native_american_minor
 religion = protestant
 government = absolute_monarchy
 plurality = 0.1
-nationalvalue = nv_equality
+nationalvalue = nv_order
 literacy = 0.1
-civilized = yes
+civilized = no
 
 # Political reforms
 slavery = no_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
-public_meetings = yes_meeting
-press_rights = censored_press
-trade_unions = non_socialist
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
 voting_system = first_past_the_post
 political_parties = underground_parties
 
@@ -23,7 +23,7 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions
+pensions = no_pensions 
 school_reforms = no_schools
 
 # New Reforms
@@ -51,26 +51,13 @@ upper_house = {
 	communist = 0
 }
 
+foreign_weapons = yes_foreign_weapons
+foreign_artillery = yes_foreign_artillery
+foreign_officers = yes_foreign_officers
+foreign_naval_officers = yes_foreign_naval_officers
+land_reform = yes_land_reform
+monetary_reform = yes_monetary_reform
+
 # Technologies
-post_napoleonic_thought = 1
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-military_staff_system = 1
-army_command_principle = 1
-clipper_design = 1
-alphabetic_flag_signaling = 1
-the_command_principle = 1
-classicism_n_early_romanticism = 1
-late_enlightenment_philosophy = 1
-malthusian_thought = 1
-enlightenment_thought = 1
-introspectionism = 1
-private_banks = 1
-no_standard = 1
-early_classical_theory_and_critique = 1
-freedom_of_trade = 1
-guild_based_production = 1
-piston_steam_engine = 1
-mechanical_production = 1
-mechanized_mining = 1
-basic_chemistry = 1

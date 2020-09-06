@@ -4,7 +4,8 @@ controller = USA
 add_core = USA
 trade_goods = coal
 life_rating = 35
-terrain = pittsburgh
+terrain = mining_district
+#terrain = pittsburgh
 
 party_loyalty = {
 	ideology = conservative

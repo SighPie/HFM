@@ -8,6 +8,12 @@
 		religion = sunni
 		size = 100
 	}
+	
+	officers = {
+		culture = wolof
+		religion = sunni
+		size = 100
+	}
 
 	artisans = {
 		culture = wolof

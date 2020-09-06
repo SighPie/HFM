@@ -3,7 +3,7 @@ primary_culture = dutch
 culture = flemish
 religion = protestant
 government = absolute_monarchy
-plurality = 30
+plurality = 15.0
 nationalvalue = nv_productivity
 literacy = 0.70
 civilized = yes
@@ -41,6 +41,7 @@ centralization = unitary
 colonial_policy = exploitation
 
 set_country_flag = protestant_country
+set_country_flag = cultuurstelsel
 
 ruling_party = HOL_conservative
 upper_house = {
@@ -54,6 +55,7 @@ upper_house = {
 }
 
 decision = literacy_NET
+decision = DIM_cultuurstelsel
 
 # Technologies
 post_napoleonic_thought = 1
@@ -79,7 +81,7 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 
 #Inventions
@@ -177,8 +179,8 @@ school_reforms = acceptable_schools
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	mechanized_mining = 1
 	hot_blast = 1
+    regenerative_furnaces = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

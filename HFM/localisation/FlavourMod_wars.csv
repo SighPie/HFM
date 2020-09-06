@@ -1,4 +1,30 @@
 ;;;;;;;;;;;x
+NORMAL_WAR_CONQUEST_ANY_NAME_FRA_ALD;The $FIRST$ $ORDER$Pacification of Algeria;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_CONQUEST_ANY_NAME_FRA_ALD;The $FIRST$ $ORDER$Pacification of Algeria;;;;;;;;;;;;;;;;;;;;x,,,
+NORMAL_WAR_PROTECTORATE_NAME_FRA_ABA;The $ORDER$Kabylie Revolt;;;;;;;;;;;;;;;;;;;;x,,,
+NORMAL_WAR_PROTECTORATE_NAME_FRA_ALD;The $FIRST$ $ORDER$Conquest of Algeria;;;;;;;;;;;;;;;;;;;;x,,,
+NORMAL_WAR_PROTECTORATE_NAME_FRA_RGA;The $ORDER$Siege of Constantine;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_ABA;The $ORDER$ Kabylie Revolt;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_ALD;The $FIRST$ $ORDER$Conquest of Algeria;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_PROTECTORATE_NAME_FRA_RGA;The $ORDER$Siege of Constantine;;;;;;;;;;;;;;;;;;;;x,,,
+test_end_war_setup;Negotiate a Treaty;;;;;;;;;;x
+test_end_war_short;Negotiate a Treaty;;;;;;;;;;x
+NORMAL_WAR_TREATY_SIGNING;$FIRST$-$SECOND$ Treaty Negotiations;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_TREATY_SIGNING;$FIRST$-$SECOND$ Treaty Negotiations;;;;;;;;;;;;;;;;;;;;x,,,
+NORMAL_WAR_CONQUEST_NAME_TOU_SEG;The $ORDER$Tukulor Conquest of Segu;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_NAME_TOU_SEG;The $ORDER$Tukulor Conquest of Segu;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONCESSION_NAME_RUS_UYG;The$ORDER$ Expedition to Kashgaria;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONCESSION_NAME_RUS_UYG;The$ORDER$ Expedition to Kashgaria;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_NET_SLW;The Sulawesi Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_NET_SLW;The Sulawesi Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_RESTORE_ORDER_NAME_PER_TKM;The $ORDER$Persian Invasion of Turkmenia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_RESTORE_ORDER_NAME_PER_TKM;The $ORDER$Persian Invasion of Turkmenia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_NET_DJA;The $ORDER$Jambi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_NET_DJA;The $ORDER$Jambi War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PROTECTORATE_NAME_NET_KLM;The $ORDER$Banjarmasin War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_PROTECTORATE_NAME_NET_KLM;The $ORDER$Banjarmasin War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_PUPPET_NAME_ENG_JAM;The Morant Bay Rebellion;;;;;;;;;;;;;;;x;;
+NORMAL_WAR_PUPPET_NAME_ENG_JAM;The Morant Bay Rebellion;;;;;;;;;;;;;;;x;;
 AGRESSION_WAR_CONQUEST_NAME_TUR_CRE;The $ORDER$Cretan Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_NAME_TUR_CRE;The $ORDER$Cretan Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_ENG_SOKThe $ORDER$Northern Nigeria Expedition;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -13,6 +39,10 @@ NORMAL_WAR_HUMILIATE_NAME_BAM_FRA;The French Conquest of Soudan;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_BAM_BOR;The French Conquest of Soudan;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_MAS_FRA;The French Conquest of Soudan;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_MAS_BOR;The French Conquest of Soudan;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_TOU_FRA;The French Conquest of Soudan;;;;;;;;;;;x,,,
+NORMAL_WAR_HUMILIATE_NAME_TOU_BOR;The French Conquest of Soudan;;;;;;;;;;;x,,,
+AGRESSION_WAR_RESTORE_ORDER_NAME_TUR_BHT;The $ORDER$Ottoman Intervention in Kurdistan;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_RESTORE_ORDER_NAME_TUR_BHT;The $ORDER$Ottoman Intervention in Kurdistan;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_RESTORE_ORDER_NAME_SAR_GEN;The $ORDER$Genoese Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_RESTORE_ORDER_NAME_SAR_GEN;The $ORDER$Genoese Revolt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_PROTECTORATE_NAME_FRA_DAH;The $ORDER$Franco-Dahomean War;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
@@ -81,6 +111,8 @@ AGRESSION_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_NAME_BOR_QNG;The $ORDER$Sino-French War;;;;;;;;;;;x,,,
 NORMAL_WAR_TAKE_CORE_NAME_WOL_FRA;French Conquest of Senegal;;;;;;;;;;;x,,,
 NORMAL_WAR_TAKE_CORE_NAME_WOL_BOR;French Conquest of Senegal;;;;;;;;;;;x,,,
+NORMAL_WAR_TAKE_CORE_NAME_TOO_FRA;French Conquest of Senegal;;;;;;;;;;;x,,,
+NORMAL_WAR_TAKE_CORE_NAME_TOO_BOR;French Conquest of Senegal;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_QNG_JAP;The $ORDER$Sino-Japanese War;;;;;;;;;;;x,,,
 NORMAL_WAR_PROTECTORATE_NAME_ENG_BUR;The 3rd Burma War;;;;;;;;;;;;;;;x;;
@@ -135,8 +167,8 @@ NORMAL_WAR_UNIFICATION_NAME_SAR_AUS;The $ORDER$Italian War of Independence;;;;;;
 AGRESSION_WAR_UNIFICATION_NAME_SAR_AUS;The $ORDER$Italian War of Independence;;;;;;;;;;;;;;;;;;;;x,,,
 NORMAL_WAR_RESTORE_ORDER_NAME_AUS_VEN;The $ORDER$Venetian Revolution;;;;;;;;;;;;x,,,
 AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_VEN;The $ORDER$Venetian Revolution;;;;;;;;;;;;x,,,
-NORMAL_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Five Days of Milan;;;;;;;;;;;;x,,,
-AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Five Days of Milan;;;;;;;;;;;;x,,,
+NORMAL_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Milanese Revolt;;;;;;;;;;;;x,,,
+AGRESSION_WAR_RESTORE_ORDER_NAME_AUS_LOM;The Milanese Revolt;;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_FRA_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
 NORMAL_WAR_HUMILIATE_NAME_FRA_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
 AGRESSION_WAR_HUMILIATE_NAME_BOR_KOR;French Expedition to Korea;;;;;;;;;;;x,,,
@@ -197,6 +229,8 @@ NORMAL_WAR_CONQUEST_ANY_NAME_QNG_GUI;The $ORDER$Miao Rebellion;;;;;;;;;;;;;;;;;;
 AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_GUI;The Miao Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_QNG_NIA;The $ORDER$Nian Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_NIA;The Nian Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+NORMAL_WAR_CONQUEST_ANY_NAME_QNG_GNG;The $ORDER$Red Turban Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_GNG;The Red Turban Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_ADD_SPHERE_NAME_USA_TKG;Commodore Perry's Expedition to Japan;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_WAR_CONQUEST_ANY_NAME_SIC_SYC;The $ORDER$Sicilian Revolution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 AGRESSION_WAR_CONQUEST_ANY_NAME_SIC_SYC;The $ORDER$Sicilian Revolution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;

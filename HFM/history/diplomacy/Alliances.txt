@@ -15,10 +15,10 @@ alliance = {
 
 #Treaty of Hunkar Iskelesi - Russian-Ottoman Alliance
 alliance = {
-	first = TUR
-	second = RUS
-	start_date = 1833.8.8
-	end_date = 1840.1.1
+    first = TUR
+    second = RUS
+    start_date = 1833.8.8
+    end_date = 1840.1.1
 }
 
 
@@ -142,12 +142,6 @@ alliance = {
 		end_date = 1867.1.1
 	}
 alliance = {
-		first = PRU 
-		second = MEI 
-		start_date =  1835.1.1
-		end_date = 1867.1.1
-	}	
-alliance = {
 		first = AUS 
 		second = NAS 
 		start_date =  1835.1.1
@@ -159,80 +153,73 @@ alliance = {
 		start_date =  1835.1.1
 		end_date = 1867.1.1
 	}
-alliance = {
-		first = PRU 
-		second = WEI 
-		start_date =  1835.1.1
-		end_date = 1867.1.1
-	}
 #Austria/Sphereling
 alliance = {
-		first = AUS 
-		second = MOD 
-		start_date =  1835.1.1
-		end_date = 1867.1.1
-	}
+        first = AUS
+        second = MOD
+        start_date = 1835.1.1
+        end_date = 1867.1.1
+    }
 alliance = {
-		first = AUS 
-		second = PAR 
-		start_date =  1835.1.1
-		end_date = 1867.1.1
-	}
+        first = AUS
+        second = PAR
+        start_date = 1835.1.1
+        end_date = 1867.1.1
+    }
 alliance = {
-		first = AUS 
-		second = TUS 
-		start_date =  1835.1.1
-		end_date = 1867.1.1
-	}
+        first = AUS
+        second = TUS
+        start_date = 1835.1.1
+        end_date = 1867.1.1
+    }
 #Russia/Montenegro
 alliance = {
-	first = RUS
-	second = MON
-	start_date = 1835.1.1
-	end_date = 1911.1.1
+    first = RUS
+    second = MON
+    start_date = 1835.1.1
+    end_date = 1911.1.1
 }
 
 #Russia/Transcaucasia
 alliance = {
-	first = RUS
-	second = TCA
-	start_date = 1835.1.1
-	end_date = 1881.1.1
+    first = RUS
+    second = TCA
+    start_date = 1835.1.1
+    end_date = 1881.1.1
 }
 #France/Papal States
 alliance = {
-	first = FRA
-	second = PAP
-	start_date = 1835.1.1
-	end_date = 1861.1.1
+    first = FRA
+    second = PAP
+    start_date = 1835.1.1
+    end_date = 1861.1.1
 }
 #China/Lanfang
-alliance = {
-	first = QNG
-	second = LAN
-	start_date = 1835.1.1
-	end_date = 1911.1.1
-}
+ alliance = {
+     first = QNG
+     second = LAN
+     start_date = 1835.1.1
+     end_date = 1911.1.1
+ }
 
 alliance = {
-		first = QNG 
-		second = KML 
-		start_date =  1835.1.1
-		end_date = 1936.1.1
-	}
-	
+        first = QNG
+        second = KML
+        start_date = 1835.1.1
+        end_date = 1936.1.1
+    }
+
 alliance = {
-		first = QNG 
-		second = TNT 
-		start_date =  1835.1.1
-		end_date = 1936.1.1
-	}
+        first = QNG
+        second = TNT
+        start_date = 1835.1.1
+        end_date = 1936.1.1
+    }
 
 #Siam/Champassak
 alliance = {
-	first = SIA
-	second = CHK
-	start_date = 1835.1.1
-	end_date = 1911.1.1
+    first = SIA
+    second = CHK
+    start_date = 1835.1.1
+    end_date = 1911.1.1
 }
-

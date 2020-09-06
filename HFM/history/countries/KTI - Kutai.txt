@@ -1,4 +1,4 @@
-capital = 1429
+capital = 1424
 primary_culture = malay
 culture = yue
 religion = sunni

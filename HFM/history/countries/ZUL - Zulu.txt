@@ -11,7 +11,7 @@ non_state_culture_literacy = 0.01
 
 # Political reforms
 slavery = yes_slavery
-upper_house_composition = party_appointed
+upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
 press_rights = state_press

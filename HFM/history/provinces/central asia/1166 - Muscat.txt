@@ -2,5 +2,6 @@ owner = OMA
 controller = OMA
 add_core = OMA
 trade_goods = opium
-life_rating = 35
+life_rating = 32
+terrain = semi_desert_mountains
 naval_base = 1

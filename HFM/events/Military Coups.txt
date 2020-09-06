@@ -18,6 +18,7 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		NOT = {
 			has_country_modifier = military_strife
@@ -31,7 +32,7 @@ country_event = {
 			}
 			type = officers
 			location = { is_core = THIS }
-			militancy = 7
+			militancy = 5
 		}
 	}
 	
@@ -123,10 +124,11 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = constitutional_empire
 		}
 		OR = {
 			average_militancy = 6
-			revolt_percentage = .10
+			revolt_percentage = 0.10
 			has_country_modifier = coup_risk
 		}
 		NOT = {

@@ -3,7 +3,7 @@ graphical_culture = AsianGC
 
 
 party = {
-	name = "SRI_conservative"
+	name = "MLD_conservative"
 	start_date = 1800.1.1
 	end_date = 2000.1.1
 

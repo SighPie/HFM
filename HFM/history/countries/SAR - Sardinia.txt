@@ -28,7 +28,6 @@ unemployment_subsidies = no_subsidies
 pensions = no_pensions 
 school_reforms = no_schools
 
-
 # New Reforms
 conscription = four_year_draft
 debt_law = debtors_prisons
@@ -40,6 +39,7 @@ centralization = unitary
 colonial_policy = no_colonies 
 
 set_country_flag = catholic_country
+set_country_flag = sardinian_italy
 decision = italian_renamed_savoy_aosta
 
 govt_flag = {
@@ -83,7 +83,7 @@ freedom_of_trade = 1
 guild_based_production = 1
 piston_steam_engine = 1
 mechanical_production = 1
-mechanized_mining = 1
+hot_blast = 1
 basic_chemistry = 1
 high_pressure_steam_engine = 1
 

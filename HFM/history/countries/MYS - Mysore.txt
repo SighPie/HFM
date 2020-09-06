@@ -1,5 +1,6 @@
 capital = 1313
 primary_culture = kannada
+culture = gujarati
 religion = hindu
 government = absolute_monarchy
 plurality = 0.0
@@ -61,6 +62,11 @@ bronze_muzzle_loaded_artillery = 1
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+big_sail_ships = yes
+sail_ships_transport = yes
+big_sail_support = yes
 
 # Starting Consciousness
 consciousness = 0

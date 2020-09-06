@@ -33,4 +33,3 @@ leader = {
 	background = natural_born_leader
 	prestige = 0.2
 }
-

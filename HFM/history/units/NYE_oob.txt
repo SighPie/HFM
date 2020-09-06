@@ -2,6 +2,38 @@ TUR = {
 	value = -100
 }
 
+FDL = {
+	value = -50
+}
+
+KTH = {
+	value = -50
+}
+
+MHR = {
+	value = -50
+}
+
+LHJ = {
+	value = -50
+}
+
+NEJ = {
+	value = -150
+}
+
+HAL = {
+	value = -50
+}
+
+leader = {
+	name = "Hamididdin"
+	type = land
+	date = 1836.1.1
+	personality = stout
+	background = natural_born_leader
+}
+
 army = {
 
 	name = "Army of the Imam of Zaydi"
@@ -26,4 +58,3 @@ army = {
 	}
 
 }
-

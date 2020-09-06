@@ -1,9 +1,9 @@
-
 political_decisions = {
-	
+
 #Trip to Europe
-	travel_to_europe = {
+travel_to_europe = {
 		picture = dreams_of_empire
+
 		potential = {
 			tag = PER 
 			NOT = {	has_country_flag = travel_to_europe }
@@ -25,10 +25,11 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
+
 	}
 
 #Persian Cinema
-	persian_cinema = {
+persian_cinema = {
 		picture = fatherland_altar
 		
 		potential = { 
@@ -54,26 +55,27 @@ political_decisions = {
 			}
 		}
 		
+
 		ai_will_do = { factor = 1 }
 	}
 
 #Greater Iran
 greater_iran = {
-	picture = greater_iran
-	
-	potential = { 
-		tag = PER
-		civilized = yes
-		NOT = { has_country_flag = greater_iran }
-	}
-		
-	allow = {
-		nationalism_n_imperialism = 1
-		is_greater_power = yes
-		war_policy = jingoism
-	}
-		
-	effect = {
+		picture = greater_iran
+
+		potential = { 
+			tag = PER
+			civilized = yes
+			NOT = { has_country_flag = greater_iran }
+		}
+			
+		allow = {
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			war_policy = jingoism
+		}
+			
+		effect = {
 			set_country_flag = greater_iran
 			badboy = 13
 			any_country = { limit = { neighbour = THIS NOT = { vassal_of = THIS } } relation = { who = THIS value = -50 } }
@@ -88,10 +90,14 @@ greater_iran = {
 			1090 = { add_core = PER }
 			1053 = { add_core = PER }
 			1052 = { add_core = PER }
+			2638 = { add_core = PER }
+			1220 = { add_core = PER }
+			3258 = { add_core = PER }
+			1213 = { add_core = PER }
 		}
-	
-	
-	ai_will_do = { factor = 1 }
+		
+		
+		ai_will_do = { factor = 1 }
 	}
 
 
@@ -143,7 +149,7 @@ establish_the_dar_al_funun = {
 		}
 	}
 	
-revoke_kurdish_autonomy = {
+	revoke_kurdish_autonomy = {
 		picture = old_kurdistan_map
 		potential = {
 			tag = PER
@@ -151,11 +157,16 @@ revoke_kurdish_autonomy = {
 			OR = {
 				is_our_vassal = RDL
 				is_our_vassal = MKN
+				is_our_vassal = URM
+				is_our_vassal = ZFN
 			}
 		}
 		
 		allow = {
-			civilization_progress = 0.25
+			OR = {	
+				civilization_progress = 0.5
+				civilized = yes
+			}
 		}
 		
 		effect = {
@@ -164,7 +175,10 @@ revoke_kurdish_autonomy = {
 			any_country = {
 				limit = {
 					vassal_of = THIS
-					primary_culture = kurdish
+					OR = {
+						primary_culture = kurdish
+						primary_culture = azerbaijani
+					}
 					ai = yes
 				}
 				annex_to = THIS
@@ -177,103 +191,119 @@ revoke_kurdish_autonomy = {
 				}
 				PER = { release_vassal = THIS }
 			}
+			1110 = { add_core = THIS }
+			1111 = { add_core = THIS }
+			1117 = { add_core = THIS }
+			1150 = { add_core = THIS }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
 #Establish the Majles
 establish_the_majles = {
-	picture = caucasus_viceroyalty
-	potential = {
-		tag = PER
-		year = 1900
-		NOT = { has_country_flag = majles_established }
-	}
-		
-	allow = {
-		OR = {
-			government = prussian_constitutionalism
-			government = hms_government
-			government = democracy
+		picture = caucasus_viceroyalty
+		potential = {
+			tag = PER
+			year = 1900
+			NOT = { has_country_flag = majles_established }
 		}
-	}
-		
-	effect = {
-		set_country_flag = majles_established
-		prestige = 5
-		plurality = 10
-		any_pop = { consciousness = 1 }
-		clr_country_flag = per_backed_down
-	}
-	ai_will_do = { factor = 1 }
+			
+		allow = {
+			OR = {
+				government = prussian_constitutionalism
+				government = semi_constitutional_empire
+				government = hms_government
+				government = constitutional_empire
+				government = democracy
+			}
+		}
+			
+		effect = {
+			set_country_flag = majles_established
+			prestige = 5
+			plurality = 10
+			any_pop = { consciousness = 1 }
+			clr_country_flag = per_backed_down
+		}
+		ai_will_do = { factor = 1 }
 }
 
 # End the bazaari strike.
 end_bazaari_strike = {
-	picture = PER_bazaari_strike
-	potential = {
-		has_country_modifier = bazaari_strike
-	}
-			
-	allow = {
-		has_country_modifier = bazaari_strike
-	}
-			
-	effect = {
-		prestige_factor = -0.1
-		remove_country_modifier = bazaari_strike
-		remove_country_modifier = western_influences
-		years_of_research = -1
-		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
-		treasury = -50000
-		any_country = {
-			limit = { is_greater_power = yes }
-			diplomatic_influence = { who = THIS value = -200 }
-			relation = { who = THIS value = -100 }
+		picture = PER_bazaari_strike
+		potential = { has_country_modifier = bazaari_strike }
+				
+		allow = { has_country_modifier = bazaari_strike }
+				
+		effect = {
+			prestige_factor = -0.1
+			remove_country_modifier = bazaari_strike
+			remove_country_modifier = western_influences
+			years_of_research = -1
+			add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+			random_owned = {
+				limit = { owner = { NOT = { border_policy = closed_borders } } }
+				owner = { political_reform = closed_borders }
+			}
+			treasury = -50000
+			any_country = {
+				limit = { is_greater_power = yes }
+				diplomatic_influence = { who = THIS value = -200 }
+				relation = { who = THIS value = -100 }
+			}
+			random_country = {
+				limit = { is_greater_power = yes is_sphere_leader_of = THIS }
+				treasury = 50000
+			}
+			clr_country_flag = ulama_no
 		}
-		random_country = {
-			limit = { is_greater_power = yes is_sphere_leader_of = THIS }
-			treasury = 50000
-		}
-		clr_country_flag = ulama_no
-	}
-	ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 1 }
 }
 
 # Appoint Amir Kabir Mirza Taghi Khan
 appoint_amir_kabir = {
-	picture = amir_kabir
-	potential = {
-		tag = PER
-		NOT = { year = 1852 }
-		NOT = {	has_country_flag = amir_kabir }
-		has_country_modifier = silver_age
-	}
+		picture = amir_kabir
+		potential = {
+			tag = PER
+			NOT = { year = 1852 }
+			NOT = {	has_country_flag = amir_kabir }
+			has_country_modifier = silver_age
+		}
 
-	allow = {
-		has_country_modifier = silver_age
-	}
+		allow = {
+			has_country_modifier = silver_age
+		}
 
-	effect = {
-		set_country_flag = amir_kabir
-		add_country_modifier = { name = amir_kabir duration = -1 }
-		any_pop = {
-			scaled_militancy = {
-				ideology = liberal
-				factor = -3
+		effect = {
+			set_country_flag = amir_kabir
+			add_country_modifier = { name = amir_kabir duration = -1 }
+			any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = -3
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 1
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 3
+				}
 			}
-			scaled_militancy = {
-				ideology = conservative
-				factor = 1
-			}
-			scaled_militancy = {
-				ideology = reactionary
-				factor = 3
+			random_owned = {
+				limit = {
+					owner = {
+						civilized = no
+						ai = yes
+						admin_reform = no_admin_reform
+					}
+				}
+				owner = { economic_reform = yes_admin_reform }
 			}
 		}
-	}
-
-	ai_will_do = { factor = 1 }
+		
+		ai_will_do = { factor = 1 }
 }
 
 
@@ -284,9 +314,12 @@ bring_tea_to_iran = {
 			tag = PER
 			NOT = { has_country_flag = tea_in_iran }
 			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
 				government = hms_government
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = constitutional_empire
 			}
 		}
 		
@@ -313,5 +346,350 @@ bring_tea_to_iran = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	the_treaty_of_erzurum_ii = {
+		picture = persia_map
+		potential = {
+			tag = TUR
+			1131 = { is_core = THIS }
+			925 = { is_core = PER }
+			NOT = { has_global_flag = the_treaty_of_erzurum_ii }
+			NOT = { year = 1855 }
+		}
+
+		allow = {
+			war = no
+			is_disarmed = no
+			PER = { war = no NOT = { truce_with = THIS } }
+		}
+
+		effect = {
+			badboy = -4
+			war_exhaustion = -15
+			PER = { country_event = 89000 }
+			set_global_flag = the_treaty_of_erzurum_ii
+		}
+
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0
+				NOT = { year = 1847 }
+			}
+		}
+	}
+	
+	revoke_coastal_emirate_autonomy = {
+		picture = persia_map
+		potential = {
+			tag = PER
+			OR = {
+				AND = { 1136 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = bushire_regained } }
+				AND = { 1138 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = kangan_regained } }
+				AND = { 1132 = { owner = { civilized = no } NOT = { owned_by = PER } }  civilized = yes NOT = { has_country_flag = arabistan_annexed } }
+			}
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					1136 = { owner = { civilized = no } NOT = { owned_by = PER } } #Bushire
+					OR = { 
+						civilization_progress = 0.45
+						civilized = yes 
+						1138 = {  
+							owner = { 
+								NOT = { stronger_army_than = PER }
+								part_of_sphere = no
+							} 
+						}
+						AND = { 
+							civilization_progress = 0.45
+							1138 = { owner = { in_sphere = ENG } }
+							THIS = { in_sphere = ENG }
+							relation = { who = ENG value = 100 }
+						}						
+					}
+				}
+				AND = {
+					1138 = { owner = { civilized = no } NOT = { owned_by = PER } } #Kangan
+					OR = { 
+						civilization_progress = 0.7
+						civilized = yes 
+						1138 = {  
+							owner = { 
+								NOT = { stronger_army_than = PER }
+								part_of_sphere = no
+							} 
+						} 
+						AND = { 
+							civilization_progress = 0.7
+							1138 = { owner = { in_sphere = ENG } }
+							THIS = { in_sphere = ENG }
+							relation = { who = ENG value = 100 }
+						}		
+					}
+				}
+				AND = {
+					1132 = { owner = { vassal_of = THIS } NOT = { owned_by = PER } } #Arabistan
+					civilized = yes 
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					PER = {
+						OR = { 
+							civilization_progress = 0.45
+							civilized = yes 
+							1136 = { 
+								owner = { 
+									NOT = { stronger_army_than = PER }
+									part_of_sphere = no
+								} 
+							} 
+						}
+						NOT = { has_country_flag  = bushire_regained }
+						NOT = { owns = 1136 }
+					}
+				}
+				1136 = { secede_province = THIS }
+				THIS = { set_country_flag = bushire_regained }
+			}
+			random_owned = {
+				limit = {
+					PER = {
+						OR = { 
+							civilization_progress = 0.7
+							civilized = yes 
+							1138 = {  
+								owner = { 
+									NOT = { stronger_army_than = PER }
+									part_of_sphere = no
+								} 
+							} 
+						}
+						NOT = { has_country_flag  = kangan_regained }
+						NOT = { owns = 1138 }
+					}
+				}
+				owner = { 
+					set_country_flag = kangan_regained 
+					1138 = { secede_province = THIS }
+				}
+			}
+			random_owned = {
+				limit = {
+					KHZ = { vassal_of = PER }
+					PER = {
+						civilized = yes
+						NOT = { has_country_flag = arabistan_annexed }
+						NOT = { owns = 1132 }
+					}	
+				}
+				owner = {
+					set_country_flag = arabistan_annexed 
+					inherit = KHZ
+					KHZ = { all_core = { add_core = PER } }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	regain_omani_coast = {
+		picture = gwadar_pakistan
+		potential = {
+			tag = PER
+			OR = {
+				AND = { owns = 2643 1142 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = bandar_abbas_regained } } #Bandar Abbas
+				AND = { owns = 1144 1146 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = chabahar_regained } } #Chabahar
+				AND = { owns = 2643 1145 = { owner = { civilized = no } NOT = { owned_by = PER } }  NOT = { has_country_flag  = lengeh_regained } } #Lengeh & Jask
+			}
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					1142 = { owner = { civilized = no } NOT = { owned_by = PER } } #Bandar Abbas
+					OR = {
+						civilized = yes 
+						AND = {
+							civilization_progress = 0.65
+							1142 = {
+								owner = { 
+									NOT = { stronger_army_than = PER }
+									part_of_sphere = no
+								}
+							}
+						}
+						AND = { 
+							civilization_progress = 0.65
+							1142 = { owner = { in_sphere = ENG } }
+							THIS = { in_sphere = ENG }
+							relation = { who = ENG value = 100 }
+						}
+						1142 = { owner = { vassal_of = THIS } }
+					}
+				}
+				AND = {
+					owns = 1142 #Bandar Abbas
+					owns = 1144 #Zahedan
+					1146 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
+					OR = {	
+						civilized = yes 
+						AND = {
+							civilization_progress = 0.7
+							1142 = { 
+								owner = { 
+									NOT = { stronger_army_than = PER }
+									part_of_sphere = no
+								}
+							}
+						}
+						AND = {
+							civilization_progress = 0.75
+							1142 = { owner = { in_sphere = ENG } }
+							THIS = { in_sphere = ENG }
+							relation = { who = ENG value = 100 }
+						}
+						1142 = { owner = { vassal_of = THIS } }
+					}
+				}
+				AND = {
+					owns = 1142 #Bandar Abbas
+					owns = 1146 #Chabahar
+					owns = 2643 #Hajjiabad
+					1145 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
+					OR = {	
+						civilized = yes 
+						AND = {
+							civilization_progress = 0.9
+							1142 = { 
+								owner = { 
+									NOT = { stronger_army_than = PER }
+									part_of_sphere = no
+								}
+							}
+						}
+						AND = {
+							civilization_progress = 0.9
+							1142 = { owner = { in_sphere = ENG } }
+							THIS = { in_sphere = ENG }
+							relation = { who = ENG value = 100 }
+						}
+						1142 = { owner = { vassal_of = THIS } }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			#Bandar Abbas
+			random_owned = {
+				limit = {
+					PER = {
+						OR = {
+							civilized = yes 
+							AND = {
+								civilization_progress = 0.65
+								1142 = { 
+									owner = { 
+										NOT = { stronger_army_than = PER }
+										part_of_sphere = no
+									}
+								}
+							}
+							AND = { 
+								civilization_progress = 0.65
+								1142 = { owner = { in_sphere = ENG } }
+								THIS = { in_sphere = ENG }
+								relation = { who = ENG value = 100 }
+							}
+							1142 = { owner = { vassal_of = THIS } }
+						}
+						NOT = { has_country_flag  = bandar_abbas_regained }
+						NOT = { owns = 1142 }
+					}
+				}
+				1142 = { secede_province = THIS }
+				THIS = { set_country_flag = bandar_abbas_regained }
+			}
+			
+			#Chabahar
+			random_owned = {
+				limit = {
+					PER = {
+						owns = 1142 #Bandar Abbas
+						owns = 1144 #Zahedan
+						1146 = { owner = { civilized = no } NOT = { owned_by = PER } } #Chabahar
+						OR = {
+							civilized = yes 
+							AND = {
+								civilization_progress = 0.75
+								1146 = { 
+									owner = { 
+										NOT = { stronger_army_than = PER }
+										part_of_sphere = no
+									}
+								}
+							}
+							AND = {
+								civilization_progress = 0.75
+								1146 = { owner = { in_sphere = ENG } }
+								THIS = { in_sphere = ENG }
+								relation = { who = ENG value = 100 }
+							}
+							1146 = { owner = { vassal_of = THIS } }
+						}
+						NOT = { has_country_flag  = chabahar_regained }
+						NOT = { owns = 1146 }
+					}
+				}
+				1146 = { secede_province = THIS }
+				THIS = { set_country_flag = chabahar_regained }
+			}
+			
+			#Lengeh & Jask
+			random_owned = {
+				limit = {
+					PER = {
+						owns = 1142 #Bandar Abbas
+						owns = 1146 #Chabahar
+						owns = 1144 #Zahedan
+						1141 = { owner = { civilized = no } NOT = { owned_by = PER } } #Lengeh & Jask
+						OR = {
+							civilized = yes 
+							AND = {
+								civilization_progress = 0.9
+								1141 = { 
+									owner = { 
+										NOT = { stronger_army_than = PER }
+										part_of_sphere = no
+									}
+								}
+							}
+							AND = {
+								civilization_progress = 0.9
+								1141 = { owner = { in_sphere = ENG } }
+								THIS = { in_sphere = ENG }
+								relation = { who = ENG value = 100 }
+							}
+							1141 = { owner = { vassal_of = THIS } }
+						}
+						NOT = { has_country_flag  = lengeh_regained }
+						NOT = { owns = 1141 }
+					}
+				}
+				1141 = { secede_province = THIS }
+				1145 = { secede_province = THIS }
+				THIS = { set_country_flag = lengeh_regained }
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }
 

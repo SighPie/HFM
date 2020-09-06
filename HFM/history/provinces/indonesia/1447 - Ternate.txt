@@ -2,4 +2,4 @@ owner = MAL
 controller = MAL
 add_core = MAL
 trade_goods = fish
-life_rating = 30
+life_rating = 31

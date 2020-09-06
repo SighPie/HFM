@@ -11,7 +11,7 @@
 	farmers = {
 		culture = british
 		religion = protestant
-		size = 50
+		size = 100
 	}
 }
 #South Georgia (60/15 POPS)

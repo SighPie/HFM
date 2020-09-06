@@ -13,14 +13,19 @@ political_decisions = {
 			}
 			NOT = { tag = LBG }
 			NOT = { tag = NCT }
+            NOT = { tag = CSA }
+            NOT = { tag = SHW }
+            NOT = { tag = TPG }
 			NOT = { has_country_modifier = no_freedom }
 			NOT = { has_country_flag = freedom_attempt_made }
 		}
 
 		allow = {
+            is_substate = no
+            war = no
 			OR = {
 				average_militancy = 2
-				revolt_percentage = .25
+                revolt_percentage = 0.25
 				capital_scope = { controlled_by_rebels = yes }
 			}
 		}

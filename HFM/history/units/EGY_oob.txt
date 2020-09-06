@@ -1,30 +1,11 @@
-DAR = {
-	value = 80
-}
-
-WAD = {
-	value = 70
-}
-
-GON = {
-	value = 75
-}
-
-TIG = {
-	value = 75
-}
-
-SHW = {
-	value = 65
-}
-
-GEL = {
-	value = 60
-}
-
-MAJ = {
-	value = 60
-}
+DAR = { value = 80 }
+WAD = { value = 70 }
+GON = { value = 75 }
+TIG = { value = 75 }
+SHW = { value = 65 }
+GEL = { value = 60 }
+MAJ = { value = 60 }
+TUR = { truce_until = 1838.1.1 }
 
 navy = {
 	name = "Taba"
@@ -105,7 +86,7 @@ navy = {
 	}
 
 	ship = {
-		name= "1st transport flotilla"
+		name= "1st Transport Flotilla"
 		type = clipper_transport
 	}
 
@@ -287,4 +268,3 @@ leader = {
 	background = drillmaster
 	prestige = 0.1
 }
-

@@ -74,7 +74,7 @@ HES = {
 }
 REU = {
 	value = 125
-	level = 5
+	level = 2
 	military_access = yes
 }
 LIP = {
@@ -96,6 +96,7 @@ MEC = {
 }
 MEI = {
 	value = 125
+	level = 5
 	military_access = yes
 }
 NAS = {

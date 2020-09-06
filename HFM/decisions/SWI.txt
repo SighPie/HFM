@@ -226,6 +226,7 @@ political_decisions = {
 				}
 			OR = {
 				government = absolute_monarchy
+				government = absolute_empire
 				government = fascist_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship

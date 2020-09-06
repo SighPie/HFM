@@ -559,8 +559,9 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					government = democracy
 					government = hms_government
+					government = democracy
+					government = constitutional_empire
 				}
 				NOT = {
 					vassal_of = THIS
@@ -641,8 +642,9 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					government = democracy
 					government = hms_government
+					government = democracy
+					government = constitutional_empire
 				}
 				NOT = {
 					vassal_of = THIS
@@ -679,6 +681,93 @@ country_event = {
 		political_reform = state_press
 		political_reform = yes_meeting
 		political_reform = secret_ballots
+		political_reform = mandatory_service
+
+		ai_chance = {
+			factor = 20
+		}			
+	}
+	
+	option = {
+		name = "EVT99945OPTD"
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			ideology = { factor = 0.05 value = reactionary }
+			ideology = { factor = 0.05 value = conservative }
+		}		
+
+		any_pop = {
+			limit = {
+				location = { is_core = THIS }
+				is_primary_culture = yes
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -10
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -10
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 10
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 10
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 10
+			}
+		}
+
+		any_country = {
+			limit = {
+				OR = {
+					government = hms_government
+					government = democracy
+					government = constitutional_empire
+				}
+				NOT = {
+					vassal_of = THIS
+					substate_of = THIS
+					in_sphere = THIS
+				}
+			}
+			relation = { who = THIS value = -50 }
+		}
+
+		any_country = {
+			limit = {
+				is_culture_group = germanic
+				capital_scope = { continent = europe }
+			}
+			relation = { who = THIS value = -100 }
+		}
+
+		upper_house = {
+			ideology = conservative
+			value = 0.40
+		}
+		upper_house = {
+			ideology = reactionary
+			value = 0.20
+		}
+		change_tag = BOR
+		all_core = { add_core = BOR remove_core = FRA }
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = non_socialist
+		political_reform = underground_parties
 		political_reform = mandatory_service
 
 		ai_chance = {
@@ -727,8 +816,9 @@ country_event = {
 		any_country = {
 			limit = {
 				OR = {
-					government = democracy
 					government = hms_government
+					government = democracy
+					government = constitutional_empire
 				}
 				NOT = {
 					vassal_of = THIS
@@ -755,8 +845,8 @@ country_event = {
 			ideology = reactionary
 			value = 0.20
 		}
-		government = absolute_monarchy
-		ruling_party_ideology = reactionary
+		government = absolute_empire
+		ruling_party_ideology = conservative
 		political_reform = none_voting
 		political_reform = party_appointed
 		political_reform = no_meeting

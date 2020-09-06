@@ -103,6 +103,24 @@
 		religion = orthodox
 		size = 11200
 	}
+	
+	aristocrats = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+	
+	soldiers = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+	
+	clergymen = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
 
 	artisans = {
 		culture = sephardic
@@ -201,7 +219,7 @@
 	clergymen = {
 		culture = turkish
 		religion = sunni
-		size = 50
+		size = 100
 	}
 
 	artisans = {
@@ -245,11 +263,29 @@
 		religion = orthodox
 		size = 9475
 	}
+	
+	soldiers = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
+	
+	clergymen = {
+		culture = sephardic
+		religion = jewish
+		size = 100
+	}
 
 	artisans = {
 		culture = sephardic
 		religion = jewish
-		size = 1000
+		size = 500
+	}
+
+	farmers = {
+		culture = sephardic
+		religion = jewish
+		size = 300
 	}
 
 }
